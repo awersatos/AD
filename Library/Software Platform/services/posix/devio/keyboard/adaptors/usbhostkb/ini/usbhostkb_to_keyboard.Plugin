@@ -1,0 +1,14 @@
+[Plugin]
+Name=usbhostkb_to_keyboard
+Description=Adapt USB Host keyboard device to generic posix keyboard service
+SourceDir=services\posix\devio\keyboard\adaptors\usbhostkb\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\peripherals\usbhost\include"
+CompileOption1=-I"$(SSASROOT)\platform\fpga\drivers\usbhost\include"
+CompileOption2=-I"$(SSASROOT)\platform\fpga\drivers\usbhost\internal"
+CompileOption3=-I"$(SSASROOT)\platform\fpga\drivers\usbhost\usbhostkb\internal"
+InitHandler=usbhostkb_to_keyboard_init
+InitHandlerPriority=8
+Implement=keyboard_adaptor
+
+[Instance]
+Require0=usbhost_keyboard

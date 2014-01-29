@@ -1,0 +1,291 @@
+;...............................................................................
+;   Board   : NanoBoard NB1 Revision-6 with Plug-In Daughter Board
+;             Daughterboards with SRAM
+;   Project : NBP-25
+;
+;   Created 22.05.2004
+;   (c) Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB  | TargetId=NanoBoard NB1 Revision-6
+Record=Constraint | TargetKind=Part | TargetId=XC3S1000-4FG456C
+;...............................................................................
+
+;...............................................................................
+; Clocks
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD              | FPGA_PINNUM=A11
+Record=Constraint | TargetKind=Port | TargetId=CLK_REF              | FPGA_PINNUM=B11
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD_1            | FPGA_PINNUM=Y11
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD_2            | FPGA_PINNUM=AA11
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD              | FPGA_CLOCK_PIN=TRUE
+Record=Constraint | TargetKind=Port | TargetId=CLK_REF              | FPGA_CLOCK_PIN=TRUE
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD_1            | FPGA_CLOCK_PIN=TRUE
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD_2            | FPGA_CLOCK_PIN=TRUE
+;...............................................................................
+
+;...............................................................................
+; VGA Connector
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=VGA_R[1..0]          | FPGA_PINNUM=V11,V12
+Record=Constraint | TargetKind=Port | TargetId=VGA_G[1..0]          | FPGA_PINNUM=V13,W13
+Record=Constraint | TargetKind=Port | TargetId=VGA_B[1..0]          | FPGA_PINNUM=V14,W14
+Record=Constraint | TargetKind=Port | TargetId=VGA_HSYN             | FPGA_PINNUM=W15
+Record=Constraint | TargetKind=Port | TargetId=VGA_VSYN             | FPGA_PINNUM=V15
+;...............................................................................
+
+;...............................................................................
+; CANBus
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=CAN_RXD              | FPGA_PINNUM=V10
+Record=Constraint | TargetKind=Port | TargetId=CAN_TXD              | FPGA_PINNUM=Y13
+;...............................................................................
+
+;...............................................................................
+; RS-232 Serial Connector
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=RS_CTS               | FPGA_PINNUM=U2
+Record=Constraint | TargetKind=Port | TargetId=RS_RTS               | FPGA_PINNUM=V1
+Record=Constraint | TargetKind=Port | TargetId=RS_RX                | FPGA_PINNUM=W2
+Record=Constraint | TargetKind=Port | TargetId=RS_TX                | FPGA_PINNUM=V2
+;...............................................................................
+
+;...............................................................................
+; NanoBoard General Purpose Daisy Chain
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=DaisyIn[3..0]        | FPGA_PINNUM=T2,R1,R2,P1
+Record=Constraint | TargetKind=Port | TargetId=DaisyOut[3..0]       | FPGA_PINNUM=AA20,AB20,AA19,AB19
+;...............................................................................
+
+;...............................................................................
+; LCD
+; Data lines and register selects are shared with RAM
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=LCD_E                | FPGA_PINNUM=A4
+Record=Constraint | TargetKind=Port | TargetId=LCD_RS               | FPGA_PINNUM=W1
+Record=Constraint | TargetKind=Port | TargetId=LCD_RW               | FPGA_PINNUM=Y1
+Record=Constraint | TargetKind=Port | TargetId=LCD_LIGHT            | FPGA_PINNUM=A3
+Record=Constraint | TargetKind=Port | TargetId=LCD_DB[7..0]         | FPGA_PINNUM=B5,A5,E10,E11,E12,E15,E14,E13
+
+;...............................................................................
+
+;...............................................................................
+; LEDs
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=LEDS[7..0]           | FPGA_PINNUM=B15,A14,B14,A13,B13,A12,B12,A10
+Record=Constraint | TargetKind=Port | TargetId=LEDS_USER1H[15..0]   | FPGA_PINNUM=C7,D7,D8,D9,C10,D10,C11,D11,D12,C13,D13,D14,D15,D19,C20,C19
+Record=Constraint | TargetKind=Port | TargetId=LEDS_USER2H[15..0]   | FPGA_PINNUM=D18,C18,D17,C17,D16,F16,E17,E18,C16,F17,G20,G17,J17,K17,L17
+;...............................................................................
+
+;...............................................................................
+; PS/2  ; A = MOUSE   B = KEYBOARD   - G HARLAND
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=PS2B_CLK             | FPGA_PINNUM=Y16
+Record=Constraint | TargetKind=Port | TargetId=PS2B_DATA            | FPGA_PINNUM=W16
+Record=Constraint | TargetKind=Port | TargetId=PS2A_CLK             | FPGA_PINNUM=V16
+Record=Constraint | TargetKind=Port | TargetId=PS2A_DATA            | FPGA_PINNUM=Y17
+;...............................................................................
+
+;...............................................................................
+; Static RAM
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=RAM_ADDR[16..0]      | FPGA_PINNUM=Y2,Y3,AB4,AB5,AB12,AB13,AB14,AA15,AA16,AA17,AB16,AB15,AA13,AA4,AA3,Y1,W1
+Record=Constraint | TargetKind=Port | TargetId=RAM_CS               | FPGA_PINNUM=AA5
+
+Record=Constraint | TargetKind=Port | TargetId=RAM0_DATA[7..0]      | FPGA_PINNUM=B5,A5,E10,E11,E12,E15,E14,E13
+Record=Constraint | TargetKind=Port | TargetId=RAM0_OE              | FPGA_PINNUM=AB7
+Record=Constraint | TargetKind=Port | TargetId=RAM0_WE              | FPGA_PINNUM=AB18
+
+Record=Constraint | TargetKind=Port | TargetId=RAM1_DATA[7..0]      | FPGA_PINNUM=AA7,AA8,AA9,AA10,AB11,AB10,AB9,AB8
+Record=Constraint | TargetKind=Port | TargetId=RAM1_OE              | FPGA_PINNUM=AA6
+Record=Constraint | TargetKind=Port | TargetId=RAM1_WE              | FPGA_PINNUM=AA12
+;...............................................................................
+
+;...............................................................................
+; Static RAM0 data combined with LCD data
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=RAM0_LCD_DATA[7..0]  | FPGA_PINNUM=B5,A5,E10,E11,E12,E15,E14,E13
+;...............................................................................
+
+;...............................................................................
+; Keyboard and Buttons
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=KP_COL[3..0]         | FPGA_PINNUM=D2,E7,F7,E8
+Record=Constraint | TargetKind=Port | TargetId=KP_ROW[3..0]         | FPGA_PINNUM=C1,C2,E5,E9
+Record=Constraint | TargetKind=Port | TargetId=SW[7..0]             | FPGA_PINNUM=B10,A9,B9,A8,B8,A7,B7,B6
+Record=Constraint | TargetKind=Port | TargetId=TEST_BUTTON          | FPGA_PINNUM=AA18
+;...............................................................................
+
+;...............................................................................
+; I2C Interface to DAC/ADC and I2C Header
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SCL                  | FPGA_PINNUM=J2
+Record=Constraint | TargetKind=Port | TargetId=SDA                  | FPGA_PINNUM=G2
+;...............................................................................
+
+;...............................................................................
+; NEXUS JTAG Soft-Device Chain Connections
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=JTAG_NEXUS_TCK       | FPGA_PINNUM=R18 | FPGA_CLOCK_ALLOW_ON_NON_CLOCK_PIN=True 
+Record=Constraint | TargetKind=Port | TargetId=JTAG_NEXUS_TDI       | FPGA_PINNUM=P18
+Record=Constraint | TargetKind=Port | TargetId=JTAG_NEXUS_TDO       | FPGA_PINNUM=U18
+Record=Constraint | TargetKind=Port | TargetId=JTAG_NEXUS_TMS       | FPGA_PINNUM=T18
+;...............................................................................
+
+;...............................................................................
+; Burch Style 20-Pin Headers
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=HA2                  | FPGA_PINNUM=C5
+Record=Constraint | TargetKind=Port | TargetId=HA3                  | FPGA_PINNUM=D5
+Record=Constraint | TargetKind=Port | TargetId=HA4                  | FPGA_PINNUM=C6
+Record=Constraint | TargetKind=Port | TargetId=HA5                  | FPGA_PINNUM=D6
+Record=Constraint | TargetKind=Port | TargetId=HA6                  | FPGA_PINNUM=C7
+Record=Constraint | TargetKind=Port | TargetId=HA7                  | FPGA_PINNUM=D7
+Record=Constraint | TargetKind=Port | TargetId=HA8                  | FPGA_PINNUM=D8
+Record=Constraint | TargetKind=Port | TargetId=HA9                  | FPGA_PINNUM=D9
+Record=Constraint | TargetKind=Port | TargetId=HA10                 | FPGA_PINNUM=C10
+Record=Constraint | TargetKind=Port | TargetId=HA11                 | FPGA_PINNUM=D10
+Record=Constraint | TargetKind=Port | TargetId=HA12                 | FPGA_PINNUM=C11
+Record=Constraint | TargetKind=Port | TargetId=HA13                 | FPGA_PINNUM=D11
+Record=Constraint | TargetKind=Port | TargetId=HA14                 | FPGA_PINNUM=D12
+Record=Constraint | TargetKind=Port | TargetId=HA15                 | FPGA_PINNUM=C13
+Record=Constraint | TargetKind=Port | TargetId=HA16                 | FPGA_PINNUM=D13
+Record=Constraint | TargetKind=Port | TargetId=HA17                 | FPGA_PINNUM=D14
+Record=Constraint | TargetKind=Port | TargetId=HA18                 | FPGA_PINNUM=D15
+Record=Constraint | TargetKind=Port | TargetId=HA19                 | FPGA_PINNUM=D19
+
+Record=Constraint | TargetKind=Port | TargetId=HB2                  | FPGA_PINNUM=C20
+Record=Constraint | TargetKind=Port | TargetId=HB3                  | FPGA_PINNUM=C19
+Record=Constraint | TargetKind=Port | TargetId=HB4                  | FPGA_PINNUM=D18
+Record=Constraint | TargetKind=Port | TargetId=HB5                  | FPGA_PINNUM=C18
+Record=Constraint | TargetKind=Port | TargetId=HB6                  | FPGA_PINNUM=D17
+Record=Constraint | TargetKind=Port | TargetId=HB7                  | FPGA_PINNUM=C17
+Record=Constraint | TargetKind=Port | TargetId=HB8                  | FPGA_PINNUM=D16
+Record=Constraint | TargetKind=Port | TargetId=HB9                  | FPGA_PINNUM=F16
+Record=Constraint | TargetKind=Port | TargetId=HB10                 | FPGA_PINNUM=E17
+Record=Constraint | TargetKind=Port | TargetId=HB11                 | FPGA_PINNUM=E18
+Record=Constraint | TargetKind=Port | TargetId=HB12                 | FPGA_PINNUM=C16
+Record=Constraint | TargetKind=Port | TargetId=HB13                 | FPGA_PINNUM=F17
+Record=Constraint | TargetKind=Port | TargetId=HB14                 | FPGA_PINNUM=G20
+Record=Constraint | TargetKind=Port | TargetId=HB15                 | FPGA_PINNUM=G17
+Record=Constraint | TargetKind=Port | TargetId=HB16                 | FPGA_PINNUM=J17
+Record=Constraint | TargetKind=Port | TargetId=HB17                 | FPGA_PINNUM=K17
+Record=Constraint | TargetKind=Port | TargetId=HB18                 | FPGA_PINNUM=L17
+Record=Constraint | TargetKind=Port | TargetId=HB19                 | FPGA_PINNUM=M17
+;...............................................................................
+
+;...............................................................................
+; Speaker
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SPEAKER              | FPGA_PINNUM=B4
+;...............................................................................
+
+;...............................................................................
+; NanoBoard FPGA Device Connections (was listed as Serial Flash Memory)
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SPI_CLK              | FPGA_PINNUM=Y18
+Record=Constraint | TargetKind=Port | TargetId=SPI_MODE             | FPGA_PINNUM=V17
+Record=Constraint | TargetKind=Port | TargetId=SPI_SEL              | FPGA_PINNUM=W18
+Record=Constraint | TargetKind=Port | TargetId=SPI_DOUT             | FPGA_PINNUM=Y19
+Record=Constraint | TargetKind=Port | TargetId=SPI_DIN              | FPGA_PINNUM=W17
+;...............................................................................
+
+;...............................................................................
+; MAX1104 Audio Codec
+; Clock and Data lines are shared with NanoBoard General Purpose Daisy Chain In
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_SCLK           | FPGA_PINNUM=R1
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_SPICS          | FPGA_PINNUM=T1
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_DOUT           | FPGA_PINNUM=R2
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_DIN            | FPGA_PINNUM=P1
+;...............................................................................
+
+;...............................................................................
+; 'Spare' NanoBoard FPGA Device Connections
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SP0 | FPGA_PINNUM=N17
+Record=Constraint | TargetKind=Port | TargetId=SP1 | FPGA_PINNUM=G18
+Record=Constraint | TargetKind=Port | TargetId=SP2 | FPGA_PINNUM=H18
+Record=Constraint | TargetKind=Port | TargetId=SP3 | FPGA_PINNUM=J18
+Record=Constraint | TargetKind=Port | TargetId=SP4 | FPGA_PINNUM=P17
+Record=Constraint | TargetKind=Port | TargetId=SP5 | FPGA_PINNUM=T17
+Record=Constraint | TargetKind=Port | TargetId=SP6 | FPGA_PINNUM=T20
+Record=Constraint | TargetKind=Port | TargetId=SP7 | FPGA_PINNUM=A19
+Record=Constraint | TargetKind=Port | TargetId=SP8 | FPGA_PINNUM=B20
+Record=Constraint | TargetKind=Port | TargetId=SP9 | FPGA_PINNUM=B19
+Record=Constraint | TargetKind=Port | TargetId=SP10 | FPGA_PINNUM=A18
+Record=Constraint | TargetKind=Port | TargetId=SP11 | FPGA_PINNUM=B18
+Record=Constraint | TargetKind=Port | TargetId=SP12 | FPGA_PINNUM=B17
+Record=Constraint | TargetKind=Port | TargetId=SP13 | FPGA_PINNUM=A16
+Record=Constraint | TargetKind=Port | TargetId=SP14 | FPGA_PINNUM=B16
+Record=Constraint | TargetKind=Port | TargetId=SP15 | FPGA_PINNUM=A15
+
+;...............................................................................
+; Daughterboard MAX1617 Temperature Alert
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=TEMP_ALERT | FPGA_PINNUM=##### TOKEN NOT FOUND :'TEMP_ALERT '
+Record=Constraint | TargetKind=Port | TargetId=TEMP_ALERT | FPGA_PULLUP=TRUE
+
+;...............................................................................
+; Daughterboard Static RAM 0
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D[15..0] | FPGA_PINNUM=F14,E16,F18,E19,E20,D20,F19,F20,H22,H21,G22,G21,F21,E22,E21,D22
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A[18..0] | FPGA_PINNUM=G19,E6,F9,F10,H19,J19,K19,K20,L19,L22,L21,K22,K21,J22,C22,C21,M20,M19,L20
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_LB | FPGA_PINNUM=F13
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_UB | FPGA_PINNUM=F11
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_OE | FPGA_PINNUM=F12
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_E | FPGA_PINNUM=D21
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_W | FPGA_PINNUM=J21
+
+
+;...............................................................................
+; Daughterboard Static RAM 1
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D[15..0] | FPGA_PINNUM=W22,V21,V22,U21,T22,T21,R22,R21,V19,W20,Y20,W19,V18,U17,U16,U14
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A[18..0] | FPGA_PINNUM=P22,N19,N20,M18,P21,N22,N21,M22,M21,P19,R19,T19,U20,U19,U12,Y12,U11,U10,U9
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_LB | FPGA_PINNUM=W21
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_UB | FPGA_PINNUM=Y22
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_OE | FPGA_PINNUM=Y21
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_E | FPGA_PINNUM=U13
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_W | FPGA_PINNUM=V20
+
+
+;...............................................................................
+; Discrete PowerPC Interface
+;...............................................................................
+; Control signals
+Record=Constraint | TargetKind=Port | TargetId=PER_CLK | FPGA_PINNUM=C12
+Record=Constraint | TargetKind=Port | TargetId=PPC_SYS_CLK | FPGA_PINNUM=F6
+Record=Constraint | TargetKind=Port | TargetId=PPC_SYS_RESET | FPGA_PINNUM=P2
+Record=Constraint | TargetKind=Port | TargetId=PPC_SYS_ERR | FPGA_PINNUM=U6
+
+; External bus interface
+Record=Constraint | TargetKind=Port | TargetId=PERADDR[26..2] | FPGA_PINNUM=J5,K4,H5,L5,W5,W3,Y5,R4,V4,W7,W6,W8,V5,V3,W11,W10,U3,W9,U5,R5,N3,T3,T5,P5,L3
+Record=Constraint | TargetKind=Port | TargetId=PERDATA[31..0] | FPGA_PINNUM=H2,E2,G1,K1,H1,K2,D3,E1,E4,C4,C3,F5,F3,D4,L2,F4,G4,E3,Y7,L1,U7,Y10,T4,V7,V9,Y6,V8,U4,V6,W4,N4,M4
+Record=Constraint | TargetKind=Port | TargetId=PERWBE[3..0] | FPGA_PINNUM=J4,M1,G5,H4
+Record=Constraint | TargetKind=Port | TargetId=PEROE | FPGA_PINNUM=P4
+Record=Constraint | TargetKind=Port | TargetId=PERREADY | FPGA_PINNUM=N2
+Record=Constraint | TargetKind=Port | TargetId=PERBLAST | FPGA_PINNUM=M2
+Record=Constraint | TargetKind=Port | TargetId=PER_RESET | FPGA_PINNUM=Y4
+Record=Constraint | TargetKind=Port | TargetId=PERRNW | FPGA_PINNUM=L4
+Record=Constraint | TargetKind=Port | TargetId=FPGA_CS[3..0] | FPGA_PINNUM=M3,K5,M5,N1
+Record=Constraint | TargetKind=Port | TargetId=PERIPHERAL_CS[1..0] | FPGA_PINNUM=K3,N5
+
+; On-processor peripherals
+Record=Constraint | TargetKind=Port | TargetId=PPC_IO_IRQ[6..0] | FPGA_PINNUM=F2,J6,G6,L6,K6,P6,M6
+Record=Constraint | TargetKind=Port | TargetId=PPC_DMA_REQ | FPGA_PINNUM=T6
+Record=Constraint | TargetKind=Port | TargetId=PPC_DMA_ACK | FPGA_PINNUM=N6
+Record=Constraint | TargetKind=Port | TargetId=PPC_DMA_EOT | FPGA_PINNUM=G3
+Record=Constraint | TargetKind=Port | TargetId=PPC_UART_RX | FPGA_PINNUM=J1
+Record=Constraint | TargetKind=Port | TargetId=PPC_UART_TX | FPGA_PINNUM=D1
+
+
+
+
+
+

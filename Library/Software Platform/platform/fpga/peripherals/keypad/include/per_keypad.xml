@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_keypad" description="Keypad Controller">
+		<sfr name="KEYREG"	 offset="0"  size="8" description="Key Value Register"/>
+		<sfr name="VALKEYREG"	 offset="1"  size="8" description="Valid Key Register"/>
+	</group>
+</sfrfile>

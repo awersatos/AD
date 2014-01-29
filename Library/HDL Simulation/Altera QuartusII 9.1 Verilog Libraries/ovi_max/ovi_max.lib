@@ -1,0 +1,86 @@
+timestamp=1260919119033
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[max_asynch_io]
+A/max_asynch_io=22|./src/max_atoms.v|23|1*406
+B/max_asynch_io=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+D/max_asynch_io=4*0
+P/~emb=339,794,1257,1656
+R=./src/max_atoms.v|23
+
+[max_asynch_mcell]
+A/max_asynch_mcell=22|./src/max_atoms.v|246|1*2443
+B/max_asynch_mcell=3*16035
+C=8.2.1986.SP1.35.3497  (Windows)
+D/max_asynch_mcell=4*466
+P/~emb=663,1244,3119,8327
+R=./src/max_atoms.v|246
+
+[max_asynch_sexp]
+A/max_asynch_sexp=22|./src/max_atoms.v|2621|1*24301
+B/max_asynch_sexp=3*61984
+C=8.2.1986.SP1.35.3497  (Windows)
+D/max_asynch_sexp=4*161189
+P/~emb=155,495,869,1636
+R=./src/max_atoms.v|2621
+
+[max_io]
+A/max_io=22|./src/max_atoms.v|217|1*1636
+B/max_io=3*15078
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=325,604,807,909
+R=./src/max_atoms.v|217
+
+[max_mcell]
+A/max_mcell=22|./src/max_atoms.v|2577|1*23187
+B/max_mcell=3*59999
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=850,1259,1648,1892
+R=./src/max_atoms.v|2577
+
+[max_mcell_register]
+A/max_mcell_register=22|./src/max_atoms.v|1831|1*14750
+B/max_mcell_register=3*32964
+C=8.2.1986.SP1.35.3497  (Windows)
+D/max_mcell_register=4*106779
+P/~emb=493,1072,2318,5288
+R=./src/max_atoms.v|1831
+
+[max_sexp]
+A/max_sexp=22|./src/max_atoms.v|2753|1*26157
+B/max_sexp=3*62698
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=141,322,448,545
+R=./src/max_atoms.v|2753
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, MAX VERILOG LIBRARY.
+LastVerilogToplevel=max_sexp
+ModifyID=65
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/max_atoms.v=0*16372*34557
+
+[~MFT]
+0=9|0ovi_max.mgf|34557|0
+1=7|1ovi_max.mgf|26157|0
+3=7|3ovi_max.mgf|62698|0
+4=3|4ovi_max.mgf|161189|0
+
+[~U]
+$root=12|0*0|
+max_asynch_io=12|0*214||0x80
+max_asynch_mcell=12|0*2955||0x80
+max_asynch_sexp=12|0*14667||0x80
+max_io=12|0*2324||0x90
+max_mcell=12|0*13489||0x90
+max_mcell_register=12|0*8830||0x80
+max_sexp=12|0*15931||0x90
+

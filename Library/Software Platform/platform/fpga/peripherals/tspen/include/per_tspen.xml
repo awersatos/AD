@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_tspen" description="Touchscreen Pen Detection Controller">
+		<sfr name="STAT"	 offset="0"  size="8" description="Status Register">
+			<bitfield name="PENDOWN"	start="0" end="0" access="r" description="Pen Down Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+	</group>
+</sfrfile>

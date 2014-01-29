@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_ps2mouse
+Category=DRIVER
+System=False
+Description=PS/2 mouse driver
+PublicDir=platform\fpga\drivers\ps2\ps2mouse\include

@@ -1,0 +1,406 @@
+timestamp=1260919198408
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[CYCLONEIV_PRIM_DFFE]
+A/CYCLONEIV_PRIM_DFFE=22|./src/cycloneiv_atoms.v|26|1*614
+B/CYCLONEIV_PRIM_DFFE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=294,506,988,1022
+R=./src/cycloneiv_atoms.v|26
+
+[CYCLONEIV_PRIM_DFFEAS]
+A/CYCLONEIV_PRIM_DFFEAS=22|./src/cycloneiv_atoms.v|99|1*1418
+B/CYCLONEIV_PRIM_DFFEAS=3*722
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=418,656,1034,1068
+R=./src/cycloneiv_atoms.v|99
+
+[CYCLONEIV_PRIM_DFFEAS_HIGH]
+A/CYCLONEIV_PRIM_DFFEAS_HIGH=22|./src/cycloneiv_atoms.v|137|1*2208
+B/CYCLONEIV_PRIM_DFFEAS_HIGH=3*1298
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=428,671,1049,1083
+R=./src/cycloneiv_atoms.v|137
+
+[cycloneiv_and1]
+A/cycloneiv_and1=22|./src/cycloneiv_atoms.v|350|1*6682
+B/cycloneiv_and1=3*5302
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_and1=4*2558
+P/~emb=129,280,382,471
+R=./src/cycloneiv_atoms.v|350
+
+[cycloneiv_and16]
+A/cycloneiv_and16=22|./src/cycloneiv_atoms.v|363|1*7273
+B/cycloneiv_and16=3*5459
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_and16=4*2717
+P/~emb=143,343,524,815
+R=./src/cycloneiv_atoms.v|363
+
+[cycloneiv_b17mux21]
+A/cycloneiv_b17mux21=22|./src/cycloneiv_atoms.v|403|1*8746
+B/cycloneiv_b17mux21=3*7113
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,374,530,620
+R=./src/cycloneiv_atoms.v|403
+
+[cycloneiv_b5mux21]
+A/cycloneiv_b5mux21=22|./src/cycloneiv_atoms.v|424|1*9966
+B/cycloneiv_b5mux21=3*9374
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=198,366,522,612
+R=./src/cycloneiv_atoms.v|424
+
+[cycloneiv_bmux21]
+A/cycloneiv_bmux21=22|./src/cycloneiv_atoms.v|392|1*8121
+B/cycloneiv_bmux21=3*5617
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=199,367,523,613
+R=./src/cycloneiv_atoms.v|392
+
+[cycloneiv_clkctrl]
+A/cycloneiv_clkctrl=22|./src/cycloneiv_atoms.v|3317|1*40488
+B/cycloneiv_clkctrl=3*395791
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_clkctrl=4*9409
+P/~emb=414,869,1312,1787
+R=./src/cycloneiv_atoms.v|3317
+
+[cycloneiv_controller]
+A/cycloneiv_controller=22|./src/cycloneiv_atoms.v|4230|1*52218
+B/cycloneiv_controller=3*473184
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=205,394,523,620
+R=./src/cycloneiv_atoms.v|4230
+
+[cycloneiv_crcblock]
+A/cycloneiv_crcblock=22|./src/cycloneiv_atoms.v|4157|1*50578
+B/cycloneiv_crcblock=3*470803
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=333,564,725,832
+R=./src/cycloneiv_atoms.v|4157
+
+[cycloneiv_ddio_oe]
+A/cycloneiv_ddio_oe=22|./src/cycloneiv_atoms.v|986|1*16332
+B/cycloneiv_ddio_oe=3*49809
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=536,1016,1480,2027
+R=./src/cycloneiv_atoms.v|986
+
+[cycloneiv_ddio_out]
+A/cycloneiv_ddio_out=22|./src/cycloneiv_atoms.v|773|1*14249
+B/cycloneiv_ddio_out=3*35558
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=733,1428,2286,2870
+R=./src/cycloneiv_atoms.v|773
+
+[cycloneiv_dffe]
+A/cycloneiv_dffe=22|./src/cycloneiv_atoms.v|175|1*3003
+B/cycloneiv_dffe=3*1879
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_dffe=4*0
+P/~emb=243,526,746,945
+R=./src/cycloneiv_atoms.v|175
+
+[cycloneiv_ena_reg]
+A/cycloneiv_ena_reg=22|./src/cycloneiv_atoms.v|3230|1*39334
+B/cycloneiv_ena_reg=3*392662
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_ena_reg=4*9086
+P/~emb=249,495,817,1021
+R=./src/cycloneiv_atoms.v|3230
+
+[cycloneiv_ff]
+A/cycloneiv_ff=22|./src/cycloneiv_atoms.v|1137|1*17694
+B/cycloneiv_ff=3*57226
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_ff=4*4265
+P/~emb=506,931,1496,1825
+R=./src/cycloneiv_atoms.v|1137
+
+[cycloneiv_io_ibuf]
+A/cycloneiv_io_ibuf=22|./src/cycloneiv_atoms.v|566|1*12021
+B/cycloneiv_io_ibuf=3*21136
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_io_ibuf=4*3632
+P/~emb=296,628,972,1153
+R=./src/cycloneiv_atoms.v|566
+
+[cycloneiv_io_obuf]
+A/cycloneiv_io_obuf=22|./src/cycloneiv_atoms.v|656|1*13047
+B/cycloneiv_io_obuf=3*27981
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_io_obuf=4*3872
+P/~emb=405,761,1235,1482
+R=./src/cycloneiv_atoms.v|656
+
+[cycloneiv_io_pad]
+A/cycloneiv_io_pad=22|./src/cycloneiv_atoms.v|3192|1*38549
+B/cycloneiv_io_pad=3*392019
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=186,399,587,723
+R=./src/cycloneiv_atoms.v|3192
+
+[cycloneiv_jtag]
+A/cycloneiv_jtag=22|./src/cycloneiv_atoms.v|4112|1*49843
+B/cycloneiv_jtag=3*470478
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=630,895,1138,1299
+R=./src/cycloneiv_atoms.v|4112
+
+[cycloneiv_latch]
+A/cycloneiv_latch=22|./src/cycloneiv_atoms.v|224|1*3978
+B/cycloneiv_latch=3*2712
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_latch=4*1020
+P/~emb=214,419,661,868
+R=./src/cycloneiv_atoms.v|224
+
+[cycloneiv_lcell_comb]
+A/cycloneiv_lcell_comb=22|./src/cycloneiv_atoms.v|446|1*10592
+B/cycloneiv_lcell_comb=3*10871
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_lcell_comb=4*2878
+P/~emb=576,1034,1625,1914
+R=./src/cycloneiv_atoms.v|446
+
+[cycloneiv_m_cntr]
+A/cycloneiv_m_cntr=22|./src/cycloneiv_atoms.v|4253|1*52863
+B/cycloneiv_m_cntr=3*473515
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=319,598,873,1066
+R=./src/cycloneiv_atoms.v|4253
+
+[cycloneiv_mac_data_reg]
+A/cycloneiv_mac_data_reg=22|./src/cycloneiv_atoms.v|2627|1*30822
+B/cycloneiv_mac_data_reg=3*330019
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_mac_data_reg=4*6919
+P/~emb=286,644,1175,1847
+R=./src/cycloneiv_atoms.v|2627
+
+[cycloneiv_mac_mult]
+A/cycloneiv_mac_mult=22|./src/cycloneiv_atoms.v|2932|1*35344
+B/cycloneiv_mac_mult=3*357199
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=757,1321,2224,2738
+R=./src/cycloneiv_atoms.v|2932
+
+[cycloneiv_mac_mult_internal]
+A/cycloneiv_mac_mult_internal=22|./src/cycloneiv_atoms.v|2847|1*34020
+B/cycloneiv_mac_mult_internal=3*335407
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_mac_mult_internal=4*8028
+P/~emb=426,755,1321,1571
+R=./src/cycloneiv_atoms.v|2847
+
+[cycloneiv_mac_out]
+A/cycloneiv_mac_out=22|./src/cycloneiv_atoms.v|3085|1*37043
+B/cycloneiv_mac_out=3*383174
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_mac_out=4*8461
+P/~emb=509,867,1396,1648
+R=./src/cycloneiv_atoms.v|3085
+
+[cycloneiv_mac_sign_reg]
+A/cycloneiv_mac_sign_reg=22|./src/cycloneiv_atoms.v|2759|1*32813
+B/cycloneiv_mac_sign_reg=3*333181
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_mac_sign_reg=4*7484
+P/~emb=230,488,830,1061
+R=./src/cycloneiv_atoms.v|2759
+
+[cycloneiv_mux21]
+A/cycloneiv_mux21=22|./src/cycloneiv_atoms.v|282|1*4970
+B/cycloneiv_mux21=3*3754
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_mux21=4*1673
+P/~emb=179,363,561,705
+R=./src/cycloneiv_atoms.v|282
+
+[cycloneiv_mux41]
+A/cycloneiv_mux41=22|./src/cycloneiv_atoms.v|309|1*5738
+B/cycloneiv_mux41=3*4420
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_mux41=4*1983
+P/~emb=250,460,732,918
+R=./src/cycloneiv_atoms.v|309
+
+[cycloneiv_n_cntr]
+A/cycloneiv_n_cntr=22|./src/cycloneiv_atoms.v|4334|1*53792
+B/cycloneiv_n_cntr=3*479011
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=215,467,718,875
+R=./src/cycloneiv_atoms.v|4334
+
+[cycloneiv_nmux21]
+A/cycloneiv_nmux21=22|./src/cycloneiv_atoms.v|414|1*9373
+B/cycloneiv_nmux21=3*8611
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=181,345,485,575
+R=./src/cycloneiv_atoms.v|414
+
+[cycloneiv_oscillator]
+A/cycloneiv_oscillator=22|./src/cycloneiv_atoms.v|4183|1*51285
+B/cycloneiv_oscillator=3*471268
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_oscillator=4*9578
+P/~emb=288,526,732,883
+R=./src/cycloneiv_atoms.v|4183
+
+[cycloneiv_pll]
+A/cycloneiv_pll=22|./src/cycloneiv_atoms.v|4658|1*57311
+B/cycloneiv_pll=3*507683
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_pll=4*9773
+P/~emb=10677,18296,30012,32897
+R=./src/cycloneiv_atoms.v|4658
+
+[cycloneiv_pll_reg]
+A/cycloneiv_pll_reg=22|./src/cycloneiv_atoms.v|4590|1*56573
+B/cycloneiv_pll_reg=3*505846
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=248,436,646,773
+R=./src/cycloneiv_atoms.v|4590
+
+[cycloneiv_post_divider]
+A/cycloneiv_post_divider=22|./src/cycloneiv_atoms.v|4515|1*55654
+B/cycloneiv_post_divider=3*492051
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=210,466,709,860
+R=./src/cycloneiv_atoms.v|4515
+
+[cycloneiv_pseudo_diff_out]
+A/cycloneiv_pseudo_diff_out=22|./src/cycloneiv_atoms.v|3404|1*41946
+B/cycloneiv_pseudo_diff_out=3*397756
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=227,438,661,802
+R=./src/cycloneiv_atoms.v|3404
+
+[cycloneiv_ram_block]
+A/cycloneiv_ram_block=22|./src/cycloneiv_atoms.v|1431|1*21952
+B/cycloneiv_ram_block=3*87086
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=16649,19415,23982,26643
+R=./src/cycloneiv_atoms.v|1431
+
+[cycloneiv_ram_pulse_generator]
+A/cycloneiv_ram_pulse_generator=22|./src/cycloneiv_atoms.v|1300|1*19467
+B/cycloneiv_ram_pulse_generator=3*65554
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_ram_pulse_generator=4*5365
+P/~emb=304,573,855,1024
+R=./src/cycloneiv_atoms.v|1300
+
+[cycloneiv_ram_register]
+A/cycloneiv_ram_register=22|./src/cycloneiv_atoms.v|1348|1*20537
+B/cycloneiv_ram_register=3*69075
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_ram_register=4*5672
+P/~emb=439,772,1226,1474
+R=./src/cycloneiv_atoms.v|1348
+
+[cycloneiv_rublock]
+A/cycloneiv_rublock=22|./src/cycloneiv_atoms.v|3447|1*42772
+B/cycloneiv_rublock=3*400157
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=623,998,1221,1348
+R=./src/cycloneiv_atoms.v|3447
+
+[cycloneiv_scale_cntr]
+A/cycloneiv_scale_cntr=22|./src/cycloneiv_atoms.v|4405|1*54641
+B/cycloneiv_scale_cntr=3*483215
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=385,746,1093,1323
+R=./src/cycloneiv_atoms.v|4405
+
+[cycloneiv_termination]
+A/cycloneiv_termination=22|./src/cycloneiv_atoms.v|3891|1*47581
+B/cycloneiv_termination=3*458076
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=990,2012,3023,3788
+R=./src/cycloneiv_atoms.v|3891
+
+[cycloneiv_termination_ctrl]
+A/cycloneiv_termination_ctrl=22|./src/cycloneiv_atoms.v|3487|1*43638
+B/cycloneiv_termination_ctrl=3*400757
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1012,1514,2353,2679
+R=./src/cycloneiv_atoms.v|3487
+
+[cycloneiv_termination_rupdn]
+A/cycloneiv_termination_rupdn=22|./src/cycloneiv_atoms.v|3698|1*45489
+B/cycloneiv_termination_rupdn=3*427732
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=924,1490,2654,2937
+R=./src/cycloneiv_atoms.v|3698
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, CYCLONEIV VERILOG LIBRARY.
+LastVerilogToplevel=cycloneiv_pll
+ModifyID=371
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/cycloneiv_atoms.v=0*100079*161326
+
+[~MFT]
+0=47|0ovi_cycloneiv.mgf|161326|0
+1=45|1ovi_cycloneiv.mgf|57311|0
+3=45|3ovi_cycloneiv.mgf|507683|0
+4=19|4ovi_cycloneiv.mgf|9773|0
+
+[~U]
+$root=12|0*0|
+CYCLONEIV_PRIM_DFFE=12|0*518||0xa0
+CYCLONEIV_PRIM_DFFEAS=12|0*1354||0xa0
+CYCLONEIV_PRIM_DFFEAS_HIGH=12|0*2144||0xa0
+cycloneiv_and1=12|0*6266||0x90
+cycloneiv_and16=12|0*6697||0x90
+cycloneiv_b17mux21=12|0*7834||0x90
+cycloneiv_b5mux21=12|0*8798||0x90
+cycloneiv_bmux21=12|0*7337||0x90
+cycloneiv_clkctrl=12|0*45272||0x90
+cycloneiv_controller=12|0*58250||0x90
+cycloneiv_crcblock=12|0*56930||0x90
+cycloneiv_ddio_oe=12|0*16284||0x90
+cycloneiv_ddio_out=12|0*13721||0x90
+cycloneiv_dffe=12|0*2955||0x90
+cycloneiv_ena_reg=12|0*44198||0x80
+cycloneiv_ff=12|0*17982||0x90
+cycloneiv_io_ibuf=12|0*11029||0x90
+cycloneiv_io_obuf=12|0*12247||0x90
+cycloneiv_io_pad=12|0*43605||0x90
+cycloneiv_jtag=12|0*56227||0x90
+cycloneiv_latch=12|0*3914||0x80
+cycloneiv_lcell_comb=12|0*9280||0x90
+cycloneiv_m_cntr=12|0*58719||0x80
+cycloneiv_mac_data_reg=12|0*35782||0x80
+cycloneiv_mac_mult=12|0*39888||0x90
+cycloneiv_mac_mult_internal=12|0*38500||0x80
+cycloneiv_mac_out=12|0*42099||0x90
+cycloneiv_mac_sign_reg=12|0*37405||0x80
+cycloneiv_mux21=12|0*4794||0x80
+cycloneiv_mux41=12|0*5450||0x80
+cycloneiv_n_cntr=12|0*59728||0x80
+cycloneiv_nmux21=12|0*8333||0x90
+cycloneiv_oscillator=12|0*57509||0x90
+cycloneiv_pll=12|0*63567||0x90
+cycloneiv_pll_reg=12|0*62877||0x90
+cycloneiv_post_divider=12|0*61958||0x80
+cycloneiv_pseudo_diff_out=12|0*46698||0x90
+cycloneiv_ram_block=12|0*22288||0x90
+cycloneiv_ram_pulse_generator=12|0*19931||0x80
+cycloneiv_ram_register=12|0*20905||0x80
+cycloneiv_rublock=12|0*47412||0x90
+cycloneiv_scale_cntr=12|0*60609||0x80
+cycloneiv_termination=12|0*53229||0x90
+cycloneiv_termination_ctrl=12|0*48230||0x80
+cycloneiv_termination_rupdn=12|0*50513||0x80
+

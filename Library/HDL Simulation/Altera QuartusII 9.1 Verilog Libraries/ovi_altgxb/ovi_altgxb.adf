@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_altgxb
+
+[Library]
+ovi_altgxb=.\ovi_altgxb.LIB
+
+[$LibMap$]
+ovi_altgxb=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_ovi_altgxb.do=-1
+
+[Files.Data]
+.\src\update_ovi_altgxb.do=Macro
+

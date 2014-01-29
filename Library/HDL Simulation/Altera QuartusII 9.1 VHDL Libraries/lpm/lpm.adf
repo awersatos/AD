@@ -1,0 +1,37 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=lpm
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+lpm=.
+
+[Library]
+lpm=.\lpm.LIB
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/220model.vhd=-1
+/220pack.vhd=-1
+/altera_mf.vhd=-1
+/altera_mf_components.vhd=-1
+/update_lpm.do=-1
+
+[Files.Data]
+.\src\220model.vhd=VHDL Source Code
+.\src\220pack.vhd=VHDL Source Code
+.\src\altera_mf.vhd=VHDL Source Code
+.\src\altera_mf_components.vhd=VHDL Source Code
+.\src\update_lpm.do=Macro
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+				xmlns:html="http://www.w3.org/1999/xhtml">
+
+
+<vbox flex="1" style="overflow: auto">
+
+	<html xmlns="http://www.w3.org/1999/xhtml" style="background-color: white; font-family: serif; font-size: medium">
+		<h3>Introduction to Objects</h3>
+		<p>Object dictionary in most important in CANopen. It contains many Objects, some of them are responsible for communication, some are specified by manufacturer and some are standardized for use with specific device profile.</p>
+		<p>More about the objects can be read in other CANopen Literature</p>
+		<p>In Object Dictionary Editor Objects can be added, removed or configured. Some objects, are managed by features, so they partially depends on them.</p>
+	</html>
+
+</vbox>
+</window>

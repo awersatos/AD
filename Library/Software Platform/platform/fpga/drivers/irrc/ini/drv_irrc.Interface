@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_irrc
+Category=DRIVER
+System=False
+Description=IR Remote Control device driver
+PublicDir=platform\fpga\drivers\irrc\include

@@ -1,0 +1,10 @@
+[Plugin]
+Name=drv_instrument
+Caption=Custom Instrument Driver
+Description=Driver for Custom Instrument or Digital I/O components
+SourceDir=platform\fpga\drivers\instrument\src
+Implement=drv_instrument
+Bitmap=drv_instrument.bmp
+
+[Instance]
+Require0=per_instrument

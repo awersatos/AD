@@ -1,0 +1,1372 @@
+timestamp=1265381623976
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[AND2HV15]
+A/AND2HV15=22|./src/pclib/lv160c/perf/veri/AND2HV15.v|10|1*26639
+B/AND2HV15=3*27269
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND2HV15=4*0
+P/~emb=138,321,431,537
+R=./src/pclib/lv160c/perf/veri/AND2HV15.v|10
+
+[AND2SV15]
+A/AND2SV15=22|./src/pclib/lv160c/perf/veri/AND2SV15.v|10|1*188753
+B/AND2SV15=3*100502
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND2SV15=4*46400
+P/~emb=138,321,431,537
+R=./src/pclib/lv160c/perf/veri/AND2SV15.v|10
+
+[AND2V15]
+A/AND2V15=22|./src/pclib/lv160c/perf/veri/AND2V15.v|10|1*116513
+B/AND2V15=3*69188
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND2V15=4*27109
+P/~emb=136,318,428,534
+R=./src/pclib/lv160c/perf/veri/AND2V15.v|10
+
+[AO221V15]
+A/AO221V15=22|./src/pclib/lv160c/perf/veri/AO221V15.v|10|1*120444
+B/AO221V15=3*70099
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AO221V15=4*29249
+P/~emb=221,425,558,701
+R=./src/pclib/lv160c/perf/veri/AO221V15.v|10
+
+[AO222SV15]
+A/AO222SV15=22|./src/pclib/lv160c/perf/veri/AO222SV15.v|10|1*119698
+B/AO222SV15=3*69947
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AO222SV15=4*28666
+P/~emb=252,464,604,763
+R=./src/pclib/lv160c/perf/veri/AO222SV15.v|10
+
+[AO222V15]
+A/AO222V15=22|./src/pclib/lv160c/perf/veri/AO222V15.v|10|1*59728
+B/AO222V15=3*54412
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AO222V15=4*16962
+P/~emb=250,460,600,759
+R=./src/pclib/lv160c/perf/veri/AO222V15.v|10
+
+[AO22V15]
+A/AO22V15=22|./src/pclib/lv160c/perf/veri/AO22V15.v|10|1*121157
+B/AO22V15=3*70250
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AO22V15=4*29754
+P/~emb=194,393,522,660
+R=./src/pclib/lv160c/perf/veri/AO22V15.v|10
+
+[BIPOLAR_UDP]
+A/BIPOLAR_UDP=22|./src/BIPOLAR_UDP.v|7|1*206837
+B/BIPOLAR_UDP=3*104465
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=147,293,410,444
+R=./src/BIPOLAR_UDP.v|7
+
+[BSIN06FV33C]
+A/BSIN06FV33C=22|./src/BSIN06FV33C.v|11|1*166740
+B/BSIN06FV33C=3*96024
+C=8.2.1986.SP1.35.3497  (Windows)
+D/BSIN06FV33C=4*42355
+P/~emb=159,346,488,615
+R=./src/BSIN06FV33C.v|11
+
+[BS_CELL]
+A/BS_CELL=22|./src/orli10g.v|2|1*26023
+B/BS_CELL=3*27119
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=162,381,525,687
+R=./src/orli10g.v|2
+
+[CBI21M4V15]
+A/CBI21M4V15=22|./src/pclib/lv160c/perf/veri/CBI21M4V15.v|11|1*66729
+B/CBI21M4V15=3*55635
+C=8.2.1986.SP1.35.3497  (Windows)
+D/CBI21M4V15=4*18787
+P/~emb=117,303,406,506
+R=./src/pclib/lv160c/perf/veri/CBI21M4V15.v|11
+
+[CBI22M4V15]
+A/CBI22M4V15=22|./src/pclib/lv160c/perf/veri/CBI22M4V15.v|11|1*67332
+B/CBI22M4V15=3*55788
+C=8.2.1986.SP1.35.3497  (Windows)
+D/CBI22M4V15=4*18996
+P/~emb=117,303,406,506
+R=./src/pclib/lv160c/perf/veri/CBI22M4V15.v|11
+
+[CDCHK_UDP]
+A/CDCHK_UDP=22|./src/pclib/lv160c/perf/veri/CDCHK_UDP.v|8|1*202743
+B/CDCHK_UDP=3*103409
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=172,351,495,529
+R=./src/pclib/lv160c/perf/veri/CDCHK_UDP.v|8
+
+[CLK_EN_MUX]
+A/CLK_EN_MUX=22|./src/orli10g.v|5239|1*175573
+B/CLK_EN_MUX=3*97999
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1381,2133,2621,3720
+R=./src/orli10g.v|5239
+
+[COUNT5B]
+A/COUNT5B=22|./src/orli10g.v|4931|1*161199
+B/COUNT5B=3*95721
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=633,1290,1665,2540
+R=./src/orli10g.v|4931
+
+[CTI12V15]
+A/CTI12V15=22|./src/pclib/lv160c/perf/veri/CTI12V15.v|11|1*68536
+B/CTI12V15=3*56092
+C=8.2.1986.SP1.35.3497  (Windows)
+D/CTI12V15=4*19410
+P/~emb=113,296,399,499
+R=./src/pclib/lv160c/perf/veri/CTI12V15.v|11
+
+[DEL_BLOCK]
+A/DEL_BLOCK=22|./src/orli10g.v|4726|1*149948
+B/DEL_BLOCK=3*81027
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=281,596,788,1134
+R=./src/orli10g.v|4726
+
+[DEL_BLOCK2]
+A/DEL_BLOCK2=22|./src/orli10g.v|4880|1*159448
+B/DEL_BLOCK2=3*95414
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=412,710,907,1231
+R=./src/orli10g.v|4880
+
+[DNEQ_UDP]
+A/DNEQ_UDP=22|./src/pclib/lv160c/perf/veri/DNEQ_UDP.v|8|1*200923
+B/DNEQ_UDP=3*102955
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=168,342,563,597
+R=./src/pclib/lv160c/perf/veri/DNEQ_UDP.v|8
+
+[EN1_UDP]
+A/EN1_UDP=22|./src/EN1_UDP.v|5|1*206317
+B/EN1_UDP=3*104315
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=141,284,396,430
+R=./src/EN1_UDP.v|5
+
+[FD1S1KNV15]
+A/FD1S1KNV15=22|./src/pclib/lv160c/perf/veri/FD1S1KNV15.v|13|1*140387
+B/FD1S1KNV15=3*74369
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S1KNV15=4*32326
+P/~emb=230,580,795,1127
+R=./src/pclib/lv160c/perf/veri/FD1S1KNV15.v|13
+
+[FD1S2EQHPV15]
+A/FD1S2EQHPV15=22|./src/pclib/lv160c/perf/veri/FD1S2EQHPV15.v|12|1*102645
+B/FD1S2EQHPV15=3*58307
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S2EQHPV15=4*20447
+P/~emb=177,444,615,805
+R=./src/pclib/lv160c/perf/veri/FD1S2EQHPV15.v|12
+
+[FD1S2EQPV15]
+A/FD1S2EQPV15=22|./src/pclib/lv160c/perf/veri/FD1S2EQPV15.v|12|1*130011
+B/FD1S2EQPV15=3*71028
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S2EQPV15=4*30591
+P/~emb=175,440,611,801
+R=./src/pclib/lv160c/perf/veri/FD1S2EQPV15.v|12
+
+[FD1S3BNHV15]
+A/FD1S3BNHV15=22|./src/pclib/lv160c/perf/veri/FD1S3BNHV15.v|12|1*50449
+B/FD1S3BNHV15=3*44800
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S3BNHV15=4*11224
+P/~emb=201,502,688,912
+R=./src/pclib/lv160c/perf/veri/FD1S3BNHV15.v|12
+
+[FD1S3BQPV15]
+A/FD1S3BQPV15=22|./src/pclib/lv160c/perf/veri/FD1S3BQPV15.v|12|1*52953
+B/FD1S3BQPV15=3*50522
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S3BQPV15=4*14390
+P/~emb=173,438,599,774
+R=./src/pclib/lv160c/perf/veri/FD1S3BQPV15.v|12
+
+[FD1S3BQV15]
+A/FD1S3BQV15=22|./src/pclib/lv160c/perf/veri/FD1S3BQV15.v|12|1*148865
+B/FD1S3BQV15=3*78689
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S3BQV15=4*35000
+P/~emb=171,435,596,771
+R=./src/pclib/lv160c/perf/veri/FD1S3BQV15.v|12
+
+[FD1S3ENHV15]
+A/FD1S3ENHV15=22|./src/pclib/lv160c/perf/veri/FD1S3ENHV15.v|12|1*41210
+B/FD1S3ENHV15=3*37180
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S3ENHV15=4*5807
+P/~emb=203,505,699,947
+R=./src/pclib/lv160c/perf/veri/FD1S3ENHV15.v|12
+
+[FD1S3ENV15]
+A/FD1S3ENV15=22|./src/pclib/lv160c/perf/veri/FD1S3ENV15.v|12|1*36284
+B/FD1S3ENV15=3*31682
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S3ENV15=4*2589
+P/~emb=201,506,700,948
+R=./src/pclib/lv160c/perf/veri/FD1S3ENV15.v|12
+
+[FD1S3EQHPV15]
+A/FD1S3EQHPV15=22|./src/pclib/lv160c/perf/veri/FD1S3EQHPV15.v|12|1*45390
+B/FD1S3EQHPV15=3*40565
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S3EQHPV15=4*7983
+P/~emb=177,445,616,806
+R=./src/pclib/lv160c/perf/veri/FD1S3EQHPV15.v|12
+
+[FD1S3EQHV15]
+A/FD1S3EQHV15=22|./src/pclib/lv160c/perf/veri/FD1S3EQHV15.v|12|1*155966
+B/FD1S3EQHV15=3*91630
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S3EQHV15=4*40459
+P/~emb=175,440,611,801
+R=./src/pclib/lv160c/perf/veri/FD1S3EQHV15.v|12
+
+[FD1S3EQPV15]
+A/FD1S3EQPV15=22|./src/pclib/lv160c/perf/veri/FD1S3EQPV15.v|12|1*33965
+B/FD1S3EQPV15=3*28980
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FD1S3EQPV15=4*1006
+P/~emb=175,440,611,801
+R=./src/pclib/lv160c/perf/veri/FD1S3EQPV15.v|12
+
+[FDS1S3EQHV15]
+A/FDS1S3EQHV15=22|./src/pclib/lv160c/perf/veri/FDS1S3EQHV15.v|12|1*37495
+B/FDS1S3EQHV15=3*34316
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FDS1S3EQHV15=4*4076
+P/~emb=177,445,616,806
+R=./src/pclib/lv160c/perf/veri/FDS1S3EQHV15.v|12
+
+[FL1S3AQV15]
+A/FL1S3AQV15=22|./src/pclib/lv160c/perf/veri/FL1S3AQV15.v|11|1*177088
+B/FL1S3AQV15=3*98152
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FL1S3AQV15=4*44975
+P/~emb=200,476,633,821
+R=./src/pclib/lv160c/perf/veri/FL1S3AQV15.v|11
+
+[FL1S3BQPV15]
+A/FL1S3BQPV15=22|./src/pclib/lv160c/perf/veri/FL1S3BQPV15.v|12|1*51629
+B/FL1S3BQPV15=3*47387
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FL1S3BQPV15=4*12703
+P/~emb=229,556,745,1005
+R=./src/pclib/lv160c/perf/veri/FL1S3BQPV15.v|12
+
+[FL1S3EQPV15]
+A/FL1S3EQPV15=22|./src/pclib/lv160c/perf/veri/FL1S3EQPV15.v|12|1*115157
+B/FL1S3EQPV15=3*66029
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FL1S3EQPV15=4*25417
+P/~emb=231,564,768,1051
+R=./src/pclib/lv160c/perf/veri/FL1S3EQPV15.v|12
+
+[FLS1S3EQHV15]
+A/FLS1S3EQHV15=22|./src/pclib/lv160c/perf/veri/FLS1S3EQHV15.v|12|1*103762
+B/FLS1S3EQHV15=3*60707
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FLS1S3EQHV15=4*21620
+P/~emb=233,567,771,1054
+R=./src/pclib/lv160c/perf/veri/FLS1S3EQHV15.v|12
+
+[HCSYNC]
+A/HCSYNC=22|./src/orli10g.v|4386|1*139612
+B/HCSYNC=3*74220
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,541,739,1038
+R=./src/orli10g.v|4386
+
+[HDSYNC]
+A/HDSYNC=22|./src/orli10g.v|4401|1*141710
+B/HDSYNC=3*76843
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=236,562,754,1034
+R=./src/orli10g.v|4401
+
+[INRBHV15]
+A/INRBHV15=22|./src/pclib/lv160c/perf/veri/INRBHV15.v|11|1*40609
+B/INRBHV15=3*37029
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INRBHV15=4*5602
+P/~emb=113,294,397,497
+R=./src/pclib/lv160c/perf/veri/INRBHV15.v|11
+
+[INRBSV15]
+A/INRBSV15=22|./src/pclib/lv160c/perf/veri/INRBSV15.v|11|1*49848
+B/INRBSV15=3*44649
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INRBSV15=4*11019
+P/~emb=113,294,397,497
+R=./src/pclib/lv160c/perf/veri/INRBSV15.v|11
+
+[INRBV15]
+A/INRBV15=22|./src/pclib/lv160c/perf/veri/INRBV15.v|11|1*46507
+B/INRBV15=3*42965
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INRBV15=4*9156
+P/~emb=111,291,394,494
+R=./src/pclib/lv160c/perf/veri/INRBV15.v|11
+
+[INRBV33]
+A/INRBV33=22|./src/pclib/hl160c/perf/veri/INRBV33.v|11|1*171937
+B/INRBV33=3*97095
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INRBV33=4*44155
+P/~emb=111,291,394,494
+R=./src/pclib/hl160c/perf/veri/INRBV33.v|11
+
+[INRBX12V15]
+A/INRBX12V15=22|./src/pclib/lv160c/perf/veri/INRBX12V15.v|11|1*44203
+B/INRBX12V15=3*40262
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INRBX12V15=4*7571
+P/~emb=117,301,404,504
+R=./src/pclib/lv160c/perf/veri/INRBX12V15.v|11
+
+[INRBX3V15]
+A/INRBX3V15=22|./src/pclib/lv160c/perf/veri/INRBX3V15.v|11|1*117129
+B/INRBX3V15=3*69338
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INRBX3V15=4*27386
+P/~emb=115,298,401,501
+R=./src/pclib/lv160c/perf/veri/INRBX3V15.v|11
+
+[INRBX6V15]
+A/INRBX6V15=22|./src/pclib/lv160c/perf/veri/INRBX6V15.v|11|1*59126
+B/INRBX6V15=3*54260
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INRBX6V15=4*16755
+P/~emb=115,298,401,501
+R=./src/pclib/lv160c/perf/veri/INRBX6V15.v|11
+
+[INRBX8V15]
+A/INRBX8V15=22|./src/pclib/lv160c/perf/veri/INRBX8V15.v|11|1*117731
+B/INRBX8V15=3*69490
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INRBX8V15=4*27593
+P/~emb=115,298,401,501
+R=./src/pclib/lv160c/perf/veri/INRBX8V15.v|11
+
+[LP4_UDP]
+A/LP4_UDP=22|./src/pclib/lv160c/perf/veri/LP4_UDP.v|7|1*204517
+B/LP4_UDP=3*103865
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=221,407,790,824
+R=./src/pclib/lv160c/perf/veri/LP4_UDP.v|7
+
+[LVCTAPLV33C]
+A/LVCTAPLV33C=22|./src/LVCTAPLV33C.v|12|1*167440
+B/LVCTAPLV33C=3*96178
+C=8.2.1986.SP1.35.3497  (Windows)
+D/LVCTAPLV33C=4*42566
+P/~emb=137,315,440,556
+R=./src/LVCTAPLV33C.v|12
+
+[LVDSIFLV33C]
+A/LVDSIFLV33C=22|./src/LVDSIFLV33C.v|11|1*170446
+B/LVDSIFLV33C=3*96792
+C=8.2.1986.SP1.35.3497  (Windows)
+D/LVDSIFLV33C=4*43435
+P/~emb=327,578,759,990
+R=./src/LVDSIFLV33C.v|11
+
+[LVDSODLV33C]
+A/LVDSODLV33C=22|./src/LVDSODLV33C.v|11|1*168726
+B/LVDSODLV33C=3*96484
+C=8.2.1986.SP1.35.3497  (Windows)
+D/LVDSODLV33C=4*42992
+P/~emb=354,610,791,1033
+R=./src/LVDSODLV33C.v|11
+
+[LVDSRDLV33C]
+A/LVDSRDLV33C=22|./src/LVDSRDLV33C.v|11|1*169586
+B/LVDSRDLV33C=3*96638
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=406,634,834,1071
+R=./src/LVDSRDLV33C.v|11
+
+[METRES1]
+A/METRES1=22|./src/orli10g_core_top_vital.v|1546|1*15476
+B/METRES1=3*918
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=111,266,369,469
+R=./src/orli10g_core_top_vital.v|1546
+
+[MUX21HV15]
+A/MUX21HV15=22|./src/pclib/lv160c/perf/veri/MUX21HV15.v|11|1*189986
+B/MUX21HV15=3*100803
+C=8.2.1986.SP1.35.3497  (Windows)
+D/MUX21HV15=4*47030
+P/~emb=171,378,495,605
+R=./src/pclib/lv160c/perf/veri/MUX21HV15.v|11
+
+[MUX21IV15]
+A/MUX21IV15=22|./src/pclib/lv160c/perf/veri/MUX21IV15.v|11|1*48453
+B/MUX21IV15=3*43417
+C=8.2.1986.SP1.35.3497  (Windows)
+D/MUX21IV15=4*10218
+P/~emb=171,382,508,634
+R=./src/pclib/lv160c/perf/veri/MUX21IV15.v|11
+
+[MUX21SV15]
+A/MUX21SV15=22|./src/pclib/lv160c/perf/veri/MUX21SV15.v|11|1*158718
+B/MUX21SV15=3*94333
+C=8.2.1986.SP1.35.3497  (Windows)
+D/MUX21SV15=4*41833
+P/~emb=171,378,495,605
+R=./src/pclib/lv160c/perf/veri/MUX21SV15.v|11
+
+[MUX21V15]
+A/MUX21V15=22|./src/pclib/lv160c/perf/veri/MUX21V15.v|11|1*148136
+B/MUX21V15=3*77609
+C=8.2.1986.SP1.35.3497  (Windows)
+D/MUX21V15=4*34480
+P/~emb=169,373,490,600
+R=./src/pclib/lv160c/perf/veri/MUX21V15.v|11
+
+[MUX41HV15]
+A/MUX41HV15=22|./src/pclib/lv160c/perf/veri/MUX41HV15.v|11|1*155092
+B/MUX41HV15=3*88297
+C=8.2.1986.SP1.35.3497  (Windows)
+D/MUX41HV15=4*39026
+P/~emb=256,476,603,723
+R=./src/pclib/lv160c/perf/veri/MUX41HV15.v|11
+
+[MUX41SV15]
+A/MUX41SV15=22|./src/pclib/lv160c/perf/veri/MUX41SV15.v|11|1*150726
+B/MUX41SV15=3*81179
+C=8.2.1986.SP1.35.3497  (Windows)
+D/MUX41SV15=4*36162
+P/~emb=256,476,603,723
+R=./src/pclib/lv160c/perf/veri/MUX41SV15.v|11
+
+[MUX41V15]
+A/MUX41V15=22|./src/pclib/lv160c/perf/veri/MUX41V15.v|11|1*151600
+B/MUX41V15=3*84512
+C=8.2.1986.SP1.35.3497  (Windows)
+D/MUX41V15=4*37595
+P/~emb=254,471,598,718
+R=./src/pclib/lv160c/perf/veri/MUX41V15.v|11
+
+[ND2FSV15]
+A/ND2FSV15=22|./src/pclib/lv160c/perf/veri/ND2FSV15.v|10|1*49231
+B/ND2FSV15=3*44498
+C=8.2.1986.SP1.35.3497  (Windows)
+D/ND2FSV15=4*10740
+P/~emb=138,323,433,539
+R=./src/pclib/lv160c/perf/veri/ND2FSV15.v|10
+
+[ND2FX11V15]
+A/ND2FX11V15=22|./src/pclib/lv160c/perf/veri/ND2FX11V15.v|10|1*114538
+B/ND2FX11V15=3*65876
+C=8.2.1986.SP1.35.3497  (Windows)
+D/ND2FX11V15=4*25134
+P/~emb=142,330,440,546
+R=./src/pclib/lv160c/perf/veri/ND2FX11V15.v|10
+
+[ND2FX15V15]
+A/ND2FX15V15=22|./src/pclib/lv160c/perf/veri/ND2FX15V15.v|10|1*135388
+B/ND2FX15V15=3*73588
+C=8.2.1986.SP1.35.3497  (Windows)
+D/ND2FX15V15=4*31762
+P/~emb=142,330,440,546
+R=./src/pclib/lv160c/perf/veri/ND2FX15V15.v|10
+
+[ND2FX3V15]
+A/ND2FX3V15=22|./src/pclib/lv160c/perf/veri/ND2FX3V15.v|10|1*106988
+B/ND2FX3V15=3*64180
+C=8.2.1986.SP1.35.3497  (Windows)
+D/ND2FX3V15=4*23519
+P/~emb=140,327,437,543
+R=./src/pclib/lv160c/perf/veri/ND2FX3V15.v|10
+
+[ND2I1V15]
+A/ND2I1V15=22|./src/pclib/lv160c/perf/veri/ND2I1V15.v|10|1*61088
+B/ND2I1V15=3*54712
+C=8.2.1986.SP1.35.3497  (Windows)
+D/ND2I1V15=4*17892
+P/~emb=140,330,449,575
+R=./src/pclib/lv160c/perf/veri/ND2I1V15.v|10
+
+[ND2V15]
+A/ND2V15=22|./src/pclib/lv160c/perf/veri/ND2V15.v|10|1*42422
+B/ND2V15=3*39815
+C=8.2.1986.SP1.35.3497  (Windows)
+D/ND2V15=4*7296
+P/~emb=134,317,427,533
+R=./src/pclib/lv160c/perf/veri/ND2V15.v|10
+
+[NEGCDAC_UDP]
+A/NEGCDAC_UDP=22|./src/pclib/lv160c/perf/veri/NEGCDAC_UDP.v|9|1*199555
+B/NEGCDAC_UDP=3*102647
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=204,400,797,831
+R=./src/pclib/lv160c/perf/veri/NEGCDAC_UDP.v|9
+
+[NEGFFAC_UDP]
+A/NEGFFAC_UDP=22|./src/pclib/lv160c/perf/veri/NEGFFAC_UDP.v|9|1*200255
+B/NEGFFAC_UDP=3*102801
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=256,459,757,791
+R=./src/pclib/lv160c/perf/veri/NEGFFAC_UDP.v|9
+
+[NNP_UDP]
+A/NNP_UDP=22|./src/pclib/lv160c/perf/veri/NNP_UDP.v|5|1*205213
+B/NNP_UDP=3*104015
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=170,341,474,508
+R=./src/pclib/lv160c/perf/veri/NNP_UDP.v|5
+
+[NPP_UDP]
+A/NPP_UDP=22|./src/pclib/lv160c/perf/veri/NPP_UDP.v|5|1*205765
+B/NPP_UDP=3*104165
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=170,341,475,509
+R=./src/pclib/lv160c/perf/veri/NPP_UDP.v|5
+
+[NP_UDP]
+A/NP_UDP=22|./src/pclib/lv160c/perf/veri/NP_UDP.v|5|1*199020
+B/NP_UDP=3*102498
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=141,306,428,462
+R=./src/pclib/lv160c/perf/veri/NP_UDP.v|5
+
+[NR2FX11V15]
+A/NR2FX11V15=22|./src/pclib/lv160c/perf/veri/NR2FX11V15.v|10|1*119079
+B/NR2FX11V15=3*69794
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NR2FX11V15=4*28383
+P/~emb=142,330,440,546
+R=./src/pclib/lv160c/perf/veri/NR2FX11V15.v|10
+
+[NR2FX3V15]
+A/NR2FX3V15=22|./src/pclib/lv160c/perf/veri/NR2FX3V15.v|10|1*136007
+B/NR2FX3V15=3*73741
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NR2FX3V15=4*32045
+P/~emb=140,327,437,543
+R=./src/pclib/lv160c/perf/veri/NR2FX3V15.v|10
+
+[NR2I1SV15]
+A/NR2I1SV15=22|./src/pclib/lv160c/perf/veri/NR2I1SV15.v|10|1*108303
+B/NR2I1SV15=3*65267
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NR2I1SV15=4*24297
+P/~emb=142,334,453,579
+R=./src/pclib/lv160c/perf/veri/NR2I1SV15.v|10
+
+[NR2I1V15]
+A/NR2I1V15=22|./src/pclib/lv160c/perf/veri/NR2I1V15.v|10|1*108969
+B/NR2I1V15=3*65419
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NR2I1V15=4*24579
+P/~emb=140,330,449,575
+R=./src/pclib/lv160c/perf/veri/NR2I1V15.v|10
+
+[NR2SV15]
+A/NR2SV15=22|./src/pclib/lv160c/perf/veri/NR2SV15.v|10|1*188137
+B/NR2SV15=3*100352
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NR2SV15=4*46123
+P/~emb=136,320,430,536
+R=./src/pclib/lv160c/perf/veri/NR2SV15.v|10
+
+[NR2V15]
+A/NR2V15=22|./src/pclib/lv160c/perf/veri/NR2V15.v|10|1*113923
+B/NR2V15=3*65727
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NR2V15=4*24859
+P/~emb=134,317,427,533
+R=./src/pclib/lv160c/perf/veri/NR2V15.v|10
+
+[NR2V33]
+A/NR2V33=22|./src/pclib/hl160c/perf/veri/NR2V33.v|10|1*171322
+B/NR2V33=3*96946
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NR2V33=4*43880
+P/~emb=134,317,427,533
+R=./src/pclib/hl160c/perf/veri/NR2V33.v|10
+
+[NR3FSV15]
+A/NR3FSV15=22|./src/pclib/lv160c/perf/veri/NR3FSV15.v|10|1*39976
+B/NR3FSV15=3*36878
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NR3FSV15=4*5249
+P/~emb=163,351,466,575
+R=./src/pclib/lv160c/perf/veri/NR3FSV15.v|10
+
+[OA21V15]
+A/OA21V15=22|./src/pclib/lv160c/perf/veri/OA21V15.v|10|1*47789
+B/OA21V15=3*43267
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OA21V15=4*9865
+P/~emb=165,360,483,611
+R=./src/pclib/lv160c/perf/veri/OA21V15.v|10
+
+[OAI211V15]
+A/OAI211V15=22|./src/pclib/lv160c/perf/veri/OAI211V15.v|10|1*54733
+B/OAI211V15=3*53795
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OAI211V15=4*16049
+P/~emb=194,395,523,655
+R=./src/pclib/lv160c/perf/veri/OAI211V15.v|10
+
+[OAI222V15]
+A/OAI222V15=22|./src/pclib/lv160c/perf/veri/OAI222V15.v|10|1*118333
+B/OAI222V15=3*69642
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OAI222V15=4*27800
+P/~emb=252,467,606,766
+R=./src/pclib/lv160c/perf/veri/OAI222V15.v|10
+
+[OAI311V15]
+A/OAI311V15=22|./src/pclib/lv160c/perf/veri/OAI311V15.v|10|1*47091
+B/OAI311V15=3*43115
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OAI311V15=4*9359
+P/~emb=221,425,557,692
+R=./src/pclib/lv160c/perf/veri/OAI311V15.v|10
+
+[OR2V15]
+A/OR2V15=22|./src/pclib/lv160c/perf/veri/OR2V15.v|10|1*58511
+B/OR2V15=3*54111
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR2V15=4*16480
+P/~emb=134,318,428,533
+R=./src/pclib/lv160c/perf/veri/OR2V15.v|10
+
+[OR3SV15]
+A/OR3SV15=22|./src/pclib/lv160c/perf/veri/OR3SV15.v|10|1*189370
+B/OR3SV15=3*100653
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR3SV15=4*46679
+P/~emb=161,349,464,572
+R=./src/pclib/lv160c/perf/veri/OR3SV15.v|10
+
+[OR3V15]
+A/OR3V15=22|./src/pclib/lv160c/perf/veri/OR3V15.v|10|1*60473
+B/OR3V15=3*54563
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR3V15=4*17543
+P/~emb=159,346,461,569
+R=./src/pclib/lv160c/perf/veri/OR3V15.v|10
+
+[PD50KV33]
+A/PD50KV33=22|./src/pclib/hl160c/perf/veri/PD50KV33.v|11|1*173724
+B/PD50KV33=3*97548
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=127,306,431,548
+R=./src/pclib/hl160c/perf/veri/PD50KV33.v|11
+
+[PDCHK_UDP]
+A/PDCHK_UDP=22|./src/pclib/lv160c/perf/veri/PDCHK_UDP.v|8|1*201524
+B/PDCHK_UDP=3*103106
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=172,351,496,530
+R=./src/pclib/lv160c/perf/veri/PDCHK_UDP.v|8
+
+[POSCDAC_UDP]
+A/POSCDAC_UDP=22|./src/pclib/lv160c/perf/veri/POSCDAC_UDP.v|9|1*197652
+B/POSCDAC_UDP=3*102190
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=204,401,796,830
+R=./src/pclib/lv160c/perf/veri/POSCDAC_UDP.v|9
+
+[POSCD_UDP]
+A/POSCD_UDP=22|./src/pclib/lv160c/perf/veri/POSCD_UDP.v|7|1*203313
+B/POSCD_UDP=3*103561
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=146,333,487,521
+R=./src/pclib/lv160c/perf/veri/POSCD_UDP.v|7
+
+[POSFFAC_UDP]
+A/POSFFAC_UDP=22|./src/pclib/lv160c/perf/veri/POSFFAC_UDP.v|9|1*198352
+B/POSFFAC_UDP=3*102344
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=256,460,759,793
+R=./src/pclib/lv160c/perf/veri/POSFFAC_UDP.v|9
+
+[POSFF_UDP]
+A/POSFF_UDP=22|./src/pclib/lv160c/perf/veri/POSFF_UDP.v|7|1*203899
+B/POSFF_UDP=3*103713
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=198,395,623,657
+R=./src/pclib/lv160c/perf/veri/POSFF_UDP.v|7
+
+[RST_BLK_161]
+A/RST_BLK_161=22|./src/orli10g.v|4852|1*157666
+B/RST_BLK_161=3*94179
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=484,981,1264,1842
+R=./src/orli10g.v|4852
+
+[RST_BLK_644]
+A/RST_BLK_644=22|./src/orli10g.v|4709|1*146723
+B/RST_BLK_644=3*77304
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=343,700,891,1232
+R=./src/orli10g.v|4709
+
+[SBIHV15]
+A/SBIHV15=22|./src/pclib/lv160c/perf/veri/SBIHV15.v|11|1*44806
+B/SBIHV15=3*40415
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBIHV15=4*7780
+P/~emb=111,293,396,496
+R=./src/pclib/lv160c/perf/veri/SBIHV15.v|11
+
+[SBIX12V15]
+A/SBIX12V15=22|./src/pclib/lv160c/perf/veri/SBIX12V15.v|11|1*92166
+B/SBIX12V15=3*57364
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBIX12V15=4*20033
+P/~emb=115,300,403,503
+R=./src/pclib/lv160c/perf/veri/SBIX12V15.v|11
+
+[SBIX16V15]
+A/SBIX16V15=22|./src/pclib/lv160c/perf/veri/SBIX16V15.v|11|1*93427
+B/SBIX16V15=3*57677
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBIX16V15=4*20240
+P/~emb=115,300,403,503
+R=./src/pclib/lv160c/perf/veri/SBIX16V15.v|11
+
+[SBIX32V15]
+A/SBIX32V15=22|./src/pclib/lv160c/perf/veri/SBIX32V15.v|11|1*65526
+B/SBIX32V15=3*55332
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBIX32V15=4*18375
+P/~emb=115,300,403,503
+R=./src/pclib/lv160c/perf/veri/SBIX32V15.v|11
+
+[SBIX3V15]
+A/SBIX3V15=22|./src/pclib/lv160c/perf/veri/SBIX3V15.v|11|1*106387
+B/SBIX3V15=3*64029
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBIX3V15=4*23314
+P/~emb=113,296,399,499
+R=./src/pclib/lv160c/perf/veri/SBIX3V15.v|11
+
+[SBIX6V15]
+A/SBIX6V15=22|./src/pclib/lv160c/perf/veri/SBIX6V15.v|11|1*67935
+B/SBIX6V15=3*55941
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBIX6V15=4*19205
+P/~emb=113,296,399,499
+R=./src/pclib/lv160c/perf/veri/SBIX6V15.v|11
+
+[SBIX8V15]
+A/SBIX8V15=22|./src/pclib/lv160c/perf/veri/SBIX8V15.v|11|1*66128
+B/SBIX8V15=3*55484
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBIX8V15=4*18582
+P/~emb=113,296,399,499
+R=./src/pclib/lv160c/perf/veri/SBIX8V15.v|11
+
+[SBN4X10V15]
+A/SBN4X10V15=22|./src/pclib/lv160c/perf/veri/SBN4X10V15.v|11|1*86304
+B/SBN4X10V15=3*56570
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBN4X10V15=4*19615
+P/~emb=117,303,406,506
+R=./src/pclib/lv160c/perf/veri/SBN4X10V15.v|11
+
+[SBN6X16V15]
+A/SBN6X16V15=22|./src/pclib/lv160c/perf/veri/SBN6X16V15.v|11|1*88339
+B/SBN6X16V15=3*56889
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBN6X16V15=4*19824
+P/~emb=117,303,406,506
+R=./src/pclib/lv160c/perf/veri/SBN6X16V15.v|11
+
+[SBNHV15]
+A/SBNHV15=22|./src/pclib/lv160c/perf/veri/SBNHV15.v|11|1*64268
+B/SBNHV15=3*55022
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNHV15=4*18172
+P/~emb=111,293,396,496
+R=./src/pclib/lv160c/perf/veri/SBNHV15.v|11
+
+[SBNSV15]
+A/SBNSV15=22|./src/pclib/lv160c/perf/veri/SBNSV15.v|11|1*157082
+B/SBNSV15=3*94029
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNSV15=4*41630
+P/~emb=111,293,396,496
+R=./src/pclib/lv160c/perf/veri/SBNSV15.v|11
+
+[SBNV15]
+A/SBNV15=22|./src/pclib/lv160c/perf/veri/SBNV15.v|11|1*123470
+B/SBNV15=3*70559
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNV15=4*30183
+P/~emb=109,290,393,493
+R=./src/pclib/lv160c/perf/veri/SBNV15.v|11
+
+[SBNX12V15]
+A/SBNX12V15=22|./src/pclib/lv160c/perf/veri/SBNX12V15.v|11|1*35081
+B/SBNX12V15=3*31379
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNX12V15=4*2177
+P/~emb=115,300,403,503
+R=./src/pclib/lv160c/perf/veri/SBNX12V15.v|11
+
+[SBNX16V15]
+A/SBNX16V15=22|./src/pclib/lv160c/perf/veri/SBNX16V15.v|11|1*27256
+B/SBNX16V15=3*27420
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNX16V15=4*279
+P/~emb=115,300,403,503
+R=./src/pclib/lv160c/perf/veri/SBNX16V15.v|11
+
+[SBNX16V33]
+A/SBNX16V33=22|./src/pclib/hl160c/perf/veri/SBNX16V33.v|11|1*172521
+B/SBNX16V33=3*97245
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNX16V33=4*44358
+P/~emb=115,300,403,503
+R=./src/pclib/hl160c/perf/veri/SBNX16V33.v|11
+
+[SBNX32V15]
+A/SBNX32V15=22|./src/pclib/lv160c/perf/veri/SBNX32V15.v|11|1*124069
+B/SBNX32V15=3*70708
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNX32V15=4*30384
+P/~emb=115,300,403,503
+R=./src/pclib/lv160c/perf/veri/SBNX32V15.v|11
+
+[SBNX32V33]
+A/SBNX32V33=22|./src/pclib/hl160c/perf/veri/SBNX32V33.v|11|1*168124
+B/SBNX32V33=3*96332
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNX32V33=4*42785
+P/~emb=115,300,403,503
+R=./src/pclib/hl160c/perf/veri/SBNX32V33.v|11
+
+[SBNX6V15]
+A/SBNX6V15=22|./src/pclib/lv160c/perf/veri/SBNX6V15.v|11|1*35683
+B/SBNX6V15=3*31531
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNX6V15=4*2384
+P/~emb=113,296,399,499
+R=./src/pclib/lv160c/perf/veri/SBNX6V15.v|11
+
+[SBNX8V15]
+A/SBNX8V15=22|./src/pclib/lv160c/perf/veri/SBNX8V15.v|11|1*147535
+B/SBNX8V15=3*77458
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SBNX8V15=4*34275
+P/~emb=113,296,399,499
+R=./src/pclib/lv160c/perf/veri/SBNX8V15.v|11
+
+[SD211V15]
+A/SD211V15=22|./src/pclib/lv160c/perf/veri/SD211V15.v|11|1*33172
+B/SD211V15=3*27888
+C=8.2.1986.SP1.35.3497  (Windows)
+D/SD211V15=4*486
+P/~emb=169,379,504,631
+R=./src/pclib/lv160c/perf/veri/SD211V15.v|11
+
+[SHIFT_BLK]
+A/SHIFT_BLK=22|./src/orli10g.v|4757|1*153058
+B/SHIFT_BLK=3*87995
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=347,709,935,1356
+R=./src/orli10g.v|4757
+
+[TGM2_UDP]
+A/TGM2_UDP=22|./src/pclib/lv160c/perf/veri/TGM2_UDP.v|6|1*197083
+B/TGM2_UDP=3*102039
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=172,346,488,522
+R=./src/pclib/lv160c/perf/veri/TGM2_UDP.v|6
+
+[TGM4_UDP]
+A/TGM4_UDP=22|./src/pclib/lv160c/perf/veri/TGM4_UDP.v|6|1*202094
+B/TGM4_UDP=3*103258
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=257,442,693,727
+R=./src/pclib/lv160c/perf/veri/TGM4_UDP.v|6
+
+[TOP_hs_dmx]
+A/TOP_hs_dmx=22|./src/orli10g.v|2529|1*94686
+B/TOP_hs_dmx=3*57988
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1744,3648,5171,7993
+R=./src/orli10g.v|2529
+
+[TOP_hs_dmx_bscan]
+A/TOP_hs_dmx_bscan=22|./src/orli10g.v|11|1*27858
+B/TOP_hs_dmx_bscan=3*27572
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=805,1183,1638,2353
+R=./src/orli10g.v|11
+
+[TOP_hs_dmx_counters]
+A/TOP_hs_dmx_counters=22|./src/orli10g.v|465|1*38612
+B/TOP_hs_dmx_counters=3*36716
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=354,1028,1538,2578
+R=./src/orli10g.v|465
+
+[TOP_hs_dmx_counters_m_0]
+A/TOP_hs_dmx_counters_m_0=22|./src/orli10g.v|2223|1*86907
+B/TOP_hs_dmx_counters_m_0=3*56723
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=450,1189,1747,2838
+R=./src/orli10g.v|2223
+
+[TOP_hs_dmx_dat_4]
+A/TOP_hs_dmx_dat_4=22|./src/orli10g.v|2473|1*94029
+B/TOP_hs_dmx_dat_4=3*57829
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=165,373,527,718
+R=./src/orli10g.v|2473
+
+[TOP_hs_dmx_dat_4i]
+A/TOP_hs_dmx_dat_4i=22|./src/orli10g.v|2445|1*64868
+B/TOP_hs_dmx_dat_4i=3*55172
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=167,376,530,721
+R=./src/orli10g.v|2445
+
+[TOP_hs_dmx_dat_4ib]
+A/TOP_hs_dmx_dat_4ib=22|./src/orli10g.v|2463|1*92768
+B/TOP_hs_dmx_dat_4ib=3*57516
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=169,381,535,726
+R=./src/orli10g.v|2463
+
+[TOP_hs_dmx_dat_4is]
+A/TOP_hs_dmx_dat_4is=22|./src/orli10g.v|2454|1*91507
+B/TOP_hs_dmx_dat_4is=3*57203
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=169,381,535,726
+R=./src/orli10g.v|2454
+
+[TOP_hs_dmx_interleave]
+A/TOP_hs_dmx_interleave=22|./src/orli10g.v|512|1*55415
+B/TOP_hs_dmx_interleave=3*53947
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=876,2112,3684,7027
+R=./src/orli10g.v|512
+
+[TOP_hs_dmx_interleave_m_0]
+A/TOP_hs_dmx_interleave_m_0=22|./src/orli10g.v|2018|1*83204
+B/TOP_hs_dmx_interleave_m_0=3*56402
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=884,2127,3700,7040
+R=./src/orli10g.v|2018
+
+[TOP_hs_dmx_m_s2p]
+A/TOP_hs_dmx_m_s2p=22|./src/orli10g.v|863|1*69121
+B/TOP_hs_dmx_m_s2p=3*56243
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1696,7461,16292,32184
+R=./src/orli10g.v|863
+
+[TOP_hs_dmx_m_slice]
+A/TOP_hs_dmx_m_slice=22|./src/orli10g.v|2277|1*88942
+B/TOP_hs_dmx_m_slice=3*57042
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1677,2971,4166,6076
+R=./src/orli10g.v|2277
+
+[TOP_hs_dmx_s2p]
+A/TOP_hs_dmx_s2p=22|./src/orli10g.v|67|1*28835
+B/TOP_hs_dmx_s2p=3*27731
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1024,2920,5746,11336
+R=./src/orli10g.v|67
+
+[TOP_hs_dmx_slice]
+A/TOP_hs_dmx_slice=22|./src/orli10g.v|717|1*61737
+B/TOP_hs_dmx_slice=3*54863
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=871,2165,3238,4867
+R=./src/orli10g.v|717
+
+[TOP_hs_mux]
+A/TOP_hs_mux=22|./src/orli10g.v|4477|1*143590
+B/TOP_hs_mux=3*77151
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1661,3391,4812,7315
+R=./src/orli10g.v|4477
+
+[TOP_hs_mux_bscan]
+A/TOP_hs_mux_bscan=22|./src/orli10g.v|4415|1*142469
+B/TOP_hs_mux_bscan=3*76992
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1121,1546,2047,2999
+R=./src/orli10g.v|4415
+
+[TOP_hs_mux_counters]
+A/TOP_hs_mux_counters=22|./src/orli10g.v|3155|1*105119
+B/TOP_hs_mux_counters=3*63867
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=596,1204,1663,2428
+R=./src/orli10g.v|3155
+
+[TOP_hs_mux_counters_m_0]
+A/TOP_hs_mux_counters_m_0=22|./src/orli10g.v|4259|1*136625
+B/TOP_hs_mux_counters_m_0=3*73893
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=700,1324,1814,2623
+R=./src/orli10g.v|4259
+
+[TOP_hs_mux_deinterleave]
+A/TOP_hs_mux_deinterleave=22|./src/orli10g.v|2760|1*98235
+B/TOP_hs_mux_deinterleave=3*58141
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=588,2625,5290,10319
+R=./src/orli10g.v|2760
+
+[TOP_hs_mux_m_deinterleave]
+A/TOP_hs_mux_m_deinterleave=22|./src/orli10g.v|3534|1*124671
+B/TOP_hs_mux_m_deinterleave=3*70860
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=818,3085,6244,12359
+R=./src/orli10g.v|3534
+
+[TOP_hs_mux_m_slice]
+A/TOP_hs_mux_m_slice=22|./src/orli10g.v|4313|1*137945
+B/TOP_hs_mux_m_slice=3*74059
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=802,1673,2242,3309
+R=./src/orli10g.v|4313
+
+[TOP_hs_mux_p2s]
+A/TOP_hs_mux_p2s=22|./src/orli10g.v|3202|1*109618
+B/TOP_hs_mux_p2s=3*65570
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=721,2620,4685,8993
+R=./src/orli10g.v|3202
+
+[TOP_hs_mux_p2s_m_0]
+A/TOP_hs_mux_p2s_m_0=22|./src/orli10g.v|3998|1*131127
+B/TOP_hs_mux_p2s_m_0=3*73427
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=807,2645,4700,8855
+R=./src/orli10g.v|3998
+
+[TOP_hs_mux_slice]
+A/TOP_hs_mux_slice=22|./src/orli10g.v|3469|1*121853
+B/TOP_hs_mux_slice=3*70400
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=572,1407,1942,2918
+R=./src/orli10g.v|3469
+
+[TRANDV15]
+A/TRANDV15=22|./src/pclib/lv160c/perf/veri/TRANDV15.v|11|1*173123
+B/TRANDV15=3*97397
+C=8.2.1986.SP1.35.3497  (Windows)
+D/TRANDV15=4*44565
+P/~emb=113,296,399,499
+R=./src/pclib/lv160c/perf/veri/TRANDV15.v|11
+
+[TRANUV33]
+A/TRANUV33=22|./src/pclib/hl160c/perf/veri/TRANUV33.v|11|1*174972
+B/TRANUV33=3*97848
+C=8.2.1986.SP1.35.3497  (Windows)
+D/TRANUV33=4*44770
+P/~emb=113,296,399,499
+R=./src/pclib/hl160c/perf/veri/TRANUV33.v|11
+
+[VHIV15]
+A/VHIV15=22|./src/pclib/lv160c/perf/veri/VHIV15.v|11|1*43620
+B/VHIV15=3*40113
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=84,242,345,439
+R=./src/pclib/lv160c/perf/veri/VHIV15.v|11
+
+[VLOV15]
+A/VLOV15=22|./src/pclib/lv160c/perf/veri/VLOV15.v|11|1*43037
+B/VLOV15=3*39964
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=84,242,345,439
+R=./src/pclib/lv160c/perf/veri/VLOV15.v|11
+
+[VLOV33]
+A/VLOV33=22|./src/pclib/hl160c/perf/veri/VLOV33.v|11|1*174373
+B/VLOV33=3*97699
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=84,242,345,439
+R=./src/pclib/hl160c/perf/veri/VLOV33.v|11
+
+[XNOR2V15]
+A/XNOR2V15=22|./src/pclib/lv160c/perf/veri/XNOR2V15.v|11|1*107606
+B/XNOR2V15=3*64332
+C=8.2.1986.SP1.35.3497  (Windows)
+D/XNOR2V15=4*23800
+P/~emb=138,324,434,539
+R=./src/pclib/lv160c/perf/veri/XNOR2V15.v|11
+
+[XOR2V15]
+A/XOR2V15=22|./src/pclib/lv160c/perf/veri/XOR2V15.v|11|1*54037
+B/XOR2V15=3*52861
+C=8.2.1986.SP1.35.3497  (Windows)
+D/XOR2V15=4*15554
+P/~emb=136,321,431,536
+R=./src/pclib/lv160c/perf/veri/XOR2V15.v|11
+
+[clk_del_blk]
+A/clk_del_blk=22|./src/orli10g.v|4898|1*160227
+B/clk_del_blk=3*95567
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=163,501,787,1284
+R=./src/orli10g.v|4898
+
+[count3b]
+A/count3b=22|./src/orli10g.v|4782|1*153948
+B/count3b=3*88147
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=374,871,1180,1846
+R=./src/orli10g.v|4782
+
+[orli10g]
+A/orli10g=22|./src/orli10g.v|5973|1*16028
+B/orli10g=3*1068
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=23907,27334,31146,39585
+R=./src/orli10g.v|5973
+
+[orli10g_blk]
+A/orli10g_blk=22|./src/orli10g.v|5299|1*178139
+B/orli10g_blk=3*100198
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=21262,26658,31426,41610
+R=./src/orli10g.v|5299
+
+[orli10g_core]
+A/orli10g_core=22|./src/orli10g_core.v|4|1*190716
+B/orli10g_core=3*101884
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=22727,27245,32444,40352
+R=./src/orli10g_core.v|4
+
+[orli10g_io]
+A/orli10g_io=22|./src/orli10g.v|4973|1*162519
+B/orli10g_io=3*95871
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=7069,8961,10821,14767
+R=./src/orli10g.v|4973
+
+[orli10g_top]
+A/orli10g_top=22|./src/orli10g_core_top_vital.v|14|1*390
+B/orli10g_top=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=19495,28273,35753,50575
+R=./src/orli10g_core_top_vital.v|14
+
+[pll_1x2]
+A/pll_1x2=22|./src/pll_1x2_v.v|4|1*23014
+B/pll_1x2=3*1218
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=444,906,1430,1752
+R=./src/pll_1x2_v.v|4
+
+[pll_n_m2]
+A/pll_n_m2=22|./src/pll_n_m2_v.v|4|1*24446
+B/pll_n_m2=3*13186
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=877,1382,2037,2414
+R=./src/pll_n_m2_v.v|4
+
+[repeater]
+A/repeater=22|./src/orli10g.v|4744|1*152473
+B/repeater=3*87844
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=113,285,409,547
+R=./src/orli10g.v|4744
+
+[~A]
+./src/orli10g_core_top_vital.v_pll_1x2_v.v_pll_n_m2_v.v_orli10g.v_orli10g_core.v_./src/pclib/lv160c/perf/veri/FLS1S3EQHV15.v_./src/pclib/lv160c/perf/veri/FLS1S3EQHV15.v_./src/pclib/lv160c/perf/veri/SBIX8V15.v_./src/pclib/lv160c/perf/veri/SBIX8V15.v_./src/pclib/lv160c/perf/veri/FD1S3BQV15.v_./src/pclib/lv160c/perf/veri/FD1S3BQV15.v_./src/pclib/lv160c/perf/veri/FD1S3EQHPV15.v_./src/pclib/lv160c/perf/veri/FD1S3EQHPV15.v_./src/pclib/lv160c/perf/veri/OA21V15.v_./src/pclib/lv160c/perf/veri/OA21V15.v_./src/pclib/lv160c/perf/veri/SBIX3V15.v_./src/pclib/lv160c/perf/veri/SBIX3V15.v_./src/pclib/lv160c/perf/veri/ND2FX3V15.v_./src/pclib/lv160c/perf/veri/ND2FX3V15.v_./src/pclib/lv160c/perf/veri/FD1S2EQPV15.v_./src/pclib/lv160c/perf/veri/FD1S2EQPV15.v_./src/pclib/lv160c/perf/veri/FD1S3BQPV15.v_./src/pclib/lv160c/perf/veri/FD1S3BQPV15.v_./src/pclib/lv160c/perf/veri/ND2FX11V15.v_./src/pclib/lv160c/perf/veri/ND2FX11V15.v_./src/pclib/lv160c/perf/veri/MUX21V15.v_./src/pclib/lv160c/perf/veri/MUX21V15.v_./src/pclib/lv160c/perf/ver=0*254729*379828
+Comment=LATTICE ispLEVER Classic 1.3, ORLI10G_WORK LIBRARY
+LastVerilogToplevel=orli10g_core
+ModifyID=1199
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+
+[~MFT]
+0=159|0orli10g_work.mgf|379828|0
+1=157|1orli10g_work.mgf|206837|0
+3=157|3orli10g_work.mgf|104465|0
+4=89|4orli10g_work.mgf|47030|0
+
+[~U]
+$root=12|0*0|
+AND2HV15=12|0*38671||0x80
+AND2SV15=12|0*234713||0x80
+AND2V15=12|0*146433||0x80
+AO221V15=12|0*149692||0x80
+AO222SV15=12|0*149042||0x80
+AO222V15=12|0*73740||0x80
+AO22V15=12|0*150293||0x80
+BIPOLAR_UDP=12|0*254333||0xa0
+BSIN06FV33C=12|0*207756||0x80
+BS_CELL=12|0*38103||0x80
+CBI21M4V15=12|0*81075||0x80
+CBI22M4V15=12|0*81550||0x80
+CDCHK_UDP=12|0*250863||0xa0
+CLK_EN_MUX=12|0*214909||0x80
+COUNT5B=12|0*199257||0x80
+CTI12V15=12|0*82498||0x80
+DEL_BLOCK=12|0*187702||0x80
+DEL_BLOCK2=12|0*197378||0x80
+DNEQ_UDP=12|0*249299||0xa0
+EN1_UDP=12|0*253941||0xa0
+FD1S1KNV15=12|0*176399||0x80
+FD1S2EQHPV15=12|0*130823||0x80
+FD1S2EQPV15=12|0*162505||0x80
+FD1S3BNHV15=12|0*63583||0x80
+FD1S3BQPV15=12|0*65703||0x80
+FD1S3BQV15=12|0*186827||0x80
+FD1S3ENHV15=12|0*56184||0x80
+FD1S3ENV15=12|0*50986||0x80
+FD1S3EQHPV15=12|0*59436||0x80
+FD1S3EQHV15=12|0*193976||0x80
+FD1S3EQPV15=12|0*49131||0x80
+FDS1S3EQHV15=12|0*52021||0x80
+FL1S3AQV15=12|0*217256||0x80
+FL1S3BQPV15=12|0*64603||0x80
+FL1S3EQPV15=12|0*145317||0x80
+FLS1S3EQHV15=12|0*131732||0x80
+HCSYNC=12|0*175512||0x80
+HDSYNC=12|0*177642||0x80
+INRBHV15=12|0*55711||0x80
+INRBSV15=12|0*63110||0x80
+INRBV15=12|0*60329||0x80
+INRBV33=12|0*212185||0x80
+INRBX12V15=12|0*58489||0x80
+INRBX3V15=12|0*146937||0x80
+INRBX6V15=12|0*73266||0x80
+INRBX8V15=12|0*147411||0x80
+LP4_UDP=12|0*252365||0xa0
+LVCTAPLV33C=12|0*208328||0x80
+LVDSIFLV33C=12|0*210870||0x80
+LVDSODLV33C=12|0*209310||0x80
+LVDSRDLV33C=12|0*210138||0x80
+METRES1=12|0*22612||0x80
+MUX21HV15=12|0*235754||0x80
+MUX21IV15=12|0*61971||0x80
+MUX21SV15=12|0*196760||0x80
+MUX21V15=12|0*186210||0x80
+MUX41HV15=12|0*193182||0x80
+MUX41SV15=12|0*188592||0x80
+MUX41V15=12|0*189386||0x80
+ND2FSV15=12|0*62605||0x80
+ND2FX11V15=12|0*144810||0x80
+ND2FX15V15=12|0*170168||0x80
+ND2FX3V15=12|0*135198||0x80
+ND2I1V15=12|0*74908||0x80
+ND2V15=12|0*57220||0x80
+NEGCDAC_UDP=12|0*247963||0xa0
+NEGFFAC_UDP=12|0*248663||0xa0
+NNP_UDP=12|0*253061||0xa0
+NPP_UDP=12|0*253501||0xa0
+NP_UDP=12|0*247540||0xa0
+NR2FX11V15=12|0*148535||0x80
+NR2FX3V15=12|0*170675||0x80
+NR2I1SV15=12|0*136273||0x80
+NR2I1V15=12|0*136811||0x80
+NR2SV15=12|0*234209||0x80
+NR2V15=12|0*144307||0x80
+NR2V33=12|0*211682||0x80
+NR3FSV15=12|0*55174||0x80
+OA21V15=12|0*61403||0x80
+OAI211V15=12|0*67163||0x80
+OAI222V15=12|0*147885||0x80
+OAI311V15=12|0*60801||0x80
+OR2V15=12|0*72763||0x80
+OR3SV15=12|0*235218||0x80
+OR3V15=12|0*74373||0x80
+PD50KV33=12|0*213604||0x80
+PDCHK_UDP=12|0*249820||0xa0
+POSCDAC_UDP=12|0*246204||0xa0
+POSCD_UDP=12|0*251321||0xa0
+POSFFAC_UDP=12|0*246904||0xa0
+POSFF_UDP=12|0*251795||0xa0
+RST_BLK_161=12|0*195356||0x80
+RST_BLK_644=12|0*184781||0x80
+SBIHV15=12|0*58964||0x80
+SBIX12V15=12|0*116476||0x80
+SBIX16V15=12|0*117561||0x80
+SBIX32V15=12|0*80128||0x80
+SBIX3V15=12|0*134725||0x80
+SBIX6V15=12|0*82025||0x80
+SBIX8V15=12|0*80602||0x80
+SBN4X10V15=12|0*108504||0x80
+SBN6X16V15=12|0*111419||0x80
+SBNHV15=12|0*79046||0x80
+SBNSV15=12|0*194884||0x80
+SBNV15=12|0*153118||0x80
+SBNX12V15=12|0*50039||0x80
+SBNX16V15=12|0*39176||0x80
+SBNX16V33=12|0*212657||0x80
+SBNX32V15=12|0*153589||0x80
+SBNX32V33=12|0*208836||0x80
+SBNX6V15=12|0*50513||0x80
+SBNX8V15=12|0*185737||0x80
+SD211V15=12|0*48498||0x80
+SHIFT_BLK=12|0*190620||0x80
+TGM2_UDP=12|0*245747||0xa0
+TGM4_UDP=12|0*250278||0xa0
+TOP_hs_dmx=12|0*118644||0x80
+TOP_hs_dmx_bscan=12|0*39650||0x80
+TOP_hs_dmx_counters=12|0*52914||0x80
+TOP_hs_dmx_counters_m_0=12|0*108979||0x80
+TOP_hs_dmx_dat_4=12|0*118035||0x80
+TOP_hs_dmx_dat_4i=12|0*79518||0x80
+TOP_hs_dmx_dat_4ib=12|0*116950||0x80
+TOP_hs_dmx_dat_4is=12|0*115865||0x80
+TOP_hs_dmx_interleave=12|0*67749||0x80
+TOP_hs_dmx_interleave_m_0=12|0*103550||0x80
+TOP_hs_dmx_m_s2p=12|0*82971||0x80
+TOP_hs_dmx_m_slice=12|0*111894||0x80
+TOP_hs_dmx_s2p=12|0*41091||0x80
+TOP_hs_dmx_slice=12|0*75445||0x80
+TOP_hs_mux=12|0*180290||0x80
+TOP_hs_mux_bscan=12|0*178497||0x80
+TOP_hs_mux_counters=12|0*132849||0x80
+TOP_hs_mux_counters_m_0=12|0*171181||0x80
+TOP_hs_mux_deinterleave=12|0*123823||0x80
+TOP_hs_mux_m_deinterleave=12|0*154063||0x80
+TOP_hs_mux_m_slice=12|0*173157||0x80
+TOP_hs_mux_p2s=12|0*137348||0x80
+TOP_hs_mux_p2s_m_0=12|0*163413||0x80
+TOP_hs_mux_slice=12|0*150877||0x80
+TRANDV15=12|0*213131||0x80
+TRANUV33=12|0*214436||0x80
+VHIV15=12|0*58098||0x80
+VLOV15=12|0*57723||0x80
+VLOV33=12|0*214061||0x80
+XNOR2V15=12|0*135704||0x80
+XOR2V15=12|0*66595||0x80
+clk_del_blk=12|0*198253||0x80
+count3b=12|0*191670||0x80
+orli10g=12|0*23004||0x80
+orli10g_blk=12|0*218115||0x80
+orli10g_core=12|0*236372||0x90
+orli10g_io=12|0*201185||0x80
+orli10g_top=12|0*822||0x80
+pll_1x2=12|0*33622||0x80
+pll_n_m2=12|0*35726||0x80
+repeater=12|0*190163||0x80
+

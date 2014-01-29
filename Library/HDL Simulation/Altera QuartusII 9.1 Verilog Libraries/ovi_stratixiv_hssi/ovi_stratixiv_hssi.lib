@@ -1,0 +1,961 @@
+timestamp=1260919694173
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[stratixiv_hssi_aux_clock_div]
+A/stratixiv_hssi_aux_clock_div=22|./src/stratixiv_hssi_atoms.v|39|1*550
+B/stratixiv_hssi_aux_clock_div=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=325,633,1040,1204
+R=./src/stratixiv_hssi_atoms.v|39
+
+[stratixiv_hssi_aux_clock_mult]
+A/stratixiv_hssi_aux_clock_mult=22|./src/stratixiv_hssi_atoms.v|113|1*1683
+B/stratixiv_hssi_aux_clock_mult=3*9380
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=505,1027,1715,2044
+R=./src/stratixiv_hssi_atoms.v|113
+
+[stratixiv_hssi_calibration_block]
+A/stratixiv_hssi_calibration_block=22|./src/stratixiv_hssi_atoms.v|86797|1*914303
+B/stratixiv_hssi_calibration_block=3*11688848
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=703,1071,1301,1419
+R=./src/stratixiv_hssi_atoms.v|86797
+
+[stratixiv_hssi_clock_divider]
+A/stratixiv_hssi_clock_divider=22|./src/stratixiv_hssi_atoms.v|3989|1*48236
+B/stratixiv_hssi_clock_divider=3*471166
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2568,4648,7168,8087
+R=./src/stratixiv_hssi_atoms.v|3989
+
+[stratixiv_hssi_cmu]
+A/stratixiv_hssi_cmu=22|./src/stratixiv_hssi_atoms.v|84624|1*894346
+B/stratixiv_hssi_cmu=3*11544740
+C=8.2.1986.SP1.35.3497  (Windows)
+D/stratixiv_hssi_cmu=4*5373
+P/~emb=16594,24593,34032,39391
+R=./src/stratixiv_hssi_atoms.v|84624
+
+[stratixiv_hssi_cmu_auto_speed_neg]
+A/stratixiv_hssi_cmu_auto_speed_neg=22|./src/stratixiv_hssi_atoms.v|68290|1*758917
+B/stratixiv_hssi_cmu_auto_speed_neg=3*9592370
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1686,2537,3418,3873
+R=./src/stratixiv_hssi_atoms.v|68290
+
+[stratixiv_hssi_cmu_chnl_reset]
+A/stratixiv_hssi_cmu_chnl_reset=22|./src/stratixiv_hssi_atoms.v|67942|1*755225
+B/stratixiv_hssi_cmu_chnl_reset=3*9566887
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1641,2152,3029,3330
+R=./src/stratixiv_hssi_atoms.v|67942
+
+[stratixiv_hssi_cmu_clk_ctl]
+A/stratixiv_hssi_cmu_clk_ctl=22|./src/stratixiv_hssi_atoms.v|68718|1*761461
+B/stratixiv_hssi_cmu_clk_ctl=3*9628912
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=881,1385,2013,2318
+R=./src/stratixiv_hssi_atoms.v|68718
+
+[stratixiv_hssi_cmu_clk_gating]
+A/stratixiv_hssi_cmu_clk_gating=22|./src/stratixiv_hssi_atoms.v|68697|1*760791
+B/stratixiv_hssi_cmu_clk_gating=3*9627916
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=289,488,676,788
+R=./src/stratixiv_hssi_atoms.v|68697
+
+[stratixiv_hssi_cmu_dprio_16bit]
+A/stratixiv_hssi_cmu_dprio_16bit=22|./src/stratixiv_hssi_atoms.v|69822|1*772814
+B/stratixiv_hssi_cmu_dprio_16bit=3*9694524
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=599,1022,1504,3406
+R=./src/stratixiv_hssi_atoms.v|69822
+
+[stratixiv_hssi_cmu_dprio_16bit_pma]
+A/stratixiv_hssi_cmu_dprio_16bit_pma=22|./src/stratixiv_hssi_atoms.v|70030|1*774093
+B/stratixiv_hssi_cmu_dprio_16bit_pma=3*9696226
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=656,1104,1592,3676
+R=./src/stratixiv_hssi_atoms.v|70030
+
+[stratixiv_hssi_cmu_dprio_addr]
+A/stratixiv_hssi_cmu_dprio_addr=22|./src/stratixiv_hssi_atoms.v|73208|1*798290
+B/stratixiv_hssi_cmu_dprio_addr=3*10144586
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=333,1087,3047,3453
+R=./src/stratixiv_hssi_atoms.v|73208
+
+[stratixiv_hssi_cmu_dprio_bit]
+A/stratixiv_hssi_cmu_dprio_bit=22|./src/stratixiv_hssi_atoms.v|69730|1*771024
+B/stratixiv_hssi_cmu_dprio_bit=3*9687172
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=443,704,998,1102
+R=./src/stratixiv_hssi_atoms.v|69730
+
+[stratixiv_hssi_cmu_dprio_bit_pma]
+A/stratixiv_hssi_cmu_dprio_bit_pma=22|./src/stratixiv_hssi_atoms.v|69774|1*771901
+B/stratixiv_hssi_cmu_dprio_bit_pma=3*9690720
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=500,781,1089,1196
+R=./src/stratixiv_hssi_atoms.v|69774
+
+[stratixiv_hssi_cmu_dprio_centrl_bus_out_mux]
+A/stratixiv_hssi_cmu_dprio_centrl_bus_out_mux=22|./src/stratixiv_hssi_atoms.v|75569|1*813701
+B/stratixiv_hssi_cmu_dprio_centrl_bus_out_mux=3*10296149
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6181,6777,8451,9010
+R=./src/stratixiv_hssi_atoms.v|75569
+
+[stratixiv_hssi_cmu_dprio_centrl_top]
+A/stratixiv_hssi_cmu_dprio_centrl_top=22|./src/stratixiv_hssi_atoms.v|75752|1*815041
+B/stratixiv_hssi_cmu_dprio_centrl_top=3*10349141
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=854,4382,11476,14293
+R=./src/stratixiv_hssi_atoms.v|75752
+
+[stratixiv_hssi_cmu_dprio_chnl_bus_out_mux]
+A/stratixiv_hssi_cmu_dprio_chnl_bus_out_mux=22|./src/stratixiv_hssi_atoms.v|71377|1*779044
+B/stratixiv_hssi_cmu_dprio_chnl_bus_out_mux=3*9698108
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6871,7524,9476,10102
+R=./src/stratixiv_hssi_atoms.v|71377
+
+[stratixiv_hssi_cmu_dprio_chnl_top]
+A/stratixiv_hssi_cmu_dprio_chnl_top=22|./src/stratixiv_hssi_atoms.v|71582|1*780478
+B/stratixiv_hssi_cmu_dprio_chnl_top=3*9759150
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=888,5392,13506,16688
+R=./src/stratixiv_hssi_atoms.v|71582
+
+[stratixiv_hssi_cmu_dprio_cnt]
+A/stratixiv_hssi_cmu_dprio_cnt=22|./src/stratixiv_hssi_atoms.v|73570|1*801922
+B/stratixiv_hssi_cmu_dprio_cnt=3*10186364
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=281,813,1969,2286
+R=./src/stratixiv_hssi_atoms.v|73570
+
+[stratixiv_hssi_cmu_dprio_ctl_data]
+A/stratixiv_hssi_cmu_dprio_ctl_data=22|./src/stratixiv_hssi_atoms.v|73796|1*804303
+B/stratixiv_hssi_cmu_dprio_ctl_data=3*10207881
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=772,1685,4455,4737
+R=./src/stratixiv_hssi_atoms.v|73796
+
+[stratixiv_hssi_cmu_dprio_map]
+A/stratixiv_hssi_cmu_dprio_map=22|./src/stratixiv_hssi_atoms.v|78671|1*838748
+B/stratixiv_hssi_cmu_dprio_map=3*10843153
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9551,17858,47531,48721
+R=./src/stratixiv_hssi_atoms.v|78671
+
+[stratixiv_hssi_cmu_dprio_map_index]
+A/stratixiv_hssi_cmu_dprio_map_index=22|./src/stratixiv_hssi_atoms.v|76820|1*828439
+B/stratixiv_hssi_cmu_dprio_map_index=3*10434053
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=13804,17071,31209,31960
+R=./src/stratixiv_hssi_atoms.v|76820
+
+[stratixiv_hssi_cmu_dprio_reg_centrl]
+A/stratixiv_hssi_cmu_dprio_reg_centrl=22|./src/stratixiv_hssi_atoms.v|74573|1*810335
+B/stratixiv_hssi_cmu_dprio_reg_centrl=3*10295971
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9418,10704,13044,19734
+R=./src/stratixiv_hssi_atoms.v|74573
+
+[stratixiv_hssi_cmu_dprio_reg_chnl]
+A/stratixiv_hssi_cmu_dprio_reg_chnl=22|./src/stratixiv_hssi_atoms.v|70256|1*775408
+B/stratixiv_hssi_cmu_dprio_reg_chnl=3*9697932
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=10348,11798,14519,22374
+R=./src/stratixiv_hssi_atoms.v|70256
+
+[stratixiv_hssi_cmu_dprio_sm]
+A/stratixiv_hssi_cmu_dprio_sm=22|./src/stratixiv_hssi_atoms.v|74246|1*808915
+B/stratixiv_hssi_cmu_dprio_sm=3*10264647
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1083,1582,2142,2398
+R=./src/stratixiv_hssi_atoms.v|74246
+
+[stratixiv_hssi_cmu_dprio_status]
+A/stratixiv_hssi_cmu_dprio_status=22|./src/stratixiv_hssi_atoms.v|72800|1*796786
+B/stratixiv_hssi_cmu_dprio_status=3*9879325
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1255,2065,4921,5360
+R=./src/stratixiv_hssi_atoms.v|72800
+
+[stratixiv_hssi_cmu_dprio_top]
+A/stratixiv_hssi_cmu_dprio_top=22|./src/stratixiv_hssi_atoms.v|83888|1*888043
+B/stratixiv_hssi_cmu_dprio_top=3*11518475
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=8702,11005,14358,16678
+R=./src/stratixiv_hssi_atoms.v|83888
+
+[stratixiv_hssi_cmu_quad_reset]
+A/stratixiv_hssi_cmu_quad_reset=22|./src/stratixiv_hssi_atoms.v|68084|1*756839
+B/stratixiv_hssi_cmu_quad_reset=3*9576540
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2108,2694,3892,4228
+R=./src/stratixiv_hssi_atoms.v|68084
+
+[stratixiv_hssi_cmu_rx_ctrl]
+A/stratixiv_hssi_cmu_rx_ctrl=22|./src/stratixiv_hssi_atoms.v|68829|1*762816
+B/stratixiv_hssi_cmu_rx_ctrl=3*9636682
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=771,1245,1815,2091
+R=./src/stratixiv_hssi_atoms.v|68829
+
+[stratixiv_hssi_cmu_rxclk_ctl]
+A/stratixiv_hssi_cmu_rxclk_ctl=22|./src/stratixiv_hssi_atoms.v|69047|1*764811
+B/stratixiv_hssi_cmu_rxclk_ctl=3*9646458
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1950,2748,4098,4542
+R=./src/stratixiv_hssi_atoms.v|69047
+
+[stratixiv_hssi_cmu_rxclk_gating]
+A/stratixiv_hssi_cmu_rxclk_gating=22|./src/stratixiv_hssi_atoms.v|69027|1*764139
+B/stratixiv_hssi_cmu_rxclk_gating=3*9645460
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=293,494,682,794
+R=./src/stratixiv_hssi_atoms.v|69027
+
+[stratixiv_hssi_cmu_tx_ctrl]
+A/stratixiv_hssi_cmu_tx_ctrl=22|./src/stratixiv_hssi_atoms.v|69311|1*767048
+B/stratixiv_hssi_cmu_tx_ctrl=3*9665411
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=803,1299,1863,2139
+R=./src/stratixiv_hssi_atoms.v|69311
+
+[stratixiv_hssi_cmu_txclk_ctl]
+A/stratixiv_hssi_cmu_txclk_ctl=22|./src/stratixiv_hssi_atoms.v|69523|1*769043
+B/stratixiv_hssi_cmu_txclk_ctl=3*9675151
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1489,2189,3153,3532
+R=./src/stratixiv_hssi_atoms.v|69523
+
+[stratixiv_hssi_cmu_txclk_gating]
+A/stratixiv_hssi_cmu_txclk_gating=22|./src/stratixiv_hssi_atoms.v|69502|1*768371
+B/stratixiv_hssi_cmu_txclk_gating=3*9674153
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=293,494,682,794
+R=./src/stratixiv_hssi_atoms.v|69502
+
+[stratixiv_hssi_digi_chnl_hip_spt]
+A/stratixiv_hssi_digi_chnl_hip_spt=22|./src/stratixiv_hssi_atoms.v|8825|1*127061
+B/stratixiv_hssi_digi_chnl_hip_spt=3*1275196
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2280,2850,3939,4282
+R=./src/stratixiv_hssi_atoms.v|8825
+
+[stratixiv_hssi_dskw_sm]
+A/stratixiv_hssi_dskw_sm=22|./src/stratixiv_hssi_atoms.v|62488|1*690241
+B/stratixiv_hssi_dskw_sm=3*8763759
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=556,1504,4205,5253
+R=./src/stratixiv_hssi_atoms.v|62488
+
+[stratixiv_hssi_pcs_reset]
+A/stratixiv_hssi_pcs_reset=22|./src/stratixiv_hssi_atoms.v|8764|1*126204
+B/stratixiv_hssi_pcs_reset=3*1271972
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=426,683,971,1139
+R=./src/stratixiv_hssi_atoms.v|8764
+
+[stratixiv_hssi_phystatus_generator]
+A/stratixiv_hssi_phystatus_generator=22|./src/stratixiv_hssi_atoms.v|9396|1*130205
+B/stratixiv_hssi_phystatus_generator=3*1301928
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1196,2068,3680,4350
+R=./src/stratixiv_hssi_atoms.v|9396
+
+[stratixiv_hssi_phystatus_generator_fsm]
+A/stratixiv_hssi_phystatus_generator_fsm=22|./src/stratixiv_hssi_atoms.v|9001|1*128630
+B/stratixiv_hssi_phystatus_generator_fsm=3*1287665
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1046,1643,2419,2790
+R=./src/stratixiv_hssi_atoms.v|9001
+
+[stratixiv_hssi_pll]
+A/stratixiv_hssi_pll=22|./src/stratixiv_hssi_atoms.v|4509|1*53163
+B/stratixiv_hssi_pll=3*519779
+C=8.2.1986.SP1.35.3497  (Windows)
+D/stratixiv_hssi_pll=4*0
+P/~emb=2932,6242,12026,13013
+R=./src/stratixiv_hssi_atoms.v|4509
+
+[stratixiv_hssi_pma_c_adce]
+A/stratixiv_hssi_pma_c_adce=22|./src/stratixiv_hssi_atoms.v|87004|1*91200
+B/stratixiv_hssi_pma_c_adce=3*932389
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3443,9940,30488,47163
+R=./src/stratixiv_hssi_atoms.v|87004
+
+[stratixiv_hssi_pma_c_clkgenbuf]
+A/stratixiv_hssi_pma_c_clkgenbuf=22|./src/stratixiv_hssi_atoms.v|610|1*6370
+B/stratixiv_hssi_pma_c_clkgenbuf=3*62509
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1350,2037,2808,3554
+R=./src/stratixiv_hssi_atoms.v|610
+
+[stratixiv_hssi_pma_c_clkgenbuf_cmu]
+A/stratixiv_hssi_pma_c_clkgenbuf_cmu=22|./src/stratixiv_hssi_atoms.v|722|1*9902
+B/stratixiv_hssi_pma_c_clkgenbuf_cmu=3*80187
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1497,2067,2614,3381
+R=./src/stratixiv_hssi_atoms.v|722
+
+[stratixiv_hssi_pma_c_clkgenbuf_tx10g]
+A/stratixiv_hssi_pma_c_clkgenbuf_tx10g=22|./src/stratixiv_hssi_atoms.v|3938|1*47383
+B/stratixiv_hssi_pma_c_clkgenbuf_tx10g=3*470355
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=535,830,1065,1320
+R=./src/stratixiv_hssi_atoms.v|3938
+
+[stratixiv_hssi_pma_c_clkgendrv]
+A/stratixiv_hssi_pma_c_clkgendrv=22|./src/stratixiv_hssi_atoms.v|506|1*5267
+B/stratixiv_hssi_pma_c_clkgendrv=3*53467
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=648,992,1481,1684
+R=./src/stratixiv_hssi_atoms.v|506
+
+[stratixiv_hssi_pma_c_clkgendrv_tx10g]
+A/stratixiv_hssi_pma_c_clkgendrv_tx10g=22|./src/stratixiv_hssi_atoms.v|3903|1*46578
+B/stratixiv_hssi_pma_c_clkgendrv_tx10g=3*470176
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=523,815,1019,1296
+R=./src/stratixiv_hssi_atoms.v|3903
+
+[stratixiv_hssi_pma_c_controller_4t16]
+A/stratixiv_hssi_pma_c_controller_4t16=22|./src/stratixiv_hssi_atoms.v|426|1*4062
+B/stratixiv_hssi_pma_c_controller_4t16=3*42522
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=860,1349,1880,2033
+R=./src/stratixiv_hssi_atoms.v|426
+
+[stratixiv_hssi_pma_c_d2a_mbpass]
+A/stratixiv_hssi_pma_c_d2a_mbpass=22|./src/stratixiv_hssi_atoms.v|800|1*11249
+B/stratixiv_hssi_pma_c_d2a_mbpass=3*80364
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=375,636,922,1024
+R=./src/stratixiv_hssi_atoms.v|800
+
+[stratixiv_hssi_pma_c_deser]
+A/stratixiv_hssi_pma_c_deser=22|./src/stratixiv_hssi_atoms.v|1224|1*17917
+B/stratixiv_hssi_pma_c_deser=3*129788
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=910,1864,3144,3809
+R=./src/stratixiv_hssi_atoms.v|1224
+
+[stratixiv_hssi_pma_c_deser_10g]
+A/stratixiv_hssi_pma_c_deser_10g=22|./src/stratixiv_hssi_atoms.v|3555|1*44915
+B/stratixiv_hssi_pma_c_deser_10g=3*426713
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=528,1031,1680,1937
+R=./src/stratixiv_hssi_atoms.v|3555
+
+[stratixiv_hssi_pma_c_deser_10to20]
+A/stratixiv_hssi_pma_c_deser_10to20=22|./src/stratixiv_hssi_atoms.v|1058|1*14692
+B/stratixiv_hssi_pma_c_deser_10to20=3*108093
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=647,1034,1465,1706
+R=./src/stratixiv_hssi_atoms.v|1058
+
+[stratixiv_hssi_pma_c_deser_ff_chain]
+A/stratixiv_hssi_pma_c_deser_ff_chain=22|./src/stratixiv_hssi_atoms.v|1128|1*15974
+B/stratixiv_hssi_pma_c_deser_ff_chain=3*117614
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=485,807,1254,1365
+R=./src/stratixiv_hssi_atoms.v|1128
+
+[stratixiv_hssi_pma_c_deser_fsd_rst]
+A/stratixiv_hssi_pma_c_deser_fsd_rst=22|./src/stratixiv_hssi_atoms.v|1190|1*17130
+B/stratixiv_hssi_pma_c_deser_fsd_rst=3*128062
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=279,497,664,774
+R=./src/stratixiv_hssi_atoms.v|1190
+
+[stratixiv_hssi_pma_c_deser_pcie]
+A/stratixiv_hssi_pma_c_deser_pcie=22|./src/stratixiv_hssi_atoms.v|996|1*13620
+B/stratixiv_hssi_pma_c_deser_pcie=3*99298
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=404,686,1031,1172
+R=./src/stratixiv_hssi_atoms.v|996
+
+[stratixiv_hssi_pma_c_div4or5_mcnt]
+A/stratixiv_hssi_pma_c_div4or5_mcnt=22|./src/stratixiv_hssi_atoms.v|1502|1*20712
+B/stratixiv_hssi_pma_c_div4or5_mcnt=3*172187
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=366,619,923,1051
+R=./src/stratixiv_hssi_atoms.v|1502
+
+[stratixiv_hssi_pma_c_divby2q]
+A/stratixiv_hssi_pma_c_divby2q=22|./src/stratixiv_hssi_atoms.v|368|1*3297
+B/stratixiv_hssi_pma_c_divby2q=3*39794
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=405,631,872,1031
+R=./src/stratixiv_hssi_atoms.v|368
+
+[stratixiv_hssi_pma_c_lockdet_tx18]
+A/stratixiv_hssi_pma_c_lockdet_tx18=22|./src/stratixiv_hssi_atoms.v|1546|1*21610
+B/stratixiv_hssi_pma_c_lockdet_tx18=3*175544
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=458,712,967,1081
+R=./src/stratixiv_hssi_atoms.v|1546
+
+[stratixiv_hssi_pma_c_pcie_sw]
+A/stratixiv_hssi_pma_c_pcie_sw=22|./src/stratixiv_hssi_atoms.v|3797|1*8241
+B/stratixiv_hssi_pma_c_pcie_sw=3*70883
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1002,1595,2358,2723
+R=./src/stratixiv_hssi_atoms.v|3797
+
+[stratixiv_hssi_pma_c_pfd]
+A/stratixiv_hssi_pma_c_pfd=22|./src/stratixiv_hssi_atoms.v|1576|1*22444
+B/stratixiv_hssi_pma_c_pfd=3*176981
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=346,552,735,833
+R=./src/stratixiv_hssi_atoms.v|1576
+
+[stratixiv_hssi_pma_c_rcv_det_digital]
+A/stratixiv_hssi_pma_c_rcv_det_digital=22|./src/stratixiv_hssi_atoms.v|2543|1*36218
+B/stratixiv_hssi_pma_c_rcv_det_digital=3*313953
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=511,832,1003,1153
+R=./src/stratixiv_hssi_atoms.v|2543
+
+[stratixiv_hssi_pma_c_rcv_detect]
+A/stratixiv_hssi_pma_c_rcv_detect=22|./src/stratixiv_hssi_atoms.v|2562|1*36975
+B/stratixiv_hssi_pma_c_rcv_detect=3*314132
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=639,1052,1341,1586
+R=./src/stratixiv_hssi_atoms.v|2562
+
+[stratixiv_hssi_pma_c_rcv_detect_clk_gen]
+A/stratixiv_hssi_pma_c_rcv_detect_clk_gen=22|./src/stratixiv_hssi_atoms.v|2407|1*32929
+B/stratixiv_hssi_pma_c_rcv_detect_clk_gen=3*300198
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=226,468,635,826
+R=./src/stratixiv_hssi_atoms.v|2407
+
+[stratixiv_hssi_pma_c_rcv_detect_control]
+A/stratixiv_hssi_pma_c_rcv_detect_control=22|./src/stratixiv_hssi_atoms.v|2532|1*35458
+B/stratixiv_hssi_pma_c_rcv_detect_control=3*313771
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=511,819,987,1143
+R=./src/stratixiv_hssi_atoms.v|2532
+
+[stratixiv_hssi_pma_c_rcv_detect_div_by_2]
+A/stratixiv_hssi_pma_c_rcv_detect_div_by_2=22|./src/stratixiv_hssi_atoms.v|2386|1*32152
+B/stratixiv_hssi_pma_c_rcv_detect_div_by_2=3*298742
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=227,431,591,674
+R=./src/stratixiv_hssi_atoms.v|2386
+
+[stratixiv_hssi_pma_c_rcv_detect_fsm]
+A/stratixiv_hssi_pma_c_rcv_detect_fsm=22|./src/stratixiv_hssi_atoms.v|2446|1*34318
+B/stratixiv_hssi_pma_c_rcv_detect_fsm=3*301271
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=617,991,1318,1463
+R=./src/stratixiv_hssi_atoms.v|2446
+
+[stratixiv_hssi_pma_c_rcv_detect_sync]
+A/stratixiv_hssi_pma_c_rcv_detect_sync=22|./src/stratixiv_hssi_atoms.v|2423|1*33625
+B/stratixiv_hssi_pma_c_rcv_detect_sync=3*300380
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=266,470,620,735
+R=./src/stratixiv_hssi_atoms.v|2423
+
+[stratixiv_hssi_pma_c_rlpbk_ctrl]
+A/stratixiv_hssi_pma_c_rlpbk_ctrl=22|./src/stratixiv_hssi_atoms.v|1588|1*23125
+B/stratixiv_hssi_pma_c_rlpbk_ctrl=3*177996
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=343,563,724,823
+R=./src/stratixiv_hssi_atoms.v|1588
+
+[stratixiv_hssi_pma_c_rlpbk_mux]
+A/stratixiv_hssi_pma_c_rlpbk_mux=22|./src/stratixiv_hssi_atoms.v|1612|1*23797
+B/stratixiv_hssi_pma_c_rlpbk_mux=3*178642
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=795,1064,1424,1577
+R=./src/stratixiv_hssi_atoms.v|1612
+
+[stratixiv_hssi_pma_c_rx]
+A/stratixiv_hssi_pma_c_rx=22|./src/stratixiv_hssi_atoms.v|1655|1*24660
+B/stratixiv_hssi_pma_c_rx=3*181668
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2756,3863,5460,5888
+R=./src/stratixiv_hssi_atoms.v|1655
+
+[stratixiv_hssi_pma_c_sdl_en_2x]
+A/stratixiv_hssi_pma_c_sdl_en_2x=22|./src/stratixiv_hssi_atoms.v|2352|1*31465
+B/stratixiv_hssi_pma_c_sdl_en_2x=3*297857
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=344,554,742,880
+R=./src/stratixiv_hssi_atoms.v|2352
+
+[stratixiv_hssi_pma_c_ser]
+A/stratixiv_hssi_pma_c_ser=22|./src/stratixiv_hssi_atoms.v|2014|1*28654
+B/stratixiv_hssi_pma_c_ser=3*224916
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1268,2080,3371,3974
+R=./src/stratixiv_hssi_atoms.v|2014
+
+[stratixiv_hssi_pma_c_ser_10g]
+A/stratixiv_hssi_pma_c_ser_10g=22|./src/stratixiv_hssi_atoms.v|3228|1*42550
+B/stratixiv_hssi_pma_c_ser_10g=3*362568
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=931,1645,2681,3029
+R=./src/stratixiv_hssi_atoms.v|3228
+
+[stratixiv_hssi_pma_c_ser_20to10]
+A/stratixiv_hssi_pma_c_ser_20to10=22|./src/stratixiv_hssi_atoms.v|1927|1*27374
+B/stratixiv_hssi_pma_c_ser_20to10=3*213804
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=612,1034,1510,1766
+R=./src/stratixiv_hssi_atoms.v|1927
+
+[stratixiv_hssi_pma_c_tx]
+A/stratixiv_hssi_pma_c_tx=22|./src/stratixiv_hssi_atoms.v|2604|1*37935
+B/stratixiv_hssi_pma_c_tx=3*315351
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2680,4261,6155,6955
+R=./src/stratixiv_hssi_atoms.v|2604
+
+[stratixiv_hssi_pma_c_tx_clkmux_cmu]
+A/stratixiv_hssi_pma_c_tx_clkmux_cmu=22|./src/stratixiv_hssi_atoms.v|827|1*12017
+B/stratixiv_hssi_pma_c_tx_clkmux_cmu=3*81951
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1601,2216,3149,3505
+R=./src/stratixiv_hssi_atoms.v|827
+
+[stratixiv_hssi_pma_ppmdetect]
+A/stratixiv_hssi_pma_ppmdetect=22|./src/stratixiv_hssi_atoms.v|2918|1*40841
+B/stratixiv_hssi_pma_ppmdetect=3*343119
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=550,1214,2011,2311
+R=./src/stratixiv_hssi_atoms.v|2918
+
+[stratixiv_hssi_q_pipe_interface_top]
+A/stratixiv_hssi_q_pipe_interface_top=22|./src/stratixiv_hssi_atoms.v|11097|1*148328
+B/stratixiv_hssi_q_pipe_interface_top=3*1497282
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2996,4033,5432,6853
+R=./src/stratixiv_hssi_atoms.v|11097
+
+[stratixiv_hssi_rcv_sm]
+A/stratixiv_hssi_rcv_sm=22|./src/stratixiv_hssi_atoms.v|65207|1*720881
+B/stratixiv_hssi_rcv_sm=3*9134224
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=866,6177,21392,29265
+R=./src/stratixiv_hssi_atoms.v|65207
+
+[stratixiv_hssi_refclk_divider]
+A/stratixiv_hssi_refclk_divider=22|./src/stratixiv_hssi_atoms.v|86888|1*915232
+B/stratixiv_hssi_refclk_divider=3*11689463
+C=8.2.1986.SP1.35.3497  (Windows)
+D/stratixiv_hssi_refclk_divider=4*5820
+P/~emb=513,957,1344,1544
+R=./src/stratixiv_hssi_atoms.v|86888
+
+[stratixiv_hssi_rx_digi]
+A/stratixiv_hssi_rx_digi=22|./src/stratixiv_hssi_atoms.v|56239|1*629360
+B/stratixiv_hssi_rx_digi=3*8142498
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=15128,19822,24201,31861
+R=./src/stratixiv_hssi_atoms.v|56239
+
+[stratixiv_hssi_rx_digi_auto_speed_neg]
+A/stratixiv_hssi_rx_digi_auto_speed_neg=22|./src/stratixiv_hssi_atoms.v|25360|1*286616
+B/stratixiv_hssi_rx_digi_auto_speed_neg=3*3088193
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1279,2785,7030,8384
+R=./src/stratixiv_hssi_atoms.v|25360
+
+[stratixiv_hssi_rx_digi_bist_ver]
+A/stratixiv_hssi_rx_digi_bist_ver=22|./src/stratixiv_hssi_atoms.v|26106|1*294912
+B/stratixiv_hssi_rx_digi_bist_ver=3*3186479
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1037,6419,24494,35834
+R=./src/stratixiv_hssi_atoms.v|26106
+
+[stratixiv_hssi_rx_digi_cdr_ctrl]
+A/stratixiv_hssi_rx_digi_cdr_ctrl=22|./src/stratixiv_hssi_atoms.v|29063|1*333842
+B/stratixiv_hssi_rx_digi_cdr_ctrl=3*3675560
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=994,2638,7096,9002
+R=./src/stratixiv_hssi_atoms.v|29063
+
+[stratixiv_hssi_rx_digi_comp_chnl_top]
+A/stratixiv_hssi_rx_digi_comp_chnl_top=22|./src/stratixiv_hssi_atoms.v|29997|1*343348
+B/stratixiv_hssi_rx_digi_comp_chnl_top=3*3792717
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3725,14508,51229,63069
+R=./src/stratixiv_hssi_atoms.v|29997
+
+[stratixiv_hssi_rx_digi_dec_chnl_top]
+A/stratixiv_hssi_rx_digi_dec_chnl_top=22|./src/stratixiv_hssi_atoms.v|37915|1*419596
+B/stratixiv_hssi_rx_digi_dec_chnl_top=3*4912895
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1107,3508,15666,16534
+R=./src/stratixiv_hssi_atoms.v|37915
+
+[stratixiv_hssi_rx_digi_dskw_fifo]
+A/stratixiv_hssi_rx_digi_dskw_fifo=22|./src/stratixiv_hssi_atoms.v|39149|1*433458
+B/stratixiv_hssi_rx_digi_dskw_fifo=3*5129892
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=756,2822,8278,10317
+R=./src/stratixiv_hssi_atoms.v|39149
+
+[stratixiv_hssi_rx_digi_eii_module]
+A/stratixiv_hssi_rx_digi_eii_module=22|./src/stratixiv_hssi_atoms.v|42118|1*462150
+B/stratixiv_hssi_rx_digi_eii_module=3*5488638
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1118,4027,13984,16745
+R=./src/stratixiv_hssi_atoms.v|42118
+
+[stratixiv_hssi_rx_digi_freqdet]
+A/stratixiv_hssi_rx_digi_freqdet=22|./src/stratixiv_hssi_atoms.v|40323|1*445365
+B/stratixiv_hssi_rx_digi_freqdet=3*5293266
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=916,3650,11026,15488
+R=./src/stratixiv_hssi_atoms.v|40323
+
+[stratixiv_hssi_rx_digi_iq_pipe_rx]
+A/stratixiv_hssi_rx_digi_iq_pipe_rx=22|./src/stratixiv_hssi_atoms.v|44247|1*483575
+B/stratixiv_hssi_rx_digi_iq_pipe_rx=3*5811408
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2270,3117,4972,5446
+R=./src/stratixiv_hssi_atoms.v|44247
+
+[stratixiv_hssi_rx_digi_pcs_channel_testbus]
+A/stratixiv_hssi_rx_digi_pcs_channel_testbus=22|./src/stratixiv_hssi_atoms.v|43810|1*478010
+B/stratixiv_hssi_rx_digi_pcs_channel_testbus=3*5726109
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=879,1905,5920,6084
+R=./src/stratixiv_hssi_atoms.v|43810
+
+[stratixiv_hssi_rx_digi_prbs_ver]
+A/stratixiv_hssi_rx_digi_prbs_ver=22|./src/stratixiv_hssi_atoms.v|44618|1*486795
+B/stratixiv_hssi_rx_digi_prbs_ver=3*5842886
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=978,4729,18413,24593
+R=./src/stratixiv_hssi_atoms.v|44618
+
+[stratixiv_hssi_rx_digi_rx_ctrl]
+A/stratixiv_hssi_rx_digi_rx_ctrl=22|./src/stratixiv_hssi_atoms.v|36285|1*412475
+B/stratixiv_hssi_rx_digi_rx_ctrl=3*4769991
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=5089,7635,11702,13202
+R=./src/stratixiv_hssi_atoms.v|36285
+
+[stratixiv_hssi_rx_digi_rxclk_ctl]
+A/stratixiv_hssi_rx_digi_rxclk_ctl=22|./src/stratixiv_hssi_atoms.v|25069|1*284375
+B/stratixiv_hssi_rx_digi_rxclk_ctl=3*3069176
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1958,2765,4111,4555
+R=./src/stratixiv_hssi_atoms.v|25069
+
+[stratixiv_hssi_rx_digi_wordalign]
+A/stratixiv_hssi_rx_digi_wordalign=22|./src/stratixiv_hssi_atoms.v|46727|1*514093
+B/stratixiv_hssi_rx_digi_wordalign=3*6175367
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2867,18955,117173,138823
+R=./src/stratixiv_hssi_atoms.v|46727
+
+[stratixiv_hssi_rx_digis_ph_fifo]
+A/stratixiv_hssi_rx_digis_ph_fifo=22|./src/stratixiv_hssi_atoms.v|23941|1*276724
+B/stratixiv_hssi_rx_digis_ph_fifo=3*2818691
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1295,2082,3115,3626
+R=./src/stratixiv_hssi_atoms.v|23941
+
+[stratixiv_hssi_rx_digis_ram16x14_syn]
+A/stratixiv_hssi_rx_digis_ram16x14_syn=22|./src/stratixiv_hssi_atoms.v|24336|1*280008
+B/stratixiv_hssi_rx_digis_ram16x14_syn=3*2883203
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=598,1269,2127,2328
+R=./src/stratixiv_hssi_atoms.v|24336
+
+[stratixiv_hssi_rx_digis_ram20x16_syn]
+A/stratixiv_hssi_rx_digis_ram20x16_syn=22|./src/stratixiv_hssi_atoms.v|24589|1*281773
+B/stratixiv_hssi_rx_digis_ram20x16_syn=3*2978984
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=540,1303,2275,2466
+R=./src/stratixiv_hssi_atoms.v|24589
+
+[stratixiv_hssi_rx_digis_ram8x70_syn]
+A/stratixiv_hssi_rx_digis_ram8x70_syn=22|./src/stratixiv_hssi_atoms.v|24898|1*278596
+B/stratixiv_hssi_rx_digis_ram8x70_syn=3*2846075
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=439,937,1550,1727
+R=./src/stratixiv_hssi_atoms.v|24898
+
+[stratixiv_hssi_rx_digis_rxclk_gating]
+A/stratixiv_hssi_rx_digis_rxclk_gating=22|./src/stratixiv_hssi_atoms.v|25047|1*283682
+B/stratixiv_hssi_rx_digis_rxclk_gating=3*3068173
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=303,510,698,810
+R=./src/stratixiv_hssi_atoms.v|25047
+
+[stratixiv_hssi_rx_pcs]
+A/stratixiv_hssi_rx_pcs=22|./src/stratixiv_hssi_atoms.v|58015|1*638969
+B/stratixiv_hssi_rx_pcs=3*8145168
+C=8.2.1986.SP1.35.3497  (Windows)
+D/stratixiv_hssi_rx_pcs=4*2087
+P/~emb=14087,30739,55412,60863
+R=./src/stratixiv_hssi_atoms.v|58015
+
+[stratixiv_hssi_rx_pipe_interface]
+A/stratixiv_hssi_rx_pipe_interface=22|./src/stratixiv_hssi_atoms.v|9865|1*133746
+B/stratixiv_hssi_rx_pipe_interface=3*1339023
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1114,3070,8146,10504
+R=./src/stratixiv_hssi_atoms.v|9865
+
+[stratixiv_hssi_rx_pma]
+A/stratixiv_hssi_rx_pma=22|./src/stratixiv_hssi_atoms.v|6873|1*74504
+B/stratixiv_hssi_rx_pma=3*776102
+C=8.2.1986.SP1.35.3497  (Windows)
+D/stratixiv_hssi_rx_pma=4*410
+P/~emb=3269,8888,17533,20328
+R=./src/stratixiv_hssi_atoms.v|6873
+
+[stratixiv_hssi_tx_digi]
+A/stratixiv_hssi_tx_digi=22|./src/stratixiv_hssi_atoms.v|21515|1*251267
+B/stratixiv_hssi_tx_digi=3*2559498
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6883,9264,11188,14648
+R=./src/stratixiv_hssi_atoms.v|21515
+
+[stratixiv_hssi_tx_digi_bist_gen]
+A/stratixiv_hssi_tx_digi_bist_gen=22|./src/stratixiv_hssi_atoms.v|13175|1*161783
+B/stratixiv_hssi_tx_digi_bist_gen=3*1638129
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=591,5692,22034,33015
+R=./src/stratixiv_hssi_atoms.v|13175
+
+[stratixiv_hssi_tx_digi_enc_chnl_top]
+A/stratixiv_hssi_tx_digi_enc_chnl_top=22|./src/stratixiv_hssi_atoms.v|18125|1*218539
+B/stratixiv_hssi_tx_digi_enc_chnl_top=3*2264899
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1847,6101,20070,32957
+R=./src/stratixiv_hssi_atoms.v|18125
+
+[stratixiv_hssi_tx_digi_iq_pipe_tx]
+A/stratixiv_hssi_tx_digi_iq_pipe_tx=22|./src/stratixiv_hssi_atoms.v|21262|1*248849
+B/stratixiv_hssi_tx_digi_iq_pipe_tx=3*2537460
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1728,2416,3763,4157
+R=./src/stratixiv_hssi_atoms.v|21262
+
+[stratixiv_hssi_tx_digi_prbs_gen]
+A/stratixiv_hssi_tx_digi_prbs_gen=22|./src/stratixiv_hssi_atoms.v|16478|1*198569
+B/stratixiv_hssi_tx_digi_prbs_gen=3*2060782
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=559,3237,11685,17216
+R=./src/stratixiv_hssi_atoms.v|16478
+
+[stratixiv_hssi_tx_digi_tx_ctrl]
+A/stratixiv_hssi_tx_digi_tx_ctrl=22|./src/stratixiv_hssi_atoms.v|12424|1*156902
+B/stratixiv_hssi_tx_digi_tx_ctrl=3*1591430
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4486,6241,9571,10618
+R=./src/stratixiv_hssi_atoms.v|12424
+
+[stratixiv_hssi_tx_digi_txclk_ctl]
+A/stratixiv_hssi_tx_digi_txclk_ctl=22|./src/stratixiv_hssi_atoms.v|11690|1*151697
+B/stratixiv_hssi_tx_digi_txclk_ctl=3*1514833
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1497,2209,3174,3552
+R=./src/stratixiv_hssi_atoms.v|11690
+
+[stratixiv_hssi_tx_digis_ph_fifo]
+A/stratixiv_hssi_tx_digis_ph_fifo=22|./src/stratixiv_hssi_atoms.v|12043|1*155078
+B/stratixiv_hssi_tx_digis_ph_fifo=3*1563854
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1154,1912,2905,3392
+R=./src/stratixiv_hssi_atoms.v|12043
+
+[stratixiv_hssi_tx_digis_ram8x49_syn]
+A/stratixiv_hssi_tx_digis_ram8x49_syn=22|./src/stratixiv_hssi_atoms.v|11896|1*153666
+B/stratixiv_hssi_tx_digis_ram8x49_syn=3*1526834
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=439,920,1530,1708
+R=./src/stratixiv_hssi_atoms.v|11896
+
+[stratixiv_hssi_tx_digis_txclk_gating]
+A/stratixiv_hssi_tx_digis_txclk_gating=22|./src/stratixiv_hssi_atoms.v|11663|1*151004
+B/stratixiv_hssi_tx_digis_txclk_gating=3*1513830
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=303,510,698,810
+R=./src/stratixiv_hssi_atoms.v|11663
+
+[stratixiv_hssi_tx_pcs]
+A/stratixiv_hssi_tx_pcs=22|./src/stratixiv_hssi_atoms.v|22182|1*255948
+B/stratixiv_hssi_tx_pcs=3*2562468
+C=8.2.1986.SP1.35.3497  (Windows)
+D/stratixiv_hssi_tx_pcs=4*657
+P/~emb=7646,14981,25680,28538
+R=./src/stratixiv_hssi_atoms.v|22182
+
+[stratixiv_hssi_tx_pipe_interface]
+A/stratixiv_hssi_tx_pipe_interface=22|./src/stratixiv_hssi_atoms.v|10688|1*144101
+B/stratixiv_hssi_tx_pipe_interface=3*1451941
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1223,2102,4161,4847
+R=./src/stratixiv_hssi_atoms.v|10688
+
+[stratixiv_hssi_tx_pma]
+A/stratixiv_hssi_tx_pma=22|./src/stratixiv_hssi_atoms.v|5621|1*63056
+B/stratixiv_hssi_tx_pma=3*661015
+C=8.2.1986.SP1.35.3497  (Windows)
+D/stratixiv_hssi_tx_pma=4*168
+P/~emb=3454,7525,13466,15531
+R=./src/stratixiv_hssi_atoms.v|5621
+
+[stratixiv_hssi_tx_sm]
+A/stratixiv_hssi_tx_sm=22|./src/stratixiv_hssi_atoms.v|63012|1*696330
+B/stratixiv_hssi_tx_sm=3*8831982
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=683,4407,16867,23583
+R=./src/stratixiv_hssi_atoms.v|63012
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, STRATIXIV_HSSI VERILOG LIBRARY.
+LastVerilogToplevel=stratixiv_hssi_refclk_divider
+ModifyID=843
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/stratixiv_hssi_atoms.v=0*1042318*1805251
+
+[~MFT]
+0=118|0ovi_stratixiv_hssi.mgf|1805251|0
+1=116|1ovi_stratixiv_hssi.mgf|915232|0
+3=116|3ovi_stratixiv_hssi.mgf|11689463|0
+4=6|4ovi_stratixiv_hssi.mgf|5820|0
+
+[~U]
+$root=12|0*0|
+stratixiv_hssi_aux_clock_div=12|0*1030||0x80
+stratixiv_hssi_aux_clock_mult=12|0*2307||0x80
+stratixiv_hssi_calibration_block=12|0*1040223||0x90
+stratixiv_hssi_clock_divider=12|0*64246||0x90
+stratixiv_hssi_cmu=12|0*1016026||0x90
+stratixiv_hssi_cmu_auto_speed_neg=12|0*858377||0x80
+stratixiv_hssi_cmu_chnl_reset=12|0*854141||0x80
+stratixiv_hssi_cmu_clk_ctl=12|0*862313||0x80
+stratixiv_hssi_cmu_clk_gating=12|0*861739||0x80
+stratixiv_hssi_cmu_dprio_16bit=12|0*876546||0x80
+stratixiv_hssi_cmu_dprio_16bit_pma=12|0*878513||0x80
+stratixiv_hssi_cmu_dprio_addr=12|0*910630||0x80
+stratixiv_hssi_cmu_dprio_bit=12|0*874676||0x80
+stratixiv_hssi_cmu_dprio_bit_pma=12|0*875585||0x80
+stratixiv_hssi_cmu_dprio_centrl_bus_out_mux=12|0*931717||0x80
+stratixiv_hssi_cmu_dprio_centrl_top=12|0*934209||0x80
+stratixiv_hssi_cmu_dprio_chnl_bus_out_mux=12|0*887720||0x80
+stratixiv_hssi_cmu_dprio_chnl_top=12|0*890546||0x80
+stratixiv_hssi_cmu_dprio_cnt=12|0*914596||0x80
+stratixiv_hssi_cmu_dprio_ctl_data=12|0*917249||0x80
+stratixiv_hssi_cmu_dprio_map=12|0*968908||0x80
+stratixiv_hssi_cmu_dprio_map_index=12|0*947975||0x80
+stratixiv_hssi_cmu_dprio_reg_centrl=12|0*925103||0x80
+stratixiv_hssi_cmu_dprio_reg_chnl=12|0*880580||0x80
+stratixiv_hssi_cmu_dprio_sm=12|0*922563||0x80
+stratixiv_hssi_cmu_dprio_status=12|0*907430||0x80
+stratixiv_hssi_cmu_dprio_top=12|0*1009563||0x80
+stratixiv_hssi_cmu_quad_reset=12|0*856043||0x80
+stratixiv_hssi_cmu_rx_ctrl=12|0*864036||0x80
+stratixiv_hssi_cmu_rxclk_ctl=12|0*866527||0x80
+stratixiv_hssi_cmu_rxclk_gating=12|0*865951||0x80
+stratixiv_hssi_cmu_tx_ctrl=12|0*869676||0x80
+stratixiv_hssi_cmu_txclk_ctl=12|0*872183||0x80
+stratixiv_hssi_cmu_txclk_gating=12|0*871591||0x80
+stratixiv_hssi_digi_chnl_hip_spt=12|0*165821||0x80
+stratixiv_hssi_dskw_sm=12|0*793479||0x80
+stratixiv_hssi_pcs_reset=12|0*164852||0x80
+stratixiv_hssi_phystatus_generator=12|0*170725||0x80
+stratixiv_hssi_phystatus_generator_fsm=12|0*168062||0x80
+stratixiv_hssi_pll=12|0*70563||0x90
+stratixiv_hssi_pma_c_adce=12|0*117096||0x80
+stratixiv_hssi_pma_c_clkgenbuf=12|0*8914||0x80
+stratixiv_hssi_pma_c_clkgenbuf_cmu=12|0*13518||0x80
+stratixiv_hssi_pma_c_clkgenbuf_tx10g=12|0*63393||0x80
+stratixiv_hssi_pma_c_clkgendrv=12|0*7379||0x80
+stratixiv_hssi_pma_c_clkgendrv_tx10g=12|0*62540||0x80
+stratixiv_hssi_pma_c_controller_4t16=12|0*5902||0x80
+stratixiv_hssi_pma_c_d2a_mbpass=12|0*15329||0x90
+stratixiv_hssi_pma_c_deser=12|0*23053||0x80
+stratixiv_hssi_pma_c_deser_10g=12|0*59901||0x80
+stratixiv_hssi_pma_c_deser_10to20=12|0*19844||0x80
+stratixiv_hssi_pma_c_deser_ff_chain=12|0*21206||0x80
+stratixiv_hssi_pma_c_deser_fsd_rst=12|0*22442||0x80
+stratixiv_hssi_pma_c_deser_pcie=12|0*18740||0x80
+stratixiv_hssi_pma_c_div4or5_mcnt=12|0*27224||0x90
+stratixiv_hssi_pma_c_divby2q=12|0*5025||0x80
+stratixiv_hssi_pma_c_lockdet_tx18=12|0*28218||0x90
+stratixiv_hssi_pma_c_pcie_sw=12|0*11393||0x80
+stratixiv_hssi_pma_c_pfd=12|0*29004||0x90
+stratixiv_hssi_pma_c_rcv_det_digital=12|0*45814||0x80
+stratixiv_hssi_pma_c_rcv_detect=12|0*46571||0x80
+stratixiv_hssi_pma_c_rcv_detect_clk_gen=12|0*42397||0x80
+stratixiv_hssi_pma_c_rcv_detect_control=12|0*45054||0x80
+stratixiv_hssi_pma_c_rcv_detect_div_by_2=12|0*41780||0x80
+stratixiv_hssi_pma_c_rcv_detect_fsm=12|0*43690||0x80
+stratixiv_hssi_pma_c_rcv_detect_sync=12|0*43077||0x80
+stratixiv_hssi_pma_c_rlpbk_ctrl=12|0*29605||0x90
+stratixiv_hssi_pma_c_rlpbk_mux=12|0*30181||0x80
+stratixiv_hssi_pma_c_rx=12|0*31076||0x80
+stratixiv_hssi_pma_c_sdl_en_2x=12|0*41125||0x90
+stratixiv_hssi_pma_c_ser=12|0*36876||0x80
+stratixiv_hssi_pma_c_ser_10g=12|0*56016||0x80
+stratixiv_hssi_pma_c_ser_20to10=12|0*35324||0x80
+stratixiv_hssi_pma_c_tx=12|0*47627||0x80
+stratixiv_hssi_pma_c_tx_clkmux_cmu=12|0*16129||0x80
+stratixiv_hssi_pma_ppmdetect=12|0*52931||0x80
+stratixiv_hssi_q_pipe_interface_top=12|0*189354||0x80
+stratixiv_hssi_rcv_sm=12|0*825189||0x80
+stratixiv_hssi_refclk_divider=12|0*1041072||0x90
+stratixiv_hssi_rx_digi=12|0*723862||0x80
+stratixiv_hssi_rx_digi_auto_speed_neg=12|0*341446||0x80
+stratixiv_hssi_rx_digi_bist_ver=12|0*349916||0x80
+stratixiv_hssi_rx_digi_cdr_ctrl=12|0*386190||0x80
+stratixiv_hssi_rx_digi_comp_chnl_top=12|0*395742||0x80
+stratixiv_hssi_rx_digi_dec_chnl_top=12|0*480486||0x80
+stratixiv_hssi_rx_digi_dskw_fifo=12|0*502396||0x80
+stratixiv_hssi_rx_digi_eii_module=12|0*531168||0x80
+stratixiv_hssi_rx_digi_freqdet=12|0*514015||0x80
+stratixiv_hssi_rx_digi_iq_pipe_rx=12|0*558175||0x80
+stratixiv_hssi_rx_digi_pcs_channel_testbus=12|0*552724||0x80
+stratixiv_hssi_rx_digi_prbs_ver=12|0*562305||0x80
+stratixiv_hssi_rx_digi_rx_ctrl=12|0*464261||0x80
+stratixiv_hssi_rx_digi_rxclk_ctl=12|0*338261||0x80
+stratixiv_hssi_rx_digi_wordalign=12|0*591139||0x80
+stratixiv_hssi_rx_digis_ph_fifo=12|0*326242||0x80
+stratixiv_hssi_rx_digis_ram16x14_syn=12|0*331846||0x80
+stratixiv_hssi_rx_digis_ram20x16_syn=12|0*334603||0x80
+stratixiv_hssi_rx_digis_ram8x70_syn=12|0*329922||0x80
+stratixiv_hssi_rx_digis_rxclk_gating=12|0*337664||0x80
+stratixiv_hssi_rx_pcs=12|0*738783||0x90
+stratixiv_hssi_rx_pipe_interface=12|0*175096||0x80
+stratixiv_hssi_rx_pma=12|0*97392||0x90
+stratixiv_hssi_tx_digi=12|0*295187||0x80
+stratixiv_hssi_tx_digi_bist_gen=12|0*210071||0x80
+stratixiv_hssi_tx_digi_enc_chnl_top=12|0*262747||0x80
+stratixiv_hssi_tx_digi_iq_pipe_tx=12|0*291985||0x80
+stratixiv_hssi_tx_digi_prbs_gen=12|0*243833||0x80
+stratixiv_hssi_tx_digi_tx_ctrl=12|0*201912||0x80
+stratixiv_hssi_tx_digi_txclk_ctl=12|0*193907||0x80
+stratixiv_hssi_tx_digis_ph_fifo=12|0*198360||0x80
+stratixiv_hssi_tx_digis_ram8x49_syn=12|0*196420||0x80
+stratixiv_hssi_tx_digis_txclk_gating=12|0*193310||0x80
+stratixiv_hssi_tx_pcs=12|0*302234||0x90
+stratixiv_hssi_tx_pipe_interface=12|0*184633||0x80
+stratixiv_hssi_tx_pma=12|0*83544||0x90
+stratixiv_hssi_tx_sm=12|0*799214||0x80
+

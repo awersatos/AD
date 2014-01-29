@@ -1,0 +1,84 @@
+;-------------------------------------------------------------------------------
+;Constraints File
+;   Devices : Bluetooth / Zigbee
+;   Board   : PB05 - Single Connector Plug-In Peripheral Board For NB02
+;   Project : Any
+;
+;   Created 15-March-2007
+;   Altium Limited
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+Record=FileHeader | Id=DXP Constraints v1.0
+Record=Constraint | TargetKind=PCB | TargetId=PB05.01 | Image=PB03.06 | ImageOffsetX=12 | ImageOffsetY=16
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Connector | TargetId=HDR1
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Bluetooth Peripheral Pins
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=BLUE_BASEBAND_RESET_N  | ConnectTo=HDR1-36
+Record=Constraint | TargetKind=Port | TargetId=BLUE_OP4               | ConnectTo=HDR1-38
+Record=Constraint | TargetKind=Port | TargetId=BLUE_OP5               | ConnectTo=HDR1-40
+Record=Constraint | TargetKind=Port | TargetId=BLUE_JTAG_RDY_N        | ConnectTo=HDR1-42
+Record=Constraint | TargetKind=Port | TargetId=BLUE_OP3               | ConnectTo=HDR1-44
+Record=Constraint | TargetKind=Port | TargetId=BLUE_RXD               | ConnectTo=HDR1-46
+Record=Constraint | TargetKind=Port | TargetId=BLUE_XOSCEN            | ConnectTo=HDR1-48
+Record=Constraint | TargetKind=Port | TargetId=BLUE_RESET_RADIO_OUT_N | ConnectTo=HDR1-50
+Record=Constraint | TargetKind=Port | TargetId=BLUE_TXD               | ConnectTo=HDR1-52
+Record=Constraint | TargetKind=Port | TargetId=BLUE_RTS_N             | ConnectTo=HDR1-54
+Record=Constraint | TargetKind=Port | TargetId=BLUE_CTS_N             | ConnectTo=HDR1-56
+Record=Constraint | TargetKind=Port | TargetId=BLUE_SPI_INOUT         | ConnectTo=HDR1-58
+Record=Constraint | TargetKind=Port | TargetId=BLUE_PCM_CLK           | ConnectTo=HDR1-60
+Record=Constraint | TargetKind=Port | TargetId=BLUE_PCM_SYNC          | ConnectTo=HDR1-62
+Record=Constraint | TargetKind=Port | TargetId=BLUE_PCM_DATA_IN       | ConnectTo=HDR1-64
+Record=Constraint | TargetKind=Port | TargetId=BLUE_PCM_DATA_OUT      | ConnectTo=HDR1-66
+Record=Constraint | TargetKind=Port | TargetId=BLUE_LDO_ENABLE        | ConnectTo=HDR1-68
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; ZigBee Peripheral Pins
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_SFD             | ConnectTo=HDR1-2
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_CCA             | ConnectTo=HDR1-4
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_FIFOP           | ConnectTo=HDR1-6
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_FIFO            | ConnectTo=HDR1-8
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_CS_N            | ConnectTo=HDR1-10
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_SCLK            | ConnectTo=HDR1-12
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_SI              | ConnectTo=HDR1-14
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_SO              | ConnectTo=HDR1-16
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_RESET_N         | ConnectTo=HDR1-18
+Record=Constraint | TargetKind=Port | TargetId=ZIGBEE_VREG_EN         | ConnectTo=HDR1-20
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Other Pins
+;-------------------------------------------------------------------------------
+;Record=Constraint | TargetKind=Port | TargetId=TCK_HARD     | ConnectTo=HDR1-11
+;Record=Constraint | TargetKind=Port | TargetId=TCK_SOFT     | ConnectTo=HDR1-19
+;Record=Constraint | TargetKind=Port | TargetId=TDI_HARD     | ConnectTo=HDR1-7
+;Record=Constraint | TargetKind=Port | TargetId=TDI_SOFT     | ConnectTo=HDR1-15
+;Record=Constraint | TargetKind=Port | TargetId=TDO_HARD     | ConnectTo=HDR1-9
+;Record=Constraint | TargetKind=Port | TargetId=TDO_SOFT     | ConnectTo=HDR1-17
+;Record=Constraint | TargetKind=Port | TargetId=TMS_HARD     | ConnectTo=HDR1-13
+;Record=Constraint | TargetKind=Port | TargetId=TMS_SOFT     | ConnectTo=HDR1-21
+;Record=Constraint | TargetKind=Port | TargetId=JTAG_CNCT    | ConnectTo=HDR1-23
+;Record=Constraint | TargetKind=Port | TargetId=SCL          | ConnectTo=HDR1-25
+;Record=Constraint | TargetKind=Port | TargetId=SDA          | ConnectTo=HDR1-27
+;Record=Constraint | TargetKind=Port | TargetId=LINEIN_L     | ConnectTo=HDR1-33
+;Record=Constraint | TargetKind=Port | TargetId=LINEIN_R     | ConnectTo=HDR1-35
+;Record=Constraint | TargetKind=Port | TargetId=LINEOUT_L    | ConnectTo=HDR1-31
+;Record=Constraint | TargetKind=Port | TargetId=LINEOUT_R    | ConnectTo=HDR1-29
+;Record=Constraint | TargetKind=Port | TargetId=MICIN        | ConnectTo=HDR1-37
+;Record=Constraint | TargetKind=Port | TargetId=EXTSPI_CS_ID | ConnectTo=HDR1-61
+;Record=Constraint | TargetKind=Port | TargetId=EXTSPI_CS_N0 | ConnectTo=HDR1-59
+;Record=Constraint | TargetKind=Port | TargetId=EXTSPI_CS_N1 | ConnectTo=HDR1-63
+;Record=Constraint | TargetKind=Port | TargetId=EXTSPI_DIN   | ConnectTo=HDR1-55
+;Record=Constraint | TargetKind=Port | TargetId=EXTSPI_DOUT  | ConnectTo=HDR1-53
+;Record=Constraint | TargetKind=Port | TargetId=EXTSPI_SCLK  | ConnectTo=HDR1-57
+;-------------------------------------------------------------------------------
+
+

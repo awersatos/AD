@@ -1,0 +1,32 @@
+[Plugin]
+Name=pal_arch_405
+Description=Pal implements the PPC405 architecture
+Caption=PPC405 architecture
+GenerateFile=pal_arch_cfg
+SourceDir=platform\fpga\processors\cppc\src
+GlobalCompileOption0=-I"$(SSASROOT)\platform\fpga\processors\cppc\include"
+CompileOption0=-I"$(SERROOT)\platform\pal\internal"
+CompileOption1=-Wc-w752
+Implement=pal_arch
+Require0=pal_arch_405
+Bitmap=pal_arch_405.bmp
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=TOOLCHAIN
+Condition=EQ
+Value=TASKING PowerPC
+
+[Option0]
+Name=fit
+GUIName=Use FIT interrupts (y/n)
+Description=Set to True to embed FIT&interrupt handling in the framework
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option1]
+Name=LSLSECTION
+Description=Name of main lsl section
+Kind=STRING
+DefaultValue=linear
+Auto=True

@@ -1,0 +1,31 @@
+[Plugin]
+Name=per_owm
+Description=1-Wire serial bus master for communication with multiple 1-Wire slave devices external to the FPGA.
+Caption=One Wire Bus Master Controller
+SourceDir=platform\fpga\peripherals\owm\src
+HardwareID=WB_OWM_V2
+Implement=per_owm
+Bitmap=per_owm.bmp
+LargeBitmap=per_owm_large.bmp
+
+[Instance]
+Require0=
+MultipleLinks=True
+MultipleLinksMax=8
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=Hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=OWM Interrupt
+CodeName=owm_interrupt
+Description=owm interrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

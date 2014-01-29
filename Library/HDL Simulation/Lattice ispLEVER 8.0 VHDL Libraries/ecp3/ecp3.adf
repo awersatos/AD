@@ -1,0 +1,37 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ecp3
+
+[Library]
+ecp3=.\ecp3.LIB
+
+[$LibMap$]
+ecp3=.
+Active_lib=
+xilinxun=
+UnlinkedDesignLibrary=
+DESIGNS=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=Altera Stratix
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_ecp3.do=-1
+
+[Files.Data]
+.\src\update_ecp3.do=Macro
+

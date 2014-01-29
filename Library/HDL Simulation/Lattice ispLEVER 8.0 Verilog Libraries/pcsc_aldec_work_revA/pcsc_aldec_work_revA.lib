@@ -1,0 +1,739 @@
+timestamp=1265381538600
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[PC12BBIST]
+A/PC12BBIST=22|./src/src_files/pcs/usage_model/PC12BBIST.v|1071|1*120593
+B/PC12BBIST=3*874040
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=521,1007,1443,1930
+R=./src/src_files/pcs/usage_model/PC12BBIST.v|1071
+
+[PC12BI]
+A/PC12BI=22|./src/src_files/pcs/usage_model/PC12BI.v|284|1*125451
+B/PC12BI=3*908719
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=831,1185,1658,2145
+R=./src/src_files/pcs/usage_model/PC12BI.v|284
+
+[PC12BI_AMUX]
+A/PC12BI_AMUX=22|./src/src_files/pcs/usage_model/PC12BI.v|21|1*121819
+B/PC12BI_AMUX=3*875289
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=342,588,840,977
+R=./src/src_files/pcs/usage_model/PC12BI.v|21
+
+[PC12BI_CMUX]
+A/PC12BI_CMUX=22|./src/src_files/pcs/usage_model/PC12BI.v|91|1*122727
+B/PC12BI_CMUX=3*888561
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=428,663,933,1088
+R=./src/src_files/pcs/usage_model/PC12BI.v|91
+
+[PC12BI_DMUX]
+A/PC12BI_DMUX=22|./src/src_files/pcs/usage_model/PC12BI.v|160|1*123603
+B/PC12BI_DMUX=3*893100
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=217,418,616,738
+R=./src/src_files/pcs/usage_model/PC12BI.v|160
+
+[PC12BI_EVAL]
+A/PC12BI_EVAL=22|./src/src_files/pcs/usage_model/PC12BI.v|208|1*124415
+B/PC12BI_EVAL=3*896247
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=234,529,793,936
+R=./src/src_files/pcs/usage_model/PC12BI.v|208
+
+[PC12B_AGEN]
+A/PC12B_AGEN=22|./src/src_files/pcs/usage_model/PC12BBIST.v|854|1*118667
+B/PC12B_AGEN=3*864076
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=409,719,1106,1360
+R=./src/src_files/pcs/usage_model/PC12BBIST.v|854
+
+[PC12B_CNTL]
+A/PC12B_CNTL=22|./src/src_files/pcs/usage_model/PC12BBIST.v|753|1*117504
+B/PC12B_CNTL=3*863523
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=672,1202,1693,2281
+R=./src/src_files/pcs/usage_model/PC12BBIST.v|753
+
+[PC12B_EVAL]
+A/PC12B_EVAL=22|./src/src_files/pcs/usage_model/PC12BBIST.v|984|1*119686
+B/PC12B_EVAL=3*870774
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=358,649,959,1124
+R=./src/src_files/pcs/usage_model/PC12BBIST.v|984
+
+[PC12B_FSMINT]
+A/PC12B_FSMINT=22|./src/src_files/pcs/usage_model/PC12BBIST.v|399|1*115383
+B/PC12B_FSMINT=3*843507
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=839,1214,1700,1903
+R=./src/src_files/pcs/usage_model/PC12BBIST.v|399
+
+[PC12B_MAINFSM]
+A/PC12B_MAINFSM=22|./src/src_files/pcs/usage_model/PC12BBIST.v|26|1*114313
+B/PC12B_MAINFSM=3*819825
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=520,1046,1685,2120
+R=./src/src_files/pcs/usage_model/PC12BBIST.v|26
+
+[PC12B_RTFSM]
+A/PC12B_RTFSM=22|./src/src_files/pcs/usage_model/PC12BBIST.v|514|1*116500
+B/PC12B_RTFSM=3*850439
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=480,883,1400,1732
+R=./src/src_files/pcs/usage_model/PC12BBIST.v|514
+
+[PCSC_sim]
+A/PCSC_sim=22|./src/PCSC_sim_revA.v|6|1*155408
+B/PCSC_sim=3*1101538
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=19052,24650,33249,40024
+R=./src/PCSC_sim_revA.v|6
+
+[bist_char]
+A/bist_char=22|./src/src_files/pcs/rtl/bist_char.v|48|1*67597
+B/bist_char=3*642993
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=704,1015,1417,1583
+R=./src/src_files/pcs/rtl/bist_char.v|48
+
+[cf_cor_cnt_reg]
+A/cf_cor_cnt_reg=22|./src/src_files/pcs/rtl/cf_cor_cnt_reg.v|3|1*57517
+B/cf_cor_cnt_reg=3*562181
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=302,581,791,1061
+R=./src/src_files/pcs/rtl/cf_cor_cnt_reg.v|3
+
+[cf_cor_counter]
+A/cf_cor_counter=22|./src/src_files/pcs/rtl/cf_cor_counter.v|50|1*60692
+B/cf_cor_counter=3*581705
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=288,527,732,854
+R=./src/src_files/pcs/rtl/cf_cor_counter.v|50
+
+[cf_cor_int_reg]
+A/cf_cor_int_reg=22|./src/src_files/pcs/usage_model/cf_cor_int_reg.v|3|1*56750
+B/cf_cor_int_reg=3*562024
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=382,689,919,1207
+R=./src/src_files/pcs/usage_model/cf_cor_int_reg.v|3
+
+[cf_cor_reset]
+A/cf_cor_reset=22|./src/src_files/pcs/usage_model/cf_cor_reset.v|50|1*59767
+B/cf_cor_reset=3*577641
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=182,431,778,895
+R=./src/src_files/pcs/usage_model/cf_cor_reset.v|50
+
+[cf_int_lane]
+A/cf_int_lane=22|./src/src_files/pcs/rtl/cf_int_lane.v|3|1*55874
+B/cf_int_lane=3*561870
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=931,1347,1702,2192
+R=./src/src_files/pcs/rtl/cf_int_lane.v|3
+
+[cf_int_sub]
+A/cf_int_sub=22|./src/src_files/pcs/usage_model/cf_int_sub.v|53|1*58252
+B/cf_int_sub=3*562338
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=319,624,1253,1435
+R=./src/src_files/pcs/usage_model/cf_int_sub.v|53
+
+[char_test_logic]
+A/char_test_logic=22|./src/src_files/pcs/rtl/char_test_logic.v|51|1*68551
+B/char_test_logic=3*645742
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2316,2959,3886,5072
+R=./src/src_files/pcs/rtl/char_test_logic.v|51
+
+[chif]
+A/chif=22|./src/src_files/pcs/usage_model/chif_revA.v|56|1*53005
+B/chif=3*531385
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2515,3642,5332,6062
+R=./src/src_files/pcs/usage_model/chif_revA.v|56
+
+[ctl_spare_gate]
+A/ctl_spare_gate=22|./src/src_files/pcs/usage_model/ctl_spare_gate.v|51|1*79763
+B/ctl_spare_gate=3*680954
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=115,288,377,459
+R=./src/src_files/pcs/usage_model/ctl_spare_gate.v|51
+
+[dp_spare_gate]
+A/dp_spare_gate=22|./src/src_files/pcs/usage_model/dp_spare_gate.v|51|1*77750
+B/dp_spare_gate=3*680641
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=113,285,374,456
+R=./src/src_files/pcs/usage_model/dp_spare_gate.v|51
+
+[e2_aux_ch]
+A/e2_aux_ch=22|./src/src_files/serdes/e2_aux_ch_revA.v|46|1*126546
+B/e2_aux_ch=3*909712
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1394,2173,3134,3586
+R=./src/src_files/serdes/e2_aux_ch_revA.v|46
+
+[e2_cdr]
+A/e2_cdr=22|./src/src_files/serdes/e2_cdr_revA.v|51|1*129916
+B/e2_cdr=3*945262
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1678,2684,3756,4311
+R=./src/src_files/serdes/e2_cdr_revA.v|51
+
+[e2_serdes_ch_model]
+A/e2_serdes_ch_model=22|./src/src_files/serdes/e2_serdes_ch_model_revA.v|56|1*132467
+B/e2_serdes_ch_model=3*969209
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3231,4701,6919,8103
+R=./src/src_files/serdes/e2_serdes_ch_model_revA.v|56
+
+[e2bis_ch_ptn_cmp]
+A/e2bis_ch_ptn_cmp=22|./src/src_files/pcs/rtl/e2bis_ch_ptn_cmp.v|35|1*106471
+B/e2bis_ch_ptn_cmp=3*744266
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=917,1922,2881,3516
+R=./src/src_files/pcs/rtl/e2bis_ch_ptn_cmp.v|35
+
+[e2bis_ch_ptn_gen]
+A/e2bis_ch_ptn_gen=22|./src/src_files/pcs/rtl/e2bis_ch_ptn_gen.v|29|1*103072
+B/e2bis_ch_ptn_gen=3*702496
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=816,1597,2373,2652
+R=./src/src_files/pcs/rtl/e2bis_ch_ptn_gen.v|29
+
+[e2bis_ch_timer]
+A/e2bis_ch_timer=22|./src/src_files/pcs/rtl/e2bis_ch_timer.v|32|1*112649
+B/e2bis_ch_timer=3*811888
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=427,795,1213,1343
+R=./src/src_files/pcs/rtl/e2bis_ch_timer.v|32
+
+[e2bis_chbist_jj]
+A/e2bis_chbist_jj=22|./src/src_files/pcs/rtl/e2bis_chbist_jj.v|32|1*88547
+B/e2bis_chbist_jj=3*682018
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=782,1284,1805,2424
+R=./src/src_files/pcs/rtl/e2bis_chbist_jj.v|32
+
+[e2bis_cmp_stm]
+A/e2bis_cmp_stm=22|./src/src_files/pcs/rtl/e2bis_cmp_stm.v|35|1*111307
+B/e2bis_cmp_stm=3*796794
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=934,1445,2010,2295
+R=./src/src_files/pcs/rtl/e2bis_cmp_stm.v|35
+
+[e2bis_head_founder]
+A/e2bis_head_founder=22|./src/src_files/pcs/rtl/e2bis_head_founder.v|29|1*109336
+B/e2bis_head_founder=3*767923
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=440,1036,1740,2036
+R=./src/src_files/pcs/rtl/e2bis_head_founder.v|29
+
+[e2bis_random_data_gen]
+A/e2bis_random_data_gen=22|./src/src_files/pcs/rtl/e2bis_random_data_gen.v|29|1*105313
+B/e2bis_random_data_gen=3*735149
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=291,652,1118,1277
+R=./src/src_files/pcs/rtl/e2bis_random_data_gen.v|29
+
+[e2bis_spare_gate]
+A/e2bis_spare_gate=22|./src/src_files/pcs/usage_model/e2bis_spare_gate.v|33|1*113784
+B/e2bis_spare_gate=3*819666
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=119,294,383,465
+R=./src/src_files/pcs/usage_model/e2bis_spare_gate.v|33
+
+[e2lol_det_model]
+A/e2lol_det_model=22|./src/src_files/serdes/e2lol_det_model_revA.v|36|1*128764
+B/e2lol_det_model=3*929610
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=321,802,1161,1350
+R=./src/src_files/serdes/e2lol_det_model_revA.v|36
+
+[e2pci_det_jj]
+A/e2pci_det_jj=22|./src/src_files/pcs/rtl/e2pci_det_jj.v|1|1*76393
+B/e2pci_det_jj=3*668688
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=323,682,1097,1217
+R=./src/src_files/pcs/rtl/e2pci_det_jj.v|1
+
+[e2top_quad]
+A/e2top_quad=22|./src/src_files/serdes/e2top_quad_revA.v|43|1*136936
+B/e2top_quad=3*1017184
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6926,10415,17973,22332
+R=./src/src_files/serdes/e2top_quad_revA.v|43
+
+[fb_rf]
+A/fb_rf=22|./src/src_files/pcs/rtl/fb_rf.v|55|1*3415
+B/fb_rf=3*36264
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=451,693,1077,1248
+R=./src/src_files/pcs/rtl/fb_rf.v|55
+
+[fb_rx]
+A/fb_rx=22|./src/src_files/pcs/usage_model/fb_rx.v|50|1*4429
+B/fb_rx=3*45385
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=353,747,1239,1641
+R=./src/src_files/pcs/usage_model/fb_rx.v|50
+
+[fb_tx]
+A/fb_tx=22|./src/src_files/pcs/usage_model/fb_tx.v|51|1*2097
+B/fb_tx=3*31271
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=353,746,1231,1647
+R=./src/src_files/pcs/usage_model/fb_tx.v|51
+
+[pcs_bist_wp]
+A/pcs_bist_wp=22|./src/src_files/pcs/rtl/pcs_bist_wp.v|1|1*71715
+B/pcs_bist_wp=3*659584
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=843,1126,1610,1791
+R=./src/src_files/pcs/rtl/pcs_bist_wp.v|1
+
+[pcs_ch_buffers]
+A/pcs_ch_buffers=22|./src/src_files/pcs/usage_model/pcs_ch_buffers.v|52|1*38301
+B/pcs_ch_buffers=3*437899
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=748,1077,1556,1728
+R=./src/src_files/pcs/usage_model/pcs_ch_buffers.v|52
+
+[pcs_ch_clk]
+A/pcs_ch_clk=22|./src/src_files/pcs/usage_model/pcs_ch_clk.v|53|1*34712
+B/pcs_ch_clk=3*425810
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=883,1282,1939,2135
+R=./src/src_files/pcs/usage_model/pcs_ch_clk.v|53
+
+[pcs_ch_clk_rst]
+A/pcs_ch_clk_rst=22|./src/src_files/pcs/rtl/pcs_ch_clk_rst.v|3|1*37262
+B/pcs_ch_clk_rst=3*437742
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1417,1882,2338,3015
+R=./src/src_files/pcs/rtl/pcs_ch_clk_rst.v|3
+
+[pcs_ch_ctl_top]
+A/pcs_ch_ctl_top=22|./src/src_files/pcs/rtl/pcs_ch_ctl_top_revA.v|3|1*78260
+B/pcs_ch_ctl_top=3*680797
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2473,3110,3856,4925
+R=./src/src_files/pcs/rtl/pcs_ch_ctl_top_revA.v|3
+
+[pcs_ch_dp]
+A/pcs_ch_dp=22|./src/src_files/pcs/usage_model/pcs_ch_dp_revA.v|59|1*28738
+B/pcs_ch_dp=3*373011
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3705,5486,8653,10341
+R=./src/src_files/pcs/usage_model/pcs_ch_dp_revA.v|59
+
+[pcs_ch_dp_top]
+A/pcs_ch_dp_top=22|./src/src_files/pcs/rtl/pcs_ch_dp_top_revA.v|3|1*72591
+B/pcs_ch_dp_top=3*667387
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4813,6035,7495,9924
+R=./src/src_files/pcs/rtl/pcs_ch_dp_top_revA.v|3
+
+[pcs_ch_rst]
+A/pcs_ch_rst=22|./src/src_files/pcs/rtl/pcs_ch_rst.v|49|1*36243
+B/pcs_ch_rst=3*435612
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=694,1066,1383,1775
+R=./src/src_files/pcs/rtl/pcs_ch_rst.v|49
+
+[pcs_channel_top]
+A/pcs_channel_top=22|./src/src_files/pcs/rtl/pcs_channel_top_revA.v|3|1*80274
+B/pcs_channel_top=3*681111
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=5844,7169,8864,11520
+R=./src/src_files/pcs/rtl/pcs_channel_top_revA.v|3
+
+[pcs_qd_clk]
+A/pcs_qd_clk=22|./src/src_files/pcs/usage_model/pcs_qd_clk.v|53|1*40407
+B/pcs_qd_clk=3*448967
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=350,639,985,1103
+R=./src/src_files/pcs/usage_model/pcs_qd_clk.v|53
+
+[pcs_qd_clk_rst]
+A/pcs_qd_clk_rst=22|./src/src_files/pcs/rtl/pcs_qd_clk_rst.v|3|1*41490
+B/pcs_qd_clk_rst=3*454525
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=931,1259,1624,2120
+R=./src/src_files/pcs/rtl/pcs_qd_clk_rst.v|3
+
+[pcs_qd_rst]
+A/pcs_qd_rst=22|./src/src_files/pcs/usage_model/pcs_qd_rst.v|53|1*39436
+B/pcs_qd_rst=3*445289
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=692,990,1409,1575
+R=./src/src_files/pcs/usage_model/pcs_qd_rst.v|53
+
+[pcs_quad]
+A/pcs_quad=22|./src/src_files/pcs/rtl/pcs_quad_revA.v|3|1*95841
+B/pcs_quad=3*685047
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=7755,9634,12291,17205
+R=./src/src_files/pcs/rtl/pcs_quad_revA.v|3
+
+[pcs_quad_buffers]
+A/pcs_quad_buffers=22|./src/src_files/pcs/usage_model/pcs_quad_buffers.v|67|1*42401
+B/pcs_quad_buffers=3*454682
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2418,3116,4425,4825
+R=./src/src_files/pcs/usage_model/pcs_quad_buffers.v|67
+
+[pcs_quad_dp]
+A/pcs_quad_dp=22|./src/src_files/pcs/rtl/pcs_quad_dp_revA.v|3|1*89939
+B/pcs_quad_dp=3*684045
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9211,11218,13895,21032
+R=./src/src_files/pcs/rtl/pcs_quad_dp_revA.v|3
+
+[pcs_quad_logic]
+A/pcs_quad_logic=22|./src/src_files/pcs/rtl/pcs_quad_logic_revA.v|3|1*83428
+B/pcs_quad_logic=3*681269
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6395,8540,10837,14810
+R=./src/src_files/pcs/rtl/pcs_quad_logic_revA.v|3
+
+[pcs_reset]
+A/pcs_reset=22|./src/src_files/pcs/rtl/pcs_reset.v|48|1*33982
+B/pcs_reset=3*424389
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=228,432,658,801
+R=./src/src_files/pcs/rtl/pcs_reset.v|48
+
+[pcsm_16x12]
+A/pcsm_16x12=22|./src/src_files/pcs/usage_model/pcsm_16x12.v|18|1*390
+B/pcsm_16x12=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+D/pcsm_16x12=4*0
+P/~emb=436,1125,1681,1881
+R=./src/src_files/pcs/usage_model/pcsm_16x12.v|18
+
+[pcsm_16x12b]
+A/pcsm_16x12b=22|./src/src_files/pcs/usage_model/pcsm_16x12b.v|16|1*16833
+B/pcsm_16x12b=3*227426
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=556,1087,1554,2271
+R=./src/src_files/pcs/usage_model/pcsm_16x12b.v|16
+
+[pfifo_ctl]
+A/pfifo_ctl=22|./src/src_files/pcs/rtl/pfifo_ctl.v|1|1*101590
+B/pfifo_ctl=3*692547
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=385,749,1426,1716
+R=./src/src_files/pcs/rtl/pfifo_ctl.v|1
+
+[pfifo_ram]
+A/pfifo_ram=22|./src/src_files/pcs/rtl/pfifo_ram.v|2|1*100716
+B/pfifo_ram=3*685198
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=337,642,938,1121
+R=./src/src_files/pcs/rtl/pfifo_ram.v|2
+
+[pfifo_top]
+A/pfifo_top=22|./src/src_files/pcs/rtl/pfifo_top.v|3|1*75615
+B/pfifo_top=3*668536
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=384,640,890,1259
+R=./src/src_files/pcs/rtl/pfifo_top.v|3
+
+[pp_cc]
+A/pp_cc=22|./src/src_files/pcs/usage_model/pp_cc.v|50|1*12953
+B/pp_cc=3*166340
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1195,2324,4156,5067
+R=./src/src_files/pcs/usage_model/pp_cc.v|50
+
+[pp_dec8b10b]
+A/pp_dec8b10b=22|./src/src_files/pcs/rtl/pp_dec8b10b.v|50|1*9063
+B/pp_dec8b10b=3*64615
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=390,975,1938,2470
+R=./src/src_files/pcs/rtl/pp_dec8b10b.v|50
+
+[pp_enc8b10b]
+A/pp_enc8b10b=22|./src/src_files/pcs/rtl/pp_enc8b10b.v|49|1*10563
+B/pp_enc8b10b=3*131183
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=488,1043,1655,2040
+R=./src/src_files/pcs/rtl/pp_enc8b10b.v|49
+
+[pp_fc_sync]
+A/pp_fc_sync=22|./src/src_files/pcs/usage_model/pp_fc_sync.v|54|1*21124
+B/pp_fc_sync=3*271245
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=634,1255,1928,2239
+R=./src/src_files/pcs/usage_model/pp_fc_sync.v|54
+
+[pp_ge_idle]
+A/pp_ge_idle=22|./src/src_files/pcs/rtl/pp_ge_idle.v|62|1*27399
+B/pp_ge_idle=3*358132
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=451,937,1402,1665
+R=./src/src_files/pcs/rtl/pp_ge_idle.v|62
+
+[pp_link_sync]
+A/pp_link_sync=22|./src/src_files/pcs/rtl/pp_link_sync.v|52|1*18269
+B/pp_link_sync=3*237614
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=938,1545,2235,2592
+R=./src/src_files/pcs/rtl/pp_link_sync.v|52
+
+[pp_rio_ls]
+A/pp_rio_ls=22|./src/src_files/pcs/rtl/pp_rio_ls.v|52|1*19962
+B/pp_rio_ls=3*261075
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=467,854,1270,1491
+R=./src/src_files/pcs/rtl/pp_rio_ls.v|52
+
+[pp_rx_top]
+A/pp_rx_top=22|./src/src_files/pcs/usage_model/pp_rx_top.v|57|1*22655
+B/pp_rx_top=3*308244
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1986,3223,4635,5920
+R=./src/src_files/pcs/usage_model/pp_rx_top.v|57
+
+[pp_tx_top]
+A/pp_tx_top=22|./src/src_files/pcs/rtl/pp_tx_top.v|49|1*11887
+B/pp_tx_top=3*161271
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=434,811,1184,1496
+R=./src/src_files/pcs/rtl/pp_tx_top.v|49
+
+[pp_word_align]
+A/pp_word_align=22|./src/src_files/pcs/rtl/pp_word_align.v|49|1*25481
+B/pp_word_align=3*322326
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=580,1081,2513,2740
+R=./src/src_files/pcs/rtl/pp_word_align.v|49
+
+[qd_spare_gate]
+A/qd_spare_gate=22|./src/src_files/pcs/usage_model/qd_spare_gate.v|51|1*88037
+B/qd_spare_gate=3*681862
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=113,285,374,456
+R=./src/src_files/pcs/usage_model/qd_spare_gate.v|51
+
+[qf_cor_int_reg]
+A/qf_cor_int_reg=22|./src/src_files/pcs/usage_model/qf_cor_int_reg.v|3|1*49798
+B/qf_cor_int_reg=3*511861
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=382,692,922,1210
+R=./src/src_files/pcs/usage_model/qf_cor_int_reg.v|3
+
+[qf_cor_reset]
+A/qf_cor_reset=22|./src/src_files/pcs/usage_model/qf_cor_reset.v|50|1*52080
+B/qf_cor_reset=3*527321
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=182,429,776,893
+R=./src/src_files/pcs/usage_model/qf_cor_reset.v|50
+
+[qf_int_quad]
+A/qf_int_quad=22|./src/src_files/pcs/rtl/qf_int_quad.v|3|1*49018
+B/qf_int_quad=3*511707
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=704,1034,1318,1687
+R=./src/src_files/pcs/rtl/qf_int_quad.v|3
+
+[qf_int_sub]
+A/qf_int_sub=22|./src/src_files/pcs/usage_model/qf_int_sub.v|53|1*50565
+B/qf_int_sub=3*512018
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=319,624,1253,1435
+R=./src/src_files/pcs/usage_model/qf_int_sub.v|53
+
+[qif]
+A/qif=22|./src/src_files/pcs/usage_model/qif_revA.v|57|1*45156
+B/qif=3*475059
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3360,4781,7212,7971
+R=./src/src_files/pcs/usage_model/qif_revA.v|57
+
+[quad_top]
+A/quad_top=22|./src/quad_top_revA.v|3|1*150677
+B/quad_top=3*1101387
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6308,8573,10962,15521
+R=./src/quad_top_revA.v|3
+
+[sb_prbs]
+A/sb_prbs=22|./src/src_files/pcs/rtl/sb_prbs.v|68|1*5763
+B/sb_prbs=3*50482
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=491,839,1426,1639
+R=./src/src_files/pcs/rtl/sb_prbs.v|68
+
+[sb_rx]
+A/sb_rx=22|./src/src_files/pcs/rtl/sb_rx.v|49|1*6923
+B/sb_rx=3*57249
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=497,867,1235,1510
+R=./src/src_files/pcs/rtl/sb_rx.v|49
+
+[sb_tx]
+A/sb_tx=22|./src/src_files/pcs/rtl/sb_tx.v|49|1*8001
+B/sb_tx=3*61306
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=364,717,1028,1282
+R=./src/src_files/pcs/rtl/sb_tx.v|49
+
+[serdes_char]
+A/serdes_char=22|./src/src_files/pcs/rtl/serdes_char.v|51|1*70359
+B/serdes_char=3*650741
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1803,2278,3191,3584
+R=./src/src_files/pcs/rtl/serdes_char.v|51
+
+[ubs1x12]
+A/ubs1x12=22|./src/src_files/pcs/rtl/ubs1x12.v|827|1*66245
+B/ubs1x12=3*642235
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=834,1431,1949,2670
+R=./src/src_files/pcs/rtl/ubs1x12.v|827
+
+[ubs1x12_MUX]
+A/ubs1x12_MUX=22|./src/src_files/pcs/rtl/ubs1x12.v|32|1*61523
+B/ubs1x12_MUX=3*584211
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=190,384,632,787
+R=./src/src_files/pcs/rtl/ubs1x12.v|32
+
+[ubs1x12_bistctl_int]
+A/ubs1x12_bistctl_int=22|./src/src_files/pcs/rtl/ubs1x12.v|704|1*65089
+B/ubs1x12_bistctl_int=3*632392
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=519,887,1321,1586
+R=./src/src_files/pcs/rtl/ubs1x12.v|704
+
+[ubs1x12_sbric_rs]
+A/ubs1x12_sbric_rs=22|./src/src_files/pcs/rtl/ubs1x12.v|318|1*63360
+B/ubs1x12_sbric_rs=3*597867
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=672,1261,2290,2907
+R=./src/src_files/pcs/rtl/ubs1x12.v|318
+
+[ubs1x12_sbric_st]
+A/ubs1x12_sbric_st=22|./src/src_files/pcs/rtl/ubs1x12.v|115|1*62303
+B/ubs1x12_sbric_st=3*587574
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=369,763,1279,1650
+R=./src/src_files/pcs/rtl/ubs1x12.v|115
+
+[~A]
+./src/src_files/pcs/usage_model/pcsm_16x12.v_fb_tx.v_fb_rx.v_fb_rf.v_sb_prbs.v_sb_rx.v_sb_tx.v_pp_dec8b10b.v_pp_enc8b10b.v_pp_tx_top.v_pp_cc.v_pp_link_sync.v_pp_rio_ls.v_pp_fc_sync.v_pp_rx_top.v_pcs_ch_dp_revA.v_pp_word_align.v_pp_ge_idle.v_pcs_reset.v_pcs_ch_clk.v_pcs_ch_rst.v_pcs_ch_clk_rst.v_pcs_ch_buffers.v_pcs_qd_rst.v_pcs_qd_clk.v_pcs_qd_clk_rst.v_pcs_quad_buffers.v_qif_revA.v_qf_int_quad.v_qf_cor_int_reg.v_qf_int_sub.v_qf_cor_reset.v_chif_revA.v_cf_int_lane.v_cf_int_sub.v_cf_cor_reset.v_cf_cor_counter.v_cf_cor_cnt_reg.v_cf_cor_int_reg.v_ubs1x12.v_bist_char.v_char_test_logic.v_serdes_char.v_pcs_bist_wp.v_pcs_ch_dp_top_revA.v_pcs_ch_ctl_top_revA.v_pcs_channel_top_revA.v_pcs_quad_logic_revA.v_pcs_quad_dp_revA.v_pcs_quad_revA.v_pfifo_ram.v_pfifo_ctl.v_pfifo_top.v_e2pci_det_jj.v_e2bis_ch_ptn_gen.v_e2bis_ch_ptn_cmp.v_e2bis_ch_timer.v_e2bis_spare_gate.v_e2bis_cmp_stm.v_e2bis_head_founder.v_e2bis_random_data_gen.v_e2bis_chbist_jj.v_ctl_spare_gate.v_qd_spare_gate.v_dp_spare_gate.v_PC12BBIST.v_PC12BI.v_pcsm_16x1=0*236121*379028
+Comment=LATTICE ispLEVER 8.0,  PCSC_ALDEC_WORK_REVA LIBRARY
+LastVerilogToplevel=PCSC_sim
+ModifyID=634
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+
+[~MFT]
+0=91|0pcsc_aldec_work_revA.mgf|379028|0
+1=89|1pcsc_aldec_work_revA.mgf|155408|0
+3=89|3pcsc_aldec_work_revA.mgf|1101538|0
+4=0|4pcsc_aldec_work_revA.mgf|0|0
+
+[~U]
+$root=12|0*0|
+PC12BBIST=12|0*167955||0x80
+PC12BI=12|0*172957||0x80
+PC12BI_AMUX=12|0*169453||0x80
+PC12BI_CMUX=12|0*170345||0x80
+PC12BI_DMUX=12|0*171205||0x80
+PC12BI_EVAL=12|0*171873||0x80
+PC12B_AGEN=12|0*165613||0x80
+PC12B_CNTL=12|0*164018||0x80
+PC12B_EVAL=12|0*166920||0x80
+PC12B_FSMINT=12|0*160793||0x80
+PC12B_MAINFSM=12|0*158219||0x80
+PC12B_RTFSM=12|0*162134||0x80
+PCSC_sim=12|0*211438||0x90
+bist_char=12|0*96133||0x80
+cf_cor_cnt_reg=12|0*82741||0x80
+cf_cor_counter=12|0*85852||0x80
+cf_cor_int_reg=12|0*81894||0x80
+cf_cor_reset=12|0*85007||0x80
+cf_int_lane=12|0*80714||0x80
+cf_int_sub=12|0*83508||0x80
+char_test_logic=12|0*97183||0x80
+chif=12|0*76149||0x80
+ctl_spare_gate=12|0*111481||0x80
+dp_spare_gate=12|0*109084||0x80
+e2_aux_ch=12|0*174276||0x80
+e2_cdr=12|0*178878||0x80
+e2_serdes_ch_model=12|0*182597||0x80
+e2bis_ch_ptn_cmp=12|0*147673||0x80
+e2bis_ch_ptn_gen=12|0*143330||0x80
+e2bis_ch_timer=12|0*156523||0x80
+e2bis_chbist_jj=12|0*123237||0x80
+e2bis_cmp_stm=12|0*154413||0x80
+e2bis_head_founder=12|0*151578||0x80
+e2bis_random_data_gen=12|0*146227||0x80
+e2bis_spare_gate=12|0*157834||0x80
+e2lol_det_model=12|0*177294||0x80
+e2pci_det_jj=12|0*107743||0x80
+e2top_quad=12|0*189320||0x80
+fb_rf=12|0*4919||0x80
+fb_rx=12|0*5949||0x80
+fb_tx=12|0*3233||0x80
+pcs_bist_wp=12|0*101787||0x80
+pcs_ch_buffers=12|0*58905||0x80
+pcs_ch_clk=12|0*54852||0x80
+pcs_ch_clk_rst=12|0*57546||0x80
+pcs_ch_ctl_top=12|0*109466||0x80
+pcs_ch_dp=12|0*46368||0x80
+pcs_ch_dp_top=12|0*102855||0x80
+pcs_ch_rst=12|0*56415||0x80
+pcs_channel_top=12|0*111864||0x80
+pcs_qd_clk=12|0*61075||0x80
+pcs_qd_clk_rst=12|0*62110||0x80
+pcs_qd_rst=12|0*60088||0x80
+pcs_quad=12|0*133299||0x80
+pcs_quad_buffers=12|0*63165||0x80
+pcs_quad_dp=12|0*124901||0x80
+pcs_quad_logic=12|0*116136||0x80
+pcs_reset=12|0*54138||0x80
+pcsm_16x12=12|0*630||0x80
+pcsm_16x12b=12|0*27791||0x80
+pfifo_ctl=12|0*141304||0x80
+pfifo_ram=12|0*140270||0x80
+pfifo_top=12|0*106901||0x80
+pp_cc=12|0*21657||0x80
+pp_dec8b10b=12|0*11351||0x80
+pp_enc8b10b=12|0*16643||0x80
+pp_fc_sync=12|0*34354||0x80
+pp_ge_idle=12|0*44549||0x80
+pp_link_sync=12|0*29563||0x80
+pp_rio_ls=12|0*32568||0x80
+pp_rx_top=12|0*37117||0x80
+pp_tx_top=12|0*20303||0x80
+pp_word_align=12|0*41815||0x80
+qd_spare_gate=12|0*122855||0x80
+qf_cor_int_reg=12|0*72942||0x80
+qf_cor_reset=12|0*75304||0x80
+qf_int_quad=12|0*72002||0x80
+qf_int_sub=12|0*73789||0x80
+qif=12|0*65934||0x80
+quad_top=12|0*204581||0x80
+sb_prbs=12|0*7587||0x80
+sb_rx=12|0*9163||0x80
+sb_tx=12|0*10305||0x80
+serdes_char=12|0*99855||0x80
+ubs1x12=12|0*94253||0x80
+ubs1x12_MUX=12|0*86603||0x80
+ubs1x12_bistctl_int=12|0*92809||0x80
+ubs1x12_sbric_rs=12|0*89256||0x80
+ubs1x12_sbric_st=12|0*87351||0x80
+

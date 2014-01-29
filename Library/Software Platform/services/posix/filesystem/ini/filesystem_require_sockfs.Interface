@@ -1,0 +1,7 @@
+[Interface]
+Name=filesystem_require_sockfs
+Category=SERVICE
+AvailableByFrameworkOnly=True
+CanBeVisible=False
+Description=invisible empty plugin to indirectly require posix_filesystem by sockfs
+

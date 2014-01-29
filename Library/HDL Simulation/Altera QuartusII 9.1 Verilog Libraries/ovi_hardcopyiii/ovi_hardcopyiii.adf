@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_hardcopyIII
+
+[Library]
+ovi_hardcopyIII=.\ovi_hardcopyIII.lib
+
+[$LibMap$]
+ovi_hardcopyIII=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/update_ovi_hardcopyiii.do=-1
+/hardcopyiii_atoms.v=-1
+
+[Files.Data]
+.\src\update_ovi_hardcopyiii.do=Macro
+.\src\hardcopyiii_atoms.v=Verilog Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

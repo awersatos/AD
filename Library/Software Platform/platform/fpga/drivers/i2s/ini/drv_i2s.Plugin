@@ -1,0 +1,118 @@
+[Plugin]
+Name=drv_i2s
+Description=I2S Master Controller Driver
+Caption=I2S Driver
+SourceDir=platform\fpga\drivers\i2s\src
+Implement=drv_i2s
+MinInstances=1
+Bitmap=drv_i2s.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_i2s
+Condition=EQ
+
+[Instance]
+Require0=per_i2s
+
+[Instance_Option0]
+Name=SAMPLERATE
+GUIName=Sample rate
+Description=Sample rate of the audio stream
+Kind=UINT32
+DefaultValue=44100
+
+[Instance_Option1]
+Name=TX_MODE
+GUIName=Output mode
+Description=Stereo or mono mode for output
+Kind=ENUM
+Type=UINT16
+DefaultValue=Stereo
+Enum0=Stereo
+EnumValue0=0x0000
+Enum1=Mono
+EnumValue1=0x0100
+
+[Instance_Option2]
+Name=RX_MODE
+GUIName=Input mode
+Description=Stereo or mono mode for input
+Kind=ENUM
+Type=UINT16
+DefaultValue=Stereo
+Enum0=Stereo
+EnumValue0=0x0000
+Enum1=Mono_Left
+EnumValue1=0x0200
+Enum2=Mono_Right
+EnumValue2=0x0600
+
+[Instance_Option3]
+Name=QUANTIZATION
+GUIName=Quantization
+Description=Bit mode of the controller (use 32-bit for 24-bit left-aligned)
+Kind=ENUM
+Type=UINT8
+DefaultValue=16bit
+Enum0=16bit
+EnumValue0=16
+Enum1=20bit
+EnumValue1=20
+Enum2=24bit
+EnumValue2=24
+Enum3=32bit
+EnumValue3=32
+
+
+[Instance_Option4]
+Name=TX_BUFFER
+GUIName=Transmitter software buffer size
+Description=Transmitter software buffer size (words). If you specify a size of 0 software buffering and interrupt generation will be disabled (in which case the driver will fail if you are using the small 32-word built-in core buffer).
+Kind=BUFFER
+Type=INT32
+DefaultValue=512
+AutoValue=0
+
+[Instance_Option4_Auto_If0]
+Object=interrupt_value
+Kind=OPTION
+Value=-1
+Condition=EQ
+
+
+[Instance_Option5]
+Name=RX_BUFFER
+GUIName=Receiver software buffer size
+Description=Receiver software buffer size (words). If you specify a size of 0 software buffering and interrupt generation will be disabled (in which case the driver will fail if you are using the small 32-word built-in core buffer.)
+Kind=BUFFER
+Type=INT32
+DefaultValue=512
+AutoValue=0
+
+[Instance_Option5_Auto_If0]
+Object=interrupt_value
+Kind=OPTION
+Value=-1
+Condition=EQ
+
+
+[Instance_Option6]
+Name=WATERMARK
+GUIName=Watermark
+Description=Number of samples in the hardware buffer serving as the threshold for interrupt generation. This value only applies in combination with the use of software buffers. The size of the small built-in core buffer is 32 samples. Large hardware buffer sizes are 1k, 2k, 4k, or 8k samples.
+Kind=UINT16
+DefaultValue=8
+
+
+[Instance_Option7]
+name=interrupt_value
+GUIName=Interrupt value
+Description=Inherited from hardware wrapper. If the interrupt is not connected (value is -1) software buffering can not be used. (If you are using the small 32-word built-in core buffer the interrupt must be connected.)
+NoGenerate=True
+Kind=INT8
+MinRange=-1
+MaxRange=31
+AutoValue=per_i2s.interrupt0
+
+

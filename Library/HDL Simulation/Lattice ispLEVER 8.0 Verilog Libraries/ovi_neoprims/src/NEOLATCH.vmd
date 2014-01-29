@@ -1,0 +1,145 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Copyright (c) 2005 by Lattice Semiconductor Corporation
+// --------------------------------------------------------------------
+//
+//
+//                     Lattice Semiconductor Corporation
+//                     5555 NE Moore Court
+//                     Hillsboro, OR 97214
+//                     U.S.A.
+//
+//                     TEL: 1-800-Lattice  (USA and Canada)
+//                          1-408-826-6000 (other locations)
+//
+//                     web: http://www.latticesemi.com/
+//                     email: techsupport@latticesemi.com
+//
+// --------------------------------------------------------------------
+//
+// Simulation Library File for NEOPRIMS
+//
+// $Header: /home/dmsys/pvcs/RCSMigTest/rcs/verilog/pkg/versclibs/data/neoprims/RCS/NEOLATCH.vmd,v 1.4 2005/05/19 18:23:52 pradeep Exp $ 
+//
+`timescale 1 ns / 100 ps
+
+`celldefine
+   module NEOLATCH (OUT, IN, CLK, SET, RST);
+
+      output OUT;
+      input  IN, CLK, SET, RST ;
+
+//    This initialization stuff was removed because we went ahead and
+//    modified the verilog writer to add connections for power/ground
+//    if these pins were left unconnected.
+//    wire RRST, RSET;
+
+//    assign RRST = (RST === 1'bz) ? 1'b0 : RST;
+//    assign RSET = (SET === 1'bz) ? 1'b0 : SET;
+
+           // constraint logic for timing checks
+     and     (CHK_R_S, ~RST, ~SET);
+
+      latchsr (OUT, CLK, IN, SET, RST);
+
+   specify
+
+      specparam INDLYLH      = 0:0:0,  INDLYHL      = 0:0:0 ;
+      specparam OUTDLYLH     = 0:0:0,  OUTDLYHL     = 0:0:0 ;
+      specparam CLKDLYLH     = 0:0:0,  CLKDLYHL     = 0:0:0 ;
+      specparam SETDLYLH     = 0:0:0,  SETDLYHL     = 0:0:0 ;
+      specparam RSTDLYLH     = 0:0:0,  RSTDLYHL     = 0:0:0 ;
+      specparam SUINCLK      = 0:0:0,  HOLDINCLK    = 0:0:0 ;
+      specparam HOLDSETCLK   = 0:0:0,  HOLDRSTCLK   = 0:0:0 ;
+      specparam RECSETCLK    = 0:0:0,  RECRSTCLK    = 0:0:0 ;
+      specparam PWCLKHI      = 0:0:0,  PWCLKLO      = 0:0:0 ;
+      specparam PWINHI       = 0:0:0,  PWINLO       = 0:0:0 ;
+      specparam PWRSTHI      = 0:0:0,  PWRSTLO      = 0:0:0 ;
+      specparam PWSETHI      = 0:0:0,  PWSETLO      = 0:0:0 ;
+
+//      These are for data edge specific setup/hold params, which
+//      are unsupported in SDF.
+//    specparam SUINHICLK    = 0:0:0,  SUINLOCLK    = 0:0:0 ;
+//    specparam HOLDINHICLK  = 0:0:0,  HOLDINLOCLK  = 0:0:0 ;
+//    specparam OUTDLYLH     = 0:0:0,  OUTDLYHL     = 0:0:0 ;
+//    specparam CLKDLYLH     = 0:0:0,  CLKDLYHL     = 0:0:0 ;
+//    specparam PWCLKHI      = 0:0:0,  PWCLKLO      = 0:0:0 ;
+//    specparam SETDLYLH     = 0:0:0,  SETDLYHL     = 0:0:0 ;
+//    specparam RECSETCLK    = 0:0:0,  RECRSTCLK    = 0:0:0 ;
+//    specparam HOLDSETHICLK = 0:0:0,  HOLDSETLOCLK = 0:0:0 ;
+//    specparam RSTDLYLH     = 0:0:0,  RSTDLYHL     = 0:0:0 ;
+//    specparam HOLDRSTHICLK = 0:0:0,  HOLDRSTLOCLK = 0:0:0 ;
+//    $setup(posedge IN, posedge CLK, SUINHICLK) ;
+//    $setup(negedge IN, posedge CLK, SUINLOCLK) ;
+//    $hold(posedge CLK, posedge IN, HOLDINHICLK) ;
+//    $hold(posedge CLK, negedge IN, HOLDINLOCLK) ;
+//    $hold(posedge CLK, posedge SET, HOLDSETHICLK) ;
+//    $hold(posedge CLK, negedge SET, HOLDSETLOCLK) ;
+//    $hold(posedge CLK, posedge RST, HOLDRSTHICLK) ;
+//    $hold(posedge CLK, negedge RST, HOLDRSTLOCLK) ;
+
+      (IN => OUT)  = (INDLYLH+OUTDLYLH, INDLYHL+OUTDLYHL);
+      (CLK => OUT) = (CLKDLYLH+OUTDLYLH, CLKDLYLH+OUTDLYHL);
+      (SET => OUT) = (SETDLYLH+OUTDLYLH, SETDLYHL+OUTDLYHL);
+      (RST => OUT) = (RSTDLYLH+OUTDLYLH, RSTDLYHL+OUTDLYHL);
+
+      $setup( IN, negedge CLK &&& CHK_R_S, SUINCLK) ;
+      $setup( SET, negedge CLK, RECSETCLK) ;
+      $setup( RST, negedge CLK, RECRSTCLK) ;
+      $hold(negedge CLK &&& CHK_R_S,  IN, HOLDINCLK) ;
+      $hold(negedge CLK,  SET, HOLDSETCLK) ;
+      $hold(negedge CLK,  RST, HOLDRSTCLK) ;
+
+      $width(posedge CLK, PWCLKHI);
+      $width(negedge CLK, PWCLKLO);
+      $width(posedge IN, PWINHI);
+      $width(negedge IN, PWINLO);
+      $width(posedge RST, PWRSTHI);
+      $width(negedge RST, PWRSTLO);
+      $width(posedge SET, PWSETHI);
+      $width(negedge SET, PWSETLO);
+
+//    $recovery(negedge SET, posedge CLK, RECSETCLK) ;
+//    $recovery(negedge RST, posedge CLK, RECRSTCLK) ;
+
+   endspecify
+   endmodule
+`endcelldefine
+
+`celldefine
+   primitive latchsr (q, clk, d, set, rst);
+
+   output q; reg q;
+   input  clk, d, set, rst;
+
+     table
+
+   //    clk    d   set   rst     q     q+ ;
+
+          1     0    0     0  :   ?  :  0 ;
+          1     1    0     0  :   ?  :  1 ;
+          0     ?    0     0  :   ?  :  - ;
+          x     ?    0     0  :   ?  :  - ;
+          ?     ?    0     1  :   ?  :  0 ;
+          ?     ?    1     0  :   ?  :  1 ;
+ //      (??)   ?    1     0  :   ?  :  1 ;
+ //      (??)   ?    0     1  :   ?  :  0 ;
+         (??)   ?    x     1  :   ?  :  0 ;
+         (??)   ?    1     x  :   ?  :  1 ;
+         (??)   ?    1     1  :   ?  :  x ;
+          ?    (??)  0     0  :   ?  :  - ;
+          ?    (??)  x     0  :   ?  :  - ;
+ //       ?    (??)  1     0  :   ?  :  1 ;
+ //       ?    (??)  0     1  :   ?  :  0 ;
+          ?    (??)  x     1  :   ?  :  0 ;
+          ?    (??)  1     1  :   ?  :  x ;
+          ?    (??)  0     x  :   ?  :  - ;
+          ?    (??)  x     x  :   ?  :  - ;
+          ?    (??)  1     x  :   ?  :  1 ;
+          ?     ?   (?0)   ?  :   ?  :  - ;
+          ?     ?    ?    (?0):   ?  :  - ;
+
+     endtable
+   endprimitive
+`endcelldefine

@@ -1,0 +1,41 @@
+*  
+* Diode Model Produced by Altium Ltd  
+* Date:  7-Apr-2004 
+*  
+* Manufacturer: Agilent  
+* Component Name: 5082-7616  
+*  
+* Parameters derived from information available in data sheet.  
+*
+*                 anode-d
+*                 |  cathode-d
+*                 |  |  cathode-c
+*                 |  |  |  cathode-e
+*                 |  |  |  |  anode-e
+*                 |  |  |  |  |  anode-c
+*                 |  |  |  |  |  |  anode-DP
+*                 |  |  |  |  |  |  |  cathode-DP
+*                 |  |  |  |  |  |  |  |  cathode-b
+*                 |  |  |  |  |  |  |  |  |  cathode-a
+*                 |  |  |  |  |  |  |  |  |  |  anode-a
+*                 |  |  |  |  |  |  |  |  |  |  |  anode-b
+*                 |  |  |  |  |  |  |  |  |  |  |  |  
+.SUBCKT 5082_7616 1  3  4  5  6  7  8  10 11 12 13 14
+
+DA  13 12 d5082_7616
+DB  14 11 d5082_7616
+DC   7  4 d5082_7616
+DD   1  3 d5082_7616
+DE   6  5 d5082_7616
+DDP  8 10 d5082_7616
+
+.MODEL d5082_7616 D
++ (  
++     IS = 1.95991353E-12 
++      N = 2.90687588 
++     RS = 18.38470387 
++     BV = 30
++    IBV = 100u 
++ )  
+
+.ENDS 5082_7616

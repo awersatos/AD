@@ -1,0 +1,889 @@
+V 000042 56 2296 1265381524055 pcsm_16x12
+(_unit pcsm_16x12
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_tchk setuphold 0 255
+			(_port WCLK (posedge))
+			(_port DI ())
+		)
+		(_tchk setuphold 0 256
+			(_port WCLK (posedge))
+			(_port WA ())
+		)
+		(_tchk setuphold 0 257
+			(_port WCLK (posedge))
+			(_port WEN ())
+		)
+		(_tchk setuphold 0 260
+			(_port RCLK (posedge))
+			(_port RA ())
+		)
+		(_tchk setuphold 0 261
+			(_port RCLK (posedge))
+			(_port REN ())
+		)
+		(_modpath parallel positive 0 270
+			(_port RCLK in posedge)
+			(_port DO (_constant \11\) out posedge)
+			(_datain rDO (_constant \11\) in posedge)
+		)
+		(_modpath parallel positive 0 271
+			(_port RCLK in posedge)
+			(_port DO (_constant \10\) out posedge)
+			(_datain rDO (_constant \10\) in posedge)
+		)
+		(_modpath parallel positive 0 272
+			(_port RCLK in posedge)
+			(_port DO (_constant \9\) out posedge)
+			(_datain rDO (_constant \9\) in posedge)
+		)
+		(_modpath parallel positive 0 273
+			(_port RCLK in posedge)
+			(_port DO (_constant \8\) out posedge)
+			(_datain rDO (_constant \8\) in posedge)
+		)
+		(_modpath parallel positive 0 274
+			(_port RCLK in posedge)
+			(_port DO (_constant \7\) out posedge)
+			(_datain rDO (_constant \7\) in posedge)
+		)
+		(_modpath parallel positive 0 275
+			(_port RCLK in posedge)
+			(_port DO (_constant \6\) out posedge)
+			(_datain rDO (_constant \6\) in posedge)
+		)
+		(_modpath parallel positive 0 276
+			(_port RCLK in posedge)
+			(_port DO (_constant \5\) out posedge)
+			(_datain rDO (_constant \5\) in posedge)
+		)
+		(_modpath parallel positive 0 277
+			(_port RCLK in posedge)
+			(_port DO (_constant \4\) out posedge)
+			(_datain rDO (_constant \4\) in posedge)
+		)
+		(_modpath parallel positive 0 278
+			(_port RCLK in posedge)
+			(_port DO (_constant \3\) out posedge)
+			(_datain rDO (_constant \3\) in posedge)
+		)
+		(_modpath parallel positive 0 279
+			(_port RCLK in posedge)
+			(_port DO (_constant \2\) out posedge)
+			(_datain rDO (_constant \2\) in posedge)
+		)
+		(_modpath parallel positive 0 280
+			(_port RCLK in posedge)
+			(_port DO (_constant \1\) out posedge)
+			(_datain rDO (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 281
+			(_port RCLK in posedge)
+			(_port DO (_constant \0\) out posedge)
+			(_datain rDO (_constant \0\) in posedge)
+		)
+	)
+)
+V 000042 56 6636 1265381524232 pcsm_64x40
+(_unit pcsm_64x40
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_tchk setuphold 0 374
+			(_port WCLK (posedge))
+			(_port DI ())
+		)
+		(_tchk setuphold 0 375
+			(_port WCLK (posedge))
+			(_port WA ())
+		)
+		(_tchk setuphold 0 376
+			(_port WCLK (posedge))
+			(_port WEN ())
+		)
+		(_tchk setuphold 0 379
+			(_port RCLK (posedge))
+			(_port RA ())
+		)
+		(_tchk setuphold 0 380
+			(_port RCLK (posedge))
+			(_port REN ())
+		)
+		(_modpath parallel positive 0 391
+			(_port RCLK in posedge)
+			(_port DO (_constant \39\) out posedge)
+			(_datain rDO (_constant \39\) in posedge)
+		)
+		(_modpath parallel positive 0 392
+			(_port RCLK in posedge)
+			(_port DO (_constant \38\) out posedge)
+			(_datain rDO (_constant \38\) in posedge)
+		)
+		(_modpath parallel positive 0 393
+			(_port RCLK in posedge)
+			(_port DO (_constant \37\) out posedge)
+			(_datain rDO (_constant \37\) in posedge)
+		)
+		(_modpath parallel positive 0 394
+			(_port RCLK in posedge)
+			(_port DO (_constant \36\) out posedge)
+			(_datain rDO (_constant \36\) in posedge)
+		)
+		(_modpath parallel positive 0 395
+			(_port RCLK in posedge)
+			(_port DO (_constant \35\) out posedge)
+			(_datain rDO (_constant \35\) in posedge)
+		)
+		(_modpath parallel positive 0 396
+			(_port RCLK in posedge)
+			(_port DO (_constant \34\) out posedge)
+			(_datain rDO (_constant \34\) in posedge)
+		)
+		(_modpath parallel positive 0 397
+			(_port RCLK in posedge)
+			(_port DO (_constant \33\) out posedge)
+			(_datain rDO (_constant \33\) in posedge)
+		)
+		(_modpath parallel positive 0 398
+			(_port RCLK in posedge)
+			(_port DO (_constant \32\) out posedge)
+			(_datain rDO (_constant \32\) in posedge)
+		)
+		(_modpath parallel positive 0 399
+			(_port RCLK in posedge)
+			(_port DO (_constant \31\) out posedge)
+			(_datain rDO (_constant \31\) in posedge)
+		)
+		(_modpath parallel positive 0 400
+			(_port RCLK in posedge)
+			(_port DO (_constant \30\) out posedge)
+			(_datain rDO (_constant \30\) in posedge)
+		)
+		(_modpath parallel positive 0 401
+			(_port RCLK in posedge)
+			(_port DO (_constant \29\) out posedge)
+			(_datain rDO (_constant \29\) in posedge)
+		)
+		(_modpath parallel positive 0 402
+			(_port RCLK in posedge)
+			(_port DO (_constant \28\) out posedge)
+			(_datain rDO (_constant \28\) in posedge)
+		)
+		(_modpath parallel positive 0 403
+			(_port RCLK in posedge)
+			(_port DO (_constant \27\) out posedge)
+			(_datain rDO (_constant \27\) in posedge)
+		)
+		(_modpath parallel positive 0 404
+			(_port RCLK in posedge)
+			(_port DO (_constant \26\) out posedge)
+			(_datain rDO (_constant \26\) in posedge)
+		)
+		(_modpath parallel positive 0 405
+			(_port RCLK in posedge)
+			(_port DO (_constant \25\) out posedge)
+			(_datain rDO (_constant \25\) in posedge)
+		)
+		(_modpath parallel positive 0 406
+			(_port RCLK in posedge)
+			(_port DO (_constant \24\) out posedge)
+			(_datain rDO (_constant \24\) in posedge)
+		)
+		(_modpath parallel positive 0 407
+			(_port RCLK in posedge)
+			(_port DO (_constant \23\) out posedge)
+			(_datain rDO (_constant \23\) in posedge)
+		)
+		(_modpath parallel positive 0 408
+			(_port RCLK in posedge)
+			(_port DO (_constant \22\) out posedge)
+			(_datain rDO (_constant \22\) in posedge)
+		)
+		(_modpath parallel positive 0 409
+			(_port RCLK in posedge)
+			(_port DO (_constant \21\) out posedge)
+			(_datain rDO (_constant \21\) in posedge)
+		)
+		(_modpath parallel positive 0 410
+			(_port RCLK in posedge)
+			(_port DO (_constant \20\) out posedge)
+			(_datain rDO (_constant \20\) in posedge)
+		)
+		(_modpath parallel positive 0 411
+			(_port RCLK in posedge)
+			(_port DO (_constant \19\) out posedge)
+			(_datain rDO (_constant \19\) in posedge)
+		)
+		(_modpath parallel positive 0 412
+			(_port RCLK in posedge)
+			(_port DO (_constant \18\) out posedge)
+			(_datain rDO (_constant \18\) in posedge)
+		)
+		(_modpath parallel positive 0 413
+			(_port RCLK in posedge)
+			(_port DO (_constant \17\) out posedge)
+			(_datain rDO (_constant \17\) in posedge)
+		)
+		(_modpath parallel positive 0 414
+			(_port RCLK in posedge)
+			(_port DO (_constant \16\) out posedge)
+			(_datain rDO (_constant \16\) in posedge)
+		)
+		(_modpath parallel positive 0 415
+			(_port RCLK in posedge)
+			(_port DO (_constant \15\) out posedge)
+			(_datain rDO (_constant \15\) in posedge)
+		)
+		(_modpath parallel positive 0 416
+			(_port RCLK in posedge)
+			(_port DO (_constant \14\) out posedge)
+			(_datain rDO (_constant \14\) in posedge)
+		)
+		(_modpath parallel positive 0 417
+			(_port RCLK in posedge)
+			(_port DO (_constant \13\) out posedge)
+			(_datain rDO (_constant \13\) in posedge)
+		)
+		(_modpath parallel positive 0 418
+			(_port RCLK in posedge)
+			(_port DO (_constant \12\) out posedge)
+			(_datain rDO (_constant \12\) in posedge)
+		)
+		(_modpath parallel positive 0 419
+			(_port RCLK in posedge)
+			(_port DO (_constant \11\) out posedge)
+			(_datain rDO (_constant \11\) in posedge)
+		)
+		(_modpath parallel positive 0 420
+			(_port RCLK in posedge)
+			(_port DO (_constant \10\) out posedge)
+			(_datain rDO (_constant \10\) in posedge)
+		)
+		(_modpath parallel positive 0 421
+			(_port RCLK in posedge)
+			(_port DO (_constant \9\) out posedge)
+			(_datain rDO (_constant \9\) in posedge)
+		)
+		(_modpath parallel positive 0 422
+			(_port RCLK in posedge)
+			(_port DO (_constant \8\) out posedge)
+			(_datain rDO (_constant \8\) in posedge)
+		)
+		(_modpath parallel positive 0 423
+			(_port RCLK in posedge)
+			(_port DO (_constant \7\) out posedge)
+			(_datain rDO (_constant \7\) in posedge)
+		)
+		(_modpath parallel positive 0 424
+			(_port RCLK in posedge)
+			(_port DO (_constant \6\) out posedge)
+			(_datain rDO (_constant \6\) in posedge)
+		)
+		(_modpath parallel positive 0 425
+			(_port RCLK in posedge)
+			(_port DO (_constant \5\) out posedge)
+			(_datain rDO (_constant \5\) in posedge)
+		)
+		(_modpath parallel positive 0 426
+			(_port RCLK in posedge)
+			(_port DO (_constant \4\) out posedge)
+			(_datain rDO (_constant \4\) in posedge)
+		)
+		(_modpath parallel positive 0 427
+			(_port RCLK in posedge)
+			(_port DO (_constant \3\) out posedge)
+			(_datain rDO (_constant \3\) in posedge)
+		)
+		(_modpath parallel positive 0 428
+			(_port RCLK in posedge)
+			(_port DO (_constant \2\) out posedge)
+			(_datain rDO (_constant \2\) in posedge)
+		)
+		(_modpath parallel positive 0 429
+			(_port RCLK in posedge)
+			(_port DO (_constant \1\) out posedge)
+			(_datain rDO (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 430
+			(_port RCLK in posedge)
+			(_port DO (_constant \0\) out posedge)
+			(_datain rDO (_constant \0\) in posedge)
+		)
+	)
+)
+V 000043 56 448 1265381524310 mux21x4v1mce
+(_unit mux21x4v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port D1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 25
+			(_port D0 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 27
+			(_code  1 NT*D0*AN*D1)
+			(_port SD in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 29
+			(_code  2 D0*AN*NT*D1)
+			(_port SD in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265381524322 sbnx4v1mce
+(_unit sbnx4v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000046 56 1519 1265381524352 dffprqnx4v1mce
+(_unit dffprqnx4v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_tchk setuphold 0 40
+			(_port delayed_CK (posedge))
+			(_port delayed_D (posedge) (_code  1 CDN*EQ*1))
+			(_register (VT))
+		)
+		(_tchk setuphold 0 41
+			(_port delayed_CK (posedge))
+			(_port delayed_D (negedge) (_code  2 CDN*EQ*1))
+			(_register (VT))
+		)
+		(_tchk recovery 0 43
+			(_port \10 \ (posedge))
+			(_port delayed_CK (posedge) (_code  3 D*EQ*1))
+			(_register (VT))
+		)
+		(_tchk hold 0 44
+			(_port delayed_CK (posedge))
+			(_port \10 \ (posedge) (_code  4 D*EQ*1))
+			(_register (VT))
+		)
+		(_tchk width 0 46
+			(_port delayed_CK (posedge) (_code  5 CHK_CK_PW*EQ*1))
+			(_register (VT))
+		)
+		(_tchk width 0 47
+			(_port delayed_CK (negedge) (_code  6 CHK_CK_PW*EQ*1))
+			(_register (VT))
+		)
+		(_tchk width 0 48
+			(_port \10 \ (negedge) (_code  7 CHK_CDN_PW*EQ*1))
+			(_register (VT))
+		)
+		(_modpath parallel positive 0 58
+			(_port CK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+		(_modpath parallel negative 0 59
+			(_port CK in posedge)
+			(_port QN out posedge)
+			(_datain D in posedge)
+		)
+		(_modpath parallel positive 0 60
+			(_code  8 NT*CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 61
+			(_code  9 NT*CK)
+			(_port CDN in )
+			(_port QN out )
+		)
+		(_modpath parallel positive 0 62
+			(_code  10 CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 63
+			(_code  11 CK)
+			(_port CDN in )
+			(_port QN out )
+		)
+	)
+)
+V 000043 56 170 1265381524357 delc2x2v1mce
+(_unit delc2x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 34
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265381524362 invx4v1mce
+(_unit invx4v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265381524375 sbnx2v1mce
+(_unit sbnx2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000043 56 170 1265381524384 delc3x2v1mce
+(_unit delc3x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 34
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000043 56 170 1265381524393 delc1x2v1mce
+(_unit delc1x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 34
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000045 56 4426 1265381524402 aoi222x2v1mce
+(_unit aoi222x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 27
+			(_code  1 NT*B1*AN*NT*B2*AN*NT*C1*AN*NT*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 29
+			(_code  2 NT*B1*AN*NT*B2*AN*NT*C1*AN*NT*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 31
+			(_code  3 B1*AN*NT*B2*AN*C1*AN*NT*C2*OR*NT*B1*AN*B2*AN*NT*C1*AN*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 33
+			(_code  4 B1*AN*NT*B2*AN*C1*AN*NT*C2*OR*NT*B1*AN*B2*AN*NT*C1*AN*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 35
+			(_code  5 NT*B1*AN*B2*AN*C1*AN*NT*C2*OR*B1*AN*NT*B2*AN*NT*C1*AN*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 37
+			(_code  6 NT*B1*AN*B2*AN*C1*AN*NT*C2*OR*B1*AN*NT*B2*AN*NT*C1*AN*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 39
+			(_code  7 B1*AN*NT*B2*AN*NT*C1*AN*NT*C2*OR*NT*B1*AN*B2*AN*NT*C1*AN*NT*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 41
+			(_code  8 B1*AN*NT*B2*AN*NT*C1*AN*NT*C2*OR*NT*B1*AN*B2*AN*NT*C1*AN*NT*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 43
+			(_code  9 NT*B1*AN*NT*B2*AN*C1*AN*NT*C2*OR*NT*B1*AN*NT*B2*AN*NT*C1*AN*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 45
+			(_code  10 NT*B1*AN*NT*B2*AN*C1*AN*NT*C2*OR*NT*B1*AN*NT*B2*AN*NT*C1*AN*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 47
+			(_code  11 NT*A1*AN*NT*A2*AN*NT*C1*AN*NT*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 49
+			(_code  12 NT*A1*AN*NT*A2*AN*NT*C1*AN*NT*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 51
+			(_code  13 A1*AN*NT*A2*AN*C1*AN*NT*C2*OR*NT*A1*AN*A2*AN*NT*C1*AN*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 53
+			(_code  14 A1*AN*NT*A2*AN*C1*AN*NT*C2*OR*NT*A1*AN*A2*AN*NT*C1*AN*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 55
+			(_code  15 NT*A1*AN*A2*AN*C1*AN*NT*C2*OR*A1*AN*NT*A2*AN*NT*C1*AN*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 57
+			(_code  16 NT*A1*AN*A2*AN*C1*AN*NT*C2*OR*A1*AN*NT*A2*AN*NT*C1*AN*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 59
+			(_code  17 NT*A1*AN*NT*A2*AN*C1*AN*NT*C2*OR*NT*A1*AN*NT*A2*AN*NT*C1*AN*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 61
+			(_code  18 NT*A1*AN*NT*A2*AN*C1*AN*NT*C2*OR*NT*A1*AN*NT*A2*AN*NT*C1*AN*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 63
+			(_code  19 A1*AN*NT*A2*AN*NT*C1*AN*NT*C2*OR*NT*A1*AN*A2*AN*NT*C1*AN*NT*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 65
+			(_code  20 A1*AN*NT*A2*AN*NT*C1*AN*NT*C2*OR*NT*A1*AN*A2*AN*NT*C1*AN*NT*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 67
+			(_code  21 NT*A1*AN*NT*A2*AN*NT*B1*AN*NT*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 69
+			(_code  22 NT*A1*AN*NT*A2*AN*NT*B1*AN*NT*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 71
+			(_code  23 A1*AN*NT*A2*AN*B1*AN*NT*B2*OR*NT*A1*AN*A2*AN*NT*B1*AN*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 73
+			(_code  24 A1*AN*NT*A2*AN*B1*AN*NT*B2*OR*NT*A1*AN*A2*AN*NT*B1*AN*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 75
+			(_code  25 NT*A1*AN*A2*AN*B1*AN*NT*B2*OR*A1*AN*NT*A2*AN*NT*B1*AN*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 77
+			(_code  26 NT*A1*AN*A2*AN*B1*AN*NT*B2*OR*A1*AN*NT*A2*AN*NT*B1*AN*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 79
+			(_code  27 NT*A1*AN*NT*A2*AN*B1*AN*NT*B2*OR*NT*A1*AN*NT*A2*AN*NT*B1*AN*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 81
+			(_code  28 NT*A1*AN*NT*A2*AN*B1*AN*NT*B2*OR*NT*A1*AN*NT*A2*AN*NT*B1*AN*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 83
+			(_code  29 A1*AN*NT*A2*AN*NT*B1*AN*NT*B2*OR*NT*A1*AN*A2*AN*NT*B1*AN*NT*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 85
+			(_code  30 A1*AN*NT*A2*AN*NT*B1*AN*NT*B2*OR*NT*A1*AN*A2*AN*NT*B1*AN*NT*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+	)
+)
+V 000046 56 1257 1265381524411 rsffrqnx2v1mce
+(_unit rsffrqnx2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_tchk width 0 35
+			(_port S (posedge) (_code  1 CHK_S_PW*EQ*1))
+			(_register (VT))
+		)
+		(_tchk width 0 36
+			(_port R (posedge) (_code  2 CHK_R_PW*EQ*1))
+			(_register (VT))
+		)
+		(_tchk width 0 37
+			(_port CD (posedge) (_code  3 CHK_CD_PW*EQ*1))
+			(_register (VT))
+		)
+		(_tchk hold 0 39
+			(_port S (negedge))
+			(_port R (negedge) (_code  4 CD*EQ*0))
+			(_register (VT))
+		)
+		(_tchk hold 0 40
+			(_port R (negedge))
+			(_port S (negedge) (_code  5 CD*EQ*0))
+			(_register (VT))
+		)
+		(_tchk hold 0 41
+			(_port S (negedge))
+			(_port CD (negedge) (_code  6 R*EQ*0))
+			(_register (VT))
+		)
+		(_tchk hold 0 42
+			(_port CD (negedge))
+			(_port S (negedge) (_code  7 R*EQ*0))
+			(_register (VT))
+		)
+		(_modpath parallel positive 0 52
+			(_port S in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 53
+			(_port S in )
+			(_port QN out )
+		)
+		(_modpath parallel positive 0 54
+			(_port R in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 55
+			(_port R in )
+			(_port QN out )
+		)
+		(_modpath parallel positive 0 56
+			(_port CD in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 57
+			(_port CD in )
+			(_port QN out )
+		)
+	)
+)
+V 000045 56 172 1265381524420 delc0p5x2v1mce
+(_unit delc0p5x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 34
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 242 1265381524445 or2x4v1mce
+(_unit or2x4v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000042 56 169 1265381524450 sbnx16v1mce
+(_unit sbnx16v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 242 1265381524455 or2x1v1mce
+(_unit or2x1v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 242 1265381524464 or2x2v1mce
+(_unit or2x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000042 56 2916 1265381524637 pcsm_64x16
+(_unit pcsm_64x16
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_tchk setuphold 0 369
+			(_port WCLK (posedge))
+			(_port DI ())
+		)
+		(_tchk setuphold 0 370
+			(_port WCLK (posedge))
+			(_port WA ())
+		)
+		(_tchk setuphold 0 371
+			(_port WCLK (posedge))
+			(_port WEN ())
+		)
+		(_tchk setuphold 0 374
+			(_port RCLK (posedge))
+			(_port RA ())
+		)
+		(_tchk setuphold 0 375
+			(_port RCLK (posedge))
+			(_port REN ())
+		)
+		(_modpath parallel positive 0 384
+			(_port RCLK in posedge)
+			(_port DO (_constant \15\) out posedge)
+			(_datain rDO (_constant \15\) in posedge)
+		)
+		(_modpath parallel positive 0 385
+			(_port RCLK in posedge)
+			(_port DO (_constant \14\) out posedge)
+			(_datain rDO (_constant \14\) in posedge)
+		)
+		(_modpath parallel positive 0 386
+			(_port RCLK in posedge)
+			(_port DO (_constant \13\) out posedge)
+			(_datain rDO (_constant \13\) in posedge)
+		)
+		(_modpath parallel positive 0 387
+			(_port RCLK in posedge)
+			(_port DO (_constant \12\) out posedge)
+			(_datain rDO (_constant \12\) in posedge)
+		)
+		(_modpath parallel positive 0 388
+			(_port RCLK in posedge)
+			(_port DO (_constant \11\) out posedge)
+			(_datain rDO (_constant \11\) in posedge)
+		)
+		(_modpath parallel positive 0 389
+			(_port RCLK in posedge)
+			(_port DO (_constant \10\) out posedge)
+			(_datain rDO (_constant \10\) in posedge)
+		)
+		(_modpath parallel positive 0 390
+			(_port RCLK in posedge)
+			(_port DO (_constant \9\) out posedge)
+			(_datain rDO (_constant \9\) in posedge)
+		)
+		(_modpath parallel positive 0 391
+			(_port RCLK in posedge)
+			(_port DO (_constant \8\) out posedge)
+			(_datain rDO (_constant \8\) in posedge)
+		)
+		(_modpath parallel positive 0 392
+			(_port RCLK in posedge)
+			(_port DO (_constant \7\) out posedge)
+			(_datain rDO (_constant \7\) in posedge)
+		)
+		(_modpath parallel positive 0 393
+			(_port RCLK in posedge)
+			(_port DO (_constant \6\) out posedge)
+			(_datain rDO (_constant \6\) in posedge)
+		)
+		(_modpath parallel positive 0 394
+			(_port RCLK in posedge)
+			(_port DO (_constant \5\) out posedge)
+			(_datain rDO (_constant \5\) in posedge)
+		)
+		(_modpath parallel positive 0 395
+			(_port RCLK in posedge)
+			(_port DO (_constant \4\) out posedge)
+			(_datain rDO (_constant \4\) in posedge)
+		)
+		(_modpath parallel positive 0 396
+			(_port RCLK in posedge)
+			(_port DO (_constant \3\) out posedge)
+			(_datain rDO (_constant \3\) in posedge)
+		)
+		(_modpath parallel positive 0 397
+			(_port RCLK in posedge)
+			(_port DO (_constant \2\) out posedge)
+			(_datain rDO (_constant \2\) in posedge)
+		)
+		(_modpath parallel positive 0 398
+			(_port RCLK in posedge)
+			(_port DO (_constant \1\) out posedge)
+			(_datain rDO (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 399
+			(_port RCLK in posedge)
+			(_port DO (_constant \0\) out posedge)
+			(_datain rDO (_constant \0\) in posedge)
+		)
+	)
+)
+V 000041 56 330 1265381524946 b2top_quad
+(_unit b2top_quad
+	(_specify
+		(_tchk setuphold 0 1422
+			(_port tck0 (posedge))
+			(_port td0 ())
+		)
+		(_tchk setuphold 0 1423
+			(_port tck1 (posedge))
+			(_port td1 ())
+		)
+		(_tchk setuphold 0 1424
+			(_port tck2 (posedge))
+			(_port td2 ())
+		)
+		(_tchk setuphold 0 1425
+			(_port tck3 (posedge))
+			(_port td3 ())
+		)
+	)
+)

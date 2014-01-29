@@ -1,0 +1,97 @@
+[Plugin]
+Name=drv_spdif
+Description=SPDIF Master Controller Driver
+Caption=SPDIF Driver
+SourceDir=platform\fpga\drivers\spdif\src
+Implement=drv_spdif
+MinInstances=1
+Bitmap=drv_spdif.bmp
+UserTypeHeaderFile=drv_spdif.h
+
+[Available_If0]
+kind=PLUGIN
+Object=per_spdif
+Condition=EQ
+
+[Instance]
+Require0=per_spdif
+
+[Instance_Option0]
+Name=TX_MODE
+GUIName=Output mode
+Description=Stereo or mono mode for output
+Kind=ENUM
+Type=UINT8
+Enum0=Stereo
+EnumGUI0=Stereo
+EnumDescription0=Provide stereo samples, both channels are used
+EnumValue0=SPDIF_OUTPUTMODE_STEREO
+Enum1=Mono
+EnumGUI1=Mono marked
+EnumDescription1=Provide mono samples, secondary channel marked invalid
+EnumValue1=SPDIF_OUTPUTMODE_MONO
+Enum2=MonoDup
+EnumGUI2=Mono duplicated
+EnumDescription2=Provide mono samples, primary channel copied into secondary channel
+EnumValue2=SPDIF_OUTPUTMODE_MONODUP
+DefaultValue=Stereo
+
+[Instance_Option1]
+Name=TX_BUFFER
+GUIName=Transmitter buffer size
+Description=Transmitter software buffer size (words). Specify 0 to use the hardware transmit buffer only with interrupt disabled. 
+Kind=BUFFER
+Type=INT32
+DefaultValue=0
+
+[Instance_Option2]
+Name=TX_WATERMARK
+GUIName=Transmitter watermark
+Description=Number of samples in the transmitter's hardware buffer serving as the threshold for interrupt generation.
+Kind=UINT16
+DefaultValue=8
+
+[Instance_Option3]
+Name=RX_BUFFER
+GUIName=Receiver buffer size
+Description=Receiver software buffer size (words). Specify 0 to use the hardware receive buffer only with interrupt disabled. 
+Kind=BUFFER
+Type=INT32
+DefaultValue=0
+
+[Instance_Option4]
+Name=RX_WATERMARK
+GUIName=Receiver watermark
+Description=Number of free slots in the receiver's hardware buffer serving as the threshold for interrupt generation.
+Kind=UINT16
+DefaultValue=8
+
+[Instance_Option5]
+Name=SAMPLERATE
+GUIName=Sample rate
+Description=Default sample rate of the output stream
+Kind=ENUM
+Type=UINT32
+DefaultValue=44kHz
+Enum0=32kHz
+EnumValue0=32000
+EnumGUI0=32kHz
+EnumDescription0=Transmitter set to 32kHz sampling frequency 
+Enum1=44kHz
+EnumValue1=44100
+EnumGUI1=44.1kHz
+EnumDescription1=Transmitter set to 44.1kHz sampling frequency 
+Enum2=48kHz
+EnumValue2=48000
+EnumGUI2=48kHz
+EnumDescription2=Transmitter set to 48kHz sampling frequency 
+
+[Instance_Option6]
+name=interrupt_value
+GUIName=Interrupt value
+Description=Inherited from hardware wrapper. If the interrupt is not connected (value is -1) the software buffer sizes must be 0. 
+NoGenerate=True
+Kind=INT8
+MinRange=-1
+MaxRange=31
+AutoValue=per_spdif.interrupt0

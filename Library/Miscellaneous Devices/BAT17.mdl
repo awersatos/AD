@@ -1,0 +1,5 @@
+*****************************************************************
+* BAT17x Series Diode Model
+.MODEL D188 D(IS=4n RS=3.3 N=1.03 XTI=2 EG=.65
++ CJO=415f M=.156 VJ=.115 FC=.5 BV=12 IBV=5U TT=25p)
+* 07.09.95 SIEMENS PD1 KURTH

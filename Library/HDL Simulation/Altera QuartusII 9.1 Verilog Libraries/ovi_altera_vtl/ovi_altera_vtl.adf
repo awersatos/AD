@@ -1,0 +1,35 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_altera_vtl
+
+[Library]
+ovi_altera_vtl=.\ovi_altera_vtl.lib
+
+[$LibMap$]
+ovi_altera_vtl=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/alt_max2.vo=-1
+/ovi_altera_vtl.opt=-1
+/update_ovi_altera_vtl.do=-1
+
+[Files.Data]
+.\src\alt_max2.vo=Verilog Source Code
+.\src\ovi_altera_vtl.opt=Text File
+.\src\update_ovi_altera_vtl.do=Macro
+

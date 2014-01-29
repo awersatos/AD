@@ -1,0 +1,669 @@
+V 000043 56 973 1260919123131 stratix_dffe
+(_unit stratix_dffe
+	(_specify
+		(_specparam TREG integer 0)
+		(_specparam TREN integer 0)
+		(_specparam TRSU integer 0)
+		(_specparam TRH integer 0)
+		(_specparam TRPR integer 0)
+		(_specparam TRCL integer 0)
+		(_tchk setup 0 206
+			(_port D ())
+			(_port CLK (posedge) (_code  1 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 207
+			(_port CLK (posedge) (_code  2 legal))
+			(_port D ())
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 208
+			(_port ENA ())
+			(_port CLK (posedge) (_code  3 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 209
+			(_port CLK (posedge) (_code  4 legal))
+			(_port ENA ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 211
+			(_port CLRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 212
+			(_port PRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 213
+			(_port CLK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+	)
+)
+V 000044 56 605 1260919123136 stratix_latch
+(_unit stratix_latch
+	(_specify
+		(_tchk setup 0 229
+			(_port D ())
+			(_port ENA (posedge))
+		)
+		(_tchk hold 0 230
+			(_port ENA (negedge))
+			(_port D ())
+		)
+		(_modpath parallel unknown 0 232
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 233
+			(_port ENA in posedge)
+			(_port Q out posedge)
+			(_datain q_out in posedge)
+		)
+		(_modpath parallel positive 0 234
+			(_port PRE in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+		(_modpath parallel positive 0 235
+			(_port CLR in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+	)
+)
+V 000044 56 262 1260919123141 stratix_mux21
+(_unit stratix_mux21
+	(_specify
+		(_modpath parallel unknown 0 293
+			(_port A in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 294
+			(_port B in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 295
+			(_port S in )
+			(_port MO out )
+		)
+	)
+)
+V 000044 56 527 1260919123146 stratix_mux41
+(_unit stratix_mux41
+	(_specify
+		(_modpath parallel unknown 0 330
+			(_port IN0 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 331
+			(_port IN1 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 332
+			(_port IN2 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 333
+			(_port IN3 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 334
+			(_port S (_constant \1\) in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 335
+			(_port S (_constant \0\) in )
+			(_port MO out )
+		)
+	)
+)
+V 000043 56 112 1260919123151 stratix_and1
+(_unit stratix_and1
+	(_specify
+		(_modpath parallel unknown 0 351
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000044 56 113 1260919123156 stratix_and16
+(_unit stratix_and16
+	(_specify
+		(_modpath parallel unknown 0 364
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000052 56 2736 1260919123177 stratix_asynch_lcell
+(_unit stratix_asynch_lcell
+	(_specify
+		(_modpath parallel unknown 0 526
+			(_port dataa in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 527
+			(_port datab in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 528
+			(_port datac in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 529
+			(_port datad in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 530
+			(_port cin in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 531
+			(_port cin0 in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 532
+			(_port cin1 in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 533
+			(_port inverta in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 535
+			(_code  6 qfbk_mode*EQ*1)
+			(_port qfbkin in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 537
+			(_port dataa in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 538
+			(_port datab in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 539
+			(_port cin in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 540
+			(_port cin0 in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 541
+			(_port cin1 in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 542
+			(_port inverta in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 544
+			(_port dataa in )
+			(_port cout0 out )
+		)
+		(_modpath parallel unknown 0 545
+			(_port datab in )
+			(_port cout0 out )
+		)
+		(_modpath parallel unknown 0 546
+			(_port cin0 in )
+			(_port cout0 out )
+		)
+		(_modpath parallel unknown 0 547
+			(_port inverta in )
+			(_port cout0 out )
+		)
+		(_modpath parallel unknown 0 549
+			(_port dataa in )
+			(_port cout1 out )
+		)
+		(_modpath parallel unknown 0 550
+			(_port datab in )
+			(_port cout1 out )
+		)
+		(_modpath parallel unknown 0 551
+			(_port cin1 in )
+			(_port cout1 out )
+		)
+		(_modpath parallel unknown 0 552
+			(_port inverta in )
+			(_port cout1 out )
+		)
+		(_modpath parallel unknown 0 554
+			(_port dataa in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 555
+			(_port datab in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 556
+			(_port datac in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 557
+			(_port datad in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 558
+			(_port cin in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 559
+			(_port cin0 in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 560
+			(_port cin1 in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 561
+			(_port inverta in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 563
+			(_code  7 qfbk_mode*EQ*1)
+			(_port qfbkin in )
+			(_port regin out )
+		)
+	)
+)
+V 000054 56 1648 1260919123182 stratix_lcell_register
+(_unit stratix_lcell_register
+	(_specify
+		(_tchk setuphold 0 885
+			(_port clk (posedge) (_code  6 reset))
+			(_port regcascin ())
+			(_register (regcascin_viol))
+		)
+		(_tchk setuphold 0 886
+			(_port clk (posedge) (_code  7 nosload))
+			(_port datain ())
+			(_register (datain_viol))
+		)
+		(_tchk setuphold 0 887
+			(_port clk (posedge) (_code  8 reset))
+			(_port datac ())
+			(_register (datac_viol))
+		)
+		(_tchk setuphold 0 888
+			(_port clk (posedge) (_code  9 reset))
+			(_port sclr ())
+			(_register (sclr_viol))
+		)
+		(_tchk setuphold 0 889
+			(_port clk (posedge) (_code  10 reset))
+			(_port sload ())
+			(_register (sload_viol))
+		)
+		(_tchk setuphold 0 890
+			(_port clk (posedge) (_code  11 reset))
+			(_port ena ())
+			(_register (ena_viol))
+		)
+		(_modpath parallel positive 0 892
+			(_port clk in posedge)
+			(_port regout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel positive 0 893
+			(_port aclr in posedge)
+			(_port regout out posedge)
+		)
+		(_modpath parallel positive 0 894
+			(_port aload in posedge)
+			(_port regout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel unknown 0 895
+			(_port datac in )
+			(_port regout out )
+		)
+		(_modpath parallel positive 0 896
+			(_port clk in posedge)
+			(_port qfbkout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel positive 0 897
+			(_port aclr in posedge)
+			(_port qfbkout out posedge)
+		)
+		(_modpath parallel positive 0 898
+			(_port aload in posedge)
+			(_port qfbkout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel unknown 0 899
+			(_port datac in )
+			(_port qfbkout out )
+		)
+	)
+)
+V 000048 56 703 1260919123191 stratix_asynch_io
+(_unit stratix_asynch_io
+	(_specify
+		(_modpath parallel unknown 0 1221
+			(_port padio in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 1222
+			(_port padio in )
+			(_port dqsundelayedout out )
+		)
+		(_modpath parallel unknown 0 1223
+			(_port datain in )
+			(_port padio out )
+		)
+		(_modpath parallel positive 0 1224
+			(_port oe in posedge)
+			(_port padio out posedge)
+			(_datain padio_tmp in posedge)
+		)
+		(_modpath parallel positive 0 1225
+			(_port oe in negedge)
+			(_port padio out negedge)
+		)
+		(_modpath parallel unknown 0 1226
+			(_port ddioregin in )
+			(_port ddioregout out )
+		)
+		(_modpath parallel unknown 0 1227
+			(_port regin in )
+			(_port regout out )
+		)
+	)
+)
+V 000050 56 804 1260919123196 stratix_io_register
+(_unit stratix_io_register
+	(_specify
+		(_tchk setuphold 0 1448
+			(_port clk (posedge) (_code  6 reset))
+			(_port datain ())
+			(_register (datain_viol))
+		)
+		(_tchk setuphold 0 1449
+			(_port clk (posedge) (_code  7 reset))
+			(_port sreset ())
+			(_register (sreset_viol))
+		)
+		(_tchk setuphold 0 1450
+			(_port clk (posedge) (_code  8 reset))
+			(_port ena ())
+			(_register (ena_viol))
+		)
+		(_modpath parallel positive 0 1452
+			(_port clk in posedge)
+			(_port regout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel positive 0 1455
+			(_code  9 is_areset_clear*EQ*1)
+			(_port areset in posedge)
+			(_port regout out posedge)
+		)
+		(_modpath parallel positive 0 1457
+			(_code  10 is_areset_preset*EQ*1)
+			(_port areset in posedge)
+			(_port regout out posedge)
+		)
+	)
+)
+V 000052 56 1101 1260919123205 stratix_mac_register
+(_unit stratix_mac_register
+	(_specify
+		(_specparam TSU integer 0)
+		(_specparam TH integer 0)
+		(_specparam TCO integer 0)
+		(_specparam TCLR integer 0)
+		(_specparam TCLR_MIN_PW integer 0)
+		(_specparam TPRE integer 0)
+		(_specparam TPRE_MIN_PW integer 0)
+		(_specparam TCLK_MIN_PW integer 0)
+		(_specparam TCE_MIN_PW integer 0)
+		(_specparam TCLKL integer 0)
+		(_specparam TCLKH integer 0)
+		(_tchk setup 0 1993
+			(_port data ())
+			(_port clk (posedge) (_code  7 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1994
+			(_port clk (posedge) (_code  8 reset))
+			(_port data ())
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 1995
+			(_port ena ())
+			(_port clk (posedge) (_code  9 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1996
+			(_port clk (posedge) (_code  10 reset))
+			(_port ena ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 1998
+			(_port aclr in posedge)
+			(_port dataout out posedge)
+		)
+		(_modpath parallel positive 0 1999
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+	)
+)
+V 000056 56 545 1260919123210 stratix_mac_mult_internal
+(_unit stratix_mac_mult_internal
+	(_specify
+		(_modpath full unknown 0 2067
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2068
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath parallel unknown 0 2069
+			(_port dataa in )
+			(_port scanouta out )
+		)
+		(_modpath parallel unknown 0 2070
+			(_port datab in )
+			(_port scanoutb out )
+		)
+		(_modpath full unknown 0 2071
+			(_port signa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2072
+			(_port signb in )
+			(_port dataout out )
+		)
+	)
+)
+V 000056 56 1303 1260919123219 stratix_mac_out_internal
+(_unit stratix_mac_out_internal
+	(_specify
+		(_modpath full unknown 0 2351
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2352
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2353
+			(_port datac in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2354
+			(_port datad in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2355
+			(_port signx in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2356
+			(_port signy in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2357
+			(_port addnsub0 in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2358
+			(_port addnsub1 in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2359
+			(_port zeroacc in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 2360
+			(_port dataa in )
+			(_port accoverflow out )
+		)
+		(_modpath full unknown 0 2361
+			(_port signx in )
+			(_port accoverflow out )
+		)
+		(_modpath full unknown 0 2362
+			(_port signy in )
+			(_port accoverflow out )
+		)
+		(_modpath full unknown 0 2363
+			(_port addnsub0 in )
+			(_port accoverflow out )
+		)
+		(_modpath full unknown 0 2364
+			(_port addnsub1 in )
+			(_port accoverflow out )
+		)
+		(_modpath full unknown 0 2365
+			(_port zeroacc in )
+			(_port accoverflow out )
+		)
+	)
+)
+V 000058 56 245 1260919123228 stratix_ram_pulse_generator
+(_unit stratix_ram_pulse_generator
+	(_specify
+		(_specparam t_decode integer 0)
+		(_specparam t_access integer 0)
+		(_modpath parallel positive 0 2917
+			(_port clk in posedge)
+			(_port pulse out posedge)
+			(_datain state in posedge)
+		)
+	)
+)
+V 000051 56 952 1260919123233 stratix_ram_register
+(_unit stratix_ram_register
+	(_specify
+		(_tchk setup 0 2988
+			(_port d ())
+			(_port clk (posedge) (_code  6 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 2989
+			(_port aclr ())
+			(_port clk (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 2990
+			(_port ena ())
+			(_port clk (posedge) (_code  7 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 2991
+			(_port clk (posedge) (_code  8 reset))
+			(_port d ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 2992
+			(_port clk (posedge))
+			(_port aclr ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 2993
+			(_port clk (posedge) (_code  9 reset))
+			(_port ena ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 2994
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_reg in posedge)
+		)
+		(_modpath parallel positive 0 2995
+			(_port aclr in posedge)
+			(_port q out posedge)
+			(_datain q_reg in posedge)
+		)
+	)
+)
+V 000064 56 267 1260919123242 stratix_lvds_tx_parallel_register
+(_unit stratix_lvds_tx_parallel_register
+	(_specify
+		(_modpath parallel positive 0 3930
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+		(_tchk setuphold 0 3932
+			(_port clk (posedge))
+			(_port datain ())
+		)
+	)
+)
+V 000056 56 438 1260919123247 stratix_lvds_tx_out_block
+(_unit stratix_lvds_tx_out_block
+	(_specify
+		(_modpath parallel unknown 0 4021
+			(_port datain in )
+			(_port dataout out )
+		)
+		(_modpath parallel unknown 0 4024
+			(_code  4 bypass_mode*EQ*1)
+			(_port clk in )
+			(_port dataout out )
+		)
+		(_modpath parallel positive 0 4027
+			(_code  5 bypass_mode*EQ*0*AN*falling_clk_out*EQ*1)
+			(_port clk in negedge)
+			(_port dataout out negedge)
+			(_datain dataout_tmp in negedge)
+		)
+	)
+)
+V 000064 56 191 1260919123256 stratix_lvds_rx_parallel_register
+(_unit stratix_lvds_rx_parallel_register
+	(_specify
+		(_modpath parallel positive 0 4262
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+	)
+)
+V 000041 56 35 1260919123281 stratix_pll
+(_unit stratix_pll
+	(_specify
+	)
+)
+V 000051 56 130 1260919123302 stratix_routing_wire
+(_unit stratix_routing_wire
+	(_specify
+		(_modpath parallel unknown 0 9252
+			(_port datain in )
+			(_port dataout out )
+		)
+	)
+)

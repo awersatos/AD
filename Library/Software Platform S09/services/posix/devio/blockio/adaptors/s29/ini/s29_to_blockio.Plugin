@@ -1,0 +1,12 @@
+[Plugin]
+Name=s29_to_blockio
+Description=S29 FLASH blockio adaptor.
+Implement=blockio_adaptor
+Require0=blockio
+SourceDir=services\posix\devio\blockio\adaptors\s29\src
+InitHandler=s29_to_blockio_plugin_init
+InitHandlerPriority=8
+CompileOption0=-I"$(SERROOT)\posix\internal"
+
+[Instance]
+Require0=drv_s29_blockio

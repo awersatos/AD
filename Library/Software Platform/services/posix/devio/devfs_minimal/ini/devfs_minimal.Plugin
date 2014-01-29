@@ -1,0 +1,8 @@
+[Plugin]
+Name=devfs_minimal
+Caption=Minimal devfs
+Description=Small devfs implementation (only for devio)
+SourceDir=services\posix\devio\devfs_minimal\src
+GlobalCompileOption0=-D__UNIFIED_HANDLES__=1
+Implement=devfs_minimal
+

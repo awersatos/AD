@@ -1,0 +1,21 @@
+[Plugin]
+Name=drv_isp1760
+Description=ISP1760 USB Host Controller driver
+Caption=ISP1760 USB Host Controller driver
+SourceDir=platform\fpga\drivers\isp1760\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\isp1760\internal"
+CompileOption1=-I"$(SERROOT)\usbhost\include"
+FrameworkCompileOption0=-I"$(SSASROOT)\services\posix\include"
+Implement=drv_isp1760
+MinInstances=1
+Bitmap=drv_isp1760.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_isp1760
+Condition=EQ
+
+[Instance]
+Require0=per_isp1760
+Require1=per_usb_intercon
+

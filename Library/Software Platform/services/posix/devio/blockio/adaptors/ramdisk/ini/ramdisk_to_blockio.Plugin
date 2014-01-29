@@ -1,0 +1,11 @@
+[Plugin]
+Name=ramdisk_to_blockio
+Description=ramdisk blockio adaptor.
+Implement=blockio_adaptor
+Require0=blockio
+SourceDir=services\posix\devio\blockio\adaptors\ramdisk\src
+InitHandler=ramdisk_to_blockio_plugin_init
+InitHandlerPriority=8
+
+[Instance]
+Require0=ramdisk

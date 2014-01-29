@@ -1,0 +1,40 @@
+[Plugin]
+Name=drv_sdhc
+Description=Driver for SD card reader in 4-bit SD mode
+Caption=SD Host Controller Driver
+SourceDir=platform\fpga\drivers\sdhc\src
+Implement=drv_sdhc
+MinInstances=1
+Bitmap=drv_sdhc.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_sdhc
+Condition=EQ
+
+[Instance]
+Require0=per_sdhc
+
+[Instance_Option0]
+Name=DMA_FROM
+GUIName=DMA area start
+Kind=POINTER
+DefaultValue=0x01000000
+Description=Lowest address of DMA range. Driver will use a local DMA buffer when asked for data outside DMA range
+
+[Instance_Option1]
+Name=DMA_TO
+GUIName=DMA area end
+Kind=POINTER
+DefaultValue=0xFF000000
+Description=Upper address of DMA range. Driver will use a local DMA buffer when asked for data outside DMA range
+
+[Instance_Option2]
+Name=DMA_BUF
+GUIName=DMA Buffer
+Kind=BUFFER
+Type=UINT8
+DefaultValue=512
+AllocMemory=True
+MemoryQualifier=__align(4)
+Description=Define the buffer in external memory to be used when asked for data outside DMA range. This buffer must be large enough to hold at least 1 block (usually 512 bytes) or set it to 0 if you are sure all access is done through external memory.

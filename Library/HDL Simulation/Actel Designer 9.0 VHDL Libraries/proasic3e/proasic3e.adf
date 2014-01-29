@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=proasic3e
+
+[Library]
+proasic3e=.\proasic3e.LIB
+
+[$LibMap$]
+proasic3e=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/proasic3e.vhd=-1
+/update_proasic3e.do=-1
+
+[Files.Data]
+.\src\proasic3e.vhd=VHDL Source Code
+.\src\update_proasic3e.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

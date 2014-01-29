@@ -1,0 +1,30 @@
+[Plugin]
+Name=usbhost_keyboard
+Description=USB Host keyboard driver
+Caption=USB Host Keyboard Driver
+SourceDir=services\usbhost\usbhost_keyboard\src
+InitHandler=
+InitHandlerPriority=16
+Implement=usbhost_keyboard
+MinInstances=1
+Bitmap=
+
+[Available_If0]
+kind=PLUGIN
+Object=usbhost
+Condition=EQ
+
+[Instance]
+Require0=usbhost
+
+[Instance]
+Caption=USB-Host Keyboard driver Context
+Description=USB-Host Keyboard driver Context
+
+[Instance_Option0]
+GUIName=Buffer Size
+Name=buffer
+Description=Software buffer size in keystrokes
+Kind=BUFFER
+DefaultValue=16
+Type=UINT16

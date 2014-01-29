@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_fpu" description="Single Precision Floating Point Unit">
+		<sfr name="STAT"	offset="0"  size="32" description="Status Register">
+			<bitfield name="ADD_STAT"	start="0" end="0" access="r" description="Add Unit Status">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="SUB_STAT"	start="1" end="1" access="r" description="Substract Unit Status">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="MUL_STAT"	start="2" end="2" access="r" description="Multiply Unit Status">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="DIV_STAT"	start="3" end="3" access="r" description="Division Unit Status">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="ITOF_STAT"	start="4" end="4" access="r" description="Integer To Float Conversion Unit Status">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="FTOI_STAT"	start="5"  end="5" access="r" description="Float To Integer Conversion Unit Status">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+		</sfr>
+		<sfr name="OPA"		offset="4"  size="32" description="Operand Register A" access="r"/>
+		<sfr name="OPB"		offset="8"  size="32" description="Operand Register B" access="r"/>
+		<sfr name="OPAB"	offset="12" size="32" description="Operand Register A And B" access="r"/>
+		<sfr name="ADD_RESULT"	offset="8"  size="32" description="Result Register For Add Operation"/>
+		<sfr name="SUB_RESULT"	offset="12" size="32" description="Result Register For Subtract Operation"/>
+		<sfr name="MUL_RESULT"	offset="16" size="32" description="Result Register For Multiply Operation"/>
+		<sfr name="DIV_RESULT"	offset="20" size="32" description="Result Register For Divide Operation"/>
+		<sfr name="ITOF_RESULT"	offset="24" size="32" description="Result Register For Integet To Float Conversion"/>
+		<sfr name="FTOI_RESULT"	offset="28" size="32" description="Result Register For Float To Integer Conversion"/>
+	</group>
+</sfrfile>

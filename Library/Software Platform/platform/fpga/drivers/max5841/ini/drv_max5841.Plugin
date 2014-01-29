@@ -1,0 +1,70 @@
+[Plugin]
+Name=drv_max5841
+Description=MAX5841 D/A Converter Driver
+Caption=MAX5841 DAC Driver
+SourceDir=platform\fpga\drivers\max5841\src
+PrivateDir=platform\fpga\drivers\max5841\internal
+Implement=drv_max5841
+Bitmap=drv_max5841.bmp
+
+[Available_If0]
+Kind=PLUGIN
+Object=drv_i2cm
+Condition=EQ
+
+[Instance]
+Require0=drv_i2cm
+
+[Instance_Option0]
+Name=USE_MUTEX
+GUIName=Mutltithread safe
+Description=Use locking to make driver multithread safe
+Kind=BOOLEAN
+AutoValue=False
+
+[Instance_Option0_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option0_Available_If1]
+Kind=False
+
+[Instance_Option1]
+; Bus sharing: enable if you have more than one device connected to the bus and want the driver to lock the I2C bus in between I2C calls
+Name=bus_sharing
+GUIName=Bus sharing
+Description=Set if you want the driver to handle bus sharing
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option2]
+Name=i2c_address
+GUIName=I2C Slave address
+Description=I2C Slave address (device type and Vadd pin)
+Kind=ENUM
+Type=UINT8
+Enum0=0111100
+EnumDescription0=MAX5841L with Vadd = GND
+Enum1=0111101
+EnumDescription1=MAX5841L with Vadd = VDD
+Enum2=1011100
+EnumDescription2=MAX5841M with Vadd = GND
+Enum3=1011101
+EnumDescription3=MAX5841M with Vadd = VDD
+DefaultValue=1011101
+
+[Instance_Option3]
+Name=power_down
+GUIName=PowerDown
+Description=Initial Power Down mode
+Kind=ENUM
+Type=UINT8
+Enum0=PowerUp
+EnumDescription0=Power-up device, DAC output restored to previous value
+Enum1=PowerDownFloat
+EnumDescription1=Power-down device, DAC output floating
+Enum2=PowerDownTerm1K
+EnumDescription2=Power-down device, DAC output terminated with 1 kOhm to GND
+Enum3=PowerDownTerm100K
+EnumDescription3=Power-down device, DAC output terminated with 100 kOhm to GND

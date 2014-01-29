@@ -1,0 +1,70 @@
+[Plugin]
+Name=timing
+Description=Software timing services (clock, delays, periodic software timers, etc ..)
+Caption=Software Timer Management
+SourceDir=services\platform\timing\src
+Implement=timing
+Require0=pal
+
+[Option0]
+Name=USETIMERS
+GUIName=Use software timers
+Description=The application uses (y/n) software timers
+Kind=BOOLEAN
+DefaultValue=False 
+
+[Option1]
+Name=MAX
+GUIName=Max Timers
+Description=Maximum simultaneous number of software timers
+Kind=UINT8
+DefaultValue=4
+MinRange=4
+MaxRange=32
+
+[Option1_Available_If0]
+Kind=OPTION
+Object=USETIMERS
+Condition=EQ
+Value=True
+
+[Option2]
+Name=PALBASE
+CodeName=BASE
+GUIName=Base (microscs)
+Description=The base period unit for software timers
+Kind=UINT32
+DefaultValue=1000
+MinRange=100
+MaxRange=1000000
+
+[Option2_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=NOTEQ
+
+[Option2_Available_If1]
+Kind=OPTION
+Object=USETIMERS
+Condition=EQ
+Value=True
+
+[Option3]
+Name=OSBASE
+CodeName=BASE
+GUIName=Base (microscs)
+Description=The base period unit for software timers  
+Kind=UINT32
+AutoValue=posix_threads.OSTICKMICROSCS
+
+[Option3_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Option3_Available_If1]
+Kind=OPTION
+Object=USETIMERS
+Condition=EQ
+Value=True
+

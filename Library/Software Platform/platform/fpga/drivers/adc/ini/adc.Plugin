@@ -1,0 +1,13 @@
+[Plugin]
+Name=adc
+Description=Analog to Digital Converter
+Caption=Analog to Digital Converter
+SourceDir=platform\fpga\drivers\adc\src
+Implement=adc
+Bitmap=adc.bmp
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\adc\internal"
+
+[Instance]
+Require0=ad_adc
+
+

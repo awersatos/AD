@@ -1,0 +1,62 @@
+Protel Design System Design Rule Check
+PCB File : C:\AD\DWS\DWS_Comutator\DWS_Commutator.PcbDoc
+Date     : 30.06.2012
+Time     : 14:09:39
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (Disabled)(InNet('GND')),(InNet('VCC'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (Disabled)((IsTrack  And IsNet)  And InRegion(3815,3770 ,4275 ,4280)),((IsTrack  And IsNet)  And InRegion(3815,3770 ,4275 ,4280))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (Disabled)(InNet('NetU1_20','NetU1_7','NetU1_6','NetU1_3','NetU1_2','NetU1_1','VCC','NetC3_2','SSCK','NetC5_1','NetC9_1','GND','NetC4_2','NetANT1_1','NetR1_2','NetC1_2')  And InRegion(1311,1988 ,1800 ,2464)),(InNet('NetU1_20','NetU1_7','NetU1_6','NetU1_3','NetU1_2','NetU1_1','VCC','NetC3_2','SSCK','NetC5_1','NetC9_1','GND','NetC4_2','NetANT1_1','NetR1_2')  And InRegion(1311,1988 ,1800 ,2464))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (Disabled)(InComponent('U1') And IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.5mm) (InPolygon),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.3mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=5mm) (Preferred=0.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.3mm) (Air Gap=0.3mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InComponent('ANT1')),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.3mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Silkscreen Over Component Pads (Clearance=0.254mm) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.3mm) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=50mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:02

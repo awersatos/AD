@@ -1,0 +1,21 @@
+*OPTOISO MCE 3-12-96
+*NPN Optoisolator pkg:DIP6 1,2,5,4
+*Connections
+*               LED Anode
+*               | LED Cathode
+*               | | Emitter
+*               | | | Collector
+*               | | | | Base
+*               | | | | |
+.SUBCKT OPTOISO 1 2 4 5 6
+VM    1 12 DC 0
+D1   12  2 LED
+R1   10 11 450
+C1   11  0 1000PF
+H1   10  0 VM 3.33E-2
+G1    5  6 11 0 1
+Q1    5  6  4 QNPN
+.MODEL LED D(IS=2.5E-12 RS=.75 CJO=3.5E-11 N=2)
+.MODEL QNPN NPN(IS=3.33E-11 NF=1.35 CJC=4.74E-11 CJE=167E-12 TF=9.23E-10
++ TR=1.48E-7 BF=150 BR=10 IKF=.1 VAF=100
+.ENDS OPTOISO

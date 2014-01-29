@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+				xmlns:html="http://www.w3.org/1999/xhtml">
+
+<!-- Some tips about names:
+	- File name must have max 8 characters and extension xul. All files are located inside 'panels' folder. Example fliename: 'mypanel.xul'.
+	- use filename prefix for all script functions and global variables, for example 'function mypanelMyfunction(){ ...'.
+	- use filename prefix for all id attributes, for example:  <textbox id="mypanelMyID">.
+	- All global functions, variables and id attributes have prefix 'g_'.
+-->
+
+<!-- Put scripts in panels.js -->
+
+<!-- Put only one element node under the window element (<vbox> in this case) -->
+<vbox flex="1" style="overflow: auto">
+
+	<!-- Put your XUL code here.  -->
+
+</vbox>
+</window>

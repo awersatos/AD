@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_xp
+
+[Library]
+ovi_xp=.\ovi_xp.LIB
+
+[$LibMap$]
+ovi_xp=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[Files]
+/update_ovi_xp.do=-1
+
+[Files.Data]
+.\src\update_ovi_xp.do=Macro
+

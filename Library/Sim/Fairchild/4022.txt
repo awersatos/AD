@@ -1,0 +1,188 @@
+//============================================================
+# 4022 source
+//4022B: Octal Counter
+//dm 7-20-97: changed STATE to STATE_BIT
+//dm 8-11-97: replaced vol_param and voh_param= (); with VOL_VOH_MIN()
+//dm 8-22-97: updated to use PWL_TABLE statements and fixed function.
+//jjt 14/1/2002: copied 4022 in CMOS.txt, reversed order of bits
+//               in state_bit command. 
+//============================================================
+INPUTS VDD, GND, CP1, CP0, MR;
+OUTPUTS VDD_LD, CP1_LD, CP0_LD, MR_LD,
+        Q4_7, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7;
+INTEGERS internal_reg, chgMR;
+REALS tt_val, tt_5, tt_10, tt_15, tphl_CP_Qn_5, tphl_CP_Qn_10,
+      tphl_CP_Qn_15, tplh_CP_Qn_5, tplh_CP_Qn_10, tplh_CP_Qn_15,
+	  tphl_CP_Q4_7_5, tphl_CP_Q4_7_10, tphl_CP_Q4_7_15,
+	  tplh_CP_Q4_7_5, tplh_CP_Q4_7_10, tplh_CP_Q4_7_15,
+	  tp_MR_Qn_5, tp_MR_Qn_10, tp_MR_Qn_15, tplh_MR_Q4_7_5,
+	  tplh_MR_Q4_7_10, tplh_MR_Q4_7_15, th_val, th_CP0_5,
+	  th_CP0_10, th_CP0_15, th_CP1_5, th_CP1_10, th_CP1_15,
+	  tw_val, tw_CP_5, tw_CP_10, tw_CP_15, twh_MR_5, twh_MR_10,
+	  twh_MR_15, trec_val, trec_5, trec_10, trec_15, rout_5,
+	  rout_10, rout_15, rin_val, ridd_val, vdd_val;
+
+PWR_GND_PINS(VDD,GND);	//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(3,18);	//check for min supply=3 and max supply=18
+VOL_VOH_MIN(0,0,0.1);	//set min vol_param=gnd_param+0, max voh_param=pwr_param-0
+VIL_VIH_PERCENT(33,66);	//CMOS vil=33% of supply, vih=66% of supply
+IO_PAIRS(CP1:CP1_LD, CP0:CP0_LD, MR:MR_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tMR\tCP0\tCP1\tQ0\tQ1\tQ2\tQ3\tQ4\tQ5\tQ6\tQ7\tQ4_7");
+	//Note: ttlh and tthl are the same
+	tt_5= (MIN_TYP_MAX(tt_param: NULL, 60n, 120n));
+	tt_10= (MIN_TYP_MAX(tt_param: NULL, 30n, 60n));
+	tt_15= (MIN_TYP_MAX(tt_param: NULL, 20n, 40n));
+
+    tphl_CP_Qn_5= (MIN_TYP_MAX(tp_param: NULL, 195n, 390n));
+    tphl_CP_Qn_10= (MIN_TYP_MAX(tp_param: NULL, 75n, 145n));
+    tphl_CP_Qn_15= (MIN_TYP_MAX(tp_param: NULL, 50n, 100n));
+
+    tplh_CP_Qn_5= (MIN_TYP_MAX(tp_param: NULL, 245n, 485n));
+    tplh_CP_Qn_10= (MIN_TYP_MAX(tp_param: NULL, 95n, 195n));
+    tplh_CP_Qn_15= (MIN_TYP_MAX(tp_param: NULL, 60n, 125n));
+
+    tphl_CP_Q4_7_5= (MIN_TYP_MAX(tp_param: NULL, 245n, 485n));
+    tphl_CP_Q4_7_10= (MIN_TYP_MAX(tp_param: NULL, 90n, 185n));
+    tphl_CP_Q4_7_15= (MIN_TYP_MAX(tp_param: NULL, 60n, 120n));
+
+    tplh_CP_Q4_7_5= (MIN_TYP_MAX(tp_param: NULL, 190n, 380n));
+    tplh_CP_Q4_7_10= (MIN_TYP_MAX(tp_param: NULL, 75n, 145n));
+    tplh_CP_Q4_7_15= (MIN_TYP_MAX(tp_param: NULL, 50n, 105n));
+
+	//Note: MR->Qn tplh and tphl are the same
+    tp_MR_Qn_5= (MIN_TYP_MAX(tp_param: NULL, 130n, 260n));
+    tp_MR_Qn_10= (MIN_TYP_MAX(tp_param: NULL, 55n, 105n));
+    tp_MR_Qn_15= (MIN_TYP_MAX(tp_param: NULL, 40n, 75n));
+
+    tplh_MR_Q4_7_5= (MIN_TYP_MAX(tp_param: NULL, 110n, 220n));
+    tplh_MR_Q4_7_10= (MIN_TYP_MAX(tp_param: NULL, 45n, 90n));
+    tplh_MR_Q4_7_15= (MIN_TYP_MAX(tp_param: NULL, 35n, 70n));
+
+    th_CP0_5= (140n);
+    th_CP0_10= (50n);
+    th_CP0_15= (30n);
+
+    th_CP1_5= (170n);
+    th_CP1_10= (60n);
+    th_CP1_15= (40n);
+
+    tw_CP_5= (75n);
+    tw_CP_10= (30n);
+    tw_CP_15= (20n);
+
+    twh_MR_5= (70n);
+    twh_MR_10= (30n);
+    twh_MR_15= (20n);
+
+    trec_5= (30n);
+    trec_10= (15n);
+    trec_15= (10n);
+
+	//CMOS B IOH min=0.44mA @ Vdd=5V and Voh=4.6V: rout=(Vdd-Voh)/IOH=909
+	//CMOS B IOL min=0.44mA @ Vdd=5V and Vol=0.4V: rout=Vol/IOL=909
+    rout_5= (MIN_TYP_MAX(drv_param: 909,NULL,NULL));
+
+	//CMOS B IOH min=1.1mA @ Vdd=10V and Voh=9.5V: rout=(Vdd-Voh)/IOH=454.5
+	//CMOS B IOL min=1.1mA @ Vdd=10V and Voh=0.5V: rout=Vol/IOL=454.5
+    rout_10= (MIN_TYP_MAX(drv_param: 454.5,NULL,NULL));
+
+	//CMOS B IOH min=3mA @ Vdd=15V and Voh=13.5V: rout=(Vdd-Voh)/IOH=500
+	//CMOS B IOL min=3mA @ Vdd=15V and Vol=1.5V: rout=Vol/IOL=500
+    rout_15= (MIN_TYP_MAX(drv_param: 500,NULL,NULL));
+
+	//Note: Input loading and Idd are linear over Vdd ranges
+    //CMOS input current @ 25'C: IIN=0.1uA @ VDD=15v rin= (15/0.1uA);
+	rin_val= (MIN_TYP_MAX(ld_param: NULL, 1.5E8, NULL));
+
+	//Idd @ 10V: 1E9= 10/10nA typical, 250k= 10/40uA max 
+	ridd_val= (MIN_TYP_MAX(i_param: NULL, 1E9, 250k));
+
+    internal_reg= (1);
+	STATE Q0 Q4_7 = ONE;			//initialize output
+	STATE Q1 Q2 Q3 Q4 Q5 Q6 Q7 = ZERO;
+	EXIT;
+  END;
+
+vdd_val= (pwr_param - gnd_param);
+rol_param= (PWL_TABLE(vdd_val: 5,rout_5,10,rout_10,15,rout_15));
+roh_param= (rol_param);			// Drive high same as drive low
+tt_val= (PWL_TABLE(vdd_val:5,tt_5,10,tt_10,15,tt_15));
+
+DRIVE Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q4_7 = 
+  (v0=gnd_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD MR_LD CP1_LD CP0_LD =
+  (v0=vol_param,r0=rin_val,v1=voh_param,r1=rin_val,io=1e12,t=1p);
+
+
+IF (MR) THEN
+  BEGIN
+    internal_reg= (1);
+  ELSE
+	IF (present_time > 0 &&
+	   ((CP0 && CHANGED_HL(CP1)) || (~(CP1) && CHANGED_LH(CP0)))) THEN
+	  BEGIN
+	    internal_reg = (internal_reg << 1);
+		IF (internal_reg > 128) THEN
+		  BEGIN
+		    internal_reg = (1);
+		  END;
+	  END;
+  END;
+
+
+
+STATE_BIT Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 = (internal_reg);
+STATE_BIT Q4_7= (Q0 || Q1 || Q2 || Q3);
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//        present_time,MR,CP0,CP1,Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q4_7);
+
+IF (warn_param) THEN
+  BEGIN
+    tw_val= (PWL_TABLE(vdd_val: 5,twh_MR_5,10,twh_MR_10,15,twh_MR_15));
+	WIDTH(MR Twh=tw_val "MR");
+	IF (~(MR)) THEN
+	  BEGIN
+		tw_val= (PWL_TABLE(vdd_val: 5,tw_CP_5,10,tw_CP_10,15,tw_CP_15));
+	    WIDTH(CP0 Twl=tw_val "CP0");
+	    WIDTH(CP1 Twh=tw_val "CP1");
+
+		th_val= (PWL_TABLE(vdd_val: 5,th_CP0_5,10,th_CP0_10,15,th_CP0_15));
+		SETUP_HOLD(CP0=LH CP1 Th=th_val "CP1->CP0");
+
+		th_val= (PWL_TABLE(vdd_val: 5,th_CP1_5,10,th_CP1_10,15,th_CP1_15));
+		SETUP_HOLD(CP1=HL CP0 Th=th_val "CP0->CP1");
+
+		trec_val= (PWL_TABLE(vdd_val: 5,trec_5,10,trec_10,15,trec_15));
+        IF (CP0) THEN
+		  BEGIN
+            RECOVER(CP1=HL MR TREC=trec_val "MR->CP1");
+		  END;
+
+        IF (~(CP1)) THEN
+		  BEGIN
+            RECOVER(CP0=LH MR TREC=trec_val "MR->CP0");
+		  END;
+	  END;
+  END;
+
+LOAD VDD_LD = (v0=gnd_param,r0=ridd_val,t=1p);
+
+chgMR= (CHANGED(MR));
+DELAY Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 =
+  CASE (chgMR) : (PWL_TABLE(vdd_val:5,tp_MR_Qn_5,10,tp_MR_Qn_10,15,tp_MR_Qn_15))
+
+  CASE (TRAN_LH) : (PWL_TABLE(vdd_val:5,tplh_CP_Qn_5,10,tplh_CP_Qn_10,15,tplh_CP_Qn_15))
+  CASE (TRAN_HL) : (PWL_TABLE(vdd_val:5,tphl_CP_Qn_5,10,tphl_CP_Qn_10,15,tphl_CP_Qn_15))
+END;
+
+DELAY Q4_7 =
+  CASE (chgMR) : (PWL_TABLE(vdd_val:5,tplh_MR_Q4_7_5,10,tplh_MR_Q4_7_10,15,tplh_MR_Q4_7_15))
+
+  CASE (TRAN_LH) : (PWL_TABLE(vdd_val:5,tplh_CP_Q4_7_5,10,tplh_CP_Q4_7_10,15,tplh_CP_Q4_7_15))
+  CASE (TRAN_HL) : (PWL_TABLE(vdd_val:5,tphl_CP_Q4_7_5,10,tphl_CP_Q4_7_10,15,tphl_CP_Q4_7_15))
+END;
+EXIT;

@@ -1,0 +1,6 @@
+[Interface]
+Name=usbhost_msd
+Category=DRIVER
+System=False
+Description=USB Host Mass Storage Device driver
+PublicDir=services\usbhost\usbhost_msd\include

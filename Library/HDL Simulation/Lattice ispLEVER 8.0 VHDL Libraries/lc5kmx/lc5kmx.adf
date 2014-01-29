@@ -1,0 +1,33 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=lc5kmx
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+lc5kmx=.
+
+[Library]
+lc5kmx=.\lc5kmx.LIB
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/lc5kmx.vhd=-1
+/lc5kmx_components.vhd=-1
+/update_lc5kmx.do=-1
+
+[Files.Data]
+.\src\lc5kmx.vhd=VHDL Source Code
+.\src\lc5kmx_components.vhd=VHDL Source Code
+.\src\update_lc5kmx.do=Macro
+

@@ -1,0 +1,41 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=altera
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+altera=.
+
+[Library]
+altera=.\altera.LIB
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[Files]
+/update_altera.do=-1
+/altera_primitives_components.vhd=-1
+/altera_primitives.vhd=-1
+/altera_europa_support_lib.vhd=-1
+
+[Files.Data]
+.\src\update_altera.do=Macro
+.\src\altera_primitives_components.vhd=VHDL Source Code
+.\src\altera_primitives.vhd=VHDL Source Code
+.\src\altera_europa_support_lib.vhd=VHDL Source Code
+
+

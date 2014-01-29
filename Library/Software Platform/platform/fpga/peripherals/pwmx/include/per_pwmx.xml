@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_pwmx" description="PWM Controller">
+		<sfr name="PWMRG"	 offset="0"  size="8" description="Pulse Width Register"/>
+		<sfr name="PWPLO"	 offset="1"  size="8" description="Low Byte Of The 16-Bit Prescaler Counter Reload Value"/>
+		<sfr name="PWPHI"	 offset="2"  size="8" description="High Byte Of The 16-Bit Prescaler Counter Reload Value"/>
+		<sfr name="PWCON"	 offset="3"  size="8" description="Control Register">
+			<bitfield name="PWI"	start="7"  end="7"  access="rw" description="PWM Counter Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="PRI"	start="6"  end="6"  access="rw" description="Prescaler Counter Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="PWIE"	start="3" end="3" access="rw" description="PWM Counter Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="PRIE"	start="2" end="2" access="rw" description="Prescaler Counter Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="PIEN"	start="1" end="1" access="rw" description="Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="PWEN"	start="0" end="0" access="rw" description="Controller Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="MOD"	start="5" end="4" access="rw" description="Modulator Size">
+				<value value="0" description=" 8 bit"/>
+				<value value="1" description="10 bit"/>
+				<value value="2" description="12 bit"/>
+				<value value="3" description="14 bit"/>
+			</bitfield>
+		</sfr>
+		<sfr name="PWMRGH"	 offset="4"  size="8" description="Upper Bits Of the Pulse Width Register"/>
+	</group>
+</sfrfile>

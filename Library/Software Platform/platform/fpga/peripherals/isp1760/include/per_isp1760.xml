@@ -1,0 +1,330 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_isp1760" description="ISP1760 USB Host Controller">
+		<sfr name="CAPLENTH"		offset="0"   size="16" description="Capability Length Register"/>
+		<sfr name="HCIVERSION"		offset="2"   size="16" description="Host Controller Interface Version Number Register"/>
+		<sfr name="HCSPARAMS"		offset="4"   size="32" description="Host Controller Structual Parameters Register">
+			<bitfield name="DPN"		start="23" end="20" access="r" description="Debug Port Number"/>
+			<bitfield name="P_INDICATOR"	start="16" end="16" access="r" description="Port Indicators">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="N_CC"		start="15" end="12" access="r" description="Number Of Companion Controller"/>
+			<bitfield name="N_PCC"		start="11" end="8"  access="r" description="Number Of Ports Per Companion Controller"/>
+			<bitfield name="PRR"		start="7"  end="7"  access="r" description="Port Routing Rules">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="PPC"		start="4"  end="4"  access="r" description="Port Power Control">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DPN"		start="3" end="0"   access="r" description="Number Of Physical Downstream Ports"/>
+		</sfr>
+		<sfr name="HCCPARAMS"		offset="8"   size="32" description="Host Controller Capability Parameters Register">
+			<bitfield name="EECP"		start="15" end="8"  access="r" description="EHCI Extended Capabilities Pointer"/>
+			<bitfield name="IST"		start="7"  end="4"  access="r" description="Isochronous Scheduling Threshold"/>
+			<bitfield name="ASPC"		start="2"  end="2"  access="r" description="Asynchronous Schedule Park Capability">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="PFLF"		start="1"  end="1" access="r" description="Programmable Frame List Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			
+		</sfr>
+		<sfr name="USBCMD"		offset="32"  size="32" description="USB Command Register">
+			<bitfield name="LHCR"		start="7"  end="7" access="rw" description="Light Host Controller Reset">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="HCRESET"	start="1"  end="1" access="rw" description="Host Controller Reset">
+				<value value="0" description="False"/>
+				<value value="1" description="Reset"/>
+			</bitfield>
+			<bitfield name="RS"		start="0"  end="0" access="rw" description="Run/Stop">
+				<value value="0" description="Run"/>
+				<value value="1" description="Stop"/>
+			</bitfield>
+		</sfr>
+		<sfr name="USBSTS"		offset="36"  size="32" description="USB Status Register">
+			<bitfield name="FLR"		start="3"  end="3" access="rw" description="Frame List Rollover">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="PCD"		start="2"  end="2" access="rw" description="Port Change Detect">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="USBINTR"		offset="40"  size="32" description="USB Interrupt Register"/>
+		<sfr name="FRINDEX"		offset="44"  size="32" description="Frame Index Register">
+			<bitfield name="FRINDEX"	start="13" end="0" access="r" description="Frame Index"/>
+		</sfr>
+		<sfr name="CONFIGFLAG"		offset="96"  size="32" description="Configure Flag Register">
+			<bitfield name="CF"		start="0"  end="0" access="rw" description="Configure Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="PORTSC1"		offset="100" size="32" description="Port Status and Control 1 Register">
+			<bitfield name="PTC"		start="19" end="16" access="rw" description="Port Test Control"/>
+			<bitfield name="PIC"		start="15" end="14" access="rw" description="Port Indicator Control"/>
+			<bitfield name="PO"		start="13" end="13" access="rw" description="Port Owner">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="PP"		start="12" end="12" access="rw" description="Port Power">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="LS"		start="11" end="10" access="rw" description="Line Status"/>
+			<bitfield name="PR"		start="8"  end="8"  access="rw" description="Port Reset">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="SUSP"		start="7"  end="7"  access="rw" description="Suspend">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="FPR"		start="6"  end="6"  access="rw" description="Force Port Resume">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="PED"		start="2"  end="2"  access="rw" description="Port Enabled/Disabled">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="ECSC"		start="1"  end="1"  access="rw" description="Current Status Change">
+				<value value="0" description="No change"/>
+				<value value="1" description="Change in ECCS"/>
+			</bitfield>
+			<bitfield name="ECCS"		start="0"  end="0"  access="r"  description="Current Connect Status">
+				<value value="0" description="No device present"/>
+				<value value="1" description="A device present"/>
+			</bitfield>
+		</sfr>
+		<sfr name="ISO_PTD_DONE_MAP"	offset="304" size="32" description="ISO PTD Done Map Register"/>
+		<sfr name="ISO_PTD_SKIP_MAP"	offset="308" size="32" description="ISO PTD Skip Map Register"/>
+		<sfr name="ISO_PTD_LAST_PTD"	offset="312" size="32" description="ISO PTD Last PTD Register"/>
+		<sfr name="INT_PTD_DONE_MAP"	offset="320" size="32" description="INT PTD Done Map Register"/>
+		<sfr name="INT_PTD_SKIP_MAP"	offset="324" size="32" description="INT PTD Skip Map Register"/>
+		<sfr name="INT_PTD_LAST_PTD"	offset="328" size="32" description="INT PTD Last PTD Register"/>
+		<sfr name="ATL_PTD_DONE_MAP"	offset="336" size="32" description="ALT PTD Done Map Register"/>
+		<sfr name="ATL_PTD_SKIP_MAP"	offset="340" size="32" description="ALT PTD Skip Map Register"/>
+		<sfr name="ATL_PTD_LAST_PTD"	offset="344" size="32" description="ALT PTD Last PTD Register"/>
+		<sfr name="HW_MODE_CONTROL"	offset="768" size="32" description="HW Mode Control Register">
+			<bitfield name="ALL_ATX_RESET"	start="31" end="31" access="rw" description="All ATX Reset">
+				<value value="0" description="No reset"/>
+				<value value="1" description="Enable reset"/>
+			</bitfield>
+			<bitfield name="ANA_DIGI_OC"	start="15" end="15" access="rw" description="Analog Digital Overcurrent">
+				<value value="0" description="Digital overcurrent"/>
+				<value value="1" description="Analog overcurrent"/>
+			</bitfield>
+			<bitfield name="DATA_BUS_WIDTH"	start="8"  end="8"  access="rw" description="Data Bus Width">
+				<value value="0" description="16-bit"/>
+				<value value="1" description="32-bit"/>
+			</bitfield>
+			<bitfield name="DACK_POL"	start="6"  end="6"  access="rw" description="DACK Polarity">
+				<value value="0" description="Active LOW"/>
+				<value value="1" description="Active HIGH"/>
+			</bitfield>
+			<bitfield name="DREQ_POL"	start="5"  end="5"  access="rw" description="DREQ Polarity">
+				<value value="0" description="Active LOW"/>
+				<value value="1" description="Active HIGH"/>
+			</bitfield>
+			<bitfield name="INTR_POL"	start="2"  end="2"  access="rw" description="Interrupt Polarity">
+				<value value="0" description="Active LOW"/>
+				<value value="1" description="Active HIGH"/>
+			</bitfield>
+			<bitfield name="INTR_LEVEL"	start="1"  end="1"  access="rw" description="Interrupt Level">
+				<value value="0" description="Level triggered"/>
+				<value value="1" description="Edge triggered"/>
+			</bitfield>
+			<bitfield name="GLOBAL_INTR_EN"	start="0"  end="0"  access="rw" description="Global Interrupt Enable">
+				<value value="0" description="IRQ assertion is disabled"/>
+				<value value="1" description="IRQ assertion is enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="CHIP_ID"		offset="772" size="32" description="Chip Identifier Register"/>
+		<sfr name="SCRATCH"		offset="776" size="32" description="Scratch Register"/>
+		<sfr name="SW_RESET"		offset="780" size="32" description="Software Reset Register">
+			<bitfield name="RESET_HC"	start="1"  end="1"  access="rw" description="Reset Host Controller">
+				<value value="0" description="No reset"/>
+				<value value="1" description="Enable reset"/>
+			</bitfield>
+			<bitfield name="RESET_ALL"	start="0"  end="0"  access="rw" description="Reset All">
+				<value value="0" description="No reset"/>
+				<value value="1" description="Enable reset"/>
+			</bitfield>
+		</sfr>
+		<sfr name="DMA_CONFIGURATION"	offset="816" size="32" description="DMA Configuration register">
+			<bitfield name="DMA_COUNTER"	start="31" end="8" access="rw"  description="DMA Counter"/>
+			<bitfield name="BURST_LEN"	start="3"  end="2" access="rw" description="DMA Burst Length">
+				<value value="0" description="Single"/>
+				<value value="1" description="4-cycle"/>
+				<value value="2" description="8-cycle"/>
+				<value value="3" description="16-cycle"/>
+			</bitfield>
+			<bitfield name="ENABLE_DMA"	start="1"  end="1"  access="rw" description="Enable DMA">
+				<value value="0" description="Terminate"/>
+				<value value="1" description="Enable"/>
+			</bitfield>
+			<bitfield name="DMA_READ_WRITE_SEL" start="0" end="0" access="rw" description="DMA Read/Write Select">
+				<value value="0" description="DMA write to the ISP1760 internal RAM is set"/>
+				<value value="1" description="DMA read from the ISP1760 internal RAM"/>
+			</bitfield>
+		</sfr>
+		<sfr name="BUFFER_STATUS"	offset="820" size="32" description="Buffer Status Register">
+			<bitfield name="ISO_BUF_FILL"	start="2"  end="2"  access="rw" description="ISO Buffer Filled">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="INT_BUF_FILL"	start="1"  end="1"  access="rw" description="INT Buffer Filled">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ALT_BUF_FILL"	start="0"  end="0"  access="rw" description="ALT Buffer Filled">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="ATL_DONE_TIMEOUT"	offset="824" size="32" description="ATL Done Timeout Register"/>
+		<sfr name="MEMORY"		offset="828" size="32" description="Memory Register">
+			<bitfield name="MEM_BANK_SEL"	start="17" end="16" access="rw"  description="Memory Bank Select"/>
+			<bitfield name="START_ADDR_MEM_READ"	start="15" end="0" access="rw"  description="Start Address for Memory Read Cycles"/>
+		</sfr>
+		<sfr name="EDGE_INT_COUNT"	offset="832" size="32" description="Edge Interrupt Count Register">
+			<bitfield name="MIN_WIDTH"	start="31" end="24" access="rw"  description="Minimum Width"/>
+			<bitfield name="NO_OF_CLK"	start="15" end="0" access="rw"   description="Number of Clocks"/>
+		</sfr>
+		<sfr name="DMA_START_ADDRESS"	offset="836" size="32" description="DMA Start Address Register">
+			<bitfield name="START_ADDR_DMA"	start="15" end="0" access="w"   description="Start Address for DMA Access"/>
+		</sfr>
+		<sfr name="POWER_DOWN_CONTROL"	offset="852" size="32" description="Power Down Control Register">
+			<bitfield name="CLK_OFF_COUNTER" start="31" end="16" access="rw" description="Clock Off Counter"/>
+			<bitfield name="PORT3_PD"	start="12"  end="12" access="rw" description="Port 3 Pull-Down">
+				<value value="0" description="Not connected"/>
+				<value value="1" description="Connected"/>
+			</bitfield>
+			<bitfield name="PORT2_PD"	start="11"  end="11" access="rw" description="Port 2 Pull-Down">
+				<value value="0" description="Not connected"/>
+				<value value="1" description="Connected"/>
+			</bitfield>
+			<bitfield name="VBATDET_PWR"	start="10"  end="10" access="rw" description="VBAT Detector Powered">
+				<value value="0" description="Powered or enabled in suspend"/>
+				<value value="1" description="Not powered or disabled in suspend"/>
+			</bitfield>
+			<bitfield name="BIASEN"		start="5"   end="5"  access="rw" description="Bias Circuits Powered">
+				<value value="0" description="Not powered in suspend"/>
+				<value value="1" description="Powered in suspend"/>
+			</bitfield>
+			<bitfield name="VREG_ON"	start="4"   end="4"  access="rw" description="VREG Powered">
+				<value value="0" description="Normally powered in suspend"/>
+				<value value="1" description="Switch to low power mode"/>
+			</bitfield>
+			<bitfield name="OC3_PWR"	start="3"   end="3"  access="rw" description="Overcurrent Detection Port 3 Powered">
+				<value value="0" description="Powered on or enabled during suspend"/>
+				<value value="1" description="Powered off or disabled during suspend"/>
+			</bitfield>
+			<bitfield name="OC2_PWR"	start="2"   end="2"  access="rw" description="Overcurrent Detection Port 2 Powered">
+				<value value="0" description="Powered on or enabled during suspend"/>
+				<value value="1" description="Powered off or disabled during suspend"/>
+			</bitfield>
+			<bitfield name="OC1_PWR"	start="1"   end="1"  access="rw" description="Overcurrent Detection Port 1 Powered">
+				<value value="0" description="Powered on or enabled during suspend"/>
+				<value value="1" description="Powered off or disabled during suspend"/>
+			</bitfield>
+			<bitfield name="HC_CLK_EN"	start="0"   end="0"  access="rw" description="Host Controller Clock Enabled">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="PORT1_CONTROL"	offset="884" size="32" description="Port 1 Control Register">
+			<bitfield name="PORT1_INIT2"	start="23"  end="23" access="rw" description="Port 1 Initialization 2">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="PORT1_INIT1"	start="7"   end="7"  access="rw" description="Port 1 Initialization 1">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="PORT1_POWER"	start="4"   end="3"  access="rw" description="Port 1 Power"/>
+		</sfr>
+		<sfr name="INTERRUPT"		offset="784" size="32" description="Interrupt Register">
+			<bitfield name="ISO_IRQ"	start="9"   end="9"  access="rw" description="ISO IRQ Occurred">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ALT_IRQ"	start="8"   end="8"  access="rw" description="ALT IRQ Occurred">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="INT_IRQ"	start="7"   end="7"  access="rw" description="INT IRQ Occurred">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="CLK_READY"	start="6"   end="6"  access="rw" description="Clock Ready">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="HC_SUSP"	start="5"   end="5"  access="rw" description="Host Controller Suspend">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DMAEOTINT"	start="3"   end="3"  access="rw" description="DMA EOT Interrupt">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="SOFITLINT"	start="1"   end="1"  access="rw" description="SOF ITL Interrupt">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="INTERRUPT_ENABLE"	offset="788" size="32" description="Interrupt Enable Register">
+			<bitfield name="ISO_IRQ_E"	start="9"   end="9"  access="rw" description="ISO IRQ Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="ALT_IRQ_E"	start="8"   end="8"  access="rw" description="ALT IRQ Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="INT_IRQ_E"	start="7"   end="7"  access="rw" description="INT IRQ Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="CLK_READY_E"	start="6"   end="6"  access="rw" description="Clock Ready Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="HC_SUSP_E"	start="5"   end="5"  access="rw" description="Host Controller Suspend Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DMAEOTINT_E"	start="3"   end="3"  access="rw" description="DMA EOT Interrupt Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="SOFITLINT_E"	start="1"   end="1"  access="rw" description="SOF ITL Interrupt Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="ISO_IRQ_MASK_OR"	offset="792" size="32" description="ISO IRQ Mask OR Register"/>
+		<sfr name="INT_IRQ_MASK_OR"	offset="796" size="32" description="INT IRQ Mask OR Register"/>
+		<sfr name="ALT_IRQ_MASK_OR"	offset="800" size="32" description="ALT IRQ Mask OR Register"/>
+		<sfr name="ISO_IRQ_MASK_AND"	offset="804" size="32" description="ISO IRQ Mask AND Register"/>
+		<sfr name="INT_IRQ_MASK_AND"	offset="808" size="32" description="INT IRQ Mask AND Register"/>
+		<sfr name="ALT_IRQ_MASK_AND"	offset="812" size="32" description="ALT IRQ Mask AND Register"/>
+	</group>
+</sfrfile>
+

@@ -1,0 +1,235 @@
+timestamp=1260919807704
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[stratixiv_hssi_pcie_hip]
+A/stratixiv_hssi_pcie_hip=22|./src/stratixiv_pcie_hip_atoms.v|229989|1*2950559
+B/stratixiv_hssi_pcie_hip=3*44714110
+C=8.2.1986.SP1.35.3497  (Windows)
+D/stratixiv_hssi_pcie_hip=4*0
+P/~emb=16552,27176,51601,56683
+R=./src/stratixiv_pcie_hip_atoms.v|229989
+
+[stratixiv_pciehip_clkmux]
+A/stratixiv_pciehip_clkmux=22|./src/stratixiv_pcie_hip_atoms.v|1242|1*15952
+B/stratixiv_pciehip_clkmux=3*263129
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=773,1176,1742,1938
+R=./src/stratixiv_pcie_hip_atoms.v|1242
+
+[stratixiv_pciehip_compute_bit]
+A/stratixiv_pciehip_compute_bit=22|./src/stratixiv_pcie_hip_atoms.v|7330|1*49460
+B/stratixiv_pciehip_compute_bit=3*591843
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=196,458,745,873
+R=./src/stratixiv_pcie_hip_atoms.v|7330
+
+[stratixiv_pciehip_dprio_16bit]
+A/stratixiv_pciehip_dprio_16bit=22|./src/stratixiv_pcie_hip_atoms.v|1408|1*18053
+B/stratixiv_pciehip_dprio_16bit=3*273808
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=597,1026,1504,3410
+R=./src/stratixiv_pcie_hip_atoms.v|1408
+
+[stratixiv_pciehip_dprio_addr]
+A/stratixiv_pciehip_dprio_addr=22|./src/stratixiv_pcie_hip_atoms.v|1643|1*19331
+B/stratixiv_pciehip_dprio_addr=3*275509
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=331,1086,3018,3427
+R=./src/stratixiv_pcie_hip_atoms.v|1643
+
+[stratixiv_pciehip_dprio_bit]
+A/stratixiv_pciehip_dprio_bit=22|./src/stratixiv_pcie_hip_atoms.v|1364|1*17161
+B/stratixiv_pciehip_dprio_bit=3*270273
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=441,706,1000,1104
+R=./src/stratixiv_pcie_hip_atoms.v|1364
+
+[stratixiv_pciehip_dprio_bus_out_mux]
+A/stratixiv_pciehip_dprio_bus_out_mux=22|./src/stratixiv_pcie_hip_atoms.v|3007|1*31308
+B/stratixiv_pciehip_dprio_bus_out_mux=3*426590
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=13863,14972,19319,20735
+R=./src/stratixiv_pcie_hip_atoms.v|3007
+
+[stratixiv_pciehip_dprio_cnt]
+A/stratixiv_pciehip_dprio_cnt=22|./src/stratixiv_pcie_hip_atoms.v|2005|1*22978
+B/stratixiv_pciehip_dprio_cnt=3*317118
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=279,814,1973,2285
+R=./src/stratixiv_pcie_hip_atoms.v|2005
+
+[stratixiv_pciehip_dprio_ctl_data]
+A/stratixiv_pciehip_dprio_ctl_data=22|./src/stratixiv_pcie_hip_atoms.v|2231|1*25358
+B/stratixiv_pciehip_dprio_ctl_data=3*338610
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=770,1682,4555,4843
+R=./src/stratixiv_pcie_hip_atoms.v|2231
+
+[stratixiv_pciehip_dprio_reg]
+A/stratixiv_pciehip_dprio_reg=22|./src/stratixiv_pcie_hip_atoms.v|3570|1*33938
+B/stratixiv_pciehip_dprio_reg=3*553099
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=20515,23132,28142,43354
+R=./src/stratixiv_pcie_hip_atoms.v|3570
+
+[stratixiv_pciehip_dprio_reg_top]
+A/stratixiv_pciehip_dprio_reg_top=22|./src/stratixiv_pcie_hip_atoms.v|5803|1*40464
+B/stratixiv_pciehip_dprio_reg_top=3*553269
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=7246,11077,14799,21645
+R=./src/stratixiv_pcie_hip_atoms.v|5803
+
+[stratixiv_pciehip_dprio_sm]
+A/stratixiv_pciehip_dprio_sm=22|./src/stratixiv_pcie_hip_atoms.v|2681|1*29905
+B/stratixiv_pciehip_dprio_sm=3*395231
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1081,1581,2142,2401
+R=./src/stratixiv_pcie_hip_atoms.v|2681
+
+[stratixiv_pciehip_ecc_chk]
+A/stratixiv_pciehip_ecc_chk=22|./src/stratixiv_pcie_hip_atoms.v|7365|1*51132
+B/stratixiv_pciehip_ecc_chk=3*595272
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=354,1357,1674,1906
+R=./src/stratixiv_pcie_hip_atoms.v|7365
+
+[stratixiv_pciehip_ecc_decoder]
+A/stratixiv_pciehip_ecc_decoder=22|./src/stratixiv_pcie_hip_atoms.v|7484|1*52054
+B/stratixiv_pciehip_ecc_decoder=3*615902
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=212,403,599,699
+R=./src/stratixiv_pcie_hip_atoms.v|7484
+
+[stratixiv_pciehip_ecc_gen]
+A/stratixiv_pciehip_ecc_gen=22|./src/stratixiv_pcie_hip_atoms.v|7345|1*50258
+B/stratixiv_pciehip_ecc_gen=3*595104
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=222,535,738,1154
+R=./src/stratixiv_pcie_hip_atoms.v|7345
+
+[stratixiv_pciehip_hip_dprio_top]
+A/stratixiv_pciehip_hip_dprio_top=22|./src/stratixiv_pcie_hip_atoms.v|6857|1*46610
+B/stratixiv_pciehip_hip_dprio_top=3*591669
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=7357,8397,10210,13064
+R=./src/stratixiv_pcie_hip_atoms.v|6857
+
+[stratixiv_pciehip_hip_mram]
+A/stratixiv_pciehip_hip_mram=22|./src/stratixiv_pcie_hip_atoms.v|7573|1*53536
+B/stratixiv_pciehip_hip_mram=3*619861
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2063,3124,4051,4641
+R=./src/stratixiv_pcie_hip_atoms.v|7573
+
+[stratixiv_pciehip_hip_top]
+A/stratixiv_pciehip_hip_top=22|./src/stratixiv_pcie_hip_atoms.v|227808|1*2932211
+B/stratixiv_pciehip_hip_top=3*44623108
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=16909,22081,32164,40777
+R=./src/stratixiv_pcie_hip_atoms.v|227808
+
+[stratixiv_pciehip_iei_detect]
+A/stratixiv_pciehip_iei_detect=22|./src/stratixiv_pcie_hip_atoms.v|8188|1*61457
+B/stratixiv_pciehip_iei_detect=3*657742
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=982,11746,44110,61989
+R=./src/stratixiv_pcie_hip_atoms.v|8188
+
+[stratixiv_pciehip_mram_top]
+A/stratixiv_pciehip_mram_top=22|./src/stratixiv_pcie_hip_atoms.v|7749|1*55451
+B/stratixiv_pciehip_mram_top=3*622119
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1678,2744,4025,5288
+R=./src/stratixiv_pcie_hip_atoms.v|7749
+
+[stratixiv_pciehip_param]
+A/stratixiv_pciehip_param=22|./src/stratixiv_pcie_hip_atoms.v|38|1*390
+B/stratixiv_pciehip_param=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6855,12111,19465,19724
+R=./src/stratixiv_pcie_hip_atoms.v|38
+
+[stratixiv_pciehip_pciexp_dcfiforam]
+A/stratixiv_pciehip_pciexp_dcfiforam=22|./src/stratixiv_pcie_hip_atoms.v|8007|1*58150
+B/stratixiv_pciehip_pciexp_dcfiforam=3*636138
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=473,757,1074,1205
+R=./src/stratixiv_pcie_hip_atoms.v|8007
+
+[stratixiv_pciehip_pciexp_dcram_rtry]
+A/stratixiv_pciehip_pciexp_dcram_rtry=22|./src/stratixiv_pcie_hip_atoms.v|8048|1*59209
+B/stratixiv_pciehip_pciexp_dcram_rtry=3*643656
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=475,793,1154,1324
+R=./src/stratixiv_pcie_hip_atoms.v|8048
+
+[stratixiv_pciehip_pciexp_dcram_rxvc]
+A/stratixiv_pciehip_pciexp_dcram_rxvc=22|./src/stratixiv_pcie_hip_atoms.v|8104|1*60333
+B/stratixiv_pciehip_pciexp_dcram_rxvc=3*650699
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=475,793,1154,1324
+R=./src/stratixiv_pcie_hip_atoms.v|8104
+
+[stratixiv_pciehip_pciexp_top_hip]
+A/stratixiv_pciehip_pciexp_top_hip=22|./src/stratixiv_pcie_hip_atoms.v|15408|1*128032
+B/stratixiv_pciehip_pciexp_top_hip=3*1575804
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=14523,407844,1708536,2225446
+R=./src/stratixiv_pcie_hip_atoms.v|15408
+
+[stratixiv_pciehip_pulse_ext]
+A/stratixiv_pciehip_pulse_ext=22|./src/stratixiv_pcie_hip_atoms.v|7501|1*52740
+B/stratixiv_pciehip_pulse_ext=3*616942
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=287,500,776,966
+R=./src/stratixiv_pcie_hip_atoms.v|7501
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, STRATIXIV_PCIE_HIP VERILOG LIBRARY.
+LastVerilogToplevel=stratixiv_hssi_pcie_hip
+ModifyID=193
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/stratixiv_pcie_hip_atoms.v=0*2020467*4179669
+
+[~MFT]
+0=28|0ovi_stratixiv_pcie_hip.mgf|4179669|0
+1=26|1ovi_stratixiv_pcie_hip.mgf|2950559|0
+3=26|3ovi_stratixiv_pcie_hip.mgf|44714110|0
+4=0|4ovi_stratixiv_pcie_hip.mgf|0|0
+
+[~U]
+$root=12|0*0|
+stratixiv_hssi_pcie_hip=12|0*1981977||0x90
+stratixiv_pciehip_clkmux=12|0*17536||0x80
+stratixiv_pciehip_compute_bit=12|0*68750||0x80
+stratixiv_pciehip_dprio_16bit=12|0*20133||0x80
+stratixiv_pciehip_dprio_addr=12|0*22163||0x80
+stratixiv_pciehip_dprio_bit=12|0*19225||0x80
+stratixiv_pciehip_dprio_bus_out_mux=12|0*36712||0x80
+stratixiv_pciehip_dprio_cnt=12|0*26208||0x80
+stratixiv_pciehip_dprio_ctl_data=12|0*28876||0x80
+stratixiv_pciehip_dprio_reg=12|0*42814||0x80
+stratixiv_pciehip_dprio_reg_top=12|0*54988||0x80
+stratixiv_pciehip_dprio_sm=12|0*34189||0x80
+stratixiv_pciehip_ecc_chk=12|0*70358||0x80
+stratixiv_pciehip_ecc_decoder=12|0*72352||0x80
+stratixiv_pciehip_ecc_gen=12|0*69452||0x80
+stratixiv_pciehip_hip_dprio_top=12|0*64702||0x80
+stratixiv_pciehip_hip_mram=12|0*73786||0x80
+stratixiv_pciehip_hip_top=12|0*1958797||0x80
+stratixiv_pciehip_iei_detect=12|0*82923||0x80
+stratixiv_pciehip_mram_top=12|0*76357||0x80
+stratixiv_pciehip_param=12|0*374||0x80
+stratixiv_pciehip_pciexp_dcfiforam=12|0*79888||0x80
+stratixiv_pciehip_pciexp_dcram_rtry=12|0*80835||0x80
+stratixiv_pciehip_pciexp_dcram_rxvc=12|0*81879||0x80
+stratixiv_pciehip_pciexp_top_hip=12|0*149034||0x80
+stratixiv_pciehip_pulse_ext=12|0*72942||0x80
+

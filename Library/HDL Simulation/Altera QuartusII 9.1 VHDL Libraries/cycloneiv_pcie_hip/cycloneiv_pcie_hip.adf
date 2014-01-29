@@ -1,0 +1,33 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=cycloneiv_pcie_hip
+
+[Library]
+cycloneiv_pcie_hip=.\cycloneiv_pcie_hip.LIB
+
+[$LibMap$]
+cycloneiv_pcie_hip=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[Files]
+/update_cycloneiv_pcie_hip.do=-1
+
+[Files.Data]
+.\src\update_cycloneiv_pcie_hip.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

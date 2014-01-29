@@ -1,0 +1,29 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_lc5kve
+
+[Library]
+ovi_lc5kve=.\ovi_lc5kve.lib
+
+[$LibMap$]
+ovi_lc5kve=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\ovi_lc4k\ovi_lc5kve\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\ovi_lc4k\ovi_lc5kve\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\ovi_lc4k\ovi_lc5kve\
+Extension5=dll

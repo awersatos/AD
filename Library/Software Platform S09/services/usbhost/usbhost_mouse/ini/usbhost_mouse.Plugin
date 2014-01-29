@@ -1,0 +1,23 @@
+[Plugin]
+Name=usbhost_mouse
+Description=USB Host mouse driver
+Caption=USB Host Mouse Driver
+SourceDir=services\usbhost\usbhost_mouse\src
+InitHandler=
+InitHandlerPriority=16
+Implement=usbhost_mouse
+MinInstances=1
+Bitmap=
+
+[Available_If0]
+kind=PLUGIN
+Object=usbhost
+Condition=EQ
+
+[Instance]
+Require0=usbhost
+
+[Instance]
+Caption=USB-Host Mouse driver Context
+Description=USB-Host Mouse driver Context
+

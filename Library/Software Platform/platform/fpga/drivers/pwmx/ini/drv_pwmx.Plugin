@@ -1,0 +1,46 @@
+[Plugin]
+Name=drv_pwmx
+Description=PWMX Pulse Width Modulator Driver
+Caption=PWMX Driver
+SourceDir=platform\fpga\drivers\pwmx\src
+Implement=drv_pwmx
+MinInstances=1
+Bitmap=drv_pwmx.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_pwmx
+Condition=EQ
+
+[Instance]
+Require0=per_pwmx
+
+[Instance_Option0]
+Name=RESOLUTION
+GUIName=Resolution
+Description=Resolution mode of the controller.
+Kind=ENUM
+Type=UINT8
+DefaultValue=8bit
+Enum0=8bit
+EnumValue0=0
+Enum1=10bit
+EnumValue1=1
+Enum2=12bit
+EnumValue2=2
+Enum3=14bit
+EnumValue3=3
+
+[Instance_Option1]
+Name=DUTYCYCLE
+GUIName=Duty cycle
+Description=Duty cycle as a percentage of maximum pulse width.
+Kind=UINT8
+MaxRange=100
+
+[Instance_Option2]
+Name=FREQUENCY
+GUIName=Signal frequency
+Description=Output signal frequency in Hz. 
+Kind=UINT32
+

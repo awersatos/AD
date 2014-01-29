@@ -1,0 +1,522 @@
+timestamp=1260919516141
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[ARRIAGX_PRIM_DFFE]
+A/ARRIAGX_PRIM_DFFE=22|./src/arriagx_atoms.v|22|1*614
+B/ARRIAGX_PRIM_DFFE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=290,500,982,1016
+R=./src/arriagx_atoms.v|22
+
+[ARRIAGX_PRIM_DFFEAS]
+A/ARRIAGX_PRIM_DFFEAS=22|./src/arriagx_atoms.v|95|1*1416
+B/ARRIAGX_PRIM_DFFEAS=3*720
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=414,649,1027,1061
+R=./src/arriagx_atoms.v|95
+
+[ARRIAGX_PRIM_DFFEAS_HIGH]
+A/ARRIAGX_PRIM_DFFEAS_HIGH=22|./src/arriagx_atoms.v|133|1*2204
+B/ARRIAGX_PRIM_DFFEAS_HIGH=3*1294
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=424,664,1042,1076
+R=./src/arriagx_atoms.v|133
+
+[arriagx_and1]
+A/arriagx_and1=22|./src/arriagx_atoms.v|346|1*6636
+B/arriagx_and1=3*5288
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_and1=4*2542
+P/~emb=125,274,376,465
+R=./src/arriagx_atoms.v|346
+
+[arriagx_and16]
+A/arriagx_and16=22|./src/arriagx_atoms.v|359|1*7225
+B/arriagx_and16=3*5443
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_and16=4*2697
+P/~emb=139,336,517,808
+R=./src/arriagx_atoms.v|359
+
+[arriagx_asmiblock]
+A/arriagx_asmiblock=22|./src/arriagx_atoms.v|1549|1*21705
+B/arriagx_asmiblock=3*212146
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=288,492,654,769
+R=./src/arriagx_atoms.v|1549
+
+[arriagx_asynch_io]
+A/arriagx_asynch_io=22|./src/arriagx_atoms.v|2090|1*26575
+B/arriagx_asynch_io=3*254009
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_asynch_io=4*7742
+P/~emb=1136,2242,3577,4247
+R=./src/arriagx_atoms.v|2090
+
+[arriagx_b17mux21]
+A/arriagx_b17mux21=22|./src/arriagx_atoms.v|399|1*8678
+B/arriagx_b17mux21=3*7093
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=199,365,521,611
+R=./src/arriagx_atoms.v|399
+
+[arriagx_b5mux21]
+A/arriagx_b5mux21=22|./src/arriagx_atoms.v|420|1*9894
+B/arriagx_b5mux21=3*9350
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=194,358,514,604
+R=./src/arriagx_atoms.v|420
+
+[arriagx_bmux21]
+A/arriagx_bmux21=22|./src/arriagx_atoms.v|388|1*8055
+B/arriagx_bmux21=3*5599
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=195,359,515,605
+R=./src/arriagx_atoms.v|388
+
+[arriagx_clkctrl]
+A/arriagx_clkctrl=22|./src/arriagx_atoms.v|3791|1*40943
+B/arriagx_clkctrl=3*381645
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=364,760,1115,1540
+R=./src/arriagx_atoms.v|3791
+
+[arriagx_crcblock]
+A/arriagx_crcblock=22|./src/arriagx_atoms.v|1521|1*21000
+B/arriagx_crcblock=3*211683
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=327,558,723,833
+R=./src/arriagx_atoms.v|1521
+
+[arriagx_dffe]
+A/arriagx_dffe=22|./src/arriagx_atoms.v|171|1*2997
+B/arriagx_dffe=3*1873
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_dffe=4*0
+P/~emb=239,519,739,938
+R=./src/arriagx_atoms.v|171
+
+[arriagx_dll]
+A/arriagx_dll=22|./src/arriagx_atoms.v|2960|1*35073
+B/arriagx_dll=3*317474
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_dll=4*10276
+P/~emb=1151,3011,5391,6250
+R=./src/arriagx_atoms.v|2960
+
+[arriagx_ena_reg]
+A/arriagx_ena_reg=22|./src/arriagx_atoms.v|3706|1*39791
+B/arriagx_ena_reg=3*378482
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_ena_reg=4*12405
+P/~emb=245,489,810,1016
+R=./src/arriagx_atoms.v|3706
+
+[arriagx_io]
+A/arriagx_io=22|./src/arriagx_atoms.v|2658|1*32406
+B/arriagx_io=3*303291
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2205,3389,4760,5902
+R=./src/arriagx_atoms.v|2658
+
+[arriagx_io_latch]
+A/arriagx_io_latch=22|./src/arriagx_atoms.v|2533|1*30837
+B/arriagx_io_latch=3*292594
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_io_latch=4*9428
+P/~emb=433,826,1323,1599
+R=./src/arriagx_atoms.v|2533
+
+[arriagx_io_register]
+A/arriagx_io_register=22|./src/arriagx_atoms.v|2409|1*29265
+B/arriagx_io_register=3*283311
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_io_register=4*8574
+P/~emb=439,834,1323,1599
+R=./src/arriagx_atoms.v|2409
+
+[arriagx_jtag]
+A/arriagx_jtag=22|./src/arriagx_atoms.v|1474|1*20251
+B/arriagx_jtag=3*211360
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=657,939,1195,1365
+R=./src/arriagx_atoms.v|1474
+
+[arriagx_latch]
+A/arriagx_latch=22|./src/arriagx_atoms.v|220|1*3954
+B/arriagx_latch=3*2704
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_latch=4*1016
+P/~emb=210,411,654,862
+R=./src/arriagx_atoms.v|220
+
+[arriagx_lcell_comb]
+A/arriagx_lcell_comb=22|./src/arriagx_atoms.v|1742|1*24220
+B/arriagx_lcell_comb=3*220006
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lcell_comb=4*5549
+P/~emb=1082,1663,3071,3576
+R=./src/arriagx_atoms.v|1742
+
+[arriagx_lcell_ff]
+A/arriagx_lcell_ff=22|./src/arriagx_atoms.v|1577|1*22379
+B/arriagx_lcell_ff=3*212474
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lcell_ff=4*4389
+P/~emb=520,943,1522,1861
+R=./src/arriagx_atoms.v|1577
+
+[arriagx_lvds_receiver]
+A/arriagx_lvds_receiver=22|./src/arriagx_atoms.v|12498|1*102096
+B/arriagx_lvds_receiver=3*1886405
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_receiver=4*21305
+P/~emb=1190,2491,3751,4695
+R=./src/arriagx_atoms.v|12498
+
+[arriagx_lvds_reg]
+A/arriagx_lvds_reg=22|./src/arriagx_atoms.v|12422|1*98876
+B/arriagx_lvds_reg=3*1875040
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_reg=4*20370
+P/~emb=247,459,744,937
+R=./src/arriagx_atoms.v|12422
+
+[arriagx_lvds_rx_bitslip]
+A/arriagx_lvds_rx_bitslip=22|./src/arriagx_atoms.v|12093|1*97188
+B/arriagx_lvds_rx_bitslip=3*1865329
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_rx_bitslip=4*19989
+P/~emb=406,1110,1646,2076
+R=./src/arriagx_atoms.v|12093
+
+[arriagx_lvds_rx_deser]
+A/arriagx_lvds_rx_deser=22|./src/arriagx_atoms.v|12263|1*99869
+B/arriagx_lvds_rx_deser=3*1876844
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_rx_deser=4*20827
+P/~emb=310,606,939,1136
+R=./src/arriagx_atoms.v|12263
+
+[arriagx_lvds_rx_fifo]
+A/arriagx_lvds_rx_fifo=22|./src/arriagx_atoms.v|11955|1*95727
+B/arriagx_lvds_rx_fifo=3*1858673
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_rx_fifo=4*19626
+P/~emb=322,776,1245,1609
+R=./src/arriagx_atoms.v|11955
+
+[arriagx_lvds_rx_fifo_sync_ram]
+A/arriagx_lvds_rx_fifo_sync_ram=22|./src/arriagx_atoms.v|11854|1*94609
+B/arriagx_lvds_rx_fifo_sync_ram=3*1849156
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=354,647,1102,1287
+R=./src/arriagx_atoms.v|11854
+
+[arriagx_lvds_rx_parallel_reg]
+A/arriagx_lvds_rx_parallel_reg=22|./src/arriagx_atoms.v|12336|1*100979
+B/arriagx_lvds_rx_parallel_reg=3*1882445
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_rx_parallel_reg=4*21059
+P/~emb=378,693,1046,1275
+R=./src/arriagx_atoms.v|12336
+
+[arriagx_lvds_transmitter]
+A/arriagx_lvds_transmitter=22|./src/arriagx_atoms.v|4121|1*45695
+B/arriagx_lvds_transmitter=3*393920
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_transmitter=4*14165
+P/~emb=855,1551,2283,2784
+R=./src/arriagx_atoms.v|4121
+
+[arriagx_lvds_tx_out_block]
+A/arriagx_lvds_tx_out_block=22|./src/arriagx_atoms.v|4015|1*44485
+B/arriagx_lvds_tx_out_block=3*388107
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_tx_out_block=4*13586
+P/~emb=381,714,1084,1301
+R=./src/arriagx_atoms.v|4015
+
+[arriagx_lvds_tx_parallel_register]
+A/arriagx_lvds_tx_parallel_register=22|./src/arriagx_atoms.v|3934|1*43283
+B/arriagx_lvds_tx_parallel_register=3*384106
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_tx_parallel_register=4*13255
+P/~emb=387,707,1064,1294
+R=./src/arriagx_atoms.v|3934
+
+[arriagx_lvds_tx_reg]
+A/arriagx_lvds_tx_reg=22|./src/arriagx_atoms.v|3864|1*42223
+B/arriagx_lvds_tx_reg=3*382299
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_lvds_tx_reg=4*12724
+P/~emb=253,468,753,946
+R=./src/arriagx_atoms.v|3864
+
+[arriagx_m_cntr]
+A/arriagx_m_cntr=22|./src/arriagx_atoms.v|4290|1*47672
+B/arriagx_m_cntr=3*406653
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=315,592,868,1062
+R=./src/arriagx_atoms.v|4290
+
+[arriagx_mac_mult]
+A/arriagx_mac_mult=22|./src/arriagx_atoms.v|8585|1*73096
+B/arriagx_mac_mult=3*1050615
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1785,3094,6290,7423
+R=./src/arriagx_atoms.v|8585
+
+[arriagx_mac_mult_block]
+A/arriagx_mac_mult_block=22|./src/arriagx_atoms.v|8274|1*69772
+B/arriagx_mac_mult_block=3*974855
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_mac_mult_block=4*15949
+P/~emb=616,1034,1739,1998
+R=./src/arriagx_atoms.v|8274
+
+[arriagx_mac_out]
+A/arriagx_mac_out=22|./src/arriagx_atoms.v|10251|1*85551
+B/arriagx_mac_out=3*1598307
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4000,7101,15913,18996
+R=./src/arriagx_atoms.v|10251
+
+[arriagx_mac_out_add_sub_acc_unit]
+A/arriagx_mac_out_add_sub_acc_unit=22|./src/arriagx_atoms.v|9434|1*78795
+B/arriagx_mac_out_add_sub_acc_unit=3*1247177
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=711,1113,1534,1735
+R=./src/arriagx_atoms.v|9434
+
+[arriagx_mac_out_input_interface]
+A/arriagx_mac_out_input_interface=22|./src/arriagx_atoms.v|9116|1*76939
+B/arriagx_mac_out_input_interface=3*1128156
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1135,1672,2833,3228
+R=./src/arriagx_atoms.v|9116
+
+[arriagx_mac_out_internal]
+A/arriagx_mac_out_internal=22|./src/arriagx_atoms.v|9845|1*82308
+B/arriagx_mac_out_internal=3*1537286
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_mac_out_internal=4*17141
+P/~emb=1083,2284,4246,5681
+R=./src/arriagx_atoms.v|9845
+
+[arriagx_mac_out_output_interface]
+A/arriagx_mac_out_output_interface=22|./src/arriagx_atoms.v|9584|1*80252
+B/arriagx_mac_out_output_interface=3*1445983
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1091,1536,2073,2414
+R=./src/arriagx_atoms.v|9584
+
+[arriagx_mac_register]
+A/arriagx_mac_register=22|./src/arriagx_atoms.v|8180|1*68503
+B/arriagx_mac_register=3*968923
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_mac_register=4*14861
+P/~emb=359,769,1144,1371
+R=./src/arriagx_atoms.v|8180
+
+[arriagx_mac_rs_block]
+A/arriagx_mac_rs_block=22|./src/arriagx_atoms.v|8361|1*71267
+B/arriagx_mac_rs_block=3*996882
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_mac_rs_block=4*16637
+P/~emb=697,1297,2180,2613
+R=./src/arriagx_atoms.v|8361
+
+[arriagx_mux21]
+A/arriagx_mux21=22|./src/arriagx_atoms.v|278|1*4944
+B/arriagx_mux21=3*3744
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_mux21=4*1665
+P/~emb=175,355,553,696
+R=./src/arriagx_atoms.v|278
+
+[arriagx_mux41]
+A/arriagx_mux41=22|./src/arriagx_atoms.v|305|1*5710
+B/arriagx_mux41=3*4408
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_mux41=4*1971
+P/~emb=246,454,726,912
+R=./src/arriagx_atoms.v|305
+
+[arriagx_n_cntr]
+A/arriagx_n_cntr=22|./src/arriagx_atoms.v|4370|1*48599
+B/arriagx_n_cntr=3*412147
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=211,608,875,1044
+R=./src/arriagx_atoms.v|4370
+
+[arriagx_nmux21]
+A/arriagx_nmux21=22|./src/arriagx_atoms.v|410|1*9303
+B/arriagx_nmux21=3*8589
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=177,337,477,567
+R=./src/arriagx_atoms.v|410
+
+[arriagx_pll]
+A/arriagx_pll=22|./src/arriagx_atoms.v|4627|1*51209
+B/arriagx_pll=3*427786
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_pll=4*14537
+P/~emb=8901,16109,26421,29903
+R=./src/arriagx_atoms.v|4627
+
+[arriagx_pll_reg]
+A/arriagx_pll_reg=22|./src/arriagx_atoms.v|4564|1*50473
+B/arriagx_pll_reg=3*425951
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=244,431,641,768
+R=./src/arriagx_atoms.v|4564
+
+[arriagx_ram_block]
+A/arriagx_ram_block=22|./src/arriagx_atoms.v|570|1*12967
+B/arriagx_ram_block=3*32073
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9330,11658,15215,17199
+R=./src/arriagx_atoms.v|570
+
+[arriagx_ram_pulse_generator]
+A/arriagx_ram_pulse_generator=22|./src/arriagx_atoms.v|440|1*10518
+B/arriagx_ram_pulse_generator=3*10845
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_ram_pulse_generator=4*2854
+P/~emb=252,512,769,940
+R=./src/arriagx_atoms.v|440
+
+[arriagx_ram_register]
+A/arriagx_ram_register=22|./src/arriagx_atoms.v|487|1*11554
+B/arriagx_ram_register=3*14064
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_ram_register=4*3156
+P/~emb=435,767,1224,1469
+R=./src/arriagx_atoms.v|487
+
+[arriagx_reorder_output]
+A/arriagx_reorder_output=22|./src/arriagx_atoms.v|9784|1*81373
+B/arriagx_reorder_output=3*1529740
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=296,618,861,1002
+R=./src/arriagx_atoms.v|9784
+
+[arriagx_routing_wire]
+A/arriagx_routing_wire=22|./src/arriagx_atoms.v|13319|1*109816
+B/arriagx_routing_wire=3*1935893
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_routing_wire=4*21959
+P/~emb=159,331,479,605
+R=./src/arriagx_atoms.v|13319
+
+[arriagx_rublock]
+A/arriagx_rublock=22|./src/arriagx_atoms.v|12806|1*105288
+B/arriagx_rublock=3*1902227
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=584,1489,1972,2254
+R=./src/arriagx_atoms.v|12806
+
+[arriagx_scale_cntr]
+A/arriagx_scale_cntr=22|./src/arriagx_atoms.v|4452|1*49462
+B/arriagx_scale_cntr=3*417117
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=381,740,1087,1317
+R=./src/arriagx_atoms.v|4452
+
+[arriagx_termination]
+A/arriagx_termination=22|./src/arriagx_atoms.v|13166|1*107940
+B/arriagx_termination=3*1929266
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriagx_termination=4*21538
+P/~emb=1135,1805,2657,3134
+R=./src/arriagx_atoms.v|13166
+
+[arriagx_termination_digital]
+A/arriagx_termination_digital=22|./src/arriagx_atoms.v|13031|1*106600
+B/arriagx_termination_digital=3*1919955
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=592,1058,1634,1812
+R=./src/arriagx_atoms.v|13031
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, ARRIAGX VERILOG LIBRARY.
+LastVerilogToplevel=arriagx_routing_wire
+ModifyID=471
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/arriagx_atoms.v=0*157781*262131
+
+[~MFT]
+0=60|0ovi_arriagx.mgf|262131|0
+1=58|1ovi_arriagx.mgf|109816|0
+3=58|3ovi_arriagx.mgf|1935893|0
+4=31|4ovi_arriagx.mgf|21959|0
+
+[~U]
+$root=12|0*0|
+ARRIAGX_PRIM_DFFE=12|0*598||0xa0
+ARRIAGX_PRIM_DFFEAS=12|0*1416||0xa0
+ARRIAGX_PRIM_DFFEAS_HIGH=12|0*2204||0xa0
+arriagx_and1=12|0*6316||0x80
+arriagx_and16=12|0*6745||0x90
+arriagx_asmiblock=12|0*23929||0x90
+arriagx_asynch_io=12|0*29999||0x80
+arriagx_b17mux21=12|0*7862||0x90
+arriagx_b5mux21=12|0*8822||0x90
+arriagx_bmux21=12|0*7383||0x90
+arriagx_clkctrl=12|0*50285||0x90
+arriagx_crcblock=12|0*23352||0x90
+arriagx_dffe=12|0*3013||0x90
+arriagx_dll=12|0*41249||0x90
+arriagx_ena_reg=12|0*49213||0x80
+arriagx_io=12|0*37638||0x90
+arriagx_io_latch=12|0*35973||0x80
+arriagx_io_register=12|0*34289||0x80
+arriagx_jtag=12|0*22619||0x90
+arriagx_latch=12|0*3970||0x90
+arriagx_lcell_comb=12|0*26380||0x90
+arriagx_lcell_ff=12|0*24459||0x90
+arriagx_lvds_receiver=12|0*146826||0x90
+arriagx_lvds_reg=12|0*143654||0x80
+arriagx_lvds_rx_bitslip=12|0*141374||0x80
+arriagx_lvds_rx_deser=12|0*144583||0x80
+arriagx_lvds_rx_fifo=12|0*139609||0x80
+arriagx_lvds_rx_fifo_sync_ram=12|0*138299||0x80
+arriagx_lvds_rx_parallel_reg=12|0*145677||0x80
+arriagx_lvds_transmitter=12|0*54957||0x90
+arriagx_lvds_tx_out_block=12|0*53635||0x80
+arriagx_lvds_tx_parallel_register=12|0*52433||0x80
+arriagx_lvds_tx_reg=12|0*51501||0x80
+arriagx_m_cntr=12|0*57366||0x80
+arriagx_mac_mult=12|0*104294||0x90
+arriagx_mac_mult_block=12|0*99658||0x80
+arriagx_mac_out=12|0*123849||0x90
+arriagx_mac_out_add_sub_acc_unit=12|0*113287||0x80
+arriagx_mac_out_input_interface=12|0*110103||0x80
+arriagx_mac_out_internal=12|0*118928||0x80
+arriagx_mac_out_output_interface=12|0*115416||0x80
+arriagx_mac_register=12|0*98293||0x80
+arriagx_mac_rs_block=12|0*101313||0x80
+arriagx_mux21=12|0*4848||0x80
+arriagx_mux41=12|0*5502||0x80
+arriagx_n_cntr=12|0*58373||0x80
+arriagx_nmux21=12|0*8359||0x90
+arriagx_pll=12|0*61511||0x90
+arriagx_pll_reg=12|0*60807||0x80
+arriagx_ram_block=12|0*11591||0x90
+arriagx_ram_pulse_generator=12|0*9302||0x80
+arriagx_ram_register=12|0*10210||0x80
+arriagx_reorder_output=12|0*117865||0x80
+arriagx_routing_wire=12|0*157248||0x90
+arriagx_rublock=12|0*150768||0x90
+arriagx_scale_cntr=12|0*59460||0x80
+arriagx_termination=12|0*155020||0x90
+arriagx_termination_digital=12|0*153312||0x80
+

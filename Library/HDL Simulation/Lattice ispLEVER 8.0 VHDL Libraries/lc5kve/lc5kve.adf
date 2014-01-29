@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=lc5kve
+
+[Library]
+lc5kve=.\lc5kve.lib
+
+[$LibMap$]
+lc5kve=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/mach.vhd=-1
+/mach_components.vhd=-1
+/update_lc5kve.do=-1
+
+[Files.Data]
+.\src\mach.vhd=VHDL Source Code
+.\src\mach_components.vhd=VHDL Source Code
+.\src\update_lc5kve.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

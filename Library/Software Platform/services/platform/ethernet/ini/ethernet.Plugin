@@ -1,0 +1,15 @@
+[Plugin]
+Name=ethernet
+Caption=Ethernet Protocol Services
+Description=Generic Ethernet Protocol Interface
+SourceDir=services\platform\ethernet\src
+CompileOption0=-I"$(SSASROOT)\services\platform\ethernet\internal"
+InitHandler=
+InitHandlerPriority=4
+Implement=ethernet
+Bitmap=ethernet.bmp
+
+[Instance]
+Caption=Ethernet Networking Context
+Description=Generic Ethernet protocol context
+Require0=ethernet_adaptor

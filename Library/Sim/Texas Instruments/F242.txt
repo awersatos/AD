@@ -1,0 +1,136 @@
+//============================================================
+# f242 source
+// datasheet date: T.I. March 1987, revised Oct 1993.
+//74F242: Quad Inverting Transceiver (3-state)
+//dm 10-23-97: copied ls242 in LS.TXT
+//      changed SUPPLY_MIN_MAX, VIL_VIL_VALUE,
+//  iol, ioh, iil, iih, icc, rise, fall
+//  and prop delays values.
+// jjt 25/5/2000: * changed the output table to match the datasheet
+//                * removed warning message code (including 
+//                     the variables temp_msg and show_msg).
+//                * added a ricc_val calculation to cater for the
+//                     latch state and ricc_val calculations for the
+//                     other states.
+//============================================================
+INPUTS VCC, GND, OEA, A3in, A2in, A1in, A0in,
+       OEB, B3in, B2in, B1in, B0in;
+OUTPUTS VCC_LD, OEA_LD, A3, A2, A1, A0, OEB_LD, B3, B2, B1, B0;
+INTEGERS tblIndex, outputs_high ;
+REALS tt_val, tplh_val, tphl_val, tpzl_val, tpzh_val, tplz_val, tphz_val,
+      ril_val, rih_val, ricc_val, ricch_val, riccl_val, riccz_val;
+
+PWR_GND_PINS(VCC,GND);          //set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.5,5.5);        //check for min supply=4.5 and max supply=5.5
+VOL_VOH_MIN(0.2,-0.4,0.1);      //set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.45,1.55);       //set input threshold values: vil and vih
+IO_PAIRS(OEA:OEA_LD, OEB:OEB_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tOEA\tOEB\tA3\tA2\tA1\tA0\tB3\tB2\tB1\tB0");
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 2.5n,  NULL));
+
+    tplh_val= (MIN_TYP_MAX(tp_param: 3n, 4.5n, 6.5n));
+    tphl_val= (MIN_TYP_MAX(tp_param: 2n, 3n, 4.5n));
+
+        tpzh_val= (MIN_TYP_MAX(tp_param: 3.5n, 6n, 7.5n));
+    tpzl_val= (MIN_TYP_MAX(tp_param: 3.5n, 6.5n, 9n));
+
+        tphz_val= (MIN_TYP_MAX(tp_param: 4n, 7n, 9n));
+    tplz_val= (MIN_TYP_MAX(tp_param: 3.5n, 6n, 9.5n));
+
+    //F std output drive IOL max=64mA @ vol=0.5V: rol_param=(0.5-vol_param)/64mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 4.69,  NULL));
+
+    //F std output drive IOH max=-15mA @ voh=4.5V: roh_param=(voh_param-4.5)/15mA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 6.67, NULL));
+
+    //F input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+    ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+        //tri-state drive IOZ max=50uA @ vo=2.4V: r3s_param=(2.7/50uA)
+        r3s_param= (MIN_TYP_MAX(drv_param: 54k, NULL, NULL));
+
+    //F input load IIL=-1mA @ 0.5V: rih= (voh_param-0.5)/1mA
+    rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 4.1k));
+
+    //Icch with output high: 227.3= 5V/22mA typical, 157.1= 5.5V/35mA max 
+    ricch_val= (MIN_TYP_MAX(i_param: NULL, 227.3, 157.1));
+
+    //Iccl with output low: 125= 5V/40mA typical, 100= 5.5V/55mA max 
+    riccl_val= (MIN_TYP_MAX(i_param: NULL, 125, 100));
+
+    //Iccz with output 3-state: 156.3= 5V/32mA typical, 122.2= 5.5V/45mA max 
+    riccz_val= (MIN_TYP_MAX(i_param: NULL, 156.3, 122.2));
+
+        //initialize output
+        STATE A3 A2 A1 A0 B3 B2 B1 B0 = UNKNOWN;
+        EXIT;
+  END;
+
+DRIVE A3 A2 A1 A0 B3 B2 B1 B0 =
+  (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD OEA_LD OEB_LD =
+  (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+
+EXT_TABLE tblIndex
+OEA OEB A3    A2    A1    A0    B3    B2    B1    B0
+0   0   Z     Z     Z     Z     ~A3in ~A2in ~A1in ~A0in
+1   0   Z     Z     Z     Z     Z     Z     Z     Z
+0   1   A3in  A2in  A1in  A0in  B3in  B2in  B1in  B0in
+1   1   ~B3in ~B2in ~B1in ~B0in Z     Z     Z     Z;
+
+
+
+IF (tblIndex = 2) THEN
+  BEGIN                         //3-state all pins
+    DELAY A3 A2 A1 A0 B3 B2 B1 B0 =
+          CASE (TRAN_HZ) : tphz_val
+          CASE (TRAN_LZ) : tplz_val
+    END;
+    ricc_val= (riccz_val);
+  ELSE
+    IF (tblIndex = 1) THEN
+      BEGIN                     //An(data) -> Bn(output)
+        DELAY A3 A2 A1 A0 = (tplh_val);
+            DELAY B3 B2 B1 B0 =
+          CASE (TRAN_LH) : tplh_val
+          CASE (TRAN_HL) : tphl_val
+              CASE (TRAN_ZH) : tpzh_val
+              CASE (TRAN_ZL) : tpzl_val
+        END;
+        outputs_high= (B3+B2+B1+B0);
+        ricc_val= (((outputs_high*ricch_val)+((4-outputs_high)*riccl_val))/4);
+      ELSE
+        IF (tblIndex = 3) THEN
+          BEGIN         //  latch the outputs  
+            DELAY A3 A2 A1 A0 B3 B2 B1 B0 = 
+                  CASE (TRAN_HL) : tphl_val
+                  CASE (TRAN_LH) : tplh_val             
+                  CASE (TRAN_ZH) : tpzh_val
+                  CASE (TRAN_ZL) : tpzl_val
+            END;        
+            outputs_high= (B3+B2+B1+B0+A3+A2+A1+A0);
+            ricc_val= (((outputs_high*ricch_val)+((8-outputs_high)*riccl_val))/4);
+          ELSE          //Bn(data) ->An(output)
+                    DELAY B3 B2 B1 B0 = (tplh_val);
+            DELAY A3 A2 A1 A0 =
+              CASE (TRAN_LH) : tplh_val
+              CASE (TRAN_HL) : tphl_val
+              CASE (TRAN_ZH) : tpzh_val
+              CASE (TRAN_ZL) : tpzl_val
+            END;
+            outputs_high= (A3+A2+A1+A0);
+            ricc_val= (((outputs_high*ricch_val)+((4-outputs_high)*riccl_val))/4);
+          END;
+      END;
+  END;
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//         present_time,OEA,OEB,A3,A2,A1,A0,B3,B2,B1,B0);
+
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+EXIT;

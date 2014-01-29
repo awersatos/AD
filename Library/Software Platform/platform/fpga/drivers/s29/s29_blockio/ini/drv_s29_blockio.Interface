@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_s29_blockio
+Category=DRIVER
+System=False
+Description=Block I/O interface to S29 FLASH device
+PublicDir=platform\fpga\drivers\s29\s29_blockio\include

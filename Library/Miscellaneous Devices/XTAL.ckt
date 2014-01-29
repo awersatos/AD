@@ -1,0 +1,13 @@
+*Crystal Subcircuit Parameters
+*FREQ = Fundamental frequency
+*RS   = Series resistance
+*C    = Parallel capacitance
+*Q    = Quality Factor
+
+*Generic type:crystal pkg:HC33/51
+.SUBCKT XTAL 1 2 PARAMS: FREQ=1Meg RS=750 C=13pf Q=1000
+LX 1 3 {((Q*RS)/(6.2831852*FREQ))} IC=0.5M
+CX 3 4 {(1/(Q*6.2831852*FREQ*RS))}
+C0 1 2 {C}
+RS 4 2 {RS}
+.ENDS XTAL

@@ -1,0 +1,50 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=2
+Current Config=compile
+
+[Configurations]
+compile=cpld
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+cpld=.
+
+[Library]
+cpld=.\cpld.LIB
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+EnableCC=0
+EnableEXC=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+EnableExpressionCoverage=0
+
+[LocalVhdlSets]
+EnableExpressionCoverage=0
+CompileWithDebug=0
+
+[Files]
+/cpld_det.vhd=-1
+/cpld_det_sim.vhd=-1
+/update_cpld.do=-1
+
+[Files.Data]
+.\src\cpld_det.vhd=VHDL Source Code
+.\src\cpld_det_sim.vhd=VHDL Source Code
+.\src\update_cpld.do=Macro

@@ -1,0 +1,16 @@
+[Plugin]
+Name=bsd_drv_otus
+Description=Atheros AR9001U chipset driver
+Caption=Atheros otus Driver
+SourceDir=services\bsd\bsd_drivers\usb\atheros\otus\src
+GlobalCompileOption0=-I"$(SSASROOT)\services\bsd\bsd_drivers\usb\atheros\otus\include"
+;LocatorOption0=-Wl-I"$(SSASROOT)\services\bsd\bsd_drivers\usb\atheros\microcode"
+LocatorOption0=-Wl--import-object="$(SSASROOT)\services\bsd\bsd_drivers\usb\atheros\microcode\otus_init.firmware"
+LocatorOption1=-Wl--import-object="$(SSASROOT)\services\bsd\bsd_drivers\usb\atheros\microcode\otus_main.firmware"
+InitHandler=bsd_drv_otus_init
+InitHandlerPriority=1
+Implement=bsd_drv_otus
+Require0=bsd_usb
+MinInstances=0
+
+

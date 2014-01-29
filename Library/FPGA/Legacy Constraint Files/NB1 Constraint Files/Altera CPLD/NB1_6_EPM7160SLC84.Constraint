@@ -1,0 +1,89 @@
+;...............................................................................
+;Constraints File
+;   Device  : Altera MAX EPM7160SLC84-10
+;   Board   : NanoBoard NB1 Revision-6 with Plug-In Daughter Board
+;   Project : Any
+;
+;   Created 28-Oct-2004
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB  | TargetId=NanoBoard NB1 Revision-6
+Record=Constraint | TargetKind=Part | TargetId=EPM7160SLC84-10
+;...............................................................................
+
+;...............................................................................
+; Clocks
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD              | FPGA_PINNUM=2
+Record=Constraint | TargetKind=Port | TargetId=CLK_REF              | FPGA_PINNUM=83
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD              | FPGA_CLOCK_PIN=TRUE
+Record=Constraint | TargetKind=Port | TargetId=CLK_REF              | FPGA_CLOCK_PIN=TRUE
+;...............................................................................
+
+;...............................................................................
+; RS-232 Serial Connector
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=RS_RX                | FPGA_PINNUM=1
+Record=Constraint | TargetKind=Port | TargetId=RS_TX                | FPGA_PINNUM=4
+;...............................................................................
+
+;...............................................................................
+; LCD
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=LCD_E                | FPGA_PINNUM=45
+Record=Constraint | TargetKind=Port | TargetId=LCD_RS               | FPGA_PINNUM=81
+Record=Constraint | TargetKind=Port | TargetId=LCD_RW               | FPGA_PINNUM=80
+Record=Constraint | TargetKind=Port | TargetId=LCD_LIGHT            | FPGA_PINNUM=41
+Record=Constraint | TargetKind=Port | TargetId=LCD_DB[7..0]         | FPGA_PINNUM=48,49,50,51,52,54,55,56
+;...............................................................................
+
+;...............................................................................
+; LEDs
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=LEDS[7..0]           | FPGA_PINNUM=77,76,75,74,73,70,69,68
+Record=Constraint | TargetKind=Port | TargetId=LEDS_USER1H[15..0]   | FPGA_PINNUM=20,21,22,24,25,27,28,29,30,31,33,34,35,36,37,40
+;...............................................................................
+
+;...............................................................................
+; Keyboard and Buttons
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=KP_COL[3..0]         | FPGA_PINNUM=5,11,12,15
+Record=Constraint | TargetKind=Port | TargetId=KP_ROW[3..0]         | FPGA_PINNUM=8,9,10,16
+Record=Constraint | TargetKind=Port | TargetId=SW[7..0]             | FPGA_PINNUM=67,65,64,63,61,60,58,57
+Record=Constraint | TargetKind=Port | TargetId=TEST_BUTTON          | FPGA_PINNUM=84
+;...............................................................................
+
+;...............................................................................
+; Burch Style 20-Pin Headers
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=HA2                  | FPGA_PINNUM=17
+Record=Constraint | TargetKind=Port | TargetId=HA3                  | FPGA_PINNUM=18
+Record=Constraint | TargetKind=Port | TargetId=HA4                  | FPGA_PINNUM=20
+Record=Constraint | TargetKind=Port | TargetId=HA5                  | FPGA_PINNUM=21
+Record=Constraint | TargetKind=Port | TargetId=HA6                  | FPGA_PINNUM=22
+Record=Constraint | TargetKind=Port | TargetId=HA7                  | FPGA_PINNUM=24
+Record=Constraint | TargetKind=Port | TargetId=HA8                  | FPGA_PINNUM=25
+Record=Constraint | TargetKind=Port | TargetId=HA9                  | FPGA_PINNUM=27
+Record=Constraint | TargetKind=Port | TargetId=HA10                 | FPGA_PINNUM=28
+Record=Constraint | TargetKind=Port | TargetId=HA11                 | FPGA_PINNUM=29
+Record=Constraint | TargetKind=Port | TargetId=HA12                 | FPGA_PINNUM=30
+Record=Constraint | TargetKind=Port | TargetId=HA13                 | FPGA_PINNUM=31
+Record=Constraint | TargetKind=Port | TargetId=HA14                 | FPGA_PINNUM=33
+Record=Constraint | TargetKind=Port | TargetId=HA15                 | FPGA_PINNUM=34
+Record=Constraint | TargetKind=Port | TargetId=HA16                 | FPGA_PINNUM=35
+Record=Constraint | TargetKind=Port | TargetId=HA17                 | FPGA_PINNUM=36
+Record=Constraint | TargetKind=Port | TargetId=HA18                 | FPGA_PINNUM=37
+Record=Constraint | TargetKind=Port | TargetId=HA19                 | FPGA_PINNUM=40
+;...............................................................................
+
+;...............................................................................
+; Speaker
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SPEAKER              | FPGA_PINNUM=44
+;...............................................................................

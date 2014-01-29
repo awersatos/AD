@@ -1,0 +1,118 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_neoprims
+
+[Library]
+ovi_neoprims=
+
+[$LibMap$]
+ovi_neoprims=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/NEOAND16.vmd=-1
+/NEOAND2.vmd=-1
+/NEOAND3.vmd=-1
+/NEOAND32.vmd=-1
+/NEOAND4.vmd=-1
+/NEOAND5.vmd=-1
+/NEOAND6.vmd=-1
+/NEOAND7.vmd=-1
+/NEOAND8.vmd=-1
+/NEOBPAD.vmd=-1
+/NEOBUF.vmd=-1
+/NEOCKBUF.vmd=-1
+/NEOFF.vmd=-1
+/NEOINV.vmd=-1
+/NEOIPAD.vmd=-1
+/NEOLATCH.vmd=-1
+/NEOONE.vmd=-1
+/NEOOPAD.vmd=-1
+/NEOOR16.vmd=-1
+/NEOOR2.vmd=-1
+/NEOOR3.vmd=-1
+/NEOOR32.vmd=-1
+/NEOOR4.vmd=-1
+/NEOOR5.vmd=-1
+/NEOOR6.vmd=-1
+/NEOOR7.vmd=-1
+/NEOOR8.vmd=-1
+/NEOPD.vmd=-1
+/NEOPU.vmd=-1
+/NEORAM16.vmd=-1
+/NEORAM32.vmd=-1
+/NEOSR16.vmd=-1
+/NEOSRN32.vmd=-1
+/NEOTRI.vmd=-1
+/NEOUPAD.vmd=-1
+/NEOXOR16.vmd=-1
+/NEOXOR2.vmd=-1
+/NEOXOR3.vmd=-1
+/NEOXOR32.vmd=-1
+/NEOXOR4.vmd=-1
+/NEOXOR5.vmd=-1
+/NEOXOR6.vmd=-1
+/NEOXOR7.vmd=-1
+/NEOXOR8.vmd=-1
+/NEOZERO.vmd=-1
+/NN_UDP.vmd=-1
+/NNP_UDP.vmd=-1
+/update_ovi_neoprims.do=-1
+
+[Files.Data]
+.\src\NEOAND16.vmd=Verilog Source Code
+.\src\NEOAND2.vmd=Verilog Source Code
+.\src\NEOAND3.vmd=Verilog Source Code
+.\src\NEOAND32.vmd=Verilog Source Code
+.\src\NEOAND4.vmd=Verilog Source Code
+.\src\NEOAND5.vmd=Verilog Source Code
+.\src\NEOAND6.vmd=Verilog Source Code
+.\src\NEOAND7.vmd=Verilog Source Code
+.\src\NEOAND8.vmd=Verilog Source Code
+.\src\NEOBPAD.vmd=Verilog Source Code
+.\src\NEOBUF.vmd=Verilog Source Code
+.\src\NEOCKBUF.vmd=Verilog Source Code
+.\src\NEOFF.vmd=Verilog Source Code
+.\src\NEOINV.vmd=Verilog Source Code
+.\src\NEOIPAD.vmd=Verilog Source Code
+.\src\NEOLATCH.vmd=Verilog Source Code
+.\src\NEOONE.vmd=Verilog Source Code
+.\src\NEOOPAD.vmd=Verilog Source Code
+.\src\NEOOR16.vmd=Verilog Source Code
+.\src\NEOOR2.vmd=Verilog Source Code
+.\src\NEOOR3.vmd=Verilog Source Code
+.\src\NEOOR32.vmd=Verilog Source Code
+.\src\NEOOR4.vmd=Verilog Source Code
+.\src\NEOOR5.vmd=Verilog Source Code
+.\src\NEOOR6.vmd=Verilog Source Code
+.\src\NEOOR7.vmd=Verilog Source Code
+.\src\NEOOR8.vmd=Verilog Source Code
+.\src\NEOPD.vmd=Verilog Source Code
+.\src\NEOPU.vmd=Verilog Source Code
+.\src\NEORAM16.vmd=Verilog Source Code
+.\src\NEORAM32.vmd=Verilog Source Code
+.\src\NEOSR16.vmd=Verilog Source Code
+.\src\NEOSRN32.vmd=Verilog Source Code
+.\src\NEOTRI.vmd=Verilog Source Code
+.\src\NEOUPAD.vmd=Verilog Source Code
+.\src\NEOXOR16.vmd=Verilog Source Code
+.\src\NEOXOR2.vmd=Verilog Source Code
+.\src\NEOXOR3.vmd=Verilog Source Code
+.\src\NEOXOR32.vmd=Verilog Source Code
+.\src\NEOXOR4.vmd=Verilog Source Code
+.\src\NEOXOR5.vmd=Verilog Source Code
+.\src\NEOXOR6.vmd=Verilog Source Code
+.\src\NEOXOR7.vmd=Verilog Source Code
+.\src\NEOXOR8.vmd=Verilog Source Code
+.\src\NEOZERO.vmd=Verilog Source Code
+.\src\NN_UDP.vmd=Verilog Source Code
+.\src\NNP_UDP.vmd=Verilog Source Code
+.\src\update_ovi_neoprims.do=Macro
+

@@ -1,0 +1,19 @@
+*Ideal Centre-Tapped Transformer Subcircuit Parameters
+*NP = Number of turns on the primary coil
+*NS1 = Number of turns on the first secondary coil
+*NS2 = Number of turns on the second secondary coil
+*
+*dw 6/8/99: created
+*
+*Connections:
+*                    Pri+
+*                    | Pri-
+*                    | | Sec+
+*                    | | | SecCT
+*                    | | | | Sec-
+*                    | | | | |
+.SUBCKT IDEALTRANSCT 1 2 3 4 5 PARAMS: NP=1 NS1=1 NS2=1
+BP  1 2 I=( (-I(BS1)*{NS1} -I(BS2)*{NS2})/{NP} )
+BS1 3 4 V=( V(1,2)*{NS1}/{NP} )
+BS2 4 5 V=( V(1,2)*{NS2}/{NP} )
+.ENDS IDEALTRANSCT

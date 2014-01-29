@@ -1,0 +1,1424 @@
+timestamp=0
+
+[a_graycounter]
+A/behavior=21|./src/altera_mf.vhd|47663|1*323584
+B/behavior=3*5040234
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1645104
+I/behavior=0*1646486
+M=11|0|v63|0|./src/altera_mf.vhd|0*1644449*0x2c7934622e573b5cb36c5fecd9afd9a9a2ebe71f|0*1645036*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1645346*0x5cc9b0eb0f89889c80fb45a9e533fd82edd17727|0*1646406*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|47638
+
+[alt3pram]
+A/behavior=21|./src/altera_mf.vhd|42378|1*292101
+B/behavior=3*4597641
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1518758
+I/behavior=0*1551291
+M=11|0|v63|0|./src/altera_mf.vhd|0*1516880*0x7546d96cbd2ec11eaad408529b8e76a02cb078df|0*1518695*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1519171*0xa36c3b3a764c38df98fe76832fa2bd0a1cd10c71|0*1551216*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|42327
+
+[alt_aeq_s4]
+A/trans=21|./src/altera_mf.vhd|48241|1*330425
+B/trans=3*5079307
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*1662703
+I/trans=0*1664050
+M=11|0|v63|0|./src/altera_mf.vhd|0*1661257*0xb1b8239c45f2fe1e35333706823757151a2faae3|0*1662638*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/altera_mf.vhd|0*1662958*0x1545787c0d8f8bf03bd02a7c98572f8feba2bba8|0*1663976*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|48199
+
+[alt_aeq_s4_func]
+B/alt_aeq_s4_func=3*5077892
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*329909
+I=0*1659496
+I/alt_aeq_s4_func=0*1660502
+M=3|0|v63|0|./src/altera_mf.vhd|0*1659062*0xe0fde2d5af5fa571fca27432e03d2dfc79f3f478|0*1659426*0xf2538cdc6f7b23a146389216c886e772
+M/alt_aeq_s4_func=4|0|v63|0|./src/altera_mf.vhd|0*1659740*0x0e2e7a0876ad673c9279e486a9889a0be3ac8231|0*1660414*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|48132
+
+[alt_cal]
+A/rtl=A/RTL 21|./src/altera_mf.vhd|48027|1*327885
+B/rtl=3*5063196
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*1654939
+I/rtl=I/RTL 0*1658512
+M=11|0|v63|0|./src/altera_mf.vhd|0*1653894*0xb974cd703af238f2783751961bc7b3acc12fdfea|0*1654877*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/altera_mf.vhd|0*1655143*0x238dae1808ad0b29e15d7ca7d6537c5e979c2a3f|0*1658443*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|47998
+
+[alt_dfe]
+A/trans=21|./src/altera_mf.vhd|48914|1*335074
+B/trans=3*5137054
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*1681638
+I/trans=0*1688343
+M=11|0|v63|0|./src/altera_mf.vhd|0*1680102*0x2f9f05ba3eaa53d8b9151b6279005d35dfecf504|0*1681576*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/altera_mf.vhd|0*1681874*0x8761c245456bee33ceb0b0ed81a259e9c73b414a|0*1688272*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|48870
+
+[alt_dfe_func]
+B/alt_dfe_func=3*5133298
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*334497
+I=0*1677532
+I/alt_dfe_func=0*1679388
+M=3|0|v63|0|./src/altera_mf.vhd|0*1676846*0x822ab4651bc49f37d6e3f5d5db179c2e49c1924d|0*1677465*0xf2538cdc6f7b23a146389216c886e772
+M/alt_dfe_func=4|0|v63|0|./src/altera_mf.vhd|0*1677773*0xe6cd19307f92e60ec49dfbae196eb76fff08c9d2|0*1679306*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|48723
+
+[alt_eyemon]
+A/trans=21|./src/altera_mf.vhd|48492|1*332439
+B/trans=3*5108092
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*1669563
+I/trans=0*1676185
+M=11|0|v63|0|./src/altera_mf.vhd|0*1668007*0x80d420d04bf1ad721e1be9df3ab8c1bea2642029|0*1669498*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/altera_mf.vhd|0*1669818*0x9c40a792c5ffb015ad15d4e5e62fc29d014cc758|0*1676111*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|48448
+
+[alt_eyemon_func]
+B/alt_eyemon_func=3*5104333
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*331859
+I=0*1665410
+I/alt_eyemon_func=0*1667284
+M=3|0|v63|0|./src/altera_mf.vhd|0*1664717*0x04af2171a0334a78a0dd8c53b2b8b79b9cce73b6|0*1665340*0xf2538cdc6f7b23a146389216c886e772
+M/alt_eyemon_func=4|0|v63|0|./src/altera_mf.vhd|0*1665654*0xde760e23d3303a7d882f2a50666715849d7f4654|0*1667196*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|48301
+
+[altaccumulate]
+A/behaviour=21|./src/altera_mf.vhd|20089|1*191191
+B/behaviour=3*2112323
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behaviour=8.2.1986.SP1.35.3497  (Windows)
+I=0*884780
+I/behaviour=0*888993
+M=11|0|v63|0|./src/altera_mf.vhd|0*883937*0x0367ca04a46b6976b53f598d455335c159f68663|0*884712*0xf2538cdc6f7b23a146389216c886e772
+M/behaviour=21|0|v63|0|./src/altera_mf.vhd|0*884974*0x91c2a34370aecfc71f659536aed1d2074b98ba30|0*888912*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|20056
+
+[altclklock]
+A/behavior=21|./src/altera_mf.vhd|30849|1*224719
+B/behavior=3*3464373
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1185267
+I/behavior=0*1199544
+M=11|0|v63|0|./src/altera_mf.vhd|0*1182773*0x853eb04a3d707ee7213d024d1edbfd2e153e74a7|0*1185202*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1185474*0x38b47790344fbb92f4bb57995e4cbcc54df4c6e9|0*1199467*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|30737
+
+[altddio_bidir]
+A/struct=21|./src/altera_mf.vhd|31883|1*230434
+B/struct=3*3515771
+C=8.2.1986.SP1.35.3497  (Windows)
+C/struct=8.2.1986.SP1.35.3497  (Windows)
+I=0*1210542
+I/struct=0*1212918
+M=11|0|v63|0|./src/altera_mf.vhd|0*1209292*0x161ab47fab51ce46eeb74ab480378bcdf1db1993|0*1210474*0xf2538cdc6f7b23a146389216c886e772
+M/struct=21|0|v63|0|./src/altera_mf.vhd|0*1210704*0xd7b2da777b1695c7624b3182999062e3b281f2bb|0*1212840*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|31828
+
+[altddio_in]
+A/behave=21|./src/altera_mf.vhd|31445|1*227372
+B/behave=3*3495094
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*1200912
+I/behave=0*1204107
+M=11|0|v63|0|./src/altera_mf.vhd|0*1200127*0x7c28994e57159109bcd61916c22d5291e62d3e98|0*1200847*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*1201119*0xe34d9e6dca4e51ab147371c23984fd96a5c49b50|0*1204032*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|31418
+
+[altddio_out]
+A/behave=21|./src/altera_mf.vhd|31659|1*228759
+B/behave=3*3504164
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*1205631
+I/behave=0*1208627
+M=11|0|v63|0|./src/altera_mf.vhd|0*1204705*0x5f1a7b82d8c68a16bdcb13563155de84e888fafe|0*1205565*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*1205839*0x058bcff69d6611df5f7312e7233e7564c57a85b9|0*1208551*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|31626
+
+[altdpram]
+A/behavior=21|./src/altera_mf.vhd|37978|1*274869
+B/behavior=3*4107199
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1391576
+I/behavior=0*1419922
+M=11|0|v63|0|./src/altera_mf.vhd|0*1389805*0x3f8ce6d024a1dddd6628294a2be8430c5ea87771|0*1391513*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1391941*0xfc20b9cc4a97bbe919c1df0a6696a194533b8722|0*1419847*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|37932
+
+[altera_common_conversion]
+B/altera_common_conversion=3*834523
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*68033
+I=0*302979
+I/altera_common_conversion=I/ALTERA_COMMON_CONVERSION 0*308234
+M=3|0|v63|0|./src/altera_mf.vhd|0*302292*0xea23ecba86b4f261fd1b13311fe3139b21f2d764|0*302900*0xf2538cdc6f7b23a146389216c886e772
+M/altera_common_conversion=M/ALTERA_COMMON_CONVERSION 4|0|v63|0|./src/altera_mf.vhd|0*303184*0x2be94cb35dfad87bb4af3e8834d90c26d09f1def|0*308128*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|43
+
+[altera_device_families]
+B/altera_device_families=3*853525
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*69372
+I=0*315609
+I/altera_device_families=I/ALTERA_DEVICE_FAMILIES 0*348153
+M=3|0|v63|0|./src/altera_mf.vhd|0*312238*0x0fc6ffb49b8c362d5dfae7fc915ee4bcb63a7ed0|0*315532*0xf2538cdc6f7b23a146389216c886e772
+M/altera_device_families=M/ALTERA_DEVICE_FAMILIES 4|0|v63|0|./src/altera_mf.vhd|0*315780*0x268afa33f53230a5169ada447f89815e57a2da0c|0*348051*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|418
+
+[altera_mf_components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*62315
+I=0*300706
+M=3|0|v63|0|./src/altera_mf_components.vhd|0*242126*0x7a476cf9e08cd8379196065f8c4d94c134e53e5c|0*300620*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf_components.vhd|22
+
+[altera_mf_hint_evaluation]
+B/altera_mf_hint_evaluation=3*850404
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*68894
+I=0*309195
+I/altera_mf_hint_evaluation=I/ALTERA_MF_HINT_EVALUATION 0*311218
+M=3|0|v63|0|./src/altera_mf.vhd|0*308826*0xe0b183684aba1058882dcb17a0179bad83a462dc|0*309115*0xf2538cdc6f7b23a146389216c886e772
+M/altera_mf_hint_evaluation=M/ALTERA_MF_HINT_EVALUATION 4|0|v63|0|./src/altera_mf.vhd|0*309369*0x78d00e33d98bcd2532837e532102cb336dfcf6cf|0*311110*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|331
+
+[altera_std_synchronizer]
+A/behavioral=21|./src/altera_mf.vhd|47869|1*326191
+B/behavioral=3*5056676
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*1650484
+I/behavioral=0*1651469
+M=11|0|v63|0|./src/altera_mf.vhd|0*1650081*0x175bad8f3d9ce82dada6f12bb7225c9b67722cc9|0*1650406*0xf2538cdc6f7b23a146389216c886e772
+M/behavioral=21|0|v63|0|./src/altera_mf.vhd|0*1650656*0x5c90c8377a91ec119be99fb85fadff5509077995|0*1651377*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|47854
+
+[altera_std_synchronizer_bundle]
+A/behavioral=21|./src/altera_mf.vhd|47967|1*327038
+B/behavioral=3*5061962
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*1652441
+I/behavioral=0*1653228
+M=11|0|v63|0|./src/altera_mf.vhd|0*1651943*0x909acfd56f1a52c09f43a846910268009e901db5|0*1652356*0xf2538cdc6f7b23a146389216c886e772
+M/behavioral=21|0|v63|0|./src/altera_mf.vhd|0*1652620*0xef651524c76b86f84b7f5b87400fec207132a24f|0*1653129*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|47951
+
+[altfp_mult]
+A/behavior=21|./src/altera_mf.vhd|29944|1*221029
+B/behavior=3*3398891
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1166249
+I/behavior=0*1177546
+M=11|0|v63|0|./src/altera_mf.vhd|0*1165230*0xf6c9dab1d524cc4e98a349977a439465d0c74673|0*1166184*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1166488*0xd23a9b718fd9b75724d3ef96cce6d920271b831f|0*1177469*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|29897
+
+[altlvds_rx]
+A/behavior=21|./src/altera_mf.vhd|33770|1*245040
+B/behavior=3*3702942
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1268345
+I/behavior=0*1319797
+M=11|0|v63|0|./src/altera_mf.vhd|0*1264413*0x1ed19672558718e26808ac423546657b08438c7c|0*1268280*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1268584*0x81828bc8207edc0a1ec837d526879b178854750c|0*1319720*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|33673
+
+[altlvds_tx]
+A/behavior=21|./src/altera_mf.vhd|36327|1*264118
+B/behavior=3*3992909
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1344689
+I/behavior=0*1388776
+M=11|0|v63|0|./src/altera_mf.vhd|0*1342647*0xbab19f5d7290df5133049c80b60e2a7f12319eda|0*1344624*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1344928*0x3baa69aa52c3efa24eb50cc33ec26a483f9b6043|0*1388699*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|36204
+
+[altmult_accum]
+A/behaviour=21|./src/altera_mf.vhd|20410|1*192981
+B/behaviour=3*2138233
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behaviour=8.2.1986.SP1.35.3497  (Windows)
+I=0*894329
+I/behaviour=0*955643
+M=11|0|v63|0|./src/altera_mf.vhd|0*890095*0x329be628d11ed16c1b62db553e9fe10f371c1e93|0*894261*0xf2538cdc6f7b23a146389216c886e772
+M/behaviour=21|0|v63|0|./src/altera_mf.vhd|0*894571*0xb90969b7c0ea9fa6828b9a72ce6a7e2dba408446|0*955562*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|20287
+
+[altmult_add]
+A/behaviour=21|./src/altera_mf.vhd|22992|1*201669
+B/behaviour=3*2426992
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behaviour=8.2.1986.SP1.35.3497  (Windows)
+I=0*966534
+I/behaviour=0*1164549
+M=11|0|v63|0|./src/altera_mf.vhd|0*957319*0x4a7316c1c927df25d6952f51d78da0001a68e84f|0*966468*0xf2538cdc6f7b23a146389216c886e772
+M/behaviour=21|0|v63|0|./src/altera_mf.vhd|0*966774*0x44886c549c89de689adffc74829999e563e7d9ae|0*1164470*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|22706
+
+[altparallel_flash_loader]
+A/sim_altparallel_flash_loader=21|./src/altera_mf.vhd|50831|1*348459
+B/sim_altparallel_flash_loader=3*5251789
+C=8.2.1986.SP1.35.3497  (Windows)
+C/sim_altparallel_flash_loader=8.2.1986.SP1.35.3497  (Windows)
+I=0*1734163
+I/sim_altparallel_flash_loader=0*1734720
+M=11|0|v63|0|./src/altera_mf.vhd|0*1732199*0xb61d85699f66b33137b95e11af115e8bb34af16d|0*1734084*0xf2538cdc6f7b23a146389216c886e772
+M/sim_altparallel_flash_loader=21|0|v63|0|./src/altera_mf.vhd|0*1734384*0xb3cc48cc88387e0c3c270f877386b18dec5a3518|0*1734609*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|50777
+
+[altpll]
+A/behavior=21|./src/altera_mf.vhd|17323|1*158504
+B/behavior=3*1715925
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*803435
+I/behavior=0*883099
+M=11|0|v63|0|./src/altera_mf.vhd|0*789155*0x585216edd4cc057076ad1d2ae81390c87a988f9d|0*803374*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*803638*0x1b4aea258f94386ba2b6cfeb5fdc8802c6aa61b5|0*883026*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|16900
+
+[altserial_flash_loader]
+A/sim_altserial_flash_loader=21|./src/altera_mf.vhd|50858|1*349740
+C=8.2.1986.SP1.35.3497  (Windows)
+C/sim_altserial_flash_loader=8.2.1986.SP1.35.3497  (Windows)
+I=0*1736023
+I/sim_altserial_flash_loader=0*1736564
+M=11|0|v63|0|./src/altera_mf.vhd|0*1735333*0xeb4d270f5c07fd3a423105edf24f404a1ef40623|0*1735946*0xf2538cdc6f7b23a146389216c886e772
+M/sim_altserial_flash_loader=21|0|v63|0|./src/altera_mf.vhd|0*1736242*0x3409e32f9baa42a72693c824bab5e7357b4a54c3|0*1736457*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|50840
+
+[altshift_taps]
+A/behavioural=21|./src/altera_mf.vhd|47561|1*322512
+B/behavioural=3*5033023
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioural=8.2.1986.SP1.35.3497  (Windows)
+I=0*1642570
+I/behavioural=0*1643953
+M=11|0|v63|0|./src/altera_mf.vhd|0*1641897*0x1c1a5d7a4a1c6daf9f637c86c0cfc38d17682ba8|0*1642502*0xf2538cdc6f7b23a146389216c886e772
+M/behavioural=21|0|v63|0|./src/altera_mf.vhd|0*1642732*0x8b26b76210ad7f1d50058b1e80e7eebd79b6884d|0*1643870*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|47529
+
+[altsource_probe]
+A/sim_altsource_probe=21|./src/altera_mf.vhd|50904|1*350491
+B/sim_altsource_probe=3*5252448
+C=8.2.1986.SP1.35.3497  (Windows)
+C/sim_altsource_probe=8.2.1986.SP1.35.3497  (Windows)
+I=0*1738584
+I/sim_altsource_probe=0*1739069
+M=11|0|v63|0|./src/altera_mf.vhd|0*1737278*0x56bf2d72acb2dcc235a5e0def410996b3fe749cd|0*1738514*0xf2538cdc6f7b23a146389216c886e772
+M/sim_altsource_probe=21|0|v63|0|./src/altera_mf.vhd|0*1738796*0xa0b9af15b2c29b9cc69aaf0c1129f8248dabc24d|0*1738976*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|50867
+
+[altsqrt]
+A/behavior=21|./src/altera_mf.vhd|30518|1*223330
+B/behavior=3*3449128
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1178828
+I/behavior=0*1182065
+M=11|0|v63|0|./src/altera_mf.vhd|0*1178126*0x9c935c5f8d6cae13374f428e91c4076a83a3ec32|0*1178766*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1179064*0x3a941edf327d617221fd0668de15e9d06547765e|0*1181991*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|30475
+
+[altsquare]
+A/altsquare_syn=21|./src/altera_mf.vhd|47772|1*324733
+B/altsquare_syn=3*5045938
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altsquare_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*1647735
+I/altsquare_syn=0*1649625
+M=11|0|v63|0|./src/altera_mf.vhd|0*1647071*0x8ef1ea0f4670fb6f88555e8bba3d58d8597669f0|0*1647671*0xf2538cdc6f7b23a146389216c886e772
+M/altsquare_syn=21|0|v63|0|./src/altera_mf.vhd|0*1647925*0x9ea2cdfb024166b0d864644068e8d0522177fd94|0*1649544*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|47747
+
+[altstratixii_oct]
+A/sim_altstratixii_oct=21|./src/altera_mf.vhd|50768|1*347890
+C=8.2.1986.SP1.35.3497  (Windows)
+C/sim_altstratixii_oct=8.2.1986.SP1.35.3497  (Windows)
+I=0*1730787
+I/sim_altstratixii_oct=0*1731280
+M=11|0|v63|0|./src/altera_mf.vhd|0*1730343*0x4c5f5f6824d427d7e1abc04aeedcef4d3c6d197d|0*1730716*0xf2538cdc6f7b23a146389216c886e772
+M/sim_altstratixii_oct=21|0|v63|0|./src/altera_mf.vhd|0*1731000*0xfe1bdf0edf8d9a1209bb91dd607cd58fe6707ea0|0*1731185*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|50756
+
+[altsyncram]
+A/translated=21|./src/altera_mf.vhd|39880|1*279796
+B/translated=3*4250069
+C=8.2.1986.SP1.35.3497  (Windows)
+C/translated=8.2.1986.SP1.35.3497  (Windows)
+I=0*1444588
+I/translated=0*1515993
+M=11|0|v63|0|./src/altera_mf.vhd|0*1421159*0x98e3a2ff073b5864f3633d545679b5a22f2237a5|0*1444523*0xf2538cdc6f7b23a146389216c886e772
+M/translated=21|0|v63|0|./src/altera_mf.vhd|0*1444955*0xb34c5b37a29ec564f28307184c82d2f9aac55cf1|0*1515914*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|39052
+
+[arm_m_cntr]
+A/behave=21|./src/altera_mf.vhd|5300|1*95146
+B/behave=3*1143185
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*472855
+I/behave=0*473679
+M=11|0|v63|0|./src/altera_mf.vhd|0*472477*0x82aeef711bae22cc4f860533d8da35763a7ae791|0*472790*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*473014*0x2e197e03311cf6863087b5efb0554ec5e5ea712d|0*473604*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|5290
+
+[arm_n_cntr]
+A/behave=21|./src/altera_mf.vhd|5351|1*95797
+B/behave=3*1144343
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*474478
+I/behave=0*475511
+M=11|0|v63|0|./src/altera_mf.vhd|0*474100*0x1ca231de58e57c7aa294f9eb7fdf4e26048a459c|0*474413*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*474637*0x43a2d47fc92d31559a148f7d21fcae8bbcf9c73a|0*475436*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|5341
+
+[arm_scale_cntr]
+A/behave=21|./src/altera_mf.vhd|5411|1*96608
+B/behave=3*1145681
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*476385
+I/behave=0*477685
+M=11|0|v63|0|./src/altera_mf.vhd|0*475952*0x7de418a90f229ef40ceb502876a8d2a0e494aff8|0*476316*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*476548*0xda99dec8d856097bda4866971a0b1a632b49a3c5|0*477606*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|5399
+
+[dcfifo]
+A/behavior=21|./src/altera_mf.vhd|47405|1*320179
+B/behavior=3*5016822
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1638343
+I/behavior=0*1641299
+M=11|0|v63|0|./src/altera_mf.vhd|0*1636960*0x896ae7a76a19722bb1ab1bb1b410d49251bd42b6|0*1638282*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1638530*0x7768708e6fd03e246636a6a94fe276074d1387e2|0*1641226*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|47359
+
+[dcfifo_async]
+A/behavior=21|./src/altera_mf.vhd|45338|1*305513
+B/behavior=3*4849958
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1585415
+I/behavior=0*1597282
+M=11|0|v63|0|./src/altera_mf.vhd|0*1584091*0xf90aec97a30258008d3c2644991b48555b2d7002|0*1585348*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1585704*0x747c9dfc7c58994b930495de5051ded6bfd0afdb|0*1597203*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|45298
+
+[dcfifo_dffpipe]
+A/behavior=21|./src/altera_mf.vhd|45036|1*303279
+B/behavior=3*4839902
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1578498
+I/behavior=0*1579649
+M=11|0|v63|0|./src/altera_mf.vhd|0*1578006*0x4f01b0f32b111095f0698e16c25340a51022be88|0*1578429*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1578741*0x483bce3de0b2aeea92bb203347418886121cef2e|0*1579568*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|45018
+
+[dcfifo_fefifo]
+A/behavior=21|./src/altera_mf.vhd|45128|1*304108
+B/behavior=3*4844106
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1580874
+I/behavior=0*1583359
+M=11|0|v63|0|./src/altera_mf.vhd|0*1580223*0xc8968073d876f05f550607cf8394699ea0c42e3d|0*1580806*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1581116*0x29f9203065387c0daeda2bbe97cb9d07c3347579|0*1583279*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|45104
+
+[dcfifo_low_latency]
+A/behavior=21|./src/altera_mf.vhd|46331|1*311925
+B/behavior=3*4926960
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1608750
+I/behavior=0*1623981
+M=11|0|v63|0|./src/altera_mf.vhd|0*1607372*0x70d985e03d5892e35baabe8d2f7ffbee9b1aca29|0*1608677*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1609093*0x4e736bd731c3de29898bd7d44d1bebee1706e827|0*1623896*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|46288
+
+[dcfifo_mixed_widths]
+A/behavior=21|./src/altera_mf.vhd|47027|1*315716
+B/behavior=3*4981773
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1626578
+I/behavior=0*1636020
+M=11|0|v63|0|./src/altera_mf.vhd|0*1624949*0x1f8fba6161c1c9dd7b8689e19af9abe7d6a96f17|0*1626504*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1626874*0xf10ead16982a05abb2667dbf2ee7d0d0b01c7887|0*1635934*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|46979
+
+[dcfifo_sync]
+A/behavior=21|./src/altera_mf.vhd|45925|1*309352
+B/behavior=3*4895695
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1599141
+I/behavior=0*1606556
+M=11|0|v63|0|./src/altera_mf.vhd|0*1598060*0xaddaccc8b47381a1361ad1b54cee5e2706a150e9|0*1599075*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1599429*0xba64064f73a0b84cb7bbee7d8d25ce9f35aefd2c|0*1606478*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|45889
+
+[dffp]
+A/behave=21|./src/altera_mf.vhd|1778|1*74534
+B/behave=3*935511
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*367391
+I/behave=0*367849
+M=11|0|v63|0|./src/altera_mf.vhd|0*367056*0x3750b4af243d5d588cc7aa67823abbcb60d19bbc|0*367332*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*367544*0xb07f04fa65a155c97640bd73e65426e79c937b14|0*367780*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|1768
+
+[dummy_hub]
+A/behavior=21|./src/altera_mf.vhd|50242|1*341166
+B/behavior=3*5223801
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1712176
+I/behavior=0*1715523
+M=11|0|v63|0|./src/altera_mf.vhd|0*1710197*0xd673dee670af9697df05100a5093235de6290ecd|0*1712112*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1712366*0x3d4b545e1ca5afa723d33674c8694295ccdcc810|0*1715447*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|50180
+
+[flexible_lvds_rx]
+A/behavior=21|./src/altera_mf.vhd|32355|1*234874
+B/behavior=3*3571182
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1223837
+I/behavior=0*1234622
+M=11|0|v63|0|./src/altera_mf.vhd|0*1222754*0x8a53e9cb292a396252abaafe3d358be59988a7da|0*1223766*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1224034*0xb8960df785a6b3f766ef65e1ba453fb2fa2b914b|0*1234539*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|32317
+
+[flexible_lvds_tx]
+A/behavior=21|./src/altera_mf.vhd|35649|1*261817
+B/behavior=3*3915696
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1327001
+I/behavior=0*1341738
+M=11|0|v63|0|./src/altera_mf.vhd|0*1326038*0x665b1471ac8596e5e553a5d7c027d3ed15c48dee|0*1326930*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1327198*0x40ca01282c3a2aeae09794698870ec55a024f9e1|0*1341655*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|35612
+
+[jtag_tap_controller]
+A/fsm=A/FSM 21|./src/altera_mf.vhd|49945|1*339878
+B/fsm=3*5214310
+C=8.2.1986.SP1.35.3497  (Windows)
+C/fsm=8.2.1986.SP1.35.3497  (Windows)
+I=0*1705737
+I/fsm=I/FSM 0*1709563
+M=11|0|v63|0|./src/altera_mf.vhd|0*1704688*0xa7004071ef14f007df0e636592853a1bfb62857c|0*1705663*0xf2538cdc6f7b23a146389216c886e772
+M/fsm=M/FSM 21|0|v63|0|./src/altera_mf.vhd|0*1705937*0x83bccc0b10a3155d9474241811001099d1c36083|0*1709482*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|49911
+
+[lcell]
+A/behavior=A/BEHAVIOR 21|./src/altera_mf.vhd|32|1*67540
+B/behavior=3*834180
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*301290
+I/behavior=I/BEHAVIOR 0*301657
+M=11|0|v63|0|./src/altera_mf.vhd|0*301045*0x73aca7f9ef675d5e967378afbc43691ca84c52a7|0*301230*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_mf.vhd|0*301444*0xb8240fa3bfdc9f04abad08db68387513ec35c5f0|0*301585*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|27
+
+[lpm_abs]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|3106|1*29880
+B/lpm_syn=3*242282
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*103440
+I/lpm_syn=I/LPM_SYN 0*104313
+M=11|0|v63|0|./src/220model.vhd|0*102946*0x24d6ec022f31099ae240dbd1baae96bbab9f6df9|0*103379*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*103676*0x34b68eb762d48b4513a0da59dc37753e6943da09|0*104241*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|3090
+
+[lpm_add_sub]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|1918|1*20273
+B/lpm_syn=3*150061
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*73707
+I/lpm_syn=I/LPM_SYN 0*76212
+M=11|0|v63|0|./src/220model.vhd|0*72850*0xec57ac4dbcbbff0f7517ca60869c2094aca11a1d|0*73642*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*73915*0xba29ccad57fc5e279915343a5a2d64b0dfe5278a|0*76136*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|1892
+
+[lpm_add_sub_signed]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|1612|1*17337
+B/lpm_syn=3*115853
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*65101
+I/lpm_syn=I/LPM_SYN 0*68258
+M=11|0|v63|0|./src/220model.vhd|0*64298*0x695db9685d056e1549ca97b7bfc772a385dc28cd|0*65029*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*65348*0x0006676d4330b71a22625b6f80b1e4775910b6d8|0*68175*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|1586
+
+[lpm_add_sub_unsigned]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|1774|1*18805
+B/lpm_syn=3*135009
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*69693
+I/lpm_syn=I/LPM_SYN 0*72209
+M=11|0|v63|0|./src/220model.vhd|0*68874*0x8211437505f567278df82eec09984630fd2de131|0*69619*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*69958*0x56d5a05cce33d7552ad68af687fabe58ae8814fe|0*72124*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|1749
+
+[lpm_and]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|742|1*8453
+B/lpm_syn=3*55487
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*44599
+I/lpm_syn=I/LPM_SYN 0*45634
+M=11|0|v63|0|./src/220model.vhd|0*44128*0x7393d2ae7076c09eece5f5cdc2d075417d47efa4|0*44538*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*44803*0x278a6781efaa62a9f04faf108750ce632e5ac3a3|0*45562*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|723
+
+[lpm_bipad]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|8620|1*61359
+B/lpm_syn=3*831977
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*240307
+I/lpm_syn=I/LPM_SYN 0*241048
+M=11|0|v63|0|./src/220model.vhd|0*239791*0xbee0f56452a33f6e0228c753fab542ab24c49cc5|0*240244*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*240513*0x9019d5a8d207254d36c4d281627b6c4c2da26edb|0*240974*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|8604
+
+[lpm_bustri]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|1036|1*12409
+B/lpm_syn=3*82328
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*50722
+I/lpm_syn=I/LPM_SYN 0*51604
+M=11|0|v63|0|./src/220model.vhd|0*50128*0x422b8d2e4491e2b152ac76ada8001891e0a1a7d4|0*50658*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*50977*0xbf65a810e8e6c60df22c8ec2f43e3df5a2a5c471|0*51529*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|1011
+
+[lpm_clshift]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|1373|1*15821
+B/lpm_syn=3*94741
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*58762
+I/lpm_syn=I/LPM_SYN 0*63627
+M=11|0|v63|0|./src/220model.vhd|0*57931*0xa3e7848d9c20a336fe161a1ce902f6f2f5d7216a|0*58697*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*59050*0x9fd4f35bec6376ac759917f48e4029495a72494c|0*63551*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|1333
+
+[lpm_common_conversion]
+B/lpm_common_conversion=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*2035
+I=0*16310
+I/lpm_common_conversion=I/LPM_COMMON_CONVERSION 0*21346
+M=3|0|v63|0|./src/220model.vhd|0*15650*0x140c021bff88266dbbbf9bae96b766abafda45ec|0*16235*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_common_conversion=M/LPM_COMMON_CONVERSION 4|0|v63|0|./src/220model.vhd|0*16512*0x891bfe238602bbd031a20d9302836350594d7598|0*21247*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|45
+
+[lpm_compare]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|2403|1*24501
+B/lpm_syn=3*185236
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*85572
+I/lpm_syn=I/LPM_SYN 0*87881
+M=11|0|v63|0|./src/220model.vhd|0*84772*0x346ace69dc43efb6ac5b5db16a3f5af0305c49ae|0*85507*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*85780*0x1a6fa5a753997adb2ec22b5c8cfab52e31791c8b|0*87805*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|2363
+
+[lpm_compare_signed]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|2096|1*22013
+B/lpm_syn=3*157524
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*77617
+I/lpm_syn=I/LPM_SYN 0*80146
+M=11|0|v63|0|./src/220model.vhd|0*76835*0xeebd53115db27973d7f95467140f9277f47fe04d|0*77545*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*77912*0x2cdeec6c09b214551768aabdfb68be7af44c39f8|0*80063*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|2058
+
+[lpm_compare_unsigned]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|2245|1*23257
+B/lpm_syn=3*171380
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*81584
+I/lpm_syn=I/LPM_SYN 0*84131
+M=11|0|v63|0|./src/220model.vhd|0*80794*0x31c08f60286798513a6709d513fc02efcd4bb687|0*81510*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*81881*0x702bf029b41bd6ddb74a94b6cfed8055b5a45d91|0*84046*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|2207
+
+[lpm_components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*15053
+M=3|0|v63|0|./src/220pack.vhd|0*820*0x66392e35618f45faef3246877fd9fa62d6523555|0*14986*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220pack.vhd|15
+
+[lpm_constant]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|629|1*6701
+B/lpm_syn=3*52813
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*41271
+I/lpm_syn=I/LPM_SYN 0*41966
+M=11|0|v63|0|./src/220model.vhd|0*40734*0x5f05003b613100b3a8af1638785eef71901ad273|0*41205*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*41560*0x4d03f7b7323e08641717376fbee37a41648c5be5|0*41889*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|607
+
+[lpm_counter]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|3202|1*30772
+B/lpm_syn=3*244629
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*106083
+I/lpm_syn=I/LPM_SYN 0*111002
+M=11|0|v63|0|./src/220model.vhd|0*104957*0x2810a10b568922e7810323b750400ed5ae3b98cd|0*106018*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*106403*0xf0fa9827050ab95640c6ccc50400c8b86166e0e1|0*110926*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|3168
+
+[lpm_decode]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|1240|1*14609
+B/lpm_syn=3*89878
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*55763
+I/lpm_syn=I/LPM_SYN 0*57316
+M=11|0|v63|0|./src/220model.vhd|0*55122*0x6aee1f830e332ed2c9a0dcdf29407655a45a5551|0*55699*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*56018*0x1fe567306b6c04ca5e4cd687541ebdc364012e29|0*57241*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|1210
+
+[lpm_device_families]
+B/lpm_device_families=3*17697
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*3349
+I=0*25867
+I/lpm_device_families=I/LPM_DEVICE_FAMILIES 0*40273
+M=3|0|v63|0|./src/220model.vhd|0*24946*0x085e36ba9212cc8cd2d6b353bc979c9d55a3f06c|0*25794*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_device_families=M/LPM_DEVICE_FAMILIES 4|0|v63|0|./src/220model.vhd|0*26035*0x32286108caa8c4bd667a05cd1995142f1c3acedf|0*40178*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|411
+
+[lpm_divide]
+A/behave=21|./src/220model.vhd|2782|1*27885
+B/behave=3*212479
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*95634
+I/behave=0*102352
+M=11|0|v63|0|./src/220model.vhd|0*94736*0x9cb55da56d7362a71e64ebf083523f0250bfc3c9|0*95570*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/220model.vhd|0*95953*0x613da85508a8facd7decffcea24885b93144a0ce|0*102278*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|2758
+
+[lpm_ff]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|3641|1*34092
+B/lpm_syn=3*272332
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*115822
+I/lpm_syn=I/LPM_SYN 0*118528
+M=11|0|v63|0|./src/220model.vhd|0*114983*0xc1f0328e2e08114da7d2bfdd78a6e12c19638238|0*115762*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*116105*0x07312d4020ad12f5a58c64a8554a2e29b51da36b|0*118457*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|3610
+
+[lpm_fifo]
+A/behavior=21|./src/220model.vhd|7237|1*49428
+B/behavior=3*750072
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*206897
+I/behavior=0*213659
+M=11|0|v63|0|./src/220model.vhd|0*206059*0xa457cca17b5886d82d3af1d8fd6bf23f2514226d|0*206835*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/220model.vhd|0*207230*0xf81a1efb8a566f14d6dcba2a39bd6bc77df0979b|0*213585*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|7208
+
+[lpm_fifo_dc]
+A/behavior=21|./src/220model.vhd|8347|1*57258
+B/behavior=3*814198
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*232471
+I/behavior=0*236181
+M=11|0|v63|0|./src/220model.vhd|0*231417*0xc561cb9de0a078c572db06de98b33acfccfb9fba|0*232406*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/220model.vhd|0*232791*0x94db2e656063da296f2b7b5947f31ea0f29a61b9|0*236104*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|8313
+
+[lpm_fifo_dc_async]
+A/behavior=21|./src/220model.vhd|7889|1*53803
+B/behavior=3*780177
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*221917
+I/behavior=0*230618
+M=11|0|v63|0|./src/220model.vhd|0*220668*0x7d40d2022596b37f79f465e2f7d3be56bf404390|0*221846*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/220model.vhd|0*222243*0x3969d0dff14262e23be828f910b613ef41932bc2|0*230535*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|7852
+
+[lpm_fifo_dc_dffpipe]
+A/behavior=21|./src/220model.vhd|7588|1*51553
+B/behavior=3*770205
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*214824
+I/behavior=0*216035
+M=11|0|v63|0|./src/220model.vhd|0*214281*0x806324727565d225cca1e4dcd2d6a48f1a773e22|0*214751*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/220model.vhd|0*215120*0x49de0c67c5ab333fc328c01c55a41ea121ab4dfa|0*215950*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|7568
+
+[lpm_fifo_dc_fefifo]
+A/behavior=21|./src/220model.vhd|7682|1*52398
+B/behavior=3*774373
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*217381
+I/behavior=0*219926
+M=11|0|v63|0|./src/220model.vhd|0*216683*0x8c0e2a9804d87fcd65ab10c8b8cfcf077ee2b3e8|0*217309*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/220model.vhd|0*217676*0x0ab48203042730dcfb4ef4ff397ae36636d4334b|0*219842*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|7658
+
+[lpm_hint_evaluation]
+B/lpm_hint_evaluation=3*14750
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*2877
+I=0*22247
+I/lpm_hint_evaluation=I/LPM_HINT_EVALUATION 0*24312
+M=3|0|v63|0|./src/220model.vhd|0*21904*0x5178eff44cbca8b67161564a1cb8478f6813966a|0*22174*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_hint_evaluation=M/LPM_HINT_EVALUATION 4|0|v63|0|./src/220model.vhd|0*22415*0x85bafda097e7af72a360d1a4d0bd1ef69afbecc5|0*24217*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|331
+
+[lpm_inpad]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|8512|1*59607
+B/lpm_syn=3*829851
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*237256
+I/lpm_syn=I/LPM_SYN 0*237815
+M=11|0|v63|0|./src/220model.vhd|0*236812*0x89b0d0d71e31ff6c5ce47a49f8f5303bab6e58f8|0*237193*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*237462*0x06da612fd3131ada9e42431068407b5763b2e9e9|0*237741*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|8498
+
+[lpm_inv]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|685|1*7577
+B/lpm_syn=3*54016
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*42983
+I/lpm_syn=I/LPM_SYN 0*43584
+M=11|0|v63|0|./src/220model.vhd|0*42515*0x49039b820e4927f7495b4d0ef8ad67e5cea29bc6|0*42922*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*43235*0xd2bdc8205affd481f6c55c240cfd12dff64e201a|0*43512*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|667
+
+[lpm_latch]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|3489|1*32800
+B/lpm_syn=3*264557
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*112330
+I/lpm_syn=I/LPM_SYN 0*114342
+M=11|0|v63|0|./src/220model.vhd|0*111648*0xd9469c5726030738ccbc27322b31a96608754552|0*112267*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*112616*0xdcbf83d57cb795a0a7d979a400a7e4029dc1a168|0*114268*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|3465
+
+[lpm_mult]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|2571|1*26113
+B/lpm_syn=3*191027
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*89371
+I/lpm_syn=I/LPM_SYN 0*94076
+M=11|0|v63|0|./src/220model.vhd|0*88526*0xb169f33ce79f80bd274e4ece43e1d939bae35472|0*89309*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*89656*0xac4cb8167dc69976886813af33617fc2066f41ab|0*94003*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|2536
+
+[lpm_mux]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|1122|1*13365
+B/lpm_syn=3*84575
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*52929
+I/lpm_syn=I/LPM_SYN 0*54511
+M=11|0|v63|0|./src/220model.vhd|0*52215*0xa45702ab9b439dcf7bcb5626d687ea102b45b652|0*52868*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*53213*0x838f405bffb2bf1e1eb6119a4384e0cf48cdfaee|0*54439*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|1090
+
+[lpm_or]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|821|1*9761
+B/lpm_syn=3*64434
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*46593
+I/lpm_syn=I/LPM_SYN 0*47627
+M=11|0|v63|0|./src/220model.vhd|0*46129*0xddb8bc8f59e82814a5c68b58c6e8a08a5067bb4f|0*46533*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*46796*0x5550d85966683af2d8112da074ba5b2380d417e4|0*47556*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|803
+
+[lpm_outpad]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|8565|1*60483
+B/lpm_syn=3*830914
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*238729
+I/lpm_syn=I/LPM_SYN 0*239290
+M=11|0|v63|0|./src/220model.vhd|0*238284*0xd258e99d37f687ec5658d548145ab6a66eca48d3|0*238665*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*238936*0xcac9ed3006831b466f7069b93c0b09b7acc995a2|0*239215*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|8551
+
+[lpm_ram_dp]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|4829|1*40144
+B/lpm_syn=3*409513
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*145091
+I/lpm_syn=I/LPM_SYN 0*164435
+M=11|0|v63|0|./src/220model.vhd|0*143848*0x93c6d4fe0882c84d4f2c1d5d32a00316d4a8295d|0*145027*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*145490*0xdcdb133f00f0ead1edb1524dd89654681ce11e62|0*164360*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|4776
+
+[lpm_ram_dq]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|4024|1*37172
+B/lpm_syn=3*298132
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*124619
+I/lpm_syn=I/LPM_SYN 0*143026
+M=11|0|v63|0|./src/220model.vhd|0*123604*0x22942178c87843c35b921e1d231bf58fcf51ef0e|0*124555*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*125018*0x214ad4acf09d68bf7d46715b9ae84adc008c5337|0*142951*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|3984
+
+[lpm_ram_io]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|5629|1*43308
+B/lpm_syn=3*525590
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*166199
+I/lpm_syn=I/LPM_SYN 0*185212
+M=11|0|v63|0|./src/220model.vhd|0*165209*0xde7800e7e7350a22a81b32460b6b64ec09e4f881|0*166135*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*166550*0x1ed893cf5bd3961618f12ff964ef1fb4bf8f0fbe|0*185137*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|5607
+
+[lpm_rom]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|6436|1*46360
+B/lpm_syn=3*639779
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*186823
+I/lpm_syn=I/LPM_SYN 0*205322
+M=11|0|v63|0|./src/220model.vhd|0*185935*0xd88800a5ac4b7998012e58f308cce096a60b30f3|0*186762*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*187219*0x58731013239c194e2f4a0c885b276c368f03e1c1|0*205250*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|6401
+
+[lpm_shiftreg]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|3829|1*35560
+B/lpm_syn=3*284608
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*120084
+I/lpm_syn=I/LPM_SYN 0*122924
+M=11|0|v63|0|./src/220model.vhd|0*119188*0x74e52d1f46d9f2ba92c9b37bdbd79091369fd899|0*120018*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*120373*0x84ef3e1b33706f7aec2239558c22fc2fb2b1e3a0|0*122847*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|3788
+
+[lpm_xor]
+A/lpm_syn=A/LPM_SYN 21|./src/220model.vhd|902|1*11085
+B/lpm_syn=3*73381
+C=8.2.1986.SP1.35.3497  (Windows)
+C/lpm_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*48591
+I/lpm_syn=I/LPM_SYN 0*49629
+M=11|0|v63|0|./src/220model.vhd|0*48122*0x14d4554f97940a3dfe23851ccfdebfa14d649376|0*48530*0xf2538cdc6f7b23a146389216c886e772
+M/lpm_syn=M/LPM_SYN 21|0|v63|0|./src/220model.vhd|0*48795*0xe3231a52966618634c192b6a29cf7d1bf24bfbfb|0*49557*0xf2538cdc6f7b23a146389216c886e772
+R=./src/220model.vhd|884
+
+[mf_cda_mn_cntr]
+A/behave=21|./src/altera_mf.vhd|11339|1*128049
+B/behave=3*1458825
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*641860
+I/behave=0*642780
+M=11|0|v63|0|./src/altera_mf.vhd|0*641403*0x051cc9cb20d9b5b75f24e657ec9f3d9bbf0b158a|0*641791*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*642103*0xf6cd5cdb6a2ac4f0d3104d6e54bd039c3d59f0f3|0*642701*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|11329
+
+[mf_cda_scale_cntr]
+A/behave=21|./src/altera_mf.vhd|11393|1*128716
+B/behave=3*1459983
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*643753
+I/behave=0*645065
+M=11|0|v63|0|./src/altera_mf.vhd|0*643308*0xcc3162d550d6ddfc283e9f40c59e0a58c4f00762|0*643681*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*643919*0x07d2634bdb149017fca9b59c96ff4a11f0d249bc|0*644983*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|11381
+
+[mf_cycloneiii_pll]
+A/vital_pll=21|./src/altera_mf.vhd|11692|1*129527
+B/vital_pll=3*1461513
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_pll=8.2.1986.SP1.35.3497  (Windows)
+I=0*652535
+I/vital_pll=0*712563
+M=11|0|v63|0|./src/altera_mf.vhd|0*646492*0x07f9d495019cced5bec0e3ff73783915091eab9f|0*652463*0xf2538cdc6f7b23a146389216c886e772
+M/vital_pll=21|0|v63|0|./src/altera_mf.vhd|0*652781*0x53961779ec44d02c2dc1c8b894ac9b67384aa8f6|0*712478*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|11475
+
+[mf_cycloneiiigl_pll]
+A/vital_pll=21|./src/altera_mf.vhd|14496|1*145064
+B/vital_pll=3*1590810
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_pll=8.2.1986.SP1.35.3497  (Windows)
+I=0*726577
+I/vital_pll=0*786646
+M=11|0|v63|0|./src/altera_mf.vhd|0*720428*0xcd346316ceef19a22ce94fcc1a4e757b619a0bc7|0*726503*0xf2538cdc6f7b23a146389216c886e772
+M/vital_pll=21|0|v63|0|./src/altera_mf.vhd|0*726825*0xe5ff5545f70a116d6b699b3c43eb02719421df70|0*786559*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|14290
+
+[mf_m_cntr]
+A/behave=21|./src/altera_mf.vhd|1839|1*75566
+B/behave=3*936579
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*369743
+I/behave=0*370563
+M=11|0|v63|0|./src/altera_mf.vhd|0*369362*0xcdd6a5b96da263b9824c05b91565ba63bc5206a7|0*369679*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*369901*0x5cb50750067e94325d028966b4c12aacca84fdc7|0*370489*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|1829
+
+[mf_n_cntr]
+A/behave=21|./src/altera_mf.vhd|1888|1*76217
+B/behave=3*937737
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*371281
+I/behave=0*372346
+M=11|0|v63|0|./src/altera_mf.vhd|0*370950*0xa8f39bfc708dd58944c1ad94b61f83ddad5a5482|0*371217*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*371439*0x5036e91988c5b9006061dad73a8c334db4033bdc|0*372272*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|1880
+
+[mf_pll_reg]
+A/behave=21|./src/altera_mf.vhd|2037|1*77903
+B/behave=3*941181
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*375694
+I/behave=0*376245
+M=11|0|v63|0|./src/altera_mf.vhd|0*375342*0xf558f5f71f8920f781f52d0c67b7151fee9ccc94|0*375629*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*375853*0x36c9287fb1dda0447336e40278d46af2b4d91c08|0*376170*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|2028
+
+[mf_pllpack]
+B/mf_pllpack=3*914996
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*73287
+I=0*352184
+I/mf_pllpack=I/MF_pllpack 0*366685
+M=3|0|v63|0|./src/altera_mf.vhd|0*349287*0xbb210ff6cbf9d665ca6114a4b7a2ea383b4d3e84|0*352119*0xf2538cdc6f7b23a146389216c886e772
+M/mf_pllpack=M/MF_pllpack 4|0|v63|0|./src/altera_mf.vhd|0*352343*0x9bd515c9b3ff11c30d6e673becf08c9e2d19f5b5|0*366607*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|1065
+
+[mf_stingray_mn_cntr]
+A/behave=21|./src/altera_mf.vhd|14096|1*142903
+B/behave=3*1587084
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*713624
+I/behave=0*714564
+M=11|0|v63|0|./src/altera_mf.vhd|0*713147*0xb6c205c89376a8e20af82472e649391ef22dccbf|0*713550*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*713872*0xe5219e784a1428538f4882076afc518842468bec|0*714480*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|14086
+
+[mf_stingray_post_divider]
+A/behave=21|./src/altera_mf.vhd|14147|1*143570
+B/behave=3*1588242
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*715516
+I/behave=0*716621
+M=11|0|v63|0|./src/altera_mf.vhd|0*715072*0x027f8a9a98372c01baacd30e38c2f60f2a26b386|0*715437*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*715769*0x62f172fff87ff7601eb15f6ff0719cda5f035ca0|0*716532*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|14138
+
+[mf_stingray_scale_cntr]
+A/behave=21|./src/altera_mf.vhd|14212|1*144237
+B/behave=3*1589280
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*717629
+I/behave=0*718962
+M=11|0|v63|0|./src/altera_mf.vhd|0*717164*0xc443b1e5b1e010c0ecfd4a322a1c1d56e8d259ff|0*717552*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*717800*0x1f864dbe05ae9f61eae55428d4cb61182c54604b|0*718875*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|14200
+
+[mf_stratix_pll]
+A/vital_pll=21|./src/altera_mf.vhd|2336|1*78458
+B/vital_pll=3*941858
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_pll=8.2.1986.SP1.35.3497  (Windows)
+I=0*385192
+I/vital_pll=0*471841
+M=11|0|v63|0|./src/altera_mf.vhd|0*377758*0xd34ca5f0a7df957061974e19b454776f1dd614ce|0*385123*0xf2538cdc6f7b23a146389216c886e772
+M/vital_pll=21|0|v63|0|./src/altera_mf.vhd|0*385435*0x162bba28d8685a87d217bb37ca3f8d5be0f8ead8|0*471759*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|2081
+
+[mf_stratixii_pll]
+A/vital_pll=21|./src/altera_mf.vhd|5699|1*97419
+B/vital_pll=3*1147211
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_pll=8.2.1986.SP1.35.3497  (Windows)
+I=0*485073
+I/vital_pll=0*553234
+M=11|0|v63|0|./src/altera_mf.vhd|0*479092*0xb8d6b5d65e6930007732beecaf5781cefcae001a|0*485002*0xf2538cdc6f7b23a146389216c886e772
+M/vital_pll=21|0|v63|0|./src/altera_mf.vhd|0*485318*0x40ec42d8708f21ad7d2de96c7c6835b8ae0ec8ba|0*553150*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|5489
+
+[mf_stratixiii_pll]
+A/vital_pll=21|./src/altera_mf.vhd|8658|1*112785
+B/vital_pll=3*1304318
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_pll=8.2.1986.SP1.35.3497  (Windows)
+I=0*568373
+I/vital_pll=0*640824
+M=11|0|v63|0|./src/altera_mf.vhd|0*559221*0x44eef1c6b241010fc85203aeac3c3a40da8da132|0*568301*0xf2538cdc6f7b23a146389216c886e772
+M/vital_pll=21|0|v63|0|./src/altera_mf.vhd|0*568619*0xe56ba5280731a813958969ede935dea7fe9494e6|0*640739*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|8354
+
+[mf_ttn_mn_cntr]
+A/behave=21|./src/altera_mf.vhd|8218|1*111307
+B/behave=3*1301630
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*554301
+I/behave=0*555221
+M=11|0|v63|0|./src/altera_mf.vhd|0*553844*0x78e19cfe420d7dbbb92af4917ed922ec257d1df1|0*554232*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*554544*0xd153a2e8c66b511e8e14947513feaaad388cd6ca|0*555142*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|8208
+
+[mf_ttn_scale_cntr]
+A/behave=21|./src/altera_mf.vhd|8272|1*111974
+B/behave=3*1302788
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*556194
+I/behave=0*557506
+M=11|0|v63|0|./src/altera_mf.vhd|0*555749*0x29eaa8bec8f743ac7131997e010cd4ac484aecac|0*556122*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*556360*0x889b8d2b7a127ef93d6eeea0abe5e38d681b36ba|0*557424*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|8260
+
+[parallel_add]
+A/behaviour=21|./src/altera_mf.vhd|43847|1*298836
+B/behaviour=3*4772403
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behaviour=8.2.1986.SP1.35.3497  (Windows)
+I=0*1552980
+I/behaviour=0*1559345
+M=11|0|v63|0|./src/altera_mf.vhd|0*1552162*0x9afd6c9b9482c8f444540070a0a5ba0ec1377633|0*1552913*0xf2538cdc6f7b23a146389216c886e772
+M/behaviour=21|0|v63|0|./src/altera_mf.vhd|0*1553269*0xe856f52ecea4a5d8e36cdcf16ff3cfcdc4872606|0*1559265*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|43817
+
+[pll_iobuf]
+A/behavior=A/BEHAVIOR 21|./src/altera_mf.vhd|1803|1*75057
+B/behavior=3*936056
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*368495
+I/behavior=I/BEHAVIOR 0*368941
+M=11|0|v63|0|./src/altera_mf.vhd|0*368199*0xece1ddf246b50230792140e8ca0a130dc752bada|0*368431*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_mf.vhd|0*368653*0x467bba1db679d744683fd9947163c6b932af5708|0*368865*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|1796
+
+[scfifo]
+A/behavior=21|./src/altera_mf.vhd|44190|1*300610
+B/behavior=3*4797721
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1561311
+I/behavior=0*1577455
+M=11|0|v63|0|./src/altera_mf.vhd|0*1560103*0xcb5afe2338e797e58ea5db0cb2decafc069b40f9|0*1561250*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1561594*0xcd5f935981b6b0e9b72f1251f30f1251c4f97195|0*1577382*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|44149
+
+[signal_gen]
+A/simmodel=A/simModel 21|./src/altera_mf.vhd|49685|1*338489
+B/simmodel=3*5199561
+C=8.2.1986.SP1.35.3497  (Windows)
+C/simmodel=8.2.1986.SP1.35.3497  (Windows)
+I=0*1699387
+I/simmodel=I/simModel 0*1704080
+M=11|0|v63|0|./src/altera_mf.vhd|0*1698832*0x10323b6fd3ec6ee94a0d27141294fbc5055ef28a|0*1699322*0xf2538cdc6f7b23a146389216c886e772
+M/simmodel=M/simModel 21|0|v63|0|./src/altera_mf.vhd|0*1699658*0x19c596981dbb691e6304038c7f25b97afa5492be|0*1704003*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|49670
+
+[sld_node]
+B/sld_node=3*5162704
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*337132
+I=0*1691748
+I/sld_node=I/SLD_NODE 0*1698363
+M=3|0|v63|0|./src/altera_mf.vhd|0*1689457*0x719c841732c36b46e7248f2ffa28c41d54d1143a|0*1691685*0xf2538cdc6f7b23a146389216c886e772
+M/sld_node=M/SLD_NODE 4|0|v63|0|./src/altera_mf.vhd|0*1691937*0xa8550362811312bd39f62d837f8ce0405157fb4f|0*1698289*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|49137
+
+[sld_signaltap]
+A/sim_sld_signaltap=21|./src/altera_mf.vhd|50747|1*346044
+B/sim_sld_signaltap=3*5248784
+C=8.2.1986.SP1.35.3497  (Windows)
+C/sim_sld_signaltap=8.2.1986.SP1.35.3497  (Windows)
+I=0*1729402
+I/sim_sld_signaltap=0*1729870
+M=11|0|v63|0|./src/altera_mf.vhd|0*1726144*0xbfb60d4415a40a7da9dd72c7f10d20c0de3b2cd0|0*1729334*0xf2538cdc6f7b23a146389216c886e772
+M/sim_sld_signaltap=21|0|v63|0|./src/altera_mf.vhd|0*1729612*0x01d788c59663d3517b36b9fd02accb6f8c806073|0*1729781*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|50670
+
+[sld_virtual_jtag]
+A/structural=21|./src/altera_mf.vhd|50429|1*343035
+B/structural=3*5245622
+C=8.2.1986.SP1.35.3497  (Windows)
+C/structural=8.2.1986.SP1.35.3497  (Windows)
+I=0*1717818
+I/structural=0*1724958
+M=11|0|v63|0|./src/altera_mf.vhd|0*1716191*0xba855a82a785895e990a16386c7e0b52449d3fb4|0*1717747*0xf2538cdc6f7b23a146389216c886e772
+M/structural=21|0|v63|0|./src/altera_mf.vhd|0*1717983*0xa60b4bc9d7448bd4f82fded7f76e679317e45baf|0*1724873*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|50374
+
+[stratix_tx_outclk]
+A/behavior=21|./src/altera_mf.vhd|35434|1*259967
+B/behavior=3*3906752
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1321168
+I/behavior=0*1322929
+M=11|0|v63|0|./src/altera_mf.vhd|0*1320579*0xf51c8e1bc4c5d3de911a98f28a3dc3f7200e386b|0*1321096*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1321366*0x8c06152e6355e42c2466c2acc1311b83f4c67e67|0*1322845*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|35408
+
+[stratixii_lvds_rx]
+A/behavior=21|./src/altera_mf.vhd|32051|1*232397
+B/behavior=3*3524305
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1215050
+I/behavior=0*1222110
+M=11|0|v63|0|./src/altera_mf.vhd|0*1213621*0x9cb93aa6c2c27020bbfaf814546fd2a108feeb3c|0*1214978*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1215248*0x4d85d3c5d2ea7c90ba29e251c79cefff622f14cb|0*1222026*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|32012
+
+[stratixii_tx_outclk]
+A/behavior=21|./src/altera_mf.vhd|35546|1*260924
+B/behavior=3*3911580
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1324061
+I/behavior=0*1325392
+M=11|0|v63|0|./src/altera_mf.vhd|0*1323464*0x72200c4f8d30dcfe11910b99d9504a56a142de27|0*1323987*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1324261*0x3586491b5a7c6ee6e9b6ea9d5021cf13ab77dfff|0*1325306*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|35520
+
+[stratixiii_lvds_rx]
+A/behavior=21|./src/altera_mf.vhd|33540|1*242611
+B/behavior=3*3683553
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1259670
+I/behavior=0*1263134
+M=11|0|v63|0|./src/altera_mf.vhd|0*1257507*0xc8663848e43b0a9fdf464f7b2c9fb1728eefc135|0*1259597*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1259869*0x1d7e19b4dcff105549a64b389aba8be48905f351|0*1263049*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|33487
+
+[stratixiii_lvds_rx_channel]
+A/behavior=21|./src/altera_mf.vhd|33041|1*238676
+B/behavior=3*3649864
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1244203
+I/behavior=0*1256580
+M=11|0|v63|0|./src/altera_mf.vhd|0*1242519*0xd1962f90a17ff5689220f380772746cc7dbd9103|0*1244122*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1244410*0x47e511d8bd3a0e6e7df7ad8e7b0cdf83420dd886|0*1256487*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|32989
+
+[stratixiii_lvds_rx_dpa]
+A/behavior=21|./src/altera_mf.vhd|32746|1*236999
+B/behavior=3*3627131
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*1236082
+I/behavior=0*1241668
+M=11|0|v63|0|./src/altera_mf.vhd|0*1235223*0xa110d8ab40b312fc6732ac4a75c4b1a86f76aa41|0*1236005*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_mf.vhd|0*1236285*0x4bad8e71dd121290cbec443f83ada69fc517b9f6|0*1241579*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|32713
+
+[stx_scale_cntr]
+A/behave=21|./src/altera_mf.vhd|1948|1*77012
+B/behave=3*939123
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*373228
+I/behave=0*374965
+M=11|0|v63|0|./src/altera_mf.vhd|0*372786*0xdf980ca80fb615a8a5ee411e29bbe769c792e230|0*373159*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/altera_mf.vhd|0*373391*0x79f7202f0352b718cf203de154c63d7c839a7157|0*374886*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_mf.vhd|1936
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, LPM  VHDL LIBRARY
+ModifyID=700
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=839|0lpm.mgf|1739069|0
+1=118|1lpm.mgf|350491|0
+3=114|3lpm.mgf|5252448|0
+
+[~U]
+a_graycounter=A_GRAYCOUNTER 11|0*1644127|
+alt3pram=11|0*1516371|
+alt_aeq_s4=11|0*1660762|
+alt_aeq_s4_func=3|0*1658720|0*1658851
+alt_cal=11|0*1653466|
+alt_dfe=11|0*1679642|
+alt_dfe_func=3|0*1676446|0*1676574
+alt_eyemon=11|0*1667544|
+alt_eyemon_func=3|0*1664311|0*1664442
+altaccumulate=11|0*883519|
+altclklock=11|0*1182310|
+altddio_bidir=11|0*1208842|
+altddio_in=11|0*1199760|
+altddio_out=11|0*1204321|
+altdpram=11|0*1389232|
+altera_common_conversion=ALTERA_COMMON_CONVERSION 3|0*301820|0*301976
+altera_device_families=ALTERA_DEVICE_FAMILIES 3|0*311418|0*311556
+altera_mf_components=3|0*241262|0*241462
+altera_mf_hint_evaluation=ALTERA_MF_HINT_EVALUATION 3|0*308464|0*308621
+altera_std_synchronizer=11|0*1649829|
+altera_std_synchronizer_bundle=11|0*1651652|
+altfp_mult=11|0*1164799|
+altlvds_rx=11|0*1263390|
+altlvds_tx=11|0*1341944|
+altmult_accum=11|0*889197|
+altmult_add=11|0*955895|
+altparallel_flash_loader=11|0*1731514|
+altpll=11|0*787016|
+altserial_flash_loader=11|0*1734970|
+altshift_taps=11|0*1641543|
+altsource_probe=11|0*1736810|
+altsqrt=11|0*1177794|
+altsquare=11|0*1646737|
+altstratixii_oct=11|0*1730098|
+altsyncram=11|0*1420296|
+arm_m_cntr=11|0*472222|
+arm_n_cntr=11|0*473845|
+arm_scale_cntr=11|0*475677|
+dcfifo=DCFIFO 11|0*1636437|
+dcfifo_async=DCFIFO_ASYNC 11|0*1583610|
+dcfifo_dffpipe=DCFIFO_DFFPIPE 11|0*1577747|
+dcfifo_fefifo=DCFIFO_FEFIFO 11|0*1579901|
+dcfifo_low_latency=DCFIFO_LOW_LATENCY 11|0*1606901|
+dcfifo_mixed_widths=DCFIFO_MIXED_WIDTHS 11|0*1624381|
+dcfifo_sync=DCFIFO_SYNC 11|0*1597660|
+dffp=DFFP 11|0*366855|
+dummy_hub=11|0*1709767|
+flexible_lvds_rx=11|0*1222317|
+flexible_lvds_tx=11|0*1325601|
+jtag_tap_controller=11|0*1704360|
+lcell=LCELL 11|0*300875|
+lpm_abs=11|0*102678|
+lpm_add_sub=LPM_ADD_SUB 11|0*72482|
+lpm_add_sub_signed=LPM_ADD_SUB_SIGNED 11|0*63923|
+lpm_add_sub_unsigned=LPM_ADD_SUB_UNSIGNED 11|0*68513|
+lpm_and=11|0*43844|
+lpm_bipad=LPM_BIpad 11|0*239505|
+lpm_bustri=LPM_BUSTRI 11|0*49841|
+lpm_clshift=LPM_CLSHIFT 11|0*57579|
+lpm_common_conversion=LPM_COMMON_CONVERSION 3|0*15216|0*15353
+lpm_compare=LPM_COMPARE 11|0*84436|
+lpm_compare_signed=LPM_COMPARE_SIGNED 11|0*76508|
+lpm_compare_unsigned=LPM_COMPARE_UNSIGNED 11|0*80449|
+lpm_components=LPM_COMPONENTS 3|0*0|0*194
+lpm_constant=LPM_CONSTANT 11|0*40461|
+lpm_counter=LPM_COUNTER 11|0*104557|
+lpm_decode=LPM_DECODE 11|0*54803|
+lpm_device_families=LPM_DEVICE_FAMILIES 3|0*24500|0*24635
+lpm_divide=LPM_DIVIDE 11|0*94369|
+lpm_ff=LPM_FF 11|0*114636|
+lpm_fifo=LPM_FIFO 11|0*205726|
+lpm_fifo_dc=LPM_FIFO_DC 11|0*231033|
+lpm_fifo_dc_async=LPM_FIFO_DC_ASYNC 11|0*220230|
+lpm_fifo_dc_dffpipe=LPM_FIFO_DC_DFFPIPE 11|0*214001|
+lpm_fifo_dc_fefifo=LPM_FIFO_DC_FEFIFO 11|0*216340|
+lpm_hint_evaluation=LPM_HINT_EVALUATION 3|0*21570|0*21705
+lpm_inpad=LPM_INpad 11|0*236558|
+lpm_inv=LPM_INV 11|0*42263|
+lpm_latch=LPM_LATCH 11|0*111330|
+lpm_mult=LPM_MULT 11|0*88161|
+lpm_mux=LPM_MUX 11|0*51867|
+lpm_or=LPM_OR 11|0*45846|
+lpm_outpad=LPM_OUTpad 11|0*238029|
+lpm_ram_dp=LPM_RAM_DP 11|0*143433|
+lpm_ram_dq=LPM_RAM_DQ 11|0*123221|
+lpm_ram_io=LPM_RAM_IO 11|0*164842|
+lpm_rom=LPM_ROM 11|0*185571|
+lpm_shiftreg=LPM_SHIFTREG 11|0*118819|
+lpm_xor=LPM_XOR 11|0*47838|
+mf_cda_mn_cntr=MF_cda_mn_cntr 11|0*641144|
+mf_cda_scale_cntr=MF_cda_scale_cntr 11|0*643030|
+mf_cycloneiii_pll=MF_cycloneiii_pll 11|0*645238|
+mf_cycloneiiigl_pll=MF_cycloneiiigl_pll 11|0*719140|
+mf_m_cntr=MF_m_cntr 11|0*369108|
+mf_n_cntr=MF_n_cntr 11|0*370728|
+mf_pll_reg=MF_pll_reg 11|0*375135|
+mf_pllpack=MF_pllpack 3|0*348347|0*348473
+mf_stingray_mn_cntr=MF_stingray_mn_cntr 11|0*712883|
+mf_stingray_post_divider=MF_stingray_post_divider 11|0*714819|
+mf_stingray_scale_cntr=MF_stingray_scale_cntr 11|0*716881|
+mf_stratix_pll=MF_stratix_pll 11|0*376411|
+mf_stratixii_pll=MF_stratixii_pll 11|0*477855|
+mf_stratixiii_pll=MF_stratixiii_pll 11|0*557679|
+mf_ttn_mn_cntr=MF_ttn_mn_cntr 11|0*553585|
+mf_ttn_scale_cntr=MF_ttn_scale_cntr 11|0*555471|
+parallel_add=11|0*1551745|
+pll_iobuf=11|0*368009|
+scfifo=SCFIFO 11|0*1559644|
+signal_gen=11|0*1698561|
+sld_node=SLD_NODE 3|0*1688585|0*1688709
+sld_signaltap=11|0*1725246|
+sld_virtual_jtag=11|0*1715722|
+stratix_tx_outclk=11|0*1320253|
+stratixii_lvds_rx=11|0*1213151|
+stratixii_tx_outclk=11|0*1323136|
+stratixiii_lvds_rx=11|0*1256844|
+stratixiii_lvds_rx_channel=11|0*1241880|
+stratixiii_lvds_rx_dpa=11|0*1234828|
+stx_scale_cntr=11|0*372511|
+

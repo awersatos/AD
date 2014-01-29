@@ -1,0 +1,35 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=2
+Current Config=compile
+
+[Configurations]
+compile=smartfusion
+
+[Library]
+smartfusion=.\smartfusion.lib
+
+[$LibMap$]
+smartfusion=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[Files]
+/update_smartfusion.do=-1
+/smartfusion.vhd=-1
+
+[Files.Data]
+.\src\update_smartfusion.do=Macro
+.\src\smartfusion.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

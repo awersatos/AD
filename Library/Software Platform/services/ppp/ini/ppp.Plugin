@@ -1,0 +1,188 @@
+[Plugin]
+Name=ppp
+Caption=Point-to-Point Protocol Services
+Description=Point-to-Point Protocol (PPP) for Link-level network connections.
+SourceDir=services\ppp\lwipsrc\
+SourceFile0=services\ppp\src\ppp.c
+SourceFile1=services\ppp\src\ipcp.c
+SourceFile2=services\ppp\src\ppp_api.c
+SourceFile3=services\ppp\src\ifconfig_ppp.c
+Implement=ppp
+Bitmap=ppp.bmp
+CompileOption0=-I"$(SSASROOT)\services\ppp\internal"
+CompileOption1=-Wc--no-warnings=500,507,549,556,560,589,505,577,553
+GlobalCompileOption0=-I"$(SSASROOT)\services\ppp\include"
+GlobalCompileOption1=-I"$(SSASROOT)\services\ppp\lwipsrc\ppp"
+GlobalCompileOption2=-I"$(SSASROOT)\services\lwip\lwipsrc"
+GlobalCompileOption3=-DPPP_SUPPORT=1
+InitHandler=ppp_init
+InitHandlerPriority=4
+
+[PluginApplicationCode]
+NoGenerate=True
+
+[Available_If0]
+kind=PLUGIN
+Object=modem
+Condition=EQ
+
+[Option0]
+Name=__chap
+GUIName=Enable CHAP Authentication
+Description=Enable the Challenge Handshake Authentication Protocol (CHAP)
+Kind=BOOLEAN
+DefaultValue=TRUE
+Define=TRUE
+DefineString=CHAP_SUPPORT
+
+[Option1]
+Name=__pap
+GUIName=Enable PAP Authentication
+Description=Enable the Password Authentication Protocol (PAP)
+Kind=BOOLEAN
+DefaultValue=TRUE
+Define=TRUE
+DefineString=PAP_SUPPORT
+
+[Option2]
+Name=__vj
+GUIName=Enable VJ Compression
+Description=Enable Van Jacobson (VJ) TCP/IP Header Compression
+Kind=BOOLEAN
+DefaultValue=TRUE
+Define=TRUE
+DefineString=VJ_SUPPORT
+
+[Option3]
+Name=__md5
+GUIName=Enable MD5
+Description=Enable the Message Digest 5 (MD5) Algorithm
+Kind=BOOLEAN
+DefaultValue=TRUE
+Define=TRUE
+DefineString=MD5_SUPPORT
+
+[Option4]
+Name=START_TIMEOUT_MS
+GUIName=Startup Timeout (ms)
+Description=How many milliseconds to wait for PPP to start
+Kind=UINT32
+DefaultValue=5000
+
+[Instance]
+Caption=PPP Context
+Description=PPP-based Link-level networking context
+Require0=modem
+
+[Instance_Option0]
+Name=retries
+GUINAME=Max. Retries
+Description=Maximum number of retries for a configuration command 
+Kind=UINT8
+DefaultValue=3
+
+[Instance_Option1]
+Name=apn
+GUIName=Access Point Name
+Description=The name of the Access Point Name for the remote peer
+Kind=STRING
+DefaultValue=vfinternet.au
+
+[Instance_Option2]
+Name=has_username
+GUIName=Username
+Description=Select whether to authenticate using a user name
+Kind=BOOLEAN
+DefaultValue=FALSE
+
+[Instance_Option2_Available_If0]
+Kind=OPTION
+Object=__PAP
+Condition=EQ
+Value=TRUE
+OrCondition=TRUE
+
+[Instance_Option2_Available_If1]
+Kind=OPTION
+Object=__CHAP
+Condition=EQ
+Value=TRUE
+OrCondition=TRUE
+
+[Instance_Option3]
+Name=username
+GUINAME=User Name
+Description=The user name to use to authenticate with the remote peer
+Kind=STRING
+DefaultValue=user
+
+[Instance_Option3_Hide_If0]
+Kind=OPTION
+Object=has_username
+Condition=NOTEQ
+Value=TRUE
+
+[Instance_Option3_Available_If0]
+Kind=OPTION
+Object=__PAP
+Condition=EQ
+Value=TRUE
+OrCondition=TRUE
+
+[Instance_Option3_Available_If1]
+Kind=OPTION
+Object=__CHAP
+Condition=EQ
+Value=TRUE
+OrCondition=TRUE
+
+
+[Instance_Option4]
+Name=has_password
+GUIName=Password
+Description=Select whether to authenticate using a password
+Kind=BOOLEAN
+DefaultValue=FALSE
+
+[Instance_Option4_Available_If0]
+Kind=OPTION
+Object=__PAP
+Condition=EQ
+Value=TRUE
+OrCondition=TRUE
+
+[Instance_Option4_Available_If1]
+Kind=OPTION
+Object=__CHAP
+Condition=EQ
+Value=TRUE
+OrCondition=TRUE
+
+[Instance_Option5]
+Name=password
+GUINAME=Password
+Description=The password to use to authenticate with the remote peer
+Kind=STRING
+DefaultValue=****************
+
+
+[Instance_Option5_Hide_If0]
+Kind=OPTION
+Object=has_password
+Condition=EQ
+Value=FALSE
+
+[Instance_Option5_Available_If0]
+Kind=OPTION
+Object=__PAP
+Condition=EQ
+Value=TRUE
+OrCondition=TRUE
+
+[Instance_Option5_Available_If1]
+Kind=OPTION
+Object=__CHAP
+Condition=EQ
+Value=TRUE
+OrCondition=TRUE
+

@@ -1,0 +1,15 @@
+[Plugin]
+Name=usbhost
+Description=USB Host Context
+Caption=USB Host Context
+SourceDir=services\usbhost\src
+FrameworkCompileOption0=-I"$(SSASROOT)\services\usbhost\internal"
+Implement=usbhost
+MinInstances=1
+Bitmap=usbhost.bmp
+
+[Instance]
+Caption=USB Host Context
+Description=USB Host Context
+Require0=ad_usbhost
+MultipleLinks=True

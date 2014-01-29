@@ -1,0 +1,802 @@
+timestamp=1260919319845
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[HARDCOPYIII_PRIM_DFFE]
+A/HARDCOPYIII_PRIM_DFFE=22|./src/hardcopyiii_atoms.v|26|1*854
+B/HARDCOPYIII_PRIM_DFFE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=298,516,998,1032
+R=./src/hardcopyiii_atoms.v|26
+
+[HARDCOPYIII_PRIM_DFFEAS]
+A/HARDCOPYIII_PRIM_DFFEAS=22|./src/hardcopyiii_atoms.v|99|1*1660
+B/HARDCOPYIII_PRIM_DFFEAS=3*724
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=422,665,1043,1077
+R=./src/hardcopyiii_atoms.v|99
+
+[HARDCOPYIII_PRIM_DFFEAS_HIGH]
+A/HARDCOPYIII_PRIM_DFFEAS_HIGH=22|./src/hardcopyiii_atoms.v|137|1*2452
+B/HARDCOPYIII_PRIM_DFFEAS_HIGH=3*1302
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=432,680,1058,1092
+R=./src/hardcopyiii_atoms.v|137
+
+[hardcopyiii_and1]
+A/hardcopyiii_and1=22|./src/hardcopyiii_atoms.v|350|1*6952
+B/hardcopyiii_and1=3*5316
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_and1=4*2574
+P/~emb=133,286,388,477
+R=./src/hardcopyiii_atoms.v|350
+
+[hardcopyiii_and16]
+A/hardcopyiii_and16=22|./src/hardcopyiii_atoms.v|363|1*7545
+B/hardcopyiii_and16=3*5475
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_and16=4*2737
+P/~emb=147,349,530,821
+R=./src/hardcopyiii_atoms.v|363
+
+[hardcopyiii_and2]
+A/hardcopyiii_and2=22|./src/hardcopyiii_atoms.v|2887|1*36473
+B/hardcopyiii_and2=3*345398
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_and2=4*10615
+P/~emb=162,323,453,581
+R=./src/hardcopyiii_atoms.v|2887
+
+[hardcopyiii_asmiblock]
+A/hardcopyiii_asmiblock=22|./src/hardcopyiii_atoms.v|15660|1*144220
+B/hardcopyiii_asmiblock=3*2226081
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=447,679,881,1020
+R=./src/hardcopyiii_atoms.v|15660
+
+[hardcopyiii_b17mux21]
+A/hardcopyiii_b17mux21=22|./src/hardcopyiii_atoms.v|403|1*9022
+B/hardcopyiii_b17mux21=3*7133
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=207,380,536,626
+R=./src/hardcopyiii_atoms.v|403
+
+[hardcopyiii_b5mux21]
+A/hardcopyiii_b5mux21=22|./src/hardcopyiii_atoms.v|424|1*10246
+B/hardcopyiii_b5mux21=3*9398
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=202,372,528,618
+R=./src/hardcopyiii_atoms.v|424
+
+[hardcopyiii_bias_block]
+A/hardcopyiii_bias_block=22|./src/hardcopyiii_atoms.v|17395|1*163960
+B/hardcopyiii_bias_block=3*2358246
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_bias_block=4*26163
+P/~emb=305,662,913,1221
+R=./src/hardcopyiii_atoms.v|17395
+
+[hardcopyiii_bias_generator]
+A/hardcopyiii_bias_generator=22|./src/hardcopyiii_atoms.v|17309|1*162909
+B/hardcopyiii_bias_generator=3*2348440
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=335,591,902,1123
+R=./src/hardcopyiii_atoms.v|17309
+
+[hardcopyiii_bias_logic]
+A/hardcopyiii_bias_logic=22|./src/hardcopyiii_atoms.v|17223|1*162006
+B/hardcopyiii_bias_logic=3*2346238
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=353,628,901,1138
+R=./src/hardcopyiii_atoms.v|17223
+
+[hardcopyiii_bmux21]
+A/hardcopyiii_bmux21=22|./src/hardcopyiii_atoms.v|392|1*8395
+B/hardcopyiii_bmux21=3*5635
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,373,529,619
+R=./src/hardcopyiii_atoms.v|392
+
+[hardcopyiii_carry_chain_adder]
+A/hardcopyiii_carry_chain_adder=22|./src/hardcopyiii_atoms.v|5327|1*63518
+B/hardcopyiii_carry_chain_adder=3*804334
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_carry_chain_adder=4*16460
+P/~emb=226,430,636,765
+R=./src/hardcopyiii_atoms.v|5327
+
+[hardcopyiii_clkena]
+A/hardcopyiii_clkena=22|./src/hardcopyiii_atoms.v|2998|1*38158
+B/hardcopyiii_clkena=3*348724
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=402,794,1141,1495
+R=./src/hardcopyiii_atoms.v|2998
+
+[hardcopyiii_clkselect]
+A/hardcopyiii_clkselect=22|./src/hardcopyiii_atoms.v|2836|1*35523
+B/hardcopyiii_clkselect=3*345066
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_clkselect=4*9910
+P/~emb=252,518,719,967
+R=./src/hardcopyiii_atoms.v|2836
+
+[hardcopyiii_ddio_in]
+A/hardcopyiii_ddio_in=22|./src/hardcopyiii_atoms.v|4018|1*48982
+B/hardcopyiii_ddio_in=3*425945
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=617,1123,1669,2259
+R=./src/hardcopyiii_atoms.v|4018
+
+[hardcopyiii_ddio_oe]
+A/hardcopyiii_ddio_oe=22|./src/hardcopyiii_atoms.v|3869|1*47618
+B/hardcopyiii_ddio_oe=3*418514
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=542,1027,1484,2021
+R=./src/hardcopyiii_atoms.v|3869
+
+[hardcopyiii_ddio_out]
+A/hardcopyiii_ddio_out=22|./src/hardcopyiii_atoms.v|3639|1*45485
+B/hardcopyiii_ddio_out=3*404301
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=778,1466,2336,3051
+R=./src/hardcopyiii_atoms.v|3639
+
+[hardcopyiii_ddr_delay_chain_s]
+A/hardcopyiii_ddr_delay_chain_s=22|./src/hardcopyiii_atoms.v|7024|1*75103
+B/hardcopyiii_ddr_delay_chain_s=3*1042904
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=464,934,1438,1607
+R=./src/hardcopyiii_atoms.v|7024
+
+[hardcopyiii_ddr_gray_decoder]
+A/hardcopyiii_ddr_gray_decoder=22|./src/hardcopyiii_atoms.v|6995|1*74258
+B/hardcopyiii_ddr_gray_decoder=3*1034984
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=205,404,617,741
+R=./src/hardcopyiii_atoms.v|6995
+
+[hardcopyiii_ddr_io_reg]
+A/hardcopyiii_ddr_io_reg=22|./src/hardcopyiii_atoms.v|7111|1*76461
+B/hardcopyiii_ddr_io_reg=3*1054402
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_ddr_io_reg=4*16735
+P/~emb=605,975,1387,1711
+R=./src/hardcopyiii_atoms.v|7111
+
+[hardcopyiii_delay_chain]
+A/hardcopyiii_delay_chain=22|./src/hardcopyiii_atoms.v|8692|1*91265
+B/hardcopyiii_delay_chain=3*1197782
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_delay_chain=4*22950
+P/~emb=2213,2900,3640,3805
+R=./src/hardcopyiii_atoms.v|8692
+
+[hardcopyiii_dffe]
+A/hardcopyiii_dffe=22|./src/hardcopyiii_atoms.v|175|1*3265
+B/hardcopyiii_dffe=3*1885
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_dffe=4*0
+P/~emb=247,537,757,956
+R=./src/hardcopyiii_atoms.v|175
+
+[hardcopyiii_dll]
+A/hardcopyiii_dll=22|./src/hardcopyiii_atoms.v|7211|1*77860
+B/hardcopyiii_dll=3*1057572
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_dll=4*17912
+P/~emb=1311,3119,5432,6179
+R=./src/hardcopyiii_atoms.v|7211
+
+[hardcopyiii_dll_offset_ctrl]
+A/hardcopyiii_dll_offset_ctrl=22|./src/hardcopyiii_atoms.v|7934|1*82422
+B/hardcopyiii_dll_offset_ctrl=3*1123772
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_dll_offset_ctrl=4*19329
+P/~emb=693,1552,3030,3416
+R=./src/hardcopyiii_atoms.v|7934
+
+[hardcopyiii_dpa_block]
+A/hardcopyiii_dpa_block=22|./src/hardcopyiii_atoms.v|16673|1*156328
+B/hardcopyiii_dpa_block=3*2309219
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=452,1006,1576,2058
+R=./src/hardcopyiii_atoms.v|16673
+
+[hardcopyiii_dpa_retime_block]
+A/hardcopyiii_dpa_retime_block=22|./src/hardcopyiii_atoms.v|16523|1*154923
+B/hardcopyiii_dpa_retime_block=3*2291034
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=763,1172,1863,2119
+R=./src/hardcopyiii_atoms.v|16523
+
+[hardcopyiii_dqs_config]
+A/hardcopyiii_dqs_config=22|./src/hardcopyiii_atoms.v|10191|1*106895
+B/hardcopyiii_dqs_config=3*1357258
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_dqs_config=4*23639
+P/~emb=2079,2797,3899,4234
+R=./src/hardcopyiii_atoms.v|10191
+
+[hardcopyiii_dqs_delay_chain]
+A/hardcopyiii_dqs_delay_chain=22|./src/hardcopyiii_atoms.v|8221|1*85250
+B/hardcopyiii_dqs_delay_chain=3*1146528
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_dqs_delay_chain=4*21210
+P/~emb=1093,1850,2879,3109
+R=./src/hardcopyiii_atoms.v|8221
+
+[hardcopyiii_dqs_enable]
+A/hardcopyiii_dqs_enable=22|./src/hardcopyiii_atoms.v|8416|1*87758
+B/hardcopyiii_dqs_enable=3*1176144
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_dqs_enable=4*22673
+P/~emb=323,579,894,1054
+R=./src/hardcopyiii_atoms.v|8416
+
+[hardcopyiii_dqs_enable_ctrl]
+A/hardcopyiii_dqs_enable_ctrl=22|./src/hardcopyiii_atoms.v|8478|1*88837
+B/hardcopyiii_dqs_enable_ctrl=3*1178490
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1166,2039,3102,3772
+R=./src/hardcopyiii_atoms.v|8478
+
+[hardcopyiii_ena_reg]
+A/hardcopyiii_ena_reg=22|./src/hardcopyiii_atoms.v|2918|1*37098
+B/hardcopyiii_ena_reg=3*345557
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_ena_reg=4*10856
+P/~emb=253,489,786,964
+R=./src/hardcopyiii_atoms.v|2918
+
+[hardcopyiii_ff]
+A/hardcopyiii_ff=22|./src/hardcopyiii_atoms.v|2671|1*33748
+B/hardcopyiii_ff=3*336736
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_ff=4*8806
+P/~emb=512,941,1502,1830
+R=./src/hardcopyiii_atoms.v|2671
+
+[hardcopyiii_first_stage_add_sub]
+A/hardcopyiii_first_stage_add_sub=22|./src/hardcopyiii_atoms.v|4763|1*56472
+B/hardcopyiii_first_stage_add_sub=3*693674
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_first_stage_add_sub=4*13851
+P/~emb=387,706,990,1138
+R=./src/hardcopyiii_atoms.v|4763
+
+[hardcopyiii_fsa_isse]
+A/hardcopyiii_fsa_isse=22|./src/hardcopyiii_atoms.v|4608|1*54803
+B/hardcopyiii_fsa_isse=3*490728
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1284,1929,3477,3637
+R=./src/hardcopyiii_atoms.v|4608
+
+[hardcopyiii_half_rate_input]
+A/hardcopyiii_half_rate_input=22|./src/hardcopyiii_atoms.v|9832|1*102925
+B/hardcopyiii_half_rate_input=3*1333656
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=588,1226,2071,2922
+R=./src/hardcopyiii_atoms.v|9832
+
+[hardcopyiii_hram]
+A/hardcopyiii_hram=22|./src/hardcopyiii_atoms.v|3117|1*40242
+B/hardcopyiii_hram=3*352862
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_hram=4*11496
+P/~emb=2120,3149,4386,5157
+R=./src/hardcopyiii_atoms.v|3117
+
+[hardcopyiii_hram_pulse_generator]
+A/hardcopyiii_hram_pulse_generator=22|./src/hardcopyiii_atoms.v|3071|1*39281
+B/hardcopyiii_hram_pulse_generator=3*350714
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_hram_pulse_generator=4*11183
+P/~emb=236,486,730,898
+R=./src/hardcopyiii_atoms.v|3071
+
+[hardcopyiii_input_phase_alignment]
+A/hardcopyiii_input_phase_alignment=22|./src/hardcopyiii_atoms.v|9588|1*100363
+B/hardcopyiii_input_phase_alignment=3*1310214
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1284,2205,3396,4125
+R=./src/hardcopyiii_atoms.v|9588
+
+[hardcopyiii_io_clock_divider]
+A/hardcopyiii_io_clock_divider=22|./src/hardcopyiii_atoms.v|8875|1*93321
+B/hardcopyiii_io_clock_divider=3*1226094
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_io_clock_divider=4*23137
+P/~emb=985,1584,2466,2701
+R=./src/hardcopyiii_atoms.v|8875
+
+[hardcopyiii_io_config]
+A/hardcopyiii_io_config=22|./src/hardcopyiii_atoms.v|10056|1*105017
+B/hardcopyiii_io_config=3*1343896
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_io_config=4*23330
+P/~emb=1144,1708,2560,2818
+R=./src/hardcopyiii_atoms.v|10056
+
+[hardcopyiii_io_ibuf]
+A/hardcopyiii_io_ibuf=22|./src/hardcopyiii_atoms.v|3424|1*43157
+B/hardcopyiii_io_ibuf=3*388619
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_io_ibuf=4*11673
+P/~emb=375,741,1090,1273
+R=./src/hardcopyiii_atoms.v|3424
+
+[hardcopyiii_io_obuf]
+A/hardcopyiii_io_obuf=22|./src/hardcopyiii_atoms.v|3516|1*44201
+B/hardcopyiii_io_obuf=3*395478
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_io_obuf=4*11919
+P/~emb=681,1107,1643,1896
+R=./src/hardcopyiii_atoms.v|3516
+
+[hardcopyiii_io_pad]
+A/hardcopyiii_io_pad=22|./src/hardcopyiii_atoms.v|11471|1*118294
+B/hardcopyiii_io_pad=3*1500990
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=192,407,595,731
+R=./src/hardcopyiii_atoms.v|11471
+
+[hardcopyiii_jtag]
+A/hardcopyiii_jtag=22|./src/hardcopyiii_atoms.v|17467|1*165103
+B/hardcopyiii_jtag=3*2358579
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=669,946,1199,1366
+R=./src/hardcopyiii_atoms.v|17467
+
+[hardcopyiii_latch]
+A/hardcopyiii_latch=22|./src/hardcopyiii_atoms.v|224|1*4242
+B/hardcopyiii_latch=3*2720
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_latch=4*1024
+P/~emb=218,425,667,874
+R=./src/hardcopyiii_atoms.v|224
+
+[hardcopyiii_lcell_comb]
+A/hardcopyiii_lcell_comb=22|./src/hardcopyiii_atoms.v|446|1*10874
+B/hardcopyiii_lcell_comb=3*10897
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lcell_comb=4*2902
+P/~emb=1122,1726,3150,3652
+R=./src/hardcopyiii_atoms.v|446
+
+[hardcopyiii_lcell_hsadder]
+A/hardcopyiii_lcell_hsadder=22|./src/hardcopyiii_atoms.v|17514|1*165856
+B/hardcopyiii_lcell_hsadder=3*2358906
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lcell_hsadder=4*26713
+P/~emb=518,799,1154,1283
+R=./src/hardcopyiii_atoms.v|17514
+
+[hardcopyiii_lvds_receiver]
+A/hardcopyiii_lvds_receiver=22|./src/hardcopyiii_atoms.v|16867|1*157774
+B/hardcopyiii_lvds_receiver=3*2326841
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_receiver=4*25922
+P/~emb=1595,2861,4237,5346
+R=./src/hardcopyiii_atoms.v|16867
+
+[hardcopyiii_lvds_reg]
+A/hardcopyiii_lvds_reg=22|./src/hardcopyiii_atoms.v|16270|1*149886
+B/hardcopyiii_lvds_reg=3*2253144
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_reg=4*24963
+P/~emb=255,451,700,861
+R=./src/hardcopyiii_atoms.v|16270
+
+[hardcopyiii_lvds_rx_bitslip]
+A/hardcopyiii_lvds_rx_bitslip=22|./src/hardcopyiii_atoms.v|15970|1*148306
+B/hardcopyiii_lvds_rx_bitslip=3*2243417
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_rx_bitslip=4*24574
+P/~emb=414,1098,1598,1992
+R=./src/hardcopyiii_atoms.v|15970
+
+[hardcopyiii_lvds_rx_deser]
+A/hardcopyiii_lvds_rx_deser=22|./src/hardcopyiii_atoms.v|16134|1*150819
+B/hardcopyiii_lvds_rx_deser=3*2255000
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_rx_deser=4*25428
+P/~emb=318,567,833,986
+R=./src/hardcopyiii_atoms.v|16134
+
+[hardcopyiii_lvds_rx_fifo]
+A/hardcopyiii_lvds_rx_fifo=22|./src/hardcopyiii_atoms.v|15842|1*146969
+B/hardcopyiii_lvds_rx_fifo=3*2236661
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_rx_fifo=4*24203
+P/~emb=330,757,1169,1482
+R=./src/hardcopyiii_atoms.v|15842
+
+[hardcopyiii_lvds_rx_fifo_sync_ram]
+A/hardcopyiii_lvds_rx_fifo_sync_ram=22|./src/hardcopyiii_atoms.v|15742|1*145847
+B/hardcopyiii_lvds_rx_fifo_sync_ram=3*2227152
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=362,660,1121,1310
+R=./src/hardcopyiii_atoms.v|15742
+
+[hardcopyiii_lvds_rx_parallel_reg]
+A/hardcopyiii_lvds_rx_parallel_reg=22|./src/hardcopyiii_atoms.v|16200|1*151821
+B/hardcopyiii_lvds_rx_parallel_reg=3*2259733
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_rx_parallel_reg=4*25668
+P/~emb=386,646,932,1103
+R=./src/hardcopyiii_atoms.v|16200
+
+[hardcopyiii_lvds_transmitter]
+A/hardcopyiii_lvds_transmitter=22|./src/hardcopyiii_atoms.v|1091|1*17478
+B/hardcopyiii_lvds_transmitter=3*57056
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_transmitter=4*6725
+P/~emb=1037,1851,2646,3161
+R=./src/hardcopyiii_atoms.v|1091
+
+[hardcopyiii_lvds_tx_out_block]
+A/hardcopyiii_lvds_tx_out_block=22|./src/hardcopyiii_atoms.v|985|1*16264
+B/hardcopyiii_lvds_tx_out_block=3*51239
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_tx_out_block=4*6138
+P/~emb=389,728,1093,1309
+R=./src/hardcopyiii_atoms.v|985
+
+[hardcopyiii_lvds_tx_parallel_register]
+A/hardcopyiii_lvds_tx_parallel_register=22|./src/hardcopyiii_atoms.v|904|1*15058
+B/hardcopyiii_lvds_tx_parallel_register=3*47234
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_tx_parallel_register=4*5801
+P/~emb=395,720,1078,1310
+R=./src/hardcopyiii_atoms.v|904
+
+[hardcopyiii_lvds_tx_reg]
+A/hardcopyiii_lvds_tx_reg=22|./src/hardcopyiii_atoms.v|834|1*13994
+B/hardcopyiii_lvds_tx_reg=3*45423
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_lvds_tx_reg=4*5266
+P/~emb=261,482,772,968
+R=./src/hardcopyiii_atoms.v|834
+
+[hardcopyiii_m_cntr]
+A/hardcopyiii_m_cntr=22|./src/hardcopyiii_atoms.v|11507|1*119081
+B/hardcopyiii_m_cntr=3*1501635
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=323,606,881,1074
+R=./src/hardcopyiii_atoms.v|11507
+
+[hardcopyiii_mac_mult]
+A/hardcopyiii_mac_mult=22|./src/hardcopyiii_atoms.v|4331|1*52606
+B/hardcopyiii_mac_mult=3*455075
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1084,1851,3427,4018
+R=./src/hardcopyiii_atoms.v|4331
+
+[hardcopyiii_mac_multiplier]
+A/hardcopyiii_mac_multiplier=22|./src/hardcopyiii_atoms.v|4268|1*51491
+B/hardcopyiii_mac_multiplier=3*438764
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_mac_multiplier=4*13420
+P/~emb=424,687,1116,1228
+R=./src/hardcopyiii_atoms.v|4268
+
+[hardcopyiii_mac_out]
+A/hardcopyiii_mac_out=22|./src/hardcopyiii_atoms.v|5374|1*64348
+B/hardcopyiii_mac_out=3*806187
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4613,8477,17111,20323
+R=./src/hardcopyiii_atoms.v|5374
+
+[hardcopyiii_mac_register]
+A/hardcopyiii_mac_register=22|./src/hardcopyiii_atoms.v|4184|1*50410
+B/hardcopyiii_mac_register=3*434348
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_mac_register=4*12320
+P/~emb=371,709,985,1144
+R=./src/hardcopyiii_atoms.v|4184
+
+[hardcopyiii_mux21]
+A/hardcopyiii_mux21=22|./src/hardcopyiii_atoms.v|282|1*5236
+B/hardcopyiii_mux21=3*3764
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_mux21=4*1681
+P/~emb=183,369,567,711
+R=./src/hardcopyiii_atoms.v|282
+
+[hardcopyiii_mux41]
+A/hardcopyiii_mux41=22|./src/hardcopyiii_atoms.v|309|1*6006
+B/hardcopyiii_mux41=3*4432
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_mux41=4*1995
+P/~emb=254,468,740,926
+R=./src/hardcopyiii_atoms.v|309
+
+[hardcopyiii_n_cntr]
+A/hardcopyiii_n_cntr=22|./src/hardcopyiii_atoms.v|11588|1*120012
+B/hardcopyiii_n_cntr=3*1507133
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=219,475,726,883
+R=./src/hardcopyiii_atoms.v|11588
+
+[hardcopyiii_nmux21]
+A/hardcopyiii_nmux21=22|./src/hardcopyiii_atoms.v|414|1*9651
+B/hardcopyiii_nmux21=3*8633
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=185,351,491,581
+R=./src/hardcopyiii_atoms.v|414
+
+[hardcopyiii_otp]
+A/hardcopyiii_otp=22|./src/hardcopyiii_atoms.v|17577|1*166970
+B/hardcopyiii_otp=3*2373624
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_otp=4*27294
+P/~emb=421,773,1090,1261
+R=./src/hardcopyiii_atoms.v|17577
+
+[hardcopyiii_output_phase_alignment]
+A/hardcopyiii_output_phase_alignment=22|./src/hardcopyiii_atoms.v|9001|1*95158
+B/hardcopyiii_output_phase_alignment=3*1243271
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3607,5374,8021,9395
+R=./src/hardcopyiii_atoms.v|9001
+
+[hardcopyiii_pclk_divider]
+A/hardcopyiii_pclk_divider=22|./src/hardcopyiii_atoms.v|16330|1*152798
+B/hardcopyiii_pclk_divider=3*2263209
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=229,476,790,957
+R=./src/hardcopyiii_atoms.v|16330
+
+[hardcopyiii_pll]
+A/hardcopyiii_pll=22|./src/hardcopyiii_atoms.v|11840|1*122650
+B/hardcopyiii_pll=3*1521992
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_pll=4*23950
+P/~emb=13348,21478,34607,37865
+R=./src/hardcopyiii_atoms.v|11840
+
+[hardcopyiii_pll_reg]
+A/hardcopyiii_pll_reg=22|./src/hardcopyiii_atoms.v|11772|1*121894
+B/hardcopyiii_pll_reg=3*1520153
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=252,445,656,784
+R=./src/hardcopyiii_atoms.v|11772
+
+[hardcopyiii_pseudo_diff_out]
+A/hardcopyiii_pseudo_diff_out=22|./src/hardcopyiii_atoms.v|17175|1*161178
+B/hardcopyiii_pseudo_diff_out=3*2343835
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=233,446,670,812
+R=./src/hardcopyiii_atoms.v|17175
+
+[hardcopyiii_ram_block]
+A/hardcopyiii_ram_block=22|./src/hardcopyiii_atoms.v|1399|1*22124
+B/hardcopyiii_ram_block=3*92809
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=156018,159062,163964,166507
+R=./src/hardcopyiii_atoms.v|1399
+
+[hardcopyiii_ram_pulse_generator]
+A/hardcopyiii_ram_pulse_generator=22|./src/hardcopyiii_atoms.v|1268|1*19619
+B/hardcopyiii_ram_pulse_generator=3*71273
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_ram_pulse_generator=4*7244
+P/~emb=308,582,866,1040
+R=./src/hardcopyiii_atoms.v|1268
+
+[hardcopyiii_ram_register]
+A/hardcopyiii_ram_register=22|./src/hardcopyiii_atoms.v|1316|1*20707
+B/hardcopyiii_ram_register=3*74796
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_ram_register=4*7555
+P/~emb=443,780,1234,1482
+R=./src/hardcopyiii_atoms.v|1316
+
+[hardcopyiii_rotate_shift_block]
+A/hardcopyiii_rotate_shift_block=22|./src/hardcopyiii_atoms.v|5277|1*62479
+B/hardcopyiii_rotate_shift_block=3*801080
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_rotate_shift_block=4*16095
+P/~emb=429,727,999,1134
+R=./src/hardcopyiii_atoms.v|5277
+
+[hardcopyiii_round_block]
+A/hardcopyiii_round_block=22|./src/hardcopyiii_atoms.v|4937|1*58891
+B/hardcopyiii_round_block=3*757817
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=369,701,1051,1245
+R=./src/hardcopyiii_atoms.v|4937
+
+[hardcopyiii_round_saturate_block]
+A/hardcopyiii_round_saturate_block=22|./src/hardcopyiii_atoms.v|5194|1*61230
+B/hardcopyiii_round_saturate_block=3*798824
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_round_saturate_block=4*15103
+P/~emb=675,1103,1521,1827
+R=./src/hardcopyiii_atoms.v|5194
+
+[hardcopyiii_routing_wire]
+A/hardcopyiii_routing_wire=22|./src/hardcopyiii_atoms.v|798|1*13249
+B/hardcopyiii_routing_wire=3*44940
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_routing_wire=4*5078
+P/~emb=167,344,492,616
+R=./src/hardcopyiii_atoms.v|798
+
+[hardcopyiii_rt_sm]
+A/hardcopyiii_rt_sm=22|./src/hardcopyiii_atoms.v|10358|1*109254
+B/hardcopyiii_rt_sm=3*1370341
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1161,1824,2707,3096
+R=./src/hardcopyiii_atoms.v|10358
+
+[hardcopyiii_saturate_block]
+A/hardcopyiii_saturate_block=22|./src/hardcopyiii_atoms.v|5027|1*59923
+B/hardcopyiii_saturate_block=3*771457
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=661,1154,1782,2038
+R=./src/hardcopyiii_atoms.v|5027
+
+[hardcopyiii_scale_cntr]
+A/hardcopyiii_scale_cntr=22|./src/hardcopyiii_atoms.v|11659|1*120879
+B/hardcopyiii_scale_cntr=3*1511315
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=389,754,1098,1328
+R=./src/hardcopyiii_atoms.v|11659
+
+[hardcopyiii_second_stage_add_accum]
+A/hardcopyiii_second_stage_add_accum=22|./src/hardcopyiii_atoms.v|4825|1*57528
+B/hardcopyiii_second_stage_add_accum=3*704782
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiii_second_stage_add_accum=4*14210
+P/~emb=513,926,1311,1488
+R=./src/hardcopyiii_atoms.v|4825
+
+[hardcopyiii_select_ini_phase_dpaclk]
+A/hardcopyiii_select_ini_phase_dpaclk=22|./src/hardcopyiii_atoms.v|16405|1*153719
+B/hardcopyiii_select_ini_phase_dpaclk=3*2273338
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=332,759,1340,1505
+R=./src/hardcopyiii_atoms.v|16405
+
+[hardcopyiii_termination]
+A/hardcopyiii_termination=22|./src/hardcopyiii_atoms.v|10845|1*112062
+B/hardcopyiii_termination=3*1446373
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1764,3591,6342,7036
+R=./src/hardcopyiii_atoms.v|10845
+
+[hardcopyiii_termination_aux_clock_div]
+A/hardcopyiii_termination_aux_clock_div=22|./src/hardcopyiii_atoms.v|10783|1*111080
+B/hardcopyiii_termination_aux_clock_div=3*1434675
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=274,526,790,936
+R=./src/hardcopyiii_atoms.v|10783
+
+[hardcopyiii_termination_logic]
+A/hardcopyiii_termination_logic=22|./src/hardcopyiii_atoms.v|11416|1*117128
+B/hardcopyiii_termination_logic=3*1497041
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=639,1011,1430,1570
+R=./src/hardcopyiii_atoms.v|11416
+
+[hardcopyiii_tsdblock]
+A/hardcopyiii_tsdblock=22|./src/hardcopyiii_atoms.v|15696|1*144930
+B/hardcopyiii_tsdblock=3*2226413
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=741,1118,1410,1561
+R=./src/hardcopyiii_atoms.v|15696
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, HARDCOPYIII VERILOG LIBRARY.
+LastVerilogToplevel=hardcopyiii_otp
+ModifyID=742
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/hardcopyiii_atoms.v=0*219872*350786
+
+[~MFT]
+0=93|0ovi_hardcopyiii.mgf|350786|0
+1=91|1ovi_hardcopyiii.mgf|166970|0
+3=91|3ovi_hardcopyiii.mgf|2373624|0
+4=47|4ovi_hardcopyiii.mgf|27294|0
+
+[~U]
+$root=12|0*0|
+HARDCOPYIII_PRIM_DFFE=12|0*950||0xa0
+HARDCOPYIII_PRIM_DFFEAS=12|0*1788||0xa0
+HARDCOPYIII_PRIM_DFFEAS_HIGH=12|0*2596||0xa0
+hardcopyiii_and1=12|0*6744||0x90
+hardcopyiii_and16=12|0*7177||0x90
+hardcopyiii_and2=12|0*41417||0x80
+hardcopyiii_asmiblock=12|0*193156||0x90
+hardcopyiii_b17mux21=12|0*8318||0x90
+hardcopyiii_b5mux21=12|0*9286||0x90
+hardcopyiii_bias_block=12|0*215902||0x90
+hardcopyiii_bias_generator=12|0*214835||0x80
+hardcopyiii_bias_logic=12|0*213836||0x80
+hardcopyiii_bmux21=12|0*7819||0x90
+hardcopyiii_carry_chain_adder=12|0*74300||0x80
+hardcopyiii_clkena=12|0*42910||0x90
+hardcopyiii_clkselect=12|0*40595||0x90
+hardcopyiii_ddio_in=12|0*56052||0x90
+hardcopyiii_ddio_oe=12|0*54352||0x90
+hardcopyiii_ddio_out=12|0*51675||0x90
+hardcopyiii_ddr_delay_chain_s=12|0*92461||0x80
+hardcopyiii_ddr_gray_decoder=12|0*91776||0x80
+hardcopyiii_ddr_io_reg=12|0*93963||0x80
+hardcopyiii_delay_chain=12|0*113325||0x90
+hardcopyiii_dffe=12|0*3409||0x90
+hardcopyiii_dll=12|0*95282||0x90
+hardcopyiii_dll_offset_ctrl=12|0*102866||0x90
+hardcopyiii_dpa_block=12|0*206800||0x80
+hardcopyiii_dpa_retime_block=12|0*205091||0x80
+hardcopyiii_dqs_config=12|0*132457||0x90
+hardcopyiii_dqs_delay_chain=12|0*106670||0x90
+hardcopyiii_dqs_enable=12|0*109546||0x90
+hardcopyiii_dqs_enable_ctrl=12|0*110465||0x90
+hardcopyiii_ena_reg=12|0*41898||0x80
+hardcopyiii_ff=12|0*38644||0x90
+hardcopyiii_first_stage_add_sub=12|0*65782||0x80
+hardcopyiii_fsa_isse=12|0*63249||0x80
+hardcopyiii_half_rate_input=12|0*127831||0x90
+hardcopyiii_hram=12|0*44978||0x90
+hardcopyiii_hram_pulse_generator=12|0*44113||0x80
+hardcopyiii_input_phase_alignment=12|0*124677||0x90
+hardcopyiii_io_clock_divider=12|0*115653||0x90
+hardcopyiii_io_config=12|0*130291||0x90
+hardcopyiii_io_ibuf=12|0*48755||0x90
+hardcopyiii_io_obuf=12|0*50007||0x90
+hardcopyiii_io_pad=12|0*148126||0x90
+hardcopyiii_jtag=12|0*216917||0x90
+hardcopyiii_latch=12|0*4386||0x90
+hardcopyiii_lcell_comb=12|0*9786||0x90
+hardcopyiii_lcell_hsadder=12|0*217638||0x90
+hardcopyiii_lvds_receiver=12|0*208966||0x90
+hardcopyiii_lvds_reg=12|0*199830||0x80
+hardcopyiii_lvds_rx_bitslip=12|0*197626||0x80
+hardcopyiii_lvds_rx_deser=12|0*200651||0x80
+hardcopyiii_lvds_rx_fifo=12|0*196017||0x80
+hardcopyiii_lvds_rx_fifo_sync_ram=12|0*194687||0x80
+hardcopyiii_lvds_rx_parallel_reg=12|0*201605||0x80
+hardcopyiii_lvds_transmitter=12|0*17414||0x90
+hardcopyiii_lvds_tx_out_block=12|0*16120||0x80
+hardcopyiii_lvds_tx_parallel_register=12|0*14914||0x80
+hardcopyiii_lvds_tx_reg=12|0*13962||0x80
+hardcopyiii_m_cntr=12|0*148721||0x80
+hardcopyiii_mac_mult=12|0*60140||0x90
+hardcopyiii_mac_multiplier=12|0*59073||0x80
+hardcopyiii_mac_out=12|0*75002||0x90
+hardcopyiii_mac_register=12|0*57912||0x80
+hardcopyiii_mux21=12|0*5268||0x80
+hardcopyiii_mux41=12|0*5926||0x80
+hardcopyiii_n_cntr=12|0*149732||0x80
+hardcopyiii_nmux21=12|0*8819||0x90
+hardcopyiii_otp=12|0*218672||0x90
+hardcopyiii_output_phase_alignment=12|0*117762||0x90
+hardcopyiii_pclk_divider=12|0*202582||0x80
+hardcopyiii_pll=12|0*152674||0x90
+hardcopyiii_pll_reg=12|0*151966||0x90
+hardcopyiii_pseudo_diff_out=12|0*213120||0x90
+hardcopyiii_ram_block=12|0*22444||0x90
+hardcopyiii_ram_pulse_generator=12|0*20083||0x80
+hardcopyiii_ram_register=12|0*21059||0x80
+hardcopyiii_rotate_shift_block=12|0*73293||0x80
+hardcopyiii_round_block=12|0*68521||0x80
+hardcopyiii_round_saturate_block=12|0*71980||0x80
+hardcopyiii_routing_wire=12|0*13441||0x90
+hardcopyiii_rt_sm=12|0*135104||0x80
+hardcopyiii_saturate_block=12|0*69841||0x80
+hardcopyiii_scale_cntr=12|0*150615||0x80
+hardcopyiii_second_stage_add_accum=12|0*66934||0x80
+hardcopyiii_select_ini_phase_dpaclk=12|0*203583||0x80
+hardcopyiii_termination=12|0*139784||0x90
+hardcopyiii_termination_aux_clock_div=12|0*138786||0x80
+hardcopyiii_termination_logic=12|0*146960||0x90
+hardcopyiii_tsdblock=12|0*193770||0x90
+

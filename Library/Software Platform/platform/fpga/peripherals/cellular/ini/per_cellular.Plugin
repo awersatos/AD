@@ -1,0 +1,40 @@
+[Plugin]
+Name=per_cellular
+HardwareID=WB_CELLULAR
+Caption=Cellular Modem
+Implement=per_cellular
+Extend=per_uart8
+GlobalCompileOption0=-I"$(SSASROOT)\platform\fpga\peripherals\uart8\include"
+Bitmap=per_cellular.bmp
+LargeBitmap=per_cellular-large.bmp
+
+[Instance]
+Caption=Cellular Modem
+
+[Instance_CustomGeneration0]
+HeaderFile=cellular.h
+SourceFile=cellular.c
+GeneratorKind=CCC
+GeneratorId=WB_CELLULAR
+
+[Instance_Option0]
+Name=ModemType
+GUIName=Type
+Auto=True
+Description=Modem Type. This will be automatically selected by the setting in the Openbus component.
+Kind=ENUM
+DefaultValue=MODEM_TELIT
+Enum0=MODEM_HAYES
+Enum1=MODEM_TELIT
+Enum2=MODEM_SIM5218A
+Enum3=MODEM_SIM548C
+EnumValue0=0
+EnumValue1=1
+EnumValue2=2
+EnumValue3=3
+EnumGUI0=Hayes Modem
+EnumGUI1=Telit Modem
+EnumGUI2=SIMCom SIM5218A 3G GSM-GPRS-GPS Modem
+EnumGUI3=SIMCom SIM548C  2G GSM-GPRS-GPS Modem
+
+

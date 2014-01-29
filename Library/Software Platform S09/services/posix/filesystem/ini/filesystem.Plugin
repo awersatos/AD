@@ -1,0 +1,157 @@
+[Plugin]
+Name=posix_filesystem
+Caption=Storage System
+Description=Standard POSIX file system routines
+Implement=posix_filesystem
+Bitmap=filesystem.bmp
+SourceDir=services\posix\filesystem\src
+GlobalCompileOption0=-D__POSIX_FILE_SYSTEM__=1
+FrameworkCompileOption0=-I"$(SSASROOT)\services\posix\filesystem\internal"
+; Make sure this is run first
+InitHandler=fs_plugin_init
+InitHandlerPriority=32
+Require0=devfs
+Require1=shmfs
+Require2=fatfs
+Require3=blockio
+
+[Option0]
+Name=MOUNT_MAX
+GUIName=Mount Table Size
+Description=Maximum number of mounted file systems.
+Kind=UINT32
+DefaultValue=4
+
+[Option1]
+Name=OPEN_MAX
+GUIName=Open File Limit
+Description=Maximum number of open files and directories.
+Kind=UINT32
+DefaultValue=20
+MinRange=8
+MaxRange=31
+InLimitsCfg=True
+
+[Option2]
+Name=NAME_MAX
+GUIName=Filename Limit
+Description=Maximum number of bytes in a filename.
+Kind=UINT32
+DefaultValue=30
+MinRange=14
+InLimitsCfg=True
+
+[Option3]
+Name=PATH_MAX
+GUIName=Pathname Limit
+Description=Maximum number of bytes in a pathname.
+Kind=UINT32
+DefaultValue=255
+MinRange=255
+InLimitsCfg=True
+
+[Option4]
+Name=FS_MAX
+GUIName=Number of maximum filesystems
+Description=Maximum number of filesystems.
+Kind=UINT32
+DefaultValue=4
+MinRange=4
+
+[Option5]
+Name=DEVFS
+GUIName=Filesystem support: devfs
+Description=Device filesystem to access devices in /dev. Always present.
+Kind=BOOLEAN
+DefaultValue=True
+Auto=True
+
+[Option6]
+Name=SHMFS
+GUIName=Filesystem support: shmfs
+Description=Device filesystem to access shared memory objects in /shm. Always present.
+Kind=BOOLEAN
+DefaultValue=True
+Auto=True
+
+[Option7]
+Name=FATFS
+GUIName=Filesystem support: fatfs
+Description=Microsoft FAT file system support.
+Kind=BOOLEAN
+DefaultValue=True
+Auto=True
+
+
+[Instance]
+Require0=blockio
+Caption=Storage System Context
+Description=File system context
+
+[Instance_Option0]
+Name=usermount
+GUIName=Dynamic Mount
+Description=Application will mount the device at runtime with mount() (see "fs.h").
+Kind=BOOLEAN
+DefaultValue=True
+Auto=True
+
+; TODO: implement static mount points
+
+[Instance_Option1]
+Name=fsname
+GUIName=Filesystem Name
+Description=Name of filesystem to mount, e.g "fatfs".
+Kind=STRING
+DefaultValue=fatfs
+
+[Instance_Option1_Hide_If0]
+Object=usermount
+Kind=OPTION
+Condition=EQ
+Value=True
+
+[Instance_Option2]
+Name=partition
+GUIName=Partition Number
+Description=Number of the partition to mount (use 0 to use entire disk).
+Kind=UINT8
+DefaultValue=1
+MaxRange=4
+
+[Instance_Option2_Hide_If0]
+Object=usermount
+Kind=OPTION
+Condition=EQ
+Value=True
+
+[Instance_Option3]
+Name=mountpoint
+GUIName=Mount Point
+Description=Mount point for the device. NOTE: must be in the root directory.
+Kind=STRING
+DefaultValue=mount
+
+[Instance_Option3_Hide_If0]
+Object=usermount
+Kind=OPTION
+Condition=EQ
+Value=True
+
+; hidden cache size option
+; automatically obtained from block device adaptor
+; the maximum value of all instances is used in fatfs implementation
+; values can be 512, 1024, 2048 or 4096
+[Instance_Option4]
+Name=cache_blocksize
+GUIName=Cache Sector Size
+Description=Maximum size of a cached sector (i.e. maximum supported sector size on underlying block device)
+Kind=UINT32
+DefaultValue=512
+; autovalue expression linked down over blockio interface
+; actual option is in the driver instance (only required if different from default, e.g. for USB)
+AutoValue=blockio.cache_blocksize
+NoGenerate=True
+
+[Instance_Option4_Hide_If0]
+Kind=True

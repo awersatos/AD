@@ -1,0 +1,3 @@
+*Default P-Ch J-FET parameters pkg:TO-92B 2,1,3
+*PJFET Pinout: 1=D, 2=G, 3=S
+.MODEL PJFET PJF()

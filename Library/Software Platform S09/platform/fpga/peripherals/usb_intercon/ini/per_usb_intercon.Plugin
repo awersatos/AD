@@ -1,0 +1,19 @@
+[Plugin]
+Name=per_usb_intercon
+Caption=ISP1760 Interrupt Connect
+Description=Helper device to connect the ISP1760 interrupt
+Bitmap=per_usb_intercon.bmp
+LargeBitmap=per_usb_intercon_large.bmp
+HardwareID=USB_INTERCON
+Implement=per_usb_intercon
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=INTERRUPT0
+GUIName=Interrupt
+Description=Interrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

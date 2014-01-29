@@ -1,0 +1,12 @@
+*Default Programable Unijunction Transistor pkg: TO-92
+*Connections:
+*           Anode
+*           | Gate
+*           | | Cathode
+*           | | |
+.SUBCKT PUT 1 2 3
+Q1 2 4 3 NMOD
+Q2 4 2 1 PMOD
+.MODEL NMOD NPN()
+.MODEL PMOD PNP()
+.ENDS PUT

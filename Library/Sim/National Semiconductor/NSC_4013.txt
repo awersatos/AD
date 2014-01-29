@@ -1,0 +1,163 @@
+//============================================================
+# 4013 source
+//4013B: D flip-flop
+//not checked out
+//roy 7-17-97: Added EXIT statement to end of init_sim block
+//roy 7-17-97: Added HOLD row to table
+//dm 8-11-97: replaced vol_param and voh_param= (); with VOL_VOH_MIN()
+//dm 8-14-97: updated to use PWL_TABLE statements and fixed function
+//dm 9-5-97:  Eliminated unused pins in EXT_TABLEs.
+// jjt 14/3/2001: copied 4013 in CMOS.txt and changed Q,QN 
+//                initialisation values
+//============================================================
+INPUTS VDD, GND, SET, DATA, CLK, RESET;
+OUTPUTS VDD_LD, SET_LD, DATA_LD, CLK_LD, RESET_LD, QN, Q;
+INTEGERS tblIndex;
+REALS tt_val, tt_5, tt_10, tt_15, tphl_CP_5, tphl_CP_10,
+	  tplh_CP_5, tplh_CP_10, tp_CP_15, tp_SD_RD_5,
+	  tp_SD_RD_10, tp_SD_RD_15, tplh_SD_5, tplh_SD_10,
+	  tplh_SD_15, tplh_RD_5, tplh_RD_10, tplh_RD_15,
+	  ts_5, ts_10, ts_15, th_5, th_10, th_15, twl_CP_5,
+	  twl_CP_10, twl_CP_15, twh_SD_RD_5, twh_SD_RD_10,
+	  twh_SD_RD_15, ts_val, th_val, tw_val, trec_SD,
+	  trec_RD_5, trec_RD, trec_val, rout_5, rout_10,
+	  rout_15, rin_val, ridd_val, vdd_val;
+
+PWR_GND_PINS(VDD,GND);	//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(3,18);	//check for min supply=3 and max supply=18
+VOL_VOH_MIN(0,0,0.1);	//set min vol_param=gnd_param+0, max voh_param=pwr_param-0
+VIL_VIH_PERCENT(33,66);	//CMOS vil=33% of supply, vih=66% of supply
+IO_PAIRS(SET:SET_LD, DATA:DATA_LD, CLK:CLK_LD, RESET:RESET_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tINA\tINB\tINC\tIND\tOUT");
+	//Note: ttlh and tthl are the same
+	tt_5= (MIN_TYP_MAX(tt_param: NULL, 60n, 120n));
+	tt_10= (MIN_TYP_MAX(tt_param: NULL, 30n, 60n));
+	tt_15= (MIN_TYP_MAX(tt_param: NULL, 20n, 40n));
+
+	tphl_CP_5= (MIN_TYP_MAX(tp_param: NULL, 110n, 220n));
+	tphl_CP_10= (MIN_TYP_MAX(tp_param: NULL, 45n, 90n));
+
+	tplh_CP_5= (MIN_TYP_MAX(tp_param: NULL, 95n, 190n));
+	tplh_CP_10= (MIN_TYP_MAX(tp_param: NULL, 40n, 80n));
+
+	//Note: tplh and tphl @ 15V are the same
+	tp_CP_15= (MIN_TYP_MAX(tp_param: NULL, 30n, 60n));
+
+	//Note: tphl for SD->O and RD->O are the same
+	tp_SD_RD_5= (MIN_TYP_MAX(tp_param: NULL, 100n, 200n));
+	tp_SD_RD_10= (MIN_TYP_MAX(tp_param: NULL, 40n, 80n));
+	tp_SD_RD_15= (MIN_TYP_MAX(tp_param: NULL, 30n, 60n));
+
+	tplh_SD_5= (MIN_TYP_MAX(tp_param: NULL, 75n, 150n));
+	tplh_SD_10= (MIN_TYP_MAX(tp_param: NULL, 35n, 70n));
+	tplh_SD_15= (MIN_TYP_MAX(tp_param: NULL, 25n, 50n));
+
+	tplh_RD_5= (MIN_TYP_MAX(tp_param: NULL, 60n, 120n));
+	tplh_RD_10= (MIN_TYP_MAX(tp_param: NULL, 30n, 60n));
+	tplh_RD_15= (MIN_TYP_MAX(tp_param: NULL, 20n, 40n));
+
+    ts_5= (40n);
+	ts_10= (25n);
+	ts_15= (15n);
+
+	th_5= (20n);
+	th_10= (20n);
+	th_15= (15n);
+
+	twl_CP_5= (60n);
+	twl_CP_10= (30n);
+	twl_CP_15= (20n);
+
+    //Note: twh for SD and RD are the same
+	twh_SD_RD_5= (50n);
+	twh_SD_RD_10= (24n);
+	twh_SD_RD_15= (20n);
+
+    //Note: trec for SD @ all voltages is the save
+    trec_SD= (15n);
+
+	trec_RD_5= (40n);
+
+    //Note: trec for RD @ 10V and 15V is the save
+	trec_RD= (25n);
+
+	//CMOS B IOH min=0.44mA @ Vdd=5V and Voh=4.6V: rout=(Vdd-Voh)/IOH=909
+	//CMOS B IOL min=0.44mA @ Vdd=5V and Vol=0.4V: rout=Vol/IOL=909
+    rout_5= (MIN_TYP_MAX(drv_param: 909,NULL,NULL));
+
+	//CMOS B IOH min=1.1mA @ Vdd=10V and Voh=9.5V: rout=(Vdd-Voh)/IOH=454.5
+	//CMOS B IOL min=1.1mA @ Vdd=10V and Voh=0.5V: rout=Vol/IOL=454.5
+    rout_10= (MIN_TYP_MAX(drv_param: 454.5,NULL,NULL));
+
+	//CMOS B IOH min=3mA @ Vdd=15V and Voh=13.5V: rout=(Vdd-Voh)/IOH=500
+	//CMOS B IOL min=3mA @ Vdd=15V and Vol=1.5V: rout=Vol/IOL=500
+    rout_15= (MIN_TYP_MAX(drv_param: 500,NULL,NULL));
+
+	//Note: Input loading and Idd are linear over Vdd ranges
+    //CMOS input current @ 25'C: IIN=0.1uA @ VDD=15v rin= (15/0.1uA);
+	rin_val= (MIN_TYP_MAX(ld_param: NULL, 1.5E8, NULL));
+
+	//Idd per pkg @ 10V: 2.5E9= 10/4nA typical, 1.25Meg= 10/8uA 
+	ridd_val= (MIN_TYP_MAX(i_param: NULL, 2.5E9, 1.25Meg)*2);//2 parts per pkg
+
+	STATE Q = ZERO;		// initialize output states
+	STATE QN = ONE;
+	EXIT;
+  END;
+
+vdd_val= (pwr_param - gnd_param);
+rol_param= (PWL_TABLE(vdd_val: 5,rout_5,10,rout_10,15,rout_15));
+roh_param= (rol_param);			// Drive high same as drive low
+tt_val= (PWL_TABLE(vdd_val:5,tt_5,10,tt_10,15,tt_15));
+
+DRIVE Q QN = (v0=gnd_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD SET_LD DATA_LD CLK_LD RESET_LD =
+  (v0=vol_param,r0=rin_val,v1=voh_param,r1=rin_val,io=1e12,t=1p);
+
+EXT_TABLE tblIndex
+SET	RESET	CLK		Q		QN
+1	0		X		H		L
+0	1		X		L		H
+1	1		X		H		H
+0	0		^		DATA	~DATA
+0	0		X		Q		~Q;
+
+IF (tblIndex = 4 && Q && QN) THEN
+  BEGIN
+    STATE QN = ZERO;
+  END;
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d",present_time,SET,RESET,CLK,DATA,Q,QN);//debug
+
+IF (warn_param) THEN
+  BEGIN
+	tw_val= (PWL_TABLE(vdd_val: 5,twh_SD_RD_5,10,twh_SD_RD_10,15,twh_SD_RD_15));
+	WIDTH(SET RESET Twh=tw_val "SET or RESET");
+	IF (~(SET || RESET)) THEN
+	  BEGIN
+	    tw_val= (PWL_TABLE(vdd_val: 5,twl_CP_5,10,twl_CP_10,15,twl_CP_15));
+	    WIDTH(CLK Twl=tw_val "CLK");
+
+		ts_val= (PWL_TABLE(vdd_val: 5,ts_5,10,ts_10,15,ts_15));
+		th_val= (PWL_TABLE(vdd_val: 5,th_5,10,th_10,15,th_15));
+		SETUP_HOLD(CLK=LH DATA Ts=ts_val Th=th_val "DATA->CLK");
+
+	    RECOVER(CLK=LH SET Trec=trec_SD "CLK->SET");
+
+	    trec_val= (PWL_TABLE(vdd_val: 5,trec_RD_5,10,trec_RD,15,trec_RD));
+	    RECOVER(CLK=LH RESET Trec=trec_val "CLK->RESET");
+	  END;
+  END;
+
+LOAD VDD_LD = (v0=gnd_param,r0=ridd_val,t=1p);
+DELAY Q QN =
+  CASE (TRAN_LH && SET) : (PWL_TABLE(vdd_val:5,tplh_SD_5,10,tplh_SD_10,15,tplh_SD_15))
+  CASE (TRAN_LH && RESET) : (PWL_TABLE(vdd_val:5,tplh_RD_5,10,tplh_RD_10,15,tplh_RD_15))
+  CASE (TRAN_HL && (SET || RESET)) : (PWL_TABLE(vdd_val:5,tp_SD_RD_5,10,tp_SD_RD_10,15,tp_SD_RD_15))
+  CASE (TRAN_LH) : (PWL_TABLE(vdd_val:5,tplh_CP_5,10,tplh_CP_10,15,tp_CP_15))
+  CASE (TRAN_HL) : (PWL_TABLE(vdd_val:5,tphl_CP_5,10,tphl_CP_10,15,tp_CP_15))
+END;
+EXIT;

@@ -1,0 +1,34 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_ecp
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+ovi_ecp=.
+
+[Library]
+ovi_ecp=.\ovi_ecp.LIB
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[Files]
+/update_ovi_ecp.do=-1
+
+[Files.Data]
+.\src\update_ovi_ecp.do=Macro
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_lcdctrl" description="LCD Controller">
+		<sfr name="CTRL"	 offset="0"  size="8" description="Control Register"/>
+		<sfr name="DATA"	 offset="1"  size="8" description="Data Register"/>
+	</group>
+</sfrfile>

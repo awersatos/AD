@@ -1,0 +1,125 @@
+[Plugin]
+Name=generic_devices
+Description=Generic Wishbone device with base address and interrupts if applicable.
+Caption=Custom Device
+SourceDir=platform\fpga\peripherals\generic_devices\src
+Implement=generic_devices
+HardwareID=GENERIC_DEVICES
+Bitmap=generic_devices.bmp
+LargeBitmap=generic_devices_large.bmp
+GenerateData=False
+GenerateInstanceMacros=True
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description= base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option0_Hide_If0]
+Kind=OPTION
+Object=baseaddress
+Condition=EQ
+Value=0
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt 0
+Description=1st Interrupt line
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option1_Hide_If0]
+Kind=OPTION
+Object=interrupt0
+Condition=EQ
+Value=-1
+
+
+[Instance_Option2]
+Name=interrupt1
+GUIName=Interrupt 1
+Description=2nd Interrupt line
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option2_Hide_If0]
+Kind=OPTION
+Object=interrupt1
+Condition=EQ
+Value=-1
+
+
+[Instance_Option3]
+Name=interrupt2
+GUIName=Interrupt 2
+Description=3rd Interrupt line
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option3_Hide_If0]
+Kind=OPTION
+Object=interrupt2
+Condition=EQ
+Value=-1
+
+
+[Instance_Option4]
+Name=interrupt3
+GUIName=Interrupt 3
+Description=4th Interrupt line
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option4_Hide_If0]
+Kind=OPTION
+Object=interrupt3
+Condition=EQ
+Value=-1
+
+
+[Instance_Option5]
+Name=interrupt4
+GUIName=Interrupt 4
+Description=5th Interrupt line
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option5_Hide_If0]
+Kind=OPTION
+Object=interrupt4
+Condition=EQ
+Value=-1
+
+
+[Instance_Option6]
+Name=interrupt5
+GUIName=Interrupt 5
+Description=6th Interrupt line
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option6_Hide_If0]
+Kind=OPTION
+Object=interrupt5
+Condition=EQ
+Value=-1
+
+
+[Instance_Option7]
+Name=interrupt6
+GUIName=Interrupt 6
+Kind=INTERRUPT
+DefaultValue=-1
+Auto=True
+
+[Instance_Option7_Hide_If0]
+Kind=OPTION
+Object=interrupt6
+Condition=EQ
+Value=-1

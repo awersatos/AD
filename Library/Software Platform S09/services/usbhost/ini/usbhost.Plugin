@@ -1,0 +1,15 @@
+[Plugin]
+Name=usbhost
+Description=USB Host
+Caption=USB Host
+SourceDir=services\usbhost\src
+FrameworkCompileOption0=-I"$(SERROOT)\usbhost\internal"
+Implement=usbhost
+MinInstances=1
+Bitmap=
+
+[Instance]
+Caption=USB Host
+Description=USB Host
+Require0=ad_usbhost
+MultipleLinks=True

@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=stratix
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+stratix=.
+
+[Library]
+stratix=.\stratix.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/stratix_atoms.vhd=-1
+/stratix_components.vhd=-1
+/update_stratix.do=-1
+
+[Files.Data]
+.\src\stratix_atoms.vhd=VHDL Source Code
+.\src\stratix_components.vhd=VHDL Source Code
+.\src\update_stratix.do=Macro
+

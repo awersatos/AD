@@ -1,0 +1,90 @@
+;...............................................................................
+;Constraints File
+;   Devices : Compact Flash Connector / ATA Header / SD-Card Connector
+;   Board   : PB02 - Single Connector Plug-In Peripheral Board
+;
+;   Created 22-June-2007
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+Record=Constraint | TargetKind=PCB | TargetId=PB02.06  | Image=PB02.06 | ImageOffsetX=12 | ImageOffsetY=16 | Description=Mass Storage Peripheral Board
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Connector | TargetId=HDR1
+;...............................................................................
+
+;...............................................................................
+; Peripheral Pins
+;...............................................................................
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SD_PROTECT              | ConnectTo=HDR1-4
+Record=Constraint | TargetKind=Port | TargetId=SD_DETECT               | ConnectTo=HDR1-6
+Record=Constraint | TargetKind=Port | TargetId=SD_CLK                  | ConnectTo=HDR1-14
+Record=Constraint | TargetKind=Port | TargetId=SD_CMD                  | ConnectTo=HDR1-12
+Record=Constraint | TargetKind=Port | TargetId=SD_COMMAND              | ConnectTo=HDR1-12 | FPGA_PULLUP=True
+Record=Constraint | TargetKind=Port | TargetId=SD_DAT0                 | ConnectTo=HDR1-16
+Record=Constraint | TargetKind=Port | TargetId=SD_DAT1                 | ConnectTo=HDR1-18
+Record=Constraint | TargetKind=Port | TargetId=SD_DAT2                 | ConnectTo=HDR1-8
+Record=Constraint | TargetKind=Port | TargetId=SD_DAT3                 | ConnectTo=HDR1-10
+Record=Constraint | TargetKind=Port | TargetId=SD_DATA[3..0]            | ConnectTo=HDR1-10,HDR1-8,HDR1-18,HDR1-16 | FPGA_PULLUP=True,True,True,True
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_IORDY            | ConnectTo=HDR1-76
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_PDIAG            | ConnectTo=HDR1-70
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_CSEL             | ConnectTo=HDR1-74
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_IOCS16           | ConnectTo=HDR1-84
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_DMARQ            | ConnectTo=HDR1-64
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_DMACK            | ConnectTo=HDR1-82
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_LED_ACTIVE       | ConnectTo=HDR1-2
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_RESET            | ConnectTo=HDR1-20
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_DASP             | ConnectTo=HDR1-98
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_IOWR             | ConnectTo=HDR1-68
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_IORD             | ConnectTo=HDR1-72
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_INTRQ            | ConnectTo=HDR1-80
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_CS0              | ConnectTo=HDR1-96
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_CS1              | ConnectTo=HDR1-94
+;Record=Constraint | TargetKind=Port | TargetId=CF_IDE_CS[1..0]         | ConnectTo=HDR1-94,HDR1-96
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=CF_CARD_DET0            | ConnectTo=HDR1-100
+Record=Constraint | TargetKind=Port | TargetId=CF_CARD_DET1            | ConnectTo=HDR1-66
+;Record=Constraint | TargetKind=Port | TargetId=CF_CARD_DET[1..0]       | ConnectTo=HDR1-66,HDR1-100
+Record=Constraint | TargetKind=Port | TargetId=CF_CARD_POWER           | ConnectTo=HDR1-86
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D0               | ConnectTo=HDR1-62
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D1               | ConnectTo=HDR1-48
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D2               | ConnectTo=HDR1-44
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D3               | ConnectTo=HDR1-40
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D4               | ConnectTo=HDR1-36
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D5               | ConnectTo=HDR1-32
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D6               | ConnectTo=HDR1-28
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D7               | ConnectTo=HDR1-24
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D8               | ConnectTo=HDR1-22
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D9               | ConnectTo=HDR1-26
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D10              | ConnectTo=HDR1-30
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D11              | ConnectTo=HDR1-34
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D12              | ConnectTo=HDR1-38
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D13              | ConnectTo=HDR1-42
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D14              | ConnectTo=HDR1-46
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D15              | ConnectTo=HDR1-60
+;Record=Constraint | TargetKind=Port | TargetId=CF_IDE_D[15..0]         | ConnectTo=HDR1-60,HDR1-46,HDR1-42,HDR1-38,HDR1-34,HDR1-30,HDR1-26,HDR1-22,HDR1-24,HDR1-28,HDR1-32,HDR1-36,HDR1-40,HDR1-44,HDR1-48,HDR1-62
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_A0               | ConnectTo=HDR1-92
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_A1               | ConnectTo=HDR1-88
+Record=Constraint | TargetKind=Port | TargetId=CF_IDE_A2               | ConnectTo=HDR1-90
+;Record=Constraint | TargetKind=Port | TargetId=CF_IDE_A[2..0]          | ConnectTo=HDR1-90,HDR1-88,HDR1-92
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=LED_ACTIVE              | ConnectTo=HDR1-2
+;...............................................................................
+

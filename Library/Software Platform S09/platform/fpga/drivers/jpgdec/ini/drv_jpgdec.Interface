@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_jpgdec
+Category=DRIVER
+System=False
+Description=JPEG decoder driver
+PublicDir=platform\fpga\drivers\jpgdec\include
+

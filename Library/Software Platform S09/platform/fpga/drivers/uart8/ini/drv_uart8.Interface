@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_uart8
+Category=DRIVER
+System=False
+Description=UART8 serial port driver
+PublicDir=platform\fpga\drivers\uart8\include
+
+

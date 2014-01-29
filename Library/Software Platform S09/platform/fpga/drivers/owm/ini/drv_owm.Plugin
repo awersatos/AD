@@ -1,0 +1,24 @@
+[Plugin]
+Name=drv_owm
+Description=One Wire Master Controller Driver
+Caption=One Wire Driver
+SourceDir=platform\fpga\drivers\owm\src
+Implement=drv_owm
+MinInstances=1
+Bitmap=drv_owm.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_owm
+Condition=EQ
+
+[Available_If1]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=per_owm
+MultipleLinks=True
+

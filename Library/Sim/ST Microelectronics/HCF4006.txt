@@ -1,0 +1,119 @@
+//============================================================
+# hcf4006 source
+//HCF4006 18-stage static shift register (ST-Microelectronics Datasheet June 1989)
+//dm 7-20-97: changed STATE to STATE_BIT
+//dm 8-11-97: replaced vol_param and voh_param= (); with VOL_VOH_MIN()
+//dm 8-22-97: updated to use PWL_TABLE statements
+//dw 22-5-00: swapped Inputs/Outputs 2 and 3.  Added output Pin 2.
+//============================================================
+INPUTS VDD, GND, D1, D2, D3, D4, CP; 
+OUTPUTS VDD_LD, D1_LD, D2_LD, D3_LD, D4_LD, CP_LD,
+		D4P5, D4P4, D2P5, D2P4, D3P4, D1P4, D1P4d;
+INTEGERS reg_1, reg_2, reg_3, reg_4;
+REALS tt_5, tt_10, tt_15, tt_val, tp_5, tp_10, tp_15, 
+      twh, twh_5, twh_10, twh_15, ts_5, ts_10, ts_15, ts_val,
+      th_val, rout_5, rout_10, rout_15, rin_val, ridd_val, vdd_val;
+
+PWR_GND_PINS(VDD,GND);	//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(3,18);	//check for min supply=3 and max supply=18
+VOL_VOH_MIN(0.05,0.05,0.1); //set min vol_param=gnd_param+0.05, max voh_param=pwr_param-0.05
+VIL_VIH_PERCENT(33,66);	//CMOS vil=33% of supply, vih=66% of supply
+IO_PAIRS(D1:D1_LD, D3:D3_LD, D2:D2_LD, D4:D4_LD, CP:CP_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tCP\tD1\tD3\tD2\tD4\tD1P4\tD3P4\tD2P4\tD2P5\tD4P4\tD4P5\D1P4d");
+	//Note: ttlh and tthl are the same
+	tt_5= (MIN_TYP_MAX(tt_param: NULL, 100n, NULL));
+	tt_10= (MIN_TYP_MAX(tt_param: NULL, 50n, NULL));
+	tt_15= (MIN_TYP_MAX(tt_param: NULL, 40n, NULL));
+    
+	//Note: 5V tplh and tphl are the same
+	tp_5= (MIN_TYP_MAX(tp_param: NULL, 200n, NULL));
+	tp_10= (MIN_TYP_MAX(tp_param: NULL, 100n, NULL));
+	tp_15= (MIN_TYP_MAX(tp_param: NULL, 80n, NULL));
+
+        twh_5= (100n);	//typ twh @ 5V
+	twh_10= (45n);	//typ twh @ 10V
+	twh_15= (30n);	//typ twh @ 15V
+
+        ts_5= (50n);	//typ ts @ 5V
+	ts_10= (25n);	//typ ts @ 10V
+	ts_15= (20n);	//typ ts @ 15V
+
+	th_val= (5n);		//min th @ 5V, 10V and 15V
+
+	//CMOS B IOH min=0.44mA @ VDD=5V and Voh=4.6V: rout=(VDD-Voh)/IOH=909
+	//CMOS B IOL min=0.44mA @ VDD=5V and Vol=0.4V: rout=Vol/IOL=909
+    rout_5= (MIN_TYP_MAX(drv_param: 909,NULL,NULL));
+
+	//CMOS B IOH min=1.1mA @ VDD=10V and Voh=9.5V: rout=(VDD-Voh)/IOH=455
+	//CMOS B IOL min=1.1mA @ VDD=10V and Voh=0.5V: rout=Vol/IOL=455
+    rout_10= (MIN_TYP_MAX(drv_param: 455,NULL,NULL));
+
+	//CMOS B IOH min=3.0mA @ VDD=15V and Voh=13.5V: rout=(VDD-Voh)/IOH=500
+	//CMOS B IOL min=3.0mA @ VDD=15V and Vol=1.5V: rout=Vol/IOL=500
+    rout_15= (MIN_TYP_MAX(drv_param: 500,NULL,NULL));
+
+	//Note: Input loading and IDD are linear over VDD ranges
+    //CMOS typ input current @ 25'C: IIN=10pA @ VDD=18v rin= (18/10pA) = 1.8E12;
+    //CMOS max input current @ 25'C: IIN=0.3uA @ VDD=18v rin= (18/0.3uA) = 6.0E7;
+	rin_val= (MIN_TYP_MAX(ld_param: NULL, 1.8E12, 6.0E7));
+
+	//IDD @ 10V: 1E9= 10/10nA typical, 2.5Meg= 10/40uA max
+	ridd_val= (MIN_TYP_MAX(i_param: NULL, 1E9, 2.5Meg));
+
+	reg_1= (0);		//clear internal shift registers
+	reg_2= (0);
+	reg_3= (0);
+	reg_4= (0);
+	STATE D4P5 D4P4 D2P5 D2P4 D3P4 D1P4 D1P4d = ZERO;	//initialize output
+	EXIT;
+  END;
+
+vdd_val= (pwr_param - gnd_param);
+rol_param= (PWL_TABLE(vdd_val: 5,rout_5,10,rout_10,15,rout_15));
+roh_param= (rol_param);			// Drive high same as drive low
+tt_val= (PWL_TABLE(vdd_val:5,tt_5,10,tt_10,15,tt_15));
+
+DRIVE D4P5 D4P4 D2P5 D2P4 D3P4 D1P4 D1P4d =
+  (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+
+LOAD D1_LD D3_LD D2_LD D4_LD CP_LD =
+  (v0=vol_param,r0=rin_val,v1=voh_param,r1=rin_val,io=1e12,t=1p);
+
+IF (present_time > 0 && CHANGED_HL(CP)) THEN
+  BEGIN
+	reg_1= ((reg_1 << 1) + D1);
+	reg_2= ((reg_2 << 1) + D2);
+	reg_3= ((reg_3 << 1) + D3);
+	reg_4= ((reg_4 << 1) + D4);
+  END;
+
+IF (present_time > 0 && CHANGED_LH(CP)) THEN
+  BEGIN
+    STATE_BIT D1P4d = (reg_1 >> 3);
+  END;
+
+STATE_BIT D2P5 = (reg_2 >> 4);
+STATE_BIT D4P5 = (reg_4 >> 4);
+STATE_BIT D1P4 = (reg_1 >> 3);
+STATE_BIT D3P4 = (reg_3 >> 3);
+STATE_BIT D2P4 = (reg_2 >> 3);
+STATE_BIT D4P4 = (reg_4 >> 3);
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//		present_time,CP,D1,D3,D2,D4,D1P4,D3P4,D2P4,D2P5,D4P4,D4P5,D1P4d);
+
+IF (warn_param) THEN
+  BEGIN
+	twh= (PWL_TABLE(vdd_val: 5,twh_5,10,twh_10,15,twh_15));
+	WIDTH(CP Twh=twh "CP");
+	ts_val= (PWL_TABLE(vdd_val: 5,ts_5,10,ts_10,15,ts_15));
+	SETUP_HOLD(CP=HL D1 D3 D2 D4 Ts=ts_val Th=th_val "DATA->CP");
+  END;
+
+LOAD VDD_LD = (v0=gnd_param,r0=ridd_val,t=1p);
+
+DELAY D4P5 D4P4 D2P5 D2P4 D3P4 D1P4 D1P4d = (PWL_TABLE(vdd_val:5,tp_5,10,tp_10,15,tp_15));
+EXIT;

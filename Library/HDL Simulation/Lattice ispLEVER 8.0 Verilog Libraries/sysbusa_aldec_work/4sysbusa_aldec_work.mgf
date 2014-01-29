@@ -1,0 +1,293 @@
+V 000045 56 172 1265381552887 delc0p2x2v1mce
+(_unit delc0p2x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 34
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000043 56 170 1265381552892 delc2x2v1mce
+(_unit delc2x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 34
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000043 56 170 1265381552900 delc1x2v1mce
+(_unit delc1x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 34
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265381552905 sbnx2v1mce
+(_unit sbnx2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000042 56 169 1265381552910 sbnx16v1mce
+(_unit sbnx16v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265381552915 sbnx1v1mce
+(_unit sbnx1v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000045 56 172 1265381552920 delc0p5x2v1mce
+(_unit delc0p5x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 34
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265381552925 invx4v1mce
+(_unit invx4v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000042 56 169 1265381552930 invx16v1mce
+(_unit invx16v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265381552946 sbnx8v1mce
+(_unit sbnx8v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265381552951 sbnx4v1mce
+(_unit sbnx4v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000043 56 245 1265381552956 nor2ix4v1mce
+(_unit nor2ix4v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 25
+			(_port AN in )
+			(_port Z out )
+		)
+	)
+)
+V 000045 56 4426 1265381552961 aoi222x2v1mce
+(_unit aoi222x2v1mce
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 27
+			(_code  1 NT*B1*AN*NT*B2*AN*NT*C1*AN*NT*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 29
+			(_code  2 NT*B1*AN*NT*B2*AN*NT*C1*AN*NT*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 31
+			(_code  3 B1*AN*NT*B2*AN*C1*AN*NT*C2*OR*NT*B1*AN*B2*AN*NT*C1*AN*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 33
+			(_code  4 B1*AN*NT*B2*AN*C1*AN*NT*C2*OR*NT*B1*AN*B2*AN*NT*C1*AN*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 35
+			(_code  5 NT*B1*AN*B2*AN*C1*AN*NT*C2*OR*B1*AN*NT*B2*AN*NT*C1*AN*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 37
+			(_code  6 NT*B1*AN*B2*AN*C1*AN*NT*C2*OR*B1*AN*NT*B2*AN*NT*C1*AN*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 39
+			(_code  7 B1*AN*NT*B2*AN*NT*C1*AN*NT*C2*OR*NT*B1*AN*B2*AN*NT*C1*AN*NT*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 41
+			(_code  8 B1*AN*NT*B2*AN*NT*C1*AN*NT*C2*OR*NT*B1*AN*B2*AN*NT*C1*AN*NT*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 43
+			(_code  9 NT*B1*AN*NT*B2*AN*C1*AN*NT*C2*OR*NT*B1*AN*NT*B2*AN*NT*C1*AN*C2)
+			(_port A1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 45
+			(_code  10 NT*B1*AN*NT*B2*AN*C1*AN*NT*C2*OR*NT*B1*AN*NT*B2*AN*NT*C1*AN*C2)
+			(_port A2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 47
+			(_code  11 NT*A1*AN*NT*A2*AN*NT*C1*AN*NT*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 49
+			(_code  12 NT*A1*AN*NT*A2*AN*NT*C1*AN*NT*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 51
+			(_code  13 A1*AN*NT*A2*AN*C1*AN*NT*C2*OR*NT*A1*AN*A2*AN*NT*C1*AN*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 53
+			(_code  14 A1*AN*NT*A2*AN*C1*AN*NT*C2*OR*NT*A1*AN*A2*AN*NT*C1*AN*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 55
+			(_code  15 NT*A1*AN*A2*AN*C1*AN*NT*C2*OR*A1*AN*NT*A2*AN*NT*C1*AN*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 57
+			(_code  16 NT*A1*AN*A2*AN*C1*AN*NT*C2*OR*A1*AN*NT*A2*AN*NT*C1*AN*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 59
+			(_code  17 NT*A1*AN*NT*A2*AN*C1*AN*NT*C2*OR*NT*A1*AN*NT*A2*AN*NT*C1*AN*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 61
+			(_code  18 NT*A1*AN*NT*A2*AN*C1*AN*NT*C2*OR*NT*A1*AN*NT*A2*AN*NT*C1*AN*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 63
+			(_code  19 A1*AN*NT*A2*AN*NT*C1*AN*NT*C2*OR*NT*A1*AN*A2*AN*NT*C1*AN*NT*C2)
+			(_port B1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 65
+			(_code  20 A1*AN*NT*A2*AN*NT*C1*AN*NT*C2*OR*NT*A1*AN*A2*AN*NT*C1*AN*NT*C2)
+			(_port B2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 67
+			(_code  21 NT*A1*AN*NT*A2*AN*NT*B1*AN*NT*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 69
+			(_code  22 NT*A1*AN*NT*A2*AN*NT*B1*AN*NT*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 71
+			(_code  23 A1*AN*NT*A2*AN*B1*AN*NT*B2*OR*NT*A1*AN*A2*AN*NT*B1*AN*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 73
+			(_code  24 A1*AN*NT*A2*AN*B1*AN*NT*B2*OR*NT*A1*AN*A2*AN*NT*B1*AN*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 75
+			(_code  25 NT*A1*AN*A2*AN*B1*AN*NT*B2*OR*A1*AN*NT*A2*AN*NT*B1*AN*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 77
+			(_code  26 NT*A1*AN*A2*AN*B1*AN*NT*B2*OR*A1*AN*NT*A2*AN*NT*B1*AN*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 79
+			(_code  27 NT*A1*AN*NT*A2*AN*B1*AN*NT*B2*OR*NT*A1*AN*NT*A2*AN*NT*B1*AN*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 81
+			(_code  28 NT*A1*AN*NT*A2*AN*B1*AN*NT*B2*OR*NT*A1*AN*NT*A2*AN*NT*B1*AN*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 83
+			(_code  29 A1*AN*NT*A2*AN*NT*B1*AN*NT*B2*OR*NT*A1*AN*A2*AN*NT*B1*AN*NT*B2)
+			(_port C1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 85
+			(_code  30 A1*AN*NT*A2*AN*NT*B1*AN*NT*B2*OR*NT*A1*AN*A2*AN*NT*B1*AN*NT*B2)
+			(_port C2 in )
+			(_port Z out )
+		)
+	)
+)

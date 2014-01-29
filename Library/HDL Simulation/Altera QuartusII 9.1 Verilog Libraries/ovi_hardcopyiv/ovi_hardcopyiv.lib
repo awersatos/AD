@@ -1,0 +1,802 @@
+timestamp=1260919325313
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[HARDCOPYIV_PRIM_DFFE]
+A/HARDCOPYIV_PRIM_DFFE=22|./src/hardcopyiv_atoms.v|26|1*838
+B/HARDCOPYIV_PRIM_DFFE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=296,512,994,1028
+R=./src/hardcopyiv_atoms.v|26
+
+[HARDCOPYIV_PRIM_DFFEAS]
+A/HARDCOPYIV_PRIM_DFFEAS=22|./src/hardcopyiv_atoms.v|99|1*1643
+B/HARDCOPYIV_PRIM_DFFEAS=3*723
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=420,661,1039,1073
+R=./src/hardcopyiv_atoms.v|99
+
+[HARDCOPYIV_PRIM_DFFEAS_HIGH]
+A/HARDCOPYIV_PRIM_DFFEAS_HIGH=22|./src/hardcopyiv_atoms.v|137|1*2434
+B/HARDCOPYIV_PRIM_DFFEAS_HIGH=3*1300
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=430,676,1054,1088
+R=./src/hardcopyiv_atoms.v|137
+
+[hardcopyiv_and1]
+A/hardcopyiv_and1=22|./src/hardcopyiv_atoms.v|350|1*6929
+B/hardcopyiv_and1=3*5309
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_and1=4*2566
+P/~emb=131,283,385,474
+R=./src/hardcopyiv_atoms.v|350
+
+[hardcopyiv_and16]
+A/hardcopyiv_and16=22|./src/hardcopyiv_atoms.v|363|1*7521
+B/hardcopyiv_and16=3*5467
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_and16=4*2727
+P/~emb=145,346,527,818
+R=./src/hardcopyiv_atoms.v|363
+
+[hardcopyiv_and2]
+A/hardcopyiv_and2=22|./src/hardcopyiv_atoms.v|2933|1*37169
+B/hardcopyiv_and2=3*345652
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_and2=4*10583
+P/~emb=160,320,450,578
+R=./src/hardcopyiv_atoms.v|2933
+
+[hardcopyiv_asmiblock]
+A/hardcopyiv_asmiblock=22|./src/hardcopyiv_atoms.v|15706|1*144757
+B/hardcopyiv_asmiblock=3*2226252
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=444,675,877,1016
+R=./src/hardcopyiv_atoms.v|15706
+
+[hardcopyiv_b17mux21]
+A/hardcopyiv_b17mux21=22|./src/hardcopyiv_atoms.v|403|1*8996
+B/hardcopyiv_b17mux21=3*7123
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=205,377,533,623
+R=./src/hardcopyiv_atoms.v|403
+
+[hardcopyiv_b5mux21]
+A/hardcopyiv_b5mux21=22|./src/hardcopyiv_atoms.v|424|1*10218
+B/hardcopyiv_b5mux21=3*9386
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=200,369,525,615
+R=./src/hardcopyiv_atoms.v|424
+
+[hardcopyiv_bias_block]
+A/hardcopyiv_bias_block=22|./src/hardcopyiv_atoms.v|17458|1*164513
+B/hardcopyiv_bias_block=3*2359809
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_bias_block=4*26073
+P/~emb=302,658,906,1207
+R=./src/hardcopyiv_atoms.v|17458
+
+[hardcopyiv_bias_generator]
+A/hardcopyiv_bias_generator=22|./src/hardcopyiv_atoms.v|17372|1*163463
+B/hardcopyiv_bias_generator=3*2349908
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=333,588,903,1126
+R=./src/hardcopyiv_atoms.v|17372
+
+[hardcopyiv_bias_logic]
+A/hardcopyiv_bias_logic=22|./src/hardcopyiv_atoms.v|17286|1*162561
+B/hardcopyiv_bias_logic=3*2347707
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=351,625,898,1135
+R=./src/hardcopyiv_atoms.v|17286
+
+[hardcopyiv_bmux21]
+A/hardcopyiv_bmux21=22|./src/hardcopyiv_atoms.v|392|1*8370
+B/hardcopyiv_bmux21=3*5626
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=201,370,526,616
+R=./src/hardcopyiv_atoms.v|392
+
+[hardcopyiv_carry_chain_adder]
+A/hardcopyiv_carry_chain_adder=22|./src/hardcopyiv_atoms.v|5373|1*64130
+B/hardcopyiv_carry_chain_adder=3*804460
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_carry_chain_adder=4*16404
+P/~emb=224,427,634,764
+R=./src/hardcopyiv_atoms.v|5373
+
+[hardcopyiv_clkena]
+A/hardcopyiv_clkena=22|./src/hardcopyiv_atoms.v|3044|1*38836
+B/hardcopyiv_clkena=3*348976
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=399,791,1141,1500
+R=./src/hardcopyiv_atoms.v|3044
+
+[hardcopyiv_clkselect]
+A/hardcopyiv_clkselect=22|./src/hardcopyiv_atoms.v|2882|1*36236
+B/hardcopyiv_clkselect=3*345321
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_clkselect=4*9880
+P/~emb=249,514,715,963
+R=./src/hardcopyiv_atoms.v|2882
+
+[hardcopyiv_ddio_in]
+A/hardcopyiv_ddio_in=22|./src/hardcopyiv_atoms.v|4064|1*49637
+B/hardcopyiv_ddio_in=3*426142
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=614,1115,1663,2251
+R=./src/hardcopyiv_atoms.v|4064
+
+[hardcopyiv_ddio_oe]
+A/hardcopyiv_ddio_oe=22|./src/hardcopyiv_atoms.v|3915|1*48274
+B/hardcopyiv_ddio_oe=3*418712
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=539,1021,1478,2015
+R=./src/hardcopyiv_atoms.v|3915
+
+[hardcopyiv_ddio_out]
+A/hardcopyiv_ddio_out=22|./src/hardcopyiv_atoms.v|3685|1*46158
+B/hardcopyiv_ddio_out=3*404536
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=775,1466,2335,3053
+R=./src/hardcopyiv_atoms.v|3685
+
+[hardcopyiv_ddr_delay_chain_s]
+A/hardcopyiv_ddr_delay_chain_s=22|./src/hardcopyiv_atoms.v|7070|1*75712
+B/hardcopyiv_ddr_delay_chain_s=3*1043039
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=462,931,1435,1604
+R=./src/hardcopyiv_atoms.v|7070
+
+[hardcopyiv_ddr_gray_decoder]
+A/hardcopyiv_ddr_gray_decoder=22|./src/hardcopyiv_atoms.v|7041|1*74868
+B/hardcopyiv_ddr_gray_decoder=3*1035120
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,401,614,738
+R=./src/hardcopyiv_atoms.v|7041
+
+[hardcopyiv_ddr_io_reg]
+A/hardcopyiv_ddr_io_reg=22|./src/hardcopyiv_atoms.v|7157|1*77069
+B/hardcopyiv_ddr_io_reg=3*1054536
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_ddr_io_reg=4*16677
+P/~emb=603,972,1388,1711
+R=./src/hardcopyiv_atoms.v|7157
+
+[hardcopyiv_delay_chain]
+A/hardcopyiv_delay_chain=22|./src/hardcopyiv_atoms.v|8738|1*91851
+B/hardcopyiv_delay_chain=3*1197910
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_delay_chain=4*22882
+P/~emb=2210,2896,3631,3796
+R=./src/hardcopyiv_atoms.v|8738
+
+[hardcopyiv_dffe]
+A/hardcopyiv_dffe=22|./src/hardcopyiv_atoms.v|175|1*3246
+B/hardcopyiv_dffe=3*1882
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_dffe=4*0
+P/~emb=245,533,753,952
+R=./src/hardcopyiv_atoms.v|175
+
+[hardcopyiv_dll]
+A/hardcopyiv_dll=22|./src/hardcopyiv_atoms.v|7257|1*78467
+B/hardcopyiv_dll=3*1057705
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_dll=4*17852
+P/~emb=1308,3118,5441,6190
+R=./src/hardcopyiv_atoms.v|7257
+
+[hardcopyiv_dll_offset_ctrl]
+A/hardcopyiv_dll_offset_ctrl=22|./src/hardcopyiv_atoms.v|7980|1*83012
+B/hardcopyiv_dll_offset_ctrl=3*1123868
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_dll_offset_ctrl=4*19267
+P/~emb=690,1548,3027,3412
+R=./src/hardcopyiv_atoms.v|7980
+
+[hardcopyiv_dpa_block]
+A/hardcopyiv_dpa_block=22|./src/hardcopyiv_atoms.v|16719|1*156822
+B/hardcopyiv_dpa_block=3*2309091
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=450,1004,1574,2056
+R=./src/hardcopyiv_atoms.v|16719
+
+[hardcopyiv_dpa_retime_block]
+A/hardcopyiv_dpa_retime_block=22|./src/hardcopyiv_atoms.v|16569|1*155418
+B/hardcopyiv_dpa_retime_block=3*2291183
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=761,1169,1856,2110
+R=./src/hardcopyiv_atoms.v|16569
+
+[hardcopyiv_dqs_config]
+A/hardcopyiv_dqs_config=22|./src/hardcopyiv_atoms.v|10237|1*107491
+B/hardcopyiv_dqs_config=3*1357392
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_dqs_config=4*23565
+P/~emb=2076,2794,3897,4231
+R=./src/hardcopyiv_atoms.v|10237
+
+[hardcopyiv_dqs_delay_chain]
+A/hardcopyiv_dqs_delay_chain=22|./src/hardcopyiv_atoms.v|8267|1*85839
+B/hardcopyiv_dqs_delay_chain=3*1146635
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_dqs_delay_chain=4*21146
+P/~emb=1090,1845,2874,3104
+R=./src/hardcopyiv_atoms.v|8267
+
+[hardcopyiv_dqs_enable]
+A/hardcopyiv_dqs_enable=22|./src/hardcopyiv_atoms.v|8462|1*88346
+B/hardcopyiv_dqs_enable=3*1176298
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_dqs_enable=4*22607
+P/~emb=320,575,887,1047
+R=./src/hardcopyiv_atoms.v|8462
+
+[hardcopyiv_dqs_enable_ctrl]
+A/hardcopyiv_dqs_enable_ctrl=22|./src/hardcopyiv_atoms.v|8524|1*89424
+B/hardcopyiv_dqs_enable_ctrl=3*1178643
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1163,2034,3102,3778
+R=./src/hardcopyiv_atoms.v|8524
+
+[hardcopyiv_ena_reg]
+A/hardcopyiv_ena_reg=22|./src/hardcopyiv_atoms.v|2964|1*37777
+B/hardcopyiv_ena_reg=3*345810
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_ena_reg=4*10822
+P/~emb=251,486,783,961
+R=./src/hardcopyiv_atoms.v|2964
+
+[hardcopyiv_ff]
+A/hardcopyiv_ff=22|./src/hardcopyiv_atoms.v|2717|1*34462
+B/hardcopyiv_ff=3*336980
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_ff=4*8778
+P/~emb=509,936,1498,1826
+R=./src/hardcopyiv_atoms.v|2717
+
+[hardcopyiv_first_stage_add_sub]
+A/hardcopyiv_first_stage_add_sub=22|./src/hardcopyiv_atoms.v|4809|1*57106
+B/hardcopyiv_first_stage_add_sub=3*693866
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_first_stage_add_sub=4*13803
+P/~emb=385,703,987,1135
+R=./src/hardcopyiv_atoms.v|4809
+
+[hardcopyiv_fsa_isse]
+A/hardcopyiv_fsa_isse=22|./src/hardcopyiv_atoms.v|4654|1*55438
+B/hardcopyiv_fsa_isse=3*490945
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1282,1926,3474,3634
+R=./src/hardcopyiv_atoms.v|4654
+
+[hardcopyiv_half_rate_input]
+A/hardcopyiv_half_rate_input=22|./src/hardcopyiv_atoms.v|9878|1*103523
+B/hardcopyiv_half_rate_input=3*1333804
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=585,1222,2065,2913
+R=./src/hardcopyiv_atoms.v|9878
+
+[hardcopyiv_hram]
+A/hardcopyiv_hram=22|./src/hardcopyiv_atoms.v|3163|1*40918
+B/hardcopyiv_hram=3*353112
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hram=4*11458
+P/~emb=2117,3140,4378,5144
+R=./src/hardcopyiv_atoms.v|3163
+
+[hardcopyiv_hram_pulse_generator]
+A/hardcopyiv_hram_pulse_generator=22|./src/hardcopyiv_atoms.v|3117|1*39958
+B/hardcopyiv_hram_pulse_generator=3*350965
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hram_pulse_generator=4*11147
+P/~emb=234,483,727,896
+R=./src/hardcopyiv_atoms.v|3117
+
+[hardcopyiv_input_phase_alignment]
+A/hardcopyiv_input_phase_alignment=22|./src/hardcopyiv_atoms.v|9634|1*100978
+B/hardcopyiv_input_phase_alignment=3*1310363
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1281,2201,3392,4118
+R=./src/hardcopyiv_atoms.v|9634
+
+[hardcopyiv_io_clock_divider]
+A/hardcopyiv_io_clock_divider=22|./src/hardcopyiv_atoms.v|8921|1*93906
+B/hardcopyiv_io_clock_divider=3*1226233
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_io_clock_divider=4*23067
+P/~emb=982,1581,2465,2699
+R=./src/hardcopyiv_atoms.v|8921
+
+[hardcopyiv_io_config]
+A/hardcopyiv_io_config=22|./src/hardcopyiv_atoms.v|10102|1*105614
+B/hardcopyiv_io_config=3*1344031
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_io_config=4*23258
+P/~emb=1141,1703,2555,2813
+R=./src/hardcopyiv_atoms.v|10102
+
+[hardcopyiv_io_ibuf]
+A/hardcopyiv_io_ibuf=22|./src/hardcopyiv_atoms.v|3470|1*43832
+B/hardcopyiv_io_ibuf=3*388844
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_io_ibuf=4*11633
+P/~emb=372,737,1086,1269
+R=./src/hardcopyiv_atoms.v|3470
+
+[hardcopyiv_io_obuf]
+A/hardcopyiv_io_obuf=22|./src/hardcopyiv_atoms.v|3562|1*44875
+B/hardcopyiv_io_obuf=3*395702
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_io_obuf=4*11877
+P/~emb=678,1102,1635,1886
+R=./src/hardcopyiv_atoms.v|3562
+
+[hardcopyiv_io_pad]
+A/hardcopyiv_io_pad=22|./src/hardcopyiv_atoms.v|11517|1*118885
+B/hardcopyiv_io_pad=3*1501083
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=189,403,591,727
+R=./src/hardcopyiv_atoms.v|11517
+
+[hardcopyiv_jtag]
+A/hardcopyiv_jtag=22|./src/hardcopyiv_atoms.v|445|1*10845
+B/hardcopyiv_jtag=3*10884
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=666,942,1195,1362
+R=./src/hardcopyiv_atoms.v|445
+
+[hardcopyiv_latch]
+A/hardcopyiv_latch=22|./src/hardcopyiv_atoms.v|224|1*4222
+B/hardcopyiv_latch=3*2716
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_latch=4*1022
+P/~emb=216,422,664,871
+R=./src/hardcopyiv_atoms.v|224
+
+[hardcopyiv_lcell_comb]
+A/hardcopyiv_lcell_comb=22|./src/hardcopyiv_atoms.v|492|1*11597
+B/hardcopyiv_lcell_comb=3*11210
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lcell_comb=4*2890
+P/~emb=1119,1722,3149,3651
+R=./src/hardcopyiv_atoms.v|492
+
+[hardcopyiv_lcell_hsadder]
+A/hardcopyiv_lcell_hsadder=22|./src/hardcopyiv_atoms.v|17531|1*165655
+B/hardcopyiv_lcell_hsadder=3*2360141
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lcell_hsadder=4*26621
+P/~emb=515,795,1150,1279
+R=./src/hardcopyiv_atoms.v|17531
+
+[hardcopyiv_lvds_receiver]
+A/hardcopyiv_lvds_receiver=22|./src/hardcopyiv_atoms.v|16913|1*158267
+B/hardcopyiv_lvds_receiver=3*2326712
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_receiver=4*25834
+P/~emb=1592,2882,4264,5388
+R=./src/hardcopyiv_atoms.v|16913
+
+[hardcopyiv_lvds_reg]
+A/hardcopyiv_lvds_reg=22|./src/hardcopyiv_atoms.v|16316|1*150402
+B/hardcopyiv_lvds_reg=3*2253298
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_reg=4*24881
+P/~emb=253,448,697,858
+R=./src/hardcopyiv_atoms.v|16316
+
+[hardcopyiv_lvds_rx_bitslip]
+A/hardcopyiv_lvds_rx_bitslip=22|./src/hardcopyiv_atoms.v|16016|1*148823
+B/hardcopyiv_lvds_rx_bitslip=3*2243584
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_rx_bitslip=4*24494
+P/~emb=412,1095,1606,2010
+R=./src/hardcopyiv_atoms.v|16016
+
+[hardcopyiv_lvds_rx_deser]
+A/hardcopyiv_lvds_rx_deser=22|./src/hardcopyiv_atoms.v|16180|1*151334
+B/hardcopyiv_lvds_rx_deser=3*2255153
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_rx_deser=4*25344
+P/~emb=316,564,830,983
+R=./src/hardcopyiv_atoms.v|16180
+
+[hardcopyiv_lvds_rx_fifo]
+A/hardcopyiv_lvds_rx_fifo=22|./src/hardcopyiv_atoms.v|15888|1*147487
+B/hardcopyiv_lvds_rx_fifo=3*2236841
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_rx_fifo=4*24125
+P/~emb=328,754,1161,1469
+R=./src/hardcopyiv_atoms.v|15888
+
+[hardcopyiv_lvds_rx_fifo_sync_ram]
+A/hardcopyiv_lvds_rx_fifo_sync_ram=22|./src/hardcopyiv_atoms.v|15788|1*146366
+B/hardcopyiv_lvds_rx_fifo_sync_ram=3*2227321
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=360,657,1122,1311
+R=./src/hardcopyiv_atoms.v|15788
+
+[hardcopyiv_lvds_rx_parallel_reg]
+A/hardcopyiv_lvds_rx_parallel_reg=22|./src/hardcopyiv_atoms.v|16246|1*152319
+B/hardcopyiv_lvds_rx_parallel_reg=3*2259885
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_rx_parallel_reg=4*25582
+P/~emb=384,643,929,1100
+R=./src/hardcopyiv_atoms.v|16246
+
+[hardcopyiv_lvds_transmitter]
+A/hardcopyiv_lvds_transmitter=22|./src/hardcopyiv_atoms.v|1137|1*18196
+B/hardcopyiv_lvds_transmitter=3*57316
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_transmitter=4*6703
+P/~emb=1034,1848,2645,3164
+R=./src/hardcopyiv_atoms.v|1137
+
+[hardcopyiv_lvds_tx_out_block]
+A/hardcopyiv_lvds_tx_out_block=22|./src/hardcopyiv_atoms.v|1031|1*16983
+B/hardcopyiv_lvds_tx_out_block=3*51500
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_tx_out_block=4*6118
+P/~emb=387,725,1093,1310
+R=./src/hardcopyiv_atoms.v|1031
+
+[hardcopyiv_lvds_tx_parallel_register]
+A/hardcopyiv_lvds_tx_parallel_register=22|./src/hardcopyiv_atoms.v|950|1*15778
+B/hardcopyiv_lvds_tx_parallel_register=3*47496
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_tx_parallel_register=4*5783
+P/~emb=393,717,1075,1307
+R=./src/hardcopyiv_atoms.v|950
+
+[hardcopyiv_lvds_tx_reg]
+A/hardcopyiv_lvds_tx_reg=22|./src/hardcopyiv_atoms.v|880|1*14715
+B/hardcopyiv_lvds_tx_reg=3*45686
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_lvds_tx_reg=4*5250
+P/~emb=259,479,767,963
+R=./src/hardcopyiv_atoms.v|880
+
+[hardcopyiv_m_cntr]
+A/hardcopyiv_m_cntr=22|./src/hardcopyiv_atoms.v|11553|1*119671
+B/hardcopyiv_m_cntr=3*1501727
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=321,602,877,1070
+R=./src/hardcopyiv_atoms.v|11553
+
+[hardcopyiv_mac_mult]
+A/hardcopyiv_mac_mult=22|./src/hardcopyiv_atoms.v|4377|1*53258
+B/hardcopyiv_mac_mult=3*455293
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1081,1851,3420,4013
+R=./src/hardcopyiv_atoms.v|4377
+
+[hardcopyiv_mac_multiplier]
+A/hardcopyiv_mac_multiplier=22|./src/hardcopyiv_atoms.v|4314|1*52144
+B/hardcopyiv_mac_multiplier=3*438983
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_mac_multiplier=4*13374
+P/~emb=422,684,1113,1225
+R=./src/hardcopyiv_atoms.v|4314
+
+[hardcopyiv_mac_out]
+A/hardcopyiv_mac_out=22|./src/hardcopyiv_atoms.v|5420|1*64959
+B/hardcopyiv_mac_out=3*806300
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4610,8484,17119,20332
+R=./src/hardcopyiv_atoms.v|5420
+
+[hardcopyiv_mac_register]
+A/hardcopyiv_mac_register=22|./src/hardcopyiv_atoms.v|4230|1*51064
+B/hardcopyiv_mac_register=3*434568
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_mac_register=4*12276
+P/~emb=369,706,982,1141
+R=./src/hardcopyiv_atoms.v|4230
+
+[hardcopyiv_mux21]
+A/hardcopyiv_mux21=22|./src/hardcopyiv_atoms.v|282|1*5215
+B/hardcopyiv_mux21=3*3759
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_mux21=4*1677
+P/~emb=181,366,564,708
+R=./src/hardcopyiv_atoms.v|282
+
+[hardcopyiv_mux41]
+A/hardcopyiv_mux41=22|./src/hardcopyiv_atoms.v|309|1*5984
+B/hardcopyiv_mux41=3*4426
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_mux41=4*1989
+P/~emb=252,465,737,923
+R=./src/hardcopyiv_atoms.v|309
+
+[hardcopyiv_n_cntr]
+A/hardcopyiv_n_cntr=22|./src/hardcopyiv_atoms.v|11634|1*120601
+B/hardcopyiv_n_cntr=3*1507212
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=217,471,722,879
+R=./src/hardcopyiv_atoms.v|11634
+
+[hardcopyiv_nmux21]
+A/hardcopyiv_nmux21=22|./src/hardcopyiv_atoms.v|414|1*9624
+B/hardcopyiv_nmux21=3*8622
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=183,348,488,578
+R=./src/hardcopyiv_atoms.v|414
+
+[hardcopyiv_otp]
+A/hardcopyiv_otp=22|./src/hardcopyiv_atoms.v|17594|1*166768
+B/hardcopyiv_otp=3*2374858
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_otp=4*27200
+P/~emb=418,768,1087,1260
+R=./src/hardcopyiv_atoms.v|17594
+
+[hardcopyiv_output_phase_alignment]
+A/hardcopyiv_output_phase_alignment=22|./src/hardcopyiv_atoms.v|9047|1*95758
+B/hardcopyiv_output_phase_alignment=3*1243409
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3604,5366,8020,9394
+R=./src/hardcopyiv_atoms.v|9047
+
+[hardcopyiv_pclk_divider]
+A/hardcopyiv_pclk_divider=22|./src/hardcopyiv_atoms.v|16376|1*153295
+B/hardcopyiv_pclk_divider=3*2263360
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=227,473,781,946
+R=./src/hardcopyiv_atoms.v|16376
+
+[hardcopyiv_pll]
+A/hardcopyiv_pll=22|./src/hardcopyiv_atoms.v|11886|1*123220
+B/hardcopyiv_pll=3*1522068
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_pll=4*23874
+P/~emb=13344,21468,34595,37856
+R=./src/hardcopyiv_atoms.v|11886
+
+[hardcopyiv_pll_reg]
+A/hardcopyiv_pll_reg=22|./src/hardcopyiv_atoms.v|11818|1*122465
+B/hardcopyiv_pll_reg=3*1520230
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=250,442,652,779
+R=./src/hardcopyiv_atoms.v|11818
+
+[hardcopyiv_pseudo_diff_out]
+A/hardcopyiv_pseudo_diff_out=22|./src/hardcopyiv_atoms.v|17238|1*161734
+B/hardcopyiv_pseudo_diff_out=3*2345305
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=230,442,667,809
+R=./src/hardcopyiv_atoms.v|17238
+
+[hardcopyiv_ram_block]
+A/hardcopyiv_ram_block=22|./src/hardcopyiv_atoms.v|1445|1*22823
+B/hardcopyiv_ram_block=3*93018
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=156015,159066,163965,166486
+R=./src/hardcopyiv_atoms.v|1445
+
+[hardcopyiv_ram_pulse_generator]
+A/hardcopyiv_ram_pulse_generator=22|./src/hardcopyiv_atoms.v|1314|1*20336
+B/hardcopyiv_ram_pulse_generator=3*71484
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_ram_pulse_generator=4*7220
+P/~emb=306,579,861,1030
+R=./src/hardcopyiv_atoms.v|1314
+
+[hardcopyiv_ram_register]
+A/hardcopyiv_ram_register=22|./src/hardcopyiv_atoms.v|1362|1*21407
+B/hardcopyiv_ram_register=3*75006
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_ram_register=4*7529
+P/~emb=441,777,1231,1479
+R=./src/hardcopyiv_atoms.v|1362
+
+[hardcopyiv_rotate_shift_block]
+A/hardcopyiv_rotate_shift_block=22|./src/hardcopyiv_atoms.v|5323|1*63092
+B/hardcopyiv_rotate_shift_block=3*801207
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_rotate_shift_block=4*16041
+P/~emb=427,724,996,1131
+R=./src/hardcopyiv_atoms.v|5323
+
+[hardcopyiv_round_block]
+A/hardcopyiv_round_block=22|./src/hardcopyiv_atoms.v|4983|1*59507
+B/hardcopyiv_round_block=3*758007
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=367,698,1048,1242
+R=./src/hardcopyiv_atoms.v|4983
+
+[hardcopyiv_round_saturate_block]
+A/hardcopyiv_round_saturate_block=22|./src/hardcopyiv_atoms.v|5240|1*61844
+B/hardcopyiv_round_saturate_block=3*798952
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_round_saturate_block=4*15051
+P/~emb=673,1100,1518,1824
+R=./src/hardcopyiv_atoms.v|5240
+
+[hardcopyiv_routing_wire]
+A/hardcopyiv_routing_wire=22|./src/hardcopyiv_atoms.v|844|1*13971
+B/hardcopyiv_routing_wire=3*45204
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_routing_wire=4*5064
+P/~emb=165,341,489,613
+R=./src/hardcopyiv_atoms.v|844
+
+[hardcopyiv_rt_sm]
+A/hardcopyiv_rt_sm=22|./src/hardcopyiv_atoms.v|10404|1*109849
+B/hardcopyiv_rt_sm=3*1370474
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1150,1813,2702,3093
+R=./src/hardcopyiv_atoms.v|10404
+
+[hardcopyiv_saturate_block]
+A/hardcopyiv_saturate_block=22|./src/hardcopyiv_atoms.v|5073|1*60538
+B/hardcopyiv_saturate_block=3*771586
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=659,1151,1783,2039
+R=./src/hardcopyiv_atoms.v|5073
+
+[hardcopyiv_scale_cntr]
+A/hardcopyiv_scale_cntr=22|./src/hardcopyiv_atoms.v|11705|1*121451
+B/hardcopyiv_scale_cntr=3*1511405
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=387,751,1097,1329
+R=./src/hardcopyiv_atoms.v|11705
+
+[hardcopyiv_second_stage_add_accum]
+A/hardcopyiv_second_stage_add_accum=22|./src/hardcopyiv_atoms.v|4871|1*58161
+B/hardcopyiv_second_stage_add_accum=3*704973
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_second_stage_add_accum=4*14160
+P/~emb=511,923,1306,1483
+R=./src/hardcopyiv_atoms.v|4871
+
+[hardcopyiv_select_ini_phase_dpaclk]
+A/hardcopyiv_select_ini_phase_dpaclk=22|./src/hardcopyiv_atoms.v|16451|1*154215
+B/hardcopyiv_select_ini_phase_dpaclk=3*2273488
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=330,756,1337,1502
+R=./src/hardcopyiv_atoms.v|16451
+
+[hardcopyiv_termination]
+A/hardcopyiv_termination=22|./src/hardcopyiv_atoms.v|10891|1*112639
+B/hardcopyiv_termination=3*1446468
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1761,3586,6328,7022
+R=./src/hardcopyiv_atoms.v|10891
+
+[hardcopyiv_termination_aux_clock_div]
+A/hardcopyiv_termination_aux_clock_div=22|./src/hardcopyiv_atoms.v|10829|1*111674
+B/hardcopyiv_termination_aux_clock_div=3*1434771
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=272,523,787,933
+R=./src/hardcopyiv_atoms.v|10829
+
+[hardcopyiv_termination_logic]
+A/hardcopyiv_termination_logic=22|./src/hardcopyiv_atoms.v|11462|1*117736
+B/hardcopyiv_termination_logic=3*1497135
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=636,1007,1426,1566
+R=./src/hardcopyiv_atoms.v|11462
+
+[hardcopyiv_tsdblock]
+A/hardcopyiv_tsdblock=22|./src/hardcopyiv_atoms.v|15742|1*145466
+B/hardcopyiv_tsdblock=3*2226583
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=738,1113,1405,1556
+R=./src/hardcopyiv_atoms.v|15742
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, HARDCOPYIV VERILOG LIBRARY.
+LastVerilogToplevel=hardcopyiv_otp
+ModifyID=742
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/hardcopyiv_atoms.v=0*219925*351206
+
+[~MFT]
+0=93|0ovi_hardcopyiv.mgf|351206|0
+1=91|1ovi_hardcopyiv.mgf|166768|0
+3=91|3ovi_hardcopyiv.mgf|2374858|0
+4=47|4ovi_hardcopyiv.mgf|27200|0
+
+[~U]
+$root=12|0*0|
+HARDCOPYIV_PRIM_DFFE=12|0*950||0xa0
+HARDCOPYIV_PRIM_DFFEAS=12|0*1787||0xa0
+HARDCOPYIV_PRIM_DFFEAS_HIGH=12|0*2594||0xa0
+hardcopyiv_and1=12|0*6737||0x90
+hardcopyiv_and16=12|0*7169||0x90
+hardcopyiv_and2=12|0*42081||0x80
+hardcopyiv_asmiblock=12|0*193757||0x90
+hardcopyiv_b17mux21=12|0*8308||0x90
+hardcopyiv_b5mux21=12|0*9274||0x90
+hardcopyiv_bias_block=12|0*216631||0x90
+hardcopyiv_bias_generator=12|0*215565||0x80
+hardcopyiv_bias_logic=12|0*214567||0x80
+hardcopyiv_bmux21=12|0*7810||0x90
+hardcopyiv_carry_chain_adder=12|0*74912||0x80
+hardcopyiv_clkena=12|0*43572||0x90
+hardcopyiv_clkselect=12|0*41260||0x90
+hardcopyiv_ddio_in=12|0*56643||0x90
+hardcopyiv_ddio_oe=12|0*54928||0x90
+hardcopyiv_ddio_out=12|0*52268||0x90
+hardcopyiv_ddr_delay_chain_s=12|0*93118||0x80
+hardcopyiv_ddr_gray_decoder=12|0*92434||0x80
+hardcopyiv_ddr_io_reg=12|0*94619||0x80
+hardcopyiv_delay_chain=12|0*113991||0x90
+hardcopyiv_dffe=12|0*3406||0x90
+hardcopyiv_dll=12|0*95937||0x90
+hardcopyiv_dll_offset_ctrl=12|0*103536||0x90
+hardcopyiv_dpa_block=12|0*207374||0x80
+hardcopyiv_dpa_retime_block=12|0*205698||0x80
+hardcopyiv_dqs_config=12|0*133085||0x90
+hardcopyiv_dqs_delay_chain=12|0*107323||0x90
+hardcopyiv_dqs_enable=12|0*110198||0x90
+hardcopyiv_dqs_enable_ctrl=12|0*111116||0x90
+hardcopyiv_ena_reg=12|0*42561||0x80
+hardcopyiv_ff=12|0*39326||0x90
+hardcopyiv_first_stage_add_sub=12|0*66400||0x80
+hardcopyiv_fsa_isse=12|0*63852||0x80
+hardcopyiv_half_rate_input=12|0*128461||0x90
+hardcopyiv_hram=12|0*45638||0x90
+hardcopyiv_hram_pulse_generator=12|0*44758||0x80
+hardcopyiv_input_phase_alignment=12|0*125324||0x90
+hardcopyiv_io_clock_divider=12|0*116318||0x90
+hardcopyiv_io_config=12|0*130904||0x90
+hardcopyiv_io_ibuf=12|0*49366||0x90
+hardcopyiv_io_obuf=12|0*50633||0x90
+hardcopyiv_io_pad=12|0*148733||0x90
+hardcopyiv_jtag=12|0*9773||0x90
+hardcopyiv_latch=12|0*4382||0x90
+hardcopyiv_lcell_comb=12|0*10509||0x90
+hardcopyiv_lcell_hsadder=12|0*217661||0x90
+hardcopyiv_lvds_receiver=12|0*209555||0x90
+hardcopyiv_lvds_reg=12|0*200442||0x80
+hardcopyiv_lvds_rx_bitslip=12|0*198223||0x80
+hardcopyiv_lvds_rx_deser=12|0*201262||0x80
+hardcopyiv_lvds_rx_fifo=12|0*196615||0x80
+hardcopyiv_lvds_rx_fifo_sync_ram=12|0*195286||0x80
+hardcopyiv_lvds_rx_parallel_reg=12|0*202215||0x80
+hardcopyiv_lvds_transmitter=12|0*18164||0x90
+hardcopyiv_lvds_tx_out_block=12|0*16887||0x80
+hardcopyiv_lvds_tx_parallel_register=12|0*15666||0x80
+hardcopyiv_lvds_tx_reg=12|0*14715||0x80
+hardcopyiv_m_cntr=12|0*149311||0x80
+hardcopyiv_mac_mult=12|0*60712||0x90
+hardcopyiv_mac_multiplier=12|0*59646||0x80
+hardcopyiv_mac_out=12|0*75613||0x90
+hardcopyiv_mac_register=12|0*58470||0x80
+hardcopyiv_mux21=12|0*5263||0x80
+hardcopyiv_mux41=12|0*5920||0x80
+hardcopyiv_n_cntr=12|0*150321||0x80
+hardcopyiv_nmux21=12|0*8808||0x90
+hardcopyiv_otp=12|0*218710||0x90
+hardcopyiv_output_phase_alignment=12|0*118426||0x90
+hardcopyiv_pclk_divider=12|0*203207||0x80
+hardcopyiv_pll=12|0*153244||0x90
+hardcopyiv_pll_reg=12|0*152553||0x90
+hardcopyiv_pseudo_diff_out=12|0*213852||0x90
+hardcopyiv_ram_block=12|0*23191||0x90
+hardcopyiv_ram_pulse_generator=12|0*20832||0x80
+hardcopyiv_ram_register=12|0*21807||0x80
+hardcopyiv_rotate_shift_block=12|0*73906||0x80
+hardcopyiv_round_block=12|0*69137||0x80
+hardcopyiv_round_saturate_block=12|0*72594||0x80
+hardcopyiv_routing_wire=12|0*14195||0x90
+hardcopyiv_rt_sm=12|0*135715||0x80
+hardcopyiv_saturate_block=12|0*70472||0x80
+hardcopyiv_scale_cntr=12|0*151203||0x80
+hardcopyiv_second_stage_add_accum=12|0*67551||0x80
+hardcopyiv_select_ini_phase_dpaclk=12|0*204191||0x80
+hardcopyiv_termination=12|0*140409||0x90
+hardcopyiv_termination_aux_clock_div=12|0*139412||0x80
+hardcopyiv_termination_logic=12|0*147568||0x90
+hardcopyiv_tsdblock=12|0*194370||0x90
+

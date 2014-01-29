@@ -1,0 +1,15 @@
+*Ideal Transformer Subcircuit Parameters
+*RATIO = turns ratio (= secondary/primary)
+*
+*Ideal Transformer
+*dw 6/8/99: created
+*Connections:
+*                  Pri+
+*                  | Pri-
+*                  | | Sec+
+*                  | | | Sec-
+*                  | | | |
+.SUBCKT IDEALTRANS 1 2 3 4 PARAMS: RATIO=1
+BP  1 2 I=( -I(BS)*{RATIO} )
+BS  3 4 V=( V(1,2)*{RATIO} )
+.ENDS IDEALTRANS

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_ps2" description="PS2 Controller">
+		<sfr name="CTRL"	offset="0"	size="8"	description="Control Register">
+			<bitfield name="STROBE"	start="1" end="1" access="rw" description="Start Data Transmission Bit"/>
+			<bitfield name="BUSY"	start="0" end="0" access="r" description="Busy Bit">
+				<value value="0" description="Idle"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+		</sfr>
+		<sfr name="DATA"	offset="1"	size="8"	description="Data Register"/>
+	</group>
+</sfrfile>

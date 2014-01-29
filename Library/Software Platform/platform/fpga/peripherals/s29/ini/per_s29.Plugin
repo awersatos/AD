@@ -1,0 +1,27 @@
+[Plugin]
+Name=per_s29
+Description=Spansion S29 parallel flash memory accessible through the WB_SHARED_MEM_CTRL shared memory controller.
+Caption=S29 Parallel Flash Memory
+Bitmap=per_s29.bmp
+Implement=per_s29
+Bitmap=per_s29.bmp
+LargeBitmap=per_s29_large.bmp
+;ManualPlacement=True
+HardwareID=FLASH_WB_SHARED_MEM_CTRL
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=Hardware base address
+Kind=POINTER
+DefaultValue=0xFFFFFFFF
+Auto=True

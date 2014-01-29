@@ -1,0 +1,265 @@
+object Report: TppReport
+  AutoStop = False
+  DataPipeline = ReportPipeline
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Message List Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 10160
+  PrinterSetup.mmMarginRight = 10160
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297127
+  PrinterSetup.mmPaperWidth = 210079
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'X:\SoftwareProjects\AltiumDesigner\WorkspaceManager\Installation' +
+    '\Application\Templates\ERCReport.rtm'
+  Template.Format = ftASCII
+  DeviceType = 'Screen'
+  SavePrinterSetup = True
+  Left = 48
+  Top = 80
+  Version = '6.03'
+  mmColumnWidth = 276807
+  DataPipelineName = 'ReportPipeline'
+  object ppTitleBand1: TppTitleBand
+    mmBottomOffset = 0
+    mmHeight = 10848
+    mmPrintPosition = 0
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'Electrical Rules Check Report'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 3175
+      mmWidth = 84402
+      BandType = 1
+    end
+  end
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 4763
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'Shape1'
+      Brush.Color = clBlack
+      ParentHeight = True
+      ParentWidth = True
+      mmHeight = 4763
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 189759
+      BandType = 0
+    end
+    object ppClassHeader: TppLabel
+      UserName = 'ClassHeader'
+      AutoSize = False
+      Caption = 'Class'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 20638
+      BandType = 0
+    end
+    object ppDocumentHeader: TppLabel
+      UserName = 'DocumentHeader'
+      AutoSize = False
+      Caption = 'Document'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 21696
+      mmTop = 529
+      mmWidth = 52917
+      BandType = 0
+    end
+    object ppMessageHeader: TppLabel
+      UserName = 'MessageHeader'
+      AutoSize = False
+      Caption = 'Message'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 74348
+      mmTop = 794
+      mmWidth = 76200
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 3704
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      ParentHeight = True
+      ParentWidth = True
+      Position = lpBottom
+      ShiftWithParent = True
+      Weight = 0.750000000000000000
+      mmHeight = 3704
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 189759
+      BandType = 4
+    end
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      ParentHeight = True
+      ParentWidth = True
+      Position = lpLeft
+      StretchWithParent = True
+      Weight = 0.750000000000000000
+      mmHeight = 3704
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 189759
+      BandType = 4
+    end
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      ParentHeight = True
+      ParentWidth = True
+      Position = lpRight
+      StretchWithParent = True
+      Weight = 0.750000000000000000
+      mmHeight = 3704
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 189759
+      BandType = 4
+    end
+    object ppClassDetail: TppDBMemo
+      UserName = 'ClassDetail'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Stretch = True
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 529
+      mmTop = 0
+      mmWidth = 20638
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+    object ppDocumentDetail: TppDBMemo
+      UserName = 'DocumentDetail'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Stretch = True
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 21696
+      mmTop = 0
+      mmWidth = 52917
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+    object ppMessageDetail: TppDBMemo
+      UserName = 'MessageDetail'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Stretch = True
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 74613
+      mmTop = 0
+      mmWidth = 113771
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 6085
+    mmPrintPosition = 0
+    object ppLine5: TppLine
+      UserName = 'Line5'
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 1588
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 189759
+      BandType = 8
+    end
+    object ppDate: TppSystemVariable
+      UserName = 'Date'
+      VarType = vtPrintDateTime
+      DisplayFormat = 'dddd d mmm yyyy   h:nn:ss AM/PM'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 0
+      mmTop = 1323
+      mmWidth = 11599
+      BandType = 8
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'PageNumber'
+      VarType = vtPageSetDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 152250
+      mmTop = 1323
+      mmWidth = 11599
+      BandType = 8
+    end
+  end
+end

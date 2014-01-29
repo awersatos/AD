@@ -1,0 +1,40 @@
+[Plugin]
+Name=per_cy7c68001
+Description=CY7C68001 high-speed USB 2.0 device with Serial Interface Engine
+Caption=USB Interface Controller
+SourceDir=platform\fpga\peripherals\cy7c68001\src
+Implement=per_cy7c68001
+HardwareID=WB_USB
+Bitmap=per_cy7c68001.bmp
+LargeBitmap=per_cy7c68001_large.bmp
+Require0=timing
+Require1=sysutils
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=interrupt 0
+CodeName=data_intr
+Description=data interrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True
+
+[Instance_Option2]
+Name=interrupt1
+GUIName=interrupt 1
+CodeName=control_intr
+Description=control interrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

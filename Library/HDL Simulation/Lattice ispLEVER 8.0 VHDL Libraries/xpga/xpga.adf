@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=xpga
+
+[Library]
+xpga=.\xpga.lib
+
+[$LibMap$]
+xpga=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/lava1.vhd=-1
+/lava1_components.vhd=-1
+/update_xpga.do=-1
+
+[Files.Data]
+.\src\lava1.vhd=VHDL Source Code
+.\src\lava1_components.vhd=VHDL Source Code
+.\src\update_xpga.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

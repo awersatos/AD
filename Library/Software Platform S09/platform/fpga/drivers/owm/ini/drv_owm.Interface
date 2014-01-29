@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_owm
+Category=DRIVER
+System=False
+Description=One Wire Bus controller peripheral
+PublicDir=platform\fpga\drivers\owm\include

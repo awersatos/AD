@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_cellular
+Category=DRIVER
+Visible=True
+System=False
+Description=Modem Driver
+PublicDir=platform\fpga\drivers\cellular\include

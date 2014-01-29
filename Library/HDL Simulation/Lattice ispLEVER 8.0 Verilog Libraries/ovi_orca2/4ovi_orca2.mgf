@@ -1,0 +1,50 @@
+V 000036 56 877 1265381451022 XOR11
+(_unit XOR11
+	(_specify
+		(_specparam unit_delay real (0.1 0.1 0.1))
+		(_modpath parallel unknown 0 42
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 43
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 44
+			(_port C in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 45
+			(_port D in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port E in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 47
+			(_port F in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port G in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port H in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port I in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 51
+			(_port J in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 52
+			(_port K in )
+			(_port Z out )
+		)
+	)
+)

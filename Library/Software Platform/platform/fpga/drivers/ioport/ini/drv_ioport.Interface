@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_ioport
+Category=DRIVER
+System=False
+Description=IO Port Driver
+PublicDir=platform\fpga\drivers\ioport\include
+

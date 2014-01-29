@@ -1,0 +1,32 @@
+[Plugin]
+Name=drv_terminal
+Description=Virtual Terminal Driver
+Caption=Virtual Terminal Driver
+SourceDir=platform\fpga\drivers\terminal\src
+InitHandler=
+InitHandlerPriority=16
+Implement=drv_terminal
+MinInstances=1
+Bitmap=drv_terminal.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_terminal
+Condition=EQ
+
+[Instance]
+Require0=per_terminal
+
+[Instance_Option0]
+name=mutexes
+Description=Driver offers protection against concurrent access
+Kind=BOOLEAN
+DefaultValue=False
+
+[Instance_Option0_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option0_Available_If1]
+Kind=FALSE

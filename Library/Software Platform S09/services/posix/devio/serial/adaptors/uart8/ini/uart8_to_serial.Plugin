@@ -1,0 +1,12 @@
+[Plugin]
+Name=uart8_to_serial
+Description=Posix interface for UART8 serial port.
+SourceDir=services\posix\devio\serial\adaptors\uart8\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\uart8\internal"
+CompileOption1=-I"$(SSASROOT)\services\posix\devio\serial\include"
+InitHandler=uart8_to_serial_init
+InitHandlerPriority=8
+Implement=serial_adaptor
+
+[Instance]
+Require0=drv_uart8

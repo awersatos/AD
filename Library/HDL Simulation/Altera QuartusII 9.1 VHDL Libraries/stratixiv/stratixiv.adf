@@ -1,0 +1,38 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=stratixiv
+
+[Library]
+stratixiv=.\stratixiv.LIB
+
+[$LibMap$]
+stratixiv=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/stratixiv_atoms.vhd=-1
+/stratixiv_components.vhd=-1
+/update_stratixiv.do=-1
+
+[Files.Data]
+.\src\stratixiv_atoms.vhd=VHDL Source Code
+.\src\stratixiv_components.vhd=VHDL Source Code
+.\src\update_stratixiv.do=Macro
+

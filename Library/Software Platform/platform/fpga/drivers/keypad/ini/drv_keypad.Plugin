@@ -1,0 +1,63 @@
+[Plugin]
+Name=drv_keypad
+Description=NanoBoard-1 4x4 Keypad Driver
+Caption=Keypad Driver
+SourceDir=platform\fpga\drivers\keypad\src
+Implement=drv_keypad
+MinInstances=1
+Bitmap=drv_keypad.bmp
+
+[PluginApplicationCode]
+OpenType=drv_keypad_t *
+OpenFunction=keypad_open
+
+[Instance]
+Require0=per_keypad
+
+[Instance_Option0]
+Name=AUTOREAPEAT
+Kind=BOOLEAN
+DefaultValue=True
+Description=Autoreapeat enable
+
+[Instance_Option1]
+Name=INITIAL_AUTOREAPEAT_DELAY_MS
+Kind=UINT16
+DefaultValue=750
+Description=Initial delay for autoreapeat (in milliseconds)
+
+[Option1_Available_If0]
+Kind=OPTION
+Object=AUTOREPEAT
+Condition=EQ
+Value=True
+
+[Instance_Option2]
+Name=AUTOREAPEAT_DELAY_MS
+Kind=UINT16
+DefaultValue=100
+Description=Autorepeat delay (in milliseconds)
+
+[Option2_Available_If0]
+Kind=OPTION
+Object=AUTOREPEAT
+Condition=EQ
+Value=True
+
+[Instance_Option3]
+Name=wait_mode
+GUIName=Wait mode
+Description=Activity while waiting for debounce
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep running, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep while waiting
+DefaultValue=Yield
+
+[Instance_Option3_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ

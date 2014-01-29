@@ -1,0 +1,57 @@
+[Plugin]
+Name=gps_nmea
+Caption=GPS-NMEA Services
+Description=GPS routines via NMEA protocol
+SourceDir=services\platform\gps_nmea\src
+Implement=gps_nmea
+Bitmap=gps_nmea.bmp
+
+[Option0]
+name=extended
+GUIName=Extended info
+Description=Give extended GPS information
+Kind=BOOLEAN
+DefaultValue=True
+
+
+[Available_If0]
+kind=PLUGIN
+Object=per_gps_nmea
+Condition=EQ
+
+[Instance]
+Caption=GPS-NMEA Context
+Description=Context for GPS via NMEA protocol
+Require0=serial
+
+
+[Instance_Option0]
+name=helper
+Description=dummy option to set properties in uart
+Kind=BOOLEAN
+NoGenerate=True
+
+[Instance_Option0_Hide_If0]
+Kind=True
+
+[Instance_Option0_AutoSet0]
+Interface=drv_uart8
+Option=tx_blocking
+AutoValueEnum0=False
+AutoValueEnum1=False
+
+[Instance_Option0_AutoSet1]
+Interface=drv_uart8
+Option=rx_blocking
+AutoValueEnum0=False
+AutoValueEnum1=False
+
+[Instance_Option0_AutoSet2]
+Interface=drv_uart8
+Option=tx_blocking_mode
+AutoValue=NONE
+
+[Instance_Option0_AutoSet3]
+Interface=drv_uart8
+Option=rx_blocking_mode
+AutoValue=NONE

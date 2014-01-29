@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_altera_mf
+
+[Library]
+ovi_altera_mf=.\OVI_altera_mf.lib
+
+[$LibMap$]
+ovi_altera_mf=.
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/altera_mf.v=-1
+/ovi_altera_mf.opt=-1
+/update_ovi_altera_mf.do=-1
+
+[Files.Data]
+.\src\altera_mf.v=Verilog Source Code
+.\src\ovi_altera_mf.opt=Text File
+.\src\update_ovi_altera_mf.do=Macro
+

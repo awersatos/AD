@@ -1,0 +1,6 @@
+[Plugin]
+Name=per_lcd_common
+Description=lcd common implementation
+Caption=NB-1 LCD Common
+Implement=per_lcd_common
+SourceDir=platform\fpga\peripherals\lcd\common\src

@@ -1,0 +1,79 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=2
+Current Config=compile
+
+[Configurations]
+compile=unimacro
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+unimacro=.
+
+[Library]
+unimacro=.\unimacro.LIB
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+EnableCC=0
+EnableEXC=0
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+EnableExpressionCoverage=0
+
+[LocalVhdlSets]
+EnableExpressionCoverage=0
+CompileWithDebug=0
+
+[Files.Data]
+.\src\unimacro_VCOMP.vhd=VHDL Source Code
+.\src\BRAM_SDP_MACRO.vhd=VHDL Source Code
+.\src\BRAM_SINGLE_MACRO.vhd=VHDL Source Code
+.\src\BRAM_TDP_MACRO.vhd=VHDL Source Code
+.\src\FIFO_DUALCLOCK_MACRO.vhd=VHDL Source Code
+.\src\FIFO_SYNC_MACRO.vhd=VHDL Source Code
+.\src\ADDSUB_MACRO.vhd=VHDL Source Code
+.\src\COUNTER_LOAD_MACRO.vhd=VHDL Source Code
+.\src\COUNTER_TC_MACRO.vhd=VHDL Source Code
+.\src\EQ_COMPARE_MACRO.vhd=VHDL Source Code
+.\src\MACC_MACRO.vhd=VHDL Source Code
+.\src\MULT_MACRO.vhd=VHDL Source Code
+.\src\update_unimacro.do=Macro
+.\src\ADDMACC_MACRO.vhd=VHDL Source Code
+
+[Files]
+/unimacro_VCOMP.vhd=-1
+/ADDMACC_MACRO.vhd=-1
+/BRAM_SDP_MACRO.vhd=-1
+/BRAM_SINGLE_MACRO.vhd=-1
+/BRAM_TDP_MACRO.vhd=-1
+/FIFO_DUALCLOCK_MACRO.vhd=-1
+/FIFO_SYNC_MACRO.vhd=-1
+/ADDSUB_MACRO.vhd=-1
+/COUNTER_LOAD_MACRO.vhd=-1
+/COUNTER_TC_MACRO.vhd=-1
+/EQ_COMPARE_MACRO.vhd=-1
+/MACC_MACRO.vhd=-1
+/MULT_MACRO.vhd=-1
+/update_unimacro.do=-1
+

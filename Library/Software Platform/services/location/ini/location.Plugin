@@ -1,0 +1,15 @@
+[Plugin]
+Name=location
+Caption=Location Services
+Description=Location Services
+SourceDir=services\location\src
+GlobalCompileOption0=-I"$(SSASROOT)\services\location\include"
+CompileOption0=-I"$(SSASROOT)\services\location\internal"
+Implement=location
+Bitmap=location.bmp
+
+[Instance]
+Caption=Location Context
+Description=Location context
+Require0=location_adaptor
+

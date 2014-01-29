@@ -1,0 +1,13 @@
+[Plugin]
+Name=dac
+Description=Digital to Analog Converter
+Caption=Digital to Analog Converter
+SourceDir=platform\fpga\drivers\dac\src
+Implement=dac
+Bitmap=dac.bmp
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\dac\internal"
+
+[Instance]
+Require0=ad_dac
+
+

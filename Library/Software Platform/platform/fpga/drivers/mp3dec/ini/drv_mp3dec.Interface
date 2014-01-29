@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_mp3dec
+Category=DRIVER
+System=False
+Description=MP3 decoder driver
+PublicDir=platform\fpga\drivers\mp3dec\include
+

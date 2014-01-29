@@ -1,0 +1,2385 @@
+// -------------------------------------------------------------------- 
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<< 
+// -------------------------------------------------------------------- 
+// Copyright (c) 2001 by Lattice Semiconductor Corporation 
+// -------------------------------------------------------------------- 
+// 
+// 
+//                     Lattice Semiconductor Corporation 
+//                     5555 NE Moore Court 
+//                     Hillsboro, OR 97214 
+//                     U.S.A 
+// 
+//                     TEL: 1-800-Lattice (USA and Canada) 
+//                          408-826-6000 (other locations) 
+// 
+//                     web: http://www.latticesemi.com/ 
+//                     email: techsupport@latticesemi.com 
+// 
+// -------------------------------------------------------------------- 
+// 
+// Simulation Library File for TTL CPLD macro libraries
+// 
+// -------------------------------------------------------------------- 
+// 
+// Revision history:
+
+/*************************************************************************/
+/**     Prepared by Sunnyvale Applications Center                       **/
+/**     Rev. 1.0   ---   October 6, 1998                                **/
+/**                                                                     **/
+/*************************************************************************/
+
+`ifdef powerup_state
+`else
+   `define powerup_state 1'bx
+`endif
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7400(A0,A1,B0,B1,C0,C1,D0,D1,YA,YB,YC,YD);
+input A0,A1,B0,B1,C0,C1,D0,D1;
+output YA,YB,YC,YD;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!A1
+     || !A0);
+
+assign YB = (!B1
+     || !B0);
+
+assign YC = (!C1
+     || !C0);
+
+assign YD = (!D1
+     || !D0);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7402(A0,A1,B0,B1,C0,C1,D0,D1,YA,YB,YC,YD);
+input A0,A1,B0,B1,C0,C1,D0,D1;
+output YA,YB,YC,YD;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!A0 && !A1);
+
+assign YB = (!B0 && !B1);
+
+assign YC = (!C0 && !C1);
+
+assign YD = (!D0 && !D1);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7408(A0,A1,B0,B1,C0,C1,D0,D1,YA,YB,YC,YD);
+input A0,A1,B0,B1,C0,C1,D0,D1;
+output YA,YB,YC,YD;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (A0 && A1);
+
+assign YB = (B0 && B1);
+
+assign YC = (C0 && C1);
+
+assign YD = (D0 && D1);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7410(A0,A1,A2,B0,B1,B2,C0,C1,C2,YA,YB,YC);
+input A0,A1,A2,B0,B1,B2,C0,C1,C2;
+output YA,YB,YC;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!A2
+     || !A1
+     || !A0);
+
+assign YB = (!B2
+     || !B1
+     || !B0);
+
+assign YC = (!C2
+     || !C1
+     || !C0);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+//Overwrite Abel Power Up State
+`timescale 1ns /100ps
+module v7411(A0,A1,A2,B0,B1,B2,C0,C1,C2,YA,YB,YC);
+input A0,A1,A2,B0,B1,B2,C0,C1,C2;
+output YA,YB,YC;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (A0 && A1 && A2);
+
+assign YB = (B0 && B1 && B2);
+
+assign YC = (C0 && C1 && C2);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7420(A0,A1,A2,A3,B0,B1,B2,B3,YA,YB);
+input A0,A1,A2,A3,B0,B1,B2,B3;
+output YA,YB;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!A3
+     || !A2
+     || !A1
+     || !A0);
+
+assign YB = (!B3
+     || !B2
+     || !B1
+     || !B0);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7421(A0,A1,A2,A3,B0,B1,B2,B3,YA,YB);
+input A0,A1,A2,A3,B0,B1,B2,B3;
+output YA,YB;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (A0 && A1 && A2 && A3);
+
+assign YB = (B0 && B1 && B2 && B3);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7427(A0,A1,A2,B0,B1,B2,C0,C1,C2,YA,YB,YC);
+input A0,A1,A2,B0,B1,B2,C0,C1,C2;
+output YA,YB,YC;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!A0 && !A1 && !A2);
+
+assign YB = (!B0 && !B1 && !B2);
+
+assign YC = (!C0 && !C1 && !C2);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7430(A0,A1,A2,A3,A4,A5,A6,A7,YA);
+input A0,A1,A2,A3,A4,A5,A6,A7;
+output YA;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!A7
+     || !A6
+     || !A5
+     || !A4
+     || !A3
+     || !A2
+     || !A1
+     || !A0);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7432(A0,A1,B0,B1,C0,C1,D0,D1,YA,YB,YC,YD);
+input A0,A1,B0,B1,C0,C1,D0,D1;
+output YA,YB,YC,YD;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (A1
+     || A0);
+
+assign YB = (B1
+     || B0);
+
+assign YC = (C1
+     || C0);
+
+assign YD = (D1
+     || D0);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7442(A3,A2,A1,A0,Y9,Y8,Y7,Y6,Y5,Y4,Y3,Y2,Y1,Y0);
+input A3,A2,A1,A0;
+output Y9,Y8,Y7,Y6,Y5,Y4,Y3,Y2,Y1,Y0;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y9 = (!A3
+     || A2
+     || A1
+     || !A0);
+
+assign Y8 = (!A3
+     || A2
+     || A1
+     || A0);
+
+assign Y7 = (A3
+     || !A2
+     || !A1
+     || !A0);
+
+assign Y6 = (A3
+     || !A2
+     || !A1
+     || A0);
+
+assign Y5 = (A3
+     || !A2
+     || A1
+     || !A0);
+
+assign Y4 = (A3
+     || !A2
+     || A1
+     || A0);
+
+assign Y3 = (A3
+     || A2
+     || !A1
+     || !A0);
+
+assign Y2 = (A3
+     || A2
+     || !A1
+     || A0);
+
+assign Y1 = (A3
+     || A2
+     || A1
+     || !A0);
+
+assign Y0 = (A3
+     || A2
+     || A1
+     || A0);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7449(A3,A2,A1,A0,BI,A,B,C,D,E,F,G);
+input A3,A2,A1,A0,BI;
+output A,B,C,D,E,F,G;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign A = (!A0 && !A2 && !A3 && BI
+     || A0 && A1 && !A3 && BI
+     || A0 && !A1 && A3 && BI
+     || !A0 && !A1 && !A2 && BI
+     || A0 && !A1 && A2 && BI);
+
+assign B = (A0 && A1 && !A3 && BI
+     || !A2 && !A3 && BI
+     || !A1 && !A2 && BI
+     || !A0 && !A1 && BI);
+
+assign C = (A2 && !A3 && BI
+     || !A1 && !A2 && BI
+     || A0 && !A2 && BI);
+
+assign D = (A0 && !A1 && A2 && BI
+     || A1 && !A2 && BI
+     || !A0 && !A2 && BI
+     || !A0 && A1 && BI);
+
+assign E = (!A0 && !A2 && BI
+     || !A0 && A1 && BI);
+
+assign F = (!A1 && A3 && BI
+     || !A0 && A2 && BI
+     || !A1 && A2 && BI
+     || !A0 && !A1 && BI);
+
+assign G = (!A1 && A3 && BI
+     || A1 && !A2 && BI
+     || !A1 && A2 && BI
+     || !A0 && A1 && BI);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7482(A1,A0,B1,B0,CI,S1,S0,CO);
+input A1,A0,B1,B0,CI;
+inout S1,S0;
+output CO;
+//Abel Nodes:
+wire XOR1,XOR0,C1;
+wire S1_X1,S1_X2,S0_X1,S0_X2;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign S1_X1 = (XOR1);
+
+assign S1_X2 = (C1);
+
+xor(S1, S1_X1, S1_X2);
+
+assign S0_X1 = (XOR0);
+
+assign S0_X2 = (CI);
+
+xor(S0, S0_X1, S0_X2);
+
+assign CO = (A1 && B1
+     || A1 && C1
+     || B1 && C1);
+
+assign XOR1 = (A1 && !B1
+     || !A1 && B1);
+
+assign XOR0 = (A0 && !B0
+     || !A0 && B0);
+
+assign C1 = (A0 && B0
+     || A0 && CI
+     || B0 && CI);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7485(A3,A2,A1,A0,B3,B2,B1,B0,ALB,AEB,AGB,YALB,YAEB,YAGB);
+input A3,A2,A1,A0,B3,B2,B1,B0,ALB,AEB,AGB;
+output YALB,YAEB,YAGB;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YALB = (!A3 && !A2 && !A1 && !A0 && !AGB && !AEB
+     || !A3 && !A2 && !A1 && B0 && !AGB && !AEB
+     || !A3 && !A2 && B1 && !A0 && !AGB && !AEB
+     || !A3 && !A2 && B1 && B0 && !AGB && !AEB
+     || !A3 && B2 && !A1 && !A0 && !AGB && !AEB
+     || !A3 && B2 && !A1 && B0 && !AGB && !AEB
+     || B3 && !A2 && !A1 && !A0 && !AGB && !AEB
+     || B3 && !A2 && !A1 && B0 && !AGB && !AEB
+     || !A3 && B2 && B1 && !A0 && !AGB && !AEB
+     || !A3 && B2 && B1 && B0 && !AGB && !AEB
+     || B3 && !A2 && B1 && !A0 && !AGB && !AEB
+     || B3 && !A2 && B1 && B0 && !AGB && !AEB
+     || B3 && B2 && !A1 && !A0 && !AGB && !AEB
+     || B3 && B2 && !A1 && B0 && !AGB && !AEB
+     || B3 && B2 && B1 && !A0 && !AGB && !AEB
+     || B3 && B2 && B1 && B0 && !AGB && !AEB
+     || B3 && B2 && B1 && !A0 && B0
+     || !A3 && B2 && B1 && !A0 && B0
+     || B3 && !A2 && B1 && !A0 && B0
+     || B3 && B2 && !A1 && !A0 && B0
+     || !A3 && !A2 && B1 && !A0 && B0
+     || B3 && B2 && !A1 && B1
+     || !A3 && B2 && !A1 && !A0 && B0
+     || B3 && !A2 && !A1 && !A0 && B0
+     || !A3 && B2 && !A1 && B1
+     || B3 && !A2 && !A1 && B1
+     || !A3 && !A2 && !A1 && !A0 && B0
+     || B3 && !A2 && B2
+     || !A3 && !A2 && !A1 && B1
+     || !A3 && !A2 && B2
+     || !A3 && B3);
+
+assign YAEB = (!A3 && !B3 && !A2 && !B2 && !A1 && !B1 && !A0 && !B0 && AEB
+     || A3 && B3 && !A2 && !B2 && !A1 && !B1 && !A0 && !B0 && AEB
+     || !A3 && !B3 && A2 && B2 && !A1 && !B1 && !A0 && !B0 && AEB
+     || A3 && B3 && A2 && B2 && !A1 && !B1 && !A0 && !B0 && AEB
+     || !A3 && !B3 && !A2 && !B2 && A1 && B1 && !A0 && !B0 && AEB
+     || A3 && B3 && !A2 && !B2 && A1 && B1 && !A0 && !B0 && AEB
+     || !A3 && !B3 && A2 && B2 && A1 && B1 && !A0 && !B0 && AEB
+     || A3 && B3 && A2 && B2 && A1 && B1 && !A0 && !B0 && AEB
+     || !A3 && !B3 && !A2 && !B2 && !A1 && !B1 && A0 && B0 && AEB
+     || A3 && B3 && !A2 && !B2 && !A1 && !B1 && A0 && B0 && AEB
+     || !A3 && !B3 && A2 && B2 && !A1 && !B1 && A0 && B0 && AEB
+     || A3 && B3 && A2 && B2 && !A1 && !B1 && A0 && B0 && AEB
+     || !A3 && !B3 && !A2 && !B2 && A1 && B1 && A0 && B0 && AEB
+     || A3 && B3 && !A2 && !B2 && A1 && B1 && A0 && B0 && AEB
+     || !A3 && !B3 && A2 && B2 && A1 && B1 && A0 && B0 && AEB
+     || A3 && B3 && A2 && B2 && A1 && B1 && A0 && B0 && AEB);
+
+assign YAGB = (!B3 && !B2 && !B1 && !B0 && !ALB && !AEB
+     || !B3 && !B2 && !B1 && A0 && !ALB && !AEB
+     || !B3 && !B2 && A1 && !B0 && !ALB && !AEB
+     || !B3 && !B2 && A1 && A0 && !ALB && !AEB
+     || !B3 && A2 && !B1 && !B0 && !ALB && !AEB
+     || !B3 && A2 && !B1 && A0 && !ALB && !AEB
+     || A3 && !B2 && !B1 && !B0 && !ALB && !AEB
+     || A3 && !B2 && !B1 && A0 && !ALB && !AEB
+     || !B3 && A2 && A1 && !B0 && !ALB && !AEB
+     || !B3 && A2 && A1 && A0 && !ALB && !AEB
+     || A3 && !B2 && A1 && !B0 && !ALB && !AEB
+     || A3 && !B2 && A1 && A0 && !ALB && !AEB
+     || A3 && A2 && !B1 && !B0 && !ALB && !AEB
+     || A3 && A2 && !B1 && A0 && !ALB && !AEB
+     || A3 && A2 && A1 && !B0 && !ALB && !AEB
+     || A3 && A2 && A1 && A0 && !ALB && !AEB
+     || A3 && A2 && A1 && A0 && !B0
+     || !B3 && A2 && A1 && A0 && !B0
+     || A3 && !B2 && A1 && A0 && !B0
+     || A3 && A2 && !B1 && A0 && !B0
+     || !B3 && !B2 && A1 && A0 && !B0
+     || A3 && A2 && A1 && !B1
+     || !B3 && A2 && !B1 && A0 && !B0
+     || A3 && !B2 && !B1 && A0 && !B0
+     || !B3 && A2 && A1 && !B1
+     || A3 && !B2 && A1 && !B1
+     || !B3 && !B2 && !B1 && A0 && !B0
+     || A3 && A2 && !B2
+     || !B3 && !B2 && A1 && !B1
+     || !B3 && A2 && !B2
+     || A3 && !B3);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7486(A0,A1,B0,B1,C0,C1,D0,D1,YA,YB,YC,YD);
+input A0,A1,B0,B1,C0,C1,D0,D1;
+inout YA,YB,YC,YD;
+wire YA_X1,YA_X2,YB_X1,YB_X2,YC_X1,YC_X2,YD_X1,YD_X2;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA_X1 = (A0);
+
+assign YA_X2 = (A1);
+
+xor(YA, YA_X1, YA_X2);
+
+assign YB_X1 = (B0);
+
+assign YB_X2 = (B1);
+
+xor(YB, YB_X1, YB_X2);
+
+assign YC_X1 = (C0);
+
+assign YC_X2 = (C1);
+
+xor(YC, YC_X1, YC_X2);
+
+assign YD_X1 = (D0);
+
+assign YD_X2 = (D1);
+
+xor(YD, YD_X1, YD_X2);
+
+endmodule
+
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74133(A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,YA);
+input A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12;
+output YA;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!A12
+     || !A11
+     || !A10
+     || !A9
+     || !A8
+     || !A7
+     || !A6
+     || !A5
+     || !A4
+     || !A3
+     || !A2
+     || !A1
+     || !A0);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74138(A2,A1,A0,EN1,EN2,EN3,Y0,Y1,Y2,Y3,Y4,Y5,Y6,Y7);
+input A2,A1,A0,EN1,EN2,EN3;
+output Y0,Y1,Y2,Y3,Y4,Y5,Y6,Y7;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y0 = (A0
+     || A1
+     || A2
+     || !EN3
+     || EN2
+     || EN1);
+
+assign Y1 = (!A0
+     || A1
+     || A2
+     || !EN3
+     || EN2
+     || EN1);
+
+assign Y2 = (!A1
+     || A0
+     || A2
+     || !EN3
+     || EN2
+     || EN1);
+
+assign Y3 = (!A1
+     || !A0
+     || A2
+     || !EN3
+     || EN2
+     || EN1);
+
+assign Y4 = (!A2
+     || A0
+     || A1
+     || !EN3
+     || EN2
+     || EN1);
+
+assign Y5 = (!A2
+     || !A0
+     || A1
+     || !EN3
+     || EN2
+     || EN1);
+
+assign Y6 = (!A2
+     || !A1
+     || A0
+     || !EN3
+     || EN2
+     || EN1);
+
+assign Y7 = (!A2
+     || !A1
+     || !A0
+     || !EN3
+     || EN2
+     || EN1);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74139(A0,A1,ENA,B0,B1,ENB,YA0,YA1,YA2,YA3,YB0,YB1,YB2,YB3);
+input A0,A1,ENA,B0,B1,ENB;
+output YA0,YA1,YA2,YA3,YB0,YB1,YB2,YB3;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA0 = (A0
+     || A1
+     || ENA);
+
+assign YA1 = (!A0
+     || A1
+     || ENA);
+
+assign YA2 = (!A1
+     || A0
+     || ENA);
+
+assign YA3 = (!A1
+     || !A0
+     || ENA);
+
+assign YB0 = (B0
+     || B1
+     || ENB);
+
+assign YB1 = (!B0
+     || B1
+     || ENB);
+
+assign YB2 = (!B1
+     || B0
+     || ENB);
+
+assign YB3 = (!B1
+     || !B0
+     || ENB);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74148(A7,A6,A5,A4,A3,A2,A1,A0,ENI,Y2,Y1,Y0,GS,ENO);
+input A7,A6,A5,A4,A3,A2,A1,A0,ENI;
+output Y2,Y1,Y0,GS,ENO;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y2 = (A4 && A5 && A6 && A7
+     || ENI);
+
+assign Y1 = (!A4 && A6 && A7
+     || A2 && A3 && A6 && A7
+     || !A5 && A6 && A7
+     || ENI);
+
+assign Y0 = (!A6 && A7
+     || !A4 && A5 && A7
+     || !A2 && A3 && A5 && A7
+     || A1 && A3 && A5 && A7
+     || ENI);
+
+assign GS = (A0 && A1 && A2 && A3 && A4 && A5 && A6 && A7
+     || ENI);
+
+assign ENO = (!A2
+     || !A7
+     || !A6
+     || !A5
+     || !A4
+     || !A3
+     || !A1
+     || !A0
+     || ENI);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74150(A15,A14,A13,A12,A11,A10,A9,A8,A7,A6,A5,A4,A3,A2,A1,A0,S3,
+              S2,S1,S0,EN,Y);
+input A15,A14,A13,A12,A11,A10,A9,A8,A7,A6,A5,A4,A3,A2,A1,A0,S3,S2,S1,
+    S0,EN;
+output Y;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y = (S0 && S1 && S2 && S3 && !A15
+     || !S0 && S1 && S2 && S3 && !A14
+     || S0 && !S1 && S2 && S3 && !A13
+     || !S0 && !S1 && S2 && S3 && !A12
+     || S0 && S1 && !S2 && S3 && !A11
+     || !S0 && S1 && !S2 && S3 && !A10
+     || S0 && !S1 && !S2 && S3 && !A9
+     || !S0 && !S1 && !S2 && S3 && !A8
+     || S0 && S1 && S2 && !S3 && !A7
+     || !S0 && S1 && S2 && !S3 && !A6
+     || S0 && !S1 && S2 && !S3 && !A5
+     || !S0 && !S1 && S2 && !S3 && !A4
+     || S0 && S1 && !S2 && !S3 && !A3
+     || !S0 && S1 && !S2 && !S3 && !A2
+     || S0 && !S1 && !S2 && !S3 && !A1
+     || !A0 && !S0 && !S1 && !S2 && !S3
+     || EN);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74151(A7,A6,A5,A4,A3,A2,A1,A0,S2,S1,S0,EN,Y,YN);
+input A7,A6,A5,A4,A3,A2,A1,A0,S2,S1,S0,EN;
+output Y,YN;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y = (!EN && S0 && S1 && S2 && A7
+     || !EN && !S0 && S1 && S2 && A6
+     || !EN && S0 && !S1 && S2 && A5
+     || !EN && !S0 && !S1 && S2 && A4
+     || !EN && S0 && S1 && !S2 && A3
+     || !EN && !S0 && S1 && !S2 && A2
+     || !EN && S0 && !S1 && !S2 && A1
+     || !EN && A0 && !S0 && !S1 && !S2);
+
+assign YN = (S0 && S1 && S2 && !A7
+     || !S0 && S1 && S2 && !A6
+     || S0 && !S1 && S2 && !A5
+     || !S0 && !S1 && S2 && !A4
+     || S0 && S1 && !S2 && !A3
+     || !S0 && S1 && !S2 && !A2
+     || S0 && !S1 && !S2 && !A1
+     || !A0 && !S0 && !S1 && !S2
+     || EN);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74153(A3,A2,A1,A0,B3,B2,B1,B0,S1,S0,ENA,ENB,YA,YB);
+input A3,A2,A1,A0,B3,B2,B1,B0,S1,S0,ENA,ENB;
+output YA,YB;
+//Abel Nodes:
+wire N8,N7,N6,N5,N4,N3,N2,N1;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!ENA && S0 && S1 && A3
+     || !ENA && !S0 && S1 && A2
+     || !ENA && S0 && !S1 && A1
+     || A0 && !ENA && !S0 && !S1);
+
+assign YB = (S0 && S1 && !ENB && B3
+     || !S0 && S1 && !ENB && B2
+     || S0 && !S1 && !ENB && B1
+     || !S0 && !S1 && B0 && !ENB);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74154(A3,A2,A1,A0,EN0,EN1,Y15,Y14,Y13,Y12,Y11,Y10,Y9,Y8,Y7,Y6,
+              Y5,Y4,Y3,Y2,Y1,Y0);
+input A3,A2,A1,A0,EN0,EN1;
+output Y15,Y14,Y13,Y12,Y11,Y10,Y9,Y8,Y7,Y6,Y5,Y4,Y3,Y2,Y1,Y0;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y15 = (!A3
+     || !A2
+     || !A1
+     || !A0
+     || EN1
+     || EN0);
+
+assign Y14 = (!A3
+     || !A2
+     || !A1
+     || A0
+     || EN1
+     || EN0);
+
+assign Y13 = (!A3
+     || !A2
+     || !A0
+     || A1
+     || EN1
+     || EN0);
+
+assign Y12 = (!A3
+     || !A2
+     || A0
+     || A1
+     || EN1
+     || EN0);
+
+assign Y11 = (!A3
+     || !A1
+     || !A0
+     || A2
+     || EN1
+     || EN0);
+
+assign Y10 = (!A3
+     || !A1
+     || A0
+     || A2
+     || EN1
+     || EN0);
+
+assign Y9 = (!A3
+     || !A0
+     || A1
+     || A2
+     || EN1
+     || EN0);
+
+assign Y8 = (!A3
+     || A0
+     || A1
+     || A2
+     || EN1
+     || EN0);
+
+assign Y7 = (!A2
+     || !A1
+     || !A0
+     || A3
+     || EN1
+     || EN0);
+
+assign Y6 = (!A2
+     || !A1
+     || A0
+     || A3
+     || EN1
+     || EN0);
+
+assign Y5 = (!A2
+     || !A0
+     || A1
+     || A3
+     || EN1
+     || EN0);
+
+assign Y4 = (!A2
+     || A0
+     || A1
+     || A3
+     || EN1
+     || EN0);
+
+assign Y3 = (!A1
+     || !A0
+     || A2
+     || A3
+     || EN1
+     || EN0);
+
+assign Y2 = (!A1
+     || A0
+     || A2
+     || A3
+     || EN1
+     || EN0);
+
+assign Y1 = (!A0
+     || A1
+     || A2
+     || A3
+     || EN1
+     || EN0);
+
+assign Y0 = (A0
+     || A1
+     || A2
+     || A3
+     || EN1
+     || EN0);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74157(A0,A1,B0,B1,C0,C1,D0,D1,S,EN,YA,YB,YC,YD);
+input A0,A1,B0,B1,C0,C1,D0,D1,S,EN;
+output YA,YB,YC,YD;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (!EN && S && A1
+     || A0 && !EN && !S);
+
+assign YB = (!EN && S && B1
+     || !EN && !S && B0);
+
+assign YC = (!EN && S && C1
+     || !EN && !S && C0);
+
+assign YD = (!EN && S && D1
+     || !EN && !S && D0);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74158(A1,A0,B1,B0,C1,C0,D1,D0,S,EN,YA,YB,YC,YD);
+input A1,A0,B1,B0,C1,C0,D1,D0,S,EN;
+output YA,YB,YC,YD;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (S && !A1
+     || !A0 && !S
+     || EN);
+
+assign YB = (S && !B1
+     || !S && !B0
+     || EN);
+
+assign YC = (S && !C1
+     || !S && !C0
+     || EN);
+
+assign YD = (S && !D1
+     || !S && !D0
+     || EN);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74161(D3,D2,D1,D0,CET,CEP,LD,CL,CK,Q3,Q2,Q1,Q0,TC);
+input D3,D2,D1,D0,CET,CEP,LD,CL,CK;
+inout Q3,Q2,Q1,Q0;
+output TC;
+wire Q3_D,Q3_C,Q3_AR,Q2_D,Q2_C,Q2_AR,Q1_D,Q1_C,Q1_AR,Q0_D,Q0_C,Q0_AR;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q3_D = (LD && !Q3 && Q2 && Q1 && Q0 && CEP && CET
+     || LD && Q3 && !Q0
+     || LD && Q3 && !Q1
+     || LD && Q3 && !Q2
+     || D3 && !LD
+     || LD && Q3 && !CET
+     || LD && Q3 && !CEP);
+
+assign Q3_C = (CK);
+
+assign Q3_AR = (!CL);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,Q3_AR);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign Q2_D = (LD && !Q2 && Q1 && Q0 && CEP && CET
+     || LD && Q2 && !Q0
+     || LD && Q2 && !Q1
+     || !LD && D2
+     || LD && Q2 && !CET
+     || LD && Q2 && !CEP);
+
+assign Q2_C = (CK);
+
+assign Q2_AR = (!CL);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,Q2_AR);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q1_D = (LD && !Q1 && Q0 && CEP && CET
+     || LD && Q1 && !Q0
+     || !LD && D1
+     || LD && Q1 && !CET
+     || LD && Q1 && !CEP);
+
+assign Q1_C = (CK);
+
+assign Q1_AR = (!CL);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,Q1_AR);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q0_D = (LD && !Q0 && CEP && CET
+     || LD && Q0 && !CET
+     || LD && Q0 && !CEP
+     || !LD && D0);
+
+assign Q0_C = (CK);
+
+assign Q0_AR = (!CL);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,Q0_AR);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+assign TC = (Q3 && Q2 && Q1 && Q0 && CET);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74164(CK,CL,A0,A1,Q7,Q6,Q5,Q4,Q3,Q2,Q1,Q0);
+input CK,CL,A0,A1;
+inout Q7,Q6,Q5,Q4,Q3,Q2,Q1,Q0;
+wire Q7_D,Q7_C,Q7_AR,Q6_D,Q6_C,Q6_AR,Q5_D,Q5_C,Q5_AR,Q4_D,Q4_C,Q4_AR,Q3_D,
+     Q3_C,Q3_AR,Q2_D,Q2_C,Q2_AR,Q1_D,Q1_C,Q1_AR,Q0_D,Q0_C,Q0_AR;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q7_D = (Q6);
+
+assign Q7_C = (CK);
+
+assign Q7_AR = (!CL);
+
+dff_apar_p0 Q7_ff(Q7_Q, Q7_QB,Q7_D,Q7_C,GND,Q7_AR);
+
+bufif1 Q7_buf(Q7, Q7_Q, VCC);
+
+assign Q6_D = (Q5);
+
+assign Q6_C = (CK);
+
+assign Q6_AR = (!CL);
+
+dff_apar_p0 Q6_ff(Q6_Q, Q6_QB,Q6_D,Q6_C,GND,Q6_AR);
+
+bufif1 Q6_buf(Q6, Q6_Q, VCC);
+
+assign Q5_D = (Q4);
+
+assign Q5_C = (CK);
+
+assign Q5_AR = (!CL);
+
+dff_apar_p0 Q5_ff(Q5_Q, Q5_QB,Q5_D,Q5_C,GND,Q5_AR);
+
+bufif1 Q5_buf(Q5, Q5_Q, VCC);
+
+assign Q4_D = (Q3);
+
+assign Q4_C = (CK);
+
+assign Q4_AR = (!CL);
+
+dff_apar_p0 Q4_ff(Q4_Q, Q4_QB,Q4_D,Q4_C,GND,Q4_AR);
+
+bufif1 Q4_buf(Q4, Q4_Q, VCC);
+
+assign Q3_D = (Q2);
+
+assign Q3_C = (CK);
+
+assign Q3_AR = (!CL);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,Q3_AR);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign Q2_D = (Q1);
+
+assign Q2_C = (CK);
+
+assign Q2_AR = (!CL);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,Q2_AR);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q1_D = (Q0);
+
+assign Q1_C = (CK);
+
+assign Q1_AR = (!CL);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,Q1_AR);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q0_D = (A0 && A1);
+
+assign Q0_C = (CK);
+
+assign Q0_AR = (!CL);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,Q0_AR);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74166(SDI,D0,D1,D2,D3,D4,D5,D6,D7,CK,CE,CL,LD,Q7);
+input SDI,D0,D1,D2,D3,D4,D5,D6,D7,CK,CE,CL,LD;
+inout Q7;
+//Abel Nodes:
+wire Q0,Q1,Q2,Q3,Q4,Q5,Q6;
+wire Q7_D,Q7_C,Q7_AR,Q0_D,Q0_C,Q0_AR,Q1_D,Q1_C,Q1_AR,Q2_D,Q2_C,Q2_AR,Q3_D,
+     Q3_C,Q3_AR,Q4_D,Q4_C,Q4_AR,Q5_D,Q5_C,Q5_AR,Q6_D,Q6_C,Q6_AR;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q7_D = (!CE && !LD && D7
+     || !CE && Q6 && LD
+     || Q7 && CE);
+
+assign Q7_C = (CK);
+
+assign Q7_AR = (!CL);
+
+dff_apar_p0 Q7_ff(Q7_Q, Q7_QB,Q7_D,Q7_C,GND,Q7_AR);
+
+bufif1 Q7_buf(Q7, Q7_Q, VCC);
+
+assign Q0_D = (!CE && !LD && D0
+     || !CE && SDI && LD
+     || CE && Q0);
+
+assign Q0_C = (CK);
+
+assign Q0_AR = (!CL);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,Q0_AR);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+assign Q1_D = (!CE && !LD && D1
+     || !CE && Q0 && LD
+     || CE && Q1);
+
+assign Q1_C = (CK);
+
+assign Q1_AR = (!CL);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,Q1_AR);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q2_D = (!CE && !LD && D2
+     || !CE && Q1 && LD
+     || CE && Q2);
+
+assign Q2_C = (CK);
+
+assign Q2_AR = (!CL);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,Q2_AR);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q3_D = (!CE && !LD && D3
+     || !CE && Q2 && LD
+     || CE && Q3);
+
+assign Q3_C = (CK);
+
+assign Q3_AR = (!CL);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,Q3_AR);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign Q4_D = (!CE && !LD && D4
+     || !CE && Q3 && LD
+     || CE && Q4);
+
+assign Q4_C = (CK);
+
+assign Q4_AR = (!CL);
+
+dff_apar_p0 Q4_ff(Q4_Q, Q4_QB,Q4_D,Q4_C,GND,Q4_AR);
+
+bufif1 Q4_buf(Q4, Q4_Q, VCC);
+
+assign Q5_D = (!CE && !LD && D5
+     || !CE && Q4 && LD
+     || CE && Q5);
+
+assign Q5_C = (CK);
+
+assign Q5_AR = (!CL);
+
+dff_apar_p0 Q5_ff(Q5_Q, Q5_QB,Q5_D,Q5_C,GND,Q5_AR);
+
+bufif1 Q5_buf(Q5, Q5_Q, VCC);
+
+assign Q6_D = (!CE && !LD && D6
+     || !CE && Q5 && LD
+     || CE && Q6);
+
+assign Q6_C = (CK);
+
+assign Q6_AR = (!CL);
+
+dff_apar_p0 Q6_ff(Q6_Q, Q6_QB,Q6_D,Q6_C,GND,Q6_AR);
+
+bufif1 Q6_buf(Q6, Q6_Q, VCC);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74168(D3,D2,D1,D0,U_DN,ENP,ENT,LD,CK,TC,Q3,Q2,Q1,Q0);
+input D3,D2,D1,D0,U_DN,ENP,ENT,LD,CK;
+inout Q3,Q2,Q1,Q0;
+output TC;
+wire Q3_D,Q3_Q,Q2_Q,Q1_Q,Q0_Q,Q3_C,Q2_D,Q2_C,Q1_D,Q1_C,Q0_D,Q0_C;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign TC = (Q0 && !U_DN
+     || !Q3 && U_DN
+     || !Q0 && Q3
+     || ENT
+     || Q2
+     || Q1);
+
+assign Q3_D = (LD && !ENT && !U_DN && !Q3_Q && !Q2_Q && !Q1_Q && !Q0_Q && !ENP
+     || LD && !ENT && U_DN && !Q3_Q && Q2_Q && Q1_Q && Q0_Q && !ENP
+     || LD && U_DN && Q3_Q && !Q0_Q
+     || LD && !U_DN && Q3_Q && Q0_Q
+     || LD && Q3_Q && ENP
+     || LD && ENT && Q3_Q
+     || D3 && !LD);
+
+assign Q3_C = (CK);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,GND);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign Q2_D = (LD && !ENT && !U_DN && Q3_Q && !Q2_Q && !Q1_Q && !Q0_Q && !ENP
+     || LD && !ENT && U_DN && !Q2_Q && Q1_Q && Q0_Q && !ENP
+     || LD && U_DN && Q2_Q && !Q0_Q
+     || LD && Q2_Q && !Q1_Q && Q0_Q
+     || LD && !U_DN && Q2_Q && Q1_Q
+     || LD && Q2_Q && ENP
+     || LD && ENT && Q2_Q
+     || !LD && D2);
+
+assign Q2_C = (CK);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,GND);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q1_D = (LD && !ENT && U_DN && !Q3_Q && !Q1_Q && Q0_Q && !ENP
+     || LD && !ENT && !U_DN && Q3_Q && !Q1_Q && !Q0_Q && !ENP
+     || LD && !ENT && !U_DN && Q2_Q && !Q1_Q && !Q0_Q && !ENP
+     || LD && U_DN && Q1_Q && !Q0_Q
+     || LD && !U_DN && Q1_Q && Q0_Q
+     || LD && Q1_Q && ENP
+     || LD && ENT && Q1_Q
+     || !LD && D1);
+
+assign Q1_C = (CK);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,GND);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q0_D = (LD && !ENT && !Q0_Q && !ENP
+     || LD && Q0_Q && ENP
+     || LD && ENT && Q0_Q
+     || !LD && D0);
+
+assign Q0_C = (CK);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,GND);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74169(D3,D2,D1,D0,U_DN,ENP,ENT,LD,CK,TC,Q3,Q2,Q1,Q0);
+input D3,D2,D1,D0,U_DN,ENP,ENT,LD,CK;
+inout Q3,Q2,Q1,Q0;
+output TC;
+wire Q3_D,Q3_Q,Q2_Q,Q1_Q,Q0_Q,Q3_C,Q2_D,Q2_C,Q1_D,Q1_C,Q0_D,Q0_C;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign TC = (Q2 && !U_DN
+     || !Q3 && U_DN
+     || !Q1 && Q3
+     || Q0 && !Q2
+     || !Q0 && Q1
+     || ENT);
+
+assign Q3_D = (LD && !ENT && !U_DN && !Q3_Q && !Q2_Q && !Q1_Q && !Q0_Q && !ENP
+     || LD && !ENT && U_DN && !Q3_Q && Q2_Q && Q1_Q && Q0_Q && !ENP
+     || LD && U_DN && Q3_Q && !Q0_Q
+     || LD && Q3_Q && Q2_Q && !Q0_Q
+     || LD && Q3_Q && !Q2_Q && Q1_Q
+     || LD && Q3_Q && !Q1_Q && Q0_Q
+     || LD && !U_DN && Q3_Q && Q1_Q
+     || LD && Q3_Q && ENP
+     || LD && ENT && Q3_Q
+     || D3 && !LD);
+
+assign Q3_C = (CK);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,GND);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign Q2_D = (LD && !ENT && !U_DN && !Q2_Q && !Q1_Q && !Q0_Q && !ENP
+     || LD && !ENT && U_DN && !Q2_Q && Q1_Q && Q0_Q && !ENP
+     || LD && U_DN && Q2_Q && !Q0_Q
+     || LD && Q2_Q && !Q1_Q && Q0_Q
+     || LD && !U_DN && Q2_Q && Q1_Q
+     || LD && Q2_Q && ENP
+     || LD && ENT && Q2_Q
+     || !LD && D2);
+
+assign Q2_C = (CK);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,GND);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q1_D = (LD && !ENT && !U_DN && !Q1_Q && !Q0_Q && !ENP
+     || LD && !ENT && U_DN && !Q1_Q && Q0_Q && !ENP
+     || LD && U_DN && Q1_Q && !Q0_Q
+     || LD && !U_DN && Q1_Q && Q0_Q
+     || LD && Q1_Q && ENP
+     || LD && ENT && Q1_Q
+     || !LD && D1);
+
+assign Q1_C = (CK);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,GND);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q0_D = (LD && !ENT && !Q0_Q && !ENP
+     || LD && Q0_Q && ENP
+     || LD && ENT && Q0_Q
+     || !LD && D0);
+
+assign Q0_C = (CK);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,GND);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74174(D6,D5,D4,D3,D2,D1,CL,CK,Q6,Q5,Q4,Q3,Q2,Q1);
+input D6,D5,D4,D3,D2,D1,CL,CK;
+inout Q6,Q5,Q4,Q3,Q2,Q1;
+wire Q6_D,Q6_C,Q6_AR,Q5_D,Q5_C,Q5_AR,Q4_D,Q4_C,Q4_AR,Q3_D,Q3_C,Q3_AR,Q2_D,
+     Q2_C,Q2_AR,Q1_D,Q1_C,Q1_AR;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q6_D = (D6);
+
+assign Q6_C = (CK);
+
+assign Q6_AR = (!CL);
+
+dff_apar_p0 Q6_ff(Q6_Q, Q6_QB,Q6_D,Q6_C,GND,Q6_AR);
+
+bufif1 Q6_buf(Q6, Q6_Q, VCC);
+
+assign Q5_D = (D5);
+
+assign Q5_C = (CK);
+
+assign Q5_AR = (!CL);
+
+dff_apar_p0 Q5_ff(Q5_Q, Q5_QB,Q5_D,Q5_C,GND,Q5_AR);
+
+bufif1 Q5_buf(Q5, Q5_Q, VCC);
+
+assign Q4_D = (D4);
+
+assign Q4_C = (CK);
+
+assign Q4_AR = (!CL);
+
+dff_apar_p0 Q4_ff(Q4_Q, Q4_QB,Q4_D,Q4_C,GND,Q4_AR);
+
+bufif1 Q4_buf(Q4, Q4_Q, VCC);
+
+assign Q3_D = (D3);
+
+assign Q3_C = (CK);
+
+assign Q3_AR = (!CL);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,Q3_AR);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign Q2_D = (D2);
+
+assign Q2_C = (CK);
+
+assign Q2_AR = (!CL);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,Q2_AR);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q1_D = (D1);
+
+assign Q1_C = (CK);
+
+assign Q1_AR = (!CL);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,Q1_AR);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+endmodule
+/* Verilog model created from schematic v74181.sch -- Oct 05, 1998 20:35 */
+
+module v74181( A0, A1, A2, A3, AEQB, B0, B1, B2, B3, CI, CO, F0, F1, F2, F3, G,
+               M, P, S0, S1, S2, S3 );
+ input A0, A1, A2, A3;
+output AEQB;
+ input B0, B1, B2, B3, CI;
+output CO, F0, F1, F2, F3, G;
+ input M;
+output P;
+ input S0, S1, S2, S3;
+wire N_69;
+wire N_70;
+wire N_71;
+wire N_72;
+wire N_73;
+wire N_74;
+wire N_68;
+wire N_47;
+wire N_50;
+wire N_51;
+wire N_52;
+wire N_56;
+wire N_57;
+wire N_58;
+wire N_59;
+wire N_60;
+wire N_62;
+wire N_63;
+wire N_64;
+wire N_65;
+wire N_66;
+wire N_67;
+wire N_42;
+wire N_45;
+wire N_28;
+wire N_29;
+wire N_30;
+wire N_31;
+wire N_32;
+wire N_33;
+wire N_34;
+wire N_36;
+wire N_37;
+wire N_38;
+wire N_39;
+wire N_40;
+wire N_41;
+wire N_26;
+wire N_27;
+wire N_1;
+wire N_3;
+wire N_6;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+
+xor I41 ( F0, N_73, N_47 );
+xor I43 ( F1, N_74, N_52 );
+xor I44 ( F2, N_56, N_57 );
+xor I47 ( F3, N_67, N_62 );
+nand I49 ( CO, N_34, G );
+nand I50 ( N_47, CI, N_30 );
+nand I51 ( N_34, CI, N_36 );
+not I70 ( N_69, N_28 );
+not I71 ( N_70, N_45 );
+not I72 ( N_71, N_33 );
+not I68 ( N_72, N_40 );
+not I40 ( N_68, B0 );
+not I52 ( N_30, M );
+not I37 ( N_26, B1 );
+not I38 ( N_27, B2 );
+not I39 ( N_1, B3 );
+nor I53 ( N_57, N_58, N_59, N_60 );
+nor I2 ( N_28, A0, N_24, N_23 );
+nor I3 ( N_45, A1, N_20, N_25 );
+nor I4 ( N_33, A2, N_6, N_17 );
+nor I5 ( N_40, A3, N_3, N_14 );
+nor I54 ( N_52, N_50, N_51 );
+nor I6 ( N_32, N_16, N_15 );
+nor I7 ( N_29, N_22, N_21 );
+nor I8 ( N_31, N_19, N_18 );
+nor I9 ( N_41, N_13, N_12 );
+nor I55 ( N_62, N_63, N_64, N_65, N_66 );
+nor I10 ( G, N_37, N_38, N_39, N_40 );
+nand I56 ( P, N_29, N_31, N_32, N_41 );
+and I57 ( AEQB, F0, F1, F2, F3 );
+and I58 ( N_60, N_30, CI, N_29, N_31 );
+and I59 ( N_65, N_30, N_28, N_31, N_32 );
+and I60 ( N_42, CI, N_29, N_31, N_32 );
+and I12 ( N_36, N_29, N_31, N_32, N_41 );
+and I13 ( N_37, N_28, N_31, N_32, N_41 );
+and I61 ( N_51, N_30, N_29, CI );
+and I62 ( N_59, N_30, N_28, N_31 );
+and I63 ( N_64, N_30, N_45, N_32 );
+and I14 ( N_38, N_45, N_32, N_41 );
+and I16 ( N_13, N_1, S2, A3 );
+and I15 ( N_12, A3, S3, B3 );
+and I17 ( N_21, A0, B0, S3 );
+and I18 ( N_22, N_68, S2, A0 );
+and I19 ( N_18, A1, S3, B1 );
+and I20 ( N_19, N_26, S2, A1 );
+and I21 ( N_15, A2, S3, B2 );
+and I22 ( N_16, N_27, S2, A2 );
+and I73 ( N_73, N_69, N_29 );
+and I74 ( N_74, N_70, N_31 );
+and I75 ( N_56, N_71, N_32 );
+and I69 ( N_67, N_72, N_41 );
+and I23 ( N_39, N_33, N_41 );
+and I64 ( N_50, N_30, N_28 );
+and I65 ( N_58, N_30, N_45 );
+and I66 ( N_63, N_30, N_33 );
+and I67 ( N_66, N_30, N_42 );
+and I26 ( N_24, B0, S0 );
+and I27 ( N_23, S1, N_68 );
+and I29 ( N_20, B1, S0 );
+and I30 ( N_25, S1, N_26 );
+and I32 ( N_6, B2, S0 );
+and I33 ( N_17, S1, N_27 );
+and I35 ( N_3, B3, S0 );
+and I36 ( N_14, S1, N_1 );
+
+endmodule // v74181
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74182(Cn,G0,P0,G1,P1,G2,P2,G3,P3,Cnx,Cny,Cnz,G,P);
+input Cn,G0,P0,G1,P1,G2,P2,G3,P3;
+output Cnx,Cny,Cnz,G,P;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Cnx = (!P0 && Cn
+     || !G0);
+
+assign Cny = (!P0 && Cn && !P1
+     || !G0 && !P1
+     || !G1);
+
+assign Cnz = (!P0 && Cn && !P1 && !P2
+     || !G0 && !P1 && !P2
+     || !G1 && !P2
+     || !G2);
+
+assign G = (G1 && P1 && G2 && G3
+     || G0 && G1 && G2 && G3
+     || G2 && P2 && G3
+     || G3 && P3);
+
+assign P = (P3
+     || P2
+     || P1
+     || P0);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74273(D7,D6,D5,D4,D3,D2,D1,D0,CK,CL,Q7,Q6,Q5,Q4,Q3,Q2,Q1,Q0);
+input D7,D6,D5,D4,D3,D2,D1,D0,CK,CL;
+inout Q7,Q6,Q5,Q4,Q3,Q2,Q1,Q0;
+wire Q7_D,Q7_C,Q7_AR,Q6_D,Q6_C,Q6_AR,Q5_D,Q5_C,Q5_AR,Q4_D,Q4_C,Q4_AR,Q3_D,
+     Q3_C,Q3_AR,Q2_D,Q2_C,Q2_AR,Q1_D,Q1_C,Q1_AR,Q0_D,Q0_C,Q0_AR;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q7_D = (D7);
+
+assign Q7_C = (CK);
+
+assign Q7_AR = (!CL);
+
+dff_apar_p0 Q7_ff(Q7_Q, Q7_QB,Q7_D,Q7_C,GND,Q7_AR);
+
+bufif1 Q7_buf(Q7, Q7_Q, VCC);
+
+assign Q6_D = (D6);
+
+assign Q6_C = (CK);
+
+assign Q6_AR = (!CL);
+
+dff_apar_p0 Q6_ff(Q6_Q, Q6_QB,Q6_D,Q6_C,GND,Q6_AR);
+
+bufif1 Q6_buf(Q6, Q6_Q, VCC);
+
+assign Q5_D = (D5);
+
+assign Q5_C = (CK);
+
+assign Q5_AR = (!CL);
+
+dff_apar_p0 Q5_ff(Q5_Q, Q5_QB,Q5_D,Q5_C,GND,Q5_AR);
+
+bufif1 Q5_buf(Q5, Q5_Q, VCC);
+
+assign Q4_D = (D4);
+
+assign Q4_C = (CK);
+
+assign Q4_AR = (!CL);
+
+dff_apar_p0 Q4_ff(Q4_Q, Q4_QB,Q4_D,Q4_C,GND,Q4_AR);
+
+bufif1 Q4_buf(Q4, Q4_Q, VCC);
+
+assign Q3_D = (D3);
+
+assign Q3_C = (CK);
+
+assign Q3_AR = (!CL);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,Q3_AR);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign Q2_D = (D2);
+
+assign Q2_C = (CK);
+
+assign Q2_AR = (!CL);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,Q2_AR);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q1_D = (D1);
+
+assign Q1_C = (CK);
+
+assign Q1_AR = (!CL);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,Q1_AR);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q0_D = (D0);
+
+assign Q0_C = (CK);
+
+assign Q0_AR = (!CL);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,Q0_AR);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74280(A0,A1,A2,A3,A4,A5,A6,A7,A8,SE,SO);
+input A0,A1,A2,A3,A4,A5,A6,A7,A8;
+inout SO;
+output SE;
+//Abel Nodes:
+wire N3,N2,N1;
+wire SO_X1,SO_X2,N3_X1,N3_X2,N2_X1,N2_X2,N1_X1,N1_X2;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign SE = (!N1 && !N2 && !N3
+     || N1 && N2 && !N3
+     || N1 && !N2 && N3
+     || !N1 && N2 && N3);
+
+assign SO_X1 = (N1 && !N2
+     || !N1 && N2);
+
+assign SO_X2 = (N3);
+
+xor(SO, SO_X1, SO_X2);
+
+assign N3_X1 = (A6 && !A7
+     || !A6 && A7);
+
+assign N3_X2 = (A8);
+
+xor(N3, N3_X1, N3_X2);
+
+assign N2_X1 = (A3 && !A4
+     || !A3 && A4);
+
+assign N2_X2 = (A5);
+
+xor(N2, N2_X1, N2_X2);
+
+assign N1_X1 = (A0 && !A1
+     || !A0 && A1);
+
+assign N1_X2 = (A2);
+
+xor(N1, N1_X1, N1_X2);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74283(A3,A2,A1,A0,B3,B2,B1,B0,CI,S3,S2,S1,S0,CO);
+input A3,A2,A1,A0,B3,B2,B1,B0,CI;
+inout S3,S2,S1,S0;
+output CO;
+//Abel Nodes:
+wire C3,C2,C1;
+wire S3_X1,S3_X2,S2_X1,S2_X2,S1_X1,S1_X2,S0_X1,S0_X2;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign S3_X1 = (A3 && !B3
+     || !A3 && B3);
+
+assign S3_X2 = (B0 && CI && B1 && B2
+     || A0 && CI && B1 && B2
+     || A0 && B0 && B1 && B2
+     || B0 && CI && A1 && B2
+     || A0 && CI && A1 && B2
+     || A0 && B0 && A1 && B2
+     || B0 && CI && B1 && A2
+     || A0 && CI && B1 && A2
+     || A0 && B0 && B1 && A2
+     || B0 && CI && A1 && A2
+     || A0 && CI && A1 && A2
+     || A0 && B0 && A1 && A2
+     || A1 && B1 && B2
+     || A1 && B1 && A2
+     || A2 && B2);
+
+xor(S3, S3_X1, S3_X2);
+
+assign S2_X1 = (A2 && !B2
+     || !A2 && B2);
+
+assign S2_X2 = (B0 && CI && B1
+     || A0 && CI && B1
+     || A0 && B0 && B1
+     || B0 && CI && A1
+     || A0 && CI && A1
+     || A0 && B0 && A1
+     || A1 && B1);
+
+xor(S2, S2_X1, S2_X2);
+
+assign S1_X1 = (A1 && !B1
+     || !A1 && B1);
+
+assign S1_X2 = (B0 && CI
+     || A0 && CI
+     || A0 && B0);
+
+xor(S1, S1_X1, S1_X2);
+
+assign S0_X1 = (A0 && !B0
+     || !A0 && B0);
+
+assign S0_X2 = (CI);
+
+xor(S0, S0_X1, S0_X2);
+
+assign CO = (B0 && CI && B1 && B2 && B3
+     || A0 && CI && B1 && B2 && B3
+     || A0 && B0 && B1 && B2 && B3
+     || B0 && CI && A1 && B2 && B3
+     || A0 && CI && A1 && B2 && B3
+     || A0 && B0 && A1 && B2 && B3
+     || B0 && CI && B1 && A2 && B3
+     || A0 && CI && B1 && A2 && B3
+     || A0 && B0 && B1 && A2 && B3
+     || B0 && CI && A1 && A2 && B3
+     || A0 && CI && A1 && A2 && B3
+     || A0 && B0 && A1 && A2 && B3
+     || B0 && CI && B1 && B2 && A3
+     || A0 && CI && B1 && B2 && A3
+     || A0 && B0 && B1 && B2 && A3
+     || B0 && CI && A1 && B2 && A3
+     || A0 && CI && A1 && B2 && A3
+     || A0 && B0 && A1 && B2 && A3
+     || B0 && CI && B1 && A2 && A3
+     || A0 && CI && B1 && A2 && A3
+     || A0 && B0 && B1 && A2 && A3
+     || B0 && CI && A1 && A2 && A3
+     || A0 && CI && A1 && A2 && A3
+     || A0 && B0 && A1 && A2 && A3
+     || A1 && B1 && B2 && B3
+     || A1 && B1 && A2 && B3
+     || A1 && B1 && B2 && A3
+     || A1 && B1 && A2 && A3
+     || A2 && B2 && B3
+     || A2 && B2 && A3
+     || A3 && B3);
+
+assign C3 = (B0 && CI && B1 && B2
+     || A0 && CI && B1 && B2
+     || A0 && B0 && B1 && B2
+     || B0 && CI && A1 && B2
+     || A0 && CI && A1 && B2
+     || A0 && B0 && A1 && B2
+     || B0 && CI && B1 && A2
+     || A0 && CI && B1 && A2
+     || A0 && B0 && B1 && A2
+     || B0 && CI && A1 && A2
+     || A0 && CI && A1 && A2
+     || A0 && B0 && A1 && A2
+     || A1 && B1 && B2
+     || A1 && B1 && A2
+     || A2 && B2);
+
+assign C2 = (B0 && CI && B1
+     || A0 && CI && B1
+     || A0 && B0 && B1
+     || B0 && CI && A1
+     || A0 && CI && A1
+     || A0 && B0 && A1
+     || A1 && B1);
+
+assign C1 = (B0 && CI
+     || A0 && CI
+     || A0 && B0);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74521(A7,A6,A5,A4,A3,A2,A1,A0,B7,B6,B5,B4,B3,B2,B1,B0,EN,YAEB);
+input A7,A6,A5,A4,A3,A2,A1,A0,B7,B6,B5,B4,B3,B2,B1,B0,EN;
+output YAEB;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YAEB = (A7 && !B7
+     || !A7 && B7
+     || A6 && !B6
+     || !A6 && B6
+     || A5 && !B5
+     || !A5 && B5
+     || A4 && !B4
+     || !A4 && B4
+     || A3 && !B3
+     || !A3 && B3
+     || A2 && !B2
+     || !A2 && B2
+     || A1 && !B1
+     || !A1 && B1
+     || A0 && !B0
+     || !A0 && B0
+     || EN);
+
+endmodule
+
+
+
+
+// last ttl macros
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74518(A0,A1,A2,A3,A4,A5,A6,A7,B0,B1,B2,B3,B4,B5,B6,B7,EN,Y);
+input A0,A1,A2,A3,A4,A5,A6,A7,B0,B1,B2,B3,B4,B5,B6,B7,EN;
+output Y;
+//Abel Nodes:
+wire NODE1;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y = (!NODE1 && !A0 && !B0 && !A1 && !B1 && !A2 && !B2 && !A3 && !B3
+     || !NODE1 && A0 && B0 && !A1 && !B1 && !A2 && !B2 && !A3 && !B3
+     || !NODE1 && !A0 && !B0 && A1 && B1 && !A2 && !B2 && !A3 && !B3
+     || !NODE1 && A0 && B0 && A1 && B1 && !A2 && !B2 && !A3 && !B3
+     || !NODE1 && !A0 && !B0 && !A1 && !B1 && A2 && B2 && !A3 && !B3
+     || !NODE1 && A0 && B0 && !A1 && !B1 && A2 && B2 && !A3 && !B3
+     || !NODE1 && !A0 && !B0 && A1 && B1 && A2 && B2 && !A3 && !B3
+     || !NODE1 && A0 && B0 && A1 && B1 && A2 && B2 && !A3 && !B3
+     || !NODE1 && !A0 && !B0 && !A1 && !B1 && !A2 && !B2 && A3 && B3
+     || !NODE1 && A0 && B0 && !A1 && !B1 && !A2 && !B2 && A3 && B3
+     || !NODE1 && !A0 && !B0 && A1 && B1 && !A2 && !B2 && A3 && B3
+     || !NODE1 && A0 && B0 && A1 && B1 && !A2 && !B2 && A3 && B3
+     || !NODE1 && !A0 && !B0 && !A1 && !B1 && A2 && B2 && A3 && B3
+     || !NODE1 && A0 && B0 && !A1 && !B1 && A2 && B2 && A3 && B3
+     || !NODE1 && !A0 && !B0 && A1 && B1 && A2 && B2 && A3 && B3
+     || !NODE1 && A0 && B0 && A1 && B1 && A2 && B2 && A3 && B3);
+
+assign NODE1 = (A7 && !B7
+     || !A7 && B7
+     || A6 && !B6
+     || !A6 && B6
+     || A5 && !B5
+     || !A5 && B5
+     || A4 && !B4
+     || !A4 && B4
+     || EN);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7451(A0,A1,B0,B1,C0,C1,D0,D1,E,F,Y0,Y1);
+input A0,A1,B0,B1,C0,C1,D0,D1,E,F;
+output Y0,Y1;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y0 = (!C0 && !F
+     || !B0 && !F
+     || !A0 && !F
+     || !C0 && !E
+     || !B0 && !E
+     || !A0 && !E
+     || !C0 && !D0
+     || !B0 && !D0
+     || !A0 && !D0);
+
+assign Y1 = (!B1 && !D1
+     || !A1 && !D1
+     || !B1 && !C1
+     || !A1 && !C1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74162(D3,D2,D1,D0,ENP,ENT,LD,CK,CL,Q3,Q2,Q1,Q0,TC);
+input D3,D2,D1,D0,ENP,ENT,LD,CK,CL;
+inout Q3,Q2,Q1,Q0;
+output TC;
+wire Q3_D,Q3_Q,Q2_Q,Q1_Q,Q0_Q,Q3_C,Q3_CLR,Q2_D,Q2_C,Q2_CLR,Q1_D,Q1_C,Q1_CLR,
+     Q0_D,Q0_C,Q0_CLR;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q3_D = (LD && ENT && !Q3_Q && Q2_Q && Q1_Q && Q0_Q && ENP
+     || LD && Q3_Q && !Q0_Q
+     || LD && Q3_Q && !ENP
+     || LD && !ENT && Q3_Q
+     || D3 && !LD);
+
+assign Q3_C = (CK);
+
+assign Q3_CLR = (!CL);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,Q3_CLR);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign Q2_D = (LD && ENT && !Q2_Q && Q1_Q && Q0_Q && ENP
+     || LD && Q2_Q && !Q0_Q
+     || LD && Q2_Q && !Q1_Q
+     || LD && Q2_Q && !ENP
+     || LD && !ENT && Q2_Q
+     || !LD && D2);
+
+assign Q2_C = (CK);
+
+assign Q2_CLR = (!CL);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,Q2_CLR);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q1_D = (LD && ENT && !Q3_Q && !Q1_Q && Q0_Q && ENP
+     || LD && Q1_Q && !Q0_Q
+     || LD && Q1_Q && !ENP
+     || LD && !ENT && Q1_Q
+     || !LD && D1);
+
+assign Q1_C = (CK);
+
+assign Q1_CLR = (!CL);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,Q1_CLR);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q0_D = (LD && ENT && !Q0_Q && ENP
+     || LD && Q0_Q && !ENP
+     || LD && !ENT && Q0_Q
+     || !LD && D0);
+
+assign Q0_C = (CK);
+
+assign Q0_CLR = (!CL);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,Q0_CLR);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+assign TC = (Q0 && !Q1 && !Q2 && Q3 && ENT);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v7483(A3,A2,A1,A0,B3,B2,B1,B0,CI,S3,S2,S1,S0,CO);
+input A3,A2,A1,A0,B3,B2,B1,B0,CI;
+inout S3,S2,S1,S0;
+output CO;
+//Abel Nodes:
+wire C1,C2,C3;
+wire S3_X1,S3_X2,S2_X1,S2_X2,S1_X1,S1_X2,S0_X1,S0_X2;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign S3_X1 = (A3 && !B3
+     || !A3 && B3);
+
+assign S3_X2 = (B2 && C2
+     || A2 && C2
+     || A2 && B2);
+
+xor(S3, S3_X1, S3_X2);
+
+assign S2_X1 = (A2 && !B2
+     || !A2 && B2);
+
+assign S2_X2 = (C2);
+
+xor(S2, S2_X1, S2_X2);
+
+assign S1_X1 = (A1 && !B1
+     || !A1 && B1);
+
+assign S1_X2 = (B0 && CI
+     || A0 && CI
+     || A0 && B0);
+
+xor(S1, S1_X1, S1_X2);
+
+assign S0_X1 = (A0 && !B0
+     || !A0 && B0);
+
+assign S0_X2 = (CI);
+
+xor(S0, S0_X1, S0_X2);
+
+assign CO = (B2 && C2 && B3
+     || A2 && C2 && B3
+     || A2 && B2 && B3
+     || B2 && C2 && A3
+     || A2 && C2 && A3
+     || A2 && B2 && A3
+     || A3 && B3);
+
+assign C1 = (B0 && CI
+     || A0 && CI
+     || A0 && B0);
+
+assign C2 = (B0 && CI && B1
+     || A0 && CI && B1
+     || A0 && B0 && B1
+     || B0 && CI && A1
+     || A0 && CI && A1
+     || A0 && B0 && A1
+     || A1 && B1);
+
+assign C3 = (B2 && C2
+     || A2 && C2
+     || A2 && B2);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74352(A3,A2,A1,A0,B3,B2,B1,B0,S1,S0,ENA,ENB,YA,YB);
+input A3,A2,A1,A0,B3,B2,B1,B0,S1,S0,ENA,ENB;
+output YA,YB;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign YA = (S0 && S1 && A3
+     || !S0 && S1 && A2
+     || S0 && !S1 && A1
+     || A0 && !S0 && !S1
+     || ENA);
+
+assign YB = (S0 && S1 && B3
+     || !S0 && S1 && B2
+     || S0 && !S1 && B1
+     || !S0 && !S1 && B0
+     || ENB);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74298(A1,A0,B1,B0,C1,C0,D1,D0,S,CK,QA,QB,QC,QD);
+input A1,A0,B1,B0,C1,C0,D1,D0,S,CK;
+inout QA,QB,QC,QD;
+wire QA_D,QA_C,QB_D,QB_C,QC_D,QC_C,QD_D,QD_C;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign QA_D = (S && A1
+     || A0 && !S);
+
+assign QA_C = (!CK);
+
+dff_apar_p0 QA_ff(QA_Q, QA_QB,QA_D,QA_C,GND,GND);
+
+bufif1 QA_buf(QA, QA_Q, VCC);
+
+assign QB_D = (S && B1
+     || !S && B0);
+
+assign QB_C = (!CK);
+
+dff_apar_p0 QB_ff(QB_Q, QB_QB,QB_D,QB_C,GND,GND);
+
+bufif1 QB_buf(QB, QB_Q, VCC);
+
+assign QC_D = (S && C1
+     || !S && C0);
+
+assign QC_C = (!CK);
+
+dff_apar_p0 QC_ff(QC_Q, QC_QB,QC_D,QC_C,GND,GND);
+
+bufif1 QC_buf(QC, QC_Q, VCC);
+
+assign QD_D = (S && D1
+     || !S && D0);
+
+assign QD_C = (!CK);
+
+dff_apar_p0 QD_ff(QD_Q, QD_QB,QD_D,QD_C,GND,GND);
+
+bufif1 QD_buf(QD, QD_Q, VCC);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74152(A7,A6,A5,A4,A3,A2,A1,A0,S2,S1,S0,Y);
+input A7,A6,A5,A4,A3,A2,A1,A0,S2,S1,S0;
+output Y;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y = (S0 && S1 && S2 && !A7
+     || !S0 && S1 && S2 && !A6
+     || S0 && !S1 && S2 && !A5
+     || !S0 && !S1 && S2 && !A4
+     || S0 && S1 && !S2 && !A3
+     || !S0 && S1 && !S2 && !A2
+     || S0 && !S1 && !S2 && !A1
+     || !A0 && !S0 && !S1 && !S2);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74377(CK,EN,A7,A6,A5,A4,A3,A2,A1,A0,Y7,Y6,Y5,Y4,Y3,Y2,Y1,Y0);
+input CK,EN,A7,A6,A5,A4,A3,A2,A1,A0;
+inout Y7,Y6,Y5,Y4,Y3,Y2,Y1,Y0;
+wire Y7_D,Y7_C,Y6_D,Y6_C,Y5_D,Y5_C,Y4_D,Y4_C,Y3_D,Y3_C,Y2_D,Y2_C,Y1_D,Y1_C,
+     Y0_D,Y0_C;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y7_D = (EN && Y7
+     || A7 && !EN);
+
+assign Y7_C = (CK);
+
+dff_apar_p0 Y7_ff(Y7_Q, Y7_QB,Y7_D,Y7_C,GND,GND);
+
+bufif1 Y7_buf(Y7, Y7_Q, VCC);
+
+assign Y6_D = (EN && Y6
+     || !EN && A6);
+
+assign Y6_C = (CK);
+
+dff_apar_p0 Y6_ff(Y6_Q, Y6_QB,Y6_D,Y6_C,GND,GND);
+
+bufif1 Y6_buf(Y6, Y6_Q, VCC);
+
+assign Y5_D = (EN && Y5
+     || !EN && A5);
+
+assign Y5_C = (CK);
+
+dff_apar_p0 Y5_ff(Y5_Q, Y5_QB,Y5_D,Y5_C,GND,GND);
+
+bufif1 Y5_buf(Y5, Y5_Q, VCC);
+
+assign Y4_D = (EN && Y4
+     || !EN && A4);
+
+assign Y4_C = (CK);
+
+dff_apar_p0 Y4_ff(Y4_Q, Y4_QB,Y4_D,Y4_C,GND,GND);
+
+bufif1 Y4_buf(Y4, Y4_Q, VCC);
+
+assign Y3_D = (EN && Y3
+     || !EN && A3);
+
+assign Y3_C = (CK);
+
+dff_apar_p0 Y3_ff(Y3_Q, Y3_QB,Y3_D,Y3_C,GND,GND);
+
+bufif1 Y3_buf(Y3, Y3_Q, VCC);
+
+assign Y2_D = (EN && Y2
+     || !EN && A2);
+
+assign Y2_C = (CK);
+
+dff_apar_p0 Y2_ff(Y2_Q, Y2_QB,Y2_D,Y2_C,GND,GND);
+
+bufif1 Y2_buf(Y2, Y2_Q, VCC);
+
+assign Y1_D = (EN && Y1
+     || !EN && A1);
+
+assign Y1_C = (CK);
+
+dff_apar_p0 Y1_ff(Y1_Q, Y1_QB,Y1_D,Y1_C,GND,GND);
+
+bufif1 Y1_buf(Y1, Y1_Q, VCC);
+
+assign Y0_D = (EN && Y0
+     || !EN && A0);
+
+assign Y0_C = (CK);
+
+dff_apar_p0 Y0_ff(Y0_Q, Y0_QB,Y0_D,Y0_C,GND,GND);
+
+bufif1 Y0_buf(Y0, Y0_Q, VCC);
+
+endmodule
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module v74163(D0,D1,D2,D3,ENP,ENT,CK,LD,CL,Q0,Q1,Q2,Q3,TC);
+input D0,D1,D2,D3,ENP,ENT,CK,LD,CL;
+inout Q0,Q1,Q2,Q3;
+output TC;
+wire Q0_D,Q0_C,Q0_CLR,Q1_D,Q1_C,Q1_CLR,Q2_D,Q2_C,Q2_CLR,Q3_D,Q3_C,Q3_CLR;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q0_D = (!Q0 && LD && ENP && ENT
+     || !LD && D0
+     || Q0 && LD && !ENT
+     || Q0 && LD && !ENP);
+
+assign Q0_C = (CK);
+
+assign Q0_CLR = (!CL);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,Q0_CLR);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+assign Q1_D = (!Q1 && Q0 && LD && ENP && ENT
+     || Q1 && !Q0 && LD
+     || !LD && D1
+     || Q1 && LD && !ENT
+     || Q1 && LD && !ENP);
+
+assign Q1_C = (CK);
+
+assign Q1_CLR = (!CL);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,Q1_CLR);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q2_D = (!Q2 && Q1 && Q0 && LD && ENP && ENT
+     || Q2 && !Q0 && LD
+     || Q2 && !Q1 && LD
+     || !LD && D2
+     || Q2 && LD && !ENT
+     || Q2 && LD && !ENP);
+
+assign Q2_C = (CK);
+
+assign Q2_CLR = (!CL);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,Q2_CLR);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q3_D = (!Q3 && Q2 && Q1 && Q0 && LD && ENP && ENT
+     || Q3 && !Q0 && LD
+     || Q3 && !Q1 && LD
+     || Q3 && !Q2 && LD
+     || !LD && D3
+     || Q3 && LD && !ENT
+     || Q3 && LD && !ENP);
+
+assign Q3_C = (CK);
+
+assign Q3_CLR = (!CL);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,Q3_CLR);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+assign TC = (Q3 && Q2 && Q1 && Q0 && ENT);
+
+endmodule

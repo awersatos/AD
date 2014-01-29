@@ -1,0 +1,33 @@
+[Plugin]
+Name=per_mp3dec
+Description=MP3 to 16-bit raw audio decoder
+Caption=MP3 Decoder
+Implement=per_mp3dec
+HardwareID=WB_MP3DEC
+HardwareID1=WB_MP3DEC
+Bitmap=per_mp3dec.bmp
+LargeBitmap=per_mp3dec_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+Description=interrupt number
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option1_Hide_If0]
+Kind=OPTION
+Object=interrupt0
+Condition=EQ
+Value=-1

@@ -1,0 +1,33 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=lattice
+
+[Library]
+lattice=.\lattice.LIB
+
+[$LibMap$]
+lattice=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_lattice.do=-1
+/func.vhd=-1
+
+[Files.Data]
+.\src\update_lattice.do=Macro
+.\src\func.vhd=VHDL Source Code
+

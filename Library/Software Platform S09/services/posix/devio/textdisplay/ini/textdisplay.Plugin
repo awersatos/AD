@@ -1,0 +1,31 @@
+[Plugin]
+Name=textdisplay
+Caption=Text Display Services
+Description=POSIX compatible interface for textdisplay devices.
+SourceDir=services\posix\devio\textdisplay\src
+CompileOption0=-I"$(SERROOT)\posix\internal"
+Implement=textdisplay
+Require0=posix_devio
+Bitmap=textdisplay.bmp
+
+[Instance]
+Caption=Text Display Context
+Description=POSIX compatible interface for textdisplay devices.
+Require0=textdisplay_adaptor
+MultipleLinks=True
+GenerateName=True
+
+
+[Instance_Option0]
+Name=auto_update
+GUIName=Auto Update Display
+Description=Auto update display periodically, only effective if connected to VGA TFT Interface type ILI9320. Overrules the Auto Refresh option in the ILI9320-driver
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option0_AutoSet0]
+Interface=textdisplay_adaptor
+Option=auto_refresh
+AutoValueEnum0=False
+AutoValueEnum1=True
+

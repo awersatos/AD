@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_owm" description="One Wire Master Controller">
+		<sfr name="CMD"		offset="0" size="8" description="Command Register">
+            <bitfield name="OD" start="7" end="7" access="rw"  description="Overdrive bit"/>
+            <bitfield name="RST" start="5" end="5" access="rw"  description="Reset bit"/>
+            <bitfield name="DQI" start="3" end="3" access="r"  description="DQ Input bit"/>
+            <bitfield name="DQO" start="2" end="2" access="rw"  description="DQ Output bit"/>
+            <bitfield name="SRA" start="1" end="1" access="rw"  description="Search ROM Accelerator bit"/>
+            <bitfield name="OWR" start="0" end="0" access="rw"  description="1-Wire Reset bit"/>
+        </sfr>
+		<sfr name="DATA"	offset="1" size="8" description="Data Register"	noaccess="true"/>
+		<sfr name="INT"		offset="2" size="8" description="Interrupt Register" access="r">
+            <bitfield name="DQI" start="7" end="7" access="r"  description="DQ Input bit"/>
+            <bitfield name="NBSY" start="6" end="6" access="r"  description="Not busy flag">
+                <value value="0" description="busy"/>
+                <value value="1" description="not busy"/>
+            </bitfield>
+            <bitfield name="SINT" start="5" end="5" access="r"  description="Slave Interrupt flag"/>
+            <bitfield name="RBF" start="4" end="4" access="r"  description="Receive Bugger Full flag"/>
+            <bitfield name="TEMT" start="3" end="3" access="r"  description="Transmit Shift Register Empty flag"/>
+            <bitfield name="TBE" start="2" end="2" access="r"  description="Transmit Buffer Empty flag"/>
+            <bitfield name="PDR" start="1" end="1" access="r"  description="Presence Detect Result flag">
+                <value value="0" description="slave device was found"/>
+                <value value="1" description="no slave device was found"/>
+            </bitfield>
+            <bitfield name="PD" start="0" end="0" access="r"  description="Presence Detect flag">
+            
+        </sfr>
+		<sfr name="INTEN"	offset="3" size="8" description="Interrupt Enable Register">
+            <bitfield name="DQOE" start="7" end="7" access="rw"  description="DQ Output Enable">
+                <value value="0" description="Automatic"/>
+                <value value="1" description="Manual"/>
+            </bitfield>
+            <bitfield name="ENBSY" start="6" end="6" access="rw"  description="Enable Not Busy Interrupt bit">
+                <value value="0" description="Disabled"/>
+                <value value="1" description="Enabled"/>
+            </bitfield>
+            <bitfield name="ESINT" start="5" end="5" access="rw"  description="Enable Slave Interrupt bit">
+                <value value="0" description="Disabled"/>
+                <value value="1" description="Enabled"/>
+            </bitfield>
+            <bitfield name="EBRF" start="4" end="4" access="rw"  description="Enable Receive Buffer Full Interrupt bit">
+                <value value="0" description="Disabled"/>
+                <value value="1" description="Enabled"/>
+            </bitfield>
+            <bitfield name="ETEMT" start="3" end="3" access="rw"  description="Enable Transmit Shift Register Empty Interrupt bit">
+                <value value="0" description="Disabled"/>
+                <value value="1" description="Enabled"/>
+            </bitfield>
+            <bitfield name="ETBE" start="2" end="2" access="rw"  description="Enable Transmit Buffer Empty Interrupt bit">
+                <value value="0" description="Disabled"/>
+                <value value="1" description="Enabled"/>
+            </bitfield>
+            <bitfield name="IAS" start="1" end="1" access="rw"  description="INT_O Active State bit">
+                <value value="0" description="INT_O is active Low"/>
+                <value value="1" description="INT_O is active High"/>
+            </bitfield>
+            <bitfield name="EPD" start="0" end="0" access="rw"  description="Enable Presence Detect Interrupt bit">
+                <value value="0" description="Disabled"/>
+                <value value="1" description="Enabled"/>
+            </bitfield>
+        </sfr>
+		<sfr name="CLK_DIV"	offset="4" size="8" description="Clock Divider Register">
+            <bitfield name="CLKEN" start="7" end="7" access="rw"  description="Clock Enable flag"/>
+            <bitfield name="DIV" start="4" end="2" access="rw"  description="Internal Clock Divisor value">
+                <value value="0" description="Divide by 1"/>
+                <value value="1" description="Divide by 2"/>
+                <value value="2" description="Divide by 4"/>
+                <value value="3" description="Divide by 8"/>
+                <value value="4" description="Divide by 16"/>
+                <value value="5" description="Divide by 32"/>
+                <value value="6" description="Divide by 64"/>
+                <value value="7" description="Divide by 128"/>
+            </bitfield>
+            <bitfield name="PRE" start="1" end="0" access="rw"  description="Internal Clock Prescaler value">
+                <value value="0" description="1"/>
+                <value value="1" description="3"/>
+                <value value="2" description="5"/>
+                <value value="3" description="7"/>
+            </bitfield>
+            
+        </sfr>
+		<sfr name="BUS_SEL"	offset="8" size="8" description="Bus Select Register"/>
+	</group>
+</sfrfile>

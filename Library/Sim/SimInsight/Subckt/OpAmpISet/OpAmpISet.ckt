@@ -1,0 +1,97 @@
+* //////////////////////////////////////////
+* LM4250 Programmable Operational Amplifier
+* //////////////////////////////////////////
+*
+* Connections:      Non-inverting input
+*                   |   Inverting input
+*                   |   |   Positive power supply
+*                   |   |   |   Negative power supply
+*                   |   |   |   |   Output
+*                   |   |   |   |   |   Quiescent Current Set
+*                   |   |   |   |   |   |
+.SUBCKT LM4250      3   2   6   4   7   8
+*
+* PINOUT ORDER +IN -IN V+ V- OUT SET
+*
+*
+* Features:
+* +/-1V to +/-18V power supply operation
+* Input offset current (Iset=1uA) =      3nA
+* Low offset voltage (typ) =             2mV
+* Slew rate =                         .2V/uS
+* Gain-bandwidth product =            230kHz
+* Max supply current (Iset=10uA) =     100uA
+* Short circuit protected
+*
+* NOTE: - Noise is not modeled.
+*       - Asymmetrical gain is not modeled.
+*
+* Input capacitors.
+CI1   3  4  2P
+CI2   2  4  2P
+* Primary pole=939.2mHz.
+C3    98 20 169.3N
+* Secondary pole=276kHz.
+C4    13 14 75.3P
+C6    4  9  3P
+* Third pole=795kHz.
+C7    98 19 200E-15
+D1    10 8  DX
+D2    7  6  DX
+D3    4  7  DX
+D4    4  26 DX
+D5    26 7  DX
+D6    20 24 DX
+D7    25 20 DX
+D8    22 0  DX
+D9    0  21 DX
+D10   7  27 DX
+D11   27 6  DX
+* Determines dc CMRR.
+ECMRR 1  3  16        49 1.0
+EH    97 98 6         49 1.0
+EN    0  96 0         4  1.0
+EP    97 0  6         0  1.0
+E1    97 18 6         19 1.0
+F1    6  0  VA2       1
+F2    0  4  VA3       1
+F3    23 0  VA1       1
+F4    6  9  V1        1.0
+F5    6  4  POLY(2)   V1 V5 0 8.0 0 0 1
+* Sets -Isc
+F6    4 26  POLY(1)   VA1 -1E-2 -1
+* Sets +Isc
+F7    27 6  POLY(1)   VA1 -1.2E-2 1
+G1    98 20 14        13 1.0
+G2    98 19 20        49 1U
+G4    98 16 POLY(2) 3 49 2 49 0 1.581E-7 1.581E-7
+G5    15 4  6         4  0.0333
+* CMRR zero.
+L2    16 17 73.1M
+* IS of QX1/QX2 and R1/R2 determines Vos.
+Q1    13 1  11        QX1
+Q2    14 2  12        QX2
+R1    9  11 9.6K
+R2    9  12 10K
+R3    14 4  3.83K
+R4    13 4  3.83K
+R5    98 20 1E6
+R8    6  49 1E8
+R9    49 4  1E8
+R12   98 19 1E6
+R13   98 17 1K
+* Output resistance.
+R22   28 7  581
+VA1   18 28 0V
+VA2   21 23 0V
+VA3   23 22 0V
+V1    6  10 0V
+V2    97 24 1.5V
+V3    25 96 1.5V
+V5    4  15 0V
+.MODEL QX1 PNP (IS=4.625E-16 BF=270 VAF=60 IKF=1E-3 NE=1.15 ISE=.63E-16)
+.MODEL QX2 PNP (IS=5E-16 BF=300 VAF=60 IKF=1E-3 NE=1.15 ISE=.63E-16)
+.MODEL DX D(IS=5E-15)
+.ENDS
+*$
+

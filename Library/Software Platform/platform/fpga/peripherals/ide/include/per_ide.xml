@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_ide" description="IDE Controller">
+		<sfr name="DATA"	 offset="0"  size="32" description="Data Register"/>
+			<bitfield name="DETECT"		start="17" end="17" access="rw" description="CF Card Present Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="BUSY"		start="16" end="16" access="rw" description="Busy Bit">
+				<value value="0" description="Busy"/>
+				<value value="1" description="Idle"/>
+			</bitfield>
+		<sfr name="COMMAND"	 offset="4"  size="32" description="Command Register">
+			<bitfield name="IDEWR"		start="7" end="7" access="rw" description="IDE Write Protocol Bit">
+				<value value="0" description="Read"/>
+				<value value="1" description="Write"/>
+			</bitfield>
+			<bitfield name="BSYCHK"	start="6" end="6" access="rw" description="Busy Check Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TXSEC"		start="5" end="5" access="rw" description="Transfer Sector Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="REGSELECT"	start="4" end="0" access="rw" description="IDE Register Select Bits"/>
+		</sfr>
+
+		<sfr name="MEMSTART"	 offset="8"  size="32" description="Memory Buffer Start Address Register"/>
+		<sfr name="SETUP"	 offset="12" size="32" description="Setup Register">
+			<bitfield name="LITTLEENDIAN"	start="31" end="31" access="rw" description="Little Endian Mode">
+				<value value="0" description="Big Endian"/>
+				<value value="1" description="Little Endian"/>
+			</bitfield>
+			<bitfield name="POWERDOWN"	start="15" end="15" access="rw" description="Power Down Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="RESET"		start="14" end="14" access="rw" description="Reset Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="CSEL"		start="13" end="13" access="rw" description="Core Select Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="PIO_RECOVER_DLY"	start="12" end="8" access="rw" description="PIO Recover Delay"/>
+			<bitfield name="PIO_RW_DLY"	start="7" end="3" access="rw" description="PIO Read/Write Delay Pulse"/>
+			<bitfield name="PIO_SETUP_DLY"	start="2" end="0" access="rw" description="PIO Setup Delay"/>
+		</sfr>
+	</group>
+</sfrfile>

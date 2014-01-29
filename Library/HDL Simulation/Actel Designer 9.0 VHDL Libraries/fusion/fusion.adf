@@ -1,0 +1,35 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=2
+Current Config=compile
+
+[Configurations]
+compile=fusion
+
+[Library]
+fusion=.\fusion.lib
+
+[$LibMap$]
+fusion=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[Files]
+/update_fusion.do=-1
+/fusion.vhd=-1
+
+[Files.Data]
+.\src\update_fusion.do=Macro
+.\src\fusion.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

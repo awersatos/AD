@@ -1,0 +1,33 @@
+[Plugin]
+Name=per_jpgdec
+Description=Grayscale and color baseline JPEG image to RGB565 pixel format decoder, with DMA support.
+Caption=JPEG Decoder
+Implement=per_jpgdec
+HardwareID=WB_JPGDEC_V2
+HardwareID1=WB_JPGDEC
+Bitmap=per_jpgdec.bmp
+LargeBitmap=per_jpgdec_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+Description=interrupt number
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option1_Hide_If0]
+Kind=OPTION
+Object=interrupt0
+Condition=EQ
+Value=-1

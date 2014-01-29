@@ -1,0 +1,468 @@
+timestamp=1265381590507
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[AddSign]
+A/AddSign=22|./src/pmi_multaddsubsum.v|437|1*582
+B/AddSign=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=267,473,656,784
+R=./src/pmi_multaddsubsum.v|437
+
+[AddUnSign]
+A/AddUnSign=22|./src/pmi_multaddsubsum.v|448|1*1342
+B/AddUnSign=3*2303
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=268,475,656,782
+R=./src/pmi_multaddsubsum.v|448
+
+[MultAddSub]
+A/MultAddSub=22|./src/pmi_complex_mult.v|132|1*2088
+B/MultAddSub=3*4352
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=671,1299,2286,3348
+R=./src/pmi_complex_mult.v|132
+
+[MultSign]
+A/MultSign=22|./src/pmi_multaddsubsum.v|326|1*4259
+B/MultSign=3*38207
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=328,544,742,882
+R=./src/pmi_multaddsubsum.v|326
+
+[MultSignPipe]
+A/MultSignPipe=22|./src/pmi_multaddsubsum.v|391|1*5068
+B/MultSignPipe=3*41695
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=472,745,1065,1262
+R=./src/pmi_multaddsubsum.v|391
+
+[MultUnSign]
+A/MultUnSign=22|./src/pmi_multaddsubsum.v|338|1*6153
+B/MultUnSign=3*72216
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=329,545,741,879
+R=./src/pmi_multaddsubsum.v|338
+
+[MultUnSignPipe]
+A/MultUnSignPipe=22|./src/pmi_multaddsubsum.v|350|1*6948
+B/MultUnSignPipe=3*75598
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=473,748,1064,1259
+R=./src/pmi_multaddsubsum.v|350
+
+[SubSign]
+A/SubSign=22|./src/pmi_multaddsubsum.v|459|1*8035
+B/SubSign=3*105761
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=267,471,654,782
+R=./src/pmi_multaddsubsum.v|459
+
+[SubUnSign]
+A/SubUnSign=22|./src/pmi_multaddsubsum.v|470|1*8795
+B/SubUnSign=3*107916
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=268,475,656,782
+R=./src/pmi_multaddsubsum.v|470
+
+[jtaghub16]
+A/jtaghub16=22|./src/jtaghub16.v|15|1*9541
+B/jtaghub16=3*109965
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1580,2772,4700,6372
+R=./src/jtaghub16.v|15
+
+[pmi_add]
+A/pmi_add=22|./src/pmi_add.v|54|1*12239
+B/pmi_add=3*402700
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=469,783,1062,1467
+R=./src/pmi_add.v|54
+
+[pmi_add_sign]
+A/pmi_add_sign=22|./src/pmi_add.v|119|1*13287
+B/pmi_add_sign=3*404891
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=361,581,831,972
+R=./src/pmi_add.v|119
+
+[pmi_add_unsign]
+A/pmi_add_unsign=22|./src/pmi_add.v|106|1*14116
+B/pmi_add_unsign=3*416536
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=357,562,770,911
+R=./src/pmi_add.v|106
+
+[pmi_addsub]
+A/pmi_addsub=22|./src/pmi_addsub.v|54|1*14883
+B/pmi_addsub=3*419146
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=515,839,1126,1559
+R=./src/pmi_addsub.v|54
+
+[pmi_addsub_sign]
+A/pmi_addsub_sign=22|./src/pmi_addsub.v|129|1*15950
+B/pmi_addsub_sign=3*421340
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=404,662,936,1083
+R=./src/pmi_addsub.v|129
+
+[pmi_addsub_unsign]
+A/pmi_addsub_unsign=22|./src/pmi_addsub.v|109|1*16910
+B/pmi_addsub_unsign=3*448664
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=400,639,903,1050
+R=./src/pmi_addsub.v|109
+
+[pmi_complex_mult]
+A/pmi_complex_mult=22|./src/pmi_complex_mult.v|53|1*17792
+B/pmi_complex_mult=3*460674
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=886,1454,1800,2372
+R=./src/pmi_complex_mult.v|53
+
+[pmi_constant_mult]
+A/pmi_constant_mult=22|./src/pmi_constant_mult.v|60|1*18993
+B/pmi_constant_mult=3*467274
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=627,1336,2143,2956
+R=./src/pmi_constant_mult.v|60
+
+[pmi_counter]
+A/pmi_counter=22|./src/pmi_counter.v|54|1*21059
+B/pmi_counter=3*495100
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=367,676,909,1085
+R=./src/pmi_counter.v|54
+
+[pmi_distributed_dpram]
+A/pmi_distributed_dpram=22|./src/pmi_distributed_dpram.v|45|1*21935
+B/pmi_distributed_dpram=3*501091
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=787,1212,1584,2212
+R=./src/pmi_distributed_dpram.v|45
+
+[pmi_distributed_dpram_noreg]
+A/pmi_distributed_dpram_noreg=22|./src/pmi_distributed_dpram.v|123|1*23269
+B/pmi_distributed_dpram_noreg=3*505220
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=682,1187,1704,2015
+R=./src/pmi_distributed_dpram.v|123
+
+[pmi_distributed_dpram_reg]
+A/pmi_distributed_dpram_reg=22|./src/pmi_distributed_dpram.v|246|1*24673
+B/pmi_distributed_dpram_reg=3*529792
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=789,1318,1874,2216
+R=./src/pmi_distributed_dpram.v|246
+
+[pmi_distributed_rom]
+A/pmi_distributed_rom=22|./src/pmi_distributed_rom.v|44|1*26139
+B/pmi_distributed_rom=3*555590
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=564,966,1270,1791
+R=./src/pmi_distributed_rom.v|44
+
+[pmi_distributed_rom_noreg]
+A/pmi_distributed_rom_noreg=22|./src/pmi_distributed_rom.v|135|1*27535
+B/pmi_distributed_rom_noreg=3*564345
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=605,1071,1571,1867
+R=./src/pmi_distributed_rom.v|135
+
+[pmi_distributed_rom_reg]
+A/pmi_distributed_rom_reg=22|./src/pmi_distributed_rom.v|244|1*28921
+B/pmi_distributed_rom_reg=3*581571
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=634,1112,1648,1968
+R=./src/pmi_distributed_rom.v|244
+
+[pmi_distributed_shift_reg]
+A/pmi_distributed_shift_reg=22|./src/pmi_distributed_shift_reg.v|46|1*30353
+B/pmi_distributed_shift_reg=3*599927
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=705,1124,1464,2190
+R=./src/pmi_distributed_shift_reg.v|46
+
+[pmi_distributed_shift_reg_fixed]
+A/pmi_distributed_shift_reg_fixed=22|./src/pmi_distributed_shift_reg.v|133|1*31627
+B/pmi_distributed_shift_reg_fixed=3*606628
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=559,948,1237,1611
+R=./src/pmi_distributed_shift_reg.v|133
+
+[pmi_distributed_shift_reg_lossless]
+A/pmi_distributed_shift_reg_lossless=22|./src/pmi_distributed_shift_reg.v|187|1*32859
+B/pmi_distributed_shift_reg_lossless=3*616027
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=613,1055,1368,1785
+R=./src/pmi_distributed_shift_reg.v|187
+
+[pmi_distributed_shift_reg_lossy]
+A/pmi_distributed_shift_reg_lossy=22|./src/pmi_distributed_shift_reg.v|253|1*34174
+B/pmi_distributed_shift_reg_lossy=3*626926
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=607,1007,1304,1690
+R=./src/pmi_distributed_shift_reg.v|253
+
+[pmi_distributed_spram]
+A/pmi_distributed_spram=22|./src/pmi_distributed_spram.v|44|1*35438
+B/pmi_distributed_spram=3*635653
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=636,1027,1347,1887
+R=./src/pmi_distributed_spram.v|44
+
+[pmi_distributed_spram_noreg]
+A/pmi_distributed_spram_noreg=22|./src/pmi_distributed_spram.v|111|1*36660
+B/pmi_distributed_spram_noreg=3*639782
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=609,1108,1614,1916
+R=./src/pmi_distributed_spram.v|111
+
+[pmi_distributed_spram_reg]
+A/pmi_distributed_spram_reg=22|./src/pmi_distributed_spram.v|232|1*38064
+B/pmi_distributed_spram_reg=3*664258
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=638,1149,1688,2011
+R=./src/pmi_distributed_spram.v|232
+
+[pmi_dsp_casmultaddsub]
+A/pmi_dsp_casmultaddsub=22|./src/pmi_dsp_casmultaddsub.v|82|1*39514
+B/pmi_dsp_casmultaddsub=3*689900
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3030,4464,6659,7698
+R=./src/pmi_dsp_casmultaddsub.v|82
+
+[pmi_dsp_mac]
+A/pmi_dsp_mac=22|./src/pmi_dsp_mac.v|77|1*43808
+B/pmi_dsp_mac=3*913079
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2787,4099,6353,7331
+R=./src/pmi_dsp_mac.v|77
+
+[pmi_dsp_mult]
+A/pmi_dsp_mult=22|./src/pmi_dsp_mult.v|62|1*47852
+B/pmi_dsp_mult=3*1198460
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1921,2987,4537,5263
+R=./src/pmi_dsp_mult.v|62
+
+[pmi_dsp_multaddsub]
+A/pmi_dsp_multaddsub=22|./src/pmi_dsp_multaddsub.v|85|1*50905
+B/pmi_dsp_multaddsub=3*1313746
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3077,4538,6767,7820
+R=./src/pmi_dsp_multaddsub.v|85
+
+[pmi_dsp_multaddsubsum]
+A/pmi_dsp_multaddsubsum=22|./src/pmi_dsp_multaddsubsum.v|113|1*55052
+B/pmi_dsp_multaddsubsum=3*1520858
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4577,6495,9895,11468
+R=./src/pmi_dsp_multaddsubsum.v|113
+
+[pmi_fifo]
+A/pmi_fifo=22|./src/pmi_fifo.v|45|1*60994
+B/pmi_fifo=3*1917809
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1223,2012,3209,3638
+R=./src/pmi_fifo.v|45
+
+[pmi_fifo_dc]
+A/pmi_fifo_dc=22|./src/pmi_fifo_dc.v|69|1*62907
+B/pmi_fifo_dc=3*1953486
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2780,4233,6936,7662
+R=./src/pmi_fifo_dc.v|69
+
+[pmi_mac]
+A/pmi_mac=22|./src/pmi_mac.v|56|1*66455
+B/pmi_mac=3*2116515
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=631,1446,2286,3102
+R=./src/pmi_mac.v|56
+
+[pmi_mult]
+A/pmi_mult=22|./src/pmi_mult.v|55|1*68719
+B/pmi_mult=3*2170599
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=621,1270,2045,2662
+R=./src/pmi_mult.v|55
+
+[pmi_multaddsub]
+A/pmi_multaddsub=22|./src/pmi_multaddsub.v|56|1*70456
+B/pmi_multaddsub=3*2191360
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=782,1582,2620,3698
+R=./src/pmi_multaddsub.v|56
+
+[pmi_multaddsubsum]
+A/pmi_multaddsubsum=22|./src/pmi_multaddsubsum.v|57|1*72743
+B/pmi_multaddsubsum=3*2227839
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1048,1984,3383,5058
+R=./src/pmi_multaddsubsum.v|57
+
+[pmi_pll]
+A/pmi_pll=22|./src/pmi_pll.v|47|1*76313
+B/pmi_pll=3*2305769
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=687,1277,1949,2310
+R=./src/pmi_pll.v|47
+
+[pmi_pll_fp]
+A/pmi_pll_fp=22|./src/pmi_pll_fp.v|47|1*78001
+B/pmi_pll_fp=3*2330589
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=717,1403,2124,2484
+R=./src/pmi_pll_fp.v|47
+
+[pmi_ram_dp]
+A/pmi_ram_dp=22|./src/pmi_ram_dp.v|49|1*79852
+B/pmi_ram_dp=3*2362620
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1166,2311,3587,4264
+R=./src/pmi_ram_dp.v|49
+
+[pmi_ram_dp_true]
+A/pmi_ram_dp_true=22|./src/pmi_ram_dp_true.v|53|1*82391
+B/pmi_ram_dp_true=3*2436623
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1445,2951,4595,5497
+R=./src/pmi_ram_dp_true.v|53
+
+[pmi_ram_dq]
+A/pmi_ram_dq=22|./src/pmi_ram_dq.v|47|1*85511
+B/pmi_ram_dq=3*2541336
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=808,1711,2547,3020
+R=./src/pmi_ram_dq.v|47
+
+[pmi_rom]
+A/pmi_rom=22|./src/pmi_rom.v|46|1*87410
+B/pmi_rom=3*2575507
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=626,1045,1306,1675
+R=./src/pmi_rom.v|46
+
+[pmi_sub]
+A/pmi_sub=22|./src/pmi_sub.v|54|1*88618
+B/pmi_sub=3*2582466
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=469,783,1062,1467
+R=./src/pmi_sub.v|54
+
+[pmi_sub_sign]
+A/pmi_sub_sign=22|./src/pmi_sub.v|122|1*89666
+B/pmi_sub_sign=3*2584657
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=361,581,864,1005
+R=./src/pmi_sub.v|122
+
+[pmi_sub_unsign]
+A/pmi_sub_unsign=22|./src/pmi_sub.v|105|1*90511
+B/pmi_sub_unsign=3*2598498
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=357,570,805,946
+R=./src/pmi_sub.v|105
+
+[~A]
+Comment=LATTICE ispLEVER 8.0, PMI_WORK LIBRARY
+LastVerilogToplevel=jtaghub16
+ModifyID=1113
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/jtaghub16.v=0*269977*273176
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_add.v=0*2650*3558
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_addsub.v=0*6926*8046
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_complex_mult.v=0*19100*22242
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_constant_mult.v=0*29096*31407
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_counter.v=0*33056*33872
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_distributed_dpram.v=0*40283*42470
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_distributed_rom.v=0*48277*50190
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_distributed_shift_reg.v=0*56226*58129
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_distributed_spram.v=0*64362*66437
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_dsp_casmultaddsub.v=0*75492*82383
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_dsp_mac.v=0*91188*97797
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_dsp_mult.v=0*104001*108243
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_dsp_multaddsub.v=0*117430*124526
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_dsp_multaddsubsum.v=0*137308*148024
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_fifo.v=0*152202*154504
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_fifo_dc.v=0*162032*166833
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_mac.v=0*176412*179097
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_mult.v=0*185773*187899
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_multaddsub.v=0*197850*200622
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_multaddsubsum.v=0*211590*214925
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_pll.v=0*218426*220391
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_pll_fp.v=0*224125*226285
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_ram_dp.v=0*232326*236246
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_ram_dp_true.v=0*244084*249481
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_ram_dq.v=0*253767*256423
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_rom.v=0*258381*259225
+h:/ncsrc/vlib/lattice_verilog/pmi_work/src/pmi_sub.v=0*262680*263652
+
+[~MFT]
+0=0|0pmi_work.mgf|273176|0
+1=0|1pmi_work.mgf|90511|0
+3=0|3pmi_work.mgf|2598498|0
+
+[~U]
+$root=12|0*264009|
+AddSign=12|0*209234||0x80
+AddUnSign=12|0*210418||0x80
+MultAddSub=12|0*10285||0x80
+MultSign=12|0*205714||0x80
+MultSignPipe=12|0*206998||0x80
+MultUnSign=12|0*206363||0x80
+MultUnSignPipe=12|0*208115||0x80
+SubSign=12|0*209818||0x80
+SubUnSign=12|0*211004||0x80
+jtaghub16=12|0*264559||0x90
+pmi_add=12|0*166||0x90
+pmi_add_sign=12|0*1901||0x80
+pmi_add_unsign=12|0*1246||0x80
+pmi_addsub=12|0*4097||0x90
+pmi_addsub_sign=12|0*6014||0x80
+pmi_addsub_unsign=12|0*5212||0x80
+pmi_complex_mult=12|0*8668||0x90
+pmi_constant_mult=12|0*22902||0x90
+pmi_counter=12|0*32068||0x90
+pmi_distributed_dpram=12|0*34543||0x90
+pmi_distributed_dpram_noreg=12|0*38175||0x80
+pmi_distributed_dpram_reg=12|0*35941||0x80
+pmi_distributed_rom=12|0*43183||0x90
+pmi_distributed_rom_noreg=12|0*46411||0x80
+pmi_distributed_rom_reg=12|0*44451||0x80
+pmi_distributed_shift_reg=12|0*50949||0x90
+pmi_distributed_shift_reg_fixed=12|0*52367||0x80
+pmi_distributed_shift_reg_lossless=12|0*53583||0x80
+pmi_distributed_shift_reg_lossy=12|0*54978||0x80
+pmi_distributed_spram=12|0*58878||0x80
+pmi_distributed_spram_noreg=12|0*62286||0x80
+pmi_distributed_spram_reg=12|0*60132||0x80
+pmi_dsp_casmultaddsub=12|0*67198||0x90
+pmi_dsp_mac=12|0*83144||0x90
+pmi_dsp_mult=12|0*98548||0x90
+pmi_dsp_multaddsub=12|0*109011||0x90
+pmi_dsp_multaddsubsum=12|0*125316||0x90
+pmi_fifo=12|0*148817||0x90
+pmi_fifo_dc=12|0*155268||0x90
+pmi_mac=12|0*167616||0x90
+pmi_mult=12|0*179892||0x90
+pmi_multaddsub=12|0*188695||0x90
+pmi_multaddsubsum=12|0*201456||0x90
+pmi_pll=12|0*215762||0x90
+pmi_pll_fp=12|0*221218||0x90
+pmi_ram_dp=12|0*227115||0x90
+pmi_ram_dp_true=12|0*237092||0x90
+pmi_ram_dq=12|0*250332||0x90
+pmi_rom=12|0*257269||0x90
+pmi_sub=12|0*260084||0x90
+pmi_sub_sign=12|0*261883||0x80
+pmi_sub_unsign=12|0*261164||0x80
+

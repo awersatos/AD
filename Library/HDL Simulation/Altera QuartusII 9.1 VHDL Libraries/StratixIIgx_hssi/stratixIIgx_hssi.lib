@@ -1,0 +1,772 @@
+timestamp=0
+
+[stratixiigx_hssi_aux_clock_div]
+A/clock_div_arch=21|./src/stratixIIgx_hssi_atoms.vhd|51|1*0
+B/clock_div_arch=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+C/clock_div_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3450664
+I/clock_div_arch=0*3450843
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*44898*0xca6dc63dcabe794aae224723a83b2c54d4a0ea38|0*45373*0xf2538cdc6f7b23a146389216c886e772
+M/clock_div_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*45471*0x3f7a2f5152342368e6411f39feb31be9ea78eeed|0*46929*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|36
+
+[stratixiigx_hssi_aux_clock_mult]
+A/clock_mult_arch=21|./src/stratixIIgx_hssi_atoms.vhd|135|1*947
+B/clock_mult_arch=3*5858
+C=8.2.1986.SP1.35.3497  (Windows)
+C/clock_mult_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3451409
+I/clock_mult_arch=0*3451653
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*47045*0x37fae70627f8d22704dc905037ec2462a0b3788b|0*47602*0xf2538cdc6f7b23a146389216c886e772
+M/clock_mult_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*47701*0xe31b589fbc8be66223405cfd6d88ebc3ba27b07f|0*50464*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|120
+
+[stratixiigx_hssi_aux_clock_phaseshift]
+A/clock_ps_arch=21|./src/stratixIIgx_hssi_atoms.vhd|270|1*2151
+B/clock_ps_arch=3*12829
+C=8.2.1986.SP1.35.3497  (Windows)
+C/clock_ps_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3452179
+I/clock_ps_arch=0*3452365
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*50582*0x1a915802507bcce8306c5c4609ac317545964016|0*50924*0xf2538cdc6f7b23a146389216c886e772
+M/clock_ps_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*51029*0xb94e8698962c240043901d5c7241e50e153c1ab4|0*51343*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|260
+
+[stratixiigx_hssi_bsc_in_r]
+A/bsc_in_r_arch=21|./src/stratixIIgx_hssi_atoms.vhd|7751|1*2777
+B/bsc_in_r_arch=3*13625
+C=8.2.1986.SP1.35.3497  (Windows)
+C/bsc_in_r_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3452819
+I/bsc_in_r_arch=0*3452993
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*297638*0x93bfa5439bedc15fe502c59a61eafc2f1f51413c|0*298086*0xf2538cdc6f7b23a146389216c886e772
+M/bsc_in_r_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*298179*0xa4a1eb09413f30dccc63c4353fea76adb0482d5e|0*299118*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|7732
+
+[stratixiigx_hssi_bsc_out]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|8258|1*3627
+B/rtl=3*17426
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3453434
+I/rtl=I/RTL 0*3453607
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*310012*0xf716c3c09f151eef7e2ca44784085f722000a6d6|0*310416*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*310508*0x89a1933679ec3ad6a73d84f80a5aa7424439c375|0*311527*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|8244
+
+[stratixiigx_hssi_calibration_block]
+A/calib_arch=21|./src/stratixIIgx_hssi_atoms.vhd|937|1*4531
+B/calib_arch=3*22349
+C=8.2.1986.SP1.35.3497  (Windows)
+C/calib_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3454159
+I/calib_arch=0*3454406
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*64197*0xa5b67b95be6caeec1b01da942f766ef90dfe5310|0*64935*0xf2538cdc6f7b23a146389216c886e772
+M/calib_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*65037*0xb8b01f878b24114f882852dddbd638ebf93caf35|0*65344*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|922
+
+[stratixiigx_hssi_central_management_unit]
+A/vital_cmu_top_arch=21|./src/stratixIIgx_hssi_atoms.vhd|17440|1*5426
+B/vital_cmu_top_arch=3*22694
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_cmu_top_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3456245
+I/vital_cmu_top_arch=0*3456562
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*675299*0xf1c3da407c2bcebe1215aba358c809077dd9ce1f|0*685323*0xf2538cdc6f7b23a146389216c886e772
+M/vital_cmu_top_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*685431*0x3a2688d4c15da539af1d77a86e6ff974d807bc7d|0*713197*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|17234
+
+[stratixiigx_hssi_cmu_clock_divider]
+A/cmu_div_arch=21|./src/stratixIIgx_hssi_atoms.vhd|681|1*19849
+B/cmu_div_arch=3*137130
+C=8.2.1986.SP1.35.3497  (Windows)
+C/cmu_div_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3457801
+I/cmu_div_arch=0*3458112
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*55179*0x2999dee802b95a1f560f68eae96dd3db74686557|0*57856*0xf2538cdc6f7b23a146389216c886e772
+M/cmu_div_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*57958*0x825b246863d3ff82ad6733bc3d6cca2a4189a74e|0*64079*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|621
+
+[stratixiigx_hssi_cmu_dprio_reg]
+A/dprio_reg_arch=21|./src/stratixIIgx_hssi_atoms.vhd|8445|1*23642
+B/dprio_reg_arch=3*154767
+C=8.2.1986.SP1.35.3497  (Windows)
+C/dprio_reg_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3459399
+I/dprio_reg_arch=0*3459642
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*311626*0x7c40d66750caf18ee7a1ff4e4cfb73b60f389842|0*317590*0xf2538cdc6f7b23a146389216c886e772
+M/dprio_reg_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*317688*0x4d519056eb5e3db6bc923c51f8d1e6b23fde63e8|0*653193*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|8317
+
+[stratixiigx_hssi_cmu_dprio_top]
+A/cmu_dprio_top_arc=21|./src/stratixIIgx_hssi_atoms.vhd|16771|1*108445
+B/cmu_dprio_top_arc=3*1132323
+C=8.2.1986.SP1.35.3497  (Windows)
+C/cmu_dprio_top_arc=8.2.1986.SP1.35.3497  (Windows)
+I=0*3460911
+I/cmu_dprio_top_arc=0*3461090
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*653309*0xf7747d1519e9b85f8629b6bcdefcd70a86b4ad45|0*659172*0xf2538cdc6f7b23a146389216c886e772
+M/cmu_dprio_top_arc=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*659270*0xff1e5b37e0939d04e808af56a276c8fba44ee46a|0*675180*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|16650
+
+[stratixiigx_hssi_cmu_pll]
+A/cmu_pll_arch=21|./src/stratixIIgx_hssi_atoms.vhd|1019|1*116003
+B/cmu_pll_arch=3*1188537
+C=8.2.1986.SP1.35.3497  (Windows)
+C/cmu_pll_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3462228
+I/cmu_pll_arch=0*3462641
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*65460*0xe2a605e47f60ac94e63cb98e34a637b81bc4c263|0*67914*0xf2538cdc6f7b23a146389216c886e772
+M/cmu_pll_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*68006*0x5918e15fc063be6ba130073e391e27839ffb3d74|0*76477*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|963
+
+[stratixiigx_hssi_components]
+B/stratixiigx_hssi_components=3*1212514
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*120852
+I=0*3464105
+I/stratixiigx_hssi_components=I/STRATIXIIGX_HSSI_COMPONENTS 0*3464361
+M=3|0|v63|0|./src/stratixIIgx_hssi_components.vhd|0*0*0x4373ef8fdeae8d97eb0e82a62ff1a547e1a2351d|0*41664*0xf2538cdc6f7b23a146389216c886e772
+M/stratixiigx_hssi_components=M/STRATIXIIGX_HSSI_COMPONENTS 4|0|v63|0|./src/stratixIIgx_hssi_components.vhd|0*41764*0x59d38758f64593b22f050b3c88ca9d4deb2bda84|0*44768*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_components.vhd|23
+
+[stratixiigx_hssi_ctrl_reg]
+A/ctrl_reg_arch=21|./src/stratixIIgx_hssi_atoms.vhd|7821|1*125044
+B/ctrl_reg_arch=3*1218601
+C=8.2.1986.SP1.35.3497  (Windows)
+C/ctrl_reg_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3464931
+I/ctrl_reg_arch=0*3465105
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*299228*0x479a56a7dc3ee50010fea3ace10307bb686c9443|0*299864*0xf2538cdc6f7b23a146389216c886e772
+M/ctrl_reg_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*299957*0x01f36c73ca233b0cd6ceabeca92b7634e5a31b91|0*309902*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|7799
+
+[stratixiigx_hssi_dskw_sm]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|1424|1*128726
+B/rtl=3*1241643
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3465658
+I/rtl=I/RTL 0*3465863
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*76585*0xf394b432b31a8de582cb4dc5b809e2d9b902d854|0*77180*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*77272*0x50bc262dea8087b965b2d65cf94d490a748ac265|0*93279*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|1408
+
+[stratixiigx_hssi_mdio_addr]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|6215|1*133358
+B/rtl=3*1336783
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3466375
+I/rtl=I/RTL 0*3466582
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*255610*0x46dfbd44a055a7314a1ac2c53791c2a87eaf8a84|0*256033*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*256127*0xe2e9678a6a9f6c225a52a12b290d9a2c735614aa|0*267656*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|6203
+
+[stratixiigx_hssi_mdio_cnt]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|6612|1*137158
+B/rtl=3*1395395
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3467095
+I/rtl=I/RTL 0*3467301
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*267757*0xf82424fa67a76cac09a018e0f65f46afba3dbf22|0*268146*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*268239*0xbe236bb3d2882e4c14b9a37fe62e9b733f4ae624|0*273259*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|6601
+
+[stratixiigx_hssi_mdio_ctl_data]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|6859|1*139326
+B/rtl=3*1420387
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3467898
+I/rtl=I/RTL 0*3468077
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*273359*0x9f40f5f978adef4162320e7f5863bb3a8af257d1|0*274081*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*274179*0x36ed66b1c17c6ca7b211505e7b7f107809054358|0*286281*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|6837
+
+[stratixiigx_hssi_mdio_pcs_bus_out_mux]
+A/mdio_pcs_bus_out_mux_arch=21|./src/stratixIIgx_hssi_atoms.vhd|7319|1*143110
+B/mdio_pcs_bus_out_mux_arch=3*1477715
+C=8.2.1986.SP1.35.3497  (Windows)
+C/mdio_pcs_bus_out_mux_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3468638
+I/mdio_pcs_bus_out_mux_arch=0*3468824
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*286386*0x2c0cae1293d2c5bebace9d4cf12aa6816b77c30d|0*288256*0xf2538cdc6f7b23a146389216c886e772
+M/mdio_pcs_bus_out_mux_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*288361*0x7d72bf8155c8bea3cf05bac27eaea690b94e41af|0*290707*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|7281
+
+[stratixiigx_hssi_mdio_sm]
+A/mdio_sm_arch=21|./src/stratixIIgx_hssi_atoms.vhd|7396|1*144692
+B/mdio_sm_arch=3*1485824
+C=8.2.1986.SP1.35.3497  (Windows)
+C/mdio_sm_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3469369
+I/mdio_sm_arch=0*3469542
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*290841*0x1162f1cfdddf44c0cc0ed67131c1471a2d9b8104|0*291560*0xf2538cdc6f7b23a146389216c886e772
+M/mdio_sm_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*291652*0x65456c287f4b0f8098a7a75f409663d2f40c4422|0*297530*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|7365
+
+[stratixiigx_hssi_pcs_reset]
+A/pcs_reset_arc=21|./src/stratixIIgx_hssi_atoms.vhd|19022|1*146373
+B/pcs_reset_arc=3*1502273
+C=8.2.1986.SP1.35.3497  (Windows)
+C/pcs_reset_arc=8.2.1986.SP1.35.3497  (Windows)
+I=0*3469983
+I/pcs_reset_arc=0*3470222
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*750977*0x732a7cf98bf5e6e450c917082e70608d42fc9fb8|0*751454*0xf2538cdc6f7b23a146389216c886e772
+M/pcs_reset_arc=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*751548*0x16421fad792e586e4069ab52435d8d3fd6f5164f|0*752609*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|19010
+
+[stratixiigx_hssi_phystatus_generator]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|20633|1*147207
+B/rtl=3*1505274
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3470804
+I/rtl=I/RTL 0*3470989
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*797016*0xec1c71ac0382d8681cdb15363ce932d11a88df32|0*797690*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*797794*0xbf6dec27684336352592b37bc2d048d2ad1a901b|0*809110*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|20614
+
+[stratixiigx_hssi_q_pipe_interface_top]
+A/q_pipe_interface_top_arch=21|./src/stratixIIgx_hssi_atoms.vhd|21827|1*150351
+B/q_pipe_interface_top_arch=3*1556194
+C=8.2.1986.SP1.35.3497  (Windows)
+C/q_pipe_interface_top_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3471732
+I/q_pipe_interface_top_arch=0*3471918
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*828830*0xfb7e51c7f31b4f68210d20615606e2f6bea4eafa|0*830683*0xf2538cdc6f7b23a146389216c886e772
+M/q_pipe_interface_top_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*830788*0x739558342fd55e09bcc1b3063a95aae8cbfe5324|0*839691*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|21750
+
+[stratixiigx_hssi_ram16x14_syn]
+A/ram16x14_syn_arch=21|./src/stratixIIgx_hssi_atoms.vhd|18558|1*153869
+B/ram16x14_syn_arch=3*1572608
+C=8.2.1986.SP1.35.3497  (Windows)
+C/ram16x14_syn_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3472596
+I/ram16x14_syn_arch=0*3472774
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*730344*0xe2e18fec577185de542b162df6525dcf46752211|0*731000*0xf2538cdc6f7b23a146389216c886e772
+M/ram16x14_syn_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*731097*0x21a6f3c340fb43c20d624de524eb10584bddd34c|0*744013*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|18539
+
+[stratixiigx_hssi_ram20x16_syn]
+A/ram20x16_syn_arch=21|./src/stratixIIgx_hssi_atoms.vhd|18180|1*156323
+B/ram20x16_syn_arch=3*1616158
+C=8.2.1986.SP1.35.3497  (Windows)
+C/ram20x16_syn_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3473308
+I/ram20x16_syn_arch=0*3473486
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*713327*0xeb3f7d652b54df621034b8782c228ad2555efe2c|0*713941*0xf2538cdc6f7b23a146389216c886e772
+M/ram20x16_syn_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*714038*0xa778c3bb8fe5d12f05c76ab0145ab777a05ad6ed|0*730226*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|18163
+
+[stratixiigx_hssi_ram8x65_syn]
+A/ram8x65_syn_arch=21|./src/stratixIIgx_hssi_atoms.vhd|18859|1*159241
+B/ram8x65_syn_arch=3*1669900
+C=8.2.1986.SP1.35.3497  (Windows)
+C/ram8x65_syn_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3474003
+I/ram8x65_syn_arch=0*3474180
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*744131*0x603bd11b250e03378a95c28ebbc0b0156c6c6594|0*744659*0xf2538cdc6f7b23a146389216c886e772
+M/ram8x65_syn_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*744755*0xcb7892d172f417c1421c343084adeb755824f0fa|0*750861*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|18844
+
+[stratixiigx_hssi_rcv_sm]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|4493|1*160910
+B/rtl=3*1693053
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3474706
+I/rtl=I/RTL 0*3474910
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*191912*0x78d06c3a704ed1fa85f93d80d6ed3d20408597fe|0*192701*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*192792*0x67f92684610b5f00c16e4de470f93de8087b4aec|0*255512*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|4472
+
+[stratixiigx_hssi_receiver]
+A/vital_rx_top_arch=21|./src/stratixIIgx_hssi_atoms.vhd|64841|1*176262
+B/vital_rx_top_arch=3*1981138
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_rx_top_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3477996
+I/vital_rx_top_arch=0*3478378
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2802260*0x1ffebc287e8a04e32712c91c9a97d2488331cd36|0*2818222*0xf2538cdc6f7b23a146389216c886e772
+M/vital_rx_top_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2818315*0x3623a5191b56f5e145ad47bab3b2d5c46a6bb91e|0*2932034*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|64513
+
+[stratixiigx_hssi_refclk_divider]
+A/refclk_div_arch=21|./src/stratixIIgx_hssi_atoms.vhd|311|1*215644
+B/refclk_div_arch=3*2260929
+C=8.2.1986.SP1.35.3497  (Windows)
+C/refclk_div_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3479390
+I/refclk_div_arch=0*3479698
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*51465*0x3ac2547bfc4ad4e9bed7e5e4bc16036520fb7ba3|0*52465*0xf2538cdc6f7b23a146389216c886e772
+M/refclk_div_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*52564*0x3649a7aecb549309cf3561e8617ae8e0364b53b5|0*54147*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|290
+
+[stratixiigx_hssi_rx_bist_ver]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|22291|1*217344
+B/rtl=3*2263324
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3480455
+I/rtl=I/RTL 0*3480664
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*839825*0x0a9136d9c1f74e84ee11191a4f104769ccb387cc|0*840767*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*840863*0x37e74a375442c92187c8e496fa78ca88c52643e1|0*995500*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|22264
+
+[stratixiigx_hssi_rx_byte_des]
+A/rx_byte_des_rtl=21|./src/stratixIIgx_hssi_atoms.vhd|32047|1*251432
+B/rx_byte_des_rtl=3*3123233
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rx_byte_des_rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3481358
+I/rx_byte_des_rtl=0*3481535
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1252680*0xd4e700b08c4db3a948de49fabce610e3e28e953b|0*1253484*0xf2538cdc6f7b23a146389216c886e772
+M/rx_byte_des_rtl=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1253580*0x1f4a3210645d3da64cb0c3beaa91008d4b1bb71c|0*1258752*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|32027
+
+[stratixiigx_hssi_rx_cdr]
+A/rx_cdr_arc=21|./src/stratixIIgx_hssi_atoms.vhd|19125|1*252780
+B/rx_cdr_arc=3*3140937
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rx_cdr_arc=8.2.1986.SP1.35.3497  (Windows)
+I=0*3482300
+I/rx_cdr_arc=0*3482616
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*752720*0x8d6a308f5ec70a067fefc3b6065097de3c9908ce|0*754397*0xf2538cdc6f7b23a146389216c886e772
+M/rx_cdr_arc=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*754488*0x0b80f82d78570bd924f17ebb8e17ae6f4d74fe36|0*761819*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|19082
+
+[stratixiigx_hssi_rx_comp_chnl_top]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|25847|1*257531
+B/rtl=3*3165116
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3483605
+I/rtl=I/RTL 0*3483819
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*995603*0x6dd66d878594cebed1c674e7bdf855ace8420671|0*997609*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*997710*0x6fecbd64dd24eb27023110fa9a60e40624f0ff6e|0*1252572*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|25789
+
+[stratixiigx_hssi_rx_ctrl]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|32276|1*315603
+B/rtl=3*4270078
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3484946
+I/rtl=I/RTL 0*3485151
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1258867*0xb3237d7d3a893773782be52f22bb24c7cfa2f77c|0*1261589*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1261681*0x59a0234240e937ba6ee1a822e2dfc403cd1b45bc|0*1741346*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|32200
+
+[stratixiigx_hssi_rx_dec_chnl_top]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|43105|1*409051
+B/rtl=3*6797860
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3485585
+I/rtl=I/RTL 0*3485766
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1741445*0xf4c0001c571e96c033fae64799b537ea3089882a|0*1742426*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1742526*0x3f739b4d3ef441c2d3b9a38de570162a364c43e3|0*1844895*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|43080
+
+[stratixiigx_hssi_rx_des]
+A/rx_des_arc=21|./src/stratixIIgx_hssi_atoms.vhd|19401|1*430515
+B/rx_des_arc=3*7176889
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rx_des_arc=8.2.1986.SP1.35.3497  (Windows)
+I=0*3486235
+I/rx_des_arc=0*3486471
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*761924*0x6028c777d4edd68052e473b0487db655aba143ac|0*762450*0xf2538cdc6f7b23a146389216c886e772
+M/rx_des_arc=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*762541*0x85e6bb702bd0c45edb9bc103d821c060dd421804|0*766209*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|19388
+
+[stratixiigx_hssi_rx_digi]
+A/rx_digi_arc=21|./src/stratixIIgx_hssi_atoms.vhd|63586|1*432162
+B/rx_digi_arc=3*7190736
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rx_digi_arc=8.2.1986.SP1.35.3497  (Windows)
+I=0*3488075
+I/rx_digi_arc=0*3488312
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2769338*0x58a8358362bc82d6eed3277a50ffbbf958872626|0*2775654*0xf2538cdc6f7b23a146389216c886e772
+M/rx_digi_arc=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2775746*0xf3ed0f9d5df32fba3ec1587ec36742f99b71e3a5|0*2802153*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|63378
+
+[stratixiigx_hssi_rx_dskw_fifo]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|45058|1*445458
+B/rtl=3*7218684
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3489219
+I/rtl=I/RTL 0*3489429
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1845002*0xc6e696c04d76e6dd25500ae10d1a119b42bf1755|0*1845733*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1845830*0xb04be035b5f48150c78507a12965da44e5f71173|0*1880518*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|45037
+
+[stratixiigx_hssi_rx_freqdet]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|46212|1*454938
+B/rtl=3*7387361
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3490043
+I/rtl=I/RTL 0*3490251
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1880622*0xcf028dc4f3afa8f0f54c59c2b79f0772548f2536|0*1881202*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1881297*0xdb5793d49733e5c4f45e4e5d9c05d730bab79004|0*1921893*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|46195
+
+[stratixiigx_hssi_rx_pcs_channel_testbus]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|47608|1*465698
+B/rtl=3*7632422
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3490827
+I/rtl=I/RTL 0*3491015
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1921995*0xe254ab5668e3b758027eb6014f2149a3a91e1dcd|0*1922702*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1922809*0x31057bd1989249fc66f3e99c134ddbf864997d31|0*1934354*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|47592
+
+[stratixiigx_hssi_rx_pipe_interface]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|19646|1*469018
+B/rtl=3*7675618
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3491598
+I/rtl=I/RTL 0*3491781
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*766314*0x88dc564341bd91320485f0f72588b523cd8097f9|0*767224*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*767326*0x54009bf3b6381273400f0e551cf1bad6e6f87559|0*796907*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|19618
+
+[stratixiigx_hssi_rx_prbs_ver]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|47917|1*476962
+B/rtl=3*7817399
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3492321
+I/rtl=I/RTL 0*3492530
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1934468*0xe69baaf10b69683ac60d886972cb7aea8f856398|0*1935200*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*1935296*0x5d5d156e0b90ab5f86e77530ece1f93ce0db043f|0*2025846*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|47896
+
+[stratixiigx_hssi_rx_rxclk_ctl]
+A/rx_digi_arc=21|./src/stratixIIgx_hssi_atoms.vhd|63253|1*497114
+B/rx_digi_arc=3*8214308
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rx_digi_arc=8.2.1986.SP1.35.3497  (Windows)
+I=0*3493193
+I/rx_digi_arc=0*3493435
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2764419*0x158c86c9147ce9866bbb70cc2da42be7058a1969|0*2765463*0xf2538cdc6f7b23a146389216c886e772
+M/rx_digi_arc=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2765560*0x498e43295b63c870fcc1fac4b9ec849bf2bccb0a|0*2769226*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|63219
+
+[stratixiigx_hssi_rx_wordalign]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|50041|1*499194
+B/rtl=3*8230004
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3494283
+I/rtl=I/RTL 0*3494493
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2025949*0x8dee99dd279a83a985db7ef9c8b393a0015681ca|0*2027826*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2027923*0x98694feeda420c906b7200a36cbe21b30979690e|0*2764315*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|49986
+
+[stratixiigx_hssi_transmitter]
+A/tx_top_arch=21|./src/stratixIIgx_hssi_atoms.vhd|81093|1*638098
+B/tx_top_arch=3*11676650
+C=8.2.1986.SP1.35.3497  (Windows)
+C/tx_top_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3496320
+I/tx_top_arch=0*3496705
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3381257*0x860fa58ae2aa2bf2a3dd91a2e86dbe88886d9745|0*3391372*0xf2538cdc6f7b23a146389216c886e772
+M/tx_top_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3391468*0x17dfa879478b681eaad5344d72a93e06dbb7af09|0*3450230*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|80893
+
+[stratixiigx_hssi_tx_bist_gen]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|71348|1*659714
+B/rtl=3*11820855
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3497615
+I/rtl=I/RTL 0*3497824
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3029575*0x25872cb98fcb4a947eea6c671adaedd133038a88|0*3030193*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3030289*0xfe888cab34f4290f4df26e04d46942abdde766ca|0*3182854*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|71332
+
+[stratixiigx_hssi_tx_channel_clk_div]
+A/local_div_arch=21|./src/stratixIIgx_hssi_atoms.vhd|68356|1*695770
+B/local_div_arch=3*12556428
+C=8.2.1986.SP1.35.3497  (Windows)
+C/local_div_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3498525
+I/local_div_arch=0*3498709
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*54265*0x5759f3fdee0af7ce6939b33c298c9a5076ae744f|0*55076*0xf2538cdc6f7b23a146389216c886e772
+M/local_div_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2932148*0x6b5c808a2cefc5e357f1b069243be79ac17b7eb1|0*2936852*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|386
+
+[stratixiigx_hssi_tx_ctrl]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|69886|1*697837
+B/rtl=3*12563782
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3499593
+I/rtl=I/RTL 0*3499766
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2969695*0x95025b2a377a8fc1a157a39517069a56909ab12a|0*2971712*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2971804*0x953ffb68f01e33e3b317d5424cbc05e2b47609db|0*3029476*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|69827
+
+[stratixiigx_hssi_tx_digi]
+A/tx_digi_arch=21|./src/stratixIIgx_hssi_atoms.vhd|80480|1*712293
+B/tx_digi_arch=3*12795507
+C=8.2.1986.SP1.35.3497  (Windows)
+C/tx_digi_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3500660
+I/tx_digi_arch=0*3500833
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3366717*0x930edd48c4357aa9a29bc092aa975a9e3e3557f5|0*3369225*0xf2538cdc6f7b23a146389216c886e772
+M/tx_digi_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3369317*0x0c044bacec84b76aec212f05e1c055072c2eaac1|0*3381149*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|80401
+
+[stratixiigx_hssi_tx_enc_chnl_top]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|77183|1*718022
+B/rtl=3*12805483
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3501664
+I/rtl=I/RTL 0*3501877
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3242592*0xbb81020b2cd513ace40f0586178a3f03a04574e9|0*3244055*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3244155*0xca93b3d45cd87ed60f0e2f7e920304a7e9d72b9f|0*3366610*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|77142
+
+[stratixiigx_hssi_tx_ph_fifo]
+A/tx_ph_fifo_arch=21|./src/stratixIIgx_hssi_atoms.vhd|69553|1*746350
+B/tx_ph_fifo_arch=3*13431076
+C=8.2.1986.SP1.35.3497  (Windows)
+C/tx_ph_fifo_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3502446
+I/tx_ph_fifo_arch=0*3502622
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2964080*0x4de52a6f699f2bd9f2c12831fd5af20a845d0b41|0*2964761*0xf2538cdc6f7b23a146389216c886e772
+M/tx_ph_fifo_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2964856*0x600d1a95291ea06a8688eed88394b4b0d4340af1|0*2969581*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|69524
+
+[stratixiigx_hssi_tx_pipe_interface]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|21121|1*748018
+B/rtl=3*13456384
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3503237
+I/rtl=I/RTL 0*3503452
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*809221*0xb6e51845c9751c07206738c2c639752efbb9576b|0*810120*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*810222*0x1a38aadab5a6afa59b673f6c3cf8d2b7826af605|0*828721*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|21096
+
+[stratixiigx_hssi_tx_prbs_gen]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|75451|1*753674
+B/rtl=3*13543128
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3504008
+I/rtl=I/RTL 0*3504217
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3182957*0x778f0cfed4418d55f94eb6d55e829387e78ca30f|0*3183454*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*3183550*0xaea9bf510a5b78c65b73dd00cddb381ff051bf90|0*3242489*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|75438
+
+[stratixiigx_hssi_tx_ram8x44_syn]
+A/tx_ram8x44_syn=21|./src/stratixIIgx_hssi_atoms.vhd|69371|1*767778
+B/tx_ram8x44_syn=3*14025253
+C=8.2.1986.SP1.35.3497  (Windows)
+C/tx_ram8x44_syn=8.2.1986.SP1.35.3497  (Windows)
+I=0*3504818
+I/tx_ram8x44_syn=0*3504998
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2957420*0x7eb184a0b6a15f22e68d698204a5f73551682b56|0*2957856*0xf2538cdc6f7b23a146389216c886e772
+M/tx_ram8x44_syn=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2957955*0x950a420a62737ca229611360e30e1a1f923f5a2f|0*2963963*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|69361
+
+[stratixiigx_hssi_tx_rx_det]
+A/tx_rx_det_arch=21|./src/stratixIIgx_hssi_atoms.vhd|69009|1*769397
+B/tx_rx_det_arch=3*14044908
+C=8.2.1986.SP1.35.3497  (Windows)
+C/tx_rx_det_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3505448
+I/tx_rx_det_arch=0*3505623
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2947535*0x4fee0c27173d9bc4df40019821f350dd29ee3550|0*2947945*0xf2538cdc6f7b23a146389216c886e772
+M/tx_rx_det_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2948039*0xa9e2d53c0de40f8271fea3e94c515602c6ee4043|0*2949177*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|69000
+
+[stratixiigx_hssi_tx_rx_det_clk_gen]
+A/clk_gen_arch=21|./src/stratixIIgx_hssi_atoms.vhd|68762|1*770376
+B/clk_gen_arch=3*14046614
+C=8.2.1986.SP1.35.3497  (Windows)
+C/clk_gen_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3506124
+I/clk_gen_arch=0*3506307
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2940715*0xc77f8eccaf91f14c95626336f880f32fecf4e674|0*2941077*0xf2538cdc6f7b23a146389216c886e772
+M/clk_gen_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2941179*0x4537e37583add30b37fbb2054365f433db074c41|0*2942081*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|68755
+
+[stratixiigx_hssi_tx_rx_det_div_by_2]
+A/div_by_2_arch=21|./src/stratixIIgx_hssi_atoms.vhd|68718|1*771113
+B/div_by_2_arch=3*14046961
+C=8.2.1986.SP1.35.3497  (Windows)
+C/div_by_2_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3506815
+I/div_by_2_arch=0*3506999
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2939693*0xc3d4f25b53d5d0aa151a9f2d359bb5a06a6aff2a|0*2940010*0xf2538cdc6f7b23a146389216c886e772
+M/div_by_2_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2940113*0xffa9cc6484d073a915a0c73d8dabb2779bcb6ff9|0*2940595*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|68711
+
+[stratixiigx_hssi_tx_rx_det_rcv_det_control]
+A/rcv_det_control_arch=21|./src/stratixIIgx_hssi_atoms.vhd|68866|1*771739
+B/rcv_det_control_arch=3*14048446
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rcv_det_control_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3507484
+I/rcv_det_control_arch=0*3507675
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2943336*0x0cc7d8ab9fe128d651d26667acb52944d1de667f|0*2943920*0xf2538cdc6f7b23a146389216c886e772
+M/rcv_det_control_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2944030*0xeaa101c5c55297e8b9be4fda6c09cb4422297e5d|0*2945306*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|68854
+
+[stratixiigx_hssi_tx_rx_det_rcv_det_digital]
+A/rcv_det_digital_arch=21|./src/stratixIIgx_hssi_atoms.vhd|68939|1*772692
+B/rcv_det_digital_arch=3*14049385
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rcv_det_digital_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3508270
+I/rcv_det_digital_arch=0*3508461
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2945440*0x251c8b2afc6adeb49cb545b94ad1eb8df3ba34c0|0*2946030*0xf2538cdc6f7b23a146389216c886e772
+M/rcv_det_digital_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2946140*0x41fe1d07f137b5dcdc68ce1dddf27556e0e8ec5a|0*2947401*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|68927
+
+[stratixiigx_hssi_tx_rx_det_rcv_det_fsm]
+A/rcv_det_fsm_arch=21|./src/stratixIIgx_hssi_atoms.vhd|68576|1*773661
+B/rcv_det_fsm_arch=3*14050324
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rcv_det_fsm_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3509068
+I/rcv_det_fsm_arch=0*3509255
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2936973*0x68d373c305ed487e70a2d06d5038f5cc30caf837|0*2937410*0xf2538cdc6f7b23a146389216c886e772
+M/rcv_det_fsm_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2937516*0xb2922bd83fd230e639b0ef74a2efe2c31fc964d4|0*2939567*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|68565
+
+[stratixiigx_hssi_tx_rx_det_rcv_det_sync]
+A/rcv_det_sync_arch=21|./src/stratixIIgx_hssi_atoms.vhd|68821|1*774754
+B/rcv_det_sync_arch=3*14056076
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rcv_det_sync_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3509711
+I/rcv_det_sync_arch=0*3509899
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2942199*0xc61308adee2a2a9b42e158f5eacbbd9b9d71855e|0*2942558*0xf2538cdc6f7b23a146389216c886e772
+M/rcv_det_sync_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2942665*0x0be55989fa7e6cb7fe7017631f5f12997553407c|0*2943208*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|68813
+
+[stratixiigx_hssi_tx_ser]
+A/tx_ser_arch=21|./src/stratixIIgx_hssi_atoms.vhd|69070|1*775384
+B/tx_ser_arch=3*14057297
+C=8.2.1986.SP1.35.3497  (Windows)
+C/tx_ser_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3510405
+I/tx_ser_arch=0*3510577
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2949289*0x76305b1b85e0d322963aa2e91cad20de3d1f908c|0*2949857*0xf2538cdc6f7b23a146389216c886e772
+M/tx_ser_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2949948*0x60654eb2b301c2bd95df0430460ef3912699b95c|0*2954528*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|69054
+
+[stratixiigx_hssi_tx_sm]
+A/rtl=A/RTL 21|./src/stratixIIgx_hssi_atoms.vhd|2013|1*777416
+B/rtl=3*14082065
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3511076
+I/rtl=I/RTL 0*3511279
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*93378*0x288c09bd8c192c23ad6b9f939cb138210dae83cf|0*94031*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*94121*0x117dbdf850fb7fc6c07deea17683b63384c0312d|0*191815*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|1995
+
+[stratixiigx_hssi_tx_txclk_ctl]
+A/tx_txclk_ctl_arch=21|./src/stratixIIgx_hssi_atoms.vhd|69296|1*798992
+B/tx_txclk_ctl_arch=3*14674834
+C=8.2.1986.SP1.35.3497  (Windows)
+C/tx_txclk_ctl_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3511984
+I/tx_txclk_ctl_arch=0*3512162
+M=11|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2954634*0x9692b338820dff6ab738f827444f450d1aec7315|0*2955404*0xf2538cdc6f7b23a146389216c886e772
+M/tx_txclk_ctl_arch=21|0|v63|0|./src/stratixIIgx_hssi_atoms.vhd|0*2955501*0x6cfd317a369558f8084faed75a75e76008c49a9e|0*2957302*0xf2538cdc6f7b23a146389216c886e772
+R=./src/stratixIIgx_hssi_atoms.vhd|69272
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, STRATIXGX_HSSI VHDL LIBRARY
+ModifyID=387
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=0|0stratixIIgx_hssi.mgf|3512162|0
+1=0|1stratixIIgx_hssi.mgf|798992|0
+3=0|3stratixIIgx_hssi.mgf|14674834|0
+
+[~U]
+stratixiigx_hssi_aux_clock_div=11|0*3450341|
+stratixiigx_hssi_aux_clock_mult=11|0*3451037|
+stratixiigx_hssi_aux_clock_phaseshift=11|0*3451913|
+stratixiigx_hssi_bsc_in_r=11|0*3452565|
+stratixiigx_hssi_bsc_out=11|0*3453181|
+stratixiigx_hssi_calibration_block=11|0*3453784|
+stratixiigx_hssi_central_management_unit=11|0*3454664|
+stratixiigx_hssi_cmu_clock_divider=11|0*3457058|
+stratixiigx_hssi_cmu_dprio_reg=11|0*3458532|
+stratixiigx_hssi_cmu_dprio_top=11|0*3460060|
+stratixiigx_hssi_cmu_pll=11|0*3461463|
+stratixiigx_hssi_components=STRATIXIIGX_HSSI_COMPONENTS 3|0*3463195|0*3463386
+stratixiigx_hssi_ctrl_reg=11|0*3464645|
+stratixiigx_hssi_dskw_sm=11|0*3465341|
+stratixiigx_hssi_mdio_addr=11|0*3466120|
+stratixiigx_hssi_mdio_cnt=11|0*3466841|
+stratixiigx_hssi_mdio_ctl_data=11|0*3467559|
+stratixiigx_hssi_mdio_pcs_bus_out_mux=11|0*3468260|
+stratixiigx_hssi_mdio_sm=11|0*3469036|
+stratixiigx_hssi_pcs_reset=11|0*3469728|
+stratixiigx_hssi_phystatus_generator=11|0*3470475|
+stratixiigx_hssi_q_pipe_interface_top=11|0*3471178|
+stratixiigx_hssi_ram16x14_syn=11|0*3472258|
+stratixiigx_hssi_ram20x16_syn=11|0*3472970|
+stratixiigx_hssi_ram8x65_syn=11|0*3473682|
+stratixiigx_hssi_rcv_sm=11|0*3474374|
+stratixiigx_hssi_receiver=11|0*3475166|
+stratixiigx_hssi_refclk_divider=11|0*3478954|
+stratixiigx_hssi_rx_bist_ver=11|0*3480086|
+stratixiigx_hssi_rx_byte_des=11|0*3481005|
+stratixiigx_hssi_rx_cdr=11|0*3481728|
+stratixiigx_hssi_rx_comp_chnl_top=11|0*3483023|
+stratixiigx_hssi_rx_ctrl=11|0*3484229|
+stratixiigx_hssi_rx_dec_chnl_top=11|0*3485196|
+stratixiigx_hssi_rx_des=11|0*3485951|
+stratixiigx_hssi_rx_digi=11|0*3486718|
+stratixiigx_hssi_rx_dskw_fifo=11|0*3488881|
+stratixiigx_hssi_rx_freqdet=11|0*3489739|
+stratixiigx_hssi_rx_pcs_channel_testbus=11|0*3490543|
+stratixiigx_hssi_rx_pipe_interface=11|0*3491207|
+stratixiigx_hssi_rx_prbs_ver=11|0*3491968|
+stratixiigx_hssi_rx_rxclk_ctl=11|0*3492823|
+stratixiigx_hssi_rx_wordalign=11|0*3493689|
+stratixiigx_hssi_transmitter=11|0*3494543|
+stratixiigx_hssi_tx_bist_gen=11|0*3497310|
+stratixiigx_hssi_tx_channel_clk_div=11|0*3498117|
+stratixiigx_hssi_tx_ctrl=11|0*3499004|
+stratixiigx_hssi_tx_digi=11|0*3499991|
+stratixiigx_hssi_tx_enc_chnl_top=11|0*3501195|
+stratixiigx_hssi_tx_ph_fifo=11|0*3502142|
+stratixiigx_hssi_tx_pipe_interface=11|0*3502862|
+stratixiigx_hssi_tx_prbs_gen=11|0*3503719|
+stratixiigx_hssi_tx_ram8x44_syn=11|0*3504542|
+stratixiigx_hssi_tx_rx_det=11|0*3505193|
+stratixiigx_hssi_tx_rx_det_clk_gen=stratixiigx_hssi_tx_rx_det_CLK_GEN 11|0*3505877|
+stratixiigx_hssi_tx_rx_det_div_by_2=stratixiigx_hssi_tx_rx_det_DIV_BY_2 11|0*3506567|
+stratixiigx_hssi_tx_rx_det_rcv_det_control=stratixiigx_hssi_tx_rx_det_RCV_DET_CONTROL 11|0*3507197|
+stratixiigx_hssi_tx_rx_det_rcv_det_digital=stratixiigx_hssi_tx_rx_det_RCV_DET_DIGITAL 11|0*3507983|
+stratixiigx_hssi_tx_rx_det_rcv_det_fsm=stratixiigx_hssi_tx_rx_det_RCV_DET_FSM 11|0*3508785|
+stratixiigx_hssi_tx_rx_det_rcv_det_sync=stratixiigx_hssi_tx_rx_det_RCV_DET_SYNC 11|0*3509459|
+stratixiigx_hssi_tx_ser=11|0*3510105|
+stratixiigx_hssi_tx_sm=11|0*3510761|
+stratixiigx_hssi_tx_txclk_ctl=11|0*3511630|
+

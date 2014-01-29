@@ -1,0 +1,15 @@
+[Plugin]
+Name=drv_spimux
+Description= Interface for obtaining and releasing control over the NanoBoard SPI multiplexer.
+Caption=SPI Bus Arbiter
+SourceDir=platform\fpga\drivers\spimux\src
+Implement=drv_spimux
+Bitmap=drv_spimux.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=drv_spi
+Condition=EQ
+
+[Instance]
+Require0=drv_spi

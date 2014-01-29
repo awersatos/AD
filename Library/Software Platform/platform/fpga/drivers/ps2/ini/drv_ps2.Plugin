@@ -1,0 +1,61 @@
+[Plugin]
+Name=drv_ps2
+Caption=PS/2 Driver
+Description=PS/2 low level driver
+Bitmap=drv_ps2.bmp
+Implement=drv_ps2
+SourceDir=platform\fpga\drivers\ps2\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\ps2\internal"
+
+[Instance]
+Require0=per_ps2
+
+[Instance_Option0]
+GUIName=Buffer Size
+Name=buffer
+Description=Software buffer size in bytes.
+Kind=BUFFER
+DefaultValue=128
+Type=UINT8
+
+[Instance_Option1]
+GUIName=Threadsafe Operation
+Name=USE_MUTEX
+Description=Use a mutex to protect access to the PS/2 device.
+Kind=BOOLEAN
+DefaultValue=FALSE
+
+[Instance_Option1_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option2]
+Name=wait_mode
+GUIName=Wait mode
+Description=Activity while waiting on peripheral
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+DefaultValue=NOP
+
+[Instance_Option2_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option3]
+Name=wait_sleepms
+GUIName=Wait sleep duration
+Kind=INT
+Description=Sleep duration if thread has to wait and Wait mode is SLEEP
+DefaultValue=100
+
+[Instance_Option3_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ

@@ -1,0 +1,11 @@
+[Plugin]
+Name=usbhost_msd_to_blockio
+Description=USB Host Mass Storage Device i\o driver
+Implement=blockio_adaptor
+Require0=blockio
+SourceDir=services\posix\devio\blockio\adaptors\usbhost_msd\src
+InitHandler=usbhost_msd_to_blockio_plugin_init
+InitHandlerPriority=1
+
+[Instance]
+Require0=usbhost_msd

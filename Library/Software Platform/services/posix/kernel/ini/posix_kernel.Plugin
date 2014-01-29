@@ -1,0 +1,7 @@
+[Plugin]
+Name=posix_kernel
+Implement=posix_kernel
+Description=internal plugin to provide common headers to other posix plugins
+FrameworkCompileOption0=-I"$(SWPLATFORM)\services\posix\kernel\internal"
+GlobalCompileOption0=-I"$(SWPLATFORM)\services\posix\include"
+

@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_ds1391
+Category=DRIVER
+System=False
+Description=DS1391 Real Time Clock driver
+PublicDir=platform\fpga\drivers\ds1391\include
+
+

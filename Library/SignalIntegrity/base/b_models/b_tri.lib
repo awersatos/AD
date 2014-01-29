@@ -1,0 +1,5336 @@
+###############################################################################
+#                         EDL Macromodel Library File
+#    Filename: b_tri.lib
+#     Creator: INCASES Engineering GmbH
+#     Version: 1.1
+#   Last Save: Thu Dec 18 14:13:32 MET 1997
+#
+###############################################################################
+#
+#   Copyright: Copyright (C) 1998, INCASES Engineering GmbH.
+#              Unauthorized reproduction and/or distribution is strictly
+#              prohibited. All rights reserved.
+#
+#  Disclaimer: Please be aware that in the absence of a written agreement
+#              to the contrary, INCASES Engineering GmbH assumes no
+#              liability for:
+#              (1) the accuracy of the macromodels provided to your company;
+#              (2) the proper functioning of these models in your design
+#                  system or for any resulting applications;
+#              (3) infringement of patents, copyrights or intellectual
+#                  property rights resulting from your use of these models.
+#
+###############################################################################
+@IDBM:ABT_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : ABT_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : ABT;
+#  Changes    : None;
+#  Notes      : generated for TI SN74ABT240 and comparable 3-state buffers
+#		of technology ABT, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : SN74ABT240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  11
+uu    -2.000000e+01
+uo    -9.100000e-01
+i0    2.527136e-01
+ g    3.104545e-01
+uu    -9.100000e-01
+uo    -8.300000e-01
+i0    1.647125e-01
+ g    2.137500e-01
+uu    -8.300000e-01
+uo    -7.900000e-01
+i0    1.055750e-01
+ g    1.425000e-01
+uu    -7.900000e-01
+uo    -7.500000e-01
+i0    6.410000e-02
+ g    9.000000e-02
+uu    -7.500000e-01
+uo    -7.200000e-01
+i0    3.410000e-02
+ g    5.000000e-02
+uu    -7.200000e-01
+uo    -7.000000e-01
+i0    2.330000e-02
+ g    3.500000e-02
+uu    -7.000000e-01
+uo    -6.700000e-01
+i0    1.280000e-02
+ g    2.000000e-02
+uu    -6.700000e-01
+uo    -6.200000e-01
+i0    6.100000e-03
+ g    1.000000e-02
+uu    -6.200000e-01
+uo    -6.100000e-01
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    -6.100000e-01
+uo    -6.000000e-01
+i0    6.000000e-03
+ g    1.000000e-02
+uu    -6.000000e-01
+uo     2.000000e+01
+i0    0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:ABT_026_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : ABT_026_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 09:25:00 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : ABT;
+# Changes     : None;
+# Notes       : generated for TI SN74ABT2240 and comparable 3-state buffers
+#		with integrated output resistor of technology ABT, VCC = 5V,
+#		GND clamping diodes;
+#
+# RefSource
+#	Component    : SN74ABT2240;
+#	Manufacturer : TI;
+#	Buffername   : ABT2240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+47
+-1.090000e+00   -1.840000e-01
+-9.700000e-01   -9.490000e-02
+-9.000000e-01   -5.330000e-02
+-8.600000e-01   -3.510000e-02
+-8.300000e-01   -2.460000e-02
+-8.100000e-01   -1.900000e-02
+-7.800000e-01   -1.280000e-02
+-7.500000e-01   -8.800000e-03
+-7.200000e-01   -6.100000e-03
+-7.000000e-01   -4.800000e-03
+-6.700000e-01   -3.400000e-03
+-6.500000e-01   -2.800000e-03
+-6.200000e-01   -2.100000e-03
+-6.000000e-01   -1.700000e-03
+-5.500000e-01   -1.200000e-03
+-5.400000e-01   -1.200000e-03
+-5.300000e-01   -1.100000e-03
+-5.200000e-01   -1.100000e-03
+-4.000000e-01   0.000000e+00
+5.500000e+00   0.000000e+00
+5.670000e+00   1.000000e-03
+5.690000e+00   1.000000e-03
+5.700000e+00   1.100000e-03
+5.710000e+00   1.100000e-03
+5.740000e+00   1.400000e-03
+5.750000e+00   1.400000e-03
+5.760000e+00   1.500000e-03
+5.770000e+00   1.500000e-03
+5.790000e+00   1.700000e-03
+5.800000e+00   1.700000e-03
+5.810000e+00   1.800000e-03
+5.820000e+00   1.800000e-03
+5.830000e+00   2.000000e-03
+5.840000e+00   2.000000e-03
+5.850000e+00   2.100000e-03
+5.860000e+00   2.100000e-03
+5.880000e+00   2.300000e-03
+5.890000e+00   2.300000e-03
+5.910000e+00   2.500000e-03
+5.930000e+00   2.600000e-03
+5.950000e+00   2.800000e-03
+5.990000e+00   3.000000e-03
+6.180000e+00   4.300000e-03
+6.610000e+00   7.200000e-03
+6.790000e+00   8.900000e-03
+6.980000e+00   1.130000e-02
+7.000000e+00   1.170000e-02
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:AC11_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : AC11_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : AC;
+#  Changes    : None;
+#  Notes      : generated for TI SN74AC11240 and comparable 3-state buffers
+#		of technology AC, VCC = 5V, GND/VCC clamping diodes;
+#
+#  RefSource
+#     Component     : SN74AC11240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND and VCC Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  25
+uu    -2.000000e+01
+uo    -9.610000e-01
+i0    2.947835e-01
+ g    3.447446e-01
+uu    -9.610000e-01
+uo    -8.929700e-01
+i0    2.083038e-01
+ g    2.547553e-01
+uu    -8.929700e-01
+uo    -8.459800e-01
+i0    1.419639e-01
+ g    1.804639e-01
+uu    -8.459800e-01
+uo    -7.980000e-01
+i0    8.813784e-02
+ g    1.168383e-01
+uu    -7.980000e-01
+uo    -7.739900e-01
+i0    5.366242e-02
+ g    7.363599e-02
+uu    -7.739900e-01
+uo    -7.500000e-01
+i0    3.585235e-02
+ g    5.062526e-02
+uu    -7.500000e-01
+uo    -7.249800e-01
+i0    2.195714e-02
+ g    3.209832e-02
+uu    -7.249800e-01
+uo    -6.990000e-01
+i0    1.311438e-02
+ g    1.990108e-02
+uu    -6.990000e-01
+uo    -6.749900e-01
+i0    8.648327e-03
+ g    1.351187e-02
+uu    -6.749900e-01
+uo    -6.499900e-01
+i0    4.718623e-03
+ g    7.690000e-03
+uu    -6.499900e-01
+uo    -6.260100e-01
+i0    2.693674e-03
+ g    4.574646e-03
+uu    -6.260100e-01
+uo    -6.000100e-01
+i0    1.332324e-03
+ g    2.400000e-03
+uu    -6.000100e-01
+uo    -5.749800e-01
+i0    7.828702e-04
+ g    1.484259e-03
+uu    -5.749800e-01
+uo    -5.509900e-01
+i0    5.047905e-04
+ g    1.000625e-03
+uu    -5.509900e-01
+uo    -5.249900e-01
+i0    3.014062e-04
+ g    6.315000e-04
+uu    -5.249900e-01
+uo    -4.999800e-01
+i0    2.127432e-04
+ g    4.626150e-04
+uu    -4.999800e-01
+uo    -4.749900e-01
+i0    1.401021e-04
+ g    3.173269e-04
+uu    -4.749900e-01
+uo    5.598900e+00
+i0    -8.146780e-06
+ g    5.217414e-06
+uu    5.598900e+00
+uo    5.624000e+00
+i0    -6.279370e-03
+ g    1.125299e-03
+uu    5.624000e+00
+uo    5.648900e+00
+i0    -1.340989e-02
+ g    2.393173e-03
+uu    5.648900e+00
+uo    5.672900e+00
+i0    -3.006564e-02
+ g    5.341667e-03
+uu    5.672900e+00
+uo    5.698000e+00
+i0    -4.667168e-02
+ g    8.268924e-03
+uu    5.698000e+00
+uo    5.748000e+00
+i0    -7.133306e-02
+ g    1.259700e-02
+uu    5.748000e+00
+uo    5.921900e+00
+i0    -1.098860e-01
+ g    1.930420e-02
+uu    5.921900e+00
+uo     2.000000e+01
+i0    -1.174849e-01
+ g    2.058738e-02
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:ACT11_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : ACT11_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : ACT;
+#  Changes    : None;
+#  Notes      : generated for TI SN74ACT11240 and comparable 3-state buffers
+#		of technology ACT, VCC = 5V, GND/VCC clamping diodes;
+#
+#  RefSource
+#     Component     : SN74AC11240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND and VCC Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  25
+uu    -2.000000e+01
+uo    -9.610000e-01
+i0    2.947835e-01
+ g    3.447446e-01
+uu    -9.610000e-01
+uo    -8.929700e-01
+i0    2.083038e-01
+ g    2.547553e-01
+uu    -8.929700e-01
+uo    -8.459800e-01
+i0    1.419639e-01
+ g    1.804639e-01
+uu    -8.459800e-01
+uo    -7.980000e-01
+i0    8.813784e-02
+ g    1.168383e-01
+uu    -7.980000e-01
+uo    -7.739900e-01
+i0    5.366242e-02
+ g    7.363599e-02
+uu    -7.739900e-01
+uo    -7.500000e-01
+i0    3.585235e-02
+ g    5.062526e-02
+uu    -7.500000e-01
+uo    -7.249800e-01
+i0    2.195714e-02
+ g    3.209832e-02
+uu    -7.249800e-01
+uo    -6.990000e-01
+i0    1.311438e-02
+ g    1.990108e-02
+uu    -6.990000e-01
+uo    -6.749900e-01
+i0    8.648327e-03
+ g    1.351187e-02
+uu    -6.749900e-01
+uo    -6.499900e-01
+i0    4.718623e-03
+ g    7.690000e-03
+uu    -6.499900e-01
+uo    -6.260100e-01
+i0    2.693674e-03
+ g    4.574646e-03
+uu    -6.260100e-01
+uo    -6.000100e-01
+i0    1.332324e-03
+ g    2.400000e-03
+uu    -6.000100e-01
+uo    -5.749800e-01
+i0    7.828702e-04
+ g    1.484259e-03
+uu    -5.749800e-01
+uo    -5.509900e-01
+i0    5.047905e-04
+ g    1.000625e-03
+uu    -5.509900e-01
+uo    -5.249900e-01
+i0    3.014062e-04
+ g    6.315000e-04
+uu    -5.249900e-01
+uo    -4.999800e-01
+i0    2.127432e-04
+ g    4.626150e-04
+uu    -4.999800e-01
+uo    -4.749900e-01
+i0    1.401021e-04
+ g    3.173269e-04
+uu    -4.749900e-01
+uo    5.598900e+00
+i0    -8.146780e-06
+ g    5.217414e-06
+uu    5.598900e+00
+uo    5.624000e+00
+i0    -6.279370e-03
+ g    1.125299e-03
+uu    5.624000e+00
+uo    5.648900e+00
+i0    -1.340989e-02
+ g    2.393173e-03
+uu    5.648900e+00
+uo    5.672900e+00
+i0    -3.006564e-02
+ g    5.341667e-03
+uu    5.672900e+00
+uo    5.698000e+00
+i0    -4.667168e-02
+ g    8.268924e-03
+uu    5.698000e+00
+uo    5.748000e+00
+i0    -7.133306e-02
+ g    1.259700e-02
+uu    5.748000e+00
+uo    5.921900e+00
+i0    -1.098860e-01
+ g    1.930420e-02
+uu    5.921900e+00
+uo     2.000000e+01
+i0    -1.174849e-01
+ g    2.058738e-02
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:ACT_025_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename   : ACT_025_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Fri Jul  4 14:56:09 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology : ACT;
+# Changes     : None;
+# Notes       : generated for TI SN74ACT240 and comparable 3-state buffers
+#		of technology ACT, VCC = 5V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : SN74AC240;
+#	Manufacturer : TI;
+#	Buffername   : AC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+45
+-1.000000e+00   -1.921000e-01
+-9.400000e-01   -1.264000e-01
+-8.800000e-01   -7.630000e-02
+-8.400000e-01   -4.920000e-02
+-8.100000e-01   -3.320000e-02
+-7.800000e-01   -2.110000e-02
+-7.600000e-01   -1.540000e-02
+-7.400000e-01   -1.120000e-02
+-7.200000e-01   -8.300000e-03
+-7.000000e-01   -6.300000e-03
+-6.700000e-01   -4.500000e-03
+-6.500000e-01   -3.600000e-03
+-6.300000e-01   -3.100000e-03
+-6.200000e-01   -2.700000e-03
+-5.900000e-01   -2.000000e-03
+-5.600000e-01   -1.400000e-03
+-5.500000e-01   -1.300000e-03
+-5.300000e-01   -9.000000e-04
+-5.200000e-01   -8.000000e-04
+-5.100000e-01   -6.000000e-04
+-5.000000e-01   -6.000000e-04
+-4.900000e-01   -4.000000e-04
+-4.800000e-01   -4.000000e-04
+-4.700000e-01   -3.000000e-04
+-4.600000e-01   -3.000000e-04
+-4.500000e-01   -2.000000e-04
+-4.400000e-01   0.000000e+00
+5.600000e+00   0.000000e+00
+5.610000e+00   3.000000e-04
+5.620000e+00   4.000000e-04
+5.640000e+00   8.000000e-04
+5.650000e+00   1.200000e-03
+5.660000e+00   1.700000e-03
+5.670000e+00   2.400000e-03
+5.680000e+00   3.300000e-03
+5.690000e+00   4.700000e-03
+5.700000e+00   6.300000e-03
+5.710000e+00   8.600000e-03
+5.720000e+00   1.150000e-02
+5.740000e+00   1.920000e-02
+5.760000e+00   2.980000e-02
+5.790000e+00   4.960000e-02
+5.940000e+00   1.603000e-01
+5.950000e+00   1.749000e-01
+5.970000e+00   1.892000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:AC_025_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : AC_025_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Fri Jul  4 14:56:09 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : AC;
+# Changes     : None;
+# Notes       : generated for TI SN74AC240 and comparable 3-state buffers
+#		of technology AC, VCC = 5V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : SN74AC240;
+#	Manufacturer : TI;
+#	Buffername   : AC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+45
+-1.000000e+00   -1.921000e-01
+-9.400000e-01   -1.264000e-01
+-8.800000e-01   -7.630000e-02
+-8.400000e-01   -4.920000e-02
+-8.100000e-01   -3.320000e-02
+-7.800000e-01   -2.110000e-02
+-7.600000e-01   -1.540000e-02
+-7.400000e-01   -1.120000e-02
+-7.200000e-01   -8.300000e-03
+-7.000000e-01   -6.300000e-03
+-6.700000e-01   -4.500000e-03
+-6.500000e-01   -3.600000e-03
+-6.300000e-01   -3.100000e-03
+-6.200000e-01   -2.700000e-03
+-5.900000e-01   -2.000000e-03
+-5.600000e-01   -1.400000e-03
+-5.500000e-01   -1.300000e-03
+-5.300000e-01   -9.000000e-04
+-5.200000e-01   -8.000000e-04
+-5.100000e-01   -6.000000e-04
+-5.000000e-01   -6.000000e-04
+-4.900000e-01   -4.000000e-04
+-4.800000e-01   -4.000000e-04
+-4.700000e-01   -3.000000e-04
+-4.600000e-01   -3.000000e-04
+-4.500000e-01   -2.000000e-04
+-4.400000e-01   0.000000e+00
+5.600000e+00   0.000000e+00
+5.610000e+00   3.000000e-04
+5.620000e+00   4.000000e-04
+5.640000e+00   8.000000e-04
+5.650000e+00   1.200000e-03
+5.660000e+00   1.700000e-03
+5.670000e+00   2.400000e-03
+5.680000e+00   3.300000e-03
+5.690000e+00   4.700000e-03
+5.700000e+00   6.300000e-03
+5.710000e+00   8.600000e-03
+5.720000e+00   1.150000e-02
+5.740000e+00   1.920000e-02
+5.760000e+00   2.980000e-02
+5.790000e+00   4.960000e-02
+5.940000e+00   1.603000e-01
+5.950000e+00   1.749000e-01
+5.970000e+00   1.892000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:AHCT_025_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename   : AHCT_025_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 11:02:35 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology : AHCT;
+# Changes     : None;
+# Notes       : generated for TI SN74AHCT240 and comparable 3-state buffers
+#		of technology AHCT, VCC = 5V, GND/VCC clamping diodes;None;
+#
+# RefSource
+#	Component    : SN74AHC240;
+#	Manufacturer : TI;
+#	Buffername   : AHC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+45
+-1.200000e+00   -1.967000e-01
+-1.060000e+00   -1.144000e-01
+-9.700000e-01   -6.800000e-02
+-9.200000e-01   -4.580000e-02
+-8.800000e-01   -3.090000e-02
+-8.500000e-01   -2.150000e-02
+-8.300000e-01   -1.640000e-02
+-8.200000e-01   -1.400000e-02
+-8.000000e-01   -1.020000e-02
+-7.800000e-01   -7.100000e-03
+-7.700000e-01   -5.900000e-03
+-7.600000e-01   -4.900000e-03
+-7.400000e-01   -3.300000e-03
+-7.200000e-01   -2.300000e-03
+-7.100000e-01   -1.900000e-03
+-7.000000e-01   -1.600000e-03
+-6.700000e-01   -1.000000e-03
+-6.500000e-01   -8.000000e-04
+-6.400000e-01   -6.000000e-04
+-6.200000e-01   -6.000000e-04
+-6.100000e-01   -4.000000e-04
+-5.900000e-01   -4.000000e-04
+-5.800000e-01   -3.000000e-04
+-5.700000e-01   -3.000000e-04
+-5.600000e-01   -2.000000e-04
+-5.500000e-01   -2.000000e-04
+-5.400000e-01   1.000000e-04
+5.630000e+00   1.000000e-04
+5.640000e+00   2.000000e-04
+5.650000e+00   2.000000e-04
+5.660000e+00   3.000000e-04
+5.670000e+00   5.000000e-04
+5.680000e+00   6.000000e-04
+5.700000e+00   1.200000e-03
+5.720000e+00   2.200000e-03
+5.740000e+00   3.800000e-03
+5.750000e+00   4.700000e-03
+5.760000e+00   5.700000e-03
+5.780000e+00   8.200000e-03
+5.830000e+00   1.550000e-02
+5.940000e+00   3.220000e-02
+6.090000e+00   5.240000e-02
+6.340000e+00   8.120000e-02
+6.820000e+00   1.285000e-01
+7.000000e+00   1.448000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:AHCT_027_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : AHCT_027_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 09:48:17 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : AHCT;
+# Changes     : None;
+# Notes       : generated for TI SN74AHCT240 and comparable 3-state buffers
+#		of technology AHCT, VCC = 3.3V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : SN74AHC240;
+#	Manufacturer : TI;
+#	Buffername   : AHC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 3.300;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+46
+-1.200000e+00   -1.958000e-01
+-1.080000e+00   -1.246000e-01
+-9.800000e-01   -7.260000e-02
+-9.200000e-01   -4.590000e-02
+-8.800000e-01   -3.100000e-02
+-8.500000e-01   -2.170000e-02
+-8.400000e-01   -1.890000e-02
+-8.200000e-01   -1.420000e-02
+-8.000000e-01   -1.030000e-02
+-7.900000e-01   -8.700000e-03
+-7.700000e-01   -6.000000e-03
+-7.500000e-01   -4.100000e-03
+-7.400000e-01   -3.400000e-03
+-7.300000e-01   -2.800000e-03
+-7.200000e-01   -2.300000e-03
+-6.900000e-01   -1.400000e-03
+-6.800000e-01   -1.200000e-03
+-6.700000e-01   -1.100000e-03
+-6.600000e-01   -9.000000e-04
+-6.500000e-01   -8.000000e-04
+-6.400000e-01   -6.000000e-04
+-6.200000e-01   -6.000000e-04
+-6.100000e-01   -4.000000e-04
+-5.900000e-01   -4.000000e-04
+-5.800000e-01   -3.000000e-04
+-5.700000e-01   -3.000000e-04
+-5.600000e-01   -2.000000e-04
+-5.400000e-01   -2.000000e-04
+-5.300000e-01   1.000000e-04
+3.930000e+00   1.000000e-04
+3.960000e+00   4.000000e-04
+3.970000e+00   7.000000e-04
+3.980000e+00   7.000000e-04
+3.990000e+00   1.000000e-03
+4.010000e+00   1.800000e-03
+4.020000e+00   2.400000e-03
+4.030000e+00   3.100000e-03
+4.040000e+00   3.900000e-03
+4.060000e+00   5.900000e-03
+4.080000e+00   8.300000e-03
+4.140000e+00   1.690000e-02
+4.270000e+00   3.600000e-02
+4.470000e+00   6.160000e-02
+4.860000e+00   1.043000e-01
+5.560000e+00   1.703000e-01
+5.900000e+00   1.992000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:AHC_025_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : AHC_025_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 11:02:35 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : AHC;
+# Changes     : None;
+# Notes       : generated for TI SN74AHC240 and comparable 3-state buffers
+#		of technology AHC, VCC = 5V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : SN74AHC240;
+#	Manufacturer : TI;
+#	Buffername   : AHC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+45
+-1.200000e+00   -1.967000e-01
+-1.060000e+00   -1.144000e-01
+-9.700000e-01   -6.800000e-02
+-9.200000e-01   -4.580000e-02
+-8.800000e-01   -3.090000e-02
+-8.500000e-01   -2.150000e-02
+-8.300000e-01   -1.640000e-02
+-8.200000e-01   -1.400000e-02
+-8.000000e-01   -1.020000e-02
+-7.800000e-01   -7.100000e-03
+-7.700000e-01   -5.900000e-03
+-7.600000e-01   -4.900000e-03
+-7.400000e-01   -3.300000e-03
+-7.200000e-01   -2.300000e-03
+-7.100000e-01   -1.900000e-03
+-7.000000e-01   -1.600000e-03
+-6.700000e-01   -1.000000e-03
+-6.500000e-01   -8.000000e-04
+-6.400000e-01   -6.000000e-04
+-6.200000e-01   -6.000000e-04
+-6.100000e-01   -4.000000e-04
+-5.900000e-01   -4.000000e-04
+-5.800000e-01   -3.000000e-04
+-5.700000e-01   -3.000000e-04
+-5.600000e-01   -2.000000e-04
+-5.500000e-01   -2.000000e-04
+-5.400000e-01   1.000000e-04
+5.630000e+00   1.000000e-04
+5.640000e+00   2.000000e-04
+5.650000e+00   2.000000e-04
+5.660000e+00   3.000000e-04
+5.670000e+00   5.000000e-04
+5.680000e+00   6.000000e-04
+5.700000e+00   1.200000e-03
+5.720000e+00   2.200000e-03
+5.740000e+00   3.800000e-03
+5.750000e+00   4.700000e-03
+5.760000e+00   5.700000e-03
+5.780000e+00   8.200000e-03
+5.830000e+00   1.550000e-02
+5.940000e+00   3.220000e-02
+6.090000e+00   5.240000e-02
+6.340000e+00   8.120000e-02
+6.820000e+00   1.285000e-01
+7.000000e+00   1.448000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:AHC_027_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : AHC_027_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 09:48:17 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : AHC;
+# Changes     : None;
+# Notes       : generated for TI SN74AHC240 and comparable 3-state buffers
+#		of technology AHC, VCC = 3.3V, GND/VCC clamping diodes;None;
+#
+# RefSource
+#	Component    : SN74AHC240;
+#	Manufacturer : TI;
+#	Buffername   : AHC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 3.300;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+46
+-1.200000e+00   -1.958000e-01
+-1.080000e+00   -1.246000e-01
+-9.800000e-01   -7.260000e-02
+-9.200000e-01   -4.590000e-02
+-8.800000e-01   -3.100000e-02
+-8.500000e-01   -2.170000e-02
+-8.400000e-01   -1.890000e-02
+-8.200000e-01   -1.420000e-02
+-8.000000e-01   -1.030000e-02
+-7.900000e-01   -8.700000e-03
+-7.700000e-01   -6.000000e-03
+-7.500000e-01   -4.100000e-03
+-7.400000e-01   -3.400000e-03
+-7.300000e-01   -2.800000e-03
+-7.200000e-01   -2.300000e-03
+-6.900000e-01   -1.400000e-03
+-6.800000e-01   -1.200000e-03
+-6.700000e-01   -1.100000e-03
+-6.600000e-01   -9.000000e-04
+-6.500000e-01   -8.000000e-04
+-6.400000e-01   -6.000000e-04
+-6.200000e-01   -6.000000e-04
+-6.100000e-01   -4.000000e-04
+-5.900000e-01   -4.000000e-04
+-5.800000e-01   -3.000000e-04
+-5.700000e-01   -3.000000e-04
+-5.600000e-01   -2.000000e-04
+-5.400000e-01   -2.000000e-04
+-5.300000e-01   1.000000e-04
+3.930000e+00   1.000000e-04
+3.960000e+00   4.000000e-04
+3.970000e+00   7.000000e-04
+3.980000e+00   7.000000e-04
+3.990000e+00   1.000000e-03
+4.010000e+00   1.800000e-03
+4.020000e+00   2.400000e-03
+4.030000e+00   3.100000e-03
+4.040000e+00   3.900000e-03
+4.060000e+00   5.900000e-03
+4.080000e+00   8.300000e-03
+4.140000e+00   1.690000e-02
+4.270000e+00   3.600000e-02
+4.470000e+00   6.160000e-02
+4.860000e+00   1.043000e-01
+5.560000e+00   1.703000e-01
+5.900000e+00   1.992000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:ALS_025_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : ALS_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : ALS;
+#  Changes    : None;
+#  Notes      : generated for TI SN74ALS240 and comparable 3-state buffers
+#		of technology ALS, VCC = 5V, GND clamping diodes;None;
+#
+#  RefSource
+#     Component     : SN74ALS240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  9
+uu    -2.000000e+01
+uo    -1.030000e+00
+i0    2.442550e-01
+ g    2.785000e-01
+uu    -1.030000e+00
+uo    -9.100000e-01
+i0    1.367917e-01
+ g    1.741667e-01
+uu    -9.100000e-01
+uo    -8.100000e-01
+i0    7.294000e-02
+ g    1.040000e-01
+uu    -8.100000e-01
+uo    -7.200000e-01
+i0    4.000000e-02
+ g    6.333333e-02
+uu    -7.200000e-01
+uo    -6.500000e-01
+i0    2.525714e-02
+ g    4.285714e-02
+uu    -6.500000e-01
+uo    -6.100000e-01
+i0    1.852500e-02
+ g    3.250000e-02
+uu    -6.100000e-01
+uo    -5.600000e-01
+i0    1.090000e-02
+ g    2.000000e-02
+uu    -5.600000e-01
+uo    -5.300000e-01
+i0    5.300000e-03
+ g    1.000000e-02
+uu    -5.300000e-01
+uo     2.000000e+01
+i0    0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:ALS_026_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : ALS_026_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 11:36:29 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : ALS;
+# Changes     : None;
+# Notes       : generated for TI SN74ALS2240 and comparable 3-state buffers
+#		with integrated output resistor of technology ALS, VCC = 5V,
+#		GND clamping diodes;None;
+#
+# RefSource
+#	Component    : SN74ALS2240;
+#	Manufacturer : TI;
+#	Buffername   : ALS2240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+13
+-1.990000e+00   -1.832000e-01
+-1.810000e+00   -1.446000e-01
+-1.670000e+00   -1.050000e-01
+-1.540000e+00   -6.380000e-02
+-1.490000e+00   -5.150000e-02
+-1.440000e+00   -4.280000e-02
+-1.380000e+00   -3.590000e-02
+-1.300000e+00   -3.030000e-02
+-1.140000e+00   -2.220000e-02
+-1.020000e+00   -1.710000e-02
+-7.960000e-01   -7.700000e-03
+-4.400000e-01   0.000000e+00
+7.000000e+00   0.000000e+00
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:ALVC_025_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : ALVC_025_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 12:00:00 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : ALVC;
+# Changes     : None;
+# Notes       : generated for TI SN74ALVC16240 and comparable 3-state buffers
+#		of technology ALVC, VCC = 3.3V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : SN74ALVC16240;
+#	Manufacturer : TI;
+#	Buffername   : ALVC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : HSPICE;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 3.300;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+48
+-9.800000e-01   -1.788000e-01
+-9.400000e-01   -1.309000e-01
+-9.000000e-01   -8.850000e-02
+-8.700000e-01   -6.160000e-02
+-8.500000e-01   -4.610000e-02
+-8.400000e-01   -3.930000e-02
+-8.200000e-01   -2.790000e-02
+-8.100000e-01   -2.330000e-02
+-8.000000e-01   -1.920000e-02
+-7.900000e-01   -1.580000e-02
+-7.800000e-01   -1.290000e-02
+-7.700000e-01   -1.060000e-02
+-7.600000e-01   -8.600000e-03
+-7.500000e-01   -7.100000e-03
+-7.400000e-01   -5.800000e-03
+-7.300000e-01   -4.800000e-03
+-7.200000e-01   -4.000000e-03
+-7.100000e-01   -3.300000e-03
+-6.900000e-01   -2.300000e-03
+-6.700000e-01   -1.700000e-03
+-6.500000e-01   -1.300000e-03
+-6.400000e-01   -1.000000e-03
+-6.300000e-01   -9.000000e-04
+-6.200000e-01   -6.000000e-04
+-6.100000e-01   -6.000000e-04
+-6.000000e-01   -4.000000e-04
+-5.800000e-01   -4.000000e-04
+-5.600000e-01   -2.000000e-04
+-5.400000e-01   -2.000000e-04
+-5.300000e-01   0.000000e+00
+3.890000e+00   0.000000e+00
+3.910000e+00   2.000000e-04
+3.920000e+00   2.000000e-04
+3.930000e+00   3.000000e-04
+3.940000e+00   3.000000e-04
+3.950000e+00   5.000000e-04
+3.960000e+00   5.000000e-04
+3.970000e+00   6.000000e-04
+3.990000e+00   1.000000e-03
+4.020000e+00   1.900000e-03
+4.040000e+00   2.700000e-03
+4.060000e+00   3.700000e-03
+4.070000e+00   4.300000e-03
+4.090000e+00   5.600000e-03
+4.140000e+00   9.500000e-03
+4.210000e+00   1.560000e-02
+5.760000e+00   1.619000e-01
+5.990000e+00   1.876000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:ALVC_125_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : ALVC_125_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 09:26:18 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : ALVC;
+# Changes     : None;
+# Notes       : generated for PHI 74ALVC16240 and comparable 3-state buffers
+#		of technology ALVC, VCC = 3.3V, GND/VCC clamping diodes;None;
+#
+# RefSource
+#	Component    : 74ALVC16240;
+#	Manufacturer : PHI;
+#	Buffername   : ALVC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : HSPICE;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 3.300;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+43
+-1.323000e+00   -3.000000e-01
+-9.415000e-01   -1.108000e-01
+-8.211000e-01   -5.680000e-02
+-7.647000e-01   -3.480000e-02
+-7.292000e-01   -2.320000e-02
+-7.049000e-01   -1.680000e-02
+-6.857000e-01   -1.280000e-02
+-6.683000e-01   -1.000000e-02
+-6.515000e-01   -8.000000e-03
+-6.331000e-01   -6.400000e-03
+-6.138000e-01   -5.200000e-03
+-5.970000e-01   -4.400000e-03
+-5.760000e-01   -3.600000e-03
+-5.503000e-01   -2.800000e-03
+-5.194000e-01   -2.000000e-03
+-5.016000e-01   -1.600000e-03
+-4.816000e-01   -1.200000e-03
+-4.583000e-01   -8.000000e-04
+-4.288000e-01   0.000000e+00
+3.788000e+00   0.000000e+00
+3.821000e+00   8.000000e-04
+3.847000e+00   1.200000e-03
+3.867000e+00   1.600000e-03
+3.883000e+00   2.000000e-03
+3.896000e+00   2.400000e-03
+3.917000e+00   3.200000e-03
+3.937000e+00   4.400000e-03
+3.943000e+00   4.800000e-03
+3.960000e+00   6.400000e-03
+3.967000e+00   7.200000e-03
+3.982000e+00   9.200000e-03
+3.994000e+00   1.120000e-02
+4.000000e+00   1.240000e-02
+4.007000e+00   1.360000e-02
+4.011000e+00   1.440000e-02
+4.014000e+00   1.520000e-02
+4.022000e+00   1.680000e-02
+4.037000e+00   2.040000e-02
+4.074000e+00   3.040000e-02
+4.121000e+00   4.480000e-02
+4.223000e+00   7.920000e-02
+4.518000e+00   1.880000e-01
+4.811000e+00   3.000000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:AS_025_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : AS_025_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Tue Jul 15 13:11:08 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : AS;
+# Changes     : None;
+# Notes       : generated for TI SN74AS240 and comparable 3-state buffers
+#		of technology AS, VCC = 5V, GND clamping diodes;
+#
+# RefSource
+#	Component    : SN74AS240;
+#	Manufacturer : TI;
+#	Buffername   : AS240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+21
+-1.430000e+00   -9.980000e-02
+-1.150000e+00   -5.550000e-02
+-9.800000e-01   -3.190000e-02
+-8.800000e-01   -2.000000e-02
+-8.200000e-01   -1.400000e-02
+-7.800000e-01   -1.050000e-02
+-7.500000e-01   -8.300000e-03
+-7.100000e-01   -5.900000e-03
+-6.800000e-01   -4.400000e-03
+-6.700000e-01   -4.000000e-03
+-6.600000e-01   -3.500000e-03
+-6.500000e-01   -3.200000e-03
+-6.300000e-01   -2.400000e-03
+-6.000000e-01   -1.500000e-03
+-5.500000e-01   -5.000000e-04
+-5.300000e-01   -3.000000e-04
+-5.200000e-01   -3.000000e-04
+-5.100000e-01   -2.000000e-04
+-5.000000e-01   -2.000000e-04
+-4.900000e-01   0.000000e+00
+7.000000e+00   0.000000e+00
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:BCT_025_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : BCT_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : BCT;
+#  Changes    : None;
+#  Notes      : generated for TI SN74BCT240 and comparable 3-state buffers
+#		of technology BCT, VCC = 5V, GND clamping diodes;None;
+#
+#  RefSource
+#     Component     : SN74BCT240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  12
+uu    -2.000000e+01
+uo    -9.000000e-01
+i0    1.342091e-01
+ g    1.887879e-01
+uu    -9.000000e-01
+uo    -7.300000e-01
+i0    8.288824e-02
+ g    1.317647e-01
+uu    -7.300000e-01
+uo    -6.400000e-01
+i0    5.077778e-02
+ g    8.777778e-02
+uu    -6.400000e-01
+uo    -5.900000e-01
+i0    3.300000e-02
+ g    6.000000e-02
+uu    -5.900000e-01
+uo    -5.600000e-01
+i0    1.923333e-02
+ g    3.666667e-02
+uu    -5.600000e-01
+uo    -5.500000e-01
+i0    1.550000e-02
+ g    3.000000e-02
+uu    -5.500000e-01
+uo    -5.300000e-01
+i0    1.000000e-02
+ g    2.000000e-02
+uu    -5.300000e-01
+uo    -4.900000e-01
+i0    4.700000e-03
+ g    1.000000e-02
+uu    -4.900000e-01
+uo    -4.600000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -4.600000e-01
+uo    -4.500000e-01
+i0    4.400000e-03
+ g    1.000000e-02
+uu    -4.500000e-01
+uo    6.990000e+00
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    6.990000e+00
+uo     2.000000e+01
+i0    -7.000000e-02
+ g    1.000000e-02
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:BCT_026_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : BCT_026_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 12:26:44 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : BCT;
+# Changes     : None;
+# Notes       : generated for TI SN74BCT2240 and comparable 3-state buffers
+#		with integrated output resistor of technology BCT, VCC = 5V,
+#		GND clamping diodes;
+#
+# RefSource
+#	Component    : SN74BCT2240;
+#	Manufacturer : TI;
+#	Buffername   : BCT2240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+53
+-1.110000e+00   -1.969000e-01
+-9.300000e-01   -8.400000e-02
+-8.600000e-01   -4.930000e-02
+-8.200000e-01   -3.430000e-02
+-7.800000e-01   -2.340000e-02
+-7.400000e-01   -1.630000e-02
+-7.000000e-01   -1.150000e-02
+-6.600000e-01   -7.800000e-03
+-6.300000e-01   -5.500000e-03
+-6.100000e-01   -4.200000e-03
+-5.900000e-01   -3.200000e-03
+-5.600000e-01   -2.100000e-03
+-5.500000e-01   -1.800000e-03
+-5.400000e-01   -1.700000e-03
+-5.300000e-01   -1.500000e-03
+-5.000000e-01   -1.200000e-03
+-4.000000e-01   0.000000e+00
+6.150000e+00   0.000000e+00
+6.200000e+00   4.000000e-04
+6.210000e+00   8.000000e-04
+6.220000e+00   8.000000e-04
+6.230000e+00   1.100000e-03
+6.260000e+00   1.100000e-03
+6.270000e+00   1.200000e-03
+6.290000e+00   1.200000e-03
+6.300000e+00   1.300000e-03
+6.330000e+00   1.300000e-03
+6.340000e+00   1.400000e-03
+6.350000e+00   1.400000e-03
+6.360000e+00   1.500000e-03
+6.370000e+00   1.500000e-03
+6.380000e+00   1.600000e-03
+6.390000e+00   1.600000e-03
+6.400000e+00   1.700000e-03
+6.410000e+00   1.700000e-03
+6.420000e+00   1.800000e-03
+6.440000e+00   1.800000e-03
+6.460000e+00   2.000000e-03
+6.470000e+00   2.000000e-03
+6.500000e+00   2.300000e-03
+6.510000e+00   2.300000e-03
+6.520000e+00   2.400000e-03
+6.530000e+00   2.400000e-03
+6.550000e+00   2.600000e-03
+6.570000e+00   2.700000e-03
+6.590000e+00   2.900000e-03
+6.610000e+00   2.900000e-03
+6.630000e+00   3.100000e-03
+6.690000e+00   3.400000e-03
+6.730000e+00   3.700000e-03
+6.820000e+00   4.200000e-03
+6.930000e+00   4.800000e-03
+7.000000e+00   5.200000e-03
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:CDC209_025_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : CDC209_025_S0_tri.mac;
+#  FileRev    : 1.0;
+#  Date       : 06/09/97;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : AC;
+#  Changes    : None;
+#  Notes      : generated for TI CDC209 and comparable 3-state buffers
+#		of technology AC, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component   : CDC209;
+#     Manufacturer: TI;
+#     Buffername  : TRIBUF;
+#     Buffertype  : TRI->IN;
+#     Pins        : Outputs;
+#     Method      : Measurement;
+#     Copyright   : None;
+#     Disclaimer  : None;
+#     Notes       : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance  : 1e6;
+#     Capacitance : 8e-12;
+#     Inductance  : None;
+#     GndClamp    : None;
+#     PowClamp    : None;
+#     Notes       : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  52
+uu    -2.000000e+01
+uo    -1.150000e+00
+i0    4.046500e-01
+ g    4.350000e-01
+uu    -1.150000e+00
+uo    -1.050000e+00
+i0    3.379500e-01
+ g    3.770000e-01
+uu    -1.050000e+00
+uo    -9.900000e-01
+i0    2.833500e-01
+ g    3.250000e-01
+uu    -9.900000e-01
+uo    -9.500000e-01
+i0    2.363250e-01
+ g    2.775000e-01
+uu    -9.500000e-01
+uo    -9.100000e-01
+i0    1.912000e-01
+ g    2.300000e-01
+uu    -9.100000e-01
+uo    -8.900000e-01
+i0    1.593500e-01
+ g    1.950000e-01
+uu    -8.900000e-01
+uo    -8.700000e-01
+i0    1.326500e-01
+ g    1.650000e-01
+uu    -8.700000e-01
+uo    -8.500000e-01
+i0    1.065500e-01
+ g    1.350000e-01
+uu    -8.500000e-01
+uo    -8.400000e-01
+i0    9.380000e-02
+ g    1.200000e-01
+uu    -8.400000e-01
+uo    -8.300000e-01
+i0    7.700000e-02
+ g    1.000000e-01
+uu    -8.300000e-01
+uo    -8.100000e-01
+i0    6.040000e-02
+ g    8.000000e-02
+uu    -8.100000e-01
+uo    -8.000000e-01
+i0    5.230000e-02
+ g    7.000000e-02
+uu    -8.000000e-01
+uo    -7.900000e-01
+i0    4.430000e-02
+ g    6.000000e-02
+uu    -7.900000e-01
+uo    -7.800000e-01
+i0    3.640000e-02
+ g    5.000000e-02
+uu    -7.800000e-01
+uo    -7.700000e-01
+i0    2.860000e-02
+ g    4.000000e-02
+uu    -7.700000e-01
+uo    -7.500000e-01
+i0    2.090000e-02
+ g    3.000000e-02
+uu    -7.500000e-01
+uo    -7.300000e-01
+i0    1.340000e-02
+ g    2.000000e-02
+uu    -7.300000e-01
+uo    -7.200000e-01
+i0    2.070000e-02
+ g    3.000000e-02
+uu    -7.200000e-01
+uo    -7.100000e-01
+i0    -9.000000e-04
+ g    0.000000e+00
+uu    -7.100000e-01
+uo    -7.000000e-01
+i0    6.200000e-03
+ g    1.000000e-02
+uu    -7.000000e-01
+uo    -6.900000e-01
+i0    1.320000e-02
+ g    2.000000e-02
+uu    -6.900000e-01
+uo    -6.500000e-01
+i0    -6.000000e-04
+ g    0.000000e+00
+uu    -6.500000e-01
+uo    -6.400000e-01
+i0    1.240000e-02
+ g    2.000000e-02
+uu    -6.400000e-01
+uo    -6.000000e-01
+i0    -4.000000e-04
+ g    0.000000e+00
+uu    -6.000000e-01
+uo    -5.900000e-01
+i0    5.600000e-03
+ g    1.000000e-02
+uu    -5.900000e-01
+uo    -5.400000e-01
+i0    -3.000000e-04
+ g    0.000000e+00
+uu    -5.400000e-01
+uo    -5.300000e-01
+i0    5.100000e-03
+ g    1.000000e-02
+uu    -5.300000e-01
+uo    -5.000000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -5.000000e-01
+uo    -4.800000e-01
+i0    4.800000e-03
+ g    1.000000e-02
+uu    -4.800000e-01
+uo    5.670000e+00
+i0    0.000000e+00
+ g    0.000000e+00
+uu    5.670000e+00
+uo    5.690000e+00
+i0    -5.670000e-02
+ g    1.000000e-02
+uu    5.690000e+00
+uo    5.710000e+00
+i0    2.000000e-04
+ g    0.000000e+00
+uu    5.710000e+00
+uo    5.730000e+00
+i0    -5.690000e-02
+ g    1.000000e-02
+uu    5.730000e+00
+uo    5.740000e+00
+i0    -1.715000e-01
+ g    3.000000e-02
+uu    5.740000e+00
+uo    5.750000e+00
+i0    7.000000e-04
+ g    0.000000e+00
+uu    5.750000e+00
+uo    5.770000e+00
+i0    -1.718000e-01
+ g    3.000000e-02
+uu    5.770000e+00
+uo    5.790000e+00
+i0    -2.295000e-01
+ g    4.000000e-02
+uu    5.790000e+00
+uo    5.800000e+00
+i0    -2.874000e-01
+ g    5.000000e-02
+uu    5.800000e+00
+uo    5.810000e+00
+i0    -3.454000e-01
+ g    6.000000e-02
+uu    5.810000e+00
+uo    5.820000e+00
+i0    -4.616000e-01
+ g    8.000000e-02
+uu    5.820000e+00
+uo    5.830000e+00
+i0    -4.034000e-01
+ g    7.000000e-02
+uu    5.830000e+00
+uo    5.850000e+00
+i0    -5.491500e-01
+ g    9.500000e-02
+uu    5.850000e+00
+uo    5.860000e+00
+i0    -5.784000e-01
+ g    1.000000e-01
+uu    5.860000e+00
+uo    5.880000e+00
+i0    -6.663000e-01
+ g    1.150000e-01
+uu    5.880000e+00
+uo    5.930000e+00
+i0    -8.133000e-01
+ g    1.400000e-01
+uu    5.930000e+00
+uo    5.980000e+00
+i0    -1.003060e+00
+ g    1.720000e-01
+uu    5.980000e+00
+uo    6.040000e+00
+i0    -1.180467e+00
+ g    2.016667e-01
+uu    6.040000e+00
+uo    6.110000e+00
+i0    -1.420629e+00
+ g    2.414286e-01
+uu    6.110000e+00
+uo    6.200000e+00
+i0    -1.717400e+00
+ g    2.900000e-01
+uu    6.200000e+00
+uo    6.260000e+00
+i0    -1.944733e+00
+ g    3.266667e-01
+uu    6.260000e+00
+uo    6.270000e+00
+i0    -4.219200e+00
+ g    6.900000e-01
+uu    6.270000e+00
+uo     2.000000e+01
+i0    -2.219070e+00
+ g    3.710000e-01
+CAPACITY
+c0e   8.000000e-12
+k1e   0.000000e+00
+END
+@IDBM:CDC337_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : CDC337_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : ABT;
+#  Changes    : None;
+#  Notes      : generated for TI CDC337 and comparable 3-state buffers
+#		of technology ABT, VCC = 5V, GND/VCC clamping diodes;
+#
+#  RefSource
+#     Component     : CDC337;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND and VCC Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  27
+uu    -2.000000e+01
+uo    -1.070000e+00
+i0    3.314563e-01
+ g    4.068750e-01
+uu    -1.070000e+00
+uo    -8.200000e-01
+i0    2.098240e-01
+ g    2.932000e-01
+uu    -8.200000e-01
+uo    -7.400000e-01
+i0    1.436500e-01
+ g    2.125000e-01
+uu    -7.400000e-01
+uo    -6.900000e-01
+i0    9.000000e-02
+ g    1.400000e-01
+uu    -6.900000e-01
+uo    -6.600000e-01
+i0    5.320000e-02
+ g    8.666667e-02
+uu    -6.600000e-01
+uo    -6.300000e-01
+i0    3.560000e-02
+ g    6.000000e-02
+uu    -6.300000e-01
+uo    -6.000000e-01
+i0    2.090000e-02
+ g    3.666667e-02
+uu    -6.000000e-01
+uo    -5.800000e-01
+i0    1.090000e-02
+ g    2.000000e-02
+uu    -5.800000e-01
+uo    -5.700000e-01
+i0    1.670000e-02
+ g    3.000000e-02
+uu    -5.700000e-01
+uo    -5.600000e-01
+i0    -4.000000e-04
+ g    0.000000e+00
+uu    -5.600000e-01
+uo    -5.400000e-01
+i0    5.200000e-03
+ g    1.000000e-02
+uu    -5.400000e-01
+uo    -5.300000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -5.300000e-01
+uo    -5.200000e-01
+i0    1.040000e-02
+ g    2.000000e-02
+uu    -5.200000e-01
+uo    5.590000e+00
+i0    0.000000e+00
+ g    0.000000e+00
+uu    5.590000e+00
+uo    5.600000e+00
+i0    -1.118000e-01
+ g    2.000000e-02
+uu    5.600000e+00
+uo    5.610000e+00
+i0    2.000000e-04
+ g    0.000000e+00
+uu    5.610000e+00
+uo    5.620000e+00
+i0    -5.590000e-02
+ g    1.000000e-02
+uu    5.620000e+00
+uo    5.630000e+00
+i0    -1.121000e-01
+ g    2.000000e-02
+uu    5.630000e+00
+uo    5.640000e+00
+i0    5.000000e-04
+ g    0.000000e+00
+uu    5.640000e+00
+uo    5.650000e+00
+i0    -1.123000e-01
+ g    2.000000e-02
+uu    5.650000e+00
+uo    5.670000e+00
+i0    -1.688000e-01
+ g    3.000000e-02
+uu    5.670000e+00
+uo    5.690000e+00
+i0    -2.822000e-01
+ g    5.000000e-02
+uu    5.690000e+00
+uo    5.720000e+00
+i0    -5.287667e-01
+ g    9.333333e-02
+uu    5.720000e+00
+uo    5.750000e+00
+i0    -9.101000e-01
+ g    1.600000e-01
+uu    5.750000e+00
+uo    5.800000e+00
+i0    -1.485100e+00
+ g    2.600000e-01
+uu    5.800000e+00
+uo    5.920000e+00
+i0    -2.263267e+00
+ g    3.941667e-01
+uu    5.920000e+00
+uo     2.000000e+01
+i0    -2.542569e+00
+ g    4.413462e-01
+CAPACITY
+c0e   8.000000e-12
+k1e   1.000000e-15
+END
+@IDBM:CDC340_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : CDC340_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : ABT;
+#  Changes    : None;
+#  Notes      : generated for TI CDC340 and comparable 3-state buffers
+#		of technology ABT, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : CDC340;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  14
+uu    -2.000000e+01
+uo    -8.500000e-01
+i0    5.758444e-01
+ g    7.411111e-01
+uu    -8.500000e-01
+uo    -7.900000e-01
+i0    3.241500e-01
+ g    4.450000e-01
+uu    -7.900000e-01
+uo    -7.400000e-01
+i0    1.653600e-01
+ g    2.440000e-01
+uu    -7.400000e-01
+uo    -6.900000e-01
+i0    8.396000e-02
+ g    1.340000e-01
+uu    -6.900000e-01
+uo    -6.400000e-01
+i0    4.532000e-02
+ g    7.800000e-02
+uu    -6.400000e-01
+uo    -5.900000e-01
+i0    2.484000e-02
+ g    4.600000e-02
+uu    -5.900000e-01
+uo    -5.600000e-01
+i0    1.540000e-02
+ g    3.000000e-02
+uu    -5.600000e-01
+uo    -5.200000e-01
+i0    9.800000e-03
+ g    2.000000e-02
+uu    -5.200000e-01
+uo    -4.800000e-01
+i0    4.600000e-03
+ g    1.000000e-02
+uu    -4.800000e-01
+uo    -4.600000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -4.600000e-01
+uo    -4.500000e-01
+i0    4.400000e-03
+ g    1.000000e-02
+uu    -4.500000e-01
+uo    -4.200000e-01
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    -4.200000e-01
+uo    -4.100000e-01
+i0    4.100000e-03
+ g    1.000000e-02
+uu    -4.100000e-01
+uo     2.000000e+01
+i0    0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+
+@IDBM:FB_A_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : FB_A_025_S0_tri.mac;
+#  FileRev    : 1.0;
+#  Date       : 06/09/97;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 4;
+#  Technology : BTL;
+#  Changes    : None;
+#  Notes      : generated for TI SN74FB2033 and comparable 3-state buffers
+#		of technology BTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : SN74FB2033A;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+27
+-1.060000e+00   -1.935000e-01
+-1.000000e+00   -1.426000e-01
+-9.900000e-01   -1.265000e-01
+-9.300000e-01   -8.320000e-02
+-8.900000e-01   -5.890000e-02
+-8.600000e-01   -4.350000e-02
+-8.300000e-01   -3.100000e-02
+-8.100000e-01   -2.420000e-02
+-7.900000e-01   -1.860000e-02
+-7.700000e-01   -1.410000e-02
+-7.500000e-01   -1.050000e-02
+-7.400000e-01   -9.100000e-03
+-7.200000e-01   -6.800000e-03
+-7.000000e-01   -4.900000e-03
+-6.800000e-01   -3.500000e-03
+-6.700000e-01   -3.000000e-03
+-6.600000e-01   -2.400000e-03
+-6.500000e-01   -2.000000e-03
+-6.200000e-01   -1.100000e-03
+-6.100000e-01   -7.000000e-04
+-6.000000e-01   -7.000000e-04
+-5.900000e-01   -5.000000e-04
+-5.700000e-01   -3.000000e-04
+-5.600000e-01   -1.000000e-04
+-5.200000e-01   -1.000000e-04
+-5.100000e-01   0.000000e+00
+6.000000e+00   0.000000e+00
+CAPACITY
+c0   8.000000e-12
+k1   0.000000e+00
+END
+@IDBM:F_025_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : F_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : F;
+#  Changes    : None;
+#  Notes      : generated for TI SN74F240 and comparable 3-state buffers
+#		of technology F, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : SN74F240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  11
+uu    -2.000000e+01
+uo    -8.800000e-01
+i0    2.514235e-01
+ g    3.341176e-01
+uu    -8.800000e-01
+uo    -7.700000e-01
+i0    1.422000e-01
+ g    2.100000e-01
+uu    -7.700000e-01
+uo    -6.900000e-01
+i0    8.156250e-02
+ g    1.312500e-01
+uu    -6.900000e-01
+uo    -6.300000e-01
+i0    4.735000e-02
+ g    8.166667e-02
+uu    -6.300000e-01
+uo    -6.000000e-01
+i0    3.160000e-02
+ g    5.666667e-02
+uu    -6.000000e-01
+uo    -5.700000e-01
+i0    2.160000e-02
+ g    4.000000e-02
+uu    -5.700000e-01
+uo    -5.400000e-01
+i0    1.210000e-02
+ g    2.333333e-02
+uu    -5.400000e-01
+uo    -5.000000e-01
+i0    4.900000e-03
+ g    1.000000e-02
+uu    -5.000000e-01
+uo    -4.800000e-01
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    -4.800000e-01
+uo    -4.700000e-01
+i0    4.700000e-03
+ g    1.000000e-02
+uu    -4.700000e-01
+uo     2.000000e+01
+i0    0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:GAL16V8B_7_525_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : GAL16V8B_7_525_S0_tri.mac;
+#  FileRev    : 1.0;
+#  Date       : 06/09/97;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : CMOS;
+#  Changes    : None;
+#  Notes      : generated for LAT GAL16V8B_7LJ and comparable 3-state buffers
+#		of technology CMOS, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component   : GAL16V8B_7LJ;
+#     Manufacturer: LAT;
+#     Buffername  : TRIBUF;
+#     Buffertype  : TRI->IN;
+#     Pins        : Outputs;
+#     Method      : Measurement;
+#     Copyright   : None;
+#     Disclaimer  : None;
+#     Notes       : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance  : 1e6;
+#     Capacitance : 8e-12;
+#     Inductance  : None;
+#     GndClamp    : None;
+#     PowClamp    : None;
+#     Notes       : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  25
+uu    -2.000000e+01
+uo    -1.290000e+00
+i0    7.005500e-02
+ g    8.950000e-02
+uu    -1.290000e+00
+uo    -1.140000e+00
+i0    1.403600e-01
+ g    1.440000e-01
+uu    -1.140000e+00
+uo    -1.120000e+00
+i0    2.954000e-01
+ g    2.800000e-01
+uu    -1.120000e+00
+uo    -1.100000e+00
+i0    1.442000e-01
+ g    1.450000e-01
+uu    -1.100000e+00
+uo    -9.900000e-01
+i0    4.070000e-02
+ g    5.090909e-02
+uu    -9.900000e-01
+uo    -8.700000e-01
+i0    2.330000e-02
+ g    3.333333e-02
+uu    -8.700000e-01
+uo    -7.700000e-01
+i0    1.431000e-02
+ g    2.300000e-02
+uu    -7.700000e-01
+uo    -7.000000e-01
+i0    9.800000e-03
+ g    1.714286e-02
+uu    -7.000000e-01
+uo    -6.800000e-01
+i0    4.800000e-03
+ g    1.000000e-02
+uu    -6.800000e-01
+uo    -6.600000e-01
+i0    8.200000e-03
+ g    1.500000e-02
+uu    -6.600000e-01
+uo    -5.600000e-01
+i0    4.900000e-03
+ g    1.000000e-02
+uu    -5.600000e-01
+uo    -5.500000e-01
+i0    -7.000000e-04
+ g    0.000000e+00
+uu    -5.500000e-01
+uo    -5.300000e-01
+i0    4.800000e-03
+ g    1.000000e-02
+uu    -5.300000e-01
+uo    -5.200000e-01
+i0    -5.000000e-04
+ g    0.000000e+00
+uu    -5.200000e-01
+uo    -5.000000e-01
+i0    4.700000e-03
+ g    1.000000e-02
+uu    -5.000000e-01
+uo    -4.800000e-01
+i0    -3.000000e-04
+ g    0.000000e+00
+uu    -4.800000e-01
+uo    -4.700000e-01
+i0    4.500000e-03
+ g    1.000000e-02
+uu    -4.700000e-01
+uo    -4.500000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -4.500000e-01
+uo    -4.400000e-01
+i0    4.300000e-03
+ g    1.000000e-02
+uu    -4.400000e-01
+uo    -3.900000e-01
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    -3.900000e-01
+uo    -3.800000e-01
+i0    3.800000e-03
+ g    1.000000e-02
+uu    -3.800000e-01
+uo    -0.000000e+00
+i0    0.000000e+00
+ g    0.000000e+00
+uu    -0.000000e+00
+uo    1.000000e-02
+i0    -0.000000e+00
+ g    -1.000000e-02
+uu    1.000000e-02
+uo    5.990000e+00
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    5.990000e+00
+uo     2.000000e+01
+i0    -6.000000e-02
+ g    1.000000e-02
+CAPACITY
+c0e   8.000000e-12
+k1e   0.000000e+00
+END
+@IDBM:GAL16V8H_15_225_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : GAL16V8H_15_225_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : CMOS;
+#  Changes    : None;
+#  Notes      : generated for AMD GAL16V8H_15JC and comparable 3-state buffers
+#		of technology CMOS, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : GAL16V8H_15JC;
+#     Manufacturer  : AMD;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  26
+uu    -2.000000e+01
+uo    -9.500640e-01
+i0    1.775632e-01
+ g    1.991268e-01
+uu    -9.500640e-01
+uo    -7.400650e-01
+i0    3.398329e-02
+ g    4.800023e-02
+uu    -7.400650e-01
+uo    -6.100650e-01
+i0    6.031434e-03
+ g    1.023077e-02
+uu    -6.100650e-01
+uo    -5.300650e-01
+i0    1.238904e-03
+ g    2.375000e-03
+uu    -5.300650e-01
+uo    -4.600650e-01
+i0    2.828943e-04
+ g    5.714286e-04
+uu    -4.600650e-01
+uo    -3.000650e-01
+i0    7.750813e-05
+ g    1.250000e-04
+uu    -3.000650e-01
+uo    -9.006500e-02
+i0    1.142238e-05
+ g    -9.523810e-05
+uu    -9.006500e-02
+uo    9.935000e-03
+i0    -7.019500e-06
+ g    -3.000000e-04
+uu    9.935000e-03
+uo    3.899350e-01
+i0    -9.215658e-06
+ g    -7.894737e-05
+uu    3.899350e-01
+uo    7.399350e-01
+i0    -4.000000e-05
+ g    0.000000e+00
+uu    7.399350e-01
+uo    1.309934e+00
+i0    -4.000000e-05
+ g    0.000000e+00
+uu    1.309934e+00
+uo    2.419933e+00
+i0    -4.000000e-05
+ g    0.000000e+00
+uu    2.419933e+00
+uo    3.109932e+00
+i0    -4.000000e-05
+ g    0.000000e+00
+uu    3.109932e+00
+uo    3.559932e+00
+i0    -4.000000e-05
+ g    0.000000e+00
+uu    3.559932e+00
+uo    4.089933e+00
+i0    -1.743368e-04
+ g    3.773578e-05
+uu    4.089933e+00
+uo    4.609945e+00
+i0    1.373015e-04
+ g    -3.846065e-05
+uu    4.609945e+00
+uo    4.819950e+00
+i0    -4.000000e-05
+ g    0.000000e+00
+uu    4.819950e+00
+uo    5.399963e+00
+i0    -2.062014e-04
+ g    3.448199e-05
+uu    5.399963e+00
+uo    5.579967e+00
+i0    -2.000000e-05
+ g    0.000000e+00
+uu    5.579967e+00
+uo    5.759972e+00
+i0    5.999791e-04
+ g    -1.111080e-04
+uu    5.759972e+00
+uo    6.029978e+00
+i0    -2.533276e-04
+ g    3.703621e-05
+uu    6.029978e+00
+uo    6.589991e+00
+i0    -1.376757e-04
+ g    1.785673e-05
+uu    6.589991e+00
+uo    6.819996e+00
+i0    2.665151e-04
+ g    -4.347732e-05
+uu    6.819996e+00
+uo    6.969999e+00
+i0    -4.846573e-04
+ g    6.666533e-05
+uu    6.969999e+00
+uo    6.990000e+00
+i0    -6.989651e-03
+ g    9.999500e-04
+uu    6.990000e+00
+uo     2.000000e+01
+i0    -5.592000e-02
+ g    8.000000e-03
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:HCT_024_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : HCT_024_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : HCT;
+#  Changes    : None;
+#  Notes      : generated for TI SN74HCT240 and comparable 3-state buffers
+#		of technology HCT, VCC = 5V, GND/VCC clamping diodes;
+#
+#  RefSource
+#     Component     : SN74HC240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND and VCC Clamping Diodes;
+#
+#  RefCondition
+#     Process        : Typical;
+#     Temperature    : 25;
+#     SupplyVolt     : 5.000;
+#     RefVolt        : None;
+#     GndPackage     : Implicit;
+#     VccPackage     : Implicit;
+#     SigPackage     : Implicit;
+#     TermLineImp    : 50.000;
+#     TermLineDelay  : 5.000e-09;
+#     Notes          : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  18
+uu    -2.000000e+01
+uo    -1.190000e+00
+i0    9.663103e-02
+ g    1.110345e-01
+uu    -1.190000e+00
+uo    -8.300000e-01
+i0    6.333611e-02
+ g    8.305556e-02
+uu    -8.300000e-01
+uo    -7.800000e-01
+i0    4.586000e-02
+ g    6.200000e-02
+uu    -7.800000e-01
+uo    -7.600000e-01
+i0    3.260000e-02
+ g    4.500000e-02
+uu    -7.600000e-01
+uo    -7.400000e-01
+i0    2.500000e-02
+ g    3.500000e-02
+uu    -7.400000e-01
+uo    -7.100000e-01
+i0    1.390000e-02
+ g    2.000000e-02
+uu    -7.100000e-01
+uo    -7.000000e-01
+i0    6.800000e-03
+ g    1.000000e-02
+uu    -7.000000e-01
+uo    -6.900000e-01
+i0    1.380000e-02
+ g    2.000000e-02
+uu    -6.900000e-01
+uo    5.720000e+00
+i0    0.000000e+00
+ g    0.000000e+00
+uu    5.720000e+00
+uo    5.750000e+00
+i0    -5.720000e-02
+ g    1.000000e-02
+uu    5.750000e+00
+uo    5.760000e+00
+i0    -1.147000e-01
+ g    2.000000e-02
+uu    5.760000e+00
+uo    5.780000e+00
+i0    -1.723000e-01
+ g    3.000000e-02
+uu    5.780000e+00
+uo    5.800000e+00
+i0    -2.590000e-01
+ g    4.500000e-02
+uu    5.800000e+00
+uo    5.820000e+00
+i0    -4.040000e-01
+ g    7.000000e-02
+uu    5.820000e+00
+uo    5.850000e+00
+i0    -6.562000e-01
+ g    1.133333e-01
+uu    5.850000e+00
+uo    5.890000e+00
+i0    -1.046200e+00
+ g    1.800000e-01
+uu    5.890000e+00
+uo    5.970000e+00
+i0    -1.627837e+00
+ g    2.787500e-01
+uu    5.970000e+00
+uo     2.000000e+01
+i0    -2.209338e+00
+ g    3.761538e-01
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:HC_024_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : HC_024_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : HC;
+#  Changes    : None;
+#  Notes      : generated for TI SN74HC240 and comparable 3-state buffers
+#		of technology HC, VCC = 5V, GND/VCC clamping diodes;
+#
+#  RefSource
+#     Component     : SN74HC240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND and VCC Clamping Diodes;
+#
+#  RefCondition
+#     Process        : Typical;
+#     Temperature    : 25;
+#     SupplyVolt     : 5.000;
+#     RefVolt        : None;
+#     GndPackage     : Implicit;
+#     VccPackage     : Implicit;
+#     SigPackage     : Implicit;
+#     TermLineImp    : 50.000;
+#     TermLineDelay  : 5.000e-09;
+#     Notes          : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  18
+uu    -2.000000e+01
+uo    -1.190000e+00
+i0    9.663103e-02
+ g    1.110345e-01
+uu    -1.190000e+00
+uo    -8.300000e-01
+i0    6.333611e-02
+ g    8.305556e-02
+uu    -8.300000e-01
+uo    -7.800000e-01
+i0    4.586000e-02
+ g    6.200000e-02
+uu    -7.800000e-01
+uo    -7.600000e-01
+i0    3.260000e-02
+ g    4.500000e-02
+uu    -7.600000e-01
+uo    -7.400000e-01
+i0    2.500000e-02
+ g    3.500000e-02
+uu    -7.400000e-01
+uo    -7.100000e-01
+i0    1.390000e-02
+ g    2.000000e-02
+uu    -7.100000e-01
+uo    -7.000000e-01
+i0    6.800000e-03
+ g    1.000000e-02
+uu    -7.000000e-01
+uo    -6.900000e-01
+i0    1.380000e-02
+ g    2.000000e-02
+uu    -6.900000e-01
+uo    5.720000e+00
+i0    0.000000e+00
+ g    0.000000e+00
+uu    5.720000e+00
+uo    5.750000e+00
+i0    -5.720000e-02
+ g    1.000000e-02
+uu    5.750000e+00
+uo    5.760000e+00
+i0    -1.147000e-01
+ g    2.000000e-02
+uu    5.760000e+00
+uo    5.780000e+00
+i0    -1.723000e-01
+ g    3.000000e-02
+uu    5.780000e+00
+uo    5.800000e+00
+i0    -2.590000e-01
+ g    4.500000e-02
+uu    5.800000e+00
+uo    5.820000e+00
+i0    -4.040000e-01
+ g    7.000000e-02
+uu    5.820000e+00
+uo    5.850000e+00
+i0    -6.562000e-01
+ g    1.133333e-01
+uu    5.850000e+00
+uo    5.890000e+00
+i0    -1.046200e+00
+ g    1.800000e-01
+uu    5.890000e+00
+uo    5.970000e+00
+i0    -1.627837e+00
+ g    2.787500e-01
+uu    5.970000e+00
+uo     2.000000e+01
+i0    -2.209338e+00
+ g    3.761538e-01
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:HLL_125_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : HLL_125_S0_tri.mac;
+#  FileRev    : 1.0;
+#  Date       : 06/25/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : HLL;
+#  Changes    : None;
+#  Notes      : generated for PHI HL33241 and comparable 3-state buffers
+#		of technology HLL, VCC = 3.3V, GND/VCC clamping diodes;
+#
+#  RefSource
+#     Component     : HL33241;
+#     Manufacturer  : PHI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : HSPICE;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND and VCC Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 3.300;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  32
+uu    -2.000000e+01
+uo    -9.300000e-01
+i0    1.355333e-01
+ g    1.937778e-01
+uu    -9.300000e-01
+uo    -7.700000e-01
+i0    1.058056e-01
+ g    1.618125e-01
+uu    -7.700000e-01
+uo    -7.000000e-01
+i0    7.361000e-02
+ g    1.200000e-01
+uu    -7.000000e-01
+uo    -6.500000e-01
+i0    4.317400e-02
+ g    7.652000e-02
+uu    -6.500000e-01
+uo    -6.000000e-01
+i0    2.305000e-02
+ g    4.556000e-02
+uu    -6.000000e-01
+uo    -5.400000e-01
+i0    1.361400e-02
+ g    2.983333e-02
+uu    -5.400000e-01
+uo    -4.800000e-01
+i0    9.267000e-03
+ g    2.178333e-02
+uu    -4.800000e-01
+uo    -4.400000e-01
+i0    6.416600e-03
+ g    1.584500e-02
+uu    -4.400000e-01
+uo    -4.200000e-01
+i0    4.645600e-03
+ g    1.182000e-02
+uu    -4.200000e-01
+uo    -4.100000e-01
+i0    3.709000e-03
+ g    9.590000e-03
+uu    -4.100000e-01
+uo    -4.000000e-01
+i0    3.057100e-03
+ g    8.000000e-03
+uu    -4.000000e-01
+uo    -3.900000e-01
+i0    2.387500e-03
+ g    6.326000e-03
+uu    -3.900000e-01
+uo    -3.800000e-01
+i0    1.696420e-03
+ g    4.554000e-03
+uu    -3.800000e-01
+uo    -3.700000e-01
+i0    9.850980e-04
+ g    2.682100e-03
+uu    -3.700000e-01
+uo    -3.600000e-01
+i0    2.602410e-04
+ g    7.230270e-04
+uu    -3.600000e-01
+uo    3.710000e+00
+i0    -1.425757e-08
+ g    9.575676e-08
+uu    3.710000e+00
+uo    3.720000e+00
+i0    -3.020712e-03
+ g    8.143000e-04
+uu    3.720000e+00
+uo    3.730000e+00
+i0    -8.884548e-03
+ g    2.390600e-03
+uu    3.730000e+00
+uo    3.740000e+00
+i0    -1.453699e-02
+ g    3.906000e-03
+uu    3.740000e+00
+uo    3.750000e+00
+i0    -1.999365e-02
+ g    5.365000e-03
+uu    3.750000e+00
+uo    3.760000e+00
+i0    -2.529990e-02
+ g    6.780000e-03
+uu    3.760000e+00
+uo    3.780000e+00
+i0    -3.295150e-02
+ g    8.815000e-03
+uu    3.780000e+00
+uo    3.810000e+00
+i0    -4.526800e-02
+ g    1.207333e-02
+uu    3.810000e+00
+uo    3.850000e+00
+i0    -6.304800e-02
+ g    1.674000e-02
+uu    3.850000e+00
+uo    3.890000e+00
+i0    -9.051775e-02
+ g    2.387500e-02
+uu    3.890000e+00
+uo    3.920000e+00
+i0    -1.350907e-01
+ g    3.533333e-02
+uu    3.920000e+00
+uo    3.950000e+00
+i0    -2.077413e-01
+ g    5.386667e-02
+uu    3.950000e+00
+uo    3.980000e+00
+i0    -3.162347e-01
+ g    8.133333e-02
+uu    3.980000e+00
+uo    4.030000e+00
+i0    -4.731528e-01
+ g    1.207600e-01
+uu    4.030000e+00
+uo    4.130000e+00
+i0    -6.631270e-01
+ g    1.679000e-01
+uu    4.130000e+00
+uo    4.650000e+00
+i0    -8.354115e-01
+ g    2.096154e-01
+uu    4.650000e+00
+uo     2.000000e+01
+i0    -9.054660e-01
+ g    2.246809e-01
+CAPACITY
+c0e   8.000000e-12
+k1e   0
+END
+@IDBM:LS_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : LS_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : LS;
+#  Changes    : None;
+#  Notes      : generated for TI SN74LS240 and comparable 3-state buffers
+#		of technology LS, VCC = 5V, GND/VCC clamping diodes;
+#
+#  RefSource
+#     Component     : SN74LS240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  19
+uu    -2.000000e+01
+uo    -1.010000e+00
+i0    2.120680e-01
+ g    2.468000e-01
+uu    -1.010000e+00
+uo    -8.800000e-01
+i0    1.251769e-01
+ g    1.607692e-01
+uu    -8.800000e-01
+uo    -8.000000e-01
+i0    7.280000e-02
+ g    1.012500e-01
+uu    -8.000000e-01
+uo    -7.400000e-01
+i0    4.113333e-02
+ g    6.166667e-02
+uu    -7.400000e-01
+uo    -6.900000e-01
+i0    2.362000e-02
+ g    3.800000e-02
+uu    -6.900000e-01
+uo    -6.400000e-01
+i0    1.258000e-02
+ g    2.200000e-02
+uu    -6.400000e-01
+uo    -6.000000e-01
+i0    6.500000e-03
+ g    1.250000e-02
+uu    -6.000000e-01
+uo    -5.500000e-01
+i0    5.000000e-03
+ g    1.000000e-02
+uu    -5.500000e-01
+uo    -5.400000e-01
+i0    -5.000000e-04
+ g    0.000000e+00
+uu    -5.400000e-01
+uo    -5.300000e-01
+i0    4.900000e-03
+ g    1.000000e-02
+uu    -5.300000e-01
+uo    -5.200000e-01
+i0    -4.000000e-04
+ g    0.000000e+00
+uu    -5.200000e-01
+uo    -5.100000e-01
+i0    4.800000e-03
+ g    1.000000e-02
+uu    -5.100000e-01
+uo    -4.800000e-01
+i0    -3.000000e-04
+ g    0.000000e+00
+uu    -4.800000e-01
+uo    -4.700000e-01
+i0    4.500000e-03
+ g    1.000000e-02
+uu    -4.700000e-01
+uo    1.070000e+00
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    1.070000e+00
+uo    1.100000e+00
+i0    -3.766667e-03
+ g    3.333333e-03
+uu    1.100000e+00
+uo    1.160000e+00
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    1.160000e+00
+uo    1.190000e+00
+i0    -3.966667e-03
+ g    3.333333e-03
+uu    1.190000e+00
+uo     2.000000e+01
+i0    -0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:LVC_024_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : LVC_024_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 12:36:22 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : LVC;
+# Changes     : None;
+# Notes       : generated for TI SN74LVC240 and comparable 3-state buffers
+#		of technology LVC, VCC = 3.3V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : SN74LVC240;
+#	Manufacturer : TI;
+#	Buffername   : LVC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 3.300;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+48
+-9.800000e-01   -1.788000e-01
+-9.400000e-01   -1.309000e-01
+-9.000000e-01   -8.850000e-02
+-8.700000e-01   -6.160000e-02
+-8.500000e-01   -4.610000e-02
+-8.400000e-01   -3.930000e-02
+-8.200000e-01   -2.790000e-02
+-8.100000e-01   -2.330000e-02
+-8.000000e-01   -1.920000e-02
+-7.900000e-01   -1.580000e-02
+-7.800000e-01   -1.290000e-02
+-7.700000e-01   -1.060000e-02
+-7.600000e-01   -8.600000e-03
+-7.500000e-01   -7.100000e-03
+-7.400000e-01   -5.800000e-03
+-7.300000e-01   -4.800000e-03
+-7.200000e-01   -4.000000e-03
+-7.100000e-01   -3.300000e-03
+-6.900000e-01   -2.300000e-03
+-6.700000e-01   -1.700000e-03
+-6.500000e-01   -1.300000e-03
+-6.400000e-01   -1.000000e-03
+-6.300000e-01   -9.000000e-04
+-6.200000e-01   -6.000000e-04
+-6.100000e-01   -6.000000e-04
+-6.000000e-01   -4.000000e-04
+-5.800000e-01   -4.000000e-04
+-5.600000e-01   -2.000000e-04
+-5.400000e-01   -2.000000e-04
+-5.300000e-01   0.000000e+00
+3.890000e+00   0.000000e+00
+3.910000e+00   2.000000e-04
+3.920000e+00   2.000000e-04
+3.930000e+00   3.000000e-04
+3.940000e+00   3.000000e-04
+3.950000e+00   5.000000e-04
+3.960000e+00   5.000000e-04
+3.970000e+00   6.000000e-04
+3.990000e+00   1.000000e-03
+4.020000e+00   1.900000e-03
+4.040000e+00   2.700000e-03
+4.060000e+00   3.700000e-03
+4.070000e+00   4.300000e-03
+4.090000e+00   5.600000e-03
+4.140000e+00   9.500000e-03
+4.210000e+00   1.560000e-02
+5.760000e+00   1.619000e-01
+5.990000e+00   1.876000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:LVC_124_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : LVC_124_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Fri Jul 11 14:00:36 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : LVC;
+# Changes     : None;
+# Notes       : generated for PHI 74LVC240 and comparable 3-state buffers
+#		of technology LVC, VCC = 3.3V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : 74LVC240;
+#	Manufacturer : PHI;
+#	Buffername   : LVC240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 3.300;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+50
+-9.800000e-01   -1.450000e-01
+-9.200000e-01   -9.830000e-02
+-8.700000e-01   -6.540000e-02
+-8.400000e-01   -4.910000e-02
+-8.100000e-01   -3.620000e-02
+-7.900000e-01   -2.930000e-02
+-7.700000e-01   -2.390000e-02
+-7.500000e-01   -1.970000e-02
+-7.300000e-01   -1.640000e-02
+-7.000000e-01   -1.280000e-02
+-6.700000e-01   -1.040000e-02
+-6.400000e-01   -8.500000e-03
+-6.100000e-01   -7.000000e-03
+-5.600000e-01   -5.000000e-03
+-5.500000e-01   -4.700000e-03
+-5.400000e-01   -4.300000e-03
+-5.300000e-01   -4.100000e-03
+-5.000000e-01   -3.825000e-03
+-3.000000e-01   0.000000e+00
+3.500000e+00   0.000000e+00
+3.730000e+00   1.240000e-03
+3.740000e+00   1.400000e-03
+3.750000e+00   1.400000e-03
+3.760000e+00   1.500000e-03
+3.780000e+00   1.500000e-03
+3.800000e+00   1.700000e-03
+3.810000e+00   1.700000e-03
+3.840000e+00   2.000000e-03
+3.850000e+00   2.200000e-03
+3.870000e+00   2.400000e-03
+3.880000e+00   2.600000e-03
+3.890000e+00   2.700000e-03
+3.900000e+00   2.900000e-03
+3.910000e+00   3.000000e-03
+3.920000e+00   3.300000e-03
+3.930000e+00   3.500000e-03
+3.950000e+00   4.100000e-03
+3.960000e+00   4.300000e-03
+3.970000e+00   4.700000e-03
+3.990000e+00   5.600000e-03
+4.010000e+00   6.900000e-03
+4.030000e+00   8.700000e-03
+4.040000e+00   9.900000e-03
+4.060000e+00   1.280000e-02
+4.080000e+00   1.650000e-02
+4.110000e+00   2.320000e-02
+4.220000e+00   5.160000e-02
+4.340000e+00   8.060000e-02
+4.540000e+00   1.217000e-01
+4.740000e+00   1.570000e-01
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:LVT_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : LVT_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : LVT;
+#  Changes    : None;
+#  Notes      : generated for TI SN74LVT240 and comparable 3-state buffers
+#		of technology LVT, VCC = 3.3V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : SN74LVT240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 3.300;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  29
+uu    -2.000000e+01
+uo    -2.470000e+00
+i0    1.175358e-01
+ g    1.792453e-01
+uu    -2.470000e+00
+uo    -1.690000e+00
+i0    3.986367e-01
+ g    2.930513e-01
+uu    -1.690000e+00
+uo    -1.530000e+00
+i0    2.377888e-01
+ g    1.978750e-01
+uu    -1.530000e+00
+uo    -1.310000e+00
+i0    9.471636e-02
+ g    1.043636e-01
+uu    -1.310000e+00
+uo    -9.600000e-01
+i0    5.437857e-02
+ g    7.357143e-02
+uu    -9.600000e-01
+uo    -7.900000e-01
+i0    4.241729e-02
+ g    6.111176e-02
+uu    -7.900000e-01
+uo    -7.300000e-01
+i0    3.282267e-02
+ g    4.896667e-02
+uu    -7.300000e-01
+uo    -7.000000e-01
+i0    2.484133e-02
+ g    3.803333e-02
+uu    -7.000000e-01
+uo    -6.800000e-01
+i0    1.879800e-02
+ g    2.940000e-02
+uu    -6.800000e-01
+uo    -6.600000e-01
+i0    1.368100e-02
+ g    2.187500e-02
+uu    -6.600000e-01
+uo    -6.400000e-01
+i0    9.070900e-03
+ g    1.489000e-02
+uu    -6.400000e-01
+uo    -6.300000e-01
+i0    6.274100e-03
+ g    1.052000e-02
+uu    -6.300000e-01
+uo    -6.200000e-01
+i0    4.831400e-03
+ g    8.230000e-03
+uu    -6.200000e-01
+uo    -6.100000e-01
+i0    3.690600e-03
+ g    6.390000e-03
+uu    -6.100000e-01
+uo    -6.000000e-01
+i0    2.830500e-03
+ g    4.980000e-03
+uu    -6.000000e-01
+uo    -5.900000e-01
+i0    2.200500e-03
+ g    3.930000e-03
+uu    -5.900000e-01
+uo    -5.700000e-01
+i0    1.579820e-03
+ g    2.878000e-03
+uu    -5.700000e-01
+uo    -5.600000e-01
+i0    1.041170e-03
+ g    1.933000e-03
+uu    -5.600000e-01
+uo    -5.500000e-01
+i0    6.598100e-04
+ g    1.252000e-03
+uu    -5.500000e-01
+uo    -5.400000e-01
+i0    4.354100e-04
+ g    8.440000e-04
+uu    -5.400000e-01
+uo    -5.300000e-01
+i0    2.987900e-04
+ g    5.910000e-04
+uu    -5.300000e-01
+uo    -5.200000e-01
+i0    2.086900e-04
+ g    4.210000e-04
+uu    -5.200000e-01
+uo    -5.100000e-01
+i0    1.461340e-04
+ g    3.007000e-04
+uu    -5.100000e-01
+uo    -5.000000e-01
+i0    1.016110e-04
+ g    2.134000e-04
+uu    -5.000000e-01
+uo    -4.900000e-01
+i0    7.036100e-05
+ g    1.509000e-04
+uu    -4.900000e-01
+uo    -4.800000e-01
+i0    4.855600e-05
+ g    1.064000e-04
+uu    -4.800000e-01
+uo    -4.700000e-01
+i0    3.338800e-05
+ g    7.480000e-05
+uu    -4.700000e-01
+uo    -4.600000e-01
+i0    2.295400e-05
+ g    5.260000e-05
+uu    -4.600000e-01
+uo     2.000000e+01
+i0    -1.154372e-06
+ g    1.904960e-07
+CAPACITY
+c0e   8.000000e-12
+k1e   0
+END
+@IDBM:LVT_026_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : LVT_026_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : LVT;
+#  Changes    : None;
+#  Notes      : generated for TI SN74LVT162240 and comparable 3-state buffers
+#		with integrated output resistor of technology LVT, VCC = 3.3V,
+#		GND clamping diodes;
+#
+#  RefSource
+#     Component     : SN74LVT162244;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 3.300;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  20
+uu    -2.000000e+01
+uo    -1.770000e+00
+i0    2.647098e-02
+ g    3.052033e-02
+uu    -1.770000e+00
+uo    -8.900000e-01
+i0    1.779619e-02
+ g    2.561932e-02
+uu    -8.900000e-01
+uo    -7.500000e-01
+i0    1.414271e-02
+ g    2.151429e-02
+uu    -7.500000e-01
+uo    -6.900000e-01
+i0    1.055200e-02
+ g    1.672667e-02
+uu    -6.900000e-01
+uo    -6.600000e-01
+i0    7.513700e-03
+ g    1.232333e-02
+uu    -6.600000e-01
+uo    -6.300000e-01
+i0    5.109100e-03
+ g    8.680000e-03
+uu    -6.300000e-01
+uo    -6.000000e-01
+i0    3.250600e-03
+ g    5.730000e-03
+uu    -6.000000e-01
+uo    -5.700000e-01
+i0    2.264200e-03
+ g    4.086000e-03
+uu    -5.700000e-01
+uo    -5.600000e-01
+i0    1.372720e-03
+ g    2.522000e-03
+uu    -5.600000e-01
+uo    -5.500000e-01
+i0    7.500000e-04
+ g    1.410000e-03
+uu    -5.500000e-01
+uo    -5.400000e-01
+i0    4.299000e-04
+ g    8.280000e-04
+uu    -5.400000e-01
+uo    -5.300000e-01
+i0    2.689800e-04
+ g    5.300000e-04
+uu    -5.300000e-01
+uo    -5.200000e-01
+i0    1.785090e-04
+ g    3.593000e-04
+uu    -5.200000e-01
+uo    -5.100000e-01
+i0    1.208410e-04
+ g    2.484000e-04
+uu    -5.100000e-01
+uo    -5.000000e-01
+i0    8.264200e-05
+ g    1.735000e-04
+uu    -5.000000e-01
+uo    -4.900000e-01
+i0    5.659200e-05
+ g    1.214000e-04
+uu    -4.900000e-01
+uo    -4.800000e-01
+i0    3.875600e-05
+ g    8.500000e-05
+uu    -4.800000e-01
+uo    -4.700000e-01
+i0    2.656400e-05
+ g    5.960000e-05
+uu    -4.700000e-01
+uo    -4.600000e-01
+i0    1.824500e-05
+ g    4.190000e-05
+uu    -4.600000e-01
+uo     2.000000e+01
+i0    -9.545059e-07
+ g    1.619437e-07
+CAPACITY
+c0e   8.000000e-12
+k1e   0
+END
+@IDBM:LV_024_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : LV_024_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 09:42:41 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : LV;
+# Changes     : None;
+# Notes       : generated for TI SN74LV240 and comparable 3-state buffers
+#		of technology LV, VCC = 3.3V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : SN74LV240;
+#	Manufacturer : TI;
+#	Buffername   : LV240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 3.300;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+36
+-1.980000e+00   -8.940000e-02
+-1.120000e+00   -3.180000e-02
+-9.800000e-01   -2.110000e-02
+-8.400000e-01   -9.200000e-03
+-8.300000e-01   -8.200000e-03
+-7.900000e-01   -5.000000e-03
+-7.700000e-01   -3.600000e-03
+-7.600000e-01   -3.100000e-03
+-7.500000e-01   -2.500000e-03
+-7.300000e-01   -1.500000e-03
+-7.100000e-01   -9.000000e-04
+-7.000000e-01   -7.000000e-04
+-6.900000e-01   -4.000000e-04
+-6.800000e-01   -4.000000e-04
+-6.600000e-01   -2.000000e-04
+-6.500000e-01   0.000000e+00
+4.020000e+00   0.000000e+00
+4.030000e+00   2.000000e-04
+4.040000e+00   3.000000e-04
+4.050000e+00   5.000000e-04
+4.060000e+00   5.000000e-04
+4.070000e+00   8.000000e-04
+4.080000e+00   1.000000e-03
+4.100000e+00   2.000000e-03
+4.110000e+00   2.700000e-03
+4.120000e+00   3.500000e-03
+4.130000e+00   4.600000e-03
+4.140000e+00   5.900000e-03
+4.150000e+00   7.400000e-03
+4.160000e+00   9.200000e-03
+4.180000e+00   1.350000e-02
+4.200000e+00   1.890000e-02
+4.230000e+00   2.850000e-02
+4.270000e+00   4.360000e-02
+4.320000e+00   6.540000e-02
+4.380000e+00   9.470000e-02
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:LV_124_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : LV_124_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 09:00:00 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : LV;
+# Changes     : None;
+# Notes       : generated for PHI 74LV240 and comparable 3-state buffers
+#		of technology LV, VCC = 3.3V, GND/VCC clamping diodes;
+#
+# RefSource
+#	Component    : 74LV240;
+#	Manufacturer : PHI;
+#	Buffername   : LV240_tri;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND and VCC Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 3.300;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+36
+-1.980000e+00   -8.940000e-02
+-1.120000e+00   -3.180000e-02
+-9.800000e-01   -2.110000e-02
+-8.400000e-01   -9.200000e-03
+-8.300000e-01   -8.200000e-03
+-7.900000e-01   -5.000000e-03
+-7.700000e-01   -3.600000e-03
+-7.600000e-01   -3.100000e-03
+-7.500000e-01   -2.500000e-03
+-7.300000e-01   -1.500000e-03
+-7.100000e-01   -9.000000e-04
+-7.000000e-01   -7.000000e-04
+-6.900000e-01   -4.000000e-04
+-6.800000e-01   -4.000000e-04
+-6.600000e-01   -2.000000e-04
+-6.500000e-01   0.000000e+00
+4.020000e+00   0.000000e+00
+4.030000e+00   2.000000e-04
+4.040000e+00   3.000000e-04
+4.050000e+00   5.000000e-04
+4.060000e+00   5.000000e-04
+4.070000e+00   8.000000e-04
+4.080000e+00   1.000000e-03
+4.100000e+00   2.000000e-03
+4.110000e+00   2.700000e-03
+4.120000e+00   3.500000e-03
+4.130000e+00   4.600000e-03
+4.140000e+00   5.900000e-03
+4.150000e+00   7.400000e-03
+4.160000e+00   9.200000e-03
+4.180000e+00   1.350000e-02
+4.200000e+00   1.890000e-02
+4.230000e+00   2.850000e-02
+4.270000e+00   4.360000e-02
+4.320000e+00   6.540000e-02
+4.380000e+00   9.470000e-02
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:MACH210_12_225_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : MACH210_12_225_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Wed May 21 11:48:54 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : CMOS;
+# Changes     : None;
+# Notes       : generated for AMD MACH210_12 and comparable 3-state buffers
+#		of technology CMOS, VCC = 5V, GND clamping diodes;
+#
+# RefSource
+#	Component    : MACH210_12;
+#	Manufacturer : AMD;
+#	Buffername   : TRIBUF;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+20
+-1.080000e+00   -2.003000e-01
+-1.040000e+00   -1.741000e-01
+-1.000000e+00   -1.499000e-01
+-9.600000e-01   -1.275000e-01
+-9.200000e-01   -1.072000e-01
+-8.800000e-01   -8.910000e-02
+-8.600000e-01   -8.070000e-02
+-8.200000e-01   -6.550000e-02
+-7.800000e-01   -5.200000e-02
+-7.500000e-01   -4.310000e-02
+-7.200000e-01   -3.510000e-02
+-6.900000e-01   -2.790000e-02
+-6.500000e-01   -1.960000e-02
+-6.200000e-01   -1.420000e-02
+-5.800000e-01   -8.100000e-03
+-5.500000e-01   -4.400000e-03
+-5.200000e-01   -1.900000e-03
+-4.900000e-01   -7.000000e-04
+-4.100000e-01   0.000000e+00
+6.500000e+00   0.000000e+00
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:MACH210_15_225_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : MACH210_15_225_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Wed May 21 10:01:59 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : CMOS;
+# Changes     : None;
+# Notes       : generated for AMD MACH210_15 and comparable 3-state buffers
+#		of technology CMOS, VCC = 5V, GND clamping diodes;
+#
+# RefSource
+#	Component    : MACH210_15;
+#	Manufacturer : AMD;
+#	Buffername   : TRIBUF;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+19
+-1.150000e+00   -2.007000e-01
+-1.090000e+00   -1.672000e-01
+-1.050000e+00   -1.466000e-01
+-1.010000e+00   -1.274000e-01
+-9.700000e-01   -1.097000e-01
+-9.300000e-01   -9.360000e-02
+-8.900000e-01   -7.910000e-02
+-8.500000e-01   -6.600000e-02
+-8.100000e-01   -5.440000e-02
+-7.700000e-01   -4.390000e-02
+-7.400000e-01   -3.690000e-02
+-6.900000e-01   -2.660000e-02
+-6.400000e-01   -1.780000e-02
+-5.800000e-01   -9.200000e-03
+-5.400000e-01   -4.600000e-03
+-5.100000e-01   -2.100000e-03
+-4.700000e-01   -7.000000e-04
+-3.800000e-01   -0.000000e+00
+6.500000e+00   0.000000e+00
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:PAL16L8A_2_425_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : PAL16L8A_2_425_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 4;
+#  Technology : TTL;
+#  Changes    : None;
+#  Notes      : generated for MMI PAL16L8A_2CNL and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : PAL16L8A_2CNL;
+#     Manufacturer  : MMI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+26
+-8.900640e-01   -4.959000e-02
+-8.500640e-01   -3.567000e-02
+-8.200640e-01   -2.723000e-02
+-7.900640e-01   -2.034000e-02
+-7.600640e-01   -1.493000e-02
+-7.400650e-01   -1.206000e-02
+-7.200650e-01   -9.720000e-03
+-7.000650e-01   -7.810000e-03
+-6.800650e-01   -6.280000e-03
+-6.600650e-01   -5.050000e-03
+-6.300650e-01   -3.620000e-03
+-6.100650e-01   -2.870000e-03
+-6.000650e-01   -2.580000e-03
+-5.900650e-01   -2.220000e-03
+-5.700650e-01   -1.680000e-03
+-5.500650e-01   -1.240000e-03
+-5.300650e-01   -8.600000e-04
+-5.100650e-01   -5.600000e-04
+-4.900650e-01   -3.400000e-04
+-4.800650e-01   -2.600000e-04
+-4.700650e-01   -1.900000e-04
+-4.500650e-01   -9.000000e-05
+-4.400650e-01   -5.000000e-05
+-4.200650e-01   -1.000000e-05
+-4.100650e-01   0.000000e+00
+7.000000e+00   0.000000e+00
+CAPACITY
+c0   8.e-12
+k1   0.0
+END
+@IDBM:PAL16L8B_2_425_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : PAL16L8B_2_425_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 4;
+#  Technology : TTL;
+#  Changes    : None;
+#  Notes      : generated for MMI PAL16L8B_2CNL and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : PAL16L8B_2CNL;
+#     Manufacturer  : MMI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+25
+-9.200640e-01   -4.948000e-02
+-8.700640e-01   -3.532000e-02
+-8.300640e-01   -2.613000e-02
+-8.000640e-01   -2.036000e-02
+-7.700640e-01   -1.563000e-02
+-7.400650e-01   -1.191000e-02
+-7.100650e-01   -8.990000e-03
+-6.800650e-01   -6.710000e-03
+-6.500650e-01   -4.900000e-03
+-6.200650e-01   -3.450000e-03
+-6.000650e-01   -2.650000e-03
+-5.800650e-01   -1.980000e-03
+-5.600650e-01   -1.430000e-03
+-5.500650e-01   -1.190000e-03
+-5.300650e-01   -8.100000e-04
+-5.100650e-01   -5.400000e-04
+-5.000650e-01   -4.200000e-04
+-4.800650e-01   -2.600000e-04
+-4.700650e-01   -2.000000e-04
+-4.600650e-01   -1.500000e-04
+-4.500650e-01   -1.100000e-04
+-4.300650e-01   -7.000000e-05
+-4.200650e-01   -4.000000e-05
+-3.800650e-01   0.000000e+00
+7.000000e+00   0.000000e+00
+CAPACITY
+c0   8.e-12
+k1   0.0
+END
+@IDBM:PAL16L8B_4_425_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : PAL16L8B_4_425_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 4;
+#  Technology : TTL;
+#  Changes    : None;
+#  Notes      : generated for MMI PAL16L8B_4CNL and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : PAL16L8B_4CNL;
+#     Manufacturer  : MMI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+26
+-9.200640e-01   -4.923000e-02
+-8.800640e-01   -3.692000e-02
+-8.400640e-01   -2.694000e-02
+-8.100640e-01   -2.093000e-02
+-7.800640e-01   -1.602000e-02
+-7.500640e-01   -1.205000e-02
+-7.200650e-01   -9.000000e-03
+-6.900650e-01   -6.640000e-03
+-6.600650e-01   -4.800000e-03
+-6.400650e-01   -3.770000e-03
+-6.200650e-01   -2.880000e-03
+-6.000650e-01   -2.130000e-03
+-5.900650e-01   -1.790000e-03
+-5.700650e-01   -1.230000e-03
+-5.600650e-01   -9.900000e-04
+-5.500650e-01   -7.900000e-04
+-5.400650e-01   -6.200000e-04
+-5.300650e-01   -4.800000e-04
+-5.200650e-01   -3.600000e-04
+-5.100650e-01   -2.700000e-04
+-5.000650e-01   -1.900000e-04
+-4.800650e-01   -9.000000e-05
+-4.700650e-01   -5.000000e-05
+-4.500650e-01   -1.000000e-05
+-4.400650e-01   0.000000e+00
+7.000000e+00   0.000000e+00
+CAPACITY
+c0   8.e-12
+k1   0.0
+END
+@IDBM:PAL16L8D_425_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : PAL16L8D_425_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 4;
+#  Technology : TTL;
+#  Changes    : None;
+#  Notes      : generated for MMI PAL16L8DCNL and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : PAL16L8DCNL;
+#     Manufacturer  : MMI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+30
+-8.500640e-01   -4.719000e-02
+-8.100640e-01   -3.699000e-02
+-7.700640e-01   -2.857000e-02
+-7.200650e-01   -2.014000e-02
+-6.800650e-01   -1.493000e-02
+-6.400650e-01   -1.075000e-02
+-6.100650e-01   -8.190000e-03
+-5.800650e-01   -6.000000e-03
+-5.500650e-01   -4.220000e-03
+-5.300650e-01   -3.220000e-03
+-5.100650e-01   -2.380000e-03
+-5.000650e-01   -2.020000e-03
+-4.800650e-01   -1.430000e-03
+-4.700650e-01   -1.180000e-03
+-4.500650e-01   -8.200000e-04
+-4.400650e-01   -6.800000e-04
+-4.300650e-01   -5.700000e-04
+-4.200650e-01   -4.800000e-04
+-4.000650e-01   -3.400000e-04
+-3.900650e-01   -2.900000e-04
+-3.800650e-01   -2.500000e-04
+-3.700650e-01   -2.300000e-04
+-3.600650e-01   -2.000000e-04
+-3.400650e-01   -1.600000e-04
+-3.300650e-01   -1.500000e-04
+-3.200650e-01   -1.300000e-04
+-3.000650e-01   -1.100000e-04
+-2.800650e-01   -1.000000e-04
+-2.700650e-01   -0.000000e+00
+7.000000e+00   0.000000e+00
+CAPACITY
+c0   8.e-12
+k1   0.0
+END
+@IDBM:PAL16L8_10_025_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : PAL16L8_10_025_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 10:52:59 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : TTL;
+# Changes     : None;
+# Notes       : generated for TI TIPAL16L8_10 and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+# RefSource
+#	Component    : TIBPAL16L8_10;
+#	Manufacturer : TI;
+#	Buffername   : TRIBUF;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+36
+-1.060000e+00   -9.850000e-02
+-9.700000e-01   -6.710000e-02
+-9.000000e-01   -4.680000e-02
+-8.500000e-01   -3.510000e-02
+-8.100000e-01   -2.770000e-02
+-7.800000e-01   -2.340000e-02
+-7.400000e-01   -1.900000e-02
+-6.900000e-01   -1.490000e-02
+-6.100000e-01   -9.900000e-03
+-5.200000e-01   -5.300000e-03
+-5.100000e-01   -4.900000e-03
+-5.000000e-01   -4.400000e-03
+-4.900000e-01   -4.000000e-03
+-4.800000e-01   -3.700000e-03
+-4.600000e-01   -2.900000e-03
+-4.400000e-01   -2.300000e-03
+-4.300000e-01   -2.100000e-03
+-4.200000e-01   -1.800000e-03
+-4.000000e-01   -1.400000e-03
+-3.400000e-01   -8.000000e-04
+-3.300000e-01   -8.000000e-04
+-3.100000e-01   -6.000000e-04
+-2.900000e-01   -6.000000e-04
+-2.800000e-01   -5.000000e-04
+-2.700000e-01   -5.000000e-04
+-2.600000e-01   -4.000000e-04
+-2.400000e-01   -4.000000e-04
+-2.300000e-01   -3.000000e-04
+-2.100000e-01   -3.000000e-04
+-2.000000e-01   -2.000000e-04
+-1.600000e-01   -2.000000e-04
+-1.500000e-01   -1.000000e-04
+-1.400000e-01   -1.000000e-04
+-1.300000e-01   -0.000000e+00
+5.990000e+00   -0.000000e+00
+6.000000e+00   1.000000e-04
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:PAL16L8_15_025_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : PAL16L8_15_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : TTL;
+#  Changes    : None;
+#  Notes      : generated for TI TIPAL16L8_15CFN and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : TIBPAL16L8_15CFN;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  12
+uu    -2.000000e+01
+uo    -7.800000e-01
+i0    1.878200e-01
+ g    2.790000e-01
+uu    -7.800000e-01
+uo    -7.000000e-01
+i0    1.096250e-01
+ g    1.787500e-01
+uu    -7.000000e-01
+uo    -6.300000e-01
+i0    5.450000e-02
+ g    1.000000e-01
+uu    -6.300000e-01
+uo    -5.600000e-01
+i0    2.840000e-02
+ g    5.857143e-02
+uu    -5.600000e-01
+uo    -5.000000e-01
+i0    1.520000e-02
+ g    3.500000e-02
+uu    -5.000000e-01
+uo    -4.300000e-01
+i0    8.414286e-03
+ g    2.142857e-02
+uu    -4.300000e-01
+uo    -3.700000e-01
+i0    3.500000e-03
+ g    1.000000e-02
+uu    -3.700000e-01
+uo    -3.600000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -3.600000e-01
+uo    -3.500000e-01
+i0    3.400000e-03
+ g    1.000000e-02
+uu    -3.500000e-01
+uo    -3.200000e-01
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    -3.200000e-01
+uo    -3.100000e-01
+i0    3.100000e-03
+ g    1.000000e-02
+uu    -3.100000e-01
+uo     2.000000e+01
+i0    0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:PAL16R4_7_025_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : PAL16R4_7_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : TTL;
+#  Changes    : None;
+#  Notes      : generated for TI TIPAL16R4_7 and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : TIBPAL16R4_7;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  12
+uu    -2.000000e+01
+uo    -7.800000e-01
+i0    1.878200e-01
+ g    2.790000e-01
+uu    -7.800000e-01
+uo    -7.000000e-01
+i0    1.096250e-01
+ g    1.787500e-01
+uu    -7.000000e-01
+uo    -6.300000e-01
+i0    5.450000e-02
+ g    1.000000e-01
+uu    -6.300000e-01
+uo    -5.600000e-01
+i0    2.840000e-02
+ g    5.857143e-02
+uu    -5.600000e-01
+uo    -5.000000e-01
+i0    1.520000e-02
+ g    3.500000e-02
+uu    -5.000000e-01
+uo    -4.300000e-01
+i0    8.414286e-03
+ g    2.142857e-02
+uu    -4.300000e-01
+uo    -3.700000e-01
+i0    3.500000e-03
+ g    1.000000e-02
+uu    -3.700000e-01
+uo    -3.600000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -3.600000e-01
+uo    -3.500000e-01
+i0    3.400000e-03
+ g    1.000000e-02
+uu    -3.500000e-01
+uo    -3.200000e-01
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    -3.200000e-01
+uo    -3.100000e-01
+i0    3.100000e-03
+ g    1.000000e-02
+uu    -3.100000e-01
+uo     2.000000e+01
+i0    0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:PAL20R6_5_225_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : PAL20R6_5_225_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Mon Jul  7 11:17:04 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : TTL;
+# Changes     : None;
+# Notes       : generated for TI PAL20R6_5 and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+# RefSource
+#	Component    : PAL20R6_5;
+#	Manufacturer : AMD;
+#	Buffername   : TRIBUF;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : GND Clamping Diodes;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+23
+-9.200000e-01   -9.840000e-02
+-8.400000e-01   -7.110000e-02
+-7.800000e-01   -5.390000e-02
+-7.200000e-01   -4.010000e-02
+-6.700000e-01   -3.070000e-02
+-6.100000e-01   -2.140000e-02
+-5.600000e-01   -1.490000e-02
+-5.200000e-01   -1.050000e-02
+-5.100000e-01   -9.700000e-03
+-5.000000e-01   -8.500000e-03
+-4.700000e-01   -5.900000e-03
+-4.500000e-01   -4.400000e-03
+-4.400000e-01   -3.700000e-03
+-4.300000e-01   -3.200000e-03
+-4.200000e-01   -2.600000e-03
+-3.900000e-01   -1.400000e-03
+-3.800000e-01   -1.100000e-03
+-3.600000e-01   -7.000000e-04
+-3.100000e-01   -2.000000e-04
+-2.900000e-01   -2.000000e-04
+-2.800000e-01   -0.000000e+00
+5.990000e+00   0.000000e+00
+6.000000e+00   1.000000e-04
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:PAL22V10A_225_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : PAL22V10A_225_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : TTL;
+#  Changes    : None;
+#  Notes      : generated for AMD AmPAL22V10AJC and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : AmPAL22V10AJC;
+#     Manufacturer  : AMD;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  12
+uu    -2.000000e+01
+uo    -7.800000e-01
+i0    1.878200e-01
+ g    2.790000e-01
+uu    -7.800000e-01
+uo    -7.000000e-01
+i0    1.096250e-01
+ g    1.787500e-01
+uu    -7.000000e-01
+uo    -6.300000e-01
+i0    5.450000e-02
+ g    1.000000e-01
+uu    -6.300000e-01
+uo    -5.600000e-01
+i0    2.840000e-02
+ g    5.857143e-02
+uu    -5.600000e-01
+uo    -5.000000e-01
+i0    1.520000e-02
+ g    3.500000e-02
+uu    -5.000000e-01
+uo    -4.300000e-01
+i0    8.414286e-03
+ g    2.142857e-02
+uu    -4.300000e-01
+uo    -3.700000e-01
+i0    3.500000e-03
+ g    1.000000e-02
+uu    -3.700000e-01
+uo    -3.600000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -3.600000e-01
+uo    -3.500000e-01
+i0    3.400000e-03
+ g    1.000000e-02
+uu    -3.500000e-01
+uo    -3.200000e-01
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    -3.200000e-01
+uo    -3.100000e-01
+i0    3.100000e-03
+ g    1.000000e-02
+uu    -3.100000e-01
+uo     2.000000e+01
+i0    0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:PAL22V10_15_225_S0_tri.mac
+###############################################################################
+#  Header     : 1.0;
+#  Filename   : PAL22V10_15_225_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/1997;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : TTL;
+#  Changes    : None;
+#  Notes      : generated for TI PAL22V10_15JC and comparable 3-state buffers
+#		of technology TTL, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : PAL22V10_15JC;
+#     Manufacturer  : AMD;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  12
+uu    -2.000000e+01
+uo    -7.800000e-01
+i0    1.878200e-01
+ g    2.790000e-01
+uu    -7.800000e-01
+uo    -7.000000e-01
+i0    1.096250e-01
+ g    1.787500e-01
+uu    -7.000000e-01
+uo    -6.300000e-01
+i0    5.450000e-02
+ g    1.000000e-01
+uu    -6.300000e-01
+uo    -5.600000e-01
+i0    2.840000e-02
+ g    5.857143e-02
+uu    -5.600000e-01
+uo    -5.000000e-01
+i0    1.520000e-02
+ g    3.500000e-02
+uu    -5.000000e-01
+uo    -4.300000e-01
+i0    8.414286e-03
+ g    2.142857e-02
+uu    -4.300000e-01
+uo    -3.700000e-01
+i0    3.500000e-03
+ g    1.000000e-02
+uu    -3.700000e-01
+uo    -3.600000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    -3.600000e-01
+uo    -3.500000e-01
+i0    3.400000e-03
+ g    1.000000e-02
+uu    -3.500000e-01
+uo    -3.200000e-01
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    -3.200000e-01
+uo    -3.100000e-01
+i0    3.100000e-03
+ g    1.000000e-02
+uu    -3.100000e-01
+uo     2.000000e+01
+i0    0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END
+@IDBM:PALC22V10B_15_325_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : PALC22V10B_15_325_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Fri May 23 15:22:20 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : CMOS;
+# Changes     : None;
+# Notes       : generated for CYP PALC22V10B_15 and comparable 3-state buffers
+#		of technology CMOS, VCC = 5V;
+#
+# RefSource
+#	Component    : PALC22V10B_15;
+#	Manufacturer : CYP;
+#	Buffername   : TRIBUF;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+3
+-2.490000e+00   -6.000000e-04
+-6.200000e-01   0.000000e+00
+7.000000e+00   0.000000e+00
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:PALC22V10_25_325_S0_tri.mac
+###############################################################################
+#
+# Header      : 1.0;
+# Filename    : PALC22V10_25_325_S0_tri.mac;
+# FileRev     : 1.0;
+# Date        : Fri May 23 15:00:00 1997;
+# Permission  : ;
+# Simulator   : 2;
+# Modeltype   : 4;
+# Technology  : CMOS;
+# Changes     : None;
+# Notes       : generated for CYP PALC22V10_25 and comparable 3-state buffers
+#		of technology CMOS, VCC = 5V;
+#
+# RefSource
+#	Component    : PALC22V10_25;
+#	Manufacturer : CYP;
+#	Buffername   : TRIBUF;
+#	Buffertype   : TRI->IN;
+#	Pins         : Outputs;
+#	Method       : MEASUREMENT;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : Typical;
+#	Temperature   : 25.000;
+#	SupplyVolt    : 5.000;
+#	RefVolt       : None;
+#	GndPackage    : IMPLICIT;
+#	VccPackage    : IMPLICIT;
+#	SigPackage    : IMPLICIT;
+#	TermLineImp   : 50.000;
+#	TermLineDelay : 5.000e-09;
+#	Notes         : None;
+#
+# LinearModel
+#	Resistance  : 1.000000e+09;
+#	Capacitance : 8.000000e-12;
+#	Inductance  : None;
+#	GndClamp    : None;
+#	PowClamp    : None;
+#	Notes       : None;
+#
+############################################################################
+MOD_STRUC 4
+INPUT_CHAR
+3
+-2.490000e+00   -6.000000e-04
+-6.200000e-01   0.000000e+00
+7.000000e+00   0.000000e+00
+CAPACITY
+c0      8.000000e-12
+k1      0.000000e+00
+END
+@IDBM:S_025_S0_tri.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : S_025_S0_tri.mac;
+#  FileRev    : 2.0;
+#  Date       : 02/03/97;
+#  Permission : ;
+#  Simulator  : 2;
+#  Modeltype  : 0;
+#  Technology : S;
+#  Changes    : None;
+#  Notes      : generated for TI SN74S240 and comparable 3-state buffers
+#		of technology S, VCC = 5V, GND clamping diodes;
+#
+#  RefSource
+#     Component     : SN74S240;
+#     Manufacturer  : TI;
+#     Buffername    : TRIBUF;
+#     Buffertype    : TRI->IN;
+#     Pins          : Outputs;
+#     Method        : Measurement;
+#     Copyright     : None;
+#     Disclaimer    : None;
+#     Notes         : GND Clamping Diodes;
+#
+#  RefCondition
+#     Process       : Typical;
+#     Temperature   : 25;
+#     SupplyVolt    : 5.000;
+#     RefVolt       : None;
+#     GndPackage    : Implicit;
+#     VccPackage    : Implicit;
+#     SigPackage    : Implicit;
+#     TermLineImp   : 50.000;
+#     TermLineDelay : 5.000e-09;
+#     Notes         : None;
+#
+#  
+#  LinearModel                  
+#     Resistance    : 1e6;
+#     Capacitance   : 8e-12;
+#     Inductance    : None;
+#     GndClamp      : None;
+#     PowClamp      : None;
+#     Notes         : None;
+#  
+###############################################################################
+MOD_STRUC 0
+INPUT_CHAR
+anz_int  15
+uu    -2.000000e+01
+uo    -8.700000e-01
+i0    1.777154e-01
+ g    2.446154e-01
+uu    -8.700000e-01
+uo    -7.600000e-01
+i0    9.935455e-02
+ g    1.545455e-01
+uu    -7.600000e-01
+uo    -6.600000e-01
+i0    5.106000e-02
+ g    9.100000e-02
+uu    -6.600000e-01
+uo    -5.700000e-01
+i0    2.840000e-02
+ g    5.666667e-02
+uu    -5.700000e-01
+uo    -5.200000e-01
+i0    1.776000e-02
+ g    3.800000e-02
+uu    -5.200000e-01
+uo    -4.900000e-01
+i0    1.186667e-02
+ g    2.666667e-02
+uu    -4.900000e-01
+uo    -4.700000e-01
+i0    8.600000e-03
+ g    2.000000e-02
+uu    -4.700000e-01
+uo    -4.200000e-01
+i0    3.900000e-03
+ g    1.000000e-02
+uu    -4.200000e-01
+uo    -4.000000e-01
+i0    -3.000000e-04
+ g    0.000000e+00
+uu    -4.000000e-01
+uo    -3.900000e-01
+i0    3.700000e-03
+ g    1.000000e-02
+uu    -3.900000e-01
+uo    9.500000e-01
+i0    -2.000000e-04
+ g    0.000000e+00
+uu    9.500000e-01
+uo    9.800000e-01
+i0    -3.366667e-03
+ g    3.333333e-03
+uu    9.800000e-01
+uo    5.430000e+00
+i0    -1.000000e-04
+ g    0.000000e+00
+uu    5.430000e+00
+uo    5.440000e+00
+i0    -5.440000e-02
+ g    1.000000e-02
+uu    5.440000e+00
+uo     2.000000e+01
+i0    -0.000000e+00
+ g    0.000000e+00
+CAPACITY
+c0e   8.e-12
+k1e   0.0
+END

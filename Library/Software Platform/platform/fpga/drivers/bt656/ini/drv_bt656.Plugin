@@ -1,0 +1,49 @@
+[Plugin]
+Name=drv_bt656
+Caption=BT656 Video Capture Driver
+Description=BT656 Video Capture Controller Driver
+Bitmap=drv_bt656.bmp
+Implement=drv_bt656
+SourceDir=platform\fpga\drivers\bt656\src
+
+[Option0]
+GUIName=Thread Safe Operation
+Name=USE_MUTEX
+Description=Use a mutex to protect access to BT656 devices.
+Kind=BOOLEAN
+DefaultValue=FALSE
+
+[Option0_Available_If0]
+Kind=FALSE
+Object=posix_threads
+Condition=EQ
+
+[Instance]
+Require0=per_bt656
+
+[Instance_Option0]
+Name=color_mode
+GUIName=Color Mode
+Description=Video color mode.
+Kind=ENUM
+Enum0=GREY8
+Enum1=GREY16
+Enum2=GREY32
+Enum3=RGB8
+Enum4=RGB16
+Enum5=RGB32
+DefaultValue=RGB16
+
+[Instance_Option1]
+Name=line_size
+GUIName=Output Device Width
+Description=Width of the video output device in pixels.
+Kind=UINT16
+DefaultValue=720
+
+[Instance_Option2]
+Name=input_line_size
+GUIName=Input Video Width
+Description=Width of the video input in pixels.
+Kind=UINT16
+DefaultValue=720

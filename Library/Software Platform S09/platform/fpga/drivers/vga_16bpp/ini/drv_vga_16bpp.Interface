@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_vga_16bpp
+Category=DRIVER
+System=False
+Description=VGA 16BPP graphics driver
+PublicDir=platform\fpga\drivers\vga_16bpp\include
+

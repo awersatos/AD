@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_cs4270
+Category=DRIVER
+System=False
+Description=CS4270 stereo audio CODEC controller
+PublicDir=platform\fpga\drivers\cs4270\include
+

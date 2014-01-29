@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_iglooplus
+
+[Library]
+ovi_iglooplus=.\ovi_iglooplus.LIB
+
+[$LibMap$]
+ovi_iglooplus=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_ovi_iglooplus.do=-1
+/iglooplus.v=-1
+
+[Files.Data]
+.\src\update_ovi_iglooplus.do=Macro
+.\src\iglooplus.v=Verilog Source Code
+

@@ -1,0 +1,2919 @@
+V 000039 56 30776 1265381482524 SBRAMA
+(_unit SBRAMA
+	(_specify
+		(_modpath parallel unknown 0 650
+			(_port CLKA in )
+			(_port DOA0 out )
+		)
+		(_modpath parallel unknown 0 651
+			(_port CLKA in )
+			(_port DOA1 out )
+		)
+		(_modpath parallel unknown 0 652
+			(_port CLKA in )
+			(_port DOA2 out )
+		)
+		(_modpath parallel unknown 0 653
+			(_port CLKA in )
+			(_port DOA3 out )
+		)
+		(_modpath parallel unknown 0 654
+			(_port CLKA in )
+			(_port DOA4 out )
+		)
+		(_modpath parallel unknown 0 655
+			(_port CLKA in )
+			(_port DOA5 out )
+		)
+		(_modpath parallel unknown 0 656
+			(_port CLKA in )
+			(_port DOA6 out )
+		)
+		(_modpath parallel unknown 0 657
+			(_port CLKA in )
+			(_port DOA7 out )
+		)
+		(_modpath parallel unknown 0 658
+			(_port CLKA in )
+			(_port DOA8 out )
+		)
+		(_modpath parallel unknown 0 659
+			(_port CLKA in )
+			(_port DOA9 out )
+		)
+		(_modpath parallel unknown 0 660
+			(_port CLKA in )
+			(_port DOA10 out )
+		)
+		(_modpath parallel unknown 0 661
+			(_port CLKA in )
+			(_port DOA11 out )
+		)
+		(_modpath parallel unknown 0 662
+			(_port CLKA in )
+			(_port DOA12 out )
+		)
+		(_modpath parallel unknown 0 663
+			(_port CLKA in )
+			(_port DOA13 out )
+		)
+		(_modpath parallel unknown 0 664
+			(_port CLKA in )
+			(_port DOA14 out )
+		)
+		(_modpath parallel unknown 0 665
+			(_port CLKA in )
+			(_port DOA15 out )
+		)
+		(_modpath parallel unknown 0 666
+			(_port CLKA in )
+			(_port DOA16 out )
+		)
+		(_modpath parallel unknown 0 667
+			(_port CLKA in )
+			(_port DOA17 out )
+		)
+		(_modpath parallel unknown 0 668
+			(_port CLKB in )
+			(_port DOB0 out )
+		)
+		(_modpath parallel unknown 0 669
+			(_port CLKB in )
+			(_port DOB1 out )
+		)
+		(_modpath parallel unknown 0 670
+			(_port CLKB in )
+			(_port DOB2 out )
+		)
+		(_modpath parallel unknown 0 671
+			(_port CLKB in )
+			(_port DOB3 out )
+		)
+		(_modpath parallel unknown 0 672
+			(_port CLKB in )
+			(_port DOB4 out )
+		)
+		(_modpath parallel unknown 0 673
+			(_port CLKB in )
+			(_port DOB5 out )
+		)
+		(_modpath parallel unknown 0 674
+			(_port CLKB in )
+			(_port DOB6 out )
+		)
+		(_modpath parallel unknown 0 675
+			(_port CLKB in )
+			(_port DOB7 out )
+		)
+		(_modpath parallel unknown 0 676
+			(_port CLKB in )
+			(_port DOB8 out )
+		)
+		(_modpath parallel unknown 0 677
+			(_port CLKB in )
+			(_port DOB9 out )
+		)
+		(_modpath parallel unknown 0 678
+			(_port CLKB in )
+			(_port DOB10 out )
+		)
+		(_modpath parallel unknown 0 679
+			(_port CLKB in )
+			(_port DOB11 out )
+		)
+		(_modpath parallel unknown 0 680
+			(_port CLKB in )
+			(_port DOB12 out )
+		)
+		(_modpath parallel unknown 0 681
+			(_port CLKB in )
+			(_port DOB13 out )
+		)
+		(_modpath parallel unknown 0 682
+			(_port CLKB in )
+			(_port DOB14 out )
+		)
+		(_modpath parallel unknown 0 683
+			(_port CLKB in )
+			(_port DOB15 out )
+		)
+		(_modpath parallel unknown 0 684
+			(_port CLKB in )
+			(_port DOB16 out )
+		)
+		(_modpath parallel unknown 0 685
+			(_port CLKB in )
+			(_port DOB17 out )
+		)
+		(_modpath parallel unknown 0 686
+			(_port CLKB in )
+			(_port DOA0 out )
+		)
+		(_modpath parallel unknown 0 687
+			(_port CLKB in )
+			(_port DOA1 out )
+		)
+		(_modpath parallel unknown 0 688
+			(_port CLKB in )
+			(_port DOA2 out )
+		)
+		(_modpath parallel unknown 0 689
+			(_port CLKB in )
+			(_port DOA3 out )
+		)
+		(_modpath parallel unknown 0 690
+			(_port CLKB in )
+			(_port DOA4 out )
+		)
+		(_modpath parallel unknown 0 691
+			(_port CLKB in )
+			(_port DOA5 out )
+		)
+		(_modpath parallel unknown 0 692
+			(_port CLKB in )
+			(_port DOA6 out )
+		)
+		(_modpath parallel unknown 0 693
+			(_port CLKB in )
+			(_port DOA7 out )
+		)
+		(_modpath parallel unknown 0 694
+			(_port CLKB in )
+			(_port DOA8 out )
+		)
+		(_modpath parallel unknown 0 695
+			(_port CLKB in )
+			(_port DOA9 out )
+		)
+		(_modpath parallel unknown 0 696
+			(_port CLKB in )
+			(_port DOA10 out )
+		)
+		(_modpath parallel unknown 0 697
+			(_port CLKB in )
+			(_port DOA11 out )
+		)
+		(_modpath parallel unknown 0 698
+			(_port CLKB in )
+			(_port DOA12 out )
+		)
+		(_modpath parallel unknown 0 699
+			(_port CLKB in )
+			(_port DOA13 out )
+		)
+		(_modpath parallel unknown 0 700
+			(_port CLKB in )
+			(_port DOA14 out )
+		)
+		(_modpath parallel unknown 0 701
+			(_port CLKB in )
+			(_port DOA15 out )
+		)
+		(_modpath parallel unknown 0 702
+			(_port CLKB in )
+			(_port DOA16 out )
+		)
+		(_modpath parallel unknown 0 703
+			(_port CLKB in )
+			(_port DOA17 out )
+		)
+		(_modpath parallel unknown 0 704
+			(_port RSTA in )
+			(_port DOA0 out )
+		)
+		(_modpath parallel unknown 0 705
+			(_port RSTA in )
+			(_port DOA1 out )
+		)
+		(_modpath parallel unknown 0 706
+			(_port RSTA in )
+			(_port DOA2 out )
+		)
+		(_modpath parallel unknown 0 707
+			(_port RSTA in )
+			(_port DOA3 out )
+		)
+		(_modpath parallel unknown 0 708
+			(_port RSTA in )
+			(_port DOA4 out )
+		)
+		(_modpath parallel unknown 0 709
+			(_port RSTA in )
+			(_port DOA5 out )
+		)
+		(_modpath parallel unknown 0 710
+			(_port RSTA in )
+			(_port DOA6 out )
+		)
+		(_modpath parallel unknown 0 711
+			(_port RSTA in )
+			(_port DOA7 out )
+		)
+		(_modpath parallel unknown 0 712
+			(_port RSTA in )
+			(_port DOA8 out )
+		)
+		(_modpath parallel unknown 0 713
+			(_port RSTA in )
+			(_port DOA9 out )
+		)
+		(_modpath parallel unknown 0 714
+			(_port RSTA in )
+			(_port DOA10 out )
+		)
+		(_modpath parallel unknown 0 715
+			(_port RSTA in )
+			(_port DOA11 out )
+		)
+		(_modpath parallel unknown 0 716
+			(_port RSTA in )
+			(_port DOA12 out )
+		)
+		(_modpath parallel unknown 0 717
+			(_port RSTA in )
+			(_port DOA13 out )
+		)
+		(_modpath parallel unknown 0 718
+			(_port RSTA in )
+			(_port DOA14 out )
+		)
+		(_modpath parallel unknown 0 719
+			(_port RSTA in )
+			(_port DOA15 out )
+		)
+		(_modpath parallel unknown 0 720
+			(_port RSTA in )
+			(_port DOA16 out )
+		)
+		(_modpath parallel unknown 0 721
+			(_port RSTA in )
+			(_port DOA17 out )
+		)
+		(_modpath parallel unknown 0 722
+			(_port RSTB in )
+			(_port DOB0 out )
+		)
+		(_modpath parallel unknown 0 723
+			(_port RSTB in )
+			(_port DOB1 out )
+		)
+		(_modpath parallel unknown 0 724
+			(_port RSTB in )
+			(_port DOB2 out )
+		)
+		(_modpath parallel unknown 0 725
+			(_port RSTB in )
+			(_port DOB3 out )
+		)
+		(_modpath parallel unknown 0 726
+			(_port RSTB in )
+			(_port DOB4 out )
+		)
+		(_modpath parallel unknown 0 727
+			(_port RSTB in )
+			(_port DOB5 out )
+		)
+		(_modpath parallel unknown 0 728
+			(_port RSTB in )
+			(_port DOB6 out )
+		)
+		(_modpath parallel unknown 0 729
+			(_port RSTB in )
+			(_port DOB7 out )
+		)
+		(_modpath parallel unknown 0 730
+			(_port RSTB in )
+			(_port DOB8 out )
+		)
+		(_modpath parallel unknown 0 731
+			(_port RSTB in )
+			(_port DOB9 out )
+		)
+		(_modpath parallel unknown 0 732
+			(_port RSTB in )
+			(_port DOB10 out )
+		)
+		(_modpath parallel unknown 0 733
+			(_port RSTB in )
+			(_port DOB11 out )
+		)
+		(_modpath parallel unknown 0 734
+			(_port RSTB in )
+			(_port DOB12 out )
+		)
+		(_modpath parallel unknown 0 735
+			(_port RSTB in )
+			(_port DOB13 out )
+		)
+		(_modpath parallel unknown 0 736
+			(_port RSTB in )
+			(_port DOB14 out )
+		)
+		(_modpath parallel unknown 0 737
+			(_port RSTB in )
+			(_port DOB15 out )
+		)
+		(_modpath parallel unknown 0 738
+			(_port RSTB in )
+			(_port DOB16 out )
+		)
+		(_modpath parallel unknown 0 739
+			(_port RSTB in )
+			(_port DOB17 out )
+		)
+		(_modpath parallel unknown 0 740
+			(_port RSTB in )
+			(_port DOA0 out )
+		)
+		(_modpath parallel unknown 0 741
+			(_port RSTB in )
+			(_port DOA1 out )
+		)
+		(_modpath parallel unknown 0 742
+			(_port RSTB in )
+			(_port DOA2 out )
+		)
+		(_modpath parallel unknown 0 743
+			(_port RSTB in )
+			(_port DOA3 out )
+		)
+		(_modpath parallel unknown 0 744
+			(_port RSTB in )
+			(_port DOA4 out )
+		)
+		(_modpath parallel unknown 0 745
+			(_port RSTB in )
+			(_port DOA5 out )
+		)
+		(_modpath parallel unknown 0 746
+			(_port RSTB in )
+			(_port DOA6 out )
+		)
+		(_modpath parallel unknown 0 747
+			(_port RSTB in )
+			(_port DOA7 out )
+		)
+		(_modpath parallel unknown 0 748
+			(_port RSTB in )
+			(_port DOA8 out )
+		)
+		(_modpath parallel unknown 0 749
+			(_port RSTB in )
+			(_port DOA9 out )
+		)
+		(_modpath parallel unknown 0 750
+			(_port RSTB in )
+			(_port DOA10 out )
+		)
+		(_modpath parallel unknown 0 751
+			(_port RSTB in )
+			(_port DOA11 out )
+		)
+		(_modpath parallel unknown 0 752
+			(_port RSTB in )
+			(_port DOA12 out )
+		)
+		(_modpath parallel unknown 0 753
+			(_port RSTB in )
+			(_port DOA13 out )
+		)
+		(_modpath parallel unknown 0 754
+			(_port RSTB in )
+			(_port DOA14 out )
+		)
+		(_modpath parallel unknown 0 755
+			(_port RSTB in )
+			(_port DOA15 out )
+		)
+		(_modpath parallel unknown 0 756
+			(_port RSTB in )
+			(_port DOA16 out )
+		)
+		(_modpath parallel unknown 0 757
+			(_port RSTB in )
+			(_port DOA17 out )
+		)
+		(_tchk setuphold 0 759
+			(_port CLKA_dly (posedge) (_code  2 check_dia0_posedge))
+			(_port DIA0_dly ())
+		)
+		(_tchk setuphold 0 760
+			(_port CLKA_dly (posedge) (_code  3 check_dia1_posedge))
+			(_port DIA1_dly ())
+		)
+		(_tchk setuphold 0 761
+			(_port CLKA_dly (posedge) (_code  4 check_dia2_posedge))
+			(_port DIA2_dly ())
+		)
+		(_tchk setuphold 0 762
+			(_port CLKA_dly (posedge) (_code  5 check_dia3_posedge))
+			(_port DIA3_dly ())
+		)
+		(_tchk setuphold 0 763
+			(_port CLKA_dly (posedge) (_code  6 check_dia4_posedge))
+			(_port DIA4_dly ())
+		)
+		(_tchk setuphold 0 764
+			(_port CLKA_dly (posedge) (_code  7 check_dia5_posedge))
+			(_port DIA5_dly ())
+		)
+		(_tchk setuphold 0 765
+			(_port CLKA_dly (posedge) (_code  8 check_dia6_posedge))
+			(_port DIA6_dly ())
+		)
+		(_tchk setuphold 0 766
+			(_port CLKA_dly (posedge) (_code  9 check_dia7_posedge))
+			(_port DIA7_dly ())
+		)
+		(_tchk setuphold 0 767
+			(_port CLKA_dly (posedge) (_code  10 check_dia8_posedge))
+			(_port DIA8_dly ())
+		)
+		(_tchk setuphold 0 768
+			(_port CLKA_dly (posedge) (_code  11 check_dia9_posedge))
+			(_port DIA9_dly ())
+		)
+		(_tchk setuphold 0 769
+			(_port CLKA_dly (posedge) (_code  12 check_dia10_posedge))
+			(_port DIA10_dly ())
+		)
+		(_tchk setuphold 0 770
+			(_port CLKA_dly (posedge) (_code  13 check_dia11_posedge))
+			(_port DIA11_dly ())
+		)
+		(_tchk setuphold 0 771
+			(_port CLKA_dly (posedge) (_code  14 check_dia12_posedge))
+			(_port DIA12_dly ())
+		)
+		(_tchk setuphold 0 772
+			(_port CLKA_dly (posedge) (_code  15 check_dia13_posedge))
+			(_port DIA13_dly ())
+		)
+		(_tchk setuphold 0 773
+			(_port CLKA_dly (posedge) (_code  16 check_dia14_posedge))
+			(_port DIA14_dly ())
+		)
+		(_tchk setuphold 0 774
+			(_port CLKA_dly (posedge) (_code  17 check_dia15_posedge))
+			(_port DIA15_dly ())
+		)
+		(_tchk setuphold 0 775
+			(_port CLKA_dly (posedge) (_code  18 check_dia16_posedge))
+			(_port DIA16_dly ())
+		)
+		(_tchk setuphold 0 776
+			(_port CLKA_dly (posedge) (_code  19 check_dia17_posedge))
+			(_port DIA17_dly ())
+		)
+		(_tchk setuphold 0 777
+			(_port CLKA_dly (posedge) (_code  20 check_ada0_posedge))
+			(_port ADA0_dly ())
+		)
+		(_tchk setuphold 0 778
+			(_port CLKA_dly (posedge) (_code  21 check_ada1_posedge))
+			(_port ADA1_dly ())
+		)
+		(_tchk setuphold 0 779
+			(_port CLKA_dly (posedge) (_code  22 check_ada2_posedge))
+			(_port ADA2_dly ())
+		)
+		(_tchk setuphold 0 780
+			(_port CLKA_dly (posedge) (_code  23 check_ada3_posedge))
+			(_port ADA3_dly ())
+		)
+		(_tchk setuphold 0 781
+			(_port CLKA_dly (posedge) (_code  24 check_ada4_posedge))
+			(_port ADA4_dly ())
+		)
+		(_tchk setuphold 0 782
+			(_port CLKA_dly (posedge) (_code  25 check_ada5_posedge))
+			(_port ADA5_dly ())
+		)
+		(_tchk setuphold 0 783
+			(_port CLKA_dly (posedge) (_code  26 check_ada6_posedge))
+			(_port ADA6_dly ())
+		)
+		(_tchk setuphold 0 784
+			(_port CLKA_dly (posedge) (_code  27 check_ada7_posedge))
+			(_port ADA7_dly ())
+		)
+		(_tchk setuphold 0 785
+			(_port CLKA_dly (posedge) (_code  28 check_ada8_posedge))
+			(_port ADA8_dly ())
+		)
+		(_tchk setuphold 0 786
+			(_port CLKA_dly (posedge) (_code  29 check_ada9_posedge))
+			(_port ADA9_dly ())
+		)
+		(_tchk setuphold 0 787
+			(_port CLKA_dly (posedge) (_code  30 check_ada10_posedge))
+			(_port ADA10_dly ())
+		)
+		(_tchk setuphold 0 788
+			(_port CLKA_dly (posedge) (_code  31 check_ada11_posedge))
+			(_port ADA11_dly ())
+		)
+		(_tchk setuphold 0 789
+			(_port CLKA_dly (posedge) (_code  32 check_ada12_posedge))
+			(_port ADA12_dly ())
+		)
+		(_tchk setuphold 0 790
+			(_port CLKA_dly (posedge) (_code  33 check_ada13_posedge))
+			(_port ADA13_dly ())
+		)
+		(_tchk setuphold 0 791
+			(_port CLKA_dly (posedge) (_code  34 check_cea_posedge))
+			(_port CEA_dly ())
+		)
+		(_tchk setuphold 0 792
+			(_port CLKA_dly (posedge) (_code  35 check_wea_posedge))
+			(_port WEA_dly ())
+		)
+		(_tchk setuphold 0 793
+			(_port CLKA_dly (posedge) (_code  36 check_csa0_posedge))
+			(_port CSA0_dly ())
+		)
+		(_tchk setuphold 0 794
+			(_port CLKA_dly (posedge) (_code  37 check_csa1_posedge))
+			(_port CSA1_dly ())
+		)
+		(_tchk setuphold 0 795
+			(_port CLKA_dly (posedge) (_code  38 check_csa2_posedge))
+			(_port CSA2_dly ())
+		)
+		(_tchk setuphold 0 796
+			(_port CLKA_dly (posedge) (_code  39 check_rsta_posedge))
+			(_port RSTA_dly ())
+		)
+		(_tchk setuphold 0 798
+			(_port CLKA_dly (negedge) (_code  40 check_dia0_negedge))
+			(_port DIA0_dly ())
+		)
+		(_tchk setuphold 0 799
+			(_port CLKA_dly (negedge) (_code  41 check_dia1_negedge))
+			(_port DIA1_dly ())
+		)
+		(_tchk setuphold 0 800
+			(_port CLKA_dly (negedge) (_code  42 check_dia2_negedge))
+			(_port DIA2_dly ())
+		)
+		(_tchk setuphold 0 801
+			(_port CLKA_dly (negedge) (_code  43 check_dia3_negedge))
+			(_port DIA3_dly ())
+		)
+		(_tchk setuphold 0 802
+			(_port CLKA_dly (negedge) (_code  44 check_dia4_negedge))
+			(_port DIA4_dly ())
+		)
+		(_tchk setuphold 0 803
+			(_port CLKA_dly (negedge) (_code  45 check_dia5_negedge))
+			(_port DIA5_dly ())
+		)
+		(_tchk setuphold 0 804
+			(_port CLKA_dly (negedge) (_code  46 check_dia6_negedge))
+			(_port DIA6_dly ())
+		)
+		(_tchk setuphold 0 805
+			(_port CLKA_dly (negedge) (_code  47 check_dia7_negedge))
+			(_port DIA7_dly ())
+		)
+		(_tchk setuphold 0 806
+			(_port CLKA_dly (negedge) (_code  48 check_dia8_negedge))
+			(_port DIA8_dly ())
+		)
+		(_tchk setuphold 0 807
+			(_port CLKA_dly (negedge) (_code  49 check_dia9_negedge))
+			(_port DIA9_dly ())
+		)
+		(_tchk setuphold 0 808
+			(_port CLKA_dly (negedge) (_code  50 check_dia10_negedge))
+			(_port DIA10_dly ())
+		)
+		(_tchk setuphold 0 809
+			(_port CLKA_dly (negedge) (_code  51 check_dia11_negedge))
+			(_port DIA11_dly ())
+		)
+		(_tchk setuphold 0 810
+			(_port CLKA_dly (negedge) (_code  52 check_dia12_negedge))
+			(_port DIA12_dly ())
+		)
+		(_tchk setuphold 0 811
+			(_port CLKA_dly (negedge) (_code  53 check_dia13_negedge))
+			(_port DIA13_dly ())
+		)
+		(_tchk setuphold 0 812
+			(_port CLKA_dly (negedge) (_code  54 check_dia14_negedge))
+			(_port DIA14_dly ())
+		)
+		(_tchk setuphold 0 813
+			(_port CLKA_dly (negedge) (_code  55 check_dia15_negedge))
+			(_port DIA15_dly ())
+		)
+		(_tchk setuphold 0 814
+			(_port CLKA_dly (negedge) (_code  56 check_dia16_negedge))
+			(_port DIA16_dly ())
+		)
+		(_tchk setuphold 0 815
+			(_port CLKA_dly (negedge) (_code  57 check_dia17_negedge))
+			(_port DIA17_dly ())
+		)
+		(_tchk setuphold 0 816
+			(_port CLKA_dly (negedge) (_code  58 check_ada0_negedge))
+			(_port ADA0_dly ())
+		)
+		(_tchk setuphold 0 817
+			(_port CLKA_dly (negedge) (_code  59 check_ada1_negedge))
+			(_port ADA1_dly ())
+		)
+		(_tchk setuphold 0 818
+			(_port CLKA_dly (negedge) (_code  60 check_ada2_negedge))
+			(_port ADA2_dly ())
+		)
+		(_tchk setuphold 0 819
+			(_port CLKA_dly (negedge) (_code  61 check_ada3_negedge))
+			(_port ADA3_dly ())
+		)
+		(_tchk setuphold 0 820
+			(_port CLKA_dly (negedge) (_code  62 check_ada4_negedge))
+			(_port ADA4_dly ())
+		)
+		(_tchk setuphold 0 821
+			(_port CLKA_dly (negedge) (_code  63 check_ada5_negedge))
+			(_port ADA5_dly ())
+		)
+		(_tchk setuphold 0 822
+			(_port CLKA_dly (negedge) (_code  64 check_ada6_negedge))
+			(_port ADA6_dly ())
+		)
+		(_tchk setuphold 0 823
+			(_port CLKA_dly (negedge) (_code  65 check_ada7_negedge))
+			(_port ADA7_dly ())
+		)
+		(_tchk setuphold 0 824
+			(_port CLKA_dly (negedge) (_code  66 check_ada8_negedge))
+			(_port ADA8_dly ())
+		)
+		(_tchk setuphold 0 825
+			(_port CLKA_dly (negedge) (_code  67 check_ada9_negedge))
+			(_port ADA9_dly ())
+		)
+		(_tchk setuphold 0 826
+			(_port CLKA_dly (negedge) (_code  68 check_ada10_negedge))
+			(_port ADA10_dly ())
+		)
+		(_tchk setuphold 0 827
+			(_port CLKA_dly (negedge) (_code  69 check_ada11_negedge))
+			(_port ADA11_dly ())
+		)
+		(_tchk setuphold 0 828
+			(_port CLKA_dly (negedge) (_code  70 check_ada12_negedge))
+			(_port ADA12_dly ())
+		)
+		(_tchk setuphold 0 829
+			(_port CLKA_dly (negedge) (_code  71 check_ada13_negedge))
+			(_port ADA13_dly ())
+		)
+		(_tchk setuphold 0 830
+			(_port CLKA_dly (negedge) (_code  72 check_cea_negedge))
+			(_port CEA_dly ())
+		)
+		(_tchk setuphold 0 831
+			(_port CLKA_dly (negedge) (_code  73 check_wea_negedge))
+			(_port WEA_dly ())
+		)
+		(_tchk setuphold 0 832
+			(_port CLKA_dly (negedge) (_code  74 check_csa0_negedge))
+			(_port CSA0_dly ())
+		)
+		(_tchk setuphold 0 833
+			(_port CLKA_dly (negedge) (_code  75 check_csa1_negedge))
+			(_port CSA1_dly ())
+		)
+		(_tchk setuphold 0 834
+			(_port CLKA_dly (negedge) (_code  76 check_csa2_negedge))
+			(_port CSA2_dly ())
+		)
+		(_tchk setuphold 0 835
+			(_port CLKA_dly (negedge) (_code  77 check_rsta_negedge))
+			(_port RSTA_dly ())
+		)
+		(_tchk setuphold 0 837
+			(_port CLKB_dly (posedge) (_code  78 check_dib0_posedge))
+			(_port DIB0_dly ())
+		)
+		(_tchk setuphold 0 838
+			(_port CLKB_dly (posedge) (_code  79 check_dib1_posedge))
+			(_port DIB1_dly ())
+		)
+		(_tchk setuphold 0 839
+			(_port CLKB_dly (posedge) (_code  80 check_dib2_posedge))
+			(_port DIB2_dly ())
+		)
+		(_tchk setuphold 0 840
+			(_port CLKB_dly (posedge) (_code  81 check_dib3_posedge))
+			(_port DIB3_dly ())
+		)
+		(_tchk setuphold 0 841
+			(_port CLKB_dly (posedge) (_code  82 check_dib4_posedge))
+			(_port DIB4_dly ())
+		)
+		(_tchk setuphold 0 842
+			(_port CLKB_dly (posedge) (_code  83 check_dib5_posedge))
+			(_port DIB5_dly ())
+		)
+		(_tchk setuphold 0 843
+			(_port CLKB_dly (posedge) (_code  84 check_dib6_posedge))
+			(_port DIB6_dly ())
+		)
+		(_tchk setuphold 0 844
+			(_port CLKB_dly (posedge) (_code  85 check_dib7_posedge))
+			(_port DIB7_dly ())
+		)
+		(_tchk setuphold 0 845
+			(_port CLKB_dly (posedge) (_code  86 check_dib8_posedge))
+			(_port DIB8_dly ())
+		)
+		(_tchk setuphold 0 846
+			(_port CLKB_dly (posedge) (_code  87 check_dib9_posedge))
+			(_port DIB9_dly ())
+		)
+		(_tchk setuphold 0 847
+			(_port CLKB_dly (posedge) (_code  88 check_dib10_posedge))
+			(_port DIB10_dly ())
+		)
+		(_tchk setuphold 0 848
+			(_port CLKB_dly (posedge) (_code  89 check_dib11_posedge))
+			(_port DIB11_dly ())
+		)
+		(_tchk setuphold 0 849
+			(_port CLKB_dly (posedge) (_code  90 check_dib12_posedge))
+			(_port DIB12_dly ())
+		)
+		(_tchk setuphold 0 850
+			(_port CLKB_dly (posedge) (_code  91 check_dib13_posedge))
+			(_port DIB13_dly ())
+		)
+		(_tchk setuphold 0 851
+			(_port CLKB_dly (posedge) (_code  92 check_dib14_posedge))
+			(_port DIB14_dly ())
+		)
+		(_tchk setuphold 0 852
+			(_port CLKB_dly (posedge) (_code  93 check_dib15_posedge))
+			(_port DIB15_dly ())
+		)
+		(_tchk setuphold 0 853
+			(_port CLKB_dly (posedge) (_code  94 check_dib16_posedge))
+			(_port DIB16_dly ())
+		)
+		(_tchk setuphold 0 854
+			(_port CLKB_dly (posedge) (_code  95 check_dib17_posedge))
+			(_port DIB17_dly ())
+		)
+		(_tchk setuphold 0 855
+			(_port CLKB_dly (posedge) (_code  96 check_adb0_posedge))
+			(_port ADB0_dly ())
+		)
+		(_tchk setuphold 0 856
+			(_port CLKB_dly (posedge) (_code  97 check_adb1_posedge))
+			(_port ADB1_dly ())
+		)
+		(_tchk setuphold 0 857
+			(_port CLKB_dly (posedge) (_code  98 check_adb2_posedge))
+			(_port ADB2_dly ())
+		)
+		(_tchk setuphold 0 858
+			(_port CLKB_dly (posedge) (_code  99 check_adb3_posedge))
+			(_port ADB3_dly ())
+		)
+		(_tchk setuphold 0 859
+			(_port CLKB_dly (posedge) (_code  100 check_adb4_posedge))
+			(_port ADB4_dly ())
+		)
+		(_tchk setuphold 0 860
+			(_port CLKB_dly (posedge) (_code  101 check_adb5_posedge))
+			(_port ADB5_dly ())
+		)
+		(_tchk setuphold 0 861
+			(_port CLKB_dly (posedge) (_code  102 check_adb6_posedge))
+			(_port ADB6_dly ())
+		)
+		(_tchk setuphold 0 862
+			(_port CLKB_dly (posedge) (_code  103 check_adb7_posedge))
+			(_port ADB7_dly ())
+		)
+		(_tchk setuphold 0 863
+			(_port CLKB_dly (posedge) (_code  104 check_adb8_posedge))
+			(_port ADB8_dly ())
+		)
+		(_tchk setuphold 0 864
+			(_port CLKB_dly (posedge) (_code  105 check_adb9_posedge))
+			(_port ADB9_dly ())
+		)
+		(_tchk setuphold 0 865
+			(_port CLKB_dly (posedge) (_code  106 check_adb10_posedge))
+			(_port ADB10_dly ())
+		)
+		(_tchk setuphold 0 866
+			(_port CLKB_dly (posedge) (_code  107 check_adb11_posedge))
+			(_port ADB11_dly ())
+		)
+		(_tchk setuphold 0 867
+			(_port CLKB_dly (posedge) (_code  108 check_adb12_posedge))
+			(_port ADB12_dly ())
+		)
+		(_tchk setuphold 0 868
+			(_port CLKB_dly (posedge) (_code  109 check_adb13_posedge))
+			(_port ADB13_dly ())
+		)
+		(_tchk setuphold 0 869
+			(_port CLKB_dly (posedge) (_code  110 check_ceb_posedge))
+			(_port CEB_dly ())
+		)
+		(_tchk setuphold 0 870
+			(_port CLKB_dly (posedge) (_code  111 check_web_posedge))
+			(_port WEB_dly ())
+		)
+		(_tchk setuphold 0 871
+			(_port CLKB_dly (posedge) (_code  112 check_csb0_posedge))
+			(_port CSB0_dly ())
+		)
+		(_tchk setuphold 0 872
+			(_port CLKB_dly (posedge) (_code  113 check_csb1_posedge))
+			(_port CSB1_dly ())
+		)
+		(_tchk setuphold 0 873
+			(_port CLKB_dly (posedge) (_code  114 check_csb2_posedge))
+			(_port CSB2_dly ())
+		)
+		(_tchk setuphold 0 874
+			(_port CLKB_dly (posedge) (_code  115 check_rstb_posedge))
+			(_port RSTB_dly ())
+		)
+		(_tchk setuphold 0 876
+			(_port CLKB_dly (negedge) (_code  116 check_dib0_negedge))
+			(_port DIB0_dly ())
+		)
+		(_tchk setuphold 0 877
+			(_port CLKB_dly (negedge) (_code  117 check_dib1_negedge))
+			(_port DIB1_dly ())
+		)
+		(_tchk setuphold 0 878
+			(_port CLKB_dly (negedge) (_code  118 check_dib2_negedge))
+			(_port DIB2_dly ())
+		)
+		(_tchk setuphold 0 879
+			(_port CLKB_dly (negedge) (_code  119 check_dib3_negedge))
+			(_port DIB3_dly ())
+		)
+		(_tchk setuphold 0 880
+			(_port CLKB_dly (negedge) (_code  120 check_dib4_negedge))
+			(_port DIB4_dly ())
+		)
+		(_tchk setuphold 0 881
+			(_port CLKB_dly (negedge) (_code  121 check_dib5_negedge))
+			(_port DIB5_dly ())
+		)
+		(_tchk setuphold 0 882
+			(_port CLKB_dly (negedge) (_code  122 check_dib6_negedge))
+			(_port DIB6_dly ())
+		)
+		(_tchk setuphold 0 883
+			(_port CLKB_dly (negedge) (_code  123 check_dib7_negedge))
+			(_port DIB7_dly ())
+		)
+		(_tchk setuphold 0 884
+			(_port CLKB_dly (negedge) (_code  124 check_dib8_negedge))
+			(_port DIB8_dly ())
+		)
+		(_tchk setuphold 0 885
+			(_port CLKB_dly (negedge) (_code  125 check_dib9_negedge))
+			(_port DIB9_dly ())
+		)
+		(_tchk setuphold 0 886
+			(_port CLKB_dly (negedge) (_code  126 check_dib10_negedge))
+			(_port DIB10_dly ())
+		)
+		(_tchk setuphold 0 887
+			(_port CLKB_dly (negedge) (_code  127 check_dib11_negedge))
+			(_port DIB11_dly ())
+		)
+		(_tchk setuphold 0 888
+			(_port CLKB_dly (negedge) (_code  128 check_dib12_negedge))
+			(_port DIB12_dly ())
+		)
+		(_tchk setuphold 0 889
+			(_port CLKB_dly (negedge) (_code  129 check_dib13_negedge))
+			(_port DIB13_dly ())
+		)
+		(_tchk setuphold 0 890
+			(_port CLKB_dly (negedge) (_code  130 check_dib14_negedge))
+			(_port DIB14_dly ())
+		)
+		(_tchk setuphold 0 891
+			(_port CLKB_dly (negedge) (_code  131 check_dib15_negedge))
+			(_port DIB15_dly ())
+		)
+		(_tchk setuphold 0 892
+			(_port CLKB_dly (negedge) (_code  132 check_dib16_negedge))
+			(_port DIB16_dly ())
+		)
+		(_tchk setuphold 0 893
+			(_port CLKB_dly (negedge) (_code  133 check_dib17_negedge))
+			(_port DIB17_dly ())
+		)
+		(_tchk setuphold 0 894
+			(_port CLKB_dly (negedge) (_code  134 check_adb0_negedge))
+			(_port ADB0_dly ())
+		)
+		(_tchk setuphold 0 895
+			(_port CLKB_dly (negedge) (_code  135 check_adb1_negedge))
+			(_port ADB1_dly ())
+		)
+		(_tchk setuphold 0 896
+			(_port CLKB_dly (negedge) (_code  136 check_adb2_negedge))
+			(_port ADB2_dly ())
+		)
+		(_tchk setuphold 0 897
+			(_port CLKB_dly (negedge) (_code  137 check_adb3_negedge))
+			(_port ADB3_dly ())
+		)
+		(_tchk setuphold 0 898
+			(_port CLKB_dly (negedge) (_code  138 check_adb4_negedge))
+			(_port ADB4_dly ())
+		)
+		(_tchk setuphold 0 899
+			(_port CLKB_dly (negedge) (_code  139 check_adb5_negedge))
+			(_port ADB5_dly ())
+		)
+		(_tchk setuphold 0 900
+			(_port CLKB_dly (negedge) (_code  140 check_adb6_negedge))
+			(_port ADB6_dly ())
+		)
+		(_tchk setuphold 0 901
+			(_port CLKB_dly (negedge) (_code  141 check_adb7_negedge))
+			(_port ADB7_dly ())
+		)
+		(_tchk setuphold 0 902
+			(_port CLKB_dly (negedge) (_code  142 check_adb8_negedge))
+			(_port ADB8_dly ())
+		)
+		(_tchk setuphold 0 903
+			(_port CLKB_dly (negedge) (_code  143 check_adb9_negedge))
+			(_port ADB9_dly ())
+		)
+		(_tchk setuphold 0 904
+			(_port CLKB_dly (negedge) (_code  144 check_adb10_negedge))
+			(_port ADB10_dly ())
+		)
+		(_tchk setuphold 0 905
+			(_port CLKB_dly (negedge) (_code  145 check_adb11_negedge))
+			(_port ADB11_dly ())
+		)
+		(_tchk setuphold 0 906
+			(_port CLKB_dly (negedge) (_code  146 check_adb12_negedge))
+			(_port ADB12_dly ())
+		)
+		(_tchk setuphold 0 907
+			(_port CLKB_dly (negedge) (_code  147 check_adb13_negedge))
+			(_port ADB13_dly ())
+		)
+		(_tchk setuphold 0 908
+			(_port CLKB_dly (negedge) (_code  148 check_ceb_negedge))
+			(_port CEB_dly ())
+		)
+		(_tchk setuphold 0 909
+			(_port CLKB_dly (negedge) (_code  149 check_web_negedge))
+			(_port WEB_dly ())
+		)
+		(_tchk setuphold 0 910
+			(_port CLKB_dly (negedge) (_code  150 check_csb0_negedge))
+			(_port CSB0_dly ())
+		)
+		(_tchk setuphold 0 911
+			(_port CLKB_dly (negedge) (_code  151 check_csb1_negedge))
+			(_port CSB1_dly ())
+		)
+		(_tchk setuphold 0 912
+			(_port CLKB_dly (negedge) (_code  152 check_csb2_negedge))
+			(_port CSB2_dly ())
+		)
+		(_tchk setuphold 0 913
+			(_port CLKB_dly (negedge) (_code  153 check_rstb_negedge))
+			(_port RSTB_dly ())
+		)
+		(_tchk setuphold 0 915
+			(_port CLKA_dly (posedge) (_code  154 check_dib0_clka_posedge))
+			(_port DIB0_dly ())
+		)
+		(_tchk setuphold 0 916
+			(_port CLKA_dly (posedge) (_code  155 check_dib1_clka_posedge))
+			(_port DIB1_dly ())
+		)
+		(_tchk setuphold 0 917
+			(_port CLKA_dly (posedge) (_code  156 check_dib2_clka_posedge))
+			(_port DIB2_dly ())
+		)
+		(_tchk setuphold 0 918
+			(_port CLKA_dly (posedge) (_code  157 check_dib3_clka_posedge))
+			(_port DIB3_dly ())
+		)
+		(_tchk setuphold 0 919
+			(_port CLKA_dly (posedge) (_code  158 check_dib4_clka_posedge))
+			(_port DIB4_dly ())
+		)
+		(_tchk setuphold 0 920
+			(_port CLKA_dly (posedge) (_code  159 check_dib5_clka_posedge))
+			(_port DIB5_dly ())
+		)
+		(_tchk setuphold 0 921
+			(_port CLKA_dly (posedge) (_code  160 check_dib6_clka_posedge))
+			(_port DIB6_dly ())
+		)
+		(_tchk setuphold 0 922
+			(_port CLKA_dly (posedge) (_code  161 check_dib7_clka_posedge))
+			(_port DIB7_dly ())
+		)
+		(_tchk setuphold 0 923
+			(_port CLKA_dly (posedge) (_code  162 check_dib8_clka_posedge))
+			(_port DIB8_dly ())
+		)
+		(_tchk setuphold 0 924
+			(_port CLKA_dly (posedge) (_code  163 check_dib9_clka_posedge))
+			(_port DIB9_dly ())
+		)
+		(_tchk setuphold 0 925
+			(_port CLKA_dly (posedge) (_code  164 check_dib10_clka_posedge))
+			(_port DIB10_dly ())
+		)
+		(_tchk setuphold 0 926
+			(_port CLKA_dly (posedge) (_code  165 check_dib11_clka_posedge))
+			(_port DIB11_dly ())
+		)
+		(_tchk setuphold 0 927
+			(_port CLKA_dly (posedge) (_code  166 check_dib12_clka_posedge))
+			(_port DIB12_dly ())
+		)
+		(_tchk setuphold 0 928
+			(_port CLKA_dly (posedge) (_code  167 check_dib13_clka_posedge))
+			(_port DIB13_dly ())
+		)
+		(_tchk setuphold 0 929
+			(_port CLKA_dly (posedge) (_code  168 check_dib14_clka_posedge))
+			(_port DIB14_dly ())
+		)
+		(_tchk setuphold 0 930
+			(_port CLKA_dly (posedge) (_code  169 check_dib15_clka_posedge))
+			(_port DIB15_dly ())
+		)
+		(_tchk setuphold 0 931
+			(_port CLKA_dly (posedge) (_code  170 check_dib16_clka_posedge))
+			(_port DIB16_dly ())
+		)
+		(_tchk setuphold 0 932
+			(_port CLKA_dly (posedge) (_code  171 check_dib17_clka_posedge))
+			(_port DIB17_dly ())
+		)
+		(_tchk setuphold 0 934
+			(_port CLKA_dly (negedge) (_code  172 check_dib0_clka_negedge))
+			(_port DIB0_dly ())
+		)
+		(_tchk setuphold 0 935
+			(_port CLKA_dly (negedge) (_code  173 check_dib1_clka_negedge))
+			(_port DIB1_dly ())
+		)
+		(_tchk setuphold 0 936
+			(_port CLKA_dly (negedge) (_code  174 check_dib2_clka_negedge))
+			(_port DIB2_dly ())
+		)
+		(_tchk setuphold 0 937
+			(_port CLKA_dly (negedge) (_code  175 check_dib3_clka_negedge))
+			(_port DIB3_dly ())
+		)
+		(_tchk setuphold 0 938
+			(_port CLKA_dly (negedge) (_code  176 check_dib4_clka_negedge))
+			(_port DIB4_dly ())
+		)
+		(_tchk setuphold 0 939
+			(_port CLKA_dly (negedge) (_code  177 check_dib5_clka_negedge))
+			(_port DIB5_dly ())
+		)
+		(_tchk setuphold 0 940
+			(_port CLKA_dly (negedge) (_code  178 check_dib6_clka_negedge))
+			(_port DIB6_dly ())
+		)
+		(_tchk setuphold 0 941
+			(_port CLKA_dly (negedge) (_code  179 check_dib7_clka_negedge))
+			(_port DIB7_dly ())
+		)
+		(_tchk setuphold 0 942
+			(_port CLKA_dly (negedge) (_code  180 check_dib8_clka_negedge))
+			(_port DIB8_dly ())
+		)
+		(_tchk setuphold 0 943
+			(_port CLKA_dly (negedge) (_code  181 check_dib9_clka_negedge))
+			(_port DIB9_dly ())
+		)
+		(_tchk setuphold 0 944
+			(_port CLKA_dly (negedge) (_code  182 check_dib10_clka_negedge))
+			(_port DIB10_dly ())
+		)
+		(_tchk setuphold 0 945
+			(_port CLKA_dly (negedge) (_code  183 check_dib11_clka_negedge))
+			(_port DIB11_dly ())
+		)
+		(_tchk setuphold 0 946
+			(_port CLKA_dly (negedge) (_code  184 check_dib12_clka_negedge))
+			(_port DIB12_dly ())
+		)
+		(_tchk setuphold 0 947
+			(_port CLKA_dly (negedge) (_code  185 check_dib13_clka_negedge))
+			(_port DIB13_dly ())
+		)
+		(_tchk setuphold 0 948
+			(_port CLKA_dly (negedge) (_code  186 check_dib14_clka_negedge))
+			(_port DIB14_dly ())
+		)
+		(_tchk setuphold 0 949
+			(_port CLKA_dly (negedge) (_code  187 check_dib15_clka_negedge))
+			(_port DIB15_dly ())
+		)
+		(_tchk setuphold 0 950
+			(_port CLKA_dly (negedge) (_code  188 check_dib16_clka_negedge))
+			(_port DIB16_dly ())
+		)
+		(_tchk setuphold 0 951
+			(_port CLKA_dly (negedge) (_code  189 check_dib17_clka_negedge))
+			(_port DIB17_dly ())
+		)
+		(_tchk width 0 953
+			(_port CLKA_dly (posedge))
+		)
+		(_tchk width 0 954
+			(_port CLKA_dly (negedge))
+		)
+		(_tchk width 0 955
+			(_port CLKB_dly (posedge))
+		)
+		(_tchk width 0 956
+			(_port CLKB_dly (negedge))
+		)
+		(_tchk width 0 957
+			(_port RSTA_dly (posedge))
+		)
+		(_tchk width 0 958
+			(_port RSTA_dly (negedge))
+		)
+		(_tchk width 0 959
+			(_port RSTB_dly (posedge))
+		)
+		(_tchk width 0 960
+			(_port RSTB_dly (negedge))
+		)
+	)
+)
+V 000040 56 10124 1265381482556 SDPRAMA
+(_unit SDPRAMA
+	(_specify
+		(_modpath parallel unknown 0 408
+			(_port CLK in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 409
+			(_port CLK in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 410
+			(_port CLK2 in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 411
+			(_port CLK2 in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 412
+			(_port DPI in )
+			(_port DPO out )
+		)
+		(_modpath parallel unknown 0 413
+			(_port M0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 414
+			(_port A0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 415
+			(_port B0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 416
+			(_port C0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 417
+			(_port D0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 418
+			(_port A1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 419
+			(_port B1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 420
+			(_port C1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 421
+			(_port D1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 422
+			(_port CE in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 423
+			(_port LSR in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 424
+			(_port CLK in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 425
+			(_port CLK2 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 426
+			(_port M0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 427
+			(_port A0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 428
+			(_port B0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 429
+			(_port C0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 430
+			(_port D0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 431
+			(_port A1 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 432
+			(_port B1 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 433
+			(_port C1 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 434
+			(_port D1 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 435
+			(_port CE in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 436
+			(_port LSR in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 437
+			(_port CLK in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 438
+			(_port CLK2 in )
+			(_port F0 out )
+		)
+		(_tchk setuphold 0 440
+			(_port CLK_dly (posedge) (_code  91 rclk_eq_clk_and_check_di0_posedge))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 441
+			(_port CLK_dly (posedge) (_code  92 rclk_eq_clk_and_check_di1_posedge))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 442
+			(_port CLK_dly (negedge) (_code  93 rclk_eq_clk_and_check_di0_negedge))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 443
+			(_port CLK_dly (negedge) (_code  94 rclk_eq_clk_and_check_di1_negedge))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 445
+			(_port CLK2_dly (posedge) (_code  95 rclk_eq_clk2_and_check_di0_posedge2))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 446
+			(_port CLK2_dly (posedge) (_code  96 rclk_eq_clk2_and_check_di1_posedge2))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 447
+			(_port CLK2_dly (negedge) (_code  97 rclk_eq_clk2_and_check_di0_negedge2))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 448
+			(_port CLK2_dly (negedge) (_code  98 rclk_eq_clk2_and_check_di1_negedge2))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 450
+			(_port CLK_dly (posedge) (_code  99 wclk_eq_clk_and_check_m0_posedge))
+			(_port M0_dly ())
+		)
+		(_tchk setuphold 0 451
+			(_port CLK_dly (posedge) (_code  100 wclk_eq_clk_and_check_dpi_posedge))
+			(_port DPI_dly ())
+		)
+		(_tchk setuphold 0 452
+			(_port CLK_dly (posedge) (_code  101 wclk_eq_clk_and_check_ce_posedge))
+			(_port CE_dly ())
+		)
+		(_tchk setuphold 0 453
+			(_port CLK_dly (posedge) (_code  102 wclk_eq_clk_and_check_lsr_posedge))
+			(_port LSR_dly ())
+		)
+		(_tchk setuphold 0 454
+			(_port CLK_dly (posedge) (_code  103 wclk_eq_clk_and_check_a0_posedge))
+			(_port WAD0_dly ())
+		)
+		(_tchk setuphold 0 455
+			(_port CLK_dly (posedge) (_code  104 wclk_eq_clk_and_check_b0_posedge))
+			(_port WAD1_dly ())
+		)
+		(_tchk setuphold 0 456
+			(_port CLK_dly (posedge) (_code  105 wclk_eq_clk_and_check_c0_posedge))
+			(_port WAD2_dly ())
+		)
+		(_tchk setuphold 0 457
+			(_port CLK_dly (posedge) (_code  106 wclk_eq_clk_and_check_d0_posedge))
+			(_port WAD3_dly ())
+		)
+		(_tchk setuphold 0 458
+			(_port CLK_dly (posedge) (_code  107 wclk_eq_clk_and_check_a1_posedge))
+			(_port RAD0_dly ())
+		)
+		(_tchk setuphold 0 459
+			(_port CLK_dly (posedge) (_code  108 wclk_eq_clk_and_check_b1_posedge))
+			(_port RAD1_dly ())
+		)
+		(_tchk setuphold 0 460
+			(_port CLK_dly (posedge) (_code  109 wclk_eq_clk_and_check_c1_posedge))
+			(_port RAD2_dly ())
+		)
+		(_tchk setuphold 0 461
+			(_port CLK_dly (posedge) (_code  110 wclk_eq_clk_and_check_d1_posedge))
+			(_port RAD3_dly ())
+		)
+		(_tchk setuphold 0 462
+			(_port CLK_dly (negedge) (_code  111 wclk_eq_clk_and_check_m0_negedge))
+			(_port M0_dly ())
+		)
+		(_tchk setuphold 0 463
+			(_port CLK_dly (negedge) (_code  112 wclk_eq_clk_and_check_dpi_negedge))
+			(_port DPI_dly ())
+		)
+		(_tchk setuphold 0 464
+			(_port CLK_dly (negedge) (_code  113 wclk_eq_clk_and_check_ce_negedge))
+			(_port CE_dly ())
+		)
+		(_tchk setuphold 0 465
+			(_port CLK_dly (negedge) (_code  114 wclk_eq_clk_and_check_lsr_negedge))
+			(_port LSR_dly ())
+		)
+		(_tchk setuphold 0 466
+			(_port CLK_dly (negedge) (_code  115 wclk_eq_clk_and_check_a0_negedge))
+			(_port WAD0_dly ())
+		)
+		(_tchk setuphold 0 467
+			(_port CLK_dly (negedge) (_code  116 wclk_eq_clk_and_check_b0_negedge))
+			(_port WAD1_dly ())
+		)
+		(_tchk setuphold 0 468
+			(_port CLK_dly (negedge) (_code  117 wclk_eq_clk_and_check_c0_negedge))
+			(_port WAD2_dly ())
+		)
+		(_tchk setuphold 0 469
+			(_port CLK_dly (negedge) (_code  118 wclk_eq_clk_and_check_d0_negedge))
+			(_port WAD3_dly ())
+		)
+		(_tchk setuphold 0 470
+			(_port CLK_dly (negedge) (_code  119 wclk_eq_clk_and_check_a1_negedge))
+			(_port RAD0_dly ())
+		)
+		(_tchk setuphold 0 471
+			(_port CLK_dly (negedge) (_code  120 wclk_eq_clk_and_check_b1_negedge))
+			(_port RAD1_dly ())
+		)
+		(_tchk setuphold 0 472
+			(_port CLK_dly (negedge) (_code  121 wclk_eq_clk_and_check_c1_negedge))
+			(_port RAD2_dly ())
+		)
+		(_tchk setuphold 0 473
+			(_port CLK_dly (negedge) (_code  122 wclk_eq_clk_and_check_d1_negedge))
+			(_port RAD3_dly ())
+		)
+		(_tchk setuphold 0 475
+			(_port CLK2_dly (posedge) (_code  123 wclk_eq_clk2_and_check_m0_posedge2))
+			(_port M0_dly ())
+		)
+		(_tchk setuphold 0 476
+			(_port CLK2_dly (posedge) (_code  124 wclk_eq_clk2_and_check_dpi_posedge2))
+			(_port DPI_dly ())
+		)
+		(_tchk setuphold 0 477
+			(_port CLK2_dly (posedge) (_code  125 wclk_eq_clk2_and_check_ce_posedge2))
+			(_port CE_dly ())
+		)
+		(_tchk setuphold 0 478
+			(_port CLK2_dly (posedge) (_code  126 wclk_eq_clk2_and_check_lsr_posedge2))
+			(_port LSR_dly ())
+		)
+		(_tchk setuphold 0 479
+			(_port CLK2_dly (posedge) (_code  127 wclk_eq_clk2_and_check_a0_posedge2))
+			(_port WAD0_dly ())
+		)
+		(_tchk setuphold 0 480
+			(_port CLK2_dly (posedge) (_code  128 wclk_eq_clk2_and_check_b0_posedge2))
+			(_port WAD1_dly ())
+		)
+		(_tchk setuphold 0 481
+			(_port CLK2_dly (posedge) (_code  129 wclk_eq_clk2_and_check_c0_posedge2))
+			(_port WAD2_dly ())
+		)
+		(_tchk setuphold 0 482
+			(_port CLK2_dly (posedge) (_code  130 wclk_eq_clk2_and_check_d0_posedge2))
+			(_port WAD3_dly ())
+		)
+		(_tchk setuphold 0 483
+			(_port CLK2_dly (posedge) (_code  131 wclk_eq_clk2_and_check_a1_posedge2))
+			(_port RAD0_dly ())
+		)
+		(_tchk setuphold 0 484
+			(_port CLK2_dly (posedge) (_code  132 wclk_eq_clk2_and_check_b1_posedge2))
+			(_port RAD1_dly ())
+		)
+		(_tchk setuphold 0 485
+			(_port CLK2_dly (posedge) (_code  133 wclk_eq_clk2_and_check_c1_posedge2))
+			(_port RAD2_dly ())
+		)
+		(_tchk setuphold 0 486
+			(_port CLK2_dly (posedge) (_code  134 wclk_eq_clk2_and_check_d1_posedge2))
+			(_port RAD3_dly ())
+		)
+		(_tchk setuphold 0 487
+			(_port CLK2_dly (negedge) (_code  135 wclk_eq_clk2_and_check_m0_negedge2))
+			(_port M0_dly ())
+		)
+		(_tchk setuphold 0 488
+			(_port CLK2_dly (negedge) (_code  136 wclk_eq_clk2_and_check_dpi_negedge2))
+			(_port DPI_dly ())
+		)
+		(_tchk setuphold 0 489
+			(_port CLK2_dly (negedge) (_code  137 wclk_eq_clk2_and_check_ce_negedge2))
+			(_port CE_dly ())
+		)
+		(_tchk setuphold 0 490
+			(_port CLK2_dly (negedge) (_code  138 wclk_eq_clk2_and_check_lsr_negedge2))
+			(_port LSR_dly ())
+		)
+		(_tchk setuphold 0 491
+			(_port CLK2_dly (negedge) (_code  139 wclk_eq_clk2_and_check_a0_negedge2))
+			(_port WAD0_dly ())
+		)
+		(_tchk setuphold 0 492
+			(_port CLK2_dly (negedge) (_code  140 wclk_eq_clk2_and_check_b0_negedge2))
+			(_port WAD1_dly ())
+		)
+		(_tchk setuphold 0 493
+			(_port CLK2_dly (negedge) (_code  141 wclk_eq_clk2_and_check_c0_negedge2))
+			(_port WAD2_dly ())
+		)
+		(_tchk setuphold 0 494
+			(_port CLK2_dly (negedge) (_code  142 wclk_eq_clk2_and_check_d0_negedge2))
+			(_port WAD3_dly ())
+		)
+		(_tchk setuphold 0 495
+			(_port CLK2_dly (negedge) (_code  143 wclk_eq_clk2_and_check_a1_negedge2))
+			(_port RAD0_dly ())
+		)
+		(_tchk setuphold 0 496
+			(_port CLK2_dly (negedge) (_code  144 wclk_eq_clk2_and_check_b1_negedge2))
+			(_port RAD1_dly ())
+		)
+		(_tchk setuphold 0 497
+			(_port CLK2_dly (negedge) (_code  145 wclk_eq_clk2_and_check_c1_negedge2))
+			(_port RAD2_dly ())
+		)
+		(_tchk setuphold 0 498
+			(_port CLK2_dly (negedge) (_code  146 wclk_eq_clk2_and_check_d1_negedge2))
+			(_port RAD3_dly ())
+		)
+		(_tchk width 0 500
+			(_port CLK_dly (posedge))
+		)
+		(_tchk width 0 501
+			(_port CLK_dly (negedge))
+		)
+		(_tchk width 0 502
+			(_port CLK2_dly (posedge))
+		)
+		(_tchk width 0 503
+			(_port CLK2_dly (negedge))
+		)
+		(_tchk width 0 504
+			(_port LSR_dly (posedge))
+		)
+		(_tchk width 0 505
+			(_port LSR_dly (negedge))
+		)
+	)
+)
+V 000039 56 16778 1265381482573 SFIFOA
+(_unit SFIFOA
+	(_specify
+		(_modpath parallel unknown 0 362
+			(_port CLKR in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 363
+			(_port CLKR in )
+			(_port DO1 out )
+		)
+		(_modpath parallel unknown 0 364
+			(_port CLKR in )
+			(_port DO2 out )
+		)
+		(_modpath parallel unknown 0 365
+			(_port CLKR in )
+			(_port DO3 out )
+		)
+		(_modpath parallel unknown 0 366
+			(_port CLKR in )
+			(_port DO4 out )
+		)
+		(_modpath parallel unknown 0 367
+			(_port CLKR in )
+			(_port DO5 out )
+		)
+		(_modpath parallel unknown 0 368
+			(_port CLKR in )
+			(_port DO6 out )
+		)
+		(_modpath parallel unknown 0 369
+			(_port CLKR in )
+			(_port DO7 out )
+		)
+		(_modpath parallel unknown 0 370
+			(_port CLKR in )
+			(_port DO8 out )
+		)
+		(_modpath parallel unknown 0 371
+			(_port CLKR in )
+			(_port DO9 out )
+		)
+		(_modpath parallel unknown 0 372
+			(_port CLKR in )
+			(_port DO10 out )
+		)
+		(_modpath parallel unknown 0 373
+			(_port CLKR in )
+			(_port DO11 out )
+		)
+		(_modpath parallel unknown 0 374
+			(_port CLKR in )
+			(_port DO12 out )
+		)
+		(_modpath parallel unknown 0 375
+			(_port CLKR in )
+			(_port DO13 out )
+		)
+		(_modpath parallel unknown 0 376
+			(_port CLKR in )
+			(_port DO14 out )
+		)
+		(_modpath parallel unknown 0 377
+			(_port CLKR in )
+			(_port DO15 out )
+		)
+		(_modpath parallel unknown 0 378
+			(_port CLKR in )
+			(_port DO16 out )
+		)
+		(_modpath parallel unknown 0 379
+			(_port CLKR in )
+			(_port DO17 out )
+		)
+		(_modpath parallel unknown 0 380
+			(_port CLKR in )
+			(_port DO18 out )
+		)
+		(_modpath parallel unknown 0 381
+			(_port CLKR in )
+			(_port DO19 out )
+		)
+		(_modpath parallel unknown 0 382
+			(_port CLKR in )
+			(_port DO20 out )
+		)
+		(_modpath parallel unknown 0 383
+			(_port CLKR in )
+			(_port DO21 out )
+		)
+		(_modpath parallel unknown 0 384
+			(_port CLKR in )
+			(_port DO22 out )
+		)
+		(_modpath parallel unknown 0 385
+			(_port CLKR in )
+			(_port DO23 out )
+		)
+		(_modpath parallel unknown 0 386
+			(_port CLKR in )
+			(_port DO24 out )
+		)
+		(_modpath parallel unknown 0 387
+			(_port CLKR in )
+			(_port DO25 out )
+		)
+		(_modpath parallel unknown 0 388
+			(_port CLKR in )
+			(_port DO26 out )
+		)
+		(_modpath parallel unknown 0 389
+			(_port CLKR in )
+			(_port DO27 out )
+		)
+		(_modpath parallel unknown 0 390
+			(_port CLKR in )
+			(_port DO28 out )
+		)
+		(_modpath parallel unknown 0 391
+			(_port CLKR in )
+			(_port DO29 out )
+		)
+		(_modpath parallel unknown 0 392
+			(_port CLKR in )
+			(_port DO30 out )
+		)
+		(_modpath parallel unknown 0 393
+			(_port CLKR in )
+			(_port DO31 out )
+		)
+		(_modpath parallel unknown 0 394
+			(_port CLKR in )
+			(_port DO32 out )
+		)
+		(_modpath parallel unknown 0 395
+			(_port CLKR in )
+			(_port DO33 out )
+		)
+		(_modpath parallel unknown 0 396
+			(_port CLKR in )
+			(_port DO34 out )
+		)
+		(_modpath parallel unknown 0 397
+			(_port CLKR in )
+			(_port DO35 out )
+		)
+		(_modpath parallel unknown 0 399
+			(_port RST in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 400
+			(_port RST in )
+			(_port DO1 out )
+		)
+		(_modpath parallel unknown 0 401
+			(_port RST in )
+			(_port DO2 out )
+		)
+		(_modpath parallel unknown 0 402
+			(_port RST in )
+			(_port DO3 out )
+		)
+		(_modpath parallel unknown 0 403
+			(_port RST in )
+			(_port DO4 out )
+		)
+		(_modpath parallel unknown 0 404
+			(_port RST in )
+			(_port DO5 out )
+		)
+		(_modpath parallel unknown 0 405
+			(_port RST in )
+			(_port DO6 out )
+		)
+		(_modpath parallel unknown 0 406
+			(_port RST in )
+			(_port DO7 out )
+		)
+		(_modpath parallel unknown 0 407
+			(_port RST in )
+			(_port DO8 out )
+		)
+		(_modpath parallel unknown 0 408
+			(_port RST in )
+			(_port DO9 out )
+		)
+		(_modpath parallel unknown 0 409
+			(_port RST in )
+			(_port DO10 out )
+		)
+		(_modpath parallel unknown 0 410
+			(_port RST in )
+			(_port DO11 out )
+		)
+		(_modpath parallel unknown 0 411
+			(_port RST in )
+			(_port DO12 out )
+		)
+		(_modpath parallel unknown 0 412
+			(_port RST in )
+			(_port DO13 out )
+		)
+		(_modpath parallel unknown 0 413
+			(_port RST in )
+			(_port DO14 out )
+		)
+		(_modpath parallel unknown 0 414
+			(_port RST in )
+			(_port DO15 out )
+		)
+		(_modpath parallel unknown 0 415
+			(_port RST in )
+			(_port DO16 out )
+		)
+		(_modpath parallel unknown 0 416
+			(_port RST in )
+			(_port DO17 out )
+		)
+		(_modpath parallel unknown 0 417
+			(_port RST in )
+			(_port DO18 out )
+		)
+		(_modpath parallel unknown 0 418
+			(_port RST in )
+			(_port DO19 out )
+		)
+		(_modpath parallel unknown 0 419
+			(_port RST in )
+			(_port DO20 out )
+		)
+		(_modpath parallel unknown 0 420
+			(_port RST in )
+			(_port DO21 out )
+		)
+		(_modpath parallel unknown 0 421
+			(_port RST in )
+			(_port DO22 out )
+		)
+		(_modpath parallel unknown 0 422
+			(_port RST in )
+			(_port DO23 out )
+		)
+		(_modpath parallel unknown 0 423
+			(_port RST in )
+			(_port DO24 out )
+		)
+		(_modpath parallel unknown 0 424
+			(_port RST in )
+			(_port DO25 out )
+		)
+		(_modpath parallel unknown 0 425
+			(_port RST in )
+			(_port DO26 out )
+		)
+		(_modpath parallel unknown 0 426
+			(_port RST in )
+			(_port DO27 out )
+		)
+		(_modpath parallel unknown 0 427
+			(_port RST in )
+			(_port DO28 out )
+		)
+		(_modpath parallel unknown 0 428
+			(_port RST in )
+			(_port DO29 out )
+		)
+		(_modpath parallel unknown 0 429
+			(_port RST in )
+			(_port DO30 out )
+		)
+		(_modpath parallel unknown 0 430
+			(_port RST in )
+			(_port DO31 out )
+		)
+		(_modpath parallel unknown 0 431
+			(_port RST in )
+			(_port DO32 out )
+		)
+		(_modpath parallel unknown 0 432
+			(_port RST in )
+			(_port DO33 out )
+		)
+		(_modpath parallel unknown 0 433
+			(_port RST in )
+			(_port DO34 out )
+		)
+		(_modpath parallel unknown 0 434
+			(_port RST in )
+			(_port DO35 out )
+		)
+		(_modpath parallel unknown 0 436
+			(_port CLKR in )
+			(_port EF out )
+		)
+		(_modpath parallel unknown 0 437
+			(_port CLKR in )
+			(_port AEF out )
+		)
+		(_modpath parallel unknown 0 438
+			(_port CLKW in )
+			(_port FF out )
+		)
+		(_modpath parallel unknown 0 439
+			(_port CLKW in )
+			(_port AFF out )
+		)
+		(_modpath parallel unknown 0 440
+			(_port RST in )
+			(_port FF out )
+		)
+		(_modpath parallel unknown 0 441
+			(_port RST in )
+			(_port AFF out )
+		)
+		(_modpath parallel unknown 0 442
+			(_port RPRST in )
+			(_port EF out )
+		)
+		(_modpath parallel unknown 0 443
+			(_port RPRST in )
+			(_port AEF out )
+		)
+		(_tchk setuphold 0 445
+			(_port CLKW_dly (posedge) (_code  2 check_di0_pos))
+			(_port DI0_dly ())
+		)
+		(_tchk setuphold 0 446
+			(_port CLKW_dly (posedge) (_code  3 check_di1_pos))
+			(_port DI1_dly ())
+		)
+		(_tchk setuphold 0 447
+			(_port CLKW_dly (posedge) (_code  4 check_di2_pos))
+			(_port DI2_dly ())
+		)
+		(_tchk setuphold 0 448
+			(_port CLKW_dly (posedge) (_code  5 check_di3_pos))
+			(_port DI3_dly ())
+		)
+		(_tchk setuphold 0 449
+			(_port CLKW_dly (posedge) (_code  6 check_di4_pos))
+			(_port DI4_dly ())
+		)
+		(_tchk setuphold 0 450
+			(_port CLKW_dly (posedge) (_code  7 check_di5_pos))
+			(_port DI5_dly ())
+		)
+		(_tchk setuphold 0 451
+			(_port CLKW_dly (posedge) (_code  8 check_di6_pos))
+			(_port DI6_dly ())
+		)
+		(_tchk setuphold 0 452
+			(_port CLKW_dly (posedge) (_code  9 check_di7_pos))
+			(_port DI7_dly ())
+		)
+		(_tchk setuphold 0 453
+			(_port CLKW_dly (posedge) (_code  10 check_di8_pos))
+			(_port DI8_dly ())
+		)
+		(_tchk setuphold 0 454
+			(_port CLKW_dly (posedge) (_code  11 check_di9_pos))
+			(_port DI9_dly ())
+		)
+		(_tchk setuphold 0 455
+			(_port CLKW_dly (posedge) (_code  12 check_di10_pos))
+			(_port DI10_dly ())
+		)
+		(_tchk setuphold 0 456
+			(_port CLKW_dly (posedge) (_code  13 check_di11_pos))
+			(_port DI11_dly ())
+		)
+		(_tchk setuphold 0 457
+			(_port CLKW_dly (posedge) (_code  14 check_di12_pos))
+			(_port DI12_dly ())
+		)
+		(_tchk setuphold 0 458
+			(_port CLKW_dly (posedge) (_code  15 check_di13_pos))
+			(_port DI13_dly ())
+		)
+		(_tchk setuphold 0 459
+			(_port CLKW_dly (posedge) (_code  16 check_di14_pos))
+			(_port DI14_dly ())
+		)
+		(_tchk setuphold 0 460
+			(_port CLKW_dly (posedge) (_code  17 check_di15_pos))
+			(_port DI15_dly ())
+		)
+		(_tchk setuphold 0 461
+			(_port CLKW_dly (posedge) (_code  18 check_di16_pos))
+			(_port DI16_dly ())
+		)
+		(_tchk setuphold 0 462
+			(_port CLKW_dly (posedge) (_code  19 check_di17_pos))
+			(_port DI17_dly ())
+		)
+		(_tchk setuphold 0 463
+			(_port CLKW_dly (posedge) (_code  20 check_di18_pos))
+			(_port DI18_dly ())
+		)
+		(_tchk setuphold 0 464
+			(_port CLKW_dly (posedge) (_code  21 check_di19_pos))
+			(_port DI19_dly ())
+		)
+		(_tchk setuphold 0 465
+			(_port CLKW_dly (posedge) (_code  22 check_di20_pos))
+			(_port DI20_dly ())
+		)
+		(_tchk setuphold 0 466
+			(_port CLKW_dly (posedge) (_code  23 check_di21_pos))
+			(_port DI21_dly ())
+		)
+		(_tchk setuphold 0 467
+			(_port CLKW_dly (posedge) (_code  24 check_di22_pos))
+			(_port DI22_dly ())
+		)
+		(_tchk setuphold 0 468
+			(_port CLKW_dly (posedge) (_code  25 check_di23_pos))
+			(_port DI23_dly ())
+		)
+		(_tchk setuphold 0 469
+			(_port CLKW_dly (posedge) (_code  26 check_di24_pos))
+			(_port DI24_dly ())
+		)
+		(_tchk setuphold 0 470
+			(_port CLKW_dly (posedge) (_code  27 check_di25_pos))
+			(_port DI25_dly ())
+		)
+		(_tchk setuphold 0 471
+			(_port CLKW_dly (posedge) (_code  28 check_di26_pos))
+			(_port DI26_dly ())
+		)
+		(_tchk setuphold 0 472
+			(_port CLKW_dly (posedge) (_code  29 check_di27_pos))
+			(_port DI27_dly ())
+		)
+		(_tchk setuphold 0 473
+			(_port CLKW_dly (posedge) (_code  30 check_di28_pos))
+			(_port DI28_dly ())
+		)
+		(_tchk setuphold 0 474
+			(_port CLKW_dly (posedge) (_code  31 check_di29_pos))
+			(_port DI29_dly ())
+		)
+		(_tchk setuphold 0 475
+			(_port CLKW_dly (posedge) (_code  32 check_di30_pos))
+			(_port DI30_dly ())
+		)
+		(_tchk setuphold 0 476
+			(_port CLKW_dly (posedge) (_code  33 check_di31_pos))
+			(_port DI31_dly ())
+		)
+		(_tchk setuphold 0 477
+			(_port CLKW_dly (posedge) (_code  34 check_di32_pos))
+			(_port DI32_dly ())
+		)
+		(_tchk setuphold 0 478
+			(_port CLKW_dly (posedge) (_code  35 check_di33_pos))
+			(_port DI33_dly ())
+		)
+		(_tchk setuphold 0 479
+			(_port CLKW_dly (posedge) (_code  36 check_di34_pos))
+			(_port DI34_dly ())
+		)
+		(_tchk setuphold 0 480
+			(_port CLKW_dly (posedge) (_code  37 check_di35_pos))
+			(_port DI35_dly ())
+		)
+		(_tchk setuphold 0 481
+			(_port CLKW_dly (posedge) (_code  38 check_we_pos))
+			(_port WE_dly ())
+		)
+		(_tchk setuphold 0 482
+			(_port CLKW_dly (posedge) (_code  39 check_csw0_pos))
+			(_port CSW0_dly ())
+		)
+		(_tchk setuphold 0 483
+			(_port CLKW_dly (posedge) (_code  40 check_csw1_pos))
+			(_port CSW1_dly ())
+		)
+		(_tchk setuphold 0 484
+			(_port CLKW_dly (posedge) (_code  41 check_fulli_pos))
+			(_port FULLI_dly ())
+		)
+		(_tchk setuphold 0 485
+			(_port CLKW_dly (posedge) (_code  42 check_rst_pos))
+			(_port RST_dly ())
+		)
+		(_tchk setuphold 0 486
+			(_port CLKR_dly (posedge) (_code  43 check_rprst_pos))
+			(_port RPRST_dly ())
+		)
+		(_tchk setuphold 0 487
+			(_port CLKR_dly (posedge) (_code  44 check_re_pos))
+			(_port RE_dly ())
+		)
+		(_tchk setuphold 0 488
+			(_port CLKR_dly (posedge) (_code  45 check_csr0_pos))
+			(_port CSR0_dly ())
+		)
+		(_tchk setuphold 0 489
+			(_port CLKR_dly (posedge) (_code  46 check_csr1_pos))
+			(_port CSR1_dly ())
+		)
+		(_tchk setuphold 0 490
+			(_port CLKR_dly (posedge) (_code  47 check_emptyi_pos))
+			(_port EMPTYI_dly ())
+		)
+		(_tchk setuphold 0 492
+			(_port CLKW_dly (negedge) (_code  48 check_di0_neg))
+			(_port DI0_dly ())
+		)
+		(_tchk setuphold 0 493
+			(_port CLKW_dly (negedge) (_code  49 check_di1_neg))
+			(_port DI1_dly ())
+		)
+		(_tchk setuphold 0 494
+			(_port CLKW_dly (negedge) (_code  50 check_di2_neg))
+			(_port DI2_dly ())
+		)
+		(_tchk setuphold 0 495
+			(_port CLKW_dly (negedge) (_code  51 check_di3_neg))
+			(_port DI3_dly ())
+		)
+		(_tchk setuphold 0 496
+			(_port CLKW_dly (negedge) (_code  52 check_di4_neg))
+			(_port DI4_dly ())
+		)
+		(_tchk setuphold 0 497
+			(_port CLKW_dly (negedge) (_code  53 check_di5_neg))
+			(_port DI5_dly ())
+		)
+		(_tchk setuphold 0 498
+			(_port CLKW_dly (negedge) (_code  54 check_di6_neg))
+			(_port DI6_dly ())
+		)
+		(_tchk setuphold 0 499
+			(_port CLKW_dly (negedge) (_code  55 check_di7_neg))
+			(_port DI7_dly ())
+		)
+		(_tchk setuphold 0 500
+			(_port CLKW_dly (negedge) (_code  56 check_di8_neg))
+			(_port DI8_dly ())
+		)
+		(_tchk setuphold 0 501
+			(_port CLKW_dly (negedge) (_code  57 check_di9_neg))
+			(_port DI9_dly ())
+		)
+		(_tchk setuphold 0 502
+			(_port CLKW_dly (negedge) (_code  58 check_di10_neg))
+			(_port DI10_dly ())
+		)
+		(_tchk setuphold 0 503
+			(_port CLKW_dly (negedge) (_code  59 check_di11_neg))
+			(_port DI11_dly ())
+		)
+		(_tchk setuphold 0 504
+			(_port CLKW_dly (negedge) (_code  60 check_di12_neg))
+			(_port DI12_dly ())
+		)
+		(_tchk setuphold 0 505
+			(_port CLKW_dly (negedge) (_code  61 check_di13_neg))
+			(_port DI13_dly ())
+		)
+		(_tchk setuphold 0 506
+			(_port CLKW_dly (negedge) (_code  62 check_di14_neg))
+			(_port DI14_dly ())
+		)
+		(_tchk setuphold 0 507
+			(_port CLKW_dly (negedge) (_code  63 check_di15_neg))
+			(_port DI15_dly ())
+		)
+		(_tchk setuphold 0 508
+			(_port CLKW_dly (negedge) (_code  64 check_di16_neg))
+			(_port DI16_dly ())
+		)
+		(_tchk setuphold 0 509
+			(_port CLKW_dly (negedge) (_code  65 check_di17_neg))
+			(_port DI17_dly ())
+		)
+		(_tchk setuphold 0 510
+			(_port CLKW_dly (negedge) (_code  66 check_di18_neg))
+			(_port DI18_dly ())
+		)
+		(_tchk setuphold 0 511
+			(_port CLKW_dly (negedge) (_code  67 check_di19_neg))
+			(_port DI19_dly ())
+		)
+		(_tchk setuphold 0 512
+			(_port CLKW_dly (negedge) (_code  68 check_di20_neg))
+			(_port DI20_dly ())
+		)
+		(_tchk setuphold 0 513
+			(_port CLKW_dly (negedge) (_code  69 check_di21_neg))
+			(_port DI21_dly ())
+		)
+		(_tchk setuphold 0 514
+			(_port CLKW_dly (negedge) (_code  70 check_di22_neg))
+			(_port DI22_dly ())
+		)
+		(_tchk setuphold 0 515
+			(_port CLKW_dly (negedge) (_code  71 check_di23_neg))
+			(_port DI23_dly ())
+		)
+		(_tchk setuphold 0 516
+			(_port CLKW_dly (negedge) (_code  72 check_di24_neg))
+			(_port DI24_dly ())
+		)
+		(_tchk setuphold 0 517
+			(_port CLKW_dly (negedge) (_code  73 check_di25_neg))
+			(_port DI25_dly ())
+		)
+		(_tchk setuphold 0 518
+			(_port CLKW_dly (negedge) (_code  74 check_di26_neg))
+			(_port DI26_dly ())
+		)
+		(_tchk setuphold 0 519
+			(_port CLKW_dly (negedge) (_code  75 check_di27_neg))
+			(_port DI27_dly ())
+		)
+		(_tchk setuphold 0 520
+			(_port CLKW_dly (negedge) (_code  76 check_di28_neg))
+			(_port DI28_dly ())
+		)
+		(_tchk setuphold 0 521
+			(_port CLKW_dly (negedge) (_code  77 check_di29_neg))
+			(_port DI29_dly ())
+		)
+		(_tchk setuphold 0 522
+			(_port CLKW_dly (negedge) (_code  78 check_di30_neg))
+			(_port DI30_dly ())
+		)
+		(_tchk setuphold 0 523
+			(_port CLKW_dly (negedge) (_code  79 check_di31_neg))
+			(_port DI31_dly ())
+		)
+		(_tchk setuphold 0 524
+			(_port CLKW_dly (negedge) (_code  80 check_di32_neg))
+			(_port DI32_dly ())
+		)
+		(_tchk setuphold 0 525
+			(_port CLKW_dly (negedge) (_code  81 check_di33_neg))
+			(_port DI33_dly ())
+		)
+		(_tchk setuphold 0 526
+			(_port CLKW_dly (negedge) (_code  82 check_di34_neg))
+			(_port DI34_dly ())
+		)
+		(_tchk setuphold 0 527
+			(_port CLKW_dly (negedge) (_code  83 check_di35_neg))
+			(_port DI35_dly ())
+		)
+		(_tchk setuphold 0 528
+			(_port CLKW_dly (negedge) (_code  84 check_we_neg))
+			(_port WE_dly ())
+		)
+		(_tchk setuphold 0 529
+			(_port CLKW_dly (negedge) (_code  85 check_csw0_neg))
+			(_port CSW0_dly ())
+		)
+		(_tchk setuphold 0 530
+			(_port CLKW_dly (negedge) (_code  86 check_csw1_neg))
+			(_port CSW1_dly ())
+		)
+		(_tchk setuphold 0 531
+			(_port CLKW_dly (negedge) (_code  87 check_fulli_neg))
+			(_port FULLI_dly ())
+		)
+		(_tchk setuphold 0 532
+			(_port CLKW_dly (negedge) (_code  88 check_rst_neg))
+			(_port RST_dly ())
+		)
+		(_tchk setuphold 0 533
+			(_port CLKR_dly (negedge) (_code  89 check_rprst_neg))
+			(_port RPRST_dly ())
+		)
+		(_tchk setuphold 0 534
+			(_port CLKR_dly (negedge) (_code  90 check_re_neg))
+			(_port RE_dly ())
+		)
+		(_tchk setuphold 0 535
+			(_port CLKR_dly (negedge) (_code  91 check_csr0_neg))
+			(_port CSR0_dly ())
+		)
+		(_tchk setuphold 0 536
+			(_port CLKR_dly (negedge) (_code  92 check_csr1_neg))
+			(_port CSR1_dly ())
+		)
+		(_tchk setuphold 0 537
+			(_port CLKR_dly (negedge) (_code  93 check_emptyi_neg))
+			(_port EMPTYI_dly ())
+		)
+		(_tchk width 0 539
+			(_port CLKW_dly (posedge))
+		)
+		(_tchk width 0 540
+			(_port CLKW_dly (negedge))
+		)
+		(_tchk width 0 541
+			(_port CLKR_dly (posedge))
+		)
+		(_tchk width 0 542
+			(_port CLKR_dly (negedge))
+		)
+		(_tchk width 0 543
+			(_port RST_dly (posedge))
+		)
+		(_tchk width 0 544
+			(_port RST_dly (negedge))
+		)
+		(_tchk width 0 545
+			(_port RPRST_dly (posedge))
+		)
+		(_tchk width 0 546
+			(_port RPRST_dly (negedge))
+		)
+	)
+)
+V 000039 56 4043 1265381482587 SLOGICA
+(_unit SLOGICA
+	(_specify
+		(_modpath parallel unknown 0 428
+			(_port FXA in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 429
+			(_port FXB in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 430
+			(_port M1 in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 431
+			(_port M1 in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 432
+			(_port CE in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 433
+			(_port CLK in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 434
+			(_port LSR in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 435
+			(_port M0 in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 436
+			(_port CE in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 437
+			(_port CLK in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 438
+			(_port LSR in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 439
+			(_port A1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 440
+			(_port B1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 441
+			(_port C1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 442
+			(_port D1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 443
+			(_port A1 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 444
+			(_port B1 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 445
+			(_port C1 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 446
+			(_port D1 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 447
+			(_port A0 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 448
+			(_port B0 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 449
+			(_port C0 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 450
+			(_port D0 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 451
+			(_port A0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 452
+			(_port B0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 453
+			(_port C0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 454
+			(_port D0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 455
+			(_port M0 in )
+			(_port OFX0 out )
+		)
+		(_tchk setuphold 0 457
+			(_port CLK_dly (posedge) (_code  48 check_m1_posedge))
+			(_port M1_dly ())
+			(_register (notify_M1))
+		)
+		(_tchk setuphold 0 458
+			(_port CLK_dly (negedge) (_code  49 check_m1_negedge))
+			(_port M1_dly ())
+			(_register (notify_M1))
+		)
+		(_tchk setuphold 0 459
+			(_port CLK_dly (posedge) (_code  50 check_di1_posedge))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 460
+			(_port CLK_dly (negedge) (_code  51 check_di1_negedge))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 461
+			(_port CLK_dly (posedge) (_code  52 check_di0_posedge))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 462
+			(_port CLK_dly (negedge) (_code  53 check_di0_negedge))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 463
+			(_port CLK_dly (posedge) (_code  54 check_m0_posedge))
+			(_port M0_dly ())
+			(_register (notify_M0))
+		)
+		(_tchk setuphold 0 464
+			(_port CLK_dly (negedge) (_code  55 check_m0_negedge))
+			(_port M0_dly ())
+			(_register (notify_M0))
+		)
+		(_tchk setuphold 0 465
+			(_port CLK_dly (posedge) (_code  56 check_ce_posedge))
+			(_port CE_dly ())
+			(_register (notify_CE))
+		)
+		(_tchk setuphold 0 466
+			(_port CLK_dly (negedge) (_code  57 check_ce_negedge))
+			(_port CE_dly ())
+			(_register (notify_CE))
+		)
+		(_tchk setuphold 0 467
+			(_port CLK_dly (posedge) (_code  58 check_lsr_posedge))
+			(_port LSR_dly ())
+			(_register (notify_LSR))
+		)
+		(_tchk setuphold 0 468
+			(_port CLK_dly (negedge) (_code  59 check_lsr_negedge))
+			(_port LSR_dly ())
+			(_register (notify_LSR))
+		)
+		(_tchk width 0 470
+			(_port CLK_dly (posedge))
+		)
+		(_tchk width 0 471
+			(_port CLK_dly (negedge))
+		)
+		(_tchk width 0 472
+			(_port LSR_dly (posedge))
+		)
+		(_tchk width 0 473
+			(_port LSR_dly (negedge))
+		)
+	)
+)
+V 000040 56 4813 1265381482610 SRIPPLEA
+(_unit SRIPPLEA
+	(_specify
+		(_modpath parallel unknown 0 433
+			(_port M1 in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 434
+			(_port CE in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 435
+			(_port CLK in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 436
+			(_port LSR in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 437
+			(_port M0 in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 438
+			(_port CE in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 439
+			(_port CLK in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 440
+			(_port LSR in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 441
+			(_port A1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 442
+			(_port B1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 443
+			(_port A1 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 444
+			(_port B1 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 445
+			(_port A1 in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 446
+			(_port B1 in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 447
+			(_port A1 in )
+			(_port FCO out )
+		)
+		(_modpath parallel unknown 0 448
+			(_port B1 in )
+			(_port FCO out )
+		)
+		(_modpath parallel unknown 0 449
+			(_port A1 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 450
+			(_port B1 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 451
+			(_port A0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 452
+			(_port B0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 453
+			(_port A0 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 454
+			(_port B0 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 455
+			(_port A0 in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 456
+			(_port B0 in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 457
+			(_port A0 in )
+			(_port FCO out )
+		)
+		(_modpath parallel unknown 0 458
+			(_port B0 in )
+			(_port FCO out )
+		)
+		(_modpath parallel unknown 0 459
+			(_port A0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 460
+			(_port B0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 461
+			(_port FCI in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 462
+			(_port M0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 463
+			(_port FCI in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 464
+			(_port M0 in )
+			(_port OFX0 out )
+		)
+		(_modpath parallel unknown 0 465
+			(_port FCI in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 466
+			(_port M0 in )
+			(_port OFX1 out )
+		)
+		(_modpath parallel unknown 0 467
+			(_port FCI in )
+			(_port FCO out )
+		)
+		(_modpath parallel unknown 0 468
+			(_port M0 in )
+			(_port FCO out )
+		)
+		(_modpath parallel unknown 0 469
+			(_port FCI in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 470
+			(_port M0 in )
+			(_port F0 out )
+		)
+		(_tchk setuphold 0 472
+			(_port CLK_dly (posedge) (_code  49 check_m1_posedge))
+			(_port M1_dly ())
+			(_register (notify_M1))
+		)
+		(_tchk setuphold 0 473
+			(_port CLK_dly (negedge) (_code  50 check_m1_negedge))
+			(_port M1_dly ())
+			(_register (notify_M1))
+		)
+		(_tchk setuphold 0 474
+			(_port CLK_dly (posedge) (_code  51 check_di1_posedge))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 475
+			(_port CLK_dly (negedge) (_code  52 check_di1_negedge))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 476
+			(_port CLK_dly (posedge) (_code  53 check_di0_posedge))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 477
+			(_port CLK_dly (negedge) (_code  54 check_di0_negedge))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 478
+			(_port CLK_dly (posedge) (_code  55 check_m0_posedge))
+			(_port M0_dly ())
+			(_register (notify_M0))
+		)
+		(_tchk setuphold 0 479
+			(_port CLK_dly (negedge) (_code  56 check_m0_negedge))
+			(_port M0_dly ())
+			(_register (notify_M0))
+		)
+		(_tchk setuphold 0 480
+			(_port CLK_dly (posedge) (_code  57 check_ce_posedge))
+			(_port CE_dly ())
+			(_register (notify_CE))
+		)
+		(_tchk setuphold 0 481
+			(_port CLK_dly (negedge) (_code  58 check_ce_negedge))
+			(_port CE_dly ())
+			(_register (notify_CE))
+		)
+		(_tchk setuphold 0 482
+			(_port CLK_dly (posedge) (_code  59 check_lsr_posedge))
+			(_port LSR_dly ())
+			(_register (notify_LSR))
+		)
+		(_tchk setuphold 0 483
+			(_port CLK_dly (negedge) (_code  60 check_lsr_negedge))
+			(_port LSR_dly ())
+			(_register (notify_LSR))
+		)
+		(_tchk width 0 485
+			(_port CLK_dly (posedge))
+		)
+		(_tchk width 0 486
+			(_port CLK_dly (negedge))
+		)
+		(_tchk width 0 487
+			(_port LSR_dly (posedge))
+		)
+		(_tchk width 0 488
+			(_port LSR_dly (negedge))
+		)
+	)
+)
+V 000039 56 4081 1265381482617 SSPRAMA
+(_unit SSPRAMA
+	(_specify
+		(_modpath parallel unknown 0 249
+			(_port CLK in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 250
+			(_port CLK in )
+			(_port Q1 out )
+		)
+		(_modpath parallel unknown 0 251
+			(_port M0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 252
+			(_port M1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 253
+			(_port AD0 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 254
+			(_port AD1 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 255
+			(_port AD2 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 256
+			(_port AD3 in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 257
+			(_port CE in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 258
+			(_port LSR in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 259
+			(_port CLK in )
+			(_port F1 out )
+		)
+		(_modpath parallel unknown 0 260
+			(_port M0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 261
+			(_port M1 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 262
+			(_port AD0 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 263
+			(_port AD1 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 264
+			(_port AD2 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 265
+			(_port AD3 in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 266
+			(_port CE in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 267
+			(_port LSR in )
+			(_port F0 out )
+		)
+		(_modpath parallel unknown 0 268
+			(_port CLK in )
+			(_port F0 out )
+		)
+		(_tchk setuphold 0 270
+			(_port CLK_dly (posedge) (_code  29 check_di0_posedge))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 271
+			(_port CLK_dly (posedge) (_code  30 check_di1_posedge))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 272
+			(_port CLK_dly (posedge) (_code  31 check_m1_posedge))
+			(_port M1_dly ())
+		)
+		(_tchk setuphold 0 273
+			(_port CLK_dly (posedge) (_code  32 check_m0_posedge))
+			(_port M0_dly ())
+		)
+		(_tchk setuphold 0 274
+			(_port CLK_dly (posedge) (_code  33 check_ce_posedge))
+			(_port CE_dly ())
+		)
+		(_tchk setuphold 0 275
+			(_port CLK_dly (posedge) (_code  34 check_lsr_posedge))
+			(_port LSR_dly ())
+		)
+		(_tchk setuphold 0 276
+			(_port CLK_dly (posedge) (_code  35 check_ad0_posedge))
+			(_port AD0_dly ())
+		)
+		(_tchk setuphold 0 277
+			(_port CLK_dly (posedge) (_code  36 check_ad1_posedge))
+			(_port AD1_dly ())
+		)
+		(_tchk setuphold 0 278
+			(_port CLK_dly (posedge) (_code  37 check_ad2_posedge))
+			(_port AD2_dly ())
+		)
+		(_tchk setuphold 0 279
+			(_port CLK_dly (posedge) (_code  38 check_ad3_posedge))
+			(_port AD3_dly ())
+		)
+		(_tchk setuphold 0 280
+			(_port CLK_dly (negedge) (_code  39 check_di0_negedge))
+			(_port DI0_dly ())
+			(_register (notify_DI0))
+		)
+		(_tchk setuphold 0 281
+			(_port CLK_dly (negedge) (_code  40 check_di1_negedge))
+			(_port DI1_dly ())
+			(_register (notify_DI1))
+		)
+		(_tchk setuphold 0 282
+			(_port CLK_dly (negedge) (_code  41 check_m1_negedge))
+			(_port M1_dly ())
+		)
+		(_tchk setuphold 0 283
+			(_port CLK_dly (negedge) (_code  42 check_m0_negedge))
+			(_port M0_dly ())
+		)
+		(_tchk setuphold 0 284
+			(_port CLK_dly (negedge) (_code  43 check_ce_negedge))
+			(_port CE_dly ())
+		)
+		(_tchk setuphold 0 285
+			(_port CLK_dly (negedge) (_code  44 check_lsr_negedge))
+			(_port LSR_dly ())
+		)
+		(_tchk setuphold 0 286
+			(_port CLK_dly (negedge) (_code  45 check_ad0_negedge))
+			(_port AD0_dly ())
+		)
+		(_tchk setuphold 0 287
+			(_port CLK_dly (negedge) (_code  46 check_ad1_negedge))
+			(_port AD1_dly ())
+		)
+		(_tchk setuphold 0 288
+			(_port CLK_dly (negedge) (_code  47 check_ad2_negedge))
+			(_port AD2_dly ())
+		)
+		(_tchk setuphold 0 289
+			(_port CLK_dly (negedge) (_code  48 check_ad3_negedge))
+			(_port AD3_dly ())
+		)
+		(_tchk width 0 291
+			(_port CLK_dly (posedge))
+		)
+		(_tchk width 0 292
+			(_port CLK_dly (negedge))
+		)
+		(_tchk width 0 293
+			(_port LSR_dly (posedge))
+		)
+		(_tchk width 0 294
+			(_port LSR_dly (negedge))
+		)
+	)
+)
+V 000043 56 170 1265381484258 sbnx4v1mce_1
+(_unit sbnx4v1mce_1
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)

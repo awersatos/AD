@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_j2svlib
+
+[Library]
+ovi_j2svlib=.\ovi_j2svlib.LIB
+
+[$LibMap$]
+ovi_j2svlib=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/generic.vlb=-1
+/update_ovi_j2svlib.do=-1
+
+[Files.Data]
+.\src\generic.vlb=Verilog Source Code
+.\src\update_ovi_j2svlib.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

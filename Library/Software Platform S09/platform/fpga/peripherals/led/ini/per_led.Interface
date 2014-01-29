@@ -1,0 +1,7 @@
+[Interface]
+Name=per_led
+Category=PERIPHERAL
+System=False
+Description=LED controller peripheral
+PublicDir=platform\fpga\peripherals\led\include
+

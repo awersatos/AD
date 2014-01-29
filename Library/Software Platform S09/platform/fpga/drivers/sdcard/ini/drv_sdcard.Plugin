@@ -1,0 +1,73 @@
+[Plugin]
+Name=drv_sdcard
+Caption=SD Card Reader Driver
+Description=Driver for SD card reader in SPI mode
+Bitmap=drv_sdcard.bmp
+;HardwareID=SD_CARD
+Implement=drv_sdcard
+SourceDir=platform\fpga\drivers\sdcard\src
+
+[Option0]
+GUIName=Thread Safe Operation
+Name=USE_MUTEX
+Description=Use a mutex to protect access to SD cards.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option0_Available_If0]
+Kind=FALSE
+Object=posix_threads
+Condition=EQ
+
+[Instance]
+Require0=drv_spi
+
+;this option is misleading: we donot have sdcards behind the SPI multiplexer
+[Instance_Option0]
+Name=bus_sharing
+GUIName=SPI Bus Sharing
+Description=Handle SPI bus sharing at driver level.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Instance_Option0_AutoSet0]
+Interface=drv_spi
+Option=nb_multiplex_support
+AutoValueEnum0=False
+AutoValueEnum1=True
+
+[Instance_Option0_AutoSet1]
+Interface=drv_spi
+Option=channels
+AutoValueEnum0=1
+AutoValueEnum1=channels
+
+;20MHZ caused by NB2 board delay from DB FPGA SPI to PB02 SDCARD
+[Instance_Option0_AutoSet2]
+Interface=drv_spi
+Option=spi_frequency
+AutoValue=20000000
+
+;There're no sdcards operating in spi modes other than 0.
+[Instance_Option0_AutoSet3]
+Interface=drv_spi
+Option=spimode
+AutoValue=MODE0
+
+[Instance_Option0_Hide_If0]
+Kind=True
+
+[Instance_Option1]
+Name=channel
+GUIName=SPI Channel
+Description=SPI channel number for this device.
+Kind=UINT8
+MinRange=1
+DefaultValue=1
+
+[Instance_Option1_Hide_If0]
+Kind=OPTION
+Object=bus_sharing
+Condition=EQ
+Value=False
+

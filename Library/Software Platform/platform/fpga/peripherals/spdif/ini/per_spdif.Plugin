@@ -1,0 +1,28 @@
+[Plugin]
+Name=per_spdif
+Description=SPDIF audio streaming controller
+Caption=SPDIF Master Controller
+SourceDir=platform\fpga\peripherals\spdif\src
+Implement=per_spdif
+HardwareID=WB_SPDIF
+Bitmap=per_spdif.bmp
+LargeBitmap=per_spdif_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=Hardware base address.
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+CodeName=spdif_interrupt
+Description=Interrupt number for transmitter/receiver interrupt.
+Kind=INTERRUPT
+Auto=True

@@ -1,0 +1,9 @@
+#
+# Stimulus:      Digital-Periodic-Pulses
+# Date:          Wed Sep 02 11:36:08 1998
+#
+STIMULUS_TYPE    = SI-Digital-Periodic-Pulses;
+START_TIME       = 1e-008;
+STOP_TIME        = 2e-008;
+PERIOD_TIME      = 2e-008;
+START_LEVEL      = 0;

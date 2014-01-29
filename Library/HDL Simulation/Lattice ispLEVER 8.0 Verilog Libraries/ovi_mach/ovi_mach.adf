@@ -1,0 +1,26 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_mach
+
+[Library]
+ovi_mach=
+
+[$LibMap$]
+ovi_mach=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/mach.v=-1
+/update_ovi_mach.do=-1
+
+[Files.Data]
+.\src\mach.v=Verilog Source Code
+.\src\update_ovi_mach.do=Macro
+

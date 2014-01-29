@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=VCC +4.2V Pin=U1-4
+Removed Pin From Net: NetName=GND Pin=U3-21
+Removed Pin From Net: NetName=VCC +3.3V Pin=X3-13
+Removed Pin From Net: NetName=GND Pin=ZQ1-2
+Removed Pin From Net: NetName=GND Pin=ZQ1-4
+Added Component: Designator=C31(CAP_POL_D10)
+Added Component: Designator=C32(C0805)
+Added Component: Designator=U7(TO-263)
+Added Pin To Net: NetName=GND Pin=C31-2
+Added Pin To Net: NetName=GND Pin=C32-2
+Added Pin To Net: NetName=NetC2_1 Pin=U7-1
+Added Pin To Net: NetName=GND Pin=U7-4
+Added Pin To Net: NetName=VCC+5V Pin=C31-1
+Added Pin To Net: NetName=VCC+5V Pin=C32-1
+Added Pin To Net: NetName=VCC+5V Pin=U7-3
+Added Pin To Net: NetName=VCC+5V Pin=X3-13
+Added Net: Name=VCC+5V
+Change Class Name : Old Net Name=DWS_Main_Board New Net Name=DWS-2_Main_Board
+Added Member To Class: ClassName=DWS-2_Main_Board Member=Component C31 K50-35
+Added Member To Class: ClassName=DWS-2_Main_Board Member=Component C32 KONDENS_SMD
+Added Member To Class: ClassName=DWS-2_Main_Board Member=Component U7 L7805CD2T

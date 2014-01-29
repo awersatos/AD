@@ -1,0 +1,70 @@
+;...............................................................................
+;Constraints File
+;   Devices : Relay etc
+;   Board   : PB09 Single Connector Plug-In Peripheral Board For NB02
+;
+;   Created 22-Jan-2008
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB       | TargetId=PB09.01 | Image=PB01.07 | ImageOffsetX=12 | ImageOffsetY=16
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Connector | TargetId=HDR1
+;...............................................................................
+
+;...............................................................................
+;
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=PORT1_RXD     | ConnectTo=HDR1-94
+Record=Constraint | TargetKind=Port | TargetId=PORT1_TX_EN   | ConnectTo=HDR1-96
+Record=Constraint | TargetKind=Port | TargetId=PORT1_TXD     | ConnectTo=HDR1-98
+Record=Constraint | TargetKind=Port | TargetId=PORT1_RELAY   | ConnectTo=HDR1-74
+Record=Constraint | TargetKind=Port | TargetId=PORT1_PWM     | ConnectTo=HDR1-100
+Record=Constraint | TargetKind=Port | TargetId=PORT2_RXD     | ConnectTo=HDR1-64
+Record=Constraint | TargetKind=Port | TargetId=PORT2_TX_EN   | ConnectTo=HDR1-66
+Record=Constraint | TargetKind=Port | TargetId=PORT2_TXD     | ConnectTo=HDR1-68
+Record=Constraint | TargetKind=Port | TargetId=PORT2_RELAY   | ConnectTo=HDR1-60
+Record=Constraint | TargetKind=Port | TargetId=PORT2_PWM     | ConnectTo=HDR1-70
+Record=Constraint | TargetKind=Port | TargetId=PORT3_RXD     | ConnectTo=HDR1-48
+Record=Constraint | TargetKind=Port | TargetId=PORT3_TX_EN   | ConnectTo=HDR1-52
+Record=Constraint | TargetKind=Port | TargetId=PORT3_TXD     | ConnectTo=HDR1-50
+Record=Constraint | TargetKind=Port | TargetId=PORT3_RELAY   | ConnectTo=HDR1-46
+Record=Constraint | TargetKind=Port | TargetId=PORT3_PWM     | ConnectTo=HDR1-56
+Record=Constraint | TargetKind=Port | TargetId=PORT4_RXD     | ConnectTo=HDR1-36
+Record=Constraint | TargetKind=Port | TargetId=PORT4_TX_EN   | ConnectTo=HDR1-38
+Record=Constraint | TargetKind=Port | TargetId=PORT4_TXD     | ConnectTo=HDR1-40
+Record=Constraint | TargetKind=Port | TargetId=PORT4_RELAY   | ConnectTo=HDR1-32
+Record=Constraint | TargetKind=Port | TargetId=PORT4_PWM     | ConnectTo=HDR1-42
+Record=Constraint | TargetKind=Port | TargetId=PORT5_RXD     | ConnectTo=HDR1-22
+Record=Constraint | TargetKind=Port | TargetId=PORT5_TX_EN   | ConnectTo=HDR1-24
+Record=Constraint | TargetKind=Port | TargetId=PORT5_TXD     | ConnectTo=HDR1-26
+Record=Constraint | TargetKind=Port | TargetId=PORT5_RELAY   | ConnectTo=HDR1-18
+Record=Constraint | TargetKind=Port | TargetId=PORT5_PWM     | ConnectTo=HDR1-28
+Record=Constraint | TargetKind=Port | TargetId=PORT6_RXD     | ConnectTo=HDR1-8
+Record=Constraint | TargetKind=Port | TargetId=PORT6_TX_EN   | ConnectTo=HDR1-10
+Record=Constraint | TargetKind=Port | TargetId=PORT6_TXD     | ConnectTo=HDR1-12
+Record=Constraint | TargetKind=Port | TargetId=PORT6_RELAY   | ConnectTo=HDR1-4
+Record=Constraint | TargetKind=Port | TargetId=PORT6_PWM     | ConnectTo=HDR1-14
+Record=Constraint | TargetKind=Port | TargetId=PORT7_RELAY   | ConnectTo=HDR1-92
+Record=Constraint | TargetKind=Port | TargetId=PORT7_PWM     | ConnectTo=HDR1-72
+Record=Constraint | TargetKind=Port | TargetId=PORT8_RELAY   | ConnectTo=HDR1-62
+Record=Constraint | TargetKind=Port | TargetId=PORT8_PWM     | ConnectTo=HDR1-58
+Record=Constraint | TargetKind=Port | TargetId=PORT9_RELAY   | ConnectTo=HDR1-54
+Record=Constraint | TargetKind=Port | TargetId=PORT9_PWM     | ConnectTo=HDR1-44
+Record=Constraint | TargetKind=Port | TargetId=PORT10_RELAY  | ConnectTo=HDR1-34
+Record=Constraint | TargetKind=Port | TargetId=PORT10_PWM    | ConnectTo=HDR1-30
+Record=Constraint | TargetKind=Port | TargetId=PORT11_RELAY  | ConnectTo=HDR1-20
+Record=Constraint | TargetKind=Port | TargetId=PORT11_PWM    | ConnectTo=HDR1-16
+Record=Constraint | TargetKind=Port | TargetId=PORT12_RELAY  | ConnectTo=HDR1-6
+Record=Constraint | TargetKind=Port | TargetId=PORT12_PWM    | ConnectTo=HDR1-2
+Record=Constraint | TargetKind=Port | TargetId=EOC2          | ConnectTo=HDR1-78
+Record=Constraint | TargetKind=Port | TargetId=EOC1          | ConnectTo=HDR1-76
+;...............................................................................
+

@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_ir38k
+Category=DRIVER
+System=False
+Description=IR Remote Control (38KHz) RX driver
+PublicDir=platform\fpga\drivers\ir38k\include

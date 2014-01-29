@@ -1,0 +1,3562 @@
+///////////////////////////////////////////////////////////
+//  Copyright (c) 1995/2006 Xilinx Inc.
+//  All Right Reserved.
+///////////////////////////////////////////////////////////
+//
+//   ____   ___
+//  /   /\/   / 
+// /___/  \  /    Vendor      : Xilinx 
+// \  \    \/     Version     : 9.2.2i (J.39)
+//  \  \          Description : Xilinx Functional Simulation Library Component
+//  /  /                        Tri-Mode Ethernet MAC
+// /__/   /\      Filename    : X_TEMAC.v
+// \  \  /  \     Timestamp   : Thu Dec 8 2005        
+//  \__\/\__ \                    
+//                                 
+//  Revision:
+//    12/08/05 - Initial version.
+//    01/09/06 - Added case statement, specify block
+//    02/06/06 - pinTime updates
+//    02/23/06 - Updated Header
+//    03/10/06 - CR#226660. Fixed input/output connectivity problem 	
+//    03/27/06 - Updated TEMAC smartmodel to version number 00.002 for following changes
+//			CR#224695 - 
+//				1. TEMAC smartmodel 16 bit client interface problem.
+//				2. Compiled smartmodel with `delay_mode_zero directive
+//			CR#226083 - 
+//				1. Loopback attributes don't work in Verilog TEMAC smartmodel.
+//			CR#224695 - 
+//				1 . Added 50 ps input delay to all inputs(except clocks) going into temac swift model			
+//   04/11/06 - CR#228624 - Added missing timing check to timing block.
+//   04/11/06 - CR#228762 - Added some missing path delays to timing block.
+//   04/27/06 - CR#230105 - Fixed connectivity for CLK
+//   05/23/06 - CR#231962 - Add buffers for connectivity
+//   06/22/06 - CR#233879 - Add parameter bus range
+//   08/04/06 - CR#234555 - Recovery/Removal checks added
+//   09/15/06 - CR#423162 - Timing updates
+//   10/26/06 -           - replaced zero_delay with CLK_DELAY to be consistent with writers (PPC440 update)
+//    06/08/07 - CR#440717 - Add localparam EMAC0MIITXCLK_DELAY & EMAC1MIITXCLK_DELAY
+//    08/28/07 - CR#447575 - Path Delay updates due to pinDev/pinTime updates
+//  End Revision
+///////////////////////////////////////////////////////////
+
+`timescale 1 ps / 1 ps 
+
+module X_TEMAC (
+	DCRHOSTDONEIR,
+	EMAC0CLIENTANINTERRUPT,
+	EMAC0CLIENTRXBADFRAME,
+	EMAC0CLIENTRXCLIENTCLKOUT,
+	EMAC0CLIENTRXD,
+	EMAC0CLIENTRXDVLD,
+	EMAC0CLIENTRXDVLDMSW,
+	EMAC0CLIENTRXFRAMEDROP,
+	EMAC0CLIENTRXGOODFRAME,
+	EMAC0CLIENTRXSTATS,
+	EMAC0CLIENTRXSTATSBYTEVLD,
+	EMAC0CLIENTRXSTATSVLD,
+	EMAC0CLIENTTXACK,
+	EMAC0CLIENTTXCLIENTCLKOUT,
+	EMAC0CLIENTTXCOLLISION,
+	EMAC0CLIENTTXRETRANSMIT,
+	EMAC0CLIENTTXSTATS,
+	EMAC0CLIENTTXSTATSBYTEVLD,
+	EMAC0CLIENTTXSTATSVLD,
+	EMAC0PHYENCOMMAALIGN,
+	EMAC0PHYLOOPBACKMSB,
+	EMAC0PHYMCLKOUT,
+	EMAC0PHYMDOUT,
+	EMAC0PHYMDTRI,
+	EMAC0PHYMGTRXRESET,
+	EMAC0PHYMGTTXRESET,
+	EMAC0PHYPOWERDOWN,
+	EMAC0PHYSYNCACQSTATUS,
+	EMAC0PHYTXCHARDISPMODE,
+	EMAC0PHYTXCHARDISPVAL,
+	EMAC0PHYTXCHARISK,
+	EMAC0PHYTXCLK,
+	EMAC0PHYTXD,
+	EMAC0PHYTXEN,
+	EMAC0PHYTXER,
+	EMAC0PHYTXGMIIMIICLKOUT,
+	EMAC0SPEEDIS10100,
+	EMAC1CLIENTANINTERRUPT,
+	EMAC1CLIENTRXBADFRAME,
+	EMAC1CLIENTRXCLIENTCLKOUT,
+	EMAC1CLIENTRXD,
+	EMAC1CLIENTRXDVLD,
+	EMAC1CLIENTRXDVLDMSW,
+	EMAC1CLIENTRXFRAMEDROP,
+	EMAC1CLIENTRXGOODFRAME,
+	EMAC1CLIENTRXSTATS,
+	EMAC1CLIENTRXSTATSBYTEVLD,
+	EMAC1CLIENTRXSTATSVLD,
+	EMAC1CLIENTTXACK,
+	EMAC1CLIENTTXCLIENTCLKOUT,
+	EMAC1CLIENTTXCOLLISION,
+	EMAC1CLIENTTXRETRANSMIT,
+	EMAC1CLIENTTXSTATS,
+	EMAC1CLIENTTXSTATSBYTEVLD,
+	EMAC1CLIENTTXSTATSVLD,
+	EMAC1PHYENCOMMAALIGN,
+	EMAC1PHYLOOPBACKMSB,
+	EMAC1PHYMCLKOUT,
+	EMAC1PHYMDOUT,
+	EMAC1PHYMDTRI,
+	EMAC1PHYMGTRXRESET,
+	EMAC1PHYMGTTXRESET,
+	EMAC1PHYPOWERDOWN,
+	EMAC1PHYSYNCACQSTATUS,
+	EMAC1PHYTXCHARDISPMODE,
+	EMAC1PHYTXCHARDISPVAL,
+	EMAC1PHYTXCHARISK,
+	EMAC1PHYTXCLK,
+	EMAC1PHYTXD,
+	EMAC1PHYTXEN,
+	EMAC1PHYTXER,
+	EMAC1PHYTXGMIIMIICLKOUT,
+	EMAC1SPEEDIS10100,
+	EMACDCRACK,
+	EMACDCRDBUS,
+	HOSTMIIMRDY,
+	HOSTRDDATA,
+
+	CLIENTEMAC0DCMLOCKED,
+	CLIENTEMAC0PAUSEREQ,
+	CLIENTEMAC0PAUSEVAL,
+	CLIENTEMAC0RXCLIENTCLKIN,
+	CLIENTEMAC0TXCLIENTCLKIN,
+	CLIENTEMAC0TXD,
+	CLIENTEMAC0TXDVLD,
+	CLIENTEMAC0TXDVLDMSW,
+	CLIENTEMAC0TXFIRSTBYTE,
+	CLIENTEMAC0TXIFGDELAY,
+	CLIENTEMAC0TXUNDERRUN,
+	CLIENTEMAC1DCMLOCKED,
+	CLIENTEMAC1PAUSEREQ,
+	CLIENTEMAC1PAUSEVAL,
+	CLIENTEMAC1RXCLIENTCLKIN,
+	CLIENTEMAC1TXCLIENTCLKIN,
+	CLIENTEMAC1TXD,
+	CLIENTEMAC1TXDVLD,
+	CLIENTEMAC1TXDVLDMSW,
+	CLIENTEMAC1TXFIRSTBYTE,
+	CLIENTEMAC1TXIFGDELAY,
+	CLIENTEMAC1TXUNDERRUN,
+	DCREMACABUS,
+	DCREMACCLK,
+	DCREMACDBUS,
+	DCREMACENABLE,
+	DCREMACREAD,
+	DCREMACWRITE,
+	HOSTADDR,
+	HOSTCLK,
+	HOSTEMAC1SEL,
+	HOSTMIIMSEL,
+	HOSTOPCODE,
+	HOSTREQ,
+	HOSTWRDATA,
+	PHYEMAC0COL,
+	PHYEMAC0CRS,
+	PHYEMAC0GTXCLK,
+	PHYEMAC0MCLKIN,
+	PHYEMAC0MDIN,
+	PHYEMAC0MIITXCLK,
+	PHYEMAC0PHYAD,
+	PHYEMAC0RXBUFERR,
+	PHYEMAC0RXBUFSTATUS,
+	PHYEMAC0RXCHARISCOMMA,
+	PHYEMAC0RXCHARISK,
+	PHYEMAC0RXCHECKINGCRC,
+	PHYEMAC0RXCLK,
+	PHYEMAC0RXCLKCORCNT,
+	PHYEMAC0RXCOMMADET,
+	PHYEMAC0RXD,
+	PHYEMAC0RXDISPERR,
+	PHYEMAC0RXDV,
+	PHYEMAC0RXER,
+	PHYEMAC0RXLOSSOFSYNC,
+	PHYEMAC0RXNOTINTABLE,
+	PHYEMAC0RXRUNDISP,
+	PHYEMAC0SIGNALDET,
+	PHYEMAC0TXBUFERR,
+	PHYEMAC0TXGMIIMIICLKIN,
+	PHYEMAC1COL,
+	PHYEMAC1CRS,
+	PHYEMAC1GTXCLK,
+	PHYEMAC1MCLKIN,
+	PHYEMAC1MDIN,
+	PHYEMAC1MIITXCLK,
+	PHYEMAC1PHYAD,
+	PHYEMAC1RXBUFERR,
+	PHYEMAC1RXBUFSTATUS,
+	PHYEMAC1RXCHARISCOMMA,
+	PHYEMAC1RXCHARISK,
+	PHYEMAC1RXCHECKINGCRC,
+	PHYEMAC1RXCLK,
+	PHYEMAC1RXCLKCORCNT,
+	PHYEMAC1RXCOMMADET,
+	PHYEMAC1RXD,
+	PHYEMAC1RXDISPERR,
+	PHYEMAC1RXDV,
+	PHYEMAC1RXER,
+	PHYEMAC1RXLOSSOFSYNC,
+	PHYEMAC1RXNOTINTABLE,
+	PHYEMAC1RXRUNDISP,
+	PHYEMAC1SIGNALDET,
+	PHYEMAC1TXBUFERR,
+	PHYEMAC1TXGMIIMIICLKIN,
+	RESET
+
+);
+
+parameter LOC = "UNPLACED";
+
+parameter EMAC0_1000BASEX_ENABLE = "FALSE";
+parameter EMAC0_ADDRFILTER_ENABLE = "FALSE";
+parameter EMAC0_BYTEPHY = "FALSE";
+parameter EMAC0_CONFIGVEC_79 = "FALSE";
+parameter EMAC0_GTLOOPBACK = "FALSE";
+parameter EMAC0_HOST_ENABLE = "FALSE";
+parameter EMAC0_LTCHECK_DISABLE = "FALSE";
+parameter EMAC0_MDIO_ENABLE = "FALSE";
+parameter EMAC0_PHYINITAUTONEG_ENABLE = "FALSE";
+parameter EMAC0_PHYISOLATE = "FALSE";
+parameter EMAC0_PHYLOOPBACKMSB = "FALSE";
+parameter EMAC0_PHYPOWERDOWN = "FALSE";
+parameter EMAC0_PHYRESET = "FALSE";
+parameter EMAC0_RGMII_ENABLE = "FALSE";
+parameter EMAC0_RX16BITCLIENT_ENABLE = "FALSE";
+parameter EMAC0_RXFLOWCTRL_ENABLE = "FALSE";
+parameter EMAC0_RXHALFDUPLEX = "FALSE";
+parameter EMAC0_RXINBANDFCS_ENABLE = "FALSE";
+parameter EMAC0_RXJUMBOFRAME_ENABLE = "FALSE";
+parameter EMAC0_RXRESET = "FALSE";
+parameter EMAC0_RXVLAN_ENABLE = "FALSE";
+parameter EMAC0_RX_ENABLE = "FALSE";
+parameter EMAC0_SGMII_ENABLE = "FALSE";
+parameter EMAC0_SPEED_LSB = "FALSE";
+parameter EMAC0_SPEED_MSB = "FALSE";
+parameter EMAC0_TX16BITCLIENT_ENABLE = "FALSE";
+parameter EMAC0_TXFLOWCTRL_ENABLE = "FALSE";
+parameter EMAC0_TXHALFDUPLEX = "FALSE";
+parameter EMAC0_TXIFGADJUST_ENABLE = "FALSE";
+parameter EMAC0_TXINBANDFCS_ENABLE = "FALSE";
+parameter EMAC0_TXJUMBOFRAME_ENABLE = "FALSE";
+parameter EMAC0_TXRESET = "FALSE";
+parameter EMAC0_TXVLAN_ENABLE = "FALSE";
+parameter EMAC0_TX_ENABLE = "FALSE";
+parameter EMAC0_UNIDIRECTION_ENABLE = "FALSE";
+parameter EMAC0_USECLKEN = "FALSE";
+parameter EMAC1_1000BASEX_ENABLE = "FALSE";
+parameter EMAC1_ADDRFILTER_ENABLE = "FALSE";
+parameter EMAC1_BYTEPHY = "FALSE";
+parameter EMAC1_CONFIGVEC_79 = "FALSE";
+parameter EMAC1_GTLOOPBACK = "FALSE";
+parameter EMAC1_HOST_ENABLE = "FALSE";
+parameter EMAC1_LTCHECK_DISABLE = "FALSE";
+parameter EMAC1_MDIO_ENABLE = "FALSE";
+parameter EMAC1_PHYINITAUTONEG_ENABLE = "FALSE";
+parameter EMAC1_PHYISOLATE = "FALSE";
+parameter EMAC1_PHYLOOPBACKMSB = "FALSE";
+parameter EMAC1_PHYPOWERDOWN = "FALSE";
+parameter EMAC1_PHYRESET = "FALSE";
+parameter EMAC1_RGMII_ENABLE = "FALSE";
+parameter EMAC1_RX16BITCLIENT_ENABLE = "FALSE";
+parameter EMAC1_RXFLOWCTRL_ENABLE = "FALSE";
+parameter EMAC1_RXHALFDUPLEX = "FALSE";
+parameter EMAC1_RXINBANDFCS_ENABLE = "FALSE";
+parameter EMAC1_RXJUMBOFRAME_ENABLE = "FALSE";
+parameter EMAC1_RXRESET = "FALSE";
+parameter EMAC1_RXVLAN_ENABLE = "FALSE";
+parameter EMAC1_RX_ENABLE = "FALSE";
+parameter EMAC1_SGMII_ENABLE = "FALSE";
+parameter EMAC1_SPEED_LSB = "FALSE";
+parameter EMAC1_SPEED_MSB = "FALSE";
+parameter EMAC1_TX16BITCLIENT_ENABLE = "FALSE";
+parameter EMAC1_TXFLOWCTRL_ENABLE = "FALSE";
+parameter EMAC1_TXHALFDUPLEX = "FALSE";
+parameter EMAC1_TXIFGADJUST_ENABLE = "FALSE";
+parameter EMAC1_TXINBANDFCS_ENABLE = "FALSE";
+parameter EMAC1_TXJUMBOFRAME_ENABLE = "FALSE";
+parameter EMAC1_TXRESET = "FALSE";
+parameter EMAC1_TXVLAN_ENABLE = "FALSE";
+parameter EMAC1_TX_ENABLE = "FALSE";
+parameter EMAC1_UNIDIRECTION_ENABLE = "FALSE";
+parameter EMAC1_USECLKEN = "FALSE";
+parameter [0:7] EMAC0_DCRBASEADDR = 8'h00;
+parameter [0:7] EMAC1_DCRBASEADDR = 8'h00;
+parameter [47:0] EMAC0_PAUSEADDR = 48'h000000000000;
+parameter [47:0] EMAC0_UNICASTADDR = 48'h000000000000;
+parameter [47:0] EMAC1_PAUSEADDR = 48'h000000000000;
+parameter [47:0] EMAC1_UNICASTADDR = 48'h000000000000;
+parameter [8:0] EMAC0_LINKTIMERVAL = 9'h000;
+parameter [8:0] EMAC1_LINKTIMERVAL = 9'h000;
+
+localparam in_delay = 50;
+localparam out_delay = 0;
+localparam CLK_DELAY = 0;
+// Separate MIITXCLK delays are used to allow EMAC0/1 configuration to modes other than 16-bit client
+localparam EMAC0MIITXCLK_DELAY = (EMAC0_TX16BITCLIENT_ENABLE == "TRUE") ? 25 : CLK_DELAY;
+localparam EMAC1MIITXCLK_DELAY = (EMAC1_TX16BITCLIENT_ENABLE == "TRUE") ? 25 : CLK_DELAY;
+   
+output DCRHOSTDONEIR;
+output EMAC0CLIENTANINTERRUPT;
+output EMAC0CLIENTRXBADFRAME;
+output EMAC0CLIENTRXCLIENTCLKOUT;
+output EMAC0CLIENTRXDVLD;
+output EMAC0CLIENTRXDVLDMSW;
+output EMAC0CLIENTRXFRAMEDROP;
+output EMAC0CLIENTRXGOODFRAME;
+output EMAC0CLIENTRXSTATSBYTEVLD;
+output EMAC0CLIENTRXSTATSVLD;
+output EMAC0CLIENTTXACK;
+output EMAC0CLIENTTXCLIENTCLKOUT;
+output EMAC0CLIENTTXCOLLISION;
+output EMAC0CLIENTTXRETRANSMIT;
+output EMAC0CLIENTTXSTATS;
+output EMAC0CLIENTTXSTATSBYTEVLD;
+output EMAC0CLIENTTXSTATSVLD;
+output EMAC0PHYENCOMMAALIGN;
+output EMAC0PHYLOOPBACKMSB;
+output EMAC0PHYMCLKOUT;
+output EMAC0PHYMDOUT;
+output EMAC0PHYMDTRI;
+output EMAC0PHYMGTRXRESET;
+output EMAC0PHYMGTTXRESET;
+output EMAC0PHYPOWERDOWN;
+output EMAC0PHYSYNCACQSTATUS;
+output EMAC0PHYTXCHARDISPMODE;
+output EMAC0PHYTXCHARDISPVAL;
+output EMAC0PHYTXCHARISK;
+output EMAC0PHYTXCLK;
+output EMAC0PHYTXEN;
+output EMAC0PHYTXER;
+output EMAC0PHYTXGMIIMIICLKOUT;
+output EMAC0SPEEDIS10100;
+output EMAC1CLIENTANINTERRUPT;
+output EMAC1CLIENTRXBADFRAME;
+output EMAC1CLIENTRXCLIENTCLKOUT;
+output EMAC1CLIENTRXDVLD;
+output EMAC1CLIENTRXDVLDMSW;
+output EMAC1CLIENTRXFRAMEDROP;
+output EMAC1CLIENTRXGOODFRAME;
+output EMAC1CLIENTRXSTATSBYTEVLD;
+output EMAC1CLIENTRXSTATSVLD;
+output EMAC1CLIENTTXACK;
+output EMAC1CLIENTTXCLIENTCLKOUT;
+output EMAC1CLIENTTXCOLLISION;
+output EMAC1CLIENTTXRETRANSMIT;
+output EMAC1CLIENTTXSTATS;
+output EMAC1CLIENTTXSTATSBYTEVLD;
+output EMAC1CLIENTTXSTATSVLD;
+output EMAC1PHYENCOMMAALIGN;
+output EMAC1PHYLOOPBACKMSB;
+output EMAC1PHYMCLKOUT;
+output EMAC1PHYMDOUT;
+output EMAC1PHYMDTRI;
+output EMAC1PHYMGTRXRESET;
+output EMAC1PHYMGTTXRESET;
+output EMAC1PHYPOWERDOWN;
+output EMAC1PHYSYNCACQSTATUS;
+output EMAC1PHYTXCHARDISPMODE;
+output EMAC1PHYTXCHARDISPVAL;
+output EMAC1PHYTXCHARISK;
+output EMAC1PHYTXCLK;
+output EMAC1PHYTXEN;
+output EMAC1PHYTXER;
+output EMAC1PHYTXGMIIMIICLKOUT;
+output EMAC1SPEEDIS10100;
+output EMACDCRACK;
+output HOSTMIIMRDY;
+output [0:31] EMACDCRDBUS;
+output [15:0] EMAC0CLIENTRXD;
+output [15:0] EMAC1CLIENTRXD;
+output [31:0] HOSTRDDATA;
+output [6:0] EMAC0CLIENTRXSTATS;
+output [6:0] EMAC1CLIENTRXSTATS;
+output [7:0] EMAC0PHYTXD;
+output [7:0] EMAC1PHYTXD;
+
+input CLIENTEMAC0DCMLOCKED;
+input CLIENTEMAC0PAUSEREQ;
+input CLIENTEMAC0RXCLIENTCLKIN;
+input CLIENTEMAC0TXCLIENTCLKIN;
+input CLIENTEMAC0TXDVLD;
+input CLIENTEMAC0TXDVLDMSW;
+input CLIENTEMAC0TXFIRSTBYTE;
+input CLIENTEMAC0TXUNDERRUN;
+input CLIENTEMAC1DCMLOCKED;
+input CLIENTEMAC1PAUSEREQ;
+input CLIENTEMAC1RXCLIENTCLKIN;
+input CLIENTEMAC1TXCLIENTCLKIN;
+input CLIENTEMAC1TXDVLD;
+input CLIENTEMAC1TXDVLDMSW;
+input CLIENTEMAC1TXFIRSTBYTE;
+input CLIENTEMAC1TXUNDERRUN;
+input DCREMACCLK;
+input DCREMACENABLE;
+input DCREMACREAD;
+input DCREMACWRITE;
+input HOSTCLK;
+input HOSTEMAC1SEL;
+input HOSTMIIMSEL;
+input HOSTREQ;
+input PHYEMAC0COL;
+input PHYEMAC0CRS;
+input PHYEMAC0GTXCLK;
+input PHYEMAC0MCLKIN;
+input PHYEMAC0MDIN;
+input PHYEMAC0MIITXCLK;
+input PHYEMAC0RXBUFERR;
+input PHYEMAC0RXCHARISCOMMA;
+input PHYEMAC0RXCHARISK;
+input PHYEMAC0RXCHECKINGCRC;
+input PHYEMAC0RXCLK;
+input PHYEMAC0RXCOMMADET;
+input PHYEMAC0RXDISPERR;
+input PHYEMAC0RXDV;
+input PHYEMAC0RXER;
+input PHYEMAC0RXNOTINTABLE;
+input PHYEMAC0RXRUNDISP;
+input PHYEMAC0SIGNALDET;
+input PHYEMAC0TXBUFERR;
+input PHYEMAC0TXGMIIMIICLKIN;
+input PHYEMAC1COL;
+input PHYEMAC1CRS;
+input PHYEMAC1GTXCLK;
+input PHYEMAC1MCLKIN;
+input PHYEMAC1MDIN;
+input PHYEMAC1MIITXCLK;
+input PHYEMAC1RXBUFERR;
+input PHYEMAC1RXCHARISCOMMA;
+input PHYEMAC1RXCHARISK;
+input PHYEMAC1RXCHECKINGCRC;
+input PHYEMAC1RXCLK;
+input PHYEMAC1RXCOMMADET;
+input PHYEMAC1RXDISPERR;
+input PHYEMAC1RXDV;
+input PHYEMAC1RXER;
+input PHYEMAC1RXNOTINTABLE;
+input PHYEMAC1RXRUNDISP;
+input PHYEMAC1SIGNALDET;
+input PHYEMAC1TXBUFERR;
+input PHYEMAC1TXGMIIMIICLKIN;
+input RESET;
+input [0:31] DCREMACDBUS;
+input [0:9] DCREMACABUS;
+input [15:0] CLIENTEMAC0PAUSEVAL;
+input [15:0] CLIENTEMAC0TXD;
+input [15:0] CLIENTEMAC1PAUSEVAL;
+input [15:0] CLIENTEMAC1TXD;
+input [1:0] HOSTOPCODE;
+input [1:0] PHYEMAC0RXBUFSTATUS;
+input [1:0] PHYEMAC0RXLOSSOFSYNC;
+input [1:0] PHYEMAC1RXBUFSTATUS;
+input [1:0] PHYEMAC1RXLOSSOFSYNC;
+input [2:0] PHYEMAC0RXCLKCORCNT;
+input [2:0] PHYEMAC1RXCLKCORCNT;
+input [31:0] HOSTWRDATA;
+input [4:0] PHYEMAC0PHYAD;
+input [4:0] PHYEMAC1PHYAD;
+input [7:0] CLIENTEMAC0TXIFGDELAY;
+input [7:0] CLIENTEMAC1TXIFGDELAY;
+input [7:0] PHYEMAC0RXD;
+input [7:0] PHYEMAC1RXD;
+input [9:0] HOSTADDR;
+
+reg EMAC0_1000BASEX_ENABLE_BINARY;
+reg EMAC0_ADDRFILTER_ENABLE_BINARY;
+reg EMAC0_BYTEPHY_BINARY;
+reg EMAC0_CONFIGVEC_79_BINARY;
+reg EMAC0_GTLOOPBACK_BINARY;
+reg EMAC0_HOST_ENABLE_BINARY;
+reg EMAC0_LTCHECK_DISABLE_BINARY;
+reg EMAC0_MDIO_ENABLE_BINARY;
+reg EMAC0_PHYINITAUTONEG_ENABLE_BINARY;
+reg EMAC0_PHYISOLATE_BINARY;
+reg EMAC0_PHYLOOPBACKMSB_BINARY;
+reg EMAC0_PHYPOWERDOWN_BINARY;
+reg EMAC0_PHYRESET_BINARY;
+reg EMAC0_RGMII_ENABLE_BINARY;
+reg EMAC0_RX16BITCLIENT_ENABLE_BINARY;
+reg EMAC0_RXFLOWCTRL_ENABLE_BINARY;
+reg EMAC0_RXHALFDUPLEX_BINARY;
+reg EMAC0_RXINBANDFCS_ENABLE_BINARY;
+reg EMAC0_RXJUMBOFRAME_ENABLE_BINARY;
+reg EMAC0_RXRESET_BINARY;
+reg EMAC0_RXVLAN_ENABLE_BINARY;
+reg EMAC0_RX_ENABLE_BINARY;
+reg EMAC0_SGMII_ENABLE_BINARY;
+reg EMAC0_SPEED_LSB_BINARY;
+reg EMAC0_SPEED_MSB_BINARY;
+reg EMAC0_TX16BITCLIENT_ENABLE_BINARY;
+reg EMAC0_TXFLOWCTRL_ENABLE_BINARY;
+reg EMAC0_TXHALFDUPLEX_BINARY;
+reg EMAC0_TXIFGADJUST_ENABLE_BINARY;
+reg EMAC0_TXINBANDFCS_ENABLE_BINARY;
+reg EMAC0_TXJUMBOFRAME_ENABLE_BINARY;
+reg EMAC0_TXRESET_BINARY;
+reg EMAC0_TXVLAN_ENABLE_BINARY;
+reg EMAC0_TX_ENABLE_BINARY;
+reg EMAC0_UNIDIRECTION_ENABLE_BINARY;
+reg EMAC0_USECLKEN_BINARY;
+reg EMAC1_1000BASEX_ENABLE_BINARY;
+reg EMAC1_ADDRFILTER_ENABLE_BINARY;
+reg EMAC1_BYTEPHY_BINARY;
+reg EMAC1_CONFIGVEC_79_BINARY;
+reg EMAC1_GTLOOPBACK_BINARY;
+reg EMAC1_HOST_ENABLE_BINARY;
+reg EMAC1_LTCHECK_DISABLE_BINARY;
+reg EMAC1_MDIO_ENABLE_BINARY;
+reg EMAC1_PHYINITAUTONEG_ENABLE_BINARY;
+reg EMAC1_PHYISOLATE_BINARY;
+reg EMAC1_PHYLOOPBACKMSB_BINARY;
+reg EMAC1_PHYPOWERDOWN_BINARY;
+reg EMAC1_PHYRESET_BINARY;
+reg EMAC1_RGMII_ENABLE_BINARY;
+reg EMAC1_RX16BITCLIENT_ENABLE_BINARY;
+reg EMAC1_RXFLOWCTRL_ENABLE_BINARY;
+reg EMAC1_RXHALFDUPLEX_BINARY;
+reg EMAC1_RXINBANDFCS_ENABLE_BINARY;
+reg EMAC1_RXJUMBOFRAME_ENABLE_BINARY;
+reg EMAC1_RXRESET_BINARY;
+reg EMAC1_RXVLAN_ENABLE_BINARY;
+reg EMAC1_RX_ENABLE_BINARY;
+reg EMAC1_SGMII_ENABLE_BINARY;
+reg EMAC1_SPEED_LSB_BINARY;
+reg EMAC1_SPEED_MSB_BINARY;
+reg EMAC1_TX16BITCLIENT_ENABLE_BINARY;
+reg EMAC1_TXFLOWCTRL_ENABLE_BINARY;
+reg EMAC1_TXHALFDUPLEX_BINARY;
+reg EMAC1_TXIFGADJUST_ENABLE_BINARY;
+reg EMAC1_TXINBANDFCS_ENABLE_BINARY;
+reg EMAC1_TXJUMBOFRAME_ENABLE_BINARY;
+reg EMAC1_TXRESET_BINARY;
+reg EMAC1_TXVLAN_ENABLE_BINARY;
+reg EMAC1_TX_ENABLE_BINARY;
+reg EMAC1_UNIDIRECTION_ENABLE_BINARY;
+reg EMAC1_USECLKEN_BINARY;
+
+wire DCRHOSTDONEIR_OUT;
+wire EMAC0CLIENTANINTERRUPT_OUT;
+wire EMAC0CLIENTRXBADFRAME_OUT;
+wire EMAC0CLIENTRXCLIENTCLKOUT_OUT;
+wire EMAC0CLIENTRXDVLDMSW_OUT;
+wire EMAC0CLIENTRXDVLD_OUT;
+wire EMAC0CLIENTRXFRAMEDROP_OUT;
+wire EMAC0CLIENTRXGOODFRAME_OUT;
+wire EMAC0CLIENTRXSTATSBYTEVLD_OUT;
+wire EMAC0CLIENTRXSTATSVLD_OUT;
+wire EMAC0CLIENTTXACK_OUT;
+wire EMAC0CLIENTTXCLIENTCLKOUT_OUT;
+wire EMAC0CLIENTTXCOLLISION_OUT;
+wire EMAC0CLIENTTXRETRANSMIT_OUT;
+wire EMAC0CLIENTTXSTATSBYTEVLD_OUT;
+wire EMAC0CLIENTTXSTATSVLD_OUT;
+wire EMAC0CLIENTTXSTATS_OUT;
+wire EMAC0PHYENCOMMAALIGN_OUT;
+wire EMAC0PHYLOOPBACKMSB_OUT;
+wire EMAC0PHYMCLKOUT_OUT;
+wire EMAC0PHYMDOUT_OUT;
+wire EMAC0PHYMDTRI_OUT;
+wire EMAC0PHYMGTRXRESET_OUT;
+wire EMAC0PHYMGTTXRESET_OUT;
+wire EMAC0PHYPOWERDOWN_OUT;
+wire EMAC0PHYSYNCACQSTATUS_OUT;
+wire EMAC0PHYTXCHARDISPMODE_OUT;
+wire EMAC0PHYTXCHARDISPVAL_OUT;
+wire EMAC0PHYTXCHARISK_OUT;
+wire EMAC0PHYTXCLK_OUT;
+wire EMAC0PHYTXEN_OUT;
+wire EMAC0PHYTXER_OUT;
+wire EMAC0PHYTXGMIIMIICLKOUT_OUT;
+wire EMAC0SPEEDIS10100_OUT;
+wire EMAC1CLIENTANINTERRUPT_OUT;
+wire EMAC1CLIENTRXBADFRAME_OUT;
+wire EMAC1CLIENTRXCLIENTCLKOUT_OUT;
+wire EMAC1CLIENTRXDVLDMSW_OUT;
+wire EMAC1CLIENTRXDVLD_OUT;
+wire EMAC1CLIENTRXFRAMEDROP_OUT;
+wire EMAC1CLIENTRXGOODFRAME_OUT;
+wire EMAC1CLIENTRXSTATSBYTEVLD_OUT;
+wire EMAC1CLIENTRXSTATSVLD_OUT;
+wire EMAC1CLIENTTXACK_OUT;
+wire EMAC1CLIENTTXCLIENTCLKOUT_OUT;
+wire EMAC1CLIENTTXCOLLISION_OUT;
+wire EMAC1CLIENTTXRETRANSMIT_OUT;
+wire EMAC1CLIENTTXSTATSBYTEVLD_OUT;
+wire EMAC1CLIENTTXSTATSVLD_OUT;
+wire EMAC1CLIENTTXSTATS_OUT;
+wire EMAC1PHYENCOMMAALIGN_OUT;
+wire EMAC1PHYLOOPBACKMSB_OUT;
+wire EMAC1PHYMCLKOUT_OUT;
+wire EMAC1PHYMDOUT_OUT;
+wire EMAC1PHYMDTRI_OUT;
+wire EMAC1PHYMGTRXRESET_OUT;
+wire EMAC1PHYMGTTXRESET_OUT;
+wire EMAC1PHYPOWERDOWN_OUT;
+wire EMAC1PHYSYNCACQSTATUS_OUT;
+wire EMAC1PHYTXCHARDISPMODE_OUT;
+wire EMAC1PHYTXCHARDISPVAL_OUT;
+wire EMAC1PHYTXCHARISK_OUT;
+wire EMAC1PHYTXCLK_OUT;
+wire EMAC1PHYTXEN_OUT;
+wire EMAC1PHYTXER_OUT;
+wire EMAC1PHYTXGMIIMIICLKOUT_OUT;
+wire EMAC1SPEEDIS10100_OUT;
+wire EMACDCRACK_OUT;
+wire HOSTMIIMRDY_OUT;
+wire [0:31] EMACDCRDBUS_OUT;
+wire [15:0] EMAC0CLIENTRXD_OUT;
+wire [15:0] EMAC1CLIENTRXD_OUT;
+wire [31:0] HOSTRDDATA_OUT;
+wire [6:0] EMAC0CLIENTRXSTATS_OUT;
+wire [6:0] EMAC1CLIENTRXSTATS_OUT;
+wire [7:0] EMAC0PHYTXD_OUT;
+wire [7:0] EMAC1PHYTXD_OUT;
+
+wire CLIENTEMAC0DCMLOCKED_IN;
+wire CLIENTEMAC0PAUSEREQ_IN;
+wire CLIENTEMAC0RXCLIENTCLKIN_IN;
+wire CLIENTEMAC0TXCLIENTCLKIN_IN;
+wire CLIENTEMAC0TXDVLDMSW_IN;
+wire CLIENTEMAC0TXDVLD_IN;
+wire CLIENTEMAC0TXFIRSTBYTE_IN;
+wire CLIENTEMAC0TXUNDERRUN_IN;
+wire CLIENTEMAC1DCMLOCKED_IN;
+wire CLIENTEMAC1PAUSEREQ_IN;
+wire CLIENTEMAC1RXCLIENTCLKIN_IN;
+wire CLIENTEMAC1TXCLIENTCLKIN_IN;
+wire CLIENTEMAC1TXDVLDMSW_IN;
+wire CLIENTEMAC1TXDVLD_IN;
+wire CLIENTEMAC1TXFIRSTBYTE_IN;
+wire CLIENTEMAC1TXUNDERRUN_IN;
+wire DCREMACCLK_IN;
+wire DCREMACENABLE_IN;
+wire DCREMACREAD_IN;
+wire DCREMACWRITE_IN;
+wire HOSTCLK_IN;
+wire HOSTEMAC1SEL_IN;
+wire HOSTMIIMSEL_IN;
+wire HOSTREQ_IN;
+wire PHYEMAC0COL_IN;
+wire PHYEMAC0CRS_IN;
+wire PHYEMAC0GTXCLK_IN;
+wire PHYEMAC0MCLKIN_IN;
+wire PHYEMAC0MDIN_IN;
+wire PHYEMAC0MIITXCLK_IN;
+wire PHYEMAC0RXBUFERR_IN;
+wire PHYEMAC0RXCHARISCOMMA_IN;
+wire PHYEMAC0RXCHARISK_IN;
+wire PHYEMAC0RXCHECKINGCRC_IN;
+wire PHYEMAC0RXCLK_IN;
+wire PHYEMAC0RXCOMMADET_IN;
+wire PHYEMAC0RXDISPERR_IN;
+wire PHYEMAC0RXDV_IN;
+wire PHYEMAC0RXER_IN;
+wire PHYEMAC0RXNOTINTABLE_IN;
+wire PHYEMAC0RXRUNDISP_IN;
+wire PHYEMAC0SIGNALDET_IN;
+wire PHYEMAC0TXBUFERR_IN;
+wire PHYEMAC0TXGMIIMIICLKIN_IN;
+wire PHYEMAC1COL_IN;
+wire PHYEMAC1CRS_IN;
+wire PHYEMAC1GTXCLK_IN;
+wire PHYEMAC1MCLKIN_IN;
+wire PHYEMAC1MDIN_IN;
+wire PHYEMAC1MIITXCLK_IN;
+wire PHYEMAC1RXBUFERR_IN;
+wire PHYEMAC1RXCHARISCOMMA_IN;
+wire PHYEMAC1RXCHARISK_IN;
+wire PHYEMAC1RXCHECKINGCRC_IN;
+wire PHYEMAC1RXCLK_IN;
+wire PHYEMAC1RXCOMMADET_IN;
+wire PHYEMAC1RXDISPERR_IN;
+wire PHYEMAC1RXDV_IN;
+wire PHYEMAC1RXER_IN;
+wire PHYEMAC1RXNOTINTABLE_IN;
+wire PHYEMAC1RXRUNDISP_IN;
+wire PHYEMAC1SIGNALDET_IN;
+wire PHYEMAC1TXBUFERR_IN;
+wire PHYEMAC1TXGMIIMIICLKIN_IN;
+wire RESET_IN;
+wire [0:31] DCREMACDBUS_IN;
+wire [0:9] DCREMACABUS_IN;
+wire [15:0] CLIENTEMAC0PAUSEVAL_IN;
+wire [15:0] CLIENTEMAC0TXD_IN;
+wire [15:0] CLIENTEMAC1PAUSEVAL_IN;
+wire [15:0] CLIENTEMAC1TXD_IN;
+wire [1:0] HOSTOPCODE_IN;
+wire [1:0] PHYEMAC0RXBUFSTATUS_IN;
+wire [1:0] PHYEMAC0RXLOSSOFSYNC_IN;
+wire [1:0] PHYEMAC1RXBUFSTATUS_IN;
+wire [1:0] PHYEMAC1RXLOSSOFSYNC_IN;
+wire [2:0] PHYEMAC0RXCLKCORCNT_IN;
+wire [2:0] PHYEMAC1RXCLKCORCNT_IN;
+wire [31:0] HOSTWRDATA_IN;
+wire [4:0] PHYEMAC0PHYAD_IN;
+wire [4:0] PHYEMAC1PHYAD_IN;
+wire [7:0] CLIENTEMAC0TXIFGDELAY_IN;
+wire [7:0] CLIENTEMAC1TXIFGDELAY_IN;
+wire [7:0] PHYEMAC0RXD_IN;
+wire [7:0] PHYEMAC1RXD_IN;
+wire [9:0] HOSTADDR_IN;
+
+initial begin
+	case (EMAC0_RXHALFDUPLEX)
+		"FALSE" : EMAC0_RXHALFDUPLEX_BINARY = 1'b0;
+		"TRUE" : EMAC0_RXHALFDUPLEX_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RXHALFDUPLEX on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RXHALFDUPLEX);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_RXVLAN_ENABLE)
+		"FALSE" : EMAC0_RXVLAN_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_RXVLAN_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RXVLAN_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RXVLAN_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_RX_ENABLE)
+		"FALSE" : EMAC0_RX_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_RX_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RX_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RX_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_RXINBANDFCS_ENABLE)
+		"FALSE" : EMAC0_RXINBANDFCS_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_RXINBANDFCS_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RXINBANDFCS_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RXINBANDFCS_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_RXJUMBOFRAME_ENABLE)
+		"FALSE" : EMAC0_RXJUMBOFRAME_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_RXJUMBOFRAME_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RXJUMBOFRAME_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RXJUMBOFRAME_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_RXRESET)
+		"FALSE" : EMAC0_RXRESET_BINARY = 1'b0;
+		"TRUE" : EMAC0_RXRESET_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RXRESET on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RXRESET);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TXIFGADJUST_ENABLE)
+		"FALSE" : EMAC0_TXIFGADJUST_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_TXIFGADJUST_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TXIFGADJUST_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TXIFGADJUST_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TXHALFDUPLEX)
+		"FALSE" : EMAC0_TXHALFDUPLEX_BINARY = 1'b0;
+		"TRUE" : EMAC0_TXHALFDUPLEX_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TXHALFDUPLEX on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TXHALFDUPLEX);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TXVLAN_ENABLE)
+		"FALSE" : EMAC0_TXVLAN_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_TXVLAN_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TXVLAN_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TXVLAN_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TX_ENABLE)
+		"FALSE" : EMAC0_TX_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_TX_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TX_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TX_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TXINBANDFCS_ENABLE)
+		"FALSE" : EMAC0_TXINBANDFCS_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_TXINBANDFCS_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TXINBANDFCS_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TXINBANDFCS_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TXJUMBOFRAME_ENABLE)
+		"FALSE" : EMAC0_TXJUMBOFRAME_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_TXJUMBOFRAME_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TXJUMBOFRAME_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TXJUMBOFRAME_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TXRESET)
+		"FALSE" : EMAC0_TXRESET_BINARY = 1'b0;
+		"TRUE" : EMAC0_TXRESET_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TXRESET on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TXRESET);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TXFLOWCTRL_ENABLE)
+		"FALSE" : EMAC0_TXFLOWCTRL_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_TXFLOWCTRL_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TXFLOWCTRL_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TXFLOWCTRL_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_RXFLOWCTRL_ENABLE)
+		"FALSE" : EMAC0_RXFLOWCTRL_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_RXFLOWCTRL_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RXFLOWCTRL_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RXFLOWCTRL_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_LTCHECK_DISABLE)
+		"FALSE" : EMAC0_LTCHECK_DISABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_LTCHECK_DISABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_LTCHECK_DISABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_LTCHECK_DISABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_ADDRFILTER_ENABLE)
+		"FALSE" : EMAC0_ADDRFILTER_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_ADDRFILTER_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_ADDRFILTER_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_ADDRFILTER_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_RX16BITCLIENT_ENABLE)
+		"FALSE" : EMAC0_RX16BITCLIENT_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_RX16BITCLIENT_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RX16BITCLIENT_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RX16BITCLIENT_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_TX16BITCLIENT_ENABLE)
+		"FALSE" : EMAC0_TX16BITCLIENT_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_TX16BITCLIENT_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_TX16BITCLIENT_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_TX16BITCLIENT_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_HOST_ENABLE)
+		"FALSE" : EMAC0_HOST_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_HOST_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_HOST_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_HOST_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_1000BASEX_ENABLE)
+		"FALSE" : EMAC0_1000BASEX_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_1000BASEX_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_1000BASEX_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_1000BASEX_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_SGMII_ENABLE)
+		"FALSE" : EMAC0_SGMII_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_SGMII_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_SGMII_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_SGMII_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_RGMII_ENABLE)
+		"FALSE" : EMAC0_RGMII_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_RGMII_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_RGMII_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_RGMII_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_SPEED_LSB)
+		"FALSE" : EMAC0_SPEED_LSB_BINARY = 1'b0;
+		"TRUE" : EMAC0_SPEED_LSB_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_SPEED_LSB on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_SPEED_LSB);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_SPEED_MSB)
+		"FALSE" : EMAC0_SPEED_MSB_BINARY = 1'b0;
+		"TRUE" : EMAC0_SPEED_MSB_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_SPEED_MSB on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_SPEED_MSB);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_MDIO_ENABLE)
+		"FALSE" : EMAC0_MDIO_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_MDIO_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_MDIO_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_MDIO_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_PHYLOOPBACKMSB)
+		"FALSE" : EMAC0_PHYLOOPBACKMSB_BINARY = 1'b0;
+		"TRUE" : EMAC0_PHYLOOPBACKMSB_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_PHYLOOPBACKMSB on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_PHYLOOPBACKMSB);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_PHYPOWERDOWN)
+		"FALSE" : EMAC0_PHYPOWERDOWN_BINARY = 1'b0;
+		"TRUE" : EMAC0_PHYPOWERDOWN_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_PHYPOWERDOWN on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_PHYPOWERDOWN);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_PHYISOLATE)
+		"FALSE" : EMAC0_PHYISOLATE_BINARY = 1'b0;
+		"TRUE" : EMAC0_PHYISOLATE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_PHYISOLATE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_PHYISOLATE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_PHYINITAUTONEG_ENABLE)
+		"FALSE" : EMAC0_PHYINITAUTONEG_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_PHYINITAUTONEG_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_PHYINITAUTONEG_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_PHYINITAUTONEG_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_PHYRESET)
+		"FALSE" : EMAC0_PHYRESET_BINARY = 1'b0;
+		"TRUE" : EMAC0_PHYRESET_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_PHYRESET on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_PHYRESET);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_CONFIGVEC_79)
+		"FALSE" : EMAC0_CONFIGVEC_79_BINARY = 1'b0;
+		"TRUE" : EMAC0_CONFIGVEC_79_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_CONFIGVEC_79 on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_CONFIGVEC_79);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_UNIDIRECTION_ENABLE)
+		"FALSE" : EMAC0_UNIDIRECTION_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC0_UNIDIRECTION_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_UNIDIRECTION_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_UNIDIRECTION_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_GTLOOPBACK)
+		"FALSE" : EMAC0_GTLOOPBACK_BINARY = 1'b0;
+		"TRUE" : EMAC0_GTLOOPBACK_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_GTLOOPBACK on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_GTLOOPBACK);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_BYTEPHY)
+		"FALSE" : EMAC0_BYTEPHY_BINARY = 1'b0;
+		"TRUE" : EMAC0_BYTEPHY_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_BYTEPHY on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_BYTEPHY);
+			$finish;
+		end
+	endcase
+
+	case (EMAC0_USECLKEN)
+		"FALSE" : EMAC0_USECLKEN_BINARY = 1'b0;
+		"TRUE" : EMAC0_USECLKEN_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC0_USECLKEN on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC0_USECLKEN);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RXHALFDUPLEX)
+		"FALSE" : EMAC1_RXHALFDUPLEX_BINARY = 1'b0;
+		"TRUE" : EMAC1_RXHALFDUPLEX_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RXHALFDUPLEX on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RXHALFDUPLEX);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RXVLAN_ENABLE)
+		"FALSE" : EMAC1_RXVLAN_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_RXVLAN_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RXVLAN_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RXVLAN_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RX_ENABLE)
+		"FALSE" : EMAC1_RX_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_RX_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RX_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RX_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RXINBANDFCS_ENABLE)
+		"FALSE" : EMAC1_RXINBANDFCS_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_RXINBANDFCS_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RXINBANDFCS_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RXINBANDFCS_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RXJUMBOFRAME_ENABLE)
+		"FALSE" : EMAC1_RXJUMBOFRAME_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_RXJUMBOFRAME_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RXJUMBOFRAME_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RXJUMBOFRAME_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RXRESET)
+		"FALSE" : EMAC1_RXRESET_BINARY = 1'b0;
+		"TRUE" : EMAC1_RXRESET_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RXRESET on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RXRESET);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TXIFGADJUST_ENABLE)
+		"FALSE" : EMAC1_TXIFGADJUST_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_TXIFGADJUST_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TXIFGADJUST_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TXIFGADJUST_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TXHALFDUPLEX)
+		"FALSE" : EMAC1_TXHALFDUPLEX_BINARY = 1'b0;
+		"TRUE" : EMAC1_TXHALFDUPLEX_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TXHALFDUPLEX on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TXHALFDUPLEX);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TXVLAN_ENABLE)
+		"FALSE" : EMAC1_TXVLAN_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_TXVLAN_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TXVLAN_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TXVLAN_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TX_ENABLE)
+		"FALSE" : EMAC1_TX_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_TX_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TX_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TX_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TXINBANDFCS_ENABLE)
+		"FALSE" : EMAC1_TXINBANDFCS_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_TXINBANDFCS_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TXINBANDFCS_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TXINBANDFCS_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TXJUMBOFRAME_ENABLE)
+		"FALSE" : EMAC1_TXJUMBOFRAME_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_TXJUMBOFRAME_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TXJUMBOFRAME_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TXJUMBOFRAME_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TXRESET)
+		"FALSE" : EMAC1_TXRESET_BINARY = 1'b0;
+		"TRUE" : EMAC1_TXRESET_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TXRESET on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TXRESET);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TXFLOWCTRL_ENABLE)
+		"FALSE" : EMAC1_TXFLOWCTRL_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_TXFLOWCTRL_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TXFLOWCTRL_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TXFLOWCTRL_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RXFLOWCTRL_ENABLE)
+		"FALSE" : EMAC1_RXFLOWCTRL_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_RXFLOWCTRL_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RXFLOWCTRL_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RXFLOWCTRL_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_LTCHECK_DISABLE)
+		"FALSE" : EMAC1_LTCHECK_DISABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_LTCHECK_DISABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_LTCHECK_DISABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_LTCHECK_DISABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_ADDRFILTER_ENABLE)
+		"FALSE" : EMAC1_ADDRFILTER_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_ADDRFILTER_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_ADDRFILTER_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_ADDRFILTER_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RX16BITCLIENT_ENABLE)
+		"FALSE" : EMAC1_RX16BITCLIENT_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_RX16BITCLIENT_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RX16BITCLIENT_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RX16BITCLIENT_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_TX16BITCLIENT_ENABLE)
+		"FALSE" : EMAC1_TX16BITCLIENT_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_TX16BITCLIENT_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_TX16BITCLIENT_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_TX16BITCLIENT_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_HOST_ENABLE)
+		"FALSE" : EMAC1_HOST_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_HOST_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_HOST_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_HOST_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_1000BASEX_ENABLE)
+		"FALSE" : EMAC1_1000BASEX_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_1000BASEX_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_1000BASEX_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_1000BASEX_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_SGMII_ENABLE)
+		"FALSE" : EMAC1_SGMII_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_SGMII_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_SGMII_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_SGMII_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_RGMII_ENABLE)
+		"FALSE" : EMAC1_RGMII_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_RGMII_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_RGMII_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_RGMII_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_SPEED_LSB)
+		"FALSE" : EMAC1_SPEED_LSB_BINARY = 1'b0;
+		"TRUE" : EMAC1_SPEED_LSB_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_SPEED_LSB on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_SPEED_LSB);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_SPEED_MSB)
+		"FALSE" : EMAC1_SPEED_MSB_BINARY = 1'b0;
+		"TRUE" : EMAC1_SPEED_MSB_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_SPEED_MSB on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_SPEED_MSB);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_MDIO_ENABLE)
+		"FALSE" : EMAC1_MDIO_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_MDIO_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_MDIO_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_MDIO_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_PHYLOOPBACKMSB)
+		"FALSE" : EMAC1_PHYLOOPBACKMSB_BINARY = 1'b0;
+		"TRUE" : EMAC1_PHYLOOPBACKMSB_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_PHYLOOPBACKMSB on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_PHYLOOPBACKMSB);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_PHYPOWERDOWN)
+		"FALSE" : EMAC1_PHYPOWERDOWN_BINARY = 1'b0;
+		"TRUE" : EMAC1_PHYPOWERDOWN_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_PHYPOWERDOWN on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_PHYPOWERDOWN);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_PHYISOLATE)
+		"FALSE" : EMAC1_PHYISOLATE_BINARY = 1'b0;
+		"TRUE" : EMAC1_PHYISOLATE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_PHYISOLATE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_PHYISOLATE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_PHYINITAUTONEG_ENABLE)
+		"FALSE" : EMAC1_PHYINITAUTONEG_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_PHYINITAUTONEG_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_PHYINITAUTONEG_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_PHYINITAUTONEG_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_PHYRESET)
+		"FALSE" : EMAC1_PHYRESET_BINARY = 1'b0;
+		"TRUE" : EMAC1_PHYRESET_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_PHYRESET on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_PHYRESET);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_CONFIGVEC_79)
+		"FALSE" : EMAC1_CONFIGVEC_79_BINARY = 1'b0;
+		"TRUE" : EMAC1_CONFIGVEC_79_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_CONFIGVEC_79 on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_CONFIGVEC_79);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_UNIDIRECTION_ENABLE)
+		"FALSE" : EMAC1_UNIDIRECTION_ENABLE_BINARY = 1'b0;
+		"TRUE" : EMAC1_UNIDIRECTION_ENABLE_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_UNIDIRECTION_ENABLE on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_UNIDIRECTION_ENABLE);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_GTLOOPBACK)
+		"FALSE" : EMAC1_GTLOOPBACK_BINARY = 1'b0;
+		"TRUE" : EMAC1_GTLOOPBACK_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_GTLOOPBACK on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_GTLOOPBACK);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_BYTEPHY)
+		"FALSE" : EMAC1_BYTEPHY_BINARY = 1'b0;
+		"TRUE" : EMAC1_BYTEPHY_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_BYTEPHY on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_BYTEPHY);
+			$finish;
+		end
+	endcase
+
+	case (EMAC1_USECLKEN)
+		"FALSE" : EMAC1_USECLKEN_BINARY = 1'b0;
+		"TRUE" : EMAC1_USECLKEN_BINARY = 1'b1;
+		default : begin
+			$display("Attribute Syntax Error : The Attribute EMAC1_USECLKEN on X_TEMAC instance %m is set to %s.  Legal values for this attribute are TRUE or FALSE.", EMAC1_USECLKEN);
+			$finish;
+		end
+	endcase
+
+end
+
+buf B_DCRHOSTDONEIR (DCRHOSTDONEIR, DCRHOSTDONEIR_OUT);
+buf B_EMAC0CLIENTANINTERRUPT (EMAC0CLIENTANINTERRUPT, EMAC0CLIENTANINTERRUPT_OUT);
+buf B_EMAC0CLIENTRXBADFRAME (EMAC0CLIENTRXBADFRAME, EMAC0CLIENTRXBADFRAME_OUT);
+buf B_EMAC0CLIENTRXCLIENTCLKOUT (EMAC0CLIENTRXCLIENTCLKOUT, EMAC0CLIENTRXCLIENTCLKOUT_OUT);
+buf B_EMAC0CLIENTRXD0 (EMAC0CLIENTRXD[0], EMAC0CLIENTRXD_OUT[0]);
+buf B_EMAC0CLIENTRXD1 (EMAC0CLIENTRXD[1], EMAC0CLIENTRXD_OUT[1]);
+buf B_EMAC0CLIENTRXD2 (EMAC0CLIENTRXD[2], EMAC0CLIENTRXD_OUT[2]);
+buf B_EMAC0CLIENTRXD3 (EMAC0CLIENTRXD[3], EMAC0CLIENTRXD_OUT[3]);
+buf B_EMAC0CLIENTRXD4 (EMAC0CLIENTRXD[4], EMAC0CLIENTRXD_OUT[4]);
+buf B_EMAC0CLIENTRXD5 (EMAC0CLIENTRXD[5], EMAC0CLIENTRXD_OUT[5]);
+buf B_EMAC0CLIENTRXD6 (EMAC0CLIENTRXD[6], EMAC0CLIENTRXD_OUT[6]);
+buf B_EMAC0CLIENTRXD7 (EMAC0CLIENTRXD[7], EMAC0CLIENTRXD_OUT[7]);
+buf B_EMAC0CLIENTRXD8 (EMAC0CLIENTRXD[8], EMAC0CLIENTRXD_OUT[8]);
+buf B_EMAC0CLIENTRXD9 (EMAC0CLIENTRXD[9], EMAC0CLIENTRXD_OUT[9]);
+buf B_EMAC0CLIENTRXD10 (EMAC0CLIENTRXD[10], EMAC0CLIENTRXD_OUT[10]);
+buf B_EMAC0CLIENTRXD11 (EMAC0CLIENTRXD[11], EMAC0CLIENTRXD_OUT[11]);
+buf B_EMAC0CLIENTRXD12 (EMAC0CLIENTRXD[12], EMAC0CLIENTRXD_OUT[12]);
+buf B_EMAC0CLIENTRXD13 (EMAC0CLIENTRXD[13], EMAC0CLIENTRXD_OUT[13]);
+buf B_EMAC0CLIENTRXD14 (EMAC0CLIENTRXD[14], EMAC0CLIENTRXD_OUT[14]);
+buf B_EMAC0CLIENTRXD15 (EMAC0CLIENTRXD[15], EMAC0CLIENTRXD_OUT[15]);
+buf B_EMAC0CLIENTRXDVLD (EMAC0CLIENTRXDVLD, EMAC0CLIENTRXDVLD_OUT);
+buf B_EMAC0CLIENTRXDVLDMSW (EMAC0CLIENTRXDVLDMSW, EMAC0CLIENTRXDVLDMSW_OUT);
+buf B_EMAC0CLIENTRXFRAMEDROP (EMAC0CLIENTRXFRAMEDROP, EMAC0CLIENTRXFRAMEDROP_OUT);
+buf B_EMAC0CLIENTRXGOODFRAME (EMAC0CLIENTRXGOODFRAME, EMAC0CLIENTRXGOODFRAME_OUT);
+buf B_EMAC0CLIENTRXSTATS0 (EMAC0CLIENTRXSTATS[0], EMAC0CLIENTRXSTATS_OUT[0]);
+buf B_EMAC0CLIENTRXSTATS1 (EMAC0CLIENTRXSTATS[1], EMAC0CLIENTRXSTATS_OUT[1]);
+buf B_EMAC0CLIENTRXSTATS2 (EMAC0CLIENTRXSTATS[2], EMAC0CLIENTRXSTATS_OUT[2]);
+buf B_EMAC0CLIENTRXSTATS3 (EMAC0CLIENTRXSTATS[3], EMAC0CLIENTRXSTATS_OUT[3]);
+buf B_EMAC0CLIENTRXSTATS4 (EMAC0CLIENTRXSTATS[4], EMAC0CLIENTRXSTATS_OUT[4]);
+buf B_EMAC0CLIENTRXSTATS5 (EMAC0CLIENTRXSTATS[5], EMAC0CLIENTRXSTATS_OUT[5]);
+buf B_EMAC0CLIENTRXSTATS6 (EMAC0CLIENTRXSTATS[6], EMAC0CLIENTRXSTATS_OUT[6]);
+buf B_EMAC0CLIENTRXSTATSBYTEVLD (EMAC0CLIENTRXSTATSBYTEVLD, EMAC0CLIENTRXSTATSBYTEVLD_OUT);
+buf B_EMAC0CLIENTRXSTATSVLD (EMAC0CLIENTRXSTATSVLD, EMAC0CLIENTRXSTATSVLD_OUT);
+buf B_EMAC0CLIENTTXACK (EMAC0CLIENTTXACK, EMAC0CLIENTTXACK_OUT);
+buf B_EMAC0CLIENTTXCLIENTCLKOUT (EMAC0CLIENTTXCLIENTCLKOUT, EMAC0CLIENTTXCLIENTCLKOUT_OUT);
+buf B_EMAC0CLIENTTXCOLLISION (EMAC0CLIENTTXCOLLISION, EMAC0CLIENTTXCOLLISION_OUT);
+buf B_EMAC0PHYTXGMIIMIICLKOUT (EMAC0PHYTXGMIIMIICLKOUT, EMAC0PHYTXGMIIMIICLKOUT_OUT);
+buf B_EMAC0CLIENTTXRETRANSMIT (EMAC0CLIENTTXRETRANSMIT, EMAC0CLIENTTXRETRANSMIT_OUT);
+buf B_EMAC0CLIENTTXSTATS (EMAC0CLIENTTXSTATS, EMAC0CLIENTTXSTATS_OUT);
+buf B_EMAC0CLIENTTXSTATSBYTEVLD (EMAC0CLIENTTXSTATSBYTEVLD, EMAC0CLIENTTXSTATSBYTEVLD_OUT);
+buf B_EMAC0CLIENTTXSTATSVLD (EMAC0CLIENTTXSTATSVLD, EMAC0CLIENTTXSTATSVLD_OUT);
+buf B_EMAC0PHYENCOMMAALIGN (EMAC0PHYENCOMMAALIGN, EMAC0PHYENCOMMAALIGN_OUT);
+buf B_EMAC0PHYLOOPBACKMSB (EMAC0PHYLOOPBACKMSB, EMAC0PHYLOOPBACKMSB_OUT);
+buf B_EMAC0PHYMCLKOUT (EMAC0PHYMCLKOUT, EMAC0PHYMCLKOUT_OUT);
+buf B_EMAC0PHYMDOUT (EMAC0PHYMDOUT, EMAC0PHYMDOUT_OUT);
+buf B_EMAC0PHYMDTRI (EMAC0PHYMDTRI, EMAC0PHYMDTRI_OUT);
+buf B_EMAC0PHYMGTRXRESET (EMAC0PHYMGTRXRESET, EMAC0PHYMGTRXRESET_OUT);
+buf B_EMAC0PHYMGTTXRESET (EMAC0PHYMGTTXRESET, EMAC0PHYMGTTXRESET_OUT);
+buf B_EMAC0PHYPOWERDOWN (EMAC0PHYPOWERDOWN, EMAC0PHYPOWERDOWN_OUT);
+buf B_EMAC0PHYSYNCACQSTATUS (EMAC0PHYSYNCACQSTATUS, EMAC0PHYSYNCACQSTATUS_OUT);
+buf B_EMAC0PHYTXCHARDISPMODE (EMAC0PHYTXCHARDISPMODE, EMAC0PHYTXCHARDISPMODE_OUT);
+buf B_EMAC0PHYTXCHARDISPVAL (EMAC0PHYTXCHARDISPVAL, EMAC0PHYTXCHARDISPVAL_OUT);
+buf B_EMAC0PHYTXCHARISK (EMAC0PHYTXCHARISK, EMAC0PHYTXCHARISK_OUT);
+buf B_EMAC0PHYTXCLK (EMAC0PHYTXCLK, EMAC0PHYTXCLK_OUT);
+buf B_EMAC0PHYTXD0 (EMAC0PHYTXD[0], EMAC0PHYTXD_OUT[0]);
+buf B_EMAC0PHYTXD1 (EMAC0PHYTXD[1], EMAC0PHYTXD_OUT[1]);
+buf B_EMAC0PHYTXD2 (EMAC0PHYTXD[2], EMAC0PHYTXD_OUT[2]);
+buf B_EMAC0PHYTXD3 (EMAC0PHYTXD[3], EMAC0PHYTXD_OUT[3]);
+buf B_EMAC0PHYTXD4 (EMAC0PHYTXD[4], EMAC0PHYTXD_OUT[4]);
+buf B_EMAC0PHYTXD5 (EMAC0PHYTXD[5], EMAC0PHYTXD_OUT[5]);
+buf B_EMAC0PHYTXD6 (EMAC0PHYTXD[6], EMAC0PHYTXD_OUT[6]);
+buf B_EMAC0PHYTXD7 (EMAC0PHYTXD[7], EMAC0PHYTXD_OUT[7]);
+buf B_EMAC0PHYTXEN (EMAC0PHYTXEN, EMAC0PHYTXEN_OUT);
+buf B_EMAC0PHYTXER (EMAC0PHYTXER, EMAC0PHYTXER_OUT);
+buf B_EMAC0SPEEDIS10100 (EMAC0SPEEDIS10100, EMAC0SPEEDIS10100_OUT);
+buf B_EMAC1CLIENTANINTERRUPT (EMAC1CLIENTANINTERRUPT, EMAC1CLIENTANINTERRUPT_OUT);
+buf B_EMAC1CLIENTRXBADFRAME (EMAC1CLIENTRXBADFRAME, EMAC1CLIENTRXBADFRAME_OUT);
+buf B_EMAC1CLIENTRXCLIENTCLKOUT (EMAC1CLIENTRXCLIENTCLKOUT, EMAC1CLIENTRXCLIENTCLKOUT_OUT);
+buf B_EMAC1CLIENTRXD0 (EMAC1CLIENTRXD[0], EMAC1CLIENTRXD_OUT[0]);
+buf B_EMAC1CLIENTRXD1 (EMAC1CLIENTRXD[1], EMAC1CLIENTRXD_OUT[1]);
+buf B_EMAC1CLIENTRXD2 (EMAC1CLIENTRXD[2], EMAC1CLIENTRXD_OUT[2]);
+buf B_EMAC1CLIENTRXD3 (EMAC1CLIENTRXD[3], EMAC1CLIENTRXD_OUT[3]);
+buf B_EMAC1CLIENTRXD4 (EMAC1CLIENTRXD[4], EMAC1CLIENTRXD_OUT[4]);
+buf B_EMAC1CLIENTRXD5 (EMAC1CLIENTRXD[5], EMAC1CLIENTRXD_OUT[5]);
+buf B_EMAC1CLIENTRXD6 (EMAC1CLIENTRXD[6], EMAC1CLIENTRXD_OUT[6]);
+buf B_EMAC1CLIENTRXD7 (EMAC1CLIENTRXD[7], EMAC1CLIENTRXD_OUT[7]);
+buf B_EMAC1CLIENTRXD8 (EMAC1CLIENTRXD[8], EMAC1CLIENTRXD_OUT[8]);
+buf B_EMAC1CLIENTRXD9 (EMAC1CLIENTRXD[9], EMAC1CLIENTRXD_OUT[9]);
+buf B_EMAC1CLIENTRXD10 (EMAC1CLIENTRXD[10], EMAC1CLIENTRXD_OUT[10]);
+buf B_EMAC1CLIENTRXD11 (EMAC1CLIENTRXD[11], EMAC1CLIENTRXD_OUT[11]);
+buf B_EMAC1CLIENTRXD12 (EMAC1CLIENTRXD[12], EMAC1CLIENTRXD_OUT[12]);
+buf B_EMAC1CLIENTRXD13 (EMAC1CLIENTRXD[13], EMAC1CLIENTRXD_OUT[13]);
+buf B_EMAC1CLIENTRXD14 (EMAC1CLIENTRXD[14], EMAC1CLIENTRXD_OUT[14]);
+buf B_EMAC1CLIENTRXD15 (EMAC1CLIENTRXD[15], EMAC1CLIENTRXD_OUT[15]);
+buf B_EMAC1CLIENTRXDVLD (EMAC1CLIENTRXDVLD, EMAC1CLIENTRXDVLD_OUT);
+buf B_EMAC1CLIENTRXDVLDMSW (EMAC1CLIENTRXDVLDMSW, EMAC1CLIENTRXDVLDMSW_OUT);
+buf B_EMAC1CLIENTRXFRAMEDROP (EMAC1CLIENTRXFRAMEDROP, EMAC1CLIENTRXFRAMEDROP_OUT);
+buf B_EMAC1CLIENTRXGOODFRAME (EMAC1CLIENTRXGOODFRAME, EMAC1CLIENTRXGOODFRAME_OUT);
+buf B_EMAC1CLIENTRXSTATS0 (EMAC1CLIENTRXSTATS[0], EMAC1CLIENTRXSTATS_OUT[0]);
+buf B_EMAC1CLIENTRXSTATS1 (EMAC1CLIENTRXSTATS[1], EMAC1CLIENTRXSTATS_OUT[1]);
+buf B_EMAC1CLIENTRXSTATS2 (EMAC1CLIENTRXSTATS[2], EMAC1CLIENTRXSTATS_OUT[2]);
+buf B_EMAC1CLIENTRXSTATS3 (EMAC1CLIENTRXSTATS[3], EMAC1CLIENTRXSTATS_OUT[3]);
+buf B_EMAC1CLIENTRXSTATS4 (EMAC1CLIENTRXSTATS[4], EMAC1CLIENTRXSTATS_OUT[4]);
+buf B_EMAC1CLIENTRXSTATS5 (EMAC1CLIENTRXSTATS[5], EMAC1CLIENTRXSTATS_OUT[5]);
+buf B_EMAC1CLIENTRXSTATS6 (EMAC1CLIENTRXSTATS[6], EMAC1CLIENTRXSTATS_OUT[6]);
+buf B_EMAC1CLIENTRXSTATSBYTEVLD (EMAC1CLIENTRXSTATSBYTEVLD, EMAC1CLIENTRXSTATSBYTEVLD_OUT);
+buf B_EMAC1CLIENTRXSTATSVLD (EMAC1CLIENTRXSTATSVLD, EMAC1CLIENTRXSTATSVLD_OUT);
+buf B_EMAC1CLIENTTXACK (EMAC1CLIENTTXACK, EMAC1CLIENTTXACK_OUT);
+buf B_EMAC1CLIENTTXCLIENTCLKOUT (EMAC1CLIENTTXCLIENTCLKOUT, EMAC1CLIENTTXCLIENTCLKOUT_OUT);
+buf B_EMAC1CLIENTTXCOLLISION (EMAC1CLIENTTXCOLLISION, EMAC1CLIENTTXCOLLISION_OUT);
+buf B_EMAC1PHYTXGMIIMIICLKOUT (EMAC1PHYTXGMIIMIICLKOUT, EMAC1PHYTXGMIIMIICLKOUT_OUT);
+buf B_EMAC1CLIENTTXRETRANSMIT (EMAC1CLIENTTXRETRANSMIT, EMAC1CLIENTTXRETRANSMIT_OUT);
+buf B_EMAC1CLIENTTXSTATS (EMAC1CLIENTTXSTATS, EMAC1CLIENTTXSTATS_OUT);
+buf B_EMAC1CLIENTTXSTATSBYTEVLD (EMAC1CLIENTTXSTATSBYTEVLD, EMAC1CLIENTTXSTATSBYTEVLD_OUT);
+buf B_EMAC1CLIENTTXSTATSVLD (EMAC1CLIENTTXSTATSVLD, EMAC1CLIENTTXSTATSVLD_OUT);
+buf B_EMAC1PHYENCOMMAALIGN (EMAC1PHYENCOMMAALIGN, EMAC1PHYENCOMMAALIGN_OUT);
+buf B_EMAC1PHYLOOPBACKMSB (EMAC1PHYLOOPBACKMSB, EMAC1PHYLOOPBACKMSB_OUT);
+buf B_EMAC1PHYMCLKOUT (EMAC1PHYMCLKOUT, EMAC1PHYMCLKOUT_OUT);
+buf B_EMAC1PHYMDOUT (EMAC1PHYMDOUT, EMAC1PHYMDOUT_OUT);
+buf B_EMAC1PHYMDTRI (EMAC1PHYMDTRI, EMAC1PHYMDTRI_OUT);
+buf B_EMAC1PHYMGTRXRESET (EMAC1PHYMGTRXRESET, EMAC1PHYMGTRXRESET_OUT);
+buf B_EMAC1PHYMGTTXRESET (EMAC1PHYMGTTXRESET, EMAC1PHYMGTTXRESET_OUT);
+buf B_EMAC1PHYPOWERDOWN (EMAC1PHYPOWERDOWN, EMAC1PHYPOWERDOWN_OUT);
+buf B_EMAC1PHYSYNCACQSTATUS (EMAC1PHYSYNCACQSTATUS, EMAC1PHYSYNCACQSTATUS_OUT);
+buf B_EMAC1PHYTXCHARDISPMODE (EMAC1PHYTXCHARDISPMODE, EMAC1PHYTXCHARDISPMODE_OUT);
+buf B_EMAC1PHYTXCHARDISPVAL (EMAC1PHYTXCHARDISPVAL, EMAC1PHYTXCHARDISPVAL_OUT);
+buf B_EMAC1PHYTXCHARISK (EMAC1PHYTXCHARISK, EMAC1PHYTXCHARISK_OUT);
+buf B_EMAC1PHYTXCLK (EMAC1PHYTXCLK, EMAC1PHYTXCLK_OUT);
+buf B_EMAC1PHYTXD0 (EMAC1PHYTXD[0], EMAC1PHYTXD_OUT[0]);
+buf B_EMAC1PHYTXD1 (EMAC1PHYTXD[1], EMAC1PHYTXD_OUT[1]);
+buf B_EMAC1PHYTXD2 (EMAC1PHYTXD[2], EMAC1PHYTXD_OUT[2]);
+buf B_EMAC1PHYTXD3 (EMAC1PHYTXD[3], EMAC1PHYTXD_OUT[3]);
+buf B_EMAC1PHYTXD4 (EMAC1PHYTXD[4], EMAC1PHYTXD_OUT[4]);
+buf B_EMAC1PHYTXD5 (EMAC1PHYTXD[5], EMAC1PHYTXD_OUT[5]);
+buf B_EMAC1PHYTXD6 (EMAC1PHYTXD[6], EMAC1PHYTXD_OUT[6]);
+buf B_EMAC1PHYTXD7 (EMAC1PHYTXD[7], EMAC1PHYTXD_OUT[7]);
+buf B_EMAC1PHYTXEN (EMAC1PHYTXEN, EMAC1PHYTXEN_OUT);
+buf B_EMAC1PHYTXER (EMAC1PHYTXER, EMAC1PHYTXER_OUT);
+buf B_EMAC1SPEEDIS10100 (EMAC1SPEEDIS10100, EMAC1SPEEDIS10100_OUT);
+buf B_EMACDCRACK (EMACDCRACK, EMACDCRACK_OUT);
+buf B_EMACDCRDBUS0 (EMACDCRDBUS[0], EMACDCRDBUS_OUT[0]);
+buf B_EMACDCRDBUS1 (EMACDCRDBUS[1], EMACDCRDBUS_OUT[1]);
+buf B_EMACDCRDBUS2 (EMACDCRDBUS[2], EMACDCRDBUS_OUT[2]);
+buf B_EMACDCRDBUS3 (EMACDCRDBUS[3], EMACDCRDBUS_OUT[3]);
+buf B_EMACDCRDBUS4 (EMACDCRDBUS[4], EMACDCRDBUS_OUT[4]);
+buf B_EMACDCRDBUS5 (EMACDCRDBUS[5], EMACDCRDBUS_OUT[5]);
+buf B_EMACDCRDBUS6 (EMACDCRDBUS[6], EMACDCRDBUS_OUT[6]);
+buf B_EMACDCRDBUS7 (EMACDCRDBUS[7], EMACDCRDBUS_OUT[7]);
+buf B_EMACDCRDBUS8 (EMACDCRDBUS[8], EMACDCRDBUS_OUT[8]);
+buf B_EMACDCRDBUS9 (EMACDCRDBUS[9], EMACDCRDBUS_OUT[9]);
+buf B_EMACDCRDBUS10 (EMACDCRDBUS[10], EMACDCRDBUS_OUT[10]);
+buf B_EMACDCRDBUS11 (EMACDCRDBUS[11], EMACDCRDBUS_OUT[11]);
+buf B_EMACDCRDBUS12 (EMACDCRDBUS[12], EMACDCRDBUS_OUT[12]);
+buf B_EMACDCRDBUS13 (EMACDCRDBUS[13], EMACDCRDBUS_OUT[13]);
+buf B_EMACDCRDBUS14 (EMACDCRDBUS[14], EMACDCRDBUS_OUT[14]);
+buf B_EMACDCRDBUS15 (EMACDCRDBUS[15], EMACDCRDBUS_OUT[15]);
+buf B_EMACDCRDBUS16 (EMACDCRDBUS[16], EMACDCRDBUS_OUT[16]);
+buf B_EMACDCRDBUS17 (EMACDCRDBUS[17], EMACDCRDBUS_OUT[17]);
+buf B_EMACDCRDBUS18 (EMACDCRDBUS[18], EMACDCRDBUS_OUT[18]);
+buf B_EMACDCRDBUS19 (EMACDCRDBUS[19], EMACDCRDBUS_OUT[19]);
+buf B_EMACDCRDBUS20 (EMACDCRDBUS[20], EMACDCRDBUS_OUT[20]);
+buf B_EMACDCRDBUS21 (EMACDCRDBUS[21], EMACDCRDBUS_OUT[21]);
+buf B_EMACDCRDBUS22 (EMACDCRDBUS[22], EMACDCRDBUS_OUT[22]);
+buf B_EMACDCRDBUS23 (EMACDCRDBUS[23], EMACDCRDBUS_OUT[23]);
+buf B_EMACDCRDBUS24 (EMACDCRDBUS[24], EMACDCRDBUS_OUT[24]);
+buf B_EMACDCRDBUS25 (EMACDCRDBUS[25], EMACDCRDBUS_OUT[25]);
+buf B_EMACDCRDBUS26 (EMACDCRDBUS[26], EMACDCRDBUS_OUT[26]);
+buf B_EMACDCRDBUS27 (EMACDCRDBUS[27], EMACDCRDBUS_OUT[27]);
+buf B_EMACDCRDBUS28 (EMACDCRDBUS[28], EMACDCRDBUS_OUT[28]);
+buf B_EMACDCRDBUS29 (EMACDCRDBUS[29], EMACDCRDBUS_OUT[29]);
+buf B_EMACDCRDBUS30 (EMACDCRDBUS[30], EMACDCRDBUS_OUT[30]);
+buf B_EMACDCRDBUS31 (EMACDCRDBUS[31], EMACDCRDBUS_OUT[31]);
+buf B_HOSTMIIMRDY (HOSTMIIMRDY, HOSTMIIMRDY_OUT);
+buf B_HOSTRDDATA0 (HOSTRDDATA[0], HOSTRDDATA_OUT[0]);
+buf B_HOSTRDDATA1 (HOSTRDDATA[1], HOSTRDDATA_OUT[1]);
+buf B_HOSTRDDATA2 (HOSTRDDATA[2], HOSTRDDATA_OUT[2]);
+buf B_HOSTRDDATA3 (HOSTRDDATA[3], HOSTRDDATA_OUT[3]);
+buf B_HOSTRDDATA4 (HOSTRDDATA[4], HOSTRDDATA_OUT[4]);
+buf B_HOSTRDDATA5 (HOSTRDDATA[5], HOSTRDDATA_OUT[5]);
+buf B_HOSTRDDATA6 (HOSTRDDATA[6], HOSTRDDATA_OUT[6]);
+buf B_HOSTRDDATA7 (HOSTRDDATA[7], HOSTRDDATA_OUT[7]);
+buf B_HOSTRDDATA8 (HOSTRDDATA[8], HOSTRDDATA_OUT[8]);
+buf B_HOSTRDDATA9 (HOSTRDDATA[9], HOSTRDDATA_OUT[9]);
+buf B_HOSTRDDATA10 (HOSTRDDATA[10], HOSTRDDATA_OUT[10]);
+buf B_HOSTRDDATA11 (HOSTRDDATA[11], HOSTRDDATA_OUT[11]);
+buf B_HOSTRDDATA12 (HOSTRDDATA[12], HOSTRDDATA_OUT[12]);
+buf B_HOSTRDDATA13 (HOSTRDDATA[13], HOSTRDDATA_OUT[13]);
+buf B_HOSTRDDATA14 (HOSTRDDATA[14], HOSTRDDATA_OUT[14]);
+buf B_HOSTRDDATA15 (HOSTRDDATA[15], HOSTRDDATA_OUT[15]);
+buf B_HOSTRDDATA16 (HOSTRDDATA[16], HOSTRDDATA_OUT[16]);
+buf B_HOSTRDDATA17 (HOSTRDDATA[17], HOSTRDDATA_OUT[17]);
+buf B_HOSTRDDATA18 (HOSTRDDATA[18], HOSTRDDATA_OUT[18]);
+buf B_HOSTRDDATA19 (HOSTRDDATA[19], HOSTRDDATA_OUT[19]);
+buf B_HOSTRDDATA20 (HOSTRDDATA[20], HOSTRDDATA_OUT[20]);
+buf B_HOSTRDDATA21 (HOSTRDDATA[21], HOSTRDDATA_OUT[21]);
+buf B_HOSTRDDATA22 (HOSTRDDATA[22], HOSTRDDATA_OUT[22]);
+buf B_HOSTRDDATA23 (HOSTRDDATA[23], HOSTRDDATA_OUT[23]);
+buf B_HOSTRDDATA24 (HOSTRDDATA[24], HOSTRDDATA_OUT[24]);
+buf B_HOSTRDDATA25 (HOSTRDDATA[25], HOSTRDDATA_OUT[25]);
+buf B_HOSTRDDATA26 (HOSTRDDATA[26], HOSTRDDATA_OUT[26]);
+buf B_HOSTRDDATA27 (HOSTRDDATA[27], HOSTRDDATA_OUT[27]);
+buf B_HOSTRDDATA28 (HOSTRDDATA[28], HOSTRDDATA_OUT[28]);
+buf B_HOSTRDDATA29 (HOSTRDDATA[29], HOSTRDDATA_OUT[29]);
+buf B_HOSTRDDATA30 (HOSTRDDATA[30], HOSTRDDATA_OUT[30]);
+buf B_HOSTRDDATA31 (HOSTRDDATA[31], HOSTRDDATA_OUT[31]);
+
+buf B_CLIENTEMAC0DCMLOCKED (CLIENTEMAC0DCMLOCKED_IN, CLIENTEMAC0DCMLOCKED);
+buf B_CLIENTEMAC0PAUSEREQ (CLIENTEMAC0PAUSEREQ_IN, CLIENTEMAC0PAUSEREQ);
+buf B_CLIENTEMAC0PAUSEVAL0 (CLIENTEMAC0PAUSEVAL_IN[0], CLIENTEMAC0PAUSEVAL[0]);
+buf B_CLIENTEMAC0PAUSEVAL1 (CLIENTEMAC0PAUSEVAL_IN[1], CLIENTEMAC0PAUSEVAL[1]);
+buf B_CLIENTEMAC0PAUSEVAL2 (CLIENTEMAC0PAUSEVAL_IN[2], CLIENTEMAC0PAUSEVAL[2]);
+buf B_CLIENTEMAC0PAUSEVAL3 (CLIENTEMAC0PAUSEVAL_IN[3], CLIENTEMAC0PAUSEVAL[3]);
+buf B_CLIENTEMAC0PAUSEVAL4 (CLIENTEMAC0PAUSEVAL_IN[4], CLIENTEMAC0PAUSEVAL[4]);
+buf B_CLIENTEMAC0PAUSEVAL5 (CLIENTEMAC0PAUSEVAL_IN[5], CLIENTEMAC0PAUSEVAL[5]);
+buf B_CLIENTEMAC0PAUSEVAL6 (CLIENTEMAC0PAUSEVAL_IN[6], CLIENTEMAC0PAUSEVAL[6]);
+buf B_CLIENTEMAC0PAUSEVAL7 (CLIENTEMAC0PAUSEVAL_IN[7], CLIENTEMAC0PAUSEVAL[7]);
+buf B_CLIENTEMAC0PAUSEVAL8 (CLIENTEMAC0PAUSEVAL_IN[8], CLIENTEMAC0PAUSEVAL[8]);
+buf B_CLIENTEMAC0PAUSEVAL9 (CLIENTEMAC0PAUSEVAL_IN[9], CLIENTEMAC0PAUSEVAL[9]);
+buf B_CLIENTEMAC0PAUSEVAL10 (CLIENTEMAC0PAUSEVAL_IN[10], CLIENTEMAC0PAUSEVAL[10]);
+buf B_CLIENTEMAC0PAUSEVAL11 (CLIENTEMAC0PAUSEVAL_IN[11], CLIENTEMAC0PAUSEVAL[11]);
+buf B_CLIENTEMAC0PAUSEVAL12 (CLIENTEMAC0PAUSEVAL_IN[12], CLIENTEMAC0PAUSEVAL[12]);
+buf B_CLIENTEMAC0PAUSEVAL13 (CLIENTEMAC0PAUSEVAL_IN[13], CLIENTEMAC0PAUSEVAL[13]);
+buf B_CLIENTEMAC0PAUSEVAL14 (CLIENTEMAC0PAUSEVAL_IN[14], CLIENTEMAC0PAUSEVAL[14]);
+buf B_CLIENTEMAC0PAUSEVAL15 (CLIENTEMAC0PAUSEVAL_IN[15], CLIENTEMAC0PAUSEVAL[15]);
+buf B_CLIENTEMAC0RXCLIENTCLKIN (CLIENTEMAC0RXCLIENTCLKIN_IN, CLIENTEMAC0RXCLIENTCLKIN);
+buf B_CLIENTEMAC0TXCLIENTCLKIN (CLIENTEMAC0TXCLIENTCLKIN_IN, CLIENTEMAC0TXCLIENTCLKIN);
+buf B_CLIENTEMAC0TXD0 (CLIENTEMAC0TXD_IN[0], CLIENTEMAC0TXD[0]);
+buf B_CLIENTEMAC0TXD1 (CLIENTEMAC0TXD_IN[1], CLIENTEMAC0TXD[1]);
+buf B_CLIENTEMAC0TXD2 (CLIENTEMAC0TXD_IN[2], CLIENTEMAC0TXD[2]);
+buf B_CLIENTEMAC0TXD3 (CLIENTEMAC0TXD_IN[3], CLIENTEMAC0TXD[3]);
+buf B_CLIENTEMAC0TXD4 (CLIENTEMAC0TXD_IN[4], CLIENTEMAC0TXD[4]);
+buf B_CLIENTEMAC0TXD5 (CLIENTEMAC0TXD_IN[5], CLIENTEMAC0TXD[5]);
+buf B_CLIENTEMAC0TXD6 (CLIENTEMAC0TXD_IN[6], CLIENTEMAC0TXD[6]);
+buf B_CLIENTEMAC0TXD7 (CLIENTEMAC0TXD_IN[7], CLIENTEMAC0TXD[7]);
+buf B_CLIENTEMAC0TXD8 (CLIENTEMAC0TXD_IN[8], CLIENTEMAC0TXD[8]);
+buf B_CLIENTEMAC0TXD9 (CLIENTEMAC0TXD_IN[9], CLIENTEMAC0TXD[9]);
+buf B_CLIENTEMAC0TXD10 (CLIENTEMAC0TXD_IN[10], CLIENTEMAC0TXD[10]);
+buf B_CLIENTEMAC0TXD11 (CLIENTEMAC0TXD_IN[11], CLIENTEMAC0TXD[11]);
+buf B_CLIENTEMAC0TXD12 (CLIENTEMAC0TXD_IN[12], CLIENTEMAC0TXD[12]);
+buf B_CLIENTEMAC0TXD13 (CLIENTEMAC0TXD_IN[13], CLIENTEMAC0TXD[13]);
+buf B_CLIENTEMAC0TXD14 (CLIENTEMAC0TXD_IN[14], CLIENTEMAC0TXD[14]);
+buf B_CLIENTEMAC0TXD15 (CLIENTEMAC0TXD_IN[15], CLIENTEMAC0TXD[15]);
+buf B_CLIENTEMAC0TXDVLD (CLIENTEMAC0TXDVLD_IN, CLIENTEMAC0TXDVLD);
+buf B_CLIENTEMAC0TXDVLDMSW (CLIENTEMAC0TXDVLDMSW_IN, CLIENTEMAC0TXDVLDMSW);
+buf B_CLIENTEMAC0TXFIRSTBYTE (CLIENTEMAC0TXFIRSTBYTE_IN, CLIENTEMAC0TXFIRSTBYTE);
+buf B_PHYEMAC0TXGMIIMIICLKIN (PHYEMAC0TXGMIIMIICLKIN_IN, PHYEMAC0TXGMIIMIICLKIN);
+buf B_CLIENTEMAC0TXIFGDELAY0 (CLIENTEMAC0TXIFGDELAY_IN[0], CLIENTEMAC0TXIFGDELAY[0]);
+buf B_CLIENTEMAC0TXIFGDELAY1 (CLIENTEMAC0TXIFGDELAY_IN[1], CLIENTEMAC0TXIFGDELAY[1]);
+buf B_CLIENTEMAC0TXIFGDELAY2 (CLIENTEMAC0TXIFGDELAY_IN[2], CLIENTEMAC0TXIFGDELAY[2]);
+buf B_CLIENTEMAC0TXIFGDELAY3 (CLIENTEMAC0TXIFGDELAY_IN[3], CLIENTEMAC0TXIFGDELAY[3]);
+buf B_CLIENTEMAC0TXIFGDELAY4 (CLIENTEMAC0TXIFGDELAY_IN[4], CLIENTEMAC0TXIFGDELAY[4]);
+buf B_CLIENTEMAC0TXIFGDELAY5 (CLIENTEMAC0TXIFGDELAY_IN[5], CLIENTEMAC0TXIFGDELAY[5]);
+buf B_CLIENTEMAC0TXIFGDELAY6 (CLIENTEMAC0TXIFGDELAY_IN[6], CLIENTEMAC0TXIFGDELAY[6]);
+buf B_CLIENTEMAC0TXIFGDELAY7 (CLIENTEMAC0TXIFGDELAY_IN[7], CLIENTEMAC0TXIFGDELAY[7]);
+buf B_CLIENTEMAC0TXUNDERRUN (CLIENTEMAC0TXUNDERRUN_IN, CLIENTEMAC0TXUNDERRUN);
+buf B_CLIENTEMAC1DCMLOCKED (CLIENTEMAC1DCMLOCKED_IN, CLIENTEMAC1DCMLOCKED);
+buf B_CLIENTEMAC1PAUSEREQ (CLIENTEMAC1PAUSEREQ_IN, CLIENTEMAC1PAUSEREQ);
+buf B_CLIENTEMAC1PAUSEVAL0 (CLIENTEMAC1PAUSEVAL_IN[0], CLIENTEMAC1PAUSEVAL[0]);
+buf B_CLIENTEMAC1PAUSEVAL1 (CLIENTEMAC1PAUSEVAL_IN[1], CLIENTEMAC1PAUSEVAL[1]);
+buf B_CLIENTEMAC1PAUSEVAL2 (CLIENTEMAC1PAUSEVAL_IN[2], CLIENTEMAC1PAUSEVAL[2]);
+buf B_CLIENTEMAC1PAUSEVAL3 (CLIENTEMAC1PAUSEVAL_IN[3], CLIENTEMAC1PAUSEVAL[3]);
+buf B_CLIENTEMAC1PAUSEVAL4 (CLIENTEMAC1PAUSEVAL_IN[4], CLIENTEMAC1PAUSEVAL[4]);
+buf B_CLIENTEMAC1PAUSEVAL5 (CLIENTEMAC1PAUSEVAL_IN[5], CLIENTEMAC1PAUSEVAL[5]);
+buf B_CLIENTEMAC1PAUSEVAL6 (CLIENTEMAC1PAUSEVAL_IN[6], CLIENTEMAC1PAUSEVAL[6]);
+buf B_CLIENTEMAC1PAUSEVAL7 (CLIENTEMAC1PAUSEVAL_IN[7], CLIENTEMAC1PAUSEVAL[7]);
+buf B_CLIENTEMAC1PAUSEVAL8 (CLIENTEMAC1PAUSEVAL_IN[8], CLIENTEMAC1PAUSEVAL[8]);
+buf B_CLIENTEMAC1PAUSEVAL9 (CLIENTEMAC1PAUSEVAL_IN[9], CLIENTEMAC1PAUSEVAL[9]);
+buf B_CLIENTEMAC1PAUSEVAL10 (CLIENTEMAC1PAUSEVAL_IN[10], CLIENTEMAC1PAUSEVAL[10]);
+buf B_CLIENTEMAC1PAUSEVAL11 (CLIENTEMAC1PAUSEVAL_IN[11], CLIENTEMAC1PAUSEVAL[11]);
+buf B_CLIENTEMAC1PAUSEVAL12 (CLIENTEMAC1PAUSEVAL_IN[12], CLIENTEMAC1PAUSEVAL[12]);
+buf B_CLIENTEMAC1PAUSEVAL13 (CLIENTEMAC1PAUSEVAL_IN[13], CLIENTEMAC1PAUSEVAL[13]);
+buf B_CLIENTEMAC1PAUSEVAL14 (CLIENTEMAC1PAUSEVAL_IN[14], CLIENTEMAC1PAUSEVAL[14]);
+buf B_CLIENTEMAC1PAUSEVAL15 (CLIENTEMAC1PAUSEVAL_IN[15], CLIENTEMAC1PAUSEVAL[15]);
+buf B_CLIENTEMAC1RXCLIENTCLKIN (CLIENTEMAC1RXCLIENTCLKIN_IN, CLIENTEMAC1RXCLIENTCLKIN);
+buf B_CLIENTEMAC1TXCLIENTCLKIN (CLIENTEMAC1TXCLIENTCLKIN_IN, CLIENTEMAC1TXCLIENTCLKIN);
+buf B_CLIENTEMAC1TXD0 (CLIENTEMAC1TXD_IN[0], CLIENTEMAC1TXD[0]);
+buf B_CLIENTEMAC1TXD1 (CLIENTEMAC1TXD_IN[1], CLIENTEMAC1TXD[1]);
+buf B_CLIENTEMAC1TXD2 (CLIENTEMAC1TXD_IN[2], CLIENTEMAC1TXD[2]);
+buf B_CLIENTEMAC1TXD3 (CLIENTEMAC1TXD_IN[3], CLIENTEMAC1TXD[3]);
+buf B_CLIENTEMAC1TXD4 (CLIENTEMAC1TXD_IN[4], CLIENTEMAC1TXD[4]);
+buf B_CLIENTEMAC1TXD5 (CLIENTEMAC1TXD_IN[5], CLIENTEMAC1TXD[5]);
+buf B_CLIENTEMAC1TXD6 (CLIENTEMAC1TXD_IN[6], CLIENTEMAC1TXD[6]);
+buf B_CLIENTEMAC1TXD7 (CLIENTEMAC1TXD_IN[7], CLIENTEMAC1TXD[7]);
+buf B_CLIENTEMAC1TXD8 (CLIENTEMAC1TXD_IN[8], CLIENTEMAC1TXD[8]);
+buf B_CLIENTEMAC1TXD9 (CLIENTEMAC1TXD_IN[9], CLIENTEMAC1TXD[9]);
+buf B_CLIENTEMAC1TXD10 (CLIENTEMAC1TXD_IN[10], CLIENTEMAC1TXD[10]);
+buf B_CLIENTEMAC1TXD11 (CLIENTEMAC1TXD_IN[11], CLIENTEMAC1TXD[11]);
+buf B_CLIENTEMAC1TXD12 (CLIENTEMAC1TXD_IN[12], CLIENTEMAC1TXD[12]);
+buf B_CLIENTEMAC1TXD13 (CLIENTEMAC1TXD_IN[13], CLIENTEMAC1TXD[13]);
+buf B_CLIENTEMAC1TXD14 (CLIENTEMAC1TXD_IN[14], CLIENTEMAC1TXD[14]);
+buf B_CLIENTEMAC1TXD15 (CLIENTEMAC1TXD_IN[15], CLIENTEMAC1TXD[15]);
+buf B_CLIENTEMAC1TXDVLD (CLIENTEMAC1TXDVLD_IN, CLIENTEMAC1TXDVLD);
+buf B_CLIENTEMAC1TXDVLDMSW (CLIENTEMAC1TXDVLDMSW_IN, CLIENTEMAC1TXDVLDMSW);
+buf B_CLIENTEMAC1TXFIRSTBYTE (CLIENTEMAC1TXFIRSTBYTE_IN, CLIENTEMAC1TXFIRSTBYTE);
+buf B_PHYEMAC1TXGMIIMIICLKIN (PHYEMAC1TXGMIIMIICLKIN_IN, PHYEMAC1TXGMIIMIICLKIN);
+buf B_CLIENTEMAC1TXIFGDELAY0 (CLIENTEMAC1TXIFGDELAY_IN[0], CLIENTEMAC1TXIFGDELAY[0]);
+buf B_CLIENTEMAC1TXIFGDELAY1 (CLIENTEMAC1TXIFGDELAY_IN[1], CLIENTEMAC1TXIFGDELAY[1]);
+buf B_CLIENTEMAC1TXIFGDELAY2 (CLIENTEMAC1TXIFGDELAY_IN[2], CLIENTEMAC1TXIFGDELAY[2]);
+buf B_CLIENTEMAC1TXIFGDELAY3 (CLIENTEMAC1TXIFGDELAY_IN[3], CLIENTEMAC1TXIFGDELAY[3]);
+buf B_CLIENTEMAC1TXIFGDELAY4 (CLIENTEMAC1TXIFGDELAY_IN[4], CLIENTEMAC1TXIFGDELAY[4]);
+buf B_CLIENTEMAC1TXIFGDELAY5 (CLIENTEMAC1TXIFGDELAY_IN[5], CLIENTEMAC1TXIFGDELAY[5]);
+buf B_CLIENTEMAC1TXIFGDELAY6 (CLIENTEMAC1TXIFGDELAY_IN[6], CLIENTEMAC1TXIFGDELAY[6]);
+buf B_CLIENTEMAC1TXIFGDELAY7 (CLIENTEMAC1TXIFGDELAY_IN[7], CLIENTEMAC1TXIFGDELAY[7]);
+buf B_CLIENTEMAC1TXUNDERRUN (CLIENTEMAC1TXUNDERRUN_IN, CLIENTEMAC1TXUNDERRUN);
+buf B_DCREMACABUS0 (DCREMACABUS_IN[0], DCREMACABUS[0]);
+buf B_DCREMACABUS1 (DCREMACABUS_IN[1], DCREMACABUS[1]);
+buf B_DCREMACABUS2 (DCREMACABUS_IN[2], DCREMACABUS[2]);
+buf B_DCREMACABUS3 (DCREMACABUS_IN[3], DCREMACABUS[3]);
+buf B_DCREMACABUS4 (DCREMACABUS_IN[4], DCREMACABUS[4]);
+buf B_DCREMACABUS5 (DCREMACABUS_IN[5], DCREMACABUS[5]);
+buf B_DCREMACABUS6 (DCREMACABUS_IN[6], DCREMACABUS[6]);
+buf B_DCREMACABUS7 (DCREMACABUS_IN[7], DCREMACABUS[7]);
+buf B_DCREMACABUS8 (DCREMACABUS_IN[8], DCREMACABUS[8]);
+buf B_DCREMACABUS9 (DCREMACABUS_IN[9], DCREMACABUS[9]);
+buf B_DCREMACCLK (DCREMACCLK_IN, DCREMACCLK);
+buf B_DCREMACDBUS0 (DCREMACDBUS_IN[0], DCREMACDBUS[0]);
+buf B_DCREMACDBUS1 (DCREMACDBUS_IN[1], DCREMACDBUS[1]);
+buf B_DCREMACDBUS2 (DCREMACDBUS_IN[2], DCREMACDBUS[2]);
+buf B_DCREMACDBUS3 (DCREMACDBUS_IN[3], DCREMACDBUS[3]);
+buf B_DCREMACDBUS4 (DCREMACDBUS_IN[4], DCREMACDBUS[4]);
+buf B_DCREMACDBUS5 (DCREMACDBUS_IN[5], DCREMACDBUS[5]);
+buf B_DCREMACDBUS6 (DCREMACDBUS_IN[6], DCREMACDBUS[6]);
+buf B_DCREMACDBUS7 (DCREMACDBUS_IN[7], DCREMACDBUS[7]);
+buf B_DCREMACDBUS8 (DCREMACDBUS_IN[8], DCREMACDBUS[8]);
+buf B_DCREMACDBUS9 (DCREMACDBUS_IN[9], DCREMACDBUS[9]);
+buf B_DCREMACDBUS10 (DCREMACDBUS_IN[10], DCREMACDBUS[10]);
+buf B_DCREMACDBUS11 (DCREMACDBUS_IN[11], DCREMACDBUS[11]);
+buf B_DCREMACDBUS12 (DCREMACDBUS_IN[12], DCREMACDBUS[12]);
+buf B_DCREMACDBUS13 (DCREMACDBUS_IN[13], DCREMACDBUS[13]);
+buf B_DCREMACDBUS14 (DCREMACDBUS_IN[14], DCREMACDBUS[14]);
+buf B_DCREMACDBUS15 (DCREMACDBUS_IN[15], DCREMACDBUS[15]);
+buf B_DCREMACDBUS16 (DCREMACDBUS_IN[16], DCREMACDBUS[16]);
+buf B_DCREMACDBUS17 (DCREMACDBUS_IN[17], DCREMACDBUS[17]);
+buf B_DCREMACDBUS18 (DCREMACDBUS_IN[18], DCREMACDBUS[18]);
+buf B_DCREMACDBUS19 (DCREMACDBUS_IN[19], DCREMACDBUS[19]);
+buf B_DCREMACDBUS20 (DCREMACDBUS_IN[20], DCREMACDBUS[20]);
+buf B_DCREMACDBUS21 (DCREMACDBUS_IN[21], DCREMACDBUS[21]);
+buf B_DCREMACDBUS22 (DCREMACDBUS_IN[22], DCREMACDBUS[22]);
+buf B_DCREMACDBUS23 (DCREMACDBUS_IN[23], DCREMACDBUS[23]);
+buf B_DCREMACDBUS24 (DCREMACDBUS_IN[24], DCREMACDBUS[24]);
+buf B_DCREMACDBUS25 (DCREMACDBUS_IN[25], DCREMACDBUS[25]);
+buf B_DCREMACDBUS26 (DCREMACDBUS_IN[26], DCREMACDBUS[26]);
+buf B_DCREMACDBUS27 (DCREMACDBUS_IN[27], DCREMACDBUS[27]);
+buf B_DCREMACDBUS28 (DCREMACDBUS_IN[28], DCREMACDBUS[28]);
+buf B_DCREMACDBUS29 (DCREMACDBUS_IN[29], DCREMACDBUS[29]);
+buf B_DCREMACDBUS30 (DCREMACDBUS_IN[30], DCREMACDBUS[30]);
+buf B_DCREMACDBUS31 (DCREMACDBUS_IN[31], DCREMACDBUS[31]);
+buf B_DCREMACENABLE (DCREMACENABLE_IN, DCREMACENABLE);
+buf B_DCREMACREAD (DCREMACREAD_IN, DCREMACREAD);
+buf B_DCREMACWRITE (DCREMACWRITE_IN, DCREMACWRITE);
+buf B_HOSTADDR0 (HOSTADDR_IN[0], HOSTADDR[0]);
+buf B_HOSTADDR1 (HOSTADDR_IN[1], HOSTADDR[1]);
+buf B_HOSTADDR2 (HOSTADDR_IN[2], HOSTADDR[2]);
+buf B_HOSTADDR3 (HOSTADDR_IN[3], HOSTADDR[3]);
+buf B_HOSTADDR4 (HOSTADDR_IN[4], HOSTADDR[4]);
+buf B_HOSTADDR5 (HOSTADDR_IN[5], HOSTADDR[5]);
+buf B_HOSTADDR6 (HOSTADDR_IN[6], HOSTADDR[6]);
+buf B_HOSTADDR7 (HOSTADDR_IN[7], HOSTADDR[7]);
+buf B_HOSTADDR8 (HOSTADDR_IN[8], HOSTADDR[8]);
+buf B_HOSTADDR9 (HOSTADDR_IN[9], HOSTADDR[9]);
+buf B_HOSTCLK (HOSTCLK_IN, HOSTCLK);
+buf B_HOSTEMAC1SEL (HOSTEMAC1SEL_IN, HOSTEMAC1SEL);
+buf B_HOSTMIIMSEL (HOSTMIIMSEL_IN, HOSTMIIMSEL);
+buf B_HOSTOPCODE0 (HOSTOPCODE_IN[0], HOSTOPCODE[0]);
+buf B_HOSTOPCODE1 (HOSTOPCODE_IN[1], HOSTOPCODE[1]);
+buf B_HOSTREQ (HOSTREQ_IN, HOSTREQ);
+buf B_HOSTWRDATA0 (HOSTWRDATA_IN[0], HOSTWRDATA[0]);
+buf B_HOSTWRDATA1 (HOSTWRDATA_IN[1], HOSTWRDATA[1]);
+buf B_HOSTWRDATA2 (HOSTWRDATA_IN[2], HOSTWRDATA[2]);
+buf B_HOSTWRDATA3 (HOSTWRDATA_IN[3], HOSTWRDATA[3]);
+buf B_HOSTWRDATA4 (HOSTWRDATA_IN[4], HOSTWRDATA[4]);
+buf B_HOSTWRDATA5 (HOSTWRDATA_IN[5], HOSTWRDATA[5]);
+buf B_HOSTWRDATA6 (HOSTWRDATA_IN[6], HOSTWRDATA[6]);
+buf B_HOSTWRDATA7 (HOSTWRDATA_IN[7], HOSTWRDATA[7]);
+buf B_HOSTWRDATA8 (HOSTWRDATA_IN[8], HOSTWRDATA[8]);
+buf B_HOSTWRDATA9 (HOSTWRDATA_IN[9], HOSTWRDATA[9]);
+buf B_HOSTWRDATA10 (HOSTWRDATA_IN[10], HOSTWRDATA[10]);
+buf B_HOSTWRDATA11 (HOSTWRDATA_IN[11], HOSTWRDATA[11]);
+buf B_HOSTWRDATA12 (HOSTWRDATA_IN[12], HOSTWRDATA[12]);
+buf B_HOSTWRDATA13 (HOSTWRDATA_IN[13], HOSTWRDATA[13]);
+buf B_HOSTWRDATA14 (HOSTWRDATA_IN[14], HOSTWRDATA[14]);
+buf B_HOSTWRDATA15 (HOSTWRDATA_IN[15], HOSTWRDATA[15]);
+buf B_HOSTWRDATA16 (HOSTWRDATA_IN[16], HOSTWRDATA[16]);
+buf B_HOSTWRDATA17 (HOSTWRDATA_IN[17], HOSTWRDATA[17]);
+buf B_HOSTWRDATA18 (HOSTWRDATA_IN[18], HOSTWRDATA[18]);
+buf B_HOSTWRDATA19 (HOSTWRDATA_IN[19], HOSTWRDATA[19]);
+buf B_HOSTWRDATA20 (HOSTWRDATA_IN[20], HOSTWRDATA[20]);
+buf B_HOSTWRDATA21 (HOSTWRDATA_IN[21], HOSTWRDATA[21]);
+buf B_HOSTWRDATA22 (HOSTWRDATA_IN[22], HOSTWRDATA[22]);
+buf B_HOSTWRDATA23 (HOSTWRDATA_IN[23], HOSTWRDATA[23]);
+buf B_HOSTWRDATA24 (HOSTWRDATA_IN[24], HOSTWRDATA[24]);
+buf B_HOSTWRDATA25 (HOSTWRDATA_IN[25], HOSTWRDATA[25]);
+buf B_HOSTWRDATA26 (HOSTWRDATA_IN[26], HOSTWRDATA[26]);
+buf B_HOSTWRDATA27 (HOSTWRDATA_IN[27], HOSTWRDATA[27]);
+buf B_HOSTWRDATA28 (HOSTWRDATA_IN[28], HOSTWRDATA[28]);
+buf B_HOSTWRDATA29 (HOSTWRDATA_IN[29], HOSTWRDATA[29]);
+buf B_HOSTWRDATA30 (HOSTWRDATA_IN[30], HOSTWRDATA[30]);
+buf B_HOSTWRDATA31 (HOSTWRDATA_IN[31], HOSTWRDATA[31]);
+buf B_PHYEMAC0COL (PHYEMAC0COL_IN, PHYEMAC0COL);
+buf B_PHYEMAC0CRS (PHYEMAC0CRS_IN, PHYEMAC0CRS);
+buf B_PHYEMAC0GTXCLK (PHYEMAC0GTXCLK_IN, PHYEMAC0GTXCLK);
+buf B_PHYEMAC0MCLKIN (PHYEMAC0MCLKIN_IN, PHYEMAC0MCLKIN);
+buf B_PHYEMAC0MDIN (PHYEMAC0MDIN_IN, PHYEMAC0MDIN);
+buf B_PHYEMAC0MIITXCLK (PHYEMAC0MIITXCLK_IN, PHYEMAC0MIITXCLK);
+buf B_PHYEMAC0PHYAD0 (PHYEMAC0PHYAD_IN[0], PHYEMAC0PHYAD[0]);
+buf B_PHYEMAC0PHYAD1 (PHYEMAC0PHYAD_IN[1], PHYEMAC0PHYAD[1]);
+buf B_PHYEMAC0PHYAD2 (PHYEMAC0PHYAD_IN[2], PHYEMAC0PHYAD[2]);
+buf B_PHYEMAC0PHYAD3 (PHYEMAC0PHYAD_IN[3], PHYEMAC0PHYAD[3]);
+buf B_PHYEMAC0PHYAD4 (PHYEMAC0PHYAD_IN[4], PHYEMAC0PHYAD[4]);
+buf B_PHYEMAC0RXBUFERR (PHYEMAC0RXBUFERR_IN, PHYEMAC0RXBUFERR);
+buf B_PHYEMAC0RXBUFSTATUS0 (PHYEMAC0RXBUFSTATUS_IN[0], PHYEMAC0RXBUFSTATUS[0]);
+buf B_PHYEMAC0RXBUFSTATUS1 (PHYEMAC0RXBUFSTATUS_IN[1], PHYEMAC0RXBUFSTATUS[1]);
+buf B_PHYEMAC0RXCHARISCOMMA (PHYEMAC0RXCHARISCOMMA_IN, PHYEMAC0RXCHARISCOMMA);
+buf B_PHYEMAC0RXCHARISK (PHYEMAC0RXCHARISK_IN, PHYEMAC0RXCHARISK);
+buf B_PHYEMAC0RXCHECKINGCRC (PHYEMAC0RXCHECKINGCRC_IN, PHYEMAC0RXCHECKINGCRC);
+buf B_PHYEMAC0RXCLK (PHYEMAC0RXCLK_IN, PHYEMAC0RXCLK);
+buf B_PHYEMAC0RXCLKCORCNT0 (PHYEMAC0RXCLKCORCNT_IN[0], PHYEMAC0RXCLKCORCNT[0]);
+buf B_PHYEMAC0RXCLKCORCNT1 (PHYEMAC0RXCLKCORCNT_IN[1], PHYEMAC0RXCLKCORCNT[1]);
+buf B_PHYEMAC0RXCLKCORCNT2 (PHYEMAC0RXCLKCORCNT_IN[2], PHYEMAC0RXCLKCORCNT[2]);
+buf B_PHYEMAC0RXCOMMADET (PHYEMAC0RXCOMMADET_IN, PHYEMAC0RXCOMMADET);
+buf B_PHYEMAC0RXD0 (PHYEMAC0RXD_IN[0], PHYEMAC0RXD[0]);
+buf B_PHYEMAC0RXD1 (PHYEMAC0RXD_IN[1], PHYEMAC0RXD[1]);
+buf B_PHYEMAC0RXD2 (PHYEMAC0RXD_IN[2], PHYEMAC0RXD[2]);
+buf B_PHYEMAC0RXD3 (PHYEMAC0RXD_IN[3], PHYEMAC0RXD[3]);
+buf B_PHYEMAC0RXD4 (PHYEMAC0RXD_IN[4], PHYEMAC0RXD[4]);
+buf B_PHYEMAC0RXD5 (PHYEMAC0RXD_IN[5], PHYEMAC0RXD[5]);
+buf B_PHYEMAC0RXD6 (PHYEMAC0RXD_IN[6], PHYEMAC0RXD[6]);
+buf B_PHYEMAC0RXD7 (PHYEMAC0RXD_IN[7], PHYEMAC0RXD[7]);
+buf B_PHYEMAC0RXDISPERR (PHYEMAC0RXDISPERR_IN, PHYEMAC0RXDISPERR);
+buf B_PHYEMAC0RXDV (PHYEMAC0RXDV_IN, PHYEMAC0RXDV);
+buf B_PHYEMAC0RXER (PHYEMAC0RXER_IN, PHYEMAC0RXER);
+buf B_PHYEMAC0RXLOSSOFSYNC0 (PHYEMAC0RXLOSSOFSYNC_IN[0], PHYEMAC0RXLOSSOFSYNC[0]);
+buf B_PHYEMAC0RXLOSSOFSYNC1 (PHYEMAC0RXLOSSOFSYNC_IN[1], PHYEMAC0RXLOSSOFSYNC[1]);
+buf B_PHYEMAC0RXNOTINTABLE (PHYEMAC0RXNOTINTABLE_IN, PHYEMAC0RXNOTINTABLE);
+buf B_PHYEMAC0RXRUNDISP (PHYEMAC0RXRUNDISP_IN, PHYEMAC0RXRUNDISP);
+buf B_PHYEMAC0SIGNALDET (PHYEMAC0SIGNALDET_IN, PHYEMAC0SIGNALDET);
+buf B_PHYEMAC0TXBUFERR (PHYEMAC0TXBUFERR_IN, PHYEMAC0TXBUFERR);
+buf B_PHYEMAC1COL (PHYEMAC1COL_IN, PHYEMAC1COL);
+buf B_PHYEMAC1CRS (PHYEMAC1CRS_IN, PHYEMAC1CRS);
+buf B_PHYEMAC1GTXCLK (PHYEMAC1GTXCLK_IN, PHYEMAC1GTXCLK);
+buf B_PHYEMAC1MCLKIN (PHYEMAC1MCLKIN_IN, PHYEMAC1MCLKIN);
+buf B_PHYEMAC1MDIN (PHYEMAC1MDIN_IN, PHYEMAC1MDIN);
+buf B_PHYEMAC1MIITXCLK (PHYEMAC1MIITXCLK_IN, PHYEMAC1MIITXCLK);
+buf B_PHYEMAC1PHYAD0 (PHYEMAC1PHYAD_IN[0], PHYEMAC1PHYAD[0]);
+buf B_PHYEMAC1PHYAD1 (PHYEMAC1PHYAD_IN[1], PHYEMAC1PHYAD[1]);
+buf B_PHYEMAC1PHYAD2 (PHYEMAC1PHYAD_IN[2], PHYEMAC1PHYAD[2]);
+buf B_PHYEMAC1PHYAD3 (PHYEMAC1PHYAD_IN[3], PHYEMAC1PHYAD[3]);
+buf B_PHYEMAC1PHYAD4 (PHYEMAC1PHYAD_IN[4], PHYEMAC1PHYAD[4]);
+buf B_PHYEMAC1RXBUFERR (PHYEMAC1RXBUFERR_IN, PHYEMAC1RXBUFERR);
+buf B_PHYEMAC1RXBUFSTATUS0 (PHYEMAC1RXBUFSTATUS_IN[0], PHYEMAC1RXBUFSTATUS[0]);
+buf B_PHYEMAC1RXBUFSTATUS1 (PHYEMAC1RXBUFSTATUS_IN[1], PHYEMAC1RXBUFSTATUS[1]);
+buf B_PHYEMAC1RXCHARISCOMMA (PHYEMAC1RXCHARISCOMMA_IN, PHYEMAC1RXCHARISCOMMA);
+buf B_PHYEMAC1RXCHARISK (PHYEMAC1RXCHARISK_IN, PHYEMAC1RXCHARISK);
+buf B_PHYEMAC1RXCHECKINGCRC (PHYEMAC1RXCHECKINGCRC_IN, PHYEMAC1RXCHECKINGCRC);
+buf B_PHYEMAC1RXCLK (PHYEMAC1RXCLK_IN, PHYEMAC1RXCLK);
+buf B_PHYEMAC1RXCLKCORCNT0 (PHYEMAC1RXCLKCORCNT_IN[0], PHYEMAC1RXCLKCORCNT[0]);
+buf B_PHYEMAC1RXCLKCORCNT1 (PHYEMAC1RXCLKCORCNT_IN[1], PHYEMAC1RXCLKCORCNT[1]);
+buf B_PHYEMAC1RXCLKCORCNT2 (PHYEMAC1RXCLKCORCNT_IN[2], PHYEMAC1RXCLKCORCNT[2]);
+buf B_PHYEMAC1RXCOMMADET (PHYEMAC1RXCOMMADET_IN, PHYEMAC1RXCOMMADET);
+buf B_PHYEMAC1RXD0 (PHYEMAC1RXD_IN[0], PHYEMAC1RXD[0]);
+buf B_PHYEMAC1RXD1 (PHYEMAC1RXD_IN[1], PHYEMAC1RXD[1]);
+buf B_PHYEMAC1RXD2 (PHYEMAC1RXD_IN[2], PHYEMAC1RXD[2]);
+buf B_PHYEMAC1RXD3 (PHYEMAC1RXD_IN[3], PHYEMAC1RXD[3]);
+buf B_PHYEMAC1RXD4 (PHYEMAC1RXD_IN[4], PHYEMAC1RXD[4]);
+buf B_PHYEMAC1RXD5 (PHYEMAC1RXD_IN[5], PHYEMAC1RXD[5]);
+buf B_PHYEMAC1RXD6 (PHYEMAC1RXD_IN[6], PHYEMAC1RXD[6]);
+buf B_PHYEMAC1RXD7 (PHYEMAC1RXD_IN[7], PHYEMAC1RXD[7]);
+buf B_PHYEMAC1RXDISPERR (PHYEMAC1RXDISPERR_IN, PHYEMAC1RXDISPERR);
+buf B_PHYEMAC1RXDV (PHYEMAC1RXDV_IN, PHYEMAC1RXDV);
+buf B_PHYEMAC1RXER (PHYEMAC1RXER_IN, PHYEMAC1RXER);
+buf B_PHYEMAC1RXLOSSOFSYNC0 (PHYEMAC1RXLOSSOFSYNC_IN[0], PHYEMAC1RXLOSSOFSYNC[0]);
+buf B_PHYEMAC1RXLOSSOFSYNC1 (PHYEMAC1RXLOSSOFSYNC_IN[1], PHYEMAC1RXLOSSOFSYNC[1]);
+buf B_PHYEMAC1RXNOTINTABLE (PHYEMAC1RXNOTINTABLE_IN, PHYEMAC1RXNOTINTABLE);
+buf B_PHYEMAC1RXRUNDISP (PHYEMAC1RXRUNDISP_IN, PHYEMAC1RXRUNDISP);
+buf B_PHYEMAC1SIGNALDET (PHYEMAC1SIGNALDET_IN, PHYEMAC1SIGNALDET);
+buf B_PHYEMAC1TXBUFERR (PHYEMAC1TXBUFERR_IN, PHYEMAC1TXBUFERR);
+buf B_RESET (RESET_IN, RESET);
+
+wire DCRHOSTDONEIR_delay;
+wire EMAC0CLIENTANINTERRUPT_delay;
+wire EMAC0CLIENTRXBADFRAME_delay;
+wire EMAC0CLIENTRXCLIENTCLKOUT_delay;
+wire EMAC0CLIENTRXDVLDMSW_delay;
+wire EMAC0CLIENTRXDVLD_delay;
+wire EMAC0CLIENTRXFRAMEDROP_delay;
+wire EMAC0CLIENTRXGOODFRAME_delay;
+wire EMAC0CLIENTRXSTATSBYTEVLD_delay;
+wire EMAC0CLIENTRXSTATSVLD_delay;
+wire EMAC0CLIENTTXACK_delay;
+wire EMAC0CLIENTTXCLIENTCLKOUT_delay;
+wire EMAC0CLIENTTXCOLLISION_delay;
+wire EMAC0CLIENTTXRETRANSMIT_delay;
+wire EMAC0CLIENTTXSTATSBYTEVLD_delay;
+wire EMAC0CLIENTTXSTATSVLD_delay;
+wire EMAC0CLIENTTXSTATS_delay;
+wire EMAC0PHYENCOMMAALIGN_delay;
+wire EMAC0PHYLOOPBACKMSB_delay;
+wire EMAC0PHYMCLKOUT_delay;
+wire EMAC0PHYMDOUT_delay;
+wire EMAC0PHYMDTRI_delay;
+wire EMAC0PHYMGTRXRESET_delay;
+wire EMAC0PHYMGTTXRESET_delay;
+wire EMAC0PHYPOWERDOWN_delay;
+wire EMAC0PHYSYNCACQSTATUS_delay;
+wire EMAC0PHYTXCHARDISPMODE_delay;
+wire EMAC0PHYTXCHARDISPVAL_delay;
+wire EMAC0PHYTXCHARISK_delay;
+wire EMAC0PHYTXCLK_delay;
+wire EMAC0PHYTXEN_delay;
+wire EMAC0PHYTXER_delay;
+wire EMAC0PHYTXGMIIMIICLKOUT_delay;
+wire EMAC0SPEEDIS10100_delay;
+wire EMAC1CLIENTANINTERRUPT_delay;
+wire EMAC1CLIENTRXBADFRAME_delay;
+wire EMAC1CLIENTRXCLIENTCLKOUT_delay;
+wire EMAC1CLIENTRXDVLDMSW_delay;
+wire EMAC1CLIENTRXDVLD_delay;
+wire EMAC1CLIENTRXFRAMEDROP_delay;
+wire EMAC1CLIENTRXGOODFRAME_delay;
+wire EMAC1CLIENTRXSTATSBYTEVLD_delay;
+wire EMAC1CLIENTRXSTATSVLD_delay;
+wire EMAC1CLIENTTXACK_delay;
+wire EMAC1CLIENTTXCLIENTCLKOUT_delay;
+wire EMAC1CLIENTTXCOLLISION_delay;
+wire EMAC1CLIENTTXRETRANSMIT_delay;
+wire EMAC1CLIENTTXSTATSBYTEVLD_delay;
+wire EMAC1CLIENTTXSTATSVLD_delay;
+wire EMAC1CLIENTTXSTATS_delay;
+wire EMAC1PHYENCOMMAALIGN_delay;
+wire EMAC1PHYLOOPBACKMSB_delay;
+wire EMAC1PHYMCLKOUT_delay;
+wire EMAC1PHYMDOUT_delay;
+wire EMAC1PHYMDTRI_delay;
+wire EMAC1PHYMGTRXRESET_delay;
+wire EMAC1PHYMGTTXRESET_delay;
+wire EMAC1PHYPOWERDOWN_delay;
+wire EMAC1PHYSYNCACQSTATUS_delay;
+wire EMAC1PHYTXCHARDISPMODE_delay;
+wire EMAC1PHYTXCHARDISPVAL_delay;
+wire EMAC1PHYTXCHARISK_delay;
+wire EMAC1PHYTXCLK_delay;
+wire EMAC1PHYTXEN_delay;
+wire EMAC1PHYTXER_delay;
+wire EMAC1PHYTXGMIIMIICLKOUT_delay;
+wire EMAC1SPEEDIS10100_delay;
+wire EMACDCRACK_delay;
+wire HOSTMIIMRDY_delay;
+wire [0:31] EMACDCRDBUS_delay;
+wire [15:0] EMAC0CLIENTRXD_delay;
+wire [15:0] EMAC1CLIENTRXD_delay;
+wire [31:0] HOSTRDDATA_delay;
+wire [6:0] EMAC0CLIENTRXSTATS_delay;
+wire [6:0] EMAC1CLIENTRXSTATS_delay;
+wire [7:0] EMAC0PHYTXD_delay;
+wire [7:0] EMAC1PHYTXD_delay;
+
+wire CLIENTEMAC0DCMLOCKED_delay;
+wire CLIENTEMAC0PAUSEREQ_delay;
+wire CLIENTEMAC0RXCLIENTCLKIN_delay;
+wire CLIENTEMAC0TXCLIENTCLKIN_delay;
+wire CLIENTEMAC0TXDVLDMSW_delay;
+wire CLIENTEMAC0TXDVLD_delay;
+wire CLIENTEMAC0TXFIRSTBYTE_delay;
+wire CLIENTEMAC0TXUNDERRUN_delay;
+wire CLIENTEMAC1DCMLOCKED_delay;
+wire CLIENTEMAC1PAUSEREQ_delay;
+wire CLIENTEMAC1RXCLIENTCLKIN_delay;
+wire CLIENTEMAC1TXCLIENTCLKIN_delay;
+wire CLIENTEMAC1TXDVLDMSW_delay;
+wire CLIENTEMAC1TXDVLD_delay;
+wire CLIENTEMAC1TXFIRSTBYTE_delay;
+wire CLIENTEMAC1TXUNDERRUN_delay;
+wire DCREMACCLK_delay;
+wire DCREMACENABLE_delay;
+wire DCREMACREAD_delay;
+wire DCREMACWRITE_delay;
+wire HOSTCLK_delay;
+wire HOSTEMAC1SEL_delay;
+wire HOSTMIIMSEL_delay;
+wire HOSTREQ_delay;
+wire PHYEMAC0COL_delay;
+wire PHYEMAC0CRS_delay;
+wire PHYEMAC0GTXCLK_delay;
+wire PHYEMAC0MCLKIN_delay;
+wire PHYEMAC0MDIN_delay;
+wire PHYEMAC0MIITXCLK_delay;
+wire PHYEMAC0RXBUFERR_delay;
+wire PHYEMAC0RXCHARISCOMMA_delay;
+wire PHYEMAC0RXCHARISK_delay;
+wire PHYEMAC0RXCHECKINGCRC_delay;
+wire PHYEMAC0RXCLK_delay;
+wire PHYEMAC0RXCOMMADET_delay;
+wire PHYEMAC0RXDISPERR_delay;
+wire PHYEMAC0RXDV_delay;
+wire PHYEMAC0RXER_delay;
+wire PHYEMAC0RXNOTINTABLE_delay;
+wire PHYEMAC0RXRUNDISP_delay;
+wire PHYEMAC0SIGNALDET_delay;
+wire PHYEMAC0TXBUFERR_delay;
+wire PHYEMAC0TXGMIIMIICLKIN_delay;
+wire PHYEMAC1COL_delay;
+wire PHYEMAC1CRS_delay;
+wire PHYEMAC1GTXCLK_delay;
+wire PHYEMAC1MCLKIN_delay;
+wire PHYEMAC1MDIN_delay;
+wire PHYEMAC1MIITXCLK_delay;
+wire PHYEMAC1RXBUFERR_delay;
+wire PHYEMAC1RXCHARISCOMMA_delay;
+wire PHYEMAC1RXCHARISK_delay;
+wire PHYEMAC1RXCHECKINGCRC_delay;
+wire PHYEMAC1RXCLK_delay;
+wire PHYEMAC1RXCOMMADET_delay;
+wire PHYEMAC1RXDISPERR_delay;
+wire PHYEMAC1RXDV_delay;
+wire PHYEMAC1RXER_delay;
+wire PHYEMAC1RXNOTINTABLE_delay;
+wire PHYEMAC1RXRUNDISP_delay;
+wire PHYEMAC1SIGNALDET_delay;
+wire PHYEMAC1TXBUFERR_delay;
+wire PHYEMAC1TXGMIIMIICLKIN_delay;
+wire RESET_delay;
+wire [0:31] DCREMACDBUS_delay;
+wire [0:9] DCREMACABUS_delay;
+wire [15:0] CLIENTEMAC0PAUSEVAL_delay;
+wire [15:0] CLIENTEMAC0TXD_delay;
+wire [15:0] CLIENTEMAC1PAUSEVAL_delay;
+wire [15:0] CLIENTEMAC1TXD_delay;
+wire [1:0] HOSTOPCODE_delay;
+wire [1:0] PHYEMAC0RXBUFSTATUS_delay;
+wire [1:0] PHYEMAC0RXLOSSOFSYNC_delay;
+wire [1:0] PHYEMAC1RXBUFSTATUS_delay;
+wire [1:0] PHYEMAC1RXLOSSOFSYNC_delay;
+wire [2:0] PHYEMAC0RXCLKCORCNT_delay;
+wire [2:0] PHYEMAC1RXCLKCORCNT_delay;
+wire [31:0] HOSTWRDATA_delay;
+wire [4:0] PHYEMAC0PHYAD_delay;
+wire [4:0] PHYEMAC1PHYAD_delay;
+wire [7:0] CLIENTEMAC0TXIFGDELAY_delay;
+wire [7:0] CLIENTEMAC1TXIFGDELAY_delay;
+wire [7:0] PHYEMAC0RXD_delay;
+wire [7:0] PHYEMAC1RXD_delay;
+wire [9:0] HOSTADDR_delay;
+
+assign #(CLK_DELAY) EMAC0CLIENTRXCLIENTCLKOUT_OUT = EMAC0CLIENTRXCLIENTCLKOUT_delay;
+assign #(CLK_DELAY) EMAC0CLIENTTXCLIENTCLKOUT_OUT = EMAC0CLIENTTXCLIENTCLKOUT_delay;
+assign #(CLK_DELAY) EMAC0PHYMCLKOUT_OUT = EMAC0PHYMCLKOUT_delay;
+assign #(CLK_DELAY) EMAC0PHYTXCLK_OUT = EMAC0PHYTXCLK_delay;
+assign #(CLK_DELAY) EMAC0PHYTXGMIIMIICLKOUT_OUT = EMAC0PHYTXGMIIMIICLKOUT_delay;
+assign #(CLK_DELAY) EMAC1CLIENTRXCLIENTCLKOUT_OUT = EMAC1CLIENTRXCLIENTCLKOUT_delay;
+assign #(CLK_DELAY) EMAC1CLIENTTXCLIENTCLKOUT_OUT = EMAC1CLIENTTXCLIENTCLKOUT_delay;
+assign #(CLK_DELAY) EMAC1PHYMCLKOUT_OUT = EMAC1PHYMCLKOUT_delay;
+assign #(CLK_DELAY) EMAC1PHYTXCLK_OUT = EMAC1PHYTXCLK_delay;
+assign #(CLK_DELAY) EMAC1PHYTXGMIIMIICLKOUT_OUT = EMAC1PHYTXGMIIMIICLKOUT_delay;
+
+assign #(out_delay) DCRHOSTDONEIR_OUT = DCRHOSTDONEIR_delay;
+assign #(out_delay) EMAC0CLIENTANINTERRUPT_OUT = EMAC0CLIENTANINTERRUPT_delay;
+assign #(out_delay) EMAC0CLIENTRXBADFRAME_OUT = EMAC0CLIENTRXBADFRAME_delay;
+assign #(out_delay) EMAC0CLIENTRXDVLDMSW_OUT = EMAC0CLIENTRXDVLDMSW_delay;
+assign #(out_delay) EMAC0CLIENTRXDVLD_OUT = EMAC0CLIENTRXDVLD_delay;
+assign #(out_delay) EMAC0CLIENTRXD_OUT = EMAC0CLIENTRXD_delay;
+assign #(out_delay) EMAC0CLIENTRXFRAMEDROP_OUT = EMAC0CLIENTRXFRAMEDROP_delay;
+assign #(out_delay) EMAC0CLIENTRXGOODFRAME_OUT = EMAC0CLIENTRXGOODFRAME_delay;
+assign #(out_delay) EMAC0CLIENTRXSTATSBYTEVLD_OUT = EMAC0CLIENTRXSTATSBYTEVLD_delay;
+assign #(out_delay) EMAC0CLIENTRXSTATSVLD_OUT = EMAC0CLIENTRXSTATSVLD_delay;
+assign #(out_delay) EMAC0CLIENTRXSTATS_OUT = EMAC0CLIENTRXSTATS_delay;
+assign #(out_delay) EMAC0CLIENTTXACK_OUT = EMAC0CLIENTTXACK_delay;
+assign #(out_delay) EMAC0CLIENTTXCOLLISION_OUT = EMAC0CLIENTTXCOLLISION_delay;
+assign #(out_delay) EMAC0CLIENTTXRETRANSMIT_OUT = EMAC0CLIENTTXRETRANSMIT_delay;
+assign #(out_delay) EMAC0CLIENTTXSTATSBYTEVLD_OUT = EMAC0CLIENTTXSTATSBYTEVLD_delay;
+assign #(out_delay) EMAC0CLIENTTXSTATSVLD_OUT = EMAC0CLIENTTXSTATSVLD_delay;
+assign #(out_delay) EMAC0CLIENTTXSTATS_OUT = EMAC0CLIENTTXSTATS_delay;
+assign #(out_delay) EMAC0PHYENCOMMAALIGN_OUT = EMAC0PHYENCOMMAALIGN_delay;
+assign #(out_delay) EMAC0PHYLOOPBACKMSB_OUT = EMAC0PHYLOOPBACKMSB_delay;
+assign #(out_delay) EMAC0PHYMDOUT_OUT = EMAC0PHYMDOUT_delay;
+assign #(out_delay) EMAC0PHYMDTRI_OUT = EMAC0PHYMDTRI_delay;
+assign #(out_delay) EMAC0PHYMGTRXRESET_OUT = EMAC0PHYMGTRXRESET_delay;
+assign #(out_delay) EMAC0PHYMGTTXRESET_OUT = EMAC0PHYMGTTXRESET_delay;
+assign #(out_delay) EMAC0PHYPOWERDOWN_OUT = EMAC0PHYPOWERDOWN_delay;
+assign #(out_delay) EMAC0PHYSYNCACQSTATUS_OUT = EMAC0PHYSYNCACQSTATUS_delay;
+assign #(out_delay) EMAC0PHYTXCHARDISPMODE_OUT = EMAC0PHYTXCHARDISPMODE_delay;
+assign #(out_delay) EMAC0PHYTXCHARDISPVAL_OUT = EMAC0PHYTXCHARDISPVAL_delay;
+assign #(out_delay) EMAC0PHYTXCHARISK_OUT = EMAC0PHYTXCHARISK_delay;
+assign #(out_delay) EMAC0PHYTXD_OUT = EMAC0PHYTXD_delay;
+assign #(out_delay) EMAC0PHYTXEN_OUT = EMAC0PHYTXEN_delay;
+assign #(out_delay) EMAC0PHYTXER_OUT = EMAC0PHYTXER_delay;
+assign #(out_delay) EMAC0SPEEDIS10100_OUT = EMAC0SPEEDIS10100_delay;
+assign #(out_delay) EMAC1CLIENTANINTERRUPT_OUT = EMAC1CLIENTANINTERRUPT_delay;
+assign #(out_delay) EMAC1CLIENTRXBADFRAME_OUT = EMAC1CLIENTRXBADFRAME_delay;
+assign #(out_delay) EMAC1CLIENTRXDVLDMSW_OUT = EMAC1CLIENTRXDVLDMSW_delay;
+assign #(out_delay) EMAC1CLIENTRXDVLD_OUT = EMAC1CLIENTRXDVLD_delay;
+assign #(out_delay) EMAC1CLIENTRXD_OUT = EMAC1CLIENTRXD_delay;
+assign #(out_delay) EMAC1CLIENTRXFRAMEDROP_OUT = EMAC1CLIENTRXFRAMEDROP_delay;
+assign #(out_delay) EMAC1CLIENTRXGOODFRAME_OUT = EMAC1CLIENTRXGOODFRAME_delay;
+assign #(out_delay) EMAC1CLIENTRXSTATSBYTEVLD_OUT = EMAC1CLIENTRXSTATSBYTEVLD_delay;
+assign #(out_delay) EMAC1CLIENTRXSTATSVLD_OUT = EMAC1CLIENTRXSTATSVLD_delay;
+assign #(out_delay) EMAC1CLIENTRXSTATS_OUT = EMAC1CLIENTRXSTATS_delay;
+assign #(out_delay) EMAC1CLIENTTXACK_OUT = EMAC1CLIENTTXACK_delay;
+assign #(out_delay) EMAC1CLIENTTXCOLLISION_OUT = EMAC1CLIENTTXCOLLISION_delay;
+assign #(out_delay) EMAC1CLIENTTXRETRANSMIT_OUT = EMAC1CLIENTTXRETRANSMIT_delay;
+assign #(out_delay) EMAC1CLIENTTXSTATSBYTEVLD_OUT = EMAC1CLIENTTXSTATSBYTEVLD_delay;
+assign #(out_delay) EMAC1CLIENTTXSTATSVLD_OUT = EMAC1CLIENTTXSTATSVLD_delay;
+assign #(out_delay) EMAC1CLIENTTXSTATS_OUT = EMAC1CLIENTTXSTATS_delay;
+assign #(out_delay) EMAC1PHYENCOMMAALIGN_OUT = EMAC1PHYENCOMMAALIGN_delay;
+assign #(out_delay) EMAC1PHYLOOPBACKMSB_OUT = EMAC1PHYLOOPBACKMSB_delay;
+assign #(out_delay) EMAC1PHYMDOUT_OUT = EMAC1PHYMDOUT_delay;
+assign #(out_delay) EMAC1PHYMDTRI_OUT = EMAC1PHYMDTRI_delay;
+assign #(out_delay) EMAC1PHYMGTRXRESET_OUT = EMAC1PHYMGTRXRESET_delay;
+assign #(out_delay) EMAC1PHYMGTTXRESET_OUT = EMAC1PHYMGTTXRESET_delay;
+assign #(out_delay) EMAC1PHYPOWERDOWN_OUT = EMAC1PHYPOWERDOWN_delay;
+assign #(out_delay) EMAC1PHYSYNCACQSTATUS_OUT = EMAC1PHYSYNCACQSTATUS_delay;
+assign #(out_delay) EMAC1PHYTXCHARDISPMODE_OUT = EMAC1PHYTXCHARDISPMODE_delay;
+assign #(out_delay) EMAC1PHYTXCHARDISPVAL_OUT = EMAC1PHYTXCHARDISPVAL_delay;
+assign #(out_delay) EMAC1PHYTXCHARISK_OUT = EMAC1PHYTXCHARISK_delay;
+assign #(out_delay) EMAC1PHYTXD_OUT = EMAC1PHYTXD_delay;
+assign #(out_delay) EMAC1PHYTXEN_OUT = EMAC1PHYTXEN_delay;
+assign #(out_delay) EMAC1PHYTXER_OUT = EMAC1PHYTXER_delay;
+assign #(out_delay) EMAC1SPEEDIS10100_OUT = EMAC1SPEEDIS10100_delay;
+assign #(out_delay) EMACDCRACK_OUT = EMACDCRACK_delay;
+assign #(out_delay) EMACDCRDBUS_OUT = EMACDCRDBUS_delay;
+assign #(out_delay) HOSTMIIMRDY_OUT = HOSTMIIMRDY_delay;
+assign #(out_delay) HOSTRDDATA_OUT = HOSTRDDATA_delay;
+
+assign #(CLK_DELAY) CLIENTEMAC0RXCLIENTCLKIN_delay = CLIENTEMAC0RXCLIENTCLKIN_IN;
+assign #(CLK_DELAY) CLIENTEMAC0TXCLIENTCLKIN_delay = CLIENTEMAC0TXCLIENTCLKIN_IN;
+assign #(CLK_DELAY) CLIENTEMAC1RXCLIENTCLKIN_delay = CLIENTEMAC1RXCLIENTCLKIN_IN;
+assign #(CLK_DELAY) CLIENTEMAC1TXCLIENTCLKIN_delay = CLIENTEMAC1TXCLIENTCLKIN_IN;
+assign #(CLK_DELAY) DCREMACCLK_delay = DCREMACCLK_IN;
+assign #(CLK_DELAY) HOSTCLK_delay = HOSTCLK_IN;
+assign #(CLK_DELAY) PHYEMAC0GTXCLK_delay = PHYEMAC0GTXCLK_IN;
+assign #(CLK_DELAY) PHYEMAC0MCLKIN_delay = PHYEMAC0MCLKIN_IN;
+assign #(EMAC0MIITXCLK_DELAY) PHYEMAC0MIITXCLK_delay = PHYEMAC0MIITXCLK_IN;
+assign #(CLK_DELAY) PHYEMAC0RXCLK_delay = PHYEMAC0RXCLK_IN;
+assign #(CLK_DELAY) PHYEMAC0TXGMIIMIICLKIN_delay = PHYEMAC0TXGMIIMIICLKIN_IN;
+assign #(CLK_DELAY) PHYEMAC1GTXCLK_delay = PHYEMAC1GTXCLK_IN;
+assign #(CLK_DELAY) PHYEMAC1MCLKIN_delay = PHYEMAC1MCLKIN_IN;
+assign #(EMAC1MIITXCLK_DELAY) PHYEMAC1MIITXCLK_delay = PHYEMAC1MIITXCLK_IN;
+assign #(CLK_DELAY) PHYEMAC1RXCLK_delay = PHYEMAC1RXCLK_IN;
+assign #(CLK_DELAY) PHYEMAC1TXGMIIMIICLKIN_delay = PHYEMAC1TXGMIIMIICLKIN_IN;
+
+assign #(in_delay) CLIENTEMAC0DCMLOCKED_delay = CLIENTEMAC0DCMLOCKED_IN;
+assign #(in_delay) CLIENTEMAC0PAUSEREQ_delay = CLIENTEMAC0PAUSEREQ_IN;
+assign #(in_delay) CLIENTEMAC0PAUSEVAL_delay = CLIENTEMAC0PAUSEVAL_IN;
+assign #(in_delay) CLIENTEMAC0TXDVLDMSW_delay = CLIENTEMAC0TXDVLDMSW_IN;
+assign #(in_delay) CLIENTEMAC0TXDVLD_delay = CLIENTEMAC0TXDVLD_IN;
+assign #(in_delay) CLIENTEMAC0TXD_delay = CLIENTEMAC0TXD_IN;
+assign #(in_delay) CLIENTEMAC0TXFIRSTBYTE_delay = CLIENTEMAC0TXFIRSTBYTE_IN;
+assign #(in_delay) CLIENTEMAC0TXIFGDELAY_delay = CLIENTEMAC0TXIFGDELAY_IN;
+assign #(in_delay) CLIENTEMAC0TXUNDERRUN_delay = CLIENTEMAC0TXUNDERRUN_IN;
+assign #(in_delay) CLIENTEMAC1DCMLOCKED_delay = CLIENTEMAC1DCMLOCKED_IN;
+assign #(in_delay) CLIENTEMAC1PAUSEREQ_delay = CLIENTEMAC1PAUSEREQ_IN;
+assign #(in_delay) CLIENTEMAC1PAUSEVAL_delay = CLIENTEMAC1PAUSEVAL_IN;
+assign #(in_delay) CLIENTEMAC1TXDVLDMSW_delay = CLIENTEMAC1TXDVLDMSW_IN;
+assign #(in_delay) CLIENTEMAC1TXDVLD_delay = CLIENTEMAC1TXDVLD_IN;
+assign #(in_delay) CLIENTEMAC1TXD_delay = CLIENTEMAC1TXD_IN;
+assign #(in_delay) CLIENTEMAC1TXFIRSTBYTE_delay = CLIENTEMAC1TXFIRSTBYTE_IN;
+assign #(in_delay) CLIENTEMAC1TXIFGDELAY_delay = CLIENTEMAC1TXIFGDELAY_IN;
+assign #(in_delay) CLIENTEMAC1TXUNDERRUN_delay = CLIENTEMAC1TXUNDERRUN_IN;
+assign #(in_delay) DCREMACABUS_delay = DCREMACABUS_IN;
+assign #(in_delay) DCREMACDBUS_delay = DCREMACDBUS_IN;
+assign #(in_delay) DCREMACENABLE_delay = DCREMACENABLE_IN;
+assign #(in_delay) DCREMACREAD_delay = DCREMACREAD_IN;
+assign #(in_delay) DCREMACWRITE_delay = DCREMACWRITE_IN;
+assign #(in_delay) HOSTADDR_delay = HOSTADDR_IN;
+assign #(in_delay) HOSTEMAC1SEL_delay = HOSTEMAC1SEL_IN;
+assign #(in_delay) HOSTMIIMSEL_delay = HOSTMIIMSEL_IN;
+assign #(in_delay) HOSTOPCODE_delay = HOSTOPCODE_IN;
+assign #(in_delay) HOSTREQ_delay = HOSTREQ_IN;
+assign #(in_delay) HOSTWRDATA_delay = HOSTWRDATA_IN;
+assign #(in_delay) PHYEMAC0COL_delay = PHYEMAC0COL_IN;
+assign #(in_delay) PHYEMAC0CRS_delay = PHYEMAC0CRS_IN;
+assign #(in_delay) PHYEMAC0MDIN_delay = PHYEMAC0MDIN_IN;
+assign #(in_delay) PHYEMAC0PHYAD_delay = PHYEMAC0PHYAD_IN;
+assign #(in_delay) PHYEMAC0RXBUFERR_delay = PHYEMAC0RXBUFERR_IN;
+assign #(in_delay) PHYEMAC0RXBUFSTATUS_delay = PHYEMAC0RXBUFSTATUS_IN;
+assign #(in_delay) PHYEMAC0RXCHARISCOMMA_delay = PHYEMAC0RXCHARISCOMMA_IN;
+assign #(in_delay) PHYEMAC0RXCHARISK_delay = PHYEMAC0RXCHARISK_IN;
+assign #(in_delay) PHYEMAC0RXCHECKINGCRC_delay = PHYEMAC0RXCHECKINGCRC_IN;
+assign #(in_delay) PHYEMAC0RXCLKCORCNT_delay = PHYEMAC0RXCLKCORCNT_IN;
+assign #(in_delay) PHYEMAC0RXCOMMADET_delay = PHYEMAC0RXCOMMADET_IN;
+assign #(in_delay) PHYEMAC0RXDISPERR_delay = PHYEMAC0RXDISPERR_IN;
+assign #(in_delay) PHYEMAC0RXDV_delay = PHYEMAC0RXDV_IN;
+assign #(in_delay) PHYEMAC0RXD_delay = PHYEMAC0RXD_IN;
+assign #(in_delay) PHYEMAC0RXER_delay = PHYEMAC0RXER_IN;
+assign #(in_delay) PHYEMAC0RXLOSSOFSYNC_delay = PHYEMAC0RXLOSSOFSYNC_IN;
+assign #(in_delay) PHYEMAC0RXNOTINTABLE_delay = PHYEMAC0RXNOTINTABLE_IN;
+assign #(in_delay) PHYEMAC0RXRUNDISP_delay = PHYEMAC0RXRUNDISP_IN;
+assign #(in_delay) PHYEMAC0SIGNALDET_delay = PHYEMAC0SIGNALDET_IN;
+assign #(in_delay) PHYEMAC0TXBUFERR_delay = PHYEMAC0TXBUFERR_IN;
+assign #(in_delay) PHYEMAC1COL_delay = PHYEMAC1COL_IN;
+assign #(in_delay) PHYEMAC1CRS_delay = PHYEMAC1CRS_IN;
+assign #(in_delay) PHYEMAC1MDIN_delay = PHYEMAC1MDIN_IN;
+assign #(in_delay) PHYEMAC1PHYAD_delay = PHYEMAC1PHYAD_IN;
+assign #(in_delay) PHYEMAC1RXBUFERR_delay = PHYEMAC1RXBUFERR_IN;
+assign #(in_delay) PHYEMAC1RXBUFSTATUS_delay = PHYEMAC1RXBUFSTATUS_IN;
+assign #(in_delay) PHYEMAC1RXCHARISCOMMA_delay = PHYEMAC1RXCHARISCOMMA_IN;
+assign #(in_delay) PHYEMAC1RXCHARISK_delay = PHYEMAC1RXCHARISK_IN;
+assign #(in_delay) PHYEMAC1RXCHECKINGCRC_delay = PHYEMAC1RXCHECKINGCRC_IN;
+assign #(in_delay) PHYEMAC1RXCLKCORCNT_delay = PHYEMAC1RXCLKCORCNT_IN;
+assign #(in_delay) PHYEMAC1RXCOMMADET_delay = PHYEMAC1RXCOMMADET_IN;
+assign #(in_delay) PHYEMAC1RXDISPERR_delay = PHYEMAC1RXDISPERR_IN;
+assign #(in_delay) PHYEMAC1RXDV_delay = PHYEMAC1RXDV_IN;
+assign #(in_delay) PHYEMAC1RXD_delay = PHYEMAC1RXD_IN;
+assign #(in_delay) PHYEMAC1RXER_delay = PHYEMAC1RXER_IN;
+assign #(in_delay) PHYEMAC1RXLOSSOFSYNC_delay = PHYEMAC1RXLOSSOFSYNC_IN;
+assign #(in_delay) PHYEMAC1RXNOTINTABLE_delay = PHYEMAC1RXNOTINTABLE_IN;
+assign #(in_delay) PHYEMAC1RXRUNDISP_delay = PHYEMAC1RXRUNDISP_IN;
+assign #(in_delay) PHYEMAC1SIGNALDET_delay = PHYEMAC1SIGNALDET_IN;
+assign #(in_delay) PHYEMAC1TXBUFERR_delay = PHYEMAC1TXBUFERR_IN;
+assign #(in_delay) RESET_delay = RESET_IN;
+
+TEMAC_SWIFT temac_swift_1 (
+	.EMAC0_1000BASEX_ENABLE (EMAC0_1000BASEX_ENABLE_BINARY),
+	.EMAC0_ADDRFILTER_ENABLE (EMAC0_ADDRFILTER_ENABLE_BINARY),
+	.EMAC0_BYTEPHY (EMAC0_BYTEPHY_BINARY),
+	.EMAC0_CONFIGVEC_79 (EMAC0_CONFIGVEC_79_BINARY),
+	.EMAC0_DCRBASEADDR (EMAC0_DCRBASEADDR),
+	.EMAC0_GTLOOPBACK (EMAC0_GTLOOPBACK_BINARY),
+	.EMAC0_HOST_ENABLE (EMAC0_HOST_ENABLE_BINARY),
+	.EMAC0_LINKTIMERVAL (EMAC0_LINKTIMERVAL),
+	.EMAC0_LTCHECK_DISABLE (EMAC0_LTCHECK_DISABLE_BINARY),
+	.EMAC0_MDIO_ENABLE (EMAC0_MDIO_ENABLE_BINARY),
+	.EMAC0_PAUSEADDR (EMAC0_PAUSEADDR),
+	.EMAC0_PHYINITAUTONEG_ENABLE (EMAC0_PHYINITAUTONEG_ENABLE_BINARY),
+	.EMAC0_PHYISOLATE (EMAC0_PHYISOLATE_BINARY),
+	.EMAC0_PHYLOOPBACKMSB (EMAC0_PHYLOOPBACKMSB_BINARY),
+	.EMAC0_PHYPOWERDOWN (EMAC0_PHYPOWERDOWN_BINARY),
+	.EMAC0_PHYRESET (EMAC0_PHYRESET_BINARY),
+	.EMAC0_RGMII_ENABLE (EMAC0_RGMII_ENABLE_BINARY),
+	.EMAC0_RX16BITCLIENT_ENABLE (EMAC0_RX16BITCLIENT_ENABLE_BINARY),
+	.EMAC0_RXFLOWCTRL_ENABLE (EMAC0_RXFLOWCTRL_ENABLE_BINARY),
+	.EMAC0_RXHALFDUPLEX (EMAC0_RXHALFDUPLEX_BINARY),
+	.EMAC0_RXINBANDFCS_ENABLE (EMAC0_RXINBANDFCS_ENABLE_BINARY),
+	.EMAC0_RXJUMBOFRAME_ENABLE (EMAC0_RXJUMBOFRAME_ENABLE_BINARY),
+	.EMAC0_RXRESET (EMAC0_RXRESET_BINARY),
+	.EMAC0_RXVLAN_ENABLE (EMAC0_RXVLAN_ENABLE_BINARY),
+	.EMAC0_RX_ENABLE (EMAC0_RX_ENABLE_BINARY),
+	.EMAC0_SGMII_ENABLE (EMAC0_SGMII_ENABLE_BINARY),
+	.EMAC0_SPEED_LSB (EMAC0_SPEED_LSB_BINARY),
+	.EMAC0_SPEED_MSB (EMAC0_SPEED_MSB_BINARY),
+	.EMAC0_TX16BITCLIENT_ENABLE (EMAC0_TX16BITCLIENT_ENABLE_BINARY),
+	.EMAC0_TXFLOWCTRL_ENABLE (EMAC0_TXFLOWCTRL_ENABLE_BINARY),
+	.EMAC0_TXHALFDUPLEX (EMAC0_TXHALFDUPLEX_BINARY),
+	.EMAC0_TXIFGADJUST_ENABLE (EMAC0_TXIFGADJUST_ENABLE_BINARY),
+	.EMAC0_TXINBANDFCS_ENABLE (EMAC0_TXINBANDFCS_ENABLE_BINARY),
+	.EMAC0_TXJUMBOFRAME_ENABLE (EMAC0_TXJUMBOFRAME_ENABLE_BINARY),
+	.EMAC0_TXRESET (EMAC0_TXRESET_BINARY),
+	.EMAC0_TXVLAN_ENABLE (EMAC0_TXVLAN_ENABLE_BINARY),
+	.EMAC0_TX_ENABLE (EMAC0_TX_ENABLE_BINARY),
+	.EMAC0_UNICASTADDR (EMAC0_UNICASTADDR),
+	.EMAC0_UNIDIRECTION_ENABLE (EMAC0_UNIDIRECTION_ENABLE_BINARY),
+	.EMAC0_USECLKEN (EMAC0_USECLKEN_BINARY),
+	.EMAC1_1000BASEX_ENABLE (EMAC1_1000BASEX_ENABLE_BINARY),
+	.EMAC1_ADDRFILTER_ENABLE (EMAC1_ADDRFILTER_ENABLE_BINARY),
+	.EMAC1_BYTEPHY (EMAC1_BYTEPHY_BINARY),
+	.EMAC1_CONFIGVEC_79 (EMAC1_CONFIGVEC_79_BINARY),
+	.EMAC1_DCRBASEADDR (EMAC1_DCRBASEADDR),
+	.EMAC1_GTLOOPBACK (EMAC1_GTLOOPBACK_BINARY),
+	.EMAC1_HOST_ENABLE (EMAC1_HOST_ENABLE_BINARY),
+	.EMAC1_LINKTIMERVAL (EMAC1_LINKTIMERVAL),
+	.EMAC1_LTCHECK_DISABLE (EMAC1_LTCHECK_DISABLE_BINARY),
+	.EMAC1_MDIO_ENABLE (EMAC1_MDIO_ENABLE_BINARY),
+	.EMAC1_PAUSEADDR (EMAC1_PAUSEADDR),
+	.EMAC1_PHYINITAUTONEG_ENABLE (EMAC1_PHYINITAUTONEG_ENABLE_BINARY),
+	.EMAC1_PHYISOLATE (EMAC1_PHYISOLATE_BINARY),
+	.EMAC1_PHYLOOPBACKMSB (EMAC1_PHYLOOPBACKMSB_BINARY),
+	.EMAC1_PHYPOWERDOWN (EMAC1_PHYPOWERDOWN_BINARY),
+	.EMAC1_PHYRESET (EMAC1_PHYRESET_BINARY),
+	.EMAC1_RGMII_ENABLE (EMAC1_RGMII_ENABLE_BINARY),
+	.EMAC1_RX16BITCLIENT_ENABLE (EMAC1_RX16BITCLIENT_ENABLE_BINARY),
+	.EMAC1_RXFLOWCTRL_ENABLE (EMAC1_RXFLOWCTRL_ENABLE_BINARY),
+	.EMAC1_RXHALFDUPLEX (EMAC1_RXHALFDUPLEX_BINARY),
+	.EMAC1_RXINBANDFCS_ENABLE (EMAC1_RXINBANDFCS_ENABLE_BINARY),
+	.EMAC1_RXJUMBOFRAME_ENABLE (EMAC1_RXJUMBOFRAME_ENABLE_BINARY),
+	.EMAC1_RXRESET (EMAC1_RXRESET_BINARY),
+	.EMAC1_RXVLAN_ENABLE (EMAC1_RXVLAN_ENABLE_BINARY),
+	.EMAC1_RX_ENABLE (EMAC1_RX_ENABLE_BINARY),
+	.EMAC1_SGMII_ENABLE (EMAC1_SGMII_ENABLE_BINARY),
+	.EMAC1_SPEED_LSB (EMAC1_SPEED_LSB_BINARY),
+	.EMAC1_SPEED_MSB (EMAC1_SPEED_MSB_BINARY),
+	.EMAC1_TX16BITCLIENT_ENABLE (EMAC1_TX16BITCLIENT_ENABLE_BINARY),
+	.EMAC1_TXFLOWCTRL_ENABLE (EMAC1_TXFLOWCTRL_ENABLE_BINARY),
+	.EMAC1_TXHALFDUPLEX (EMAC1_TXHALFDUPLEX_BINARY),
+	.EMAC1_TXIFGADJUST_ENABLE (EMAC1_TXIFGADJUST_ENABLE_BINARY),
+	.EMAC1_TXINBANDFCS_ENABLE (EMAC1_TXINBANDFCS_ENABLE_BINARY),
+	.EMAC1_TXJUMBOFRAME_ENABLE (EMAC1_TXJUMBOFRAME_ENABLE_BINARY),
+	.EMAC1_TXRESET (EMAC1_TXRESET_BINARY),
+	.EMAC1_TXVLAN_ENABLE (EMAC1_TXVLAN_ENABLE_BINARY),
+	.EMAC1_TX_ENABLE (EMAC1_TX_ENABLE_BINARY),
+	.EMAC1_UNICASTADDR (EMAC1_UNICASTADDR),
+	.EMAC1_UNIDIRECTION_ENABLE (EMAC1_UNIDIRECTION_ENABLE_BINARY),
+	.EMAC1_USECLKEN (EMAC1_USECLKEN_BINARY),
+
+ 	.DCRHOSTDONEIR (DCRHOSTDONEIR_delay),
+	.EMAC0CLIENTANINTERRUPT (EMAC0CLIENTANINTERRUPT_delay),
+	.EMAC0CLIENTRXBADFRAME (EMAC0CLIENTRXBADFRAME_delay),
+	.EMAC0CLIENTRXCLIENTCLKOUT (EMAC0CLIENTRXCLIENTCLKOUT_delay),
+	.EMAC0CLIENTRXD (EMAC0CLIENTRXD_delay),
+	.EMAC0CLIENTRXDVLD (EMAC0CLIENTRXDVLD_delay),
+	.EMAC0CLIENTRXDVLDMSW (EMAC0CLIENTRXDVLDMSW_delay),
+	.EMAC0CLIENTRXFRAMEDROP (EMAC0CLIENTRXFRAMEDROP_delay),
+	.EMAC0CLIENTRXGOODFRAME (EMAC0CLIENTRXGOODFRAME_delay),
+	.EMAC0CLIENTRXSTATS (EMAC0CLIENTRXSTATS_delay),
+	.EMAC0CLIENTRXSTATSBYTEVLD (EMAC0CLIENTRXSTATSBYTEVLD_delay),
+	.EMAC0CLIENTRXSTATSVLD (EMAC0CLIENTRXSTATSVLD_delay),
+	.EMAC0CLIENTTXACK (EMAC0CLIENTTXACK_delay),
+	.EMAC0CLIENTTXCLIENTCLKOUT (EMAC0CLIENTTXCLIENTCLKOUT_delay),
+	.EMAC0CLIENTTXCOLLISION (EMAC0CLIENTTXCOLLISION_delay),
+	.EMAC0CLIENTTXRETRANSMIT (EMAC0CLIENTTXRETRANSMIT_delay),
+	.EMAC0CLIENTTXSTATS (EMAC0CLIENTTXSTATS_delay),
+	.EMAC0CLIENTTXSTATSBYTEVLD (EMAC0CLIENTTXSTATSBYTEVLD_delay),
+	.EMAC0CLIENTTXSTATSVLD (EMAC0CLIENTTXSTATSVLD_delay),
+	.EMAC0PHYENCOMMAALIGN (EMAC0PHYENCOMMAALIGN_delay),
+	.EMAC0PHYLOOPBACKMSB (EMAC0PHYLOOPBACKMSB_delay),
+	.EMAC0PHYMCLKOUT (EMAC0PHYMCLKOUT_delay),
+	.EMAC0PHYMDOUT (EMAC0PHYMDOUT_delay),
+	.EMAC0PHYMDTRI (EMAC0PHYMDTRI_delay),
+	.EMAC0PHYMGTRXRESET (EMAC0PHYMGTRXRESET_delay),
+	.EMAC0PHYMGTTXRESET (EMAC0PHYMGTTXRESET_delay),
+	.EMAC0PHYPOWERDOWN (EMAC0PHYPOWERDOWN_delay),
+	.EMAC0PHYSYNCACQSTATUS (EMAC0PHYSYNCACQSTATUS_delay),
+	.EMAC0PHYTXCHARDISPMODE (EMAC0PHYTXCHARDISPMODE_delay),
+	.EMAC0PHYTXCHARDISPVAL (EMAC0PHYTXCHARDISPVAL_delay),
+	.EMAC0PHYTXCHARISK (EMAC0PHYTXCHARISK_delay),
+	.EMAC0PHYTXCLK (EMAC0PHYTXCLK_delay),
+	.EMAC0PHYTXD (EMAC0PHYTXD_delay),
+	.EMAC0PHYTXEN (EMAC0PHYTXEN_delay),
+	.EMAC0PHYTXER (EMAC0PHYTXER_delay),
+	.EMAC0PHYTXGMIIMIICLKOUT (EMAC0PHYTXGMIIMIICLKOUT_delay),
+	.EMAC0SPEEDIS10100 (EMAC0SPEEDIS10100_delay),
+	.EMAC1CLIENTANINTERRUPT (EMAC1CLIENTANINTERRUPT_delay),
+	.EMAC1CLIENTRXBADFRAME (EMAC1CLIENTRXBADFRAME_delay),
+	.EMAC1CLIENTRXCLIENTCLKOUT (EMAC1CLIENTRXCLIENTCLKOUT_delay),
+	.EMAC1CLIENTRXD (EMAC1CLIENTRXD_delay),
+	.EMAC1CLIENTRXDVLD (EMAC1CLIENTRXDVLD_delay),
+	.EMAC1CLIENTRXDVLDMSW (EMAC1CLIENTRXDVLDMSW_delay),
+	.EMAC1CLIENTRXFRAMEDROP (EMAC1CLIENTRXFRAMEDROP_delay),
+	.EMAC1CLIENTRXGOODFRAME (EMAC1CLIENTRXGOODFRAME_delay),
+	.EMAC1CLIENTRXSTATS (EMAC1CLIENTRXSTATS_delay),
+	.EMAC1CLIENTRXSTATSBYTEVLD (EMAC1CLIENTRXSTATSBYTEVLD_delay),
+	.EMAC1CLIENTRXSTATSVLD (EMAC1CLIENTRXSTATSVLD_delay),
+	.EMAC1CLIENTTXACK (EMAC1CLIENTTXACK_delay),
+	.EMAC1CLIENTTXCLIENTCLKOUT (EMAC1CLIENTTXCLIENTCLKOUT_delay),
+	.EMAC1CLIENTTXCOLLISION (EMAC1CLIENTTXCOLLISION_delay),
+	.EMAC1CLIENTTXRETRANSMIT (EMAC1CLIENTTXRETRANSMIT_delay),
+	.EMAC1CLIENTTXSTATS (EMAC1CLIENTTXSTATS_delay),
+	.EMAC1CLIENTTXSTATSBYTEVLD (EMAC1CLIENTTXSTATSBYTEVLD_delay),
+	.EMAC1CLIENTTXSTATSVLD (EMAC1CLIENTTXSTATSVLD_delay),
+	.EMAC1PHYENCOMMAALIGN (EMAC1PHYENCOMMAALIGN_delay),
+	.EMAC1PHYLOOPBACKMSB (EMAC1PHYLOOPBACKMSB_delay),
+	.EMAC1PHYMCLKOUT (EMAC1PHYMCLKOUT_delay),
+	.EMAC1PHYMDOUT (EMAC1PHYMDOUT_delay),
+	.EMAC1PHYMDTRI (EMAC1PHYMDTRI_delay),
+	.EMAC1PHYMGTRXRESET (EMAC1PHYMGTRXRESET_delay),
+	.EMAC1PHYMGTTXRESET (EMAC1PHYMGTTXRESET_delay),
+	.EMAC1PHYPOWERDOWN (EMAC1PHYPOWERDOWN_delay),
+	.EMAC1PHYSYNCACQSTATUS (EMAC1PHYSYNCACQSTATUS_delay),
+	.EMAC1PHYTXCHARDISPMODE (EMAC1PHYTXCHARDISPMODE_delay),
+	.EMAC1PHYTXCHARDISPVAL (EMAC1PHYTXCHARDISPVAL_delay),
+	.EMAC1PHYTXCHARISK (EMAC1PHYTXCHARISK_delay),
+	.EMAC1PHYTXCLK (EMAC1PHYTXCLK_delay),
+	.EMAC1PHYTXD (EMAC1PHYTXD_delay),
+	.EMAC1PHYTXEN (EMAC1PHYTXEN_delay),
+	.EMAC1PHYTXER (EMAC1PHYTXER_delay),
+	.EMAC1PHYTXGMIIMIICLKOUT (EMAC1PHYTXGMIIMIICLKOUT_delay),
+	.EMAC1SPEEDIS10100 (EMAC1SPEEDIS10100_delay),
+	.EMACDCRACK (EMACDCRACK_delay),
+	.EMACDCRDBUS (EMACDCRDBUS_delay),
+	.HOSTMIIMRDY (HOSTMIIMRDY_delay),
+	.HOSTRDDATA (HOSTRDDATA_delay),
+
+	.CLIENTEMAC0DCMLOCKED (CLIENTEMAC0DCMLOCKED_delay),
+	.CLIENTEMAC0PAUSEREQ (CLIENTEMAC0PAUSEREQ_delay),
+	.CLIENTEMAC0PAUSEVAL (CLIENTEMAC0PAUSEVAL_delay),
+	.CLIENTEMAC0RXCLIENTCLKIN (CLIENTEMAC0RXCLIENTCLKIN_delay),
+	.CLIENTEMAC0TXCLIENTCLKIN (CLIENTEMAC0TXCLIENTCLKIN_delay),
+	.CLIENTEMAC0TXD (CLIENTEMAC0TXD_delay),
+	.CLIENTEMAC0TXDVLD (CLIENTEMAC0TXDVLD_delay),
+	.CLIENTEMAC0TXDVLDMSW (CLIENTEMAC0TXDVLDMSW_delay),
+	.CLIENTEMAC0TXFIRSTBYTE (CLIENTEMAC0TXFIRSTBYTE_delay),
+	.CLIENTEMAC0TXIFGDELAY (CLIENTEMAC0TXIFGDELAY_delay),
+	.CLIENTEMAC0TXUNDERRUN (CLIENTEMAC0TXUNDERRUN_delay),
+	.CLIENTEMAC1DCMLOCKED (CLIENTEMAC1DCMLOCKED_delay),
+	.CLIENTEMAC1PAUSEREQ (CLIENTEMAC1PAUSEREQ_delay),
+	.CLIENTEMAC1PAUSEVAL (CLIENTEMAC1PAUSEVAL_delay),
+	.CLIENTEMAC1RXCLIENTCLKIN (CLIENTEMAC1RXCLIENTCLKIN_delay),
+	.CLIENTEMAC1TXCLIENTCLKIN (CLIENTEMAC1TXCLIENTCLKIN_delay),
+	.CLIENTEMAC1TXD (CLIENTEMAC1TXD_delay),
+	.CLIENTEMAC1TXDVLD (CLIENTEMAC1TXDVLD_delay),
+	.CLIENTEMAC1TXDVLDMSW (CLIENTEMAC1TXDVLDMSW_delay),
+	.CLIENTEMAC1TXFIRSTBYTE (CLIENTEMAC1TXFIRSTBYTE_delay),
+	.CLIENTEMAC1TXIFGDELAY (CLIENTEMAC1TXIFGDELAY_delay),
+	.CLIENTEMAC1TXUNDERRUN (CLIENTEMAC1TXUNDERRUN_delay),
+	.DCREMACABUS (DCREMACABUS_delay),
+	.DCREMACCLK (DCREMACCLK_delay),
+	.DCREMACDBUS (DCREMACDBUS_delay),
+	.DCREMACENABLE (DCREMACENABLE_delay),
+	.DCREMACREAD (DCREMACREAD_delay),
+	.DCREMACWRITE (DCREMACWRITE_delay),
+	.HOSTADDR (HOSTADDR_delay),
+	.HOSTCLK (HOSTCLK_delay),
+	.HOSTEMAC1SEL (HOSTEMAC1SEL_delay),
+	.HOSTMIIMSEL (HOSTMIIMSEL_delay),
+	.HOSTOPCODE (HOSTOPCODE_delay),
+	.HOSTREQ (HOSTREQ_delay),
+	.HOSTWRDATA (HOSTWRDATA_delay),
+	.PHYEMAC0COL (PHYEMAC0COL_delay),
+	.PHYEMAC0CRS (PHYEMAC0CRS_delay),
+	.PHYEMAC0GTXCLK (PHYEMAC0GTXCLK_delay),
+	.PHYEMAC0MCLKIN (PHYEMAC0MCLKIN_delay),
+	.PHYEMAC0MDIN (PHYEMAC0MDIN_delay),
+	.PHYEMAC0MIITXCLK (PHYEMAC0MIITXCLK_delay),
+	.PHYEMAC0PHYAD (PHYEMAC0PHYAD_delay),
+	.PHYEMAC0RXBUFERR (PHYEMAC0RXBUFERR_delay),
+	.PHYEMAC0RXBUFSTATUS (PHYEMAC0RXBUFSTATUS_delay),
+	.PHYEMAC0RXCHARISCOMMA (PHYEMAC0RXCHARISCOMMA_delay),
+	.PHYEMAC0RXCHARISK (PHYEMAC0RXCHARISK_delay),
+	.PHYEMAC0RXCHECKINGCRC (PHYEMAC0RXCHECKINGCRC_delay),
+	.PHYEMAC0RXCLK (PHYEMAC0RXCLK_delay),
+	.PHYEMAC0RXCLKCORCNT (PHYEMAC0RXCLKCORCNT_delay),
+	.PHYEMAC0RXCOMMADET (PHYEMAC0RXCOMMADET_delay),
+	.PHYEMAC0RXD (PHYEMAC0RXD_delay),
+	.PHYEMAC0RXDISPERR (PHYEMAC0RXDISPERR_delay),
+	.PHYEMAC0RXDV (PHYEMAC0RXDV_delay),
+	.PHYEMAC0RXER (PHYEMAC0RXER_delay),
+	.PHYEMAC0RXLOSSOFSYNC (PHYEMAC0RXLOSSOFSYNC_delay),
+	.PHYEMAC0RXNOTINTABLE (PHYEMAC0RXNOTINTABLE_delay),
+	.PHYEMAC0RXRUNDISP (PHYEMAC0RXRUNDISP_delay),
+	.PHYEMAC0SIGNALDET (PHYEMAC0SIGNALDET_delay),
+	.PHYEMAC0TXBUFERR (PHYEMAC0TXBUFERR_delay),
+	.PHYEMAC0TXGMIIMIICLKIN (PHYEMAC0TXGMIIMIICLKIN_delay),
+	.PHYEMAC1COL (PHYEMAC1COL_delay),
+	.PHYEMAC1CRS (PHYEMAC1CRS_delay),
+	.PHYEMAC1GTXCLK (PHYEMAC1GTXCLK_delay),
+	.PHYEMAC1MCLKIN (PHYEMAC1MCLKIN_delay),
+	.PHYEMAC1MDIN (PHYEMAC1MDIN_delay),
+	.PHYEMAC1MIITXCLK (PHYEMAC1MIITXCLK_delay),
+	.PHYEMAC1PHYAD (PHYEMAC1PHYAD_delay),
+	.PHYEMAC1RXBUFERR (PHYEMAC1RXBUFERR_delay),
+	.PHYEMAC1RXBUFSTATUS (PHYEMAC1RXBUFSTATUS_delay),
+	.PHYEMAC1RXCHARISCOMMA (PHYEMAC1RXCHARISCOMMA_delay),
+	.PHYEMAC1RXCHARISK (PHYEMAC1RXCHARISK_delay),
+	.PHYEMAC1RXCHECKINGCRC (PHYEMAC1RXCHECKINGCRC_delay),
+	.PHYEMAC1RXCLK (PHYEMAC1RXCLK_delay),
+	.PHYEMAC1RXCLKCORCNT (PHYEMAC1RXCLKCORCNT_delay),
+	.PHYEMAC1RXCOMMADET (PHYEMAC1RXCOMMADET_delay),
+	.PHYEMAC1RXD (PHYEMAC1RXD_delay),
+	.PHYEMAC1RXDISPERR (PHYEMAC1RXDISPERR_delay),
+	.PHYEMAC1RXDV (PHYEMAC1RXDV_delay),
+	.PHYEMAC1RXER (PHYEMAC1RXER_delay),
+	.PHYEMAC1RXLOSSOFSYNC (PHYEMAC1RXLOSSOFSYNC_delay),
+	.PHYEMAC1RXNOTINTABLE (PHYEMAC1RXNOTINTABLE_delay),
+	.PHYEMAC1RXRUNDISP (PHYEMAC1RXRUNDISP_delay),
+	.PHYEMAC1SIGNALDET (PHYEMAC1SIGNALDET_delay),
+	.PHYEMAC1TXBUFERR (PHYEMAC1TXBUFERR_delay),
+	.PHYEMAC1TXGMIIMIICLKIN (PHYEMAC1TXGMIIMIICLKIN_delay),
+	.RESET (RESET_delay)		   
+);
+
+specify
+        $recrem (negedge RESET, posedge CLIENTEMAC0TXCLIENTCLKIN, 0:0:0, 0:0:0);
+	$recrem (negedge RESET, posedge CLIENTEMAC1TXCLIENTCLKIN, 0:0:0, 0:0:0);
+	$recrem (negedge RESET, posedge HOSTCLK, 0:0:0, 0:0:0);
+	$recrem (negedge RESET, posedge PHYEMAC0GTXCLK, 0:0:0, 0:0:0);
+	$recrem (negedge RESET, posedge PHYEMAC1GTXCLK, 0:0:0, 0:0:0);
+	$recrem (negedge RESET, posedge PHYEMAC0TXGMIIMIICLKIN, 0:0:0, 0:0:0);
+	$recrem (negedge RESET, posedge PHYEMAC1TXGMIIMIICLKIN, 0:0:0, 0:0:0);
+   
+	$setuphold (negedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[4], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[5], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[6], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[7], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, negedge PHYEMAC0RXER, 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[4], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[5], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[6], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[7], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC0RXCLK, posedge PHYEMAC0RXER, 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[4], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[5], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[6], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[7], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, negedge PHYEMAC1RXER, 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[4], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[5], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[6], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[7], 0:0:0, 0:0:0);
+	$setuphold (negedge PHYEMAC1RXCLK, posedge PHYEMAC1RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0DCMLOCKED, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[10], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[11], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[12], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[13], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[14], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[15], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[8], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0PAUSEVAL[9], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXDVLD, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXDVLDMSW, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[10], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[11], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[12], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[13], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[14], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[15], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[8], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXD[9], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXFIRSTBYTE, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXIFGDELAY[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXIFGDELAY[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXIFGDELAY[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXIFGDELAY[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXIFGDELAY[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXIFGDELAY[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXIFGDELAY[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXIFGDELAY[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, negedge CLIENTEMAC0TXUNDERRUN, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0DCMLOCKED, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[10], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[11], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[12], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[13], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[14], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[15], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[8], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0PAUSEVAL[9], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXDVLD, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXDVLDMSW, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[10], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[11], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[12], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[13], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[14], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[15], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[8], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXD[9], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXFIRSTBYTE, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXIFGDELAY[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXIFGDELAY[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXIFGDELAY[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXIFGDELAY[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXIFGDELAY[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXIFGDELAY[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXIFGDELAY[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXIFGDELAY[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC0TXCLIENTCLKIN, posedge CLIENTEMAC0TXUNDERRUN, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1DCMLOCKED, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[10], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[11], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[12], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[13], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[14], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[15], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[8], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1PAUSEVAL[9], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXDVLD, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXDVLDMSW, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[10], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[11], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[12], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[13], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[14], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[15], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[8], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXD[9], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXFIRSTBYTE, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXIFGDELAY[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXIFGDELAY[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXIFGDELAY[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXIFGDELAY[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXIFGDELAY[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXIFGDELAY[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXIFGDELAY[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXIFGDELAY[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, negedge CLIENTEMAC1TXUNDERRUN, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1DCMLOCKED, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[10], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[11], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[12], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[13], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[14], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[15], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[8], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1PAUSEVAL[9], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXDVLD, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXDVLDMSW, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[10], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[11], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[12], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[13], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[14], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[15], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[8], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXD[9], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXFIRSTBYTE, 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXIFGDELAY[0], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXIFGDELAY[1], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXIFGDELAY[2], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXIFGDELAY[3], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXIFGDELAY[4], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXIFGDELAY[5], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXIFGDELAY[6], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXIFGDELAY[7], 0:0:0, 0:0:0);
+	$setuphold (posedge CLIENTEMAC1TXCLIENTCLKIN, posedge CLIENTEMAC1TXUNDERRUN, 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[2], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[3], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[4], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[5], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[6], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[7], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[8], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACABUS[9], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[10], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[11], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[12], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[13], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[14], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[15], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[16], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[17], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[18], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[19], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[20], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[21], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[22], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[23], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[24], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[25], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[26], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[27], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[28], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[29], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[2], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[30], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[31], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[3], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[4], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[5], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[6], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[7], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[8], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACDBUS[9], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACENABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACREAD, 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, negedge DCREMACWRITE, 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[2], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[3], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[4], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[5], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[6], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[7], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[8], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACABUS[9], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[10], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[11], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[12], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[13], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[14], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[15], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[16], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[17], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[18], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[19], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[20], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[21], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[22], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[23], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[24], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[25], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[26], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[27], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[28], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[29], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[2], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[30], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[31], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[3], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[4], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[5], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[6], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[7], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[8], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACDBUS[9], 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACENABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACREAD, 0:0:0, 0:0:0);
+	$setuphold (posedge DCREMACCLK, posedge DCREMACWRITE, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[2], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[3], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[4], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[5], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[6], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[7], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[8], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTADDR[9], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTEMAC1SEL, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTMIIMSEL, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTOPCODE[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTOPCODE[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[10], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[11], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[12], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[13], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[14], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[15], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[16], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[17], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[18], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[19], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[20], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[21], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[22], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[23], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[24], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[25], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[26], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[27], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[28], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[29], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[2], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[30], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[31], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[3], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[4], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[5], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[6], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[7], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[8], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge HOSTWRDATA[9], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC0MDIN, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC0PHYAD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC0PHYAD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC0PHYAD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC0PHYAD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC0PHYAD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC1MDIN, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC1PHYAD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC1PHYAD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC1PHYAD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC1PHYAD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, negedge PHYEMAC1PHYAD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[2], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[3], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[4], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[5], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[6], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[7], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[8], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTADDR[9], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTEMAC1SEL, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTMIIMSEL, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTOPCODE[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTOPCODE[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[10], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[11], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[12], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[13], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[14], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[15], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[16], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[17], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[18], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[19], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[20], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[21], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[22], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[23], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[24], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[25], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[26], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[27], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[28], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[29], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[2], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[30], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[31], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[3], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[4], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[5], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[6], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[7], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[8], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge HOSTWRDATA[9], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC0MDIN, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC0PHYAD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC0PHYAD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC0PHYAD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC0PHYAD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC0PHYAD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC1MDIN, 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC1PHYAD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC1PHYAD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC1PHYAD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC1PHYAD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge HOSTCLK, posedge PHYEMAC1PHYAD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0COL, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0CRS, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXBUFSTATUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXBUFSTATUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXCHARISCOMMA, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXCHARISK, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXCHECKINGCRC, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXCLKCORCNT[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXCLKCORCNT[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXCLKCORCNT[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXCOMMADET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXDISPERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXDV, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXLOSSOFSYNC[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXLOSSOFSYNC[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXNOTINTABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0RXRUNDISP, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0SIGNALDET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, negedge PHYEMAC0TXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0COL, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0CRS, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXBUFSTATUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXBUFSTATUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXCHARISCOMMA, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXCHARISK, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXCHECKINGCRC, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXCLKCORCNT[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXCLKCORCNT[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXCLKCORCNT[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXCOMMADET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXDISPERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXDV, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXLOSSOFSYNC[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXLOSSOFSYNC[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXNOTINTABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0RXRUNDISP, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0SIGNALDET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0GTXCLK, posedge PHYEMAC0TXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0MCLKIN, negedge PHYEMAC0MDIN, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0MCLKIN, posedge PHYEMAC0MDIN, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0COL, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0CRS, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXBUFSTATUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXBUFSTATUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXCHARISCOMMA, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXCHARISK, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXCHECKINGCRC, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXCLKCORCNT[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXCLKCORCNT[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXCLKCORCNT[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXCOMMADET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXDISPERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXDV, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXLOSSOFSYNC[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXLOSSOFSYNC[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXNOTINTABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0RXRUNDISP, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, negedge PHYEMAC0SIGNALDET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0COL, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0CRS, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXBUFSTATUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXBUFSTATUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXCHARISCOMMA, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXCHARISK, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXCHECKINGCRC, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXCLKCORCNT[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXCLKCORCNT[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXCLKCORCNT[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXCOMMADET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXDISPERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXDV, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXLOSSOFSYNC[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXLOSSOFSYNC[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXNOTINTABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0RXRUNDISP, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0RXCLK, posedge PHYEMAC0SIGNALDET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0DCMLOCKED, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[10], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[11], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[12], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[13], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[14], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[15], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[8], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0PAUSEVAL[9], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXDVLD, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXDVLDMSW, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[10], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[11], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[12], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[13], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[14], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[15], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[8], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXD[9], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXFIRSTBYTE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXIFGDELAY[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXIFGDELAY[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXIFGDELAY[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXIFGDELAY[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXIFGDELAY[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXIFGDELAY[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXIFGDELAY[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXIFGDELAY[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge CLIENTEMAC0TXUNDERRUN, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, negedge PHYEMAC0TXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0DCMLOCKED, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[10], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[11], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[12], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[13], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[14], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[15], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[8], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0PAUSEVAL[9], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXDVLD, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXDVLDMSW, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[10], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[11], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[12], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[13], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[14], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[15], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[8], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXD[9], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXFIRSTBYTE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXIFGDELAY[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXIFGDELAY[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXIFGDELAY[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXIFGDELAY[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXIFGDELAY[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXIFGDELAY[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXIFGDELAY[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXIFGDELAY[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge CLIENTEMAC0TXUNDERRUN, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC0TXGMIIMIICLKIN, posedge PHYEMAC0TXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1COL, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1CRS, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXBUFSTATUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXBUFSTATUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXCHARISCOMMA, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXCHARISK, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXCHECKINGCRC, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXCLKCORCNT[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXCLKCORCNT[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXCLKCORCNT[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXCOMMADET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXDISPERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXDV, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXLOSSOFSYNC[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXLOSSOFSYNC[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXNOTINTABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1RXRUNDISP, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1SIGNALDET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, negedge PHYEMAC1TXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1COL, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1CRS, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXBUFSTATUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXBUFSTATUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXCHARISCOMMA, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXCHARISK, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXCHECKINGCRC, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXCLKCORCNT[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXCLKCORCNT[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXCLKCORCNT[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXCOMMADET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXDISPERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXDV, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXLOSSOFSYNC[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXLOSSOFSYNC[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXNOTINTABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1RXRUNDISP, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1SIGNALDET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1GTXCLK, posedge PHYEMAC1TXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1MCLKIN, negedge PHYEMAC1MDIN, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1MCLKIN, posedge PHYEMAC1MDIN, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1COL, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1CRS, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXBUFSTATUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXBUFSTATUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXCHARISCOMMA, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXCHARISK, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXCHECKINGCRC, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXCLKCORCNT[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXCLKCORCNT[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXCLKCORCNT[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXCOMMADET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXDISPERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXDV, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXLOSSOFSYNC[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXLOSSOFSYNC[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXNOTINTABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1RXRUNDISP, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, negedge PHYEMAC1SIGNALDET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1COL, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1CRS, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXBUFSTATUS[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXBUFSTATUS[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXCHARISCOMMA, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXCHARISK, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXCHECKINGCRC, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXCLKCORCNT[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXCLKCORCNT[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXCLKCORCNT[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXCOMMADET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXDISPERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXDV, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXER, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXLOSSOFSYNC[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXLOSSOFSYNC[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXNOTINTABLE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1RXRUNDISP, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1RXCLK, posedge PHYEMAC1SIGNALDET, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1DCMLOCKED, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[10], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[11], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[12], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[13], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[14], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[15], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[8], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1PAUSEVAL[9], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXDVLD, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXDVLDMSW, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[10], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[11], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[12], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[13], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[14], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[15], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[8], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXD[9], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXFIRSTBYTE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXIFGDELAY[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXIFGDELAY[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXIFGDELAY[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXIFGDELAY[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXIFGDELAY[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXIFGDELAY[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXIFGDELAY[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXIFGDELAY[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge CLIENTEMAC1TXUNDERRUN, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, negedge PHYEMAC1TXBUFERR, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1DCMLOCKED, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEREQ, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[10], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[11], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[12], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[13], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[14], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[15], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[8], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1PAUSEVAL[9], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXDVLD, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXDVLDMSW, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[10], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[11], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[12], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[13], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[14], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[15], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[8], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXD[9], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXFIRSTBYTE, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXIFGDELAY[0], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXIFGDELAY[1], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXIFGDELAY[2], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXIFGDELAY[3], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXIFGDELAY[4], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXIFGDELAY[5], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXIFGDELAY[6], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXIFGDELAY[7], 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge CLIENTEMAC1TXUNDERRUN, 0:0:0, 0:0:0);
+	$setuphold (posedge PHYEMAC1TXGMIIMIICLKIN, posedge PHYEMAC1TXBUFERR, 0:0:0, 0:0:0);
+   	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXBADFRAME) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXDVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXDVLDMSW) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[0]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[10]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[11]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[12]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[13]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[14]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[15]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[1]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[2]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[3]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[4]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[5]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[6]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[7]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[8]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXD[9]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXFRAMEDROP) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXGOODFRAME) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATSBYTEVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATSVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATS[0]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATS[1]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATS[2]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATS[3]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATS[4]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATS[5]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0RXCLIENTCLKIN => EMAC0CLIENTRXSTATS[6]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0TXCLIENTCLKIN => EMAC0CLIENTTXACK) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0TXCLIENTCLKIN => EMAC0CLIENTTXCOLLISION) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0TXCLIENTCLKIN => EMAC0CLIENTTXRETRANSMIT) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0TXCLIENTCLKIN => EMAC0CLIENTTXSTATS) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0TXCLIENTCLKIN => EMAC0CLIENTTXSTATSBYTEVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC0TXCLIENTCLKIN => EMAC0CLIENTTXSTATSVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXBADFRAME) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXDVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXDVLDMSW) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[0]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[10]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[11]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[12]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[13]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[14]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[15]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[1]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[2]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[3]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[4]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[5]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[6]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[7]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[8]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXD[9]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXFRAMEDROP) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXGOODFRAME) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATSBYTEVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATSVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATS[0]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATS[1]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATS[2]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATS[3]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATS[4]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATS[5]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1RXCLIENTCLKIN => EMAC1CLIENTRXSTATS[6]) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1TXCLIENTCLKIN => EMAC1CLIENTTXACK) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1TXCLIENTCLKIN => EMAC1CLIENTTXCOLLISION) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1TXCLIENTCLKIN => EMAC1CLIENTTXRETRANSMIT) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1TXCLIENTCLKIN => EMAC1CLIENTTXSTATS) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1TXCLIENTCLKIN => EMAC1CLIENTTXSTATSBYTEVLD) = (100:100:100, 100:100:100);
+	(CLIENTEMAC1TXCLIENTCLKIN => EMAC1CLIENTTXSTATSVLD) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRACK) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[0]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[10]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[11]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[12]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[13]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[14]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[15]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[16]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[17]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[18]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[19]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[1]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[20]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[21]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[22]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[23]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[24]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[25]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[26]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[27]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[28]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[29]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[2]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[30]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[31]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[3]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[4]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[5]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[6]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[7]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[8]) = (100:100:100, 100:100:100);
+	(DCREMACCLK => EMACDCRDBUS[9]) = (100:100:100, 100:100:100);
+	(HOSTCLK => DCRHOSTDONEIR) = (100:100:100, 100:100:100);
+	(HOSTCLK => EMAC0PHYMCLKOUT) = (100:100:100, 100:100:100);
+	(HOSTCLK => EMAC0PHYMDOUT) = (100:100:100, 100:100:100);
+	(HOSTCLK => EMAC0PHYMDTRI) = (100:100:100, 100:100:100);
+	(HOSTCLK => EMAC0SPEEDIS10100) = (100:100:100, 100:100:100);
+	(HOSTCLK => EMAC1PHYMCLKOUT) = (100:100:100, 100:100:100);
+	(HOSTCLK => EMAC1PHYMDOUT) = (100:100:100, 100:100:100);
+	(HOSTCLK => EMAC1PHYMDTRI) = (100:100:100, 100:100:100);
+	(HOSTCLK => EMAC1SPEEDIS10100) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTMIIMRDY) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[0]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[10]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[11]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[12]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[13]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[14]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[15]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[16]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[17]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[18]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[19]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[1]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[20]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[21]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[22]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[23]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[24]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[25]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[26]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[27]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[28]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[29]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[2]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[30]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[31]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[3]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[4]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[5]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[6]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[7]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[8]) = (100:100:100, 100:100:100);
+	(HOSTCLK => HOSTRDDATA[9]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0CLIENTANINTERRUPT) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0CLIENTRXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0CLIENTTXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYENCOMMAALIGN) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYLOOPBACKMSB) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYMGTRXRESET) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYMGTTXRESET) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYPOWERDOWN) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYSYNCACQSTATUS) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXCHARDISPMODE) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXCHARDISPVAL) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXCHARISK) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXCLK) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXD[0]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXD[1]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXD[2]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXD[3]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXD[4]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXD[5]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXD[6]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXD[7]) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXEN) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXER) = (100:100:100, 100:100:100);
+	(PHYEMAC0GTXCLK => EMAC0PHYTXGMIIMIICLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0MCLKIN => EMAC0PHYMCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0MCLKIN => EMAC0PHYMDOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0MCLKIN => EMAC0PHYMDTRI) = (100:100:100, 100:100:100);
+	(PHYEMAC0MIITXCLK => EMAC0CLIENTTXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0MIITXCLK => EMAC0PHYTXGMIIMIICLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXBADFRAME) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXDVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXDVLDMSW) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[0]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[10]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[11]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[12]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[13]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[14]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[15]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[1]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[2]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[3]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[4]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[5]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[6]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[7]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[8]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXD[9]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXFRAMEDROP) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXGOODFRAME) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATSBYTEVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATSVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATS[0]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATS[1]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATS[2]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATS[3]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATS[4]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATS[5]) = (100:100:100, 100:100:100);
+	(PHYEMAC0RXCLK => EMAC0CLIENTRXSTATS[6]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0CLIENTTXACK) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0CLIENTTXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0CLIENTTXCOLLISION) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0CLIENTTXRETRANSMIT) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0CLIENTTXSTATS) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0CLIENTTXSTATSBYTEVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0CLIENTTXSTATSVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYSYNCACQSTATUS) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXCHARDISPMODE) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXCHARDISPVAL) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXCHARISK) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXCLK) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXD[0]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXD[1]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXD[2]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXD[3]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXD[4]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXD[5]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXD[6]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXD[7]) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXEN) = (100:100:100, 100:100:100);
+	(PHYEMAC0TXGMIIMIICLKIN => EMAC0PHYTXER) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1CLIENTANINTERRUPT) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1CLIENTRXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1CLIENTTXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYENCOMMAALIGN) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYLOOPBACKMSB) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYMGTRXRESET) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYMGTTXRESET) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYPOWERDOWN) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYSYNCACQSTATUS) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXCHARDISPMODE) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXCHARDISPVAL) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXCHARISK) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXCLK) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXD[0]) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXD[1]) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXD[2]) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXD[3]) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXD[4]) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXD[5]) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXD[6]) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXD[7]) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXEN) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXER) = (100:100:100, 100:100:100);
+	(PHYEMAC1GTXCLK => EMAC1PHYTXGMIIMIICLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1MCLKIN => EMAC1PHYMCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1MCLKIN => EMAC1PHYMDOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1MCLKIN => EMAC1PHYMDTRI) = (100:100:100, 100:100:100);
+	(PHYEMAC1MIITXCLK => EMAC1CLIENTTXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1MIITXCLK => EMAC1PHYTXGMIIMIICLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXBADFRAME) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXDVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXDVLDMSW) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[0]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[10]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[11]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[12]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[13]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[14]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[15]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[1]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[2]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[3]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[4]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[5]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[6]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[7]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[8]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXD[9]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXFRAMEDROP) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXGOODFRAME) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATSBYTEVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATSVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATS[0]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATS[1]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATS[2]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATS[3]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATS[4]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATS[5]) = (100:100:100, 100:100:100);
+	(PHYEMAC1RXCLK => EMAC1CLIENTRXSTATS[6]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1CLIENTTXACK) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1CLIENTTXCLIENTCLKOUT) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1CLIENTTXCOLLISION) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1CLIENTTXRETRANSMIT) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1CLIENTTXSTATS) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1CLIENTTXSTATSBYTEVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1CLIENTTXSTATSVLD) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYSYNCACQSTATUS) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXCHARDISPMODE) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXCHARDISPVAL) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXCHARISK) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXCLK) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXD[0]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXD[1]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXD[2]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXD[3]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXD[4]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXD[5]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXD[6]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXD[7]) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXEN) = (100:100:100, 100:100:100);
+	(PHYEMAC1TXGMIIMIICLKIN => EMAC1PHYTXER) = (100:100:100, 100:100:100);
+
+	specparam PATHPULSE$ = 0;
+endspecify
+endmodule

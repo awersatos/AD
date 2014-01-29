@@ -1,0 +1,13 @@
+[Plugin]
+Name=gps_simcom_to_location
+Description=Location services interface for gps simcom driver.
+SourceDir=services\location\adaptors\gps_simcom\src
+CompileOption0=-I"$(SSASROOT)\services\platform\gps_simcom\internal"
+CompileOption1=-I"$(SSASROOT)\services\location\include"
+CompileOption2=-I"$(SSASROOT)\services\location\internal"
+InitHandler=gps_simcom_to_location_init
+InitHandlerPriority=1
+Implement=location_adaptor
+
+[Instance]
+Require0=gps_simcom

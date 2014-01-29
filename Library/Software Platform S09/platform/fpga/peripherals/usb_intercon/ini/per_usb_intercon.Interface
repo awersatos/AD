@@ -1,0 +1,6 @@
+[Interface]
+Name=per_usb_intercon
+Category=PERIPHERAL
+System=False
+Description=ISP1760 Interrupt and Reset helper device
+PublicDir=platform\fpga\peripherals\usb_intercon\include

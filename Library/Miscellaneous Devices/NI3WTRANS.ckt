@@ -1,0 +1,45 @@
+*Transformer Subcircuit Parameters
+*RATIO1 = Turns ratio= Secondary1/Primary
+*RATIO2 = Turns ratio= Secondary2/Primary
+*RPRI   = Primary DC resistance
+*R2D    = Secondary1 leakage resistance referred to the primary side
+*R3D    = Secondary2 leakage resistance referred to the primary side
+*L1     = Primary Leakage inductance
+*XM     = Magnetizing Reactance
+*RCORE  = Core Loss Resistance
+*X2D   = Secondary1 Leakage Reactance referred to the primary side
+*X3D   = Secondary2 Leakage Reactance referred to the primary side
+
+*Non-ideal 4-winding Transformer
+*jjt created 18/1/2001.
+*jjt 18/1/2002: changed LX2D,LX3D comments to match subcircuit parameters (X2D, X3D) to avoid possible confusion.
+*Connections:
+*                 Pri+
+*                 |   Pri-
+*                 |   |   Sec1+
+*                 |   |   |   Sec1-
+*                 |   |   |   |   Sec2+
+*                 |   |   |   |   |   Sec2-
+*                 |   |   |   |   |   |   
+*                 |   |   |   |   |   |   
+*                 |   |   |   |   |   |   
+*                 |   |   |   |   |   |   
+.SUBCKT NI3WTRANS 1   2   3   4   5   6      PARAMS: RATIO1=1 RATIO2=1 RPRI=0.1 R2D=0.1 R3D=0.1 L1=1U
++ X2D=1u X3D=1u XM=1k RCORE=1Meg
+
+VISRC1   4 11 0V
+VISRC2   6 14 0V
+FCTRL1   10 2 VISRC1 {RATIO1}
+FCTRL2   13 2 VISRC2 {RATIO2}
+EVCVS1   3 11 10 2 {RATIO1}
+EVCVS2   5 14 13 2 {RATIO2}
+RRPRI    1 8 {RPRI}
+RR2D    9 10 {R2D}
+RR3D    12 13 {R3D}
+LL1   8 7 {L1}
+LX2D  7 9 {X2D}
+LX3D  7 12 {X3D}
+LXM   7 2 {XM}
+RRCORE 7 2 {RCORE}
+
+.ENDS NI3WTRANS

@@ -1,0 +1,13 @@
+[Plugin]
+Name=ad_isp1760_to_usbhost
+Description=Adapts the ISP1760 driver to the USB Host service
+SourceDir=services\usbhost\adaptors\isp1760\src
+FrameworkCompileOption0=-I"$(SERROOT)\usbhost\internal"
+Implement=ad_usbhost
+InitHandler=isp1760_to_usbhost_init
+InitHandlerPriority=16
+Require0=usbhost
+
+[Instance]
+Require0=drv_isp1760
+

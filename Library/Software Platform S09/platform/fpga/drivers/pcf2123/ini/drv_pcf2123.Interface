@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_pcf2123
+Category=DRIVER
+System=False
+Description=PCF2123 Real Time Clock driver
+PublicDir=platform\fpga\drivers\pcf2123\include
+
+

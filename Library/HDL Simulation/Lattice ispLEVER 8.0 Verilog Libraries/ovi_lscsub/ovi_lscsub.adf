@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_lscsub
+
+[Library]
+ovi_lscsub=.\ovi_lscsub.LIB
+
+[$LibMap$]
+ovi_lscsub=.
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_ovi_lscsub.do=-1
+/lscsub.v=-1
+
+[Files.Data]
+.\src\update_ovi_lscsub.do=Macro
+.\src\lscsub.v=Verilog Source Code
+

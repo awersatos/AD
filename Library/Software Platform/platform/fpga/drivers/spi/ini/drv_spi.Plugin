@@ -1,0 +1,127 @@
+[Plugin]
+Name=drv_spi
+Description=SPI Master Controller Driver
+Caption=SPI Driver
+SourceDir=platform\fpga\drivers\spi\src
+Implement=drv_spi
+Bitmap=drv_spi.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_spi
+Condition=EQ
+
+[Instance]
+Require0=per_spi
+MultipleLinks=True
+MultipleLinksMax=8
+
+[Instance_Option0]
+Name=spimode
+GUIName=SPI Mode
+Description=SPI Mode (clock polarity and phase)
+Kind=ENUM
+DefaultValue=MODE0
+Enum0=MODE0
+EnumDescription0=SCLK positive polarity, DIN sampled on leading edge, DOUT changes on trailing edge
+Enum1=MODE1
+EnumDescription1=SCLK positive polarity, DOUT changes on leading edge, DIN sampled on trailing edge
+Enum2=MODE2
+EnumDescription2=SCLK inversed polarity, DIN sampled on leading edge, DOUT changes on trailing edge
+Enum3=MODE3
+EnumDescription3=SCLK inversed polarity, DOUT changes on leading edge, DIN sampled on trailing edge
+
+[Instance_Option1]
+Name=spi_frequency
+GUIName=SCLK frequency
+Description=SPI clock frequency (in Hz)
+Kind=UINT32
+DefaultValue=2500000
+
+[Instance_Option2]
+Name=nb_multiplex_support
+GUIName=NanoBoard multiplexed
+Description=Does the SPI controller use the NanoBoard multiplexer?
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option3]
+Name=channels
+GUIName=SPI channels
+Description=Largest SPI channel number in use on this peripheral
+Kind=UINT8
+MinRange=1
+DefaultValue=22
+
+[Instance_Option3_Available_If0]
+Kind=OPTION
+Object=nb_multiplex_support
+Condition=EQ
+Value=True
+
+[Instance_Option4]
+Name=multithread_safe
+GUIName=Mutltithread safe
+Description=Use locking to make driver multithread safe
+Kind=BOOLEAN
+DefaultValue=False
+Auto=False
+
+[Instance_Option4_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option4_Available_If1]
+Kind=False
+
+[Instance_Option5]
+Name=wait_mode
+GUIName=Wait mode
+Description=Activity while waiting on peripheral
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+DefaultValue=NOP
+
+[Instance_Option5_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option6]
+Name=wait_sleepms
+GUIName=Wait sleep duration
+Kind=INT
+Description=Sleep duration if thread has to wait and Wait mode is SLEEP
+DefaultValue=100
+
+[Instance_Option6_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option7]
+Name=channels
+GUIName=SPI channels
+Description=Largest SPI channel number in use on this peripheral
+Kind=UINT8
+MinRange=1
+DefaultValue=0
+Auto=True
+
+[Instance_Option7_Available_If0]
+Kind=OPTION
+Object=nb_multiplex_support
+Condition=NE
+Value=True
+
+[Instance_Option7_Hide_If0]
+Kind=OPTION
+Object=nb_multiplex_support
+Condition=NE
+Value=True

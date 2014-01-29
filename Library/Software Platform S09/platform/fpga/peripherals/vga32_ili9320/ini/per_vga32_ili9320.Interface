@@ -1,0 +1,6 @@
+[Interface]
+Name=per_vga32_ili9320
+Category=PERIPHERAL
+System=False
+Description=VGA32 TFT-Module peripheral (NB3000)
+PublicDir=platform\fpga\peripherals\vga32_ili9320\include

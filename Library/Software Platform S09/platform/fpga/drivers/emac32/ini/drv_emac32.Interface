@@ -1,0 +1,9 @@
+[Interface]
+Name=drv_emac32
+Category=DRIVER
+Visible=True
+System=False
+Description=EMAC32 driver
+PublicDir=platform\fpga\drivers\emac32\include
+
+

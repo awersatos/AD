@@ -1,0 +1,7 @@
+*1N5407 MCE 8/5/97
+*Ref: International Rectifier Digest '94
+*800V 3000mA 3us Si Diode pkg:DIODE0.4 1,2
+.MODEL 1N5407 D (IS=4.26N RS=14M N=1.7 BV=800 IBV=132U
++ CJO=125P VJ=0.75 M=0.333 TT=4.32U)
+
+

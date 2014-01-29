@@ -1,0 +1,961 @@
+timestamp=1260919352469
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[hardcopyiv_hssi_aux_clock_div]
+A/hardcopyiv_hssi_aux_clock_div=22|./src/hardcopyiv_hssi_atoms.v|39|1*550
+B/hardcopyiv_hssi_aux_clock_div=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=327,636,1043,1207
+R=./src/hardcopyiv_hssi_atoms.v|39
+
+[hardcopyiv_hssi_aux_clock_mult]
+A/hardcopyiv_hssi_aux_clock_mult=22|./src/hardcopyiv_hssi_atoms.v|113|1*1684
+B/hardcopyiv_hssi_aux_clock_mult=3*9381
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=507,1030,1718,2047
+R=./src/hardcopyiv_hssi_atoms.v|113
+
+[hardcopyiv_hssi_calibration_block]
+A/hardcopyiv_hssi_calibration_block=22|./src/hardcopyiv_hssi_atoms.v|86797|1*914641
+B/hardcopyiv_hssi_calibration_block=3*11691986
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=706,1076,1306,1424
+R=./src/hardcopyiv_hssi_atoms.v|86797
+
+[hardcopyiv_hssi_clock_divider]
+A/hardcopyiv_hssi_clock_divider=22|./src/hardcopyiv_hssi_atoms.v|3989|1*48289
+B/hardcopyiv_hssi_clock_divider=3*470831
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2571,4663,7183,8102
+R=./src/hardcopyiv_hssi_atoms.v|3989
+
+[hardcopyiv_hssi_cmu]
+A/hardcopyiv_hssi_cmu=22|./src/hardcopyiv_hssi_atoms.v|84624|1*894667
+B/hardcopyiv_hssi_cmu=3*11547889
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hssi_cmu=4*5383
+P/~emb=16597,24602,34041,39400
+R=./src/hardcopyiv_hssi_atoms.v|84624
+
+[hardcopyiv_hssi_cmu_auto_speed_neg]
+A/hardcopyiv_hssi_cmu_auto_speed_neg=22|./src/hardcopyiv_hssi_atoms.v|68290|1*759195
+B/hardcopyiv_hssi_cmu_auto_speed_neg=3*9594292
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1688,2540,3421,3876
+R=./src/hardcopyiv_hssi_atoms.v|68290
+
+[hardcopyiv_hssi_cmu_chnl_reset]
+A/hardcopyiv_hssi_cmu_chnl_reset=22|./src/hardcopyiv_hssi_atoms.v|67942|1*755501
+B/hardcopyiv_hssi_cmu_chnl_reset=3*9568771
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1643,2152,3029,3330
+R=./src/hardcopyiv_hssi_atoms.v|67942
+
+[hardcopyiv_hssi_cmu_clk_ctl]
+A/hardcopyiv_hssi_cmu_clk_ctl=22|./src/hardcopyiv_hssi_atoms.v|68718|1*761757
+B/hardcopyiv_hssi_cmu_clk_ctl=3*9630908
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=883,1386,2014,2319
+R=./src/hardcopyiv_hssi_atoms.v|68718
+
+[hardcopyiv_hssi_cmu_clk_gating]
+A/hardcopyiv_hssi_cmu_clk_gating=22|./src/hardcopyiv_hssi_atoms.v|68697|1*761070
+B/hardcopyiv_hssi_cmu_clk_gating=3*9629911
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=291,493,681,793
+R=./src/hardcopyiv_hssi_atoms.v|68697
+
+[hardcopyiv_hssi_cmu_dprio_16bit]
+A/hardcopyiv_hssi_cmu_dprio_16bit=22|./src/hardcopyiv_hssi_atoms.v|69822|1*773119
+B/hardcopyiv_hssi_cmu_dprio_16bit=3*9696613
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=601,1026,1508,3410
+R=./src/hardcopyiv_hssi_atoms.v|69822
+
+[hardcopyiv_hssi_cmu_dprio_16bit_pma]
+A/hardcopyiv_hssi_cmu_dprio_16bit_pma=22|./src/hardcopyiv_hssi_atoms.v|70030|1*774399
+B/hardcopyiv_hssi_cmu_dprio_16bit_pma=3*9698316
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=658,1104,1592,3676
+R=./src/hardcopyiv_hssi_atoms.v|70030
+
+[hardcopyiv_hssi_cmu_dprio_addr]
+A/hardcopyiv_hssi_cmu_dprio_addr=22|./src/hardcopyiv_hssi_atoms.v|73208|1*798617
+B/hardcopyiv_hssi_cmu_dprio_addr=3*10147869
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=335,1091,3051,3457
+R=./src/hardcopyiv_hssi_atoms.v|73208
+
+[hardcopyiv_hssi_cmu_dprio_bit]
+A/hardcopyiv_hssi_cmu_dprio_bit=22|./src/hardcopyiv_hssi_atoms.v|69730|1*771327
+B/hardcopyiv_hssi_cmu_dprio_bit=3*9689271
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=445,707,1001,1105
+R=./src/hardcopyiv_hssi_atoms.v|69730
+
+[hardcopyiv_hssi_cmu_dprio_bit_pma]
+A/hardcopyiv_hssi_cmu_dprio_bit_pma=22|./src/hardcopyiv_hssi_atoms.v|69774|1*772205
+B/hardcopyiv_hssi_cmu_dprio_bit_pma=3*9692808
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=502,783,1091,1198
+R=./src/hardcopyiv_hssi_atoms.v|69774
+
+[hardcopyiv_hssi_cmu_dprio_centrl_bus_out_mux]
+A/hardcopyiv_hssi_cmu_dprio_centrl_bus_out_mux=22|./src/hardcopyiv_hssi_atoms.v|75569|1*814033
+B/hardcopyiv_hssi_cmu_dprio_centrl_bus_out_mux=3*10299221
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6183,6779,8453,9012
+R=./src/hardcopyiv_hssi_atoms.v|75569
+
+[hardcopyiv_hssi_cmu_dprio_centrl_top]
+A/hardcopyiv_hssi_cmu_dprio_centrl_top=22|./src/hardcopyiv_hssi_atoms.v|75752|1*815374
+B/hardcopyiv_hssi_cmu_dprio_centrl_top=3*10352202
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=856,4386,11480,14297
+R=./src/hardcopyiv_hssi_atoms.v|75752
+
+[hardcopyiv_hssi_cmu_dprio_chnl_bus_out_mux]
+A/hardcopyiv_hssi_cmu_dprio_chnl_bus_out_mux=22|./src/hardcopyiv_hssi_atoms.v|71377|1*779352
+B/hardcopyiv_hssi_cmu_dprio_chnl_bus_out_mux=3*9700200
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6873,7526,9478,10104
+R=./src/hardcopyiv_hssi_atoms.v|71377
+
+[hardcopyiv_hssi_cmu_dprio_chnl_top]
+A/hardcopyiv_hssi_cmu_dprio_chnl_top=22|./src/hardcopyiv_hssi_atoms.v|71582|1*780787
+B/hardcopyiv_hssi_cmu_dprio_chnl_top=3*9761219
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=890,5401,13515,16697
+R=./src/hardcopyiv_hssi_atoms.v|71582
+
+[hardcopyiv_hssi_cmu_dprio_cnt]
+A/hardcopyiv_hssi_cmu_dprio_cnt=22|./src/hardcopyiv_hssi_atoms.v|73570|1*802250
+B/hardcopyiv_hssi_cmu_dprio_cnt=3*10189504
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=283,816,1972,2289
+R=./src/hardcopyiv_hssi_atoms.v|73570
+
+[hardcopyiv_hssi_cmu_dprio_ctl_data]
+A/hardcopyiv_hssi_cmu_dprio_ctl_data=22|./src/hardcopyiv_hssi_atoms.v|73796|1*804632
+B/hardcopyiv_hssi_cmu_dprio_ctl_data=3*10211082
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=774,1688,4458,4740
+R=./src/hardcopyiv_hssi_atoms.v|73796
+
+[hardcopyiv_hssi_cmu_dprio_map]
+A/hardcopyiv_hssi_cmu_dprio_map=22|./src/hardcopyiv_hssi_atoms.v|78671|1*839099
+B/hardcopyiv_hssi_cmu_dprio_map=3*10846360
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9553,17854,47527,48717
+R=./src/hardcopyiv_hssi_atoms.v|78671
+
+[hardcopyiv_hssi_cmu_dprio_map_index]
+A/hardcopyiv_hssi_cmu_dprio_map_index=22|./src/hardcopyiv_hssi_atoms.v|76820|1*828773
+B/hardcopyiv_hssi_cmu_dprio_map_index=3*10437283
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=13806,17071,31209,31960
+R=./src/hardcopyiv_hssi_atoms.v|76820
+
+[hardcopyiv_hssi_cmu_dprio_reg_centrl]
+A/hardcopyiv_hssi_cmu_dprio_reg_centrl=22|./src/hardcopyiv_hssi_atoms.v|74573|1*810666
+B/hardcopyiv_hssi_cmu_dprio_reg_centrl=3*10299042
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9420,10703,13043,19733
+R=./src/hardcopyiv_hssi_atoms.v|74573
+
+[hardcopyiv_hssi_cmu_dprio_reg_chnl]
+A/hardcopyiv_hssi_cmu_dprio_reg_chnl=22|./src/hardcopyiv_hssi_atoms.v|70256|1*775715
+B/hardcopyiv_hssi_cmu_dprio_reg_chnl=3*9700023
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=10350,11795,14516,22371
+R=./src/hardcopyiv_hssi_atoms.v|70256
+
+[hardcopyiv_hssi_cmu_dprio_sm]
+A/hardcopyiv_hssi_cmu_dprio_sm=22|./src/hardcopyiv_hssi_atoms.v|74246|1*809245
+B/hardcopyiv_hssi_cmu_dprio_sm=3*10267681
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1085,1586,2146,2402
+R=./src/hardcopyiv_hssi_atoms.v|74246
+
+[hardcopyiv_hssi_cmu_dprio_status]
+A/hardcopyiv_hssi_cmu_dprio_status=22|./src/hardcopyiv_hssi_atoms.v|72800|1*797112
+B/hardcopyiv_hssi_cmu_dprio_status=3*9881263
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1257,2069,4925,5364
+R=./src/hardcopyiv_hssi_atoms.v|72800
+
+[hardcopyiv_hssi_cmu_dprio_top]
+A/hardcopyiv_hssi_cmu_dprio_top=22|./src/hardcopyiv_hssi_atoms.v|83888|1*888363
+B/hardcopyiv_hssi_cmu_dprio_top=3*11521623
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=8704,11004,14357,16677
+R=./src/hardcopyiv_hssi_atoms.v|83888
+
+[hardcopyiv_hssi_cmu_quad_reset]
+A/hardcopyiv_hssi_cmu_quad_reset=22|./src/hardcopyiv_hssi_atoms.v|68084|1*757116
+B/hardcopyiv_hssi_cmu_quad_reset=3*9578557
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2110,2698,3896,4232
+R=./src/hardcopyiv_hssi_atoms.v|68084
+
+[hardcopyiv_hssi_cmu_rx_ctrl]
+A/hardcopyiv_hssi_cmu_rx_ctrl=22|./src/hardcopyiv_hssi_atoms.v|68829|1*763097
+B/hardcopyiv_hssi_cmu_rx_ctrl=3*9638607
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=773,1248,1818,2094
+R=./src/hardcopyiv_hssi_atoms.v|68829
+
+[hardcopyiv_hssi_cmu_rxclk_ctl]
+A/hardcopyiv_hssi_cmu_rxclk_ctl=22|./src/hardcopyiv_hssi_atoms.v|69047|1*765110
+B/hardcopyiv_hssi_cmu_rxclk_ctl=3*9648385
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1952,2751,4101,4545
+R=./src/hardcopyiv_hssi_atoms.v|69047
+
+[hardcopyiv_hssi_cmu_rxclk_gating]
+A/hardcopyiv_hssi_cmu_rxclk_gating=22|./src/hardcopyiv_hssi_atoms.v|69027|1*764421
+B/hardcopyiv_hssi_cmu_rxclk_gating=3*9647386
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=295,499,687,799
+R=./src/hardcopyiv_hssi_atoms.v|69027
+
+[hardcopyiv_hssi_cmu_tx_ctrl]
+A/hardcopyiv_hssi_cmu_tx_ctrl=22|./src/hardcopyiv_hssi_atoms.v|69311|1*767348
+B/hardcopyiv_hssi_cmu_tx_ctrl=3*9667447
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=805,1303,1867,2143
+R=./src/hardcopyiv_hssi_atoms.v|69311
+
+[hardcopyiv_hssi_cmu_txclk_ctl]
+A/hardcopyiv_hssi_cmu_txclk_ctl=22|./src/hardcopyiv_hssi_atoms.v|69523|1*769345
+B/hardcopyiv_hssi_cmu_txclk_ctl=3*9677237
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1491,2191,3155,3534
+R=./src/hardcopyiv_hssi_atoms.v|69523
+
+[hardcopyiv_hssi_cmu_txclk_gating]
+A/hardcopyiv_hssi_cmu_txclk_gating=22|./src/hardcopyiv_hssi_atoms.v|69502|1*768672
+B/hardcopyiv_hssi_cmu_txclk_gating=3*9676238
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=295,499,687,799
+R=./src/hardcopyiv_hssi_atoms.v|69502
+
+[hardcopyiv_hssi_digi_chnl_hip_spt]
+A/hardcopyiv_hssi_digi_chnl_hip_spt=22|./src/hardcopyiv_hssi_atoms.v|8825|1*127120
+B/hardcopyiv_hssi_digi_chnl_hip_spt=3*1275779
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2282,2853,3942,4285
+R=./src/hardcopyiv_hssi_atoms.v|8825
+
+[hardcopyiv_hssi_dskw_sm]
+A/hardcopyiv_hssi_dskw_sm=22|./src/hardcopyiv_hssi_atoms.v|62488|1*690514
+B/hardcopyiv_hssi_dskw_sm=3*8765004
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=558,1507,4208,5256
+R=./src/hardcopyiv_hssi_atoms.v|62488
+
+[hardcopyiv_hssi_pcs_reset]
+A/hardcopyiv_hssi_pcs_reset=22|./src/hardcopyiv_hssi_atoms.v|8764|1*126262
+B/hardcopyiv_hssi_pcs_reset=3*1272554
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=428,682,970,1138
+R=./src/hardcopyiv_hssi_atoms.v|8764
+
+[hardcopyiv_hssi_phystatus_generator]
+A/hardcopyiv_hssi_phystatus_generator=22|./src/hardcopyiv_hssi_atoms.v|9396|1*130266
+B/hardcopyiv_hssi_phystatus_generator=3*1302393
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1198,2065,3677,4347
+R=./src/hardcopyiv_hssi_atoms.v|9396
+
+[hardcopyiv_hssi_phystatus_generator_fsm]
+A/hardcopyiv_hssi_phystatus_generator_fsm=22|./src/hardcopyiv_hssi_atoms.v|9001|1*128690
+B/hardcopyiv_hssi_phystatus_generator_fsm=3*1288237
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1048,1645,2421,2792
+R=./src/hardcopyiv_hssi_atoms.v|9001
+
+[hardcopyiv_hssi_pll]
+A/hardcopyiv_hssi_pll=22|./src/hardcopyiv_hssi_atoms.v|4509|1*53217
+B/hardcopyiv_hssi_pll=3*519469
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hssi_pll=4*0
+P/~emb=2935,6249,12033,13020
+R=./src/hardcopyiv_hssi_atoms.v|4509
+
+[hardcopyiv_hssi_pma_c_adce]
+A/hardcopyiv_hssi_pma_c_adce=22|./src/hardcopyiv_hssi_atoms.v|87004|1*91257
+B/hardcopyiv_hssi_pma_c_adce=3*933126
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3445,9941,30489,47164
+R=./src/hardcopyiv_hssi_atoms.v|87004
+
+[hardcopyiv_hssi_pma_c_clkgenbuf]
+A/hardcopyiv_hssi_pma_c_clkgenbuf=22|./src/hardcopyiv_hssi_atoms.v|610|1*6375
+B/hardcopyiv_hssi_pma_c_clkgenbuf=3*62478
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1352,2040,2811,3557
+R=./src/hardcopyiv_hssi_atoms.v|610
+
+[hardcopyiv_hssi_pma_c_clkgenbuf_cmu]
+A/hardcopyiv_hssi_pma_c_clkgenbuf_cmu=22|./src/hardcopyiv_hssi_atoms.v|722|1*9909
+B/hardcopyiv_hssi_pma_c_clkgenbuf_cmu=3*80218
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1499,2069,2616,3383
+R=./src/hardcopyiv_hssi_atoms.v|722
+
+[hardcopyiv_hssi_pma_c_clkgenbuf_tx10g]
+A/hardcopyiv_hssi_pma_c_clkgenbuf_tx10g=22|./src/hardcopyiv_hssi_atoms.v|3938|1*47435
+B/hardcopyiv_hssi_pma_c_clkgenbuf_tx10g=3*470019
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=537,832,1067,1322
+R=./src/hardcopyiv_hssi_atoms.v|3938
+
+[hardcopyiv_hssi_pma_c_clkgendrv]
+A/hardcopyiv_hssi_pma_c_clkgendrv=22|./src/hardcopyiv_hssi_atoms.v|506|1*5271
+B/hardcopyiv_hssi_pma_c_clkgendrv=3*53447
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=650,995,1484,1687
+R=./src/hardcopyiv_hssi_atoms.v|506
+
+[hardcopyiv_hssi_pma_c_clkgendrv_tx10g]
+A/hardcopyiv_hssi_pma_c_clkgendrv_tx10g=22|./src/hardcopyiv_hssi_atoms.v|3903|1*46613
+B/hardcopyiv_hssi_pma_c_clkgendrv_tx10g=3*469839
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=525,817,1021,1298
+R=./src/hardcopyiv_hssi_atoms.v|3903
+
+[hardcopyiv_hssi_pma_c_controller_4t16]
+A/hardcopyiv_hssi_pma_c_controller_4t16=22|./src/hardcopyiv_hssi_atoms.v|426|1*4065
+B/hardcopyiv_hssi_pma_c_controller_4t16=3*42501
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=862,1353,1884,2037
+R=./src/hardcopyiv_hssi_atoms.v|426
+
+[hardcopyiv_hssi_pma_c_d2a_mbpass]
+A/hardcopyiv_hssi_pma_c_d2a_mbpass=22|./src/hardcopyiv_hssi_atoms.v|800|1*11257
+B/hardcopyiv_hssi_pma_c_d2a_mbpass=3*80396
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=377,642,928,1030
+R=./src/hardcopyiv_hssi_atoms.v|800
+
+[hardcopyiv_hssi_pma_c_deser]
+A/hardcopyiv_hssi_pma_c_deser=22|./src/hardcopyiv_hssi_atoms.v|1224|1*17947
+B/hardcopyiv_hssi_pma_c_deser=3*129706
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=912,1868,3148,3813
+R=./src/hardcopyiv_hssi_atoms.v|1224
+
+[hardcopyiv_hssi_pma_c_deser_10g]
+A/hardcopyiv_hssi_pma_c_deser_10g=22|./src/hardcopyiv_hssi_atoms.v|3555|1*44949
+B/hardcopyiv_hssi_pma_c_deser_10g=3*426603
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=530,1034,1683,1940
+R=./src/hardcopyiv_hssi_atoms.v|3555
+
+[hardcopyiv_hssi_pma_c_deser_10to20]
+A/hardcopyiv_hssi_pma_c_deser_10to20=22|./src/hardcopyiv_hssi_atoms.v|1058|1*14703
+B/hardcopyiv_hssi_pma_c_deser_10to20=3*108008
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=649,1037,1468,1709
+R=./src/hardcopyiv_hssi_atoms.v|1058
+
+[hardcopyiv_hssi_pma_c_deser_ff_chain]
+A/hardcopyiv_hssi_pma_c_deser_ff_chain=22|./src/hardcopyiv_hssi_atoms.v|1128|1*15986
+B/hardcopyiv_hssi_pma_c_deser_ff_chain=3*117530
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=487,809,1256,1367
+R=./src/hardcopyiv_hssi_atoms.v|1128
+
+[hardcopyiv_hssi_pma_c_deser_fsd_rst]
+A/hardcopyiv_hssi_pma_c_deser_fsd_rst=22|./src/hardcopyiv_hssi_atoms.v|1190|1*17159
+B/hardcopyiv_hssi_pma_c_deser_fsd_rst=3*127979
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=281,500,667,777
+R=./src/hardcopyiv_hssi_atoms.v|1190
+
+[hardcopyiv_hssi_pma_c_deser_pcie]
+A/hardcopyiv_hssi_pma_c_deser_pcie=22|./src/hardcopyiv_hssi_atoms.v|996|1*13630
+B/hardcopyiv_hssi_pma_c_deser_pcie=3*99236
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=406,689,1034,1175
+R=./src/hardcopyiv_hssi_atoms.v|996
+
+[hardcopyiv_hssi_pma_c_div4or5_mcnt]
+A/hardcopyiv_hssi_pma_c_div4or5_mcnt=22|./src/hardcopyiv_hssi_atoms.v|1502|1*20743
+B/hardcopyiv_hssi_pma_c_div4or5_mcnt=3*172034
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=368,622,926,1054
+R=./src/hardcopyiv_hssi_atoms.v|1502
+
+[hardcopyiv_hssi_pma_c_divby2q]
+A/hardcopyiv_hssi_pma_c_divby2q=22|./src/hardcopyiv_hssi_atoms.v|368|1*3299
+B/hardcopyiv_hssi_pma_c_divby2q=3*39772
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=407,634,875,1034
+R=./src/hardcopyiv_hssi_atoms.v|368
+
+[hardcopyiv_hssi_pma_c_lockdet_tx18]
+A/hardcopyiv_hssi_pma_c_lockdet_tx18=22|./src/hardcopyiv_hssi_atoms.v|1546|1*21642
+B/hardcopyiv_hssi_pma_c_lockdet_tx18=3*175392
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=460,715,970,1084
+R=./src/hardcopyiv_hssi_atoms.v|1546
+
+[hardcopyiv_hssi_pma_c_pcie_sw]
+A/hardcopyiv_hssi_pma_c_pcie_sw=22|./src/hardcopyiv_hssi_atoms.v|3797|1*8247
+B/hardcopyiv_hssi_pma_c_pcie_sw=3*70865
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1004,1598,2361,2726
+R=./src/hardcopyiv_hssi_atoms.v|3797
+
+[hardcopyiv_hssi_pma_c_pfd]
+A/hardcopyiv_hssi_pma_c_pfd=22|./src/hardcopyiv_hssi_atoms.v|1576|1*22477
+B/hardcopyiv_hssi_pma_c_pfd=3*176830
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=348,555,738,836
+R=./src/hardcopyiv_hssi_atoms.v|1576
+
+[hardcopyiv_hssi_pma_c_rcv_det_digital]
+A/hardcopyiv_hssi_pma_c_rcv_det_digital=22|./src/hardcopyiv_hssi_atoms.v|2543|1*36279
+B/hardcopyiv_hssi_pma_c_rcv_det_digital=3*313754
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=513,833,1004,1154
+R=./src/hardcopyiv_hssi_atoms.v|2543
+
+[hardcopyiv_hssi_pma_c_rcv_detect]
+A/hardcopyiv_hssi_pma_c_rcv_detect=22|./src/hardcopyiv_hssi_atoms.v|2562|1*37037
+B/hardcopyiv_hssi_pma_c_rcv_detect=3*313934
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=641,1055,1344,1589
+R=./src/hardcopyiv_hssi_atoms.v|2562
+
+[hardcopyiv_hssi_pma_c_rcv_detect_clk_gen]
+A/hardcopyiv_hssi_pma_c_rcv_detect_clk_gen=22|./src/hardcopyiv_hssi_atoms.v|2407|1*32986
+B/hardcopyiv_hssi_pma_c_rcv_detect_clk_gen=3*300007
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=228,470,637,828
+R=./src/hardcopyiv_hssi_atoms.v|2407
+
+[hardcopyiv_hssi_pma_c_rcv_detect_control]
+A/hardcopyiv_hssi_pma_c_rcv_detect_control=22|./src/hardcopyiv_hssi_atoms.v|2532|1*35518
+B/hardcopyiv_hssi_pma_c_rcv_detect_control=3*313571
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=513,821,989,1145
+R=./src/hardcopyiv_hssi_atoms.v|2532
+
+[hardcopyiv_hssi_pma_c_rcv_detect_div_by_2]
+A/hardcopyiv_hssi_pma_c_rcv_detect_div_by_2=22|./src/hardcopyiv_hssi_atoms.v|2386|1*32208
+B/hardcopyiv_hssi_pma_c_rcv_detect_div_by_2=3*298550
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=229,434,594,677
+R=./src/hardcopyiv_hssi_atoms.v|2386
+
+[hardcopyiv_hssi_pma_c_rcv_detect_fsm]
+A/hardcopyiv_hssi_pma_c_rcv_detect_fsm=22|./src/hardcopyiv_hssi_atoms.v|2446|1*34377
+B/hardcopyiv_hssi_pma_c_rcv_detect_fsm=3*301082
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=619,994,1321,1466
+R=./src/hardcopyiv_hssi_atoms.v|2446
+
+[hardcopyiv_hssi_pma_c_rcv_detect_sync]
+A/hardcopyiv_hssi_pma_c_rcv_detect_sync=22|./src/hardcopyiv_hssi_atoms.v|2423|1*33683
+B/hardcopyiv_hssi_pma_c_rcv_detect_sync=3*300190
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=268,473,623,738
+R=./src/hardcopyiv_hssi_atoms.v|2423
+
+[hardcopyiv_hssi_pma_c_rlpbk_ctrl]
+A/hardcopyiv_hssi_pma_c_rlpbk_ctrl=22|./src/hardcopyiv_hssi_atoms.v|1588|1*23175
+B/hardcopyiv_hssi_pma_c_rlpbk_ctrl=3*177846
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=345,566,727,826
+R=./src/hardcopyiv_hssi_atoms.v|1588
+
+[hardcopyiv_hssi_pma_c_rlpbk_mux]
+A/hardcopyiv_hssi_pma_c_rlpbk_mux=22|./src/hardcopyiv_hssi_atoms.v|1612|1*23848
+B/hardcopyiv_hssi_pma_c_rlpbk_mux=3*178493
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=797,1067,1427,1580
+R=./src/hardcopyiv_hssi_atoms.v|1612
+
+[hardcopyiv_hssi_pma_c_rx]
+A/hardcopyiv_hssi_pma_c_rx=22|./src/hardcopyiv_hssi_atoms.v|1655|1*24712
+B/hardcopyiv_hssi_pma_c_rx=3*181520
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2758,3861,5458,5886
+R=./src/hardcopyiv_hssi_atoms.v|1655
+
+[hardcopyiv_hssi_pma_c_sdl_en_2x]
+A/hardcopyiv_hssi_pma_c_sdl_en_2x=22|./src/hardcopyiv_hssi_atoms.v|2352|1*31520
+B/hardcopyiv_hssi_pma_c_sdl_en_2x=3*297664
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=346,558,746,884
+R=./src/hardcopyiv_hssi_atoms.v|2352
+
+[hardcopyiv_hssi_pma_c_ser]
+A/hardcopyiv_hssi_pma_c_ser=22|./src/hardcopyiv_hssi_atoms.v|2014|1*28708
+B/hardcopyiv_hssi_pma_c_ser=3*224770
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1270,2082,3373,3976
+R=./src/hardcopyiv_hssi_atoms.v|2014
+
+[hardcopyiv_hssi_pma_c_ser_10g]
+A/hardcopyiv_hssi_pma_c_ser_10g=22|./src/hardcopyiv_hssi_atoms.v|3228|1*42599
+B/hardcopyiv_hssi_pma_c_ser_10g=3*362409
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=933,1648,2684,3032
+R=./src/hardcopyiv_hssi_atoms.v|3228
+
+[hardcopyiv_hssi_pma_c_ser_20to10]
+A/hardcopyiv_hssi_pma_c_ser_20to10=22|./src/hardcopyiv_hssi_atoms.v|1927|1*27427
+B/hardcopyiv_hssi_pma_c_ser_20to10=3*213657
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=614,1037,1513,1769
+R=./src/hardcopyiv_hssi_atoms.v|1927
+
+[hardcopyiv_hssi_pma_c_tx]
+A/hardcopyiv_hssi_pma_c_tx=22|./src/hardcopyiv_hssi_atoms.v|2604|1*37998
+B/hardcopyiv_hssi_pma_c_tx=3*315154
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2682,4263,6157,6957
+R=./src/hardcopyiv_hssi_atoms.v|2604
+
+[hardcopyiv_hssi_pma_c_tx_clkmux_cmu]
+A/hardcopyiv_hssi_pma_c_tx_clkmux_cmu=22|./src/hardcopyiv_hssi_atoms.v|827|1*12026
+B/hardcopyiv_hssi_pma_c_tx_clkmux_cmu=3*81984
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1603,2219,3152,3508
+R=./src/hardcopyiv_hssi_atoms.v|827
+
+[hardcopyiv_hssi_pma_ppmdetect]
+A/hardcopyiv_hssi_pma_ppmdetect=22|./src/hardcopyiv_hssi_atoms.v|2918|1*40905
+B/hardcopyiv_hssi_pma_ppmdetect=3*342947
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=552,1215,2012,2312
+R=./src/hardcopyiv_hssi_atoms.v|2918
+
+[hardcopyiv_hssi_q_pipe_interface_top]
+A/hardcopyiv_hssi_q_pipe_interface_top=22|./src/hardcopyiv_hssi_atoms.v|11097|1*148456
+B/hardcopyiv_hssi_q_pipe_interface_top=3*1498098
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2998,4034,5433,6854
+R=./src/hardcopyiv_hssi_atoms.v|11097
+
+[hardcopyiv_hssi_rcv_sm]
+A/hardcopyiv_hssi_rcv_sm=22|./src/hardcopyiv_hssi_atoms.v|65207|1*721172
+B/hardcopyiv_hssi_rcv_sm=3*9135639
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=868,6180,21395,29268
+R=./src/hardcopyiv_hssi_atoms.v|65207
+
+[hardcopyiv_hssi_refclk_divider]
+A/hardcopyiv_hssi_refclk_divider=22|./src/hardcopyiv_hssi_atoms.v|86888|1*915571
+B/hardcopyiv_hssi_refclk_divider=3*11692602
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hssi_refclk_divider=4*5832
+P/~emb=516,963,1350,1550
+R=./src/hardcopyiv_hssi_atoms.v|86888
+
+[hardcopyiv_hssi_rx_digi]
+A/hardcopyiv_hssi_rx_digi=22|./src/hardcopyiv_hssi_atoms.v|56239|1*629647
+B/hardcopyiv_hssi_rx_digi=3*8143561
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=15130,19821,24200,31860
+R=./src/hardcopyiv_hssi_atoms.v|56239
+
+[hardcopyiv_hssi_rx_digi_auto_speed_neg]
+A/hardcopyiv_hssi_rx_digi_auto_speed_neg=22|./src/hardcopyiv_hssi_atoms.v|25360|1*286826
+B/hardcopyiv_hssi_rx_digi_auto_speed_neg=3*3088775
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1281,2788,7033,8387
+R=./src/hardcopyiv_hssi_atoms.v|25360
+
+[hardcopyiv_hssi_rx_digi_bist_ver]
+A/hardcopyiv_hssi_rx_digi_bist_ver=22|./src/hardcopyiv_hssi_atoms.v|26106|1*295123
+B/hardcopyiv_hssi_rx_digi_bist_ver=3*3186906
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1039,6422,24497,35837
+R=./src/hardcopyiv_hssi_atoms.v|26106
+
+[hardcopyiv_hssi_rx_digi_cdr_ctrl]
+A/hardcopyiv_hssi_rx_digi_cdr_ctrl=22|./src/hardcopyiv_hssi_atoms.v|29063|1*334054
+B/hardcopyiv_hssi_rx_digi_cdr_ctrl=3*3675964
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=996,2642,7100,9006
+R=./src/hardcopyiv_hssi_atoms.v|29063
+
+[hardcopyiv_hssi_rx_digi_comp_chnl_top]
+A/hardcopyiv_hssi_rx_digi_comp_chnl_top=22|./src/hardcopyiv_hssi_atoms.v|29997|1*343577
+B/hardcopyiv_hssi_rx_digi_comp_chnl_top=3*3793278
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3727,14510,51231,63071
+R=./src/hardcopyiv_hssi_atoms.v|29997
+
+[hardcopyiv_hssi_rx_digi_dec_chnl_top]
+A/hardcopyiv_hssi_rx_digi_dec_chnl_top=22|./src/hardcopyiv_hssi_atoms.v|37915|1*419795
+B/hardcopyiv_hssi_rx_digi_dec_chnl_top=3*4914154
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1109,3509,15667,16535
+R=./src/hardcopyiv_hssi_atoms.v|37915
+
+[hardcopyiv_hssi_rx_digi_dskw_fifo]
+A/hardcopyiv_hssi_rx_digi_dskw_fifo=22|./src/hardcopyiv_hssi_atoms.v|39149|1*433658
+B/hardcopyiv_hssi_rx_digi_dskw_fifo=3*5131200
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=758,2820,8276,10315
+R=./src/hardcopyiv_hssi_atoms.v|39149
+
+[hardcopyiv_hssi_rx_digi_eii_module]
+A/hardcopyiv_hssi_rx_digi_eii_module=22|./src/hardcopyiv_hssi_atoms.v|42118|1*462368
+B/hardcopyiv_hssi_rx_digi_eii_module=3*5490392
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1120,4031,13988,16749
+R=./src/hardcopyiv_hssi_atoms.v|42118
+
+[hardcopyiv_hssi_rx_digi_freqdet]
+A/hardcopyiv_hssi_rx_digi_freqdet=22|./src/hardcopyiv_hssi_atoms.v|40323|1*445566
+B/hardcopyiv_hssi_rx_digi_freqdet=3*5294971
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=918,3651,11027,15489
+R=./src/hardcopyiv_hssi_atoms.v|40323
+
+[hardcopyiv_hssi_rx_digi_iq_pipe_rx]
+A/hardcopyiv_hssi_rx_digi_iq_pipe_rx=22|./src/hardcopyiv_hssi_atoms.v|44247|1*483827
+B/hardcopyiv_hssi_rx_digi_iq_pipe_rx=3*5813164
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2272,3115,4970,5444
+R=./src/hardcopyiv_hssi_atoms.v|44247
+
+[hardcopyiv_hssi_rx_digi_pcs_channel_testbus]
+A/hardcopyiv_hssi_rx_digi_pcs_channel_testbus=22|./src/hardcopyiv_hssi_atoms.v|43810|1*478261
+B/hardcopyiv_hssi_rx_digi_pcs_channel_testbus=3*5727864
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=881,1909,5924,6088
+R=./src/hardcopyiv_hssi_atoms.v|43810
+
+[hardcopyiv_hssi_rx_digi_prbs_ver]
+A/hardcopyiv_hssi_rx_digi_prbs_ver=22|./src/hardcopyiv_hssi_atoms.v|44618|1*487048
+B/hardcopyiv_hssi_rx_digi_prbs_ver=3*5844571
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=980,4730,18414,24594
+R=./src/hardcopyiv_hssi_atoms.v|44618
+
+[hardcopyiv_hssi_rx_digi_rx_ctrl]
+A/hardcopyiv_hssi_rx_digi_rx_ctrl=22|./src/hardcopyiv_hssi_atoms.v|36285|1*412673
+B/hardcopyiv_hssi_rx_digi_rx_ctrl=3*4771441
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=5091,7634,11701,13201
+R=./src/hardcopyiv_hssi_atoms.v|36285
+
+[hardcopyiv_hssi_rx_digi_rxclk_ctl]
+A/hardcopyiv_hssi_rx_digi_rxclk_ctl=22|./src/hardcopyiv_hssi_atoms.v|25069|1*284584
+B/hardcopyiv_hssi_rx_digi_rxclk_ctl=3*3069781
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1960,2768,4114,4558
+R=./src/hardcopyiv_hssi_atoms.v|25069
+
+[hardcopyiv_hssi_rx_digi_wordalign]
+A/hardcopyiv_hssi_rx_digi_wordalign=22|./src/hardcopyiv_hssi_atoms.v|46727|1*514347
+B/hardcopyiv_hssi_rx_digi_wordalign=3*6177053
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2869,18960,117178,138828
+R=./src/hardcopyiv_hssi_atoms.v|46727
+
+[hardcopyiv_hssi_rx_digis_ph_fifo]
+A/hardcopyiv_hssi_rx_digis_ph_fifo=22|./src/hardcopyiv_hssi_atoms.v|23941|1*276928
+B/hardcopyiv_hssi_rx_digis_ph_fifo=3*2819531
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1297,2082,3115,3626
+R=./src/hardcopyiv_hssi_atoms.v|23941
+
+[hardcopyiv_hssi_rx_digis_ram16x14_syn]
+A/hardcopyiv_hssi_rx_digis_ram16x14_syn=22|./src/hardcopyiv_hssi_atoms.v|24336|1*280214
+B/hardcopyiv_hssi_rx_digis_ram16x14_syn=3*2883913
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=600,1271,2129,2330
+R=./src/hardcopyiv_hssi_atoms.v|24336
+
+[hardcopyiv_hssi_rx_digis_ram20x16_syn]
+A/hardcopyiv_hssi_rx_digis_ram20x16_syn=22|./src/hardcopyiv_hssi_atoms.v|24589|1*281980
+B/hardcopyiv_hssi_rx_digis_ram20x16_syn=3*2979851
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=542,1307,2279,2470
+R=./src/hardcopyiv_hssi_atoms.v|24589
+
+[hardcopyiv_hssi_rx_digis_ram8x70_syn]
+A/hardcopyiv_hssi_rx_digis_ram8x70_syn=22|./src/hardcopyiv_hssi_atoms.v|24898|1*278801
+B/hardcopyiv_hssi_rx_digis_ram8x70_syn=3*2846856
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=441,940,1553,1730
+R=./src/hardcopyiv_hssi_atoms.v|24898
+
+[hardcopyiv_hssi_rx_digis_rxclk_gating]
+A/hardcopyiv_hssi_rx_digis_rxclk_gating=22|./src/hardcopyiv_hssi_atoms.v|25047|1*283890
+B/hardcopyiv_hssi_rx_digis_rxclk_gating=3*3068777
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=305,514,702,814
+R=./src/hardcopyiv_hssi_atoms.v|25047
+
+[hardcopyiv_hssi_rx_pcs]
+A/hardcopyiv_hssi_rx_pcs=22|./src/hardcopyiv_hssi_atoms.v|58015|1*639273
+B/hardcopyiv_hssi_rx_pcs=3*8146232
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hssi_rx_pcs=4*2095
+P/~emb=14090,30741,55414,60865
+R=./src/hardcopyiv_hssi_atoms.v|58015
+
+[hardcopyiv_hssi_rx_pipe_interface]
+A/hardcopyiv_hssi_rx_pipe_interface=22|./src/hardcopyiv_hssi_atoms.v|9865|1*133808
+B/hardcopyiv_hssi_rx_pipe_interface=3*1339453
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1116,3073,8149,10507
+R=./src/hardcopyiv_hssi_atoms.v|9865
+
+[hardcopyiv_hssi_rx_pma]
+A/hardcopyiv_hssi_rx_pma=22|./src/hardcopyiv_hssi_atoms.v|6873|1*74560
+B/hardcopyiv_hssi_rx_pma=3*776346
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hssi_rx_pma=4*414
+P/~emb=3272,8895,17540,20335
+R=./src/hardcopyiv_hssi_atoms.v|6873
+
+[hardcopyiv_hssi_tx_digi]
+A/hardcopyiv_hssi_tx_digi=22|./src/hardcopyiv_hssi_atoms.v|21515|1*251469
+B/hardcopyiv_hssi_tx_digi=3*2560204
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6885,9268,11192,14652
+R=./src/hardcopyiv_hssi_atoms.v|21515
+
+[hardcopyiv_hssi_tx_digi_bist_gen]
+A/hardcopyiv_hssi_tx_digi_bist_gen=22|./src/hardcopyiv_hssi_atoms.v|13175|1*161933
+B/hardcopyiv_hssi_tx_digi_bist_gen=3*1638867
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=593,5695,22037,33018
+R=./src/hardcopyiv_hssi_atoms.v|13175
+
+[hardcopyiv_hssi_tx_digi_enc_chnl_top]
+A/hardcopyiv_hssi_tx_digi_enc_chnl_top=22|./src/hardcopyiv_hssi_atoms.v|18125|1*218723
+B/hardcopyiv_hssi_tx_digi_enc_chnl_top=3*2265723
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1849,6104,20073,32960
+R=./src/hardcopyiv_hssi_atoms.v|18125
+
+[hardcopyiv_hssi_tx_digi_iq_pipe_tx]
+A/hardcopyiv_hssi_tx_digi_iq_pipe_tx=22|./src/hardcopyiv_hssi_atoms.v|21262|1*249050
+B/hardcopyiv_hssi_tx_digi_iq_pipe_tx=3*2538249
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1730,2423,3770,4164
+R=./src/hardcopyiv_hssi_atoms.v|21262
+
+[hardcopyiv_hssi_tx_digi_prbs_gen]
+A/hardcopyiv_hssi_tx_digi_prbs_gen=22|./src/hardcopyiv_hssi_atoms.v|16478|1*198752
+B/hardcopyiv_hssi_tx_digi_prbs_gen=3*2061521
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=561,3240,11688,17219
+R=./src/hardcopyiv_hssi_atoms.v|16478
+
+[hardcopyiv_hssi_tx_digi_tx_ctrl]
+A/hardcopyiv_hssi_tx_digi_tx_ctrl=22|./src/hardcopyiv_hssi_atoms.v|12424|1*157051
+B/hardcopyiv_hssi_tx_digi_tx_ctrl=3*1592203
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4488,6240,9570,10617
+R=./src/hardcopyiv_hssi_atoms.v|12424
+
+[hardcopyiv_hssi_tx_digi_txclk_ctl]
+A/hardcopyiv_hssi_tx_digi_txclk_ctl=22|./src/hardcopyiv_hssi_atoms.v|11690|1*151827
+B/hardcopyiv_hssi_tx_digi_txclk_ctl=3*1515591
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1499,2208,3173,3551
+R=./src/hardcopyiv_hssi_atoms.v|11690
+
+[hardcopyiv_hssi_tx_digis_ph_fifo]
+A/hardcopyiv_hssi_tx_digis_ph_fifo=22|./src/hardcopyiv_hssi_atoms.v|12043|1*155226
+B/hardcopyiv_hssi_tx_digis_ph_fifo=3*1564662
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1156,1916,2909,3396
+R=./src/hardcopyiv_hssi_atoms.v|12043
+
+[hardcopyiv_hssi_tx_digis_ram8x49_syn]
+A/hardcopyiv_hssi_tx_digis_ram8x49_syn=22|./src/hardcopyiv_hssi_atoms.v|11896|1*153813
+B/hardcopyiv_hssi_tx_digis_ram8x49_syn=3*1527617
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=441,922,1532,1710
+R=./src/hardcopyiv_hssi_atoms.v|11896
+
+[hardcopyiv_hssi_tx_digis_txclk_gating]
+A/hardcopyiv_hssi_tx_digis_txclk_gating=22|./src/hardcopyiv_hssi_atoms.v|11663|1*151133
+B/hardcopyiv_hssi_tx_digis_txclk_gating=3*1514587
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=305,514,702,814
+R=./src/hardcopyiv_hssi_atoms.v|11663
+
+[hardcopyiv_hssi_tx_pcs]
+A/hardcopyiv_hssi_tx_pcs=22|./src/hardcopyiv_hssi_atoms.v|22182|1*256151
+B/hardcopyiv_hssi_tx_pcs=3*2563175
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hssi_tx_pcs=4*663
+P/~emb=7649,14987,25686,28544
+R=./src/hardcopyiv_hssi_atoms.v|22182
+
+[hardcopyiv_hssi_tx_pipe_interface]
+A/hardcopyiv_hssi_tx_pipe_interface=22|./src/hardcopyiv_hssi_atoms.v|10688|1*144196
+B/hardcopyiv_hssi_tx_pipe_interface=3*1452732
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1225,2106,4165,4851
+R=./src/hardcopyiv_hssi_atoms.v|10688
+
+[hardcopyiv_hssi_tx_pma]
+A/hardcopyiv_hssi_tx_pma=22|./src/hardcopyiv_hssi_atoms.v|5621|1*63095
+B/hardcopyiv_hssi_tx_pma=3*660682
+C=8.2.1986.SP1.35.3497  (Windows)
+D/hardcopyiv_hssi_tx_pma=4*170
+P/~emb=3457,7519,13460,15525
+R=./src/hardcopyiv_hssi_atoms.v|5621
+
+[hardcopyiv_hssi_tx_sm]
+A/hardcopyiv_hssi_tx_sm=22|./src/hardcopyiv_hssi_atoms.v|63012|1*696604
+B/hardcopyiv_hssi_tx_sm=3*8833384
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=685,4410,16870,23586
+R=./src/hardcopyiv_hssi_atoms.v|63012
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, HARDCOPYIV_HSSI VERILOG LIBRARY.
+LastVerilogToplevel=hardcopyiv_hssi_refclk_divider
+ModifyID=843
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/hardcopyiv_hssi_atoms.v=0*1042466*1805336
+
+[~MFT]
+0=118|0ovi_hardcopyiv_hssi.mgf|1805336|0
+1=116|1ovi_hardcopyiv_hssi.mgf|915571|0
+3=116|3ovi_hardcopyiv_hssi.mgf|11692602|0
+4=6|4ovi_hardcopyiv_hssi.mgf|5832|0
+
+[~U]
+$root=12|0*0|
+hardcopyiv_hssi_aux_clock_div=12|0*1046||0x80
+hardcopyiv_hssi_aux_clock_mult=12|0*2324||0x80
+hardcopyiv_hssi_calibration_block=12|0*1040369||0x90
+hardcopyiv_hssi_clock_divider=12|0*64379||0x90
+hardcopyiv_hssi_cmu=12|0*1016155||0x90
+hardcopyiv_hssi_cmu_auto_speed_neg=12|0*858543||0x80
+hardcopyiv_hssi_cmu_chnl_reset=12|0*854321||0x80
+hardcopyiv_hssi_cmu_clk_ctl=12|0*862481||0x80
+hardcopyiv_hssi_cmu_clk_gating=12|0*861906||0x80
+hardcopyiv_hssi_cmu_dprio_16bit=12|0*876739||0x80
+hardcopyiv_hssi_cmu_dprio_16bit_pma=12|0*878707||0x80
+hardcopyiv_hssi_cmu_dprio_addr=12|0*910813||0x80
+hardcopyiv_hssi_cmu_dprio_bit=12|0*874867||0x80
+hardcopyiv_hssi_cmu_dprio_bit_pma=12|0*875777||0x80
+hardcopyiv_hssi_cmu_dprio_centrl_bus_out_mux=12|0*931905||0x80
+hardcopyiv_hssi_cmu_dprio_centrl_top=12|0*934398||0x80
+hardcopyiv_hssi_cmu_dprio_chnl_bus_out_mux=12|0*887900||0x80
+hardcopyiv_hssi_cmu_dprio_chnl_top=12|0*890727||0x80
+hardcopyiv_hssi_cmu_dprio_cnt=12|0*914780||0x80
+hardcopyiv_hssi_cmu_dprio_ctl_data=12|0*917434||0x80
+hardcopyiv_hssi_cmu_dprio_map=12|0*969067||0x80
+hardcopyiv_hssi_cmu_dprio_map_index=12|0*948165||0x80
+hardcopyiv_hssi_cmu_dprio_reg_centrl=12|0*925290||0x80
+hardcopyiv_hssi_cmu_dprio_reg_chnl=12|0*880775||0x80
+hardcopyiv_hssi_cmu_dprio_sm=12|0*922749||0x80
+hardcopyiv_hssi_cmu_dprio_status=12|0*907612||0x80
+hardcopyiv_hssi_cmu_dprio_top=12|0*1009691||0x80
+hardcopyiv_hssi_cmu_quad_reset=12|0*856208||0x80
+hardcopyiv_hssi_cmu_rx_ctrl=12|0*864205||0x80
+hardcopyiv_hssi_cmu_rxclk_ctl=12|0*866714||0x80
+hardcopyiv_hssi_cmu_rxclk_gating=12|0*866121||0x80
+hardcopyiv_hssi_cmu_tx_ctrl=12|0*869864||0x80
+hardcopyiv_hssi_cmu_txclk_ctl=12|0*872373||0x80
+hardcopyiv_hssi_cmu_txclk_gating=12|0*871780||0x80
+hardcopyiv_hssi_digi_chnl_hip_spt=12|0*165960||0x80
+hardcopyiv_hssi_dskw_sm=12|0*793672||0x80
+hardcopyiv_hssi_pcs_reset=12|0*164990||0x80
+hardcopyiv_hssi_phystatus_generator=12|0*170882||0x80
+hardcopyiv_hssi_phystatus_generator_fsm=12|0*168218||0x80
+hardcopyiv_hssi_pll=12|0*70713||0x90
+hardcopyiv_hssi_pma_c_adce=12|0*117233||0x80
+hardcopyiv_hssi_pma_c_clkgenbuf=12|0*8951||0x80
+hardcopyiv_hssi_pma_c_clkgenbuf_cmu=12|0*13557||0x80
+hardcopyiv_hssi_pma_c_clkgenbuf_tx10g=12|0*63525||0x80
+hardcopyiv_hssi_pma_c_clkgendrv=12|0*7415||0x80
+hardcopyiv_hssi_pma_c_clkgendrv_tx10g=12|0*62671||0x80
+hardcopyiv_hssi_pma_c_controller_4t16=12|0*5921||0x80
+hardcopyiv_hssi_pma_c_d2a_mbpass=12|0*15369||0x90
+hardcopyiv_hssi_pma_c_deser=12|0*23115||0x80
+hardcopyiv_hssi_pma_c_deser_10g=12|0*60031||0x80
+hardcopyiv_hssi_pma_c_deser_10to20=12|0*19903||0x80
+hardcopyiv_hssi_pma_c_deser_ff_chain=12|0*21266||0x80
+hardcopyiv_hssi_pma_c_deser_fsd_rst=12|0*22503||0x80
+hardcopyiv_hssi_pma_c_deser_pcie=12|0*18798||0x80
+hardcopyiv_hssi_pma_c_div4or5_mcnt=12|0*27303||0x90
+hardcopyiv_hssi_pma_c_divby2q=12|0*5043||0x80
+hardcopyiv_hssi_pma_c_lockdet_tx18=12|0*28298||0x90
+hardcopyiv_hssi_pma_c_pcie_sw=12|0*11431||0x80
+hardcopyiv_hssi_pma_c_pfd=12|0*29085||0x90
+hardcopyiv_hssi_pma_c_rcv_det_digital=12|0*45939||0x80
+hardcopyiv_hssi_pma_c_rcv_detect=12|0*46697||0x80
+hardcopyiv_hssi_pma_c_rcv_detect_clk_gen=12|0*42502||0x80
+hardcopyiv_hssi_pma_c_rcv_detect_control=12|0*45178||0x80
+hardcopyiv_hssi_pma_c_rcv_detect_div_by_2=12|0*41884||0x80
+hardcopyiv_hssi_pma_c_rcv_detect_fsm=12|0*43797||0x80
+hardcopyiv_hssi_pma_c_rcv_detect_sync=12|0*43183||0x80
+hardcopyiv_hssi_pma_c_rlpbk_ctrl=12|0*29687||0x90
+hardcopyiv_hssi_pma_c_rlpbk_mux=12|0*30264||0x80
+hardcopyiv_hssi_pma_c_rx=12|0*31160||0x80
+hardcopyiv_hssi_pma_c_sdl_en_2x=12|0*41212||0x90
+hardcopyiv_hssi_pma_c_ser=12|0*36962||0x80
+hardcopyiv_hssi_pma_c_ser_10g=12|0*56161||0x80
+hardcopyiv_hssi_pma_c_ser_20to10=12|0*35409||0x80
+hardcopyiv_hssi_pma_c_tx=12|0*47770||0x80
+hardcopyiv_hssi_pma_c_tx_clkmux_cmu=12|0*16170||0x80
+hardcopyiv_hssi_pma_ppmdetect=12|0*53075||0x80
+hardcopyiv_hssi_q_pipe_interface_top=12|0*189514||0x80
+hardcopyiv_hssi_rcv_sm=12|0*825368||0x80
+hardcopyiv_hssi_refclk_divider=12|0*1041219||0x90
+hardcopyiv_hssi_rx_digi=12|0*724053||0x80
+hardcopyiv_hssi_rx_digi_auto_speed_neg=12|0*341672||0x80
+hardcopyiv_hssi_rx_digi_bist_ver=12|0*350143||0x80
+hardcopyiv_hssi_rx_digi_cdr_ctrl=12|0*386418||0x80
+hardcopyiv_hssi_rx_digi_comp_chnl_top=12|0*395971||0x80
+hardcopyiv_hssi_rx_digi_dec_chnl_top=12|0*480701||0x80
+hardcopyiv_hssi_rx_digi_dskw_fifo=12|0*502612||0x80
+hardcopyiv_hssi_rx_digi_eii_module=12|0*531386||0x80
+hardcopyiv_hssi_rx_digi_freqdet=12|0*514232||0x80
+hardcopyiv_hssi_rx_digi_iq_pipe_rx=12|0*558395||0x80
+hardcopyiv_hssi_rx_digi_pcs_channel_testbus=12|0*552943||0x80
+hardcopyiv_hssi_rx_digi_prbs_ver=12|0*562526||0x80
+hardcopyiv_hssi_rx_digi_rx_ctrl=12|0*464475||0x80
+hardcopyiv_hssi_rx_digi_rxclk_ctl=12|0*338486||0x80
+hardcopyiv_hssi_rx_digi_wordalign=12|0*591345||0x80
+hardcopyiv_hssi_rx_digis_ph_fifo=12|0*326446||0x80
+hardcopyiv_hssi_rx_digis_ram16x14_syn=12|0*332052||0x80
+hardcopyiv_hssi_rx_digis_ram20x16_syn=12|0*334826||0x80
+hardcopyiv_hssi_rx_digis_ram8x70_syn=12|0*330127||0x80
+hardcopyiv_hssi_rx_digis_rxclk_gating=12|0*337888||0x80
+hardcopyiv_hssi_rx_pcs=12|0*738991||0x90
+hardcopyiv_hssi_rx_pipe_interface=12|0*175254||0x80
+hardcopyiv_hssi_rx_pma=12|0*97528||0x90
+hardcopyiv_hssi_tx_digi=12|0*295373||0x80
+hardcopyiv_hssi_tx_digi_bist_gen=12|0*210237||0x80
+hardcopyiv_hssi_tx_digi_enc_chnl_top=12|0*262915||0x80
+hardcopyiv_hssi_tx_digi_iq_pipe_tx=12|0*292170||0x80
+hardcopyiv_hssi_tx_digi_prbs_gen=12|0*244000||0x80
+hardcopyiv_hssi_tx_digi_tx_ctrl=12|0*202077||0x80
+hardcopyiv_hssi_tx_digi_txclk_ctl=12|0*194069||0x80
+hardcopyiv_hssi_tx_digis_ph_fifo=12|0*198524||0x80
+hardcopyiv_hssi_tx_digis_ram8x49_syn=12|0*196583||0x80
+hardcopyiv_hssi_tx_digis_txclk_gating=12|0*193471||0x80
+hardcopyiv_hssi_tx_pcs=12|0*302437||0x90
+hardcopyiv_hssi_tx_pipe_interface=12|0*184792||0x80
+hardcopyiv_hssi_tx_pma=12|0*83695||0x90
+hardcopyiv_hssi_tx_sm=12|0*799408||0x80
+

@@ -1,0 +1,64 @@
+;...............................................................................
+;Constraints File
+;   NBP Device    : NBP6 Altera Stratix EP1S10F780C7
+;   NB1 Extension : Burch B5-Compact-Flash
+;   Project       : Any
+;
+;   Created 13-January-2005
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB  | TargetId=Burch B5-Compact-Flash
+;...............................................................................
+
+;...............................................................................
+; Burch Style 20-Pin Headers
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=RESET                | FPGA_PINNUM=AE5
+Record=Constraint | TargetKind=Port | TargetId=IORDY                | FPGA_PINNUM=AE6
+Record=Constraint | TargetKind=Port | TargetId=DASP                 | FPGA_PINNUM=AF6
+Record=Constraint | TargetKind=Port | TargetId=PDIAG                | FPGA_PINNUM=AF5
+Record=Constraint | TargetKind=Port | TargetId=IOCS16               | FPGA_PINNUM=AF8
+Record=Constraint | TargetKind=Port | TargetId=CS0                  | FPGA_PINNUM=AE18
+Record=Constraint | TargetKind=Port | TargetId=CardPresent          | FPGA_PINNUM=AE21
+Record=Constraint | TargetKind=Port | TargetId=CS1                  | FPGA_PINNUM=AF24
+Record=Constraint | TargetKind=Port | TargetId=IORD                 | FPGA_PINNUM=AE23
+Record=Constraint | TargetKind=Port | TargetId=IOWR                 | FPGA_PINNUM=U23
+Record=Constraint | TargetKind=Port | TargetId=INTRQ                | FPGA_PINNUM=V23
+Record=Constraint | TargetKind=Port | TargetId=D[15..0]             | FPGA_PINNUM=AE24,AD23,AF23,AF22,AE22,AE8,AE7,AD6,AF19,AD21,AE20,AF20,AF21,AE10,AE9,AF9
+Record=Constraint | TargetKind=Port | TargetId=A[2..0]              | FPGA_PINNUM=AD15,AF10,AF11
+;...............................................................................
+                                                                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,825 @@
+timestamp=1265381395568
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[and12]
+A/and12=22|./src/vanprim.vlb|81|1*48183
+B/and12=3*219052
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=412,600,817,930
+R=./src/vanprim.vlb|81
+
+[and16]
+A/and16=22|./src/vanprim.vlb|42|1*46087
+B/and16=3*215477
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=528,728,971,1096
+R=./src/vanprim.vlb|42
+
+[and6]
+A/and6=22|./src/vanprim.vlb|55|1*46829
+B/and6=3*217154
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=242,413,586,681
+R=./src/vanprim.vlb|55
+
+[and8]
+A/and8=22|./src/vanprim.vlb|68|1*47506
+B/and8=3*218025
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=296,473,660,761
+R=./src/vanprim.vlb|68
+
+[cnt4buda]
+A/cnt4buda=22|./src/vanfunc.vlb|608|1*71400
+B/cnt4buda=3*244628
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=473,976,1675,2542
+R=./src/vanfunc.vlb|608
+
+[cnt4bul]
+A/cnt4bul=22|./src/vanfunc.vlb|1262|1*84931
+B/cnt4bul=3*261083
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=447,914,1537,2335
+R=./src/vanfunc.vlb|1262
+
+[cnt4duda]
+A/cnt4duda=22|./src/vanfunc.vlb|873|1*76815
+B/cnt4duda=3*250630
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=473,1047,1859,2891
+R=./src/vanfunc.vlb|873
+
+[cnt4dul]
+A/cnt4dul=22|./src/vanfunc.vlb|987|1*78536
+B/cnt4dul=3*250781
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=447,949,1623,2456
+R=./src/vanfunc.vlb|987
+
+[comp4mag]
+A/comp4mag=22|./src/vanfunc.vlb|1363|1*87026
+B/comp4mag=3*261382
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=479,933,1580,2298
+R=./src/vanfunc.vlb|1363
+
+[comp8eq]
+A/comp8eq=22|./src/vanfunc.vlb|42|1*61019
+B/comp8eq=3*243275
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=545,862,1240,1665
+R=./src/vanfunc.vlb|42
+
+[dec2to4]
+A/dec2to4=22|./src/vanfunc.vlb|82|1*61971
+B/dec2to4=3*243425
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=253,452,663,873
+R=./src/vanfunc.vlb|82
+
+[dec3to8]
+A/dec3to8=22|./src/vanfunc.vlb|188|1*64035
+B/dec3to8=3*243725
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=452,776,1178,1621
+R=./src/vanfunc.vlb|188
+
+[dec4t10]
+A/dec4t10=22|./src/vanfunc.vlb|1753|1*94757
+B/dec4t10=3*262427
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=448,694,962,1296
+R=./src/vanfunc.vlb|1753
+
+[dec4t10n]
+A/dec4t10n=22|./src/vanfunc.vlb|1779|1*95565
+B/dec4t10n=3*262577
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=450,698,967,1301
+R=./src/vanfunc.vlb|1779
+
+[dec4to16]
+A/dec4to16=22|./src/vanfunc.vlb|255|1*65763
+B/dec4to16=3*244025
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=688,1177,1851,2699
+R=./src/vanfunc.vlb|255
+
+[dff8ar]
+A/dff8ar=22|./src/vanfunc.vlb|1516|1*89587
+B/dff8ar=3*261683
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=552,807,1058,1405
+R=./src/vanfunc.vlb|1516
+
+[enc10to4]
+A/enc10to4=22|./src/vanfunc.vlb|342|1*67164
+B/enc10to4=3*244176
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=417,756,1187,1689
+R=./src/vanfunc.vlb|342
+
+[enc8to3]
+A/enc8to3=22|./src/vanfunc.vlb|102|1*62651
+B/enc8to3=3*243575
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=447,896,1615,2371
+R=./src/vanfunc.vlb|102
+
+[fadd1c]
+A/fadd1c=22|./src/vanfunc.vlb|1345|1*86347
+B/fadd1c=3*261233
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=189,384,583,781
+R=./src/vanfunc.vlb|1345
+
+[fadd2c]
+A/fadd2c=22|./src/vanfunc.vlb|760|1*74105
+B/fadd2c=3*250182
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=277,524,799,1089
+R=./src/vanfunc.vlb|760
+
+[fadd4c]
+A/fadd4c=22|./src/vanfunc.vlb|789|1*74912
+B/fadd4c=3*250331
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=441,784,1206,1694
+R=./src/vanfunc.vlb|789
+
+[inv8]
+A/inv8=22|./src/vanfunc.vlb|1535|1*90362
+B/inv8=3*261832
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=494,706,908,1139
+R=./src/vanfunc.vlb|1535
+
+[lat1l]
+A/lat1l=22|./src/vanprim.vlb|405|1*60229
+B/lat1l=3*242495
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=136,339,540,685
+R=./src/vanprim.vlb|405
+
+[lat8]
+A/lat8=22|./src/vanfunc.vlb|1551|1*91039
+B/lat8=3*261979
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=521,768,1006,1335
+R=./src/vanfunc.vlb|1551
+
+[lat8addr]
+A/lat8addr=22|./src/vanfunc.vlb|1092|1*80776
+B/lat8addr=3*251081
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=468,668,1335,1451
+R=./src/vanfunc.vlb|1092
+
+[mux16to1]
+A/mux16to1=22|./src/vanfunc.vlb|394|1*68229
+B/mux16to1=3*244327
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=667,1351,2372,3548
+R=./src/vanfunc.vlb|394
+
+[mux4r21]
+A/mux4r21=22|./src/vanfunc.vlb|1197|1*83219
+B/mux4r21=3*260783
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=440,753,1112,1547
+R=./src/vanfunc.vlb|1197
+
+[mux4to1]
+A/mux4to1=22|./src/vanfunc.vlb|232|1*65003
+B/mux4to1=3*243875
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=275,497,745,1002
+R=./src/vanfunc.vlb|232
+
+[mux8to1]
+A/mux8to1=22|./src/vanfunc.vlb|539|1*70208
+B/mux8to1=3*244478
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=410,812,1338,1928
+R=./src/vanfunc.vlb|539
+
+[nand12]
+A/nand12=22|./src/vanprim.vlb|160|1*50976
+B/nand12=3*224548
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=414,604,877,990
+R=./src/vanprim.vlb|160
+
+[nand16]
+A/nand16=22|./src/vanprim.vlb|94|1*48893
+B/nand16=3*220405
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=530,732,1047,1172
+R=./src/vanprim.vlb|94
+
+[nand6]
+A/nand6=22|./src/vanprim.vlb|122|1*49636
+B/nand6=3*222383
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=244,417,622,717
+R=./src/vanprim.vlb|122
+
+[nand8]
+A/nand8=22|./src/vanprim.vlb|140|1*50298
+B/nand8=3*223363
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=298,477,704,805
+R=./src/vanprim.vlb|140
+
+[nor12]
+A/nor12=22|./src/vanprim.vlb|287|1*55182
+B/nor12=3*232033
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=412,601,828,941
+R=./src/vanprim.vlb|287
+
+[nor16]
+A/nor16=22|./src/vanprim.vlb|313|1*56585
+B/nor16=3*234798
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=528,729,981,1106
+R=./src/vanprim.vlb|313
+
+[nor6]
+A/nor6=22|./src/vanprim.vlb|274|1*54505
+B/nor6=3*231054
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=242,414,596,691
+R=./src/vanprim.vlb|274
+
+[nor8]
+A/nor8=22|./src/vanprim.vlb|300|1*55908
+B/nor8=3*233614
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=296,474,670,771
+R=./src/vanprim.vlb|300
+
+[or12]
+A/or12=22|./src/vanprim.vlb|184|1*51687
+B/or12=3*226130
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=410,596,853,966
+R=./src/vanprim.vlb|184
+
+[or16]
+A/or16=22|./src/vanprim.vlb|208|1*52396
+B/or16=3*227482
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=526,724,1019,1144
+R=./src/vanprim.vlb|208
+
+[or6]
+A/or6=22|./src/vanprim.vlb|236|1*53137
+B/or6=3*229158
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=240,407,602,697
+R=./src/vanprim.vlb|236
+
+[or8]
+A/or8=22|./src/vanprim.vlb|254|1*53813
+B/or8=3*230028
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=294,467,684,785
+R=./src/vanprim.vlb|254
+
+[prty9evn]
+A/prty9evn=22|./src/vanfunc.vlb|1151|1*81729
+B/prty9evn=3*260481
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=337,577,814,1054
+R=./src/vanfunc.vlb|1151
+
+[prty9odd]
+A/prty9odd=22|./src/vanfunc.vlb|1174|1*82474
+B/prty9odd=3*260632
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=335,577,808,1043
+R=./src/vanfunc.vlb|1174
+
+[sr4pisod]
+A/sr4pisod=22|./src/vanfunc.vlb|1689|1*93548
+B/sr4pisod=3*262276
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=447,861,1371,2001
+R=./src/vanfunc.vlb|1689
+
+[sr4univ]
+A/sr4univ=22|./src/vanfunc.vlb|704|1*72929
+B/sr4univ=3*244779
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=458,778,1322,1598
+R=./src/vanfunc.vlb|704
+
+[sr5univ]
+A/sr5univ=22|./src/vanfunc.vlb|1452|1*88395
+B/sr5univ=3*261533
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=445,856,1363,1985
+R=./src/vanfunc.vlb|1452
+
+[sr8piso]
+A/sr8piso=22|./src/vanfunc.vlb|1569|1*91796
+B/sr8piso=3*262126
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=441,1033,1881,3004
+R=./src/vanfunc.vlb|1569
+
+[sr8sipo]
+A/sr8sipo=22|./src/vanfunc.vlb|840|1*75959
+B/sr8sipo=3*250480
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=367,651,958,1378
+R=./src/vanfunc.vlb|840
+
+[sr8siso]
+A/sr8siso=22|./src/vanfunc.vlb|1236|1*84171
+B/sr8siso=3*260933
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=173,403,643,928
+R=./src/vanfunc.vlb|1236
+
+[sr8univ]
+A/sr8univ=22|./src/vanfunc.vlb|1078|1*80032
+B/sr8univ=3*250931
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=670,898,1111,1504
+R=./src/vanfunc.vlb|1078
+
+[v7400]
+A/v7400=22|./src/vanttl.vlb|40|1*1014
+B/v7400=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=384,571,817,927
+R=./src/vanttl.vlb|40
+
+[v7402]
+A/v7402=22|./src/vanttl.vlb|64|1*1772
+B/v7402=3*2041
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=384,572,799,909
+R=./src/vanttl.vlb|64
+
+[v7408]
+A/v7408=22|./src/vanttl.vlb|84|1*2530
+B/v7408=3*3934
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=384,572,792,902
+R=./src/vanttl.vlb|84
+
+[v7410]
+A/v7410=22|./src/vanttl.vlb|104|1*3288
+B/v7410=3*5683
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=383,570,825,935
+R=./src/vanttl.vlb|104
+
+[v7411]
+A/v7411=22|./src/vanttl.vlb|129|1*4046
+B/v7411=3*7428
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=383,570,789,899
+R=./src/vanttl.vlb|129
+
+[v74133]
+A/v74133=22|./src/vanttl.vlb|526|1*12960
+B/v74133=3*57828
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=443,633,918,1034
+R=./src/vanttl.vlb|526
+
+[v74138]
+A/v74138=22|./src/vanttl.vlb|552|1*13687
+B/v74138=3*59506
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=450,644,1145,1261
+R=./src/vanttl.vlb|552
+
+[v74139]
+A/v74139=22|./src/vanttl.vlb|620|1*14462
+B/v74139=3*62900
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=464,661,1020,1136
+R=./src/vanttl.vlb|620
+
+[v74148]
+A/v74148=22|./src/vanttl.vlb|663|1*15253
+B/v74148=3*65218
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=445,641,1045,1161
+R=./src/vanttl.vlb|663
+
+[v74150]
+A/v74150=22|./src/vanttl.vlb|701|1*16092
+B/v74150=3*69068
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=663,879,1367,1516
+R=./src/vanttl.vlb|701
+
+[v74151]
+A/v74151=22|./src/vanttl.vlb|732|1*16883
+B/v74151=3*74814
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=436,629,1068,1184
+R=./src/vanttl.vlb|732
+
+[v74152]
+A/v74152=22|./src/vanttl.vlb|2209|1*42578
+B/v74152=3*200667
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=381,567,869,979
+R=./src/vanttl.vlb|2209
+
+[v74153]
+A/v74153=22|./src/vanttl.vlb|762|1*17642
+B/v74153=3*79660
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=442,664,1020,1136
+R=./src/vanttl.vlb|762
+
+[v74154]
+A/v74154=22|./src/vanttl.vlb|785|1*18449
+B/v74154=3*82446
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=684,902,1718,1867
+R=./src/vanttl.vlb|785
+
+[v74157]
+A/v74157=22|./src/vanttl.vlb|909|1*19336
+B/v74157=3*88504
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=438,637,925,1041
+R=./src/vanttl.vlb|909
+
+[v74158]
+A/v74158=22|./src/vanttl.vlb|932|1*20127
+B/v74158=3*91250
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=438,637,933,1049
+R=./src/vanttl.vlb|932
+
+[v74161]
+A/v74161=22|./src/vanttl.vlb|959|1*20918
+B/v74161=3*93840
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=453,786,1498,1784
+R=./src/vanttl.vlb|959
+
+[v74162]
+A/v74162=22|./src/vanttl.vlb|1995|1*38215
+B/v74162=3*181684
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=453,784,1516,1804
+R=./src/vanttl.vlb|1995
+
+[v74163]
+A/v74163=22|./src/vanttl.vlb|2315|1*44784
+B/v74163=3*208591
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=453,787,1484,1769
+R=./src/vanttl.vlb|2315
+
+[v74164]
+A/v74164=22|./src/vanttl.vlb|1032|1*22221
+B/v74164=3*100762
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=406,816,1463,1896
+R=./src/vanttl.vlb|1032
+
+[v74166]
+A/v74166=22|./src/vanttl.vlb|1125|1*23716
+B/v74166=3*105620
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=441,883,1837,2284
+R=./src/vanttl.vlb|1125
+
+[v74168]
+A/v74168=22|./src/vanttl.vlb|1236|1*25371
+B/v74168=3*113730
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=457,781,1597,1875
+R=./src/vanttl.vlb|1236
+
+[v74169]
+A/v74169=22|./src/vanttl.vlb|1311|1*26642
+B/v74169=3*122700
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=457,781,1629,1905
+R=./src/vanttl.vlb|1311
+
+[v74174]
+A/v74174=22|./src/vanttl.vlb|1388|1*27929
+B/v74174=3*131826
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=454,826,1364,1726
+R=./src/vanttl.vlb|1388
+
+[v74181]
+A/v74181=22|./src/vanttl.vlb|1461|1*29264
+B/v74181=3*135536
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=658,1246,2203,3427
+R=./src/vanttl.vlb|1461
+
+[v74182]
+A/v74182=22|./src/vanttl.vlb|1595|1*31175
+B/v74182=3*135685
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=443,638,1012,1130
+R=./src/vanttl.vlb|1595
+
+[v7420]
+A/v7420=22|./src/vanttl.vlb|147|1*4804
+B/v7420=3*9029
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=328,507,743,847
+R=./src/vanttl.vlb|147
+
+[v7421]
+A/v7421=22|./src/vanttl.vlb|169|1*5530
+B/v7421=3*10458
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=328,507,707,811
+R=./src/vanttl.vlb|169
+
+[v7427]
+A/v7427=22|./src/vanttl.vlb|185|1*6256
+B/v7427=3*11743
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=383,571,797,907
+R=./src/vanttl.vlb|185
+
+[v74273]
+A/v74273=22|./src/vanttl.vlb|1628|1*32014
+B/v74273=3*139263
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=568,996,1655,2105
+R=./src/vanttl.vlb|1628
+
+[v74280]
+A/v74280=22|./src/vanttl.vlb|1721|1*33541
+B/v74280=3*144025
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=359,589,1038,1213
+R=./src/vanttl.vlb|1721
+
+[v74283]
+A/v74283=22|./src/vanttl.vlb|1769|1*34588
+B/v74283=3*148387
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=449,686,1888,2067
+R=./src/vanttl.vlb|1769
+
+[v74298]
+A/v74298=22|./src/vanttl.vlb|2161|1*41451
+B/v74298=3*197773
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=446,763,1185,1462
+R=./src/vanttl.vlb|2161
+
+[v7430]
+A/v7430=22|./src/vanttl.vlb|203|1*7014
+B/v7430=3*13488
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=300,475,702,803
+R=./src/vanttl.vlb|203
+
+[v7432]
+A/v7432=22|./src/vanttl.vlb|224|1*7708
+B/v7432=3*14673
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=384,572,809,919
+R=./src/vanttl.vlb|224
+
+[v74352]
+A/v74352=22|./src/vanttl.vlb|2138|1*40692
+B/v74352=3*195383
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=442,638,939,1055
+R=./src/vanttl.vlb|2138
+
+[v74377]
+A/v74377=22|./src/vanttl.vlb|2229|1*43305
+B/v74377=3*203269
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=568,972,1609,2040
+R=./src/vanttl.vlb|2229
+
+[v7442]
+A/v7442=22|./src/vanttl.vlb|248|1*8466
+B/v7442=3*16422
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=444,634,1087,1203
+R=./src/vanttl.vlb|248
+
+[v7449]
+A/v7449=22|./src/vanttl.vlb|309|1*9240
+B/v7449=3*19419
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=373,558,1035,1153
+R=./src/vanttl.vlb|309
+
+[v7451]
+A/v7451=22|./src/vanttl.vlb|1969|1*37457
+B/v7451=3*179055
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=378,566,891,1005
+R=./src/vanttl.vlb|1969
+
+[v74518]
+A/v74518=22|./src/vanttl.vlb|1929|1*36634
+B/v74518=3*168984
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=543,757,1342,1470
+R=./src/vanttl.vlb|1929
+
+[v74521]
+A/v74521=22|./src/vanttl.vlb|1894|1*35859
+B/v74521=3*166118
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=549,756,1145,1273
+R=./src/vanttl.vlb|1894
+
+[v7482]
+A/v7482=22|./src/vanttl.vlb|353|1*10030
+B/v7482=3*24916
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=279,486,860,995
+R=./src/vanttl.vlb|353
+
+[v7483]
+A/v7483=22|./src/vanttl.vlb|2067|1*39534
+B/v7483=3*188486
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=447,681,1333,1512
+R=./src/vanttl.vlb|2067
+
+[v7485]
+A/v7485=22|./src/vanttl.vlb|395|1*10996
+B/v7485=3*28421
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=455,650,1794,1910
+R=./src/vanttl.vlb|395
+
+[v7486]
+A/v7486=22|./src/vanttl.vlb|488|1*11978
+B/v7486=3*55151
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=392,614,924,1099
+R=./src/vanttl.vlb|488
+
+[xnor3]
+A/xnor3=22|./src/vanprim.vlb|365|1*58729
+B/xnor3=3*240034
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=165,336,542,654
+R=./src/vanprim.vlb|365
+
+[xnor4]
+A/xnor4=22|./src/vanprim.vlb|384|1*59471
+B/xnor4=3*241030
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=192,366,605,720
+R=./src/vanprim.vlb|384
+
+[xor3]
+A/xor3=22|./src/vanprim.vlb|326|1*57327
+B/xor3=3*236775
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=163,334,536,648
+R=./src/vanprim.vlb|326
+
+[xor4]
+A/xor4=22|./src/vanprim.vlb|345|1*58068
+B/xor4=3*237770
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=188,352,610,699
+R=./src/vanprim.vlb|345
+
+[~A]
+Comment=LATTICE ispLEVER Classic 1.3, VLOG_MACRO VERILOG LIBRARY
+LastVerilogToplevel=dec4t10n
+ModifyID=808
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+src/vanttl.vlb_vanprim.vlb_vanfunc.vlb=0*102404*126756
+
+[~MFT]
+0=102|0ovi_vlog_macro.mgf|126756|0
+1=100|1ovi_vlog_macro.mgf|95565|0
+3=100|3ovi_vlog_macro.mgf|262577|0
+
+[~U]
+$root=12|0*0|
+and12=12|0*51383||0x90
+and16=12|0*49751||0x90
+and6=12|0*50365||0x90
+and8=12|0*50866||0x90
+cnt4buda=12|0*74230||0x90
+cnt4bul=12|0*89601||0x90
+cnt4duda=12|0*80413||0x90
+cnt4dul=12|0*82582||0x90
+comp4mag=12|0*91888||0x90
+comp8eq=12|0*62587||0x90
+dec2to4=12|0*63651||0x90
+dec3to8=12|0*66003||0x90
+dec4t10=12|0*100675||0x90
+dec4t10n=12|0*101531||0x90
+dec4to16=12|0*67875||0x90
+dff8ar=12|0*94929||0x90
+enc10to4=12|0*69484||0x90
+enc8to3=12|0*64315||0x90
+fadd1c=12|0*91257||0x90
+fadd2c=12|0*77463||0x90
+fadd4c=12|0*78286||0x90
+inv8=12|0*95816||0x90
+lat1l=12|0*61957||0x90
+lat8=12|0*96477||0x90
+lat8addr=12|0*85206||0x90
+mux16to1=12|0*70693||0x90
+mux4r21=12|0*87729||0x90
+mux4to1=12|0*67131||0x90
+mux8to1=12|0*72974||0x90
+nand12=12|0*53888||0x90
+nand16=12|0*51965||0x90
+nand6=12|0*52724||0x90
+nand8=12|0*53290||0x90
+nor12=12|0*57694||0x90
+nor16=12|0*58889||0x90
+nor6=12|0*57161||0x90
+nor8=12|0*58324||0x90
+or12=12|0*54567||0x90
+or16=12|0*55244||0x90
+or6=12|0*56001||0x90
+or8=12|0*56565||0x90
+prty9evn=12|0*86223||0x90
+prty9odd=12|0*86984||0x90
+sr4pisod=12|0*99226||0x90
+sr4univ=12|0*76111||0x80
+sr5univ=12|0*93497||0x90
+sr8piso=12|0*97314||0x90
+sr8sipo=12|0*79429||0x90
+sr8siso=12|0*88825||0x90
+sr8univ=12|0*84382||0x90
+v7400=12|0*726||0x90
+v7402=12|0*1388||0x90
+v7408=12|0*2034||0x90
+v7410=12|0*2664||0x90
+v7411=12|0*3342||0x90
+v74133=12|0*12208||0x90
+v74138=12|0*12919||0x90
+v74139=12|0*13870||0x90
+v74148=12|0*14709||0x90
+v74150=12|0*15580||0x90
+v74151=12|0*16659||0x90
+v74152=12|0*45938||0x90
+v74153=12|0*17546||0x90
+v74154=12|0*18417||0x90
+v74157=12|0*19672||0x90
+v74158=12|0*20415||0x90
+v74161=12|0*21174||0x90
+v74162=12|0*41127||0x90
+v74163=12|0*48240||0x90
+v74164=12|0*22717||0x90
+v74166=12|0*24244||0x90
+v74168=12|0*26203||0x90
+v74169=12|0*27922||0x90
+v74174=12|0*29641||0x90
+v74181=12|0*31008||0x90
+v74182=12|0*33415||0x90
+v7420=12|0*3972||0x90
+v7421=12|0*4618||0x90
+v7427=12|0*5200||0x90
+v74273=12|0*34270||0x90
+v74280=12|0*35845||0x90
+v74283=12|0*36844||0x90
+v74298=12|0*44779||0x90
+v7430=12|0*5846||0x90
+v7432=12|0*6460||0x90
+v74352=12|0*44004||0x90
+v74377=12|0*46681||0x90
+v7442=12|0*7122||0x90
+v7449=12|0*8024||0x90
+v7451=12|0*40385||0x90
+v74518=12|0*39306||0x90
+v74521=12|0*38483||0x90
+v7482=12|0*8974||0x90
+v7483=12|0*42750||0x90
+v7485=12|0*9860||0x90
+v7486=12|0*11370||0x90
+xnor3=12|0*60761||0x90
+xnor4=12|0*61327||0x90
+xor3=12|0*59567||0x90
+xor4=12|0*60132||0x90
+

@@ -1,0 +1,30 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ex
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+ex=.
+
+[Library]
+ex=.\ex.LIB
+
+[Files]
+/update_ex.do=-1
+/ex.vhd=-1
+
+[Files.Data]
+.\src\update_ex.do=Macro
+.\src\ex.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_emac32" description="EMAC32 Controller">
+		<sfr name="RX_CMD"      offset="0"	size="32" description="Receiver Command Register">
+			<bitfield name="RESET"	start="31" end="31" access="rw" description="Receiver Software Reset Bit">
+				<value value="0" description="Run"/>
+				<value value="1" description="Reset"/>
+			</bitfield>
+			<bitfield name="CLR_CRCERR"	start="6" end="6" access="rw" description="Clear CRC Error Counter Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="CLR_OVERFL"	start="5" end="5" access="rw" description="Clear Overflow Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="PROMISC"	start="4" end="4" access="rw" description="Promiscuous Mode Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="MULTICAST"	start="3" end="3" access="rw" description="Multicast Mode Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="BROADCAST"	start="2" end="2" access="rw" description="Broadcast Mode Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="UNICAST"	start="1" end="1" access="rw" description="Unicast Mode Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="ENABLE"	start="0" end="0" access="rw" description="Receiver Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="RX_STATUS"   offset="4"	size="32" description="Receiver Status Register">
+			<bitfield name="RESET"	start="31" end="31" access="r" description="Receiver Software Reset Flag">
+				<value value="0" description="Run"/>
+				<value value="1" description="Reset"/>
+			</bitfield>
+			<bitfield name="IOVLF"	start="18" end="18" access="rw" description="Overflow Interrupt Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ILOS"	start="17" end="17" access="rw" description="Lack-Of-Space Interrupt Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="IFO"	start="16" end="16" access="rw" description="Frame OK Interrupt Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="OVF"	start="3" end="3" access="r" description="Overflow flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="LOS"	start="2" end="2" access="r" description="Lack-Of-Space Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="BUSY"	start="1" end="1" access="r" description="Receiver Busy Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ENABLE"	start="0" end="0" access="r" description="Receiver Enable Flag">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="RX_INT"      offset="8"	size="32" description="Receiver Interrupt Register">
+			<bitfield name="EOVF"	start="2" end="2" access="rw" description="Overflow Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="ELOS"	start="1" end="1" access="rw" description="Lack-Of-Space Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="EFO"	start="0" end="0" access="rw" description="Frame OK Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="RX_CRCERR"   offset="12"	size="32" description="Receiver CRC-Error Counter Register"/>
+		<sfr name="RX_START"    offset="16"	size="32" description="Receiver Start Address Register">
+			<bitfield name="BASE"	start="31" end="20" access="rw" description="Base Address"/>
+			<bitfield name="START"	start="19" end="0" access="rw" description="Start Address"/>
+		</sfr>
+		<sfr name="RX_END"      offset="20"	size="32" description="Receiver End Address Register">
+			<bitfield name="BASE"	start="31" end="20" access="r" description="Base Address"/>
+			<bitfield name="END"	start="19" end="0" access="rw" description="End Address"/>
+		</sfr>
+		<sfr name="RX_INPUT"    offset="24"	size="32" description="Receiver Input Address Register">
+			<bitfield name="BASE"	start="31" end="20" access="r" description="Base Address"/>
+			<bitfield name="INPUT"	start="19" end="0" access="rw" description="Input Address"/>
+		</sfr>
+		<sfr name="RX_OUTPUT"   offset="28"	size="32" description="Receiver Output Address Register">
+			<bitfield name="BASE"	start="31" end="20" access="r" description="Base Address"/>
+			<bitfield name="OUTPUT"	start="19" end="0" access="rw" description="Output Address"/>
+		</sfr>
+		<sfr name="RX_MAC1"     offset="32"	size="32" description="Receiver MAC Address Register Part 1">
+			<bitfield name="MAC_7-0"	start="31" end="24" access="rw" description="MAC Address"/>
+			<bitfield name="MAC_15-8"	start="23" end="16" access="rw" description="MAC Address"/>
+			<bitfield name="MAC_23-16"	start="15" end="8"  access="rw" description="MAC Address"/>
+			<bitfield name="MAC_31-24"	start="7"  end="0"  access="rw" description="MAC Address"/>
+		</sfr>
+		<sfr name="RX_MAC2"     offset="36"	size="32" description="Receiver MAC Address Register Part 2">
+			<bitfield name="MAC_39-32"	start="15" end="8"  access="rw" description="MAC Address"/>
+			<bitfield name="MAC_47-40"	start="7"  end="0"  access="rw" description="MAC Address"/>
+		</sfr>
+		<sfr name="VERSION"     offset="60"	size="32" description="EMAC32 Core Version Register">
+			<bitfield name="ENDIANNESS"	start="31" end="31" access="rw" description="Endianness Mode Bit">
+				<value value="0" description="Big Endian"/>
+				<value value="1" description="Little Endian"/>
+			</bitfield>
+			<bitfield name="VERSION"	start="30" end="0"  access="r" description="Core Version"/>
+		</sfr>
+		<sfr name="TX_CMD"      offset="64"	size="32" description="Transmitter Command Register">
+			<bitfield name="RESET"	start="31" end="31" access="rw" description="Transmitter Software Reset Bit">
+				<value value="0" description="Run"/>
+				<value value="1" description="Reset"/>
+			</bitfield>
+			<bitfield name="FD"	start="1" end="1" access="rw" description="Full Duplex Mode Bit">
+				<value value="0" description="Half Duplex"/>
+				<value value="1" description="Full Duplex"/>
+			</bitfield>
+			<bitfield name="ENABLE"	start="0" end="0" access="rw" description="Transmitter Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="TX_STATUS"   offset="68"	size="32" description="Transmitter Status Register">
+			<bitfield name="RESET"	start="31" end="31" access="r" description="Transmitter Software Reset Flag">
+				<value value="0" description="Run"/>
+				<value value="1" description="Reset"/>
+			</bitfield>
+			<bitfield name="ILEN"	start="19" end="19" access="rw" description="Length Error Interrupt Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ICOL"	start="18" end="18" access="rw" description="Collision Error Interrupt Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="IEMP"	start="17" end="17" access="rw" description="Empty Interrupt Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="IFS"	start="16" end="16" access="rw" description="Frame Sent Interrupt Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="LEN"	start="4" end="4" access="r" description="Length Error flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="COL"	start="3" end="3" access="r" description="Collision Error flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="EMP"	start="2" end="2" access="r" description="Buffer Empty Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="BUSY"	start="1" end="1" access="r" description="Transmitter Busy Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ENABLE"	start="0" end="0" access="r" description="Transmitter Enable Flag">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="TX_INT"      offset="72"	size="32" description="Transmitter Interrupt Register">
+			<bitfield name="ELEN"	start="3" end="3" access="rw" description="Length Error Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="ECOL"	start="2" end="2" access="rw" description="Collision Error Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="EEMP"	start="1" end="1" access="rw" description="Empty Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="EFS"	start="0" end="0" access="rw" description="Frame Sent Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="TX_COLLERR"  offset="76"	size="32" description="Transmitter Collision-Error Counter Register"/>
+		<sfr name="TX_START"    offset="80"	size="32" description="Transmitter Start Address Register">
+			<bitfield name="BASE"	start="31" end="20" access="rw" description="Base Address"/>
+			<bitfield name="START"	start="19" end="0" access="rw" description="Start Address"/>
+		</sfr>
+		<sfr name="TX_END"      offset="84"	size="32" description="Transmitter End Address Register">
+			<bitfield name="BASE"	start="31" end="20" access="r" description="Base Address"/>
+			<bitfield name="END"	start="19" end="0" access="rw" description="End Address"/>
+		</sfr>
+		<sfr name="TX_INPUT"    offset="88"	size="32" description="Transmitter Input Address Register">
+			<bitfield name="BASE"	start="31" end="20" access="r" description="Base Address"/>
+			<bitfield name="INPUT"	start="19" end="0" access="rw" description="Input Address"/>
+		</sfr>
+		<sfr name="TX_OUTPUT"   offset="92"	size="32" description="Transmitter Output Address Register">
+			<bitfield name="BASE"	start="31" end="20" access="r" description="Base Address"/>
+			<bitfield name="OUTPUT"	start="19" end="0" access="rw" description="Output Address"/>
+		</sfr>
+		<sfr name="MDI_CMD"     offset="112"	size="32" description="MDI PHY Command Register">
+			<bitfield name="RESET"	start="31" end="31" access="rw" description="MDI Software Reset Bit">
+				<value value="0" description="Run"/>
+				<value value="1" description="Reset"/>
+			</bitfield>
+			<bitfield name="RRD"	start="1" end="1" access="rw" description="Register Read Bit">
+				<value value="0" description="Idle"/>
+				<value value="1" description="Read"/>
+			</bitfield>
+			<bitfield name="RWR"	start="0" end="0" access="rw" description="Register Write Bit">
+				<value value="0" description="Idle"/>
+				<value value="1" description="Write"/>
+			</bitfield>
+		</sfr>
+		<sfr name="MDI_PHYADDR" offset="116"	size="32" description="MDI PHY Address Register"/>
+		<sfr name="MDI_REGADDR" offset="120"	size="32" description="MDI PHY Internal Address Register"/>
+		<sfr name="MDI_DATA"    offset="124"	size="32" description="MDI PHY Data Output Register"/>
+	</group>
+</sfrfile>

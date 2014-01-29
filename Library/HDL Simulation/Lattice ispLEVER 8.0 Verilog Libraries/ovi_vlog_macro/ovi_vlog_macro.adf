@@ -1,0 +1,35 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_vlog_macro
+
+[Library]
+ovi_vlog_macro=.\ovi_vlog_macro.LIB
+
+[$LibMap$]
+ovi_vlog_macro=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/update_ovi_vlog_macro.do=-1
+/vanttl.vlb=-1
+/vanprim.vlb=-1
+/vanfunc.vlb=-1
+
+[Files.Data]
+.\src\update_ovi_vlog_macro.do=Macro
+.\src\vanttl.vlb=Verilog Source Code
+.\src\vanprim.vlb=Verilog Source Code
+.\src\vanfunc.vlb=Verilog Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

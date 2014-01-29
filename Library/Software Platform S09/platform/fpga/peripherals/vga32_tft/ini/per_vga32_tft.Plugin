@@ -1,0 +1,43 @@
+[Plugin]
+Name=per_vga32_tft
+Description=VGA controller for TFT LCD, fixed 16bpp color quality, screen resolution of 240 x 320, and refresh rate of 50Hz.
+Caption=VGA TFT Controller
+Implement=per_vga32_tft
+HardwareID=VGA32_TFT
+Bitmap=per_vga32_tft.bmp
+LargeBitmap=per_vga32_tft_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=POINTER
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=VSYNC Interrupt
+CodeName=vsync_interrupt
+Description=vsync interrupt number
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option2]
+Name=interrupt1
+GUIName=HSYNC Interrupt
+CodeName=hsync_interrupt
+Description=hsync interrupt number
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option3]
+Name=interrupt2
+GUIName=BLANK Interrupt
+CodeName=blank_interrupt
+Description=blank interrupt number
+Kind=INTERRUPT
+Auto=True

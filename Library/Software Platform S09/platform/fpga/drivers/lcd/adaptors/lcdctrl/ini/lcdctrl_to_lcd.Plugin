@@ -1,0 +1,12 @@
+[Plugin]
+Name=lcdctrl_to_lcd
+Description=Adapts lcdctrl to generic lcd
+SourceDir=platform\fpga\drivers\lcd\adaptors\lcdctrl\src
+Implement=lcd_adaptor
+InitHandler=lcdctrl_to_lcd_init
+InitHandlerPriority=16
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\lcd\internal"
+
+[Instance]
+Require0=per_lcdctrl
+

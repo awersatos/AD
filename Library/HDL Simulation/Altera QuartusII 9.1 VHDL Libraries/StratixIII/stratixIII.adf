@@ -1,0 +1,38 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=stratixiii
+
+[Library]
+stratixiii=.\stratixiii.LIB
+
+[$LibMap$]
+stratixiii=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/stratixiii_atoms.vhd=-1
+/stratixiii_components.vhd=-1
+/update_stratixIII.do=-1
+
+[Files.Data]
+.\src\stratixiii_atoms.vhd=VHDL Source Code
+.\src\stratixiii_components.vhd=VHDL Source Code
+.\src\update_stratixIII.do=Macro
+

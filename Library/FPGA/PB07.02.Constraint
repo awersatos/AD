@@ -1,0 +1,88 @@
+;...............................................................................
+;Constraints File
+;   Devices : GPS/GPRS/GSM
+;   Board   : PB07 Single Connector Plug-In Peripheral Board For NB02
+;
+;   Created 25-Jan-2008
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB       | TargetId=PB07.02 | Image=PB03.06 | ImageOffsetX=12 | ImageOffsetY=16
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Connector | TargetId=HDR1
+;...............................................................................
+
+
+Record=Constraint | TargetKind=Port | TargetId=GSM_DTR       | ConnectTo=HDR1-90
+
+Record=Constraint | TargetKind=Port | TargetId=GSM_DCD       | ConnectTo=HDR1-82
+Record=Constraint | TargetKind=Port | TargetId=GSM_DBGTX       | ConnectTo=HDR1-80
+Record=Constraint | TargetKind=Port | TargetId=GSM_GPO     | ConnectTo=HDR1-76
+;Record=Constraint | TargetKind=Port | TargetId=GSM_GPO       | ConnectTo=HDR1-66 ; SIM_RST
+;Record=Constraint | TargetKind=Port | TargetId=GSM_RTS       | ConnectTo=HDR1-84
+
+;...............................................................................
+; GSM
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=GSM_RXD       | ConnectTo=HDR1-78
+Record=Constraint | TargetKind=Port | TargetId=GSM_TXD       | ConnectTo=HDR1-74
+Record=Constraint | TargetKind=Port | TargetId=GSM_CTS       | ConnectTo=HDR1-92
+Record=Constraint | TargetKind=Port | TargetId=GSM_RI        | ConnectTo=HDR1-54
+Record=Constraint | TargetKind=Port | TargetId=GSM_DBGRX     | ConnectTo=HDR1-88
+Record=Constraint | TargetKind=Port | TargetId=GSM_DISP_CLK  | ConnectTo=HDR1-48
+Record=Constraint | TargetKind=Port | TargetId=GSM_DISP_DATA | ConnectTo=HDR1-46
+Record=Constraint | TargetKind=Port | TargetId=GSM_DISP_DC   | ConnectTo=HDR1-44
+Record=Constraint | TargetKind=Port | TargetId=GSM_DISP_CS   | ConnectTo=HDR1-94
+Record=Constraint | TargetKind=Port | TargetId=GSM_KBR       | ConnectTo=HDR1-56
+Record=Constraint | TargetKind=Port | TargetId=GSM_STATUS    | ConnectTo=HDR1-72
+Record=Constraint | TargetKind=Port | TargetId=GSM_NETLIGHT  | ConnectTo=HDR1-86
+Record=Constraint | TargetKind=Port | TargetId=GSM_SIM_DATA  | ConnectTo=HDR1-70
+Record=Constraint | TargetKind=Port | TargetId=GSM_SIM_CLK   | ConnectTo=HDR1-68
+Record=Constraint | TargetKind=Port | TargetId=GSM_SIM_RST   | ConnectTo=HDR1-62
+Record=Constraint | TargetKind=Port | TargetId=GSM_POWER     | ConnectTo=HDR1-42
+;...............................................................................
+; GPS
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=GPS_NMEA_TX   | ConnectTo=HDR1-14
+Record=Constraint | TargetKind=Port | TargetId=GPS_NMEA_RX   | ConnectTo=HDR1-16
+Record=Constraint | TargetKind=Port | TargetId=GPS_RESET     | ConnectTo=HDR1-2
+Record=Constraint | TargetKind=Port | TargetId=GPS_DSUMUX    | ConnectTo=HDR1-22
+Record=Constraint | TargetKind=Port | TargetId=GPS_DSUEN     | ConnectTo=HDR1-24
+Record=Constraint | TargetKind=Port | TargetId=GPS_DSUBRE    | ConnectTo=HDR1-26
+Record=Constraint | TargetKind=Port | TargetId=GPS_DSUTX     | ConnectTo=HDR1-28
+Record=Constraint | TargetKind=Port | TargetId=GPS_DSURX     | ConnectTo=HDR1-30
+Record=Constraint | TargetKind=Port | TargetId=GPS_DSUACT    | ConnectTo=HDR1-32
+Record=Constraint | TargetKind=Port | TargetId=GPS_4GPIO     | ConnectTo=HDR1-12
+Record=Constraint | TargetKind=Port | TargetId=GPS_1GPIO     | ConnectTo=HDR1-20
+
+;...............................................................................
+; AUDIO CODEC - I2S interface
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_I2S_BCLK | ConnectTo=HDR1-64
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_I2S_WCLK | ConnectTo=HDR1-98
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_I2S_DIN  | ConnectTo=HDR1-58
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_I2S_DOUT | ConnectTo=HDR1-60
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_I2S_MCLK | ConnectTo=HDR1-96
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_RST      | ConnectTo=HDR1-100
+;...............................................................................
+; AUDIO MIXER - all controls active high. When high switch is ON. when low switch is OFF
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MUX1    | ConnectTo=HDR1-38    ; internal Microphone    -
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MUX2    | ConnectTo=HDR1-52    ; NanoBoard Microphone   -
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MUX3    | ConnectTo=HDR1-50    ; NanoBoard Line Input   -
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MUX4    | ConnectTo=HDR1-40    ; PB07 Audio Codec       - All to GSM audio input
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MUX5    | ConnectTo=HDR1-4     ; Any of the above onto a signal controller below
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MUX6    | ConnectTo=HDR1-6     ; GSM audio outptu on the above signal
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MUX7    | ConnectTo=HDR1-34    ; signal from MUX5 or MUX6 to NanoBoard speaker
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MUX8    | ConnectTo=HDR1-36    ; signal from MUX5 or MUX6 to audio codec
+
+
+;Record=Constraint | TargetKind=Port | TargetId=     | ConnectTo=HDR1-
+

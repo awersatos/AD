@@ -1,0 +1,28 @@
+[Plugin]
+Name=drv_fpu
+Description=Single precision floating point unit driver
+Caption=FPU Driver
+SourceDir=platform\fpga\drivers\fpu\src
+Implement=drv_fpu
+Bitmap=drv_fpu.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_fpu
+Condition=EQ
+
+[Instance]
+Require0=per_fpu
+
+[Instance_Option0]
+Name=multithread_safe
+GUIName=Mutltithread safe
+Description=Use locking to make driver multithread safe
+Kind=BOOLEAN
+DefaultValue=False
+Auto=False
+
+[Instance_Option0_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ

@@ -1,0 +1,205 @@
+timestamp=1260919120002
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[MAXII_PRIM_DFFE]
+A/MAXII_PRIM_DFFE=22|./src/maxII_atoms.v|22|1*502
+B/MAXII_PRIM_DFFE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=286,491,973,1007
+R=./src/maxII_atoms.v|22
+
+[MAXII_PRIM_DFFEAS]
+A/MAXII_PRIM_DFFEAS=22|./src/maxII_atoms.v|95|1*1286
+B/MAXII_PRIM_DFFEAS=3*718
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=410,642,1020,1054
+R=./src/maxII_atoms.v|95
+
+[MAXII_PRIM_DFFEAS_HIGH]
+A/MAXII_PRIM_DFFEAS_HIGH=22|./src/maxII_atoms.v|133|1*2056
+B/MAXII_PRIM_DFFEAS_HIGH=3*1290
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=420,657,1035,1069
+R=./src/maxII_atoms.v|133
+
+[maxii_and1]
+A/maxii_and1=22|./src/maxII_atoms.v|346|1*6478
+B/maxii_and1=3*5274
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_and1=4*2526
+P/~emb=121,272,374,463
+R=./src/maxII_atoms.v|346
+
+[maxii_and16]
+A/maxii_and16=22|./src/maxII_atoms.v|359|1*7065
+B/maxii_and16=3*5427
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_and16=4*2677
+P/~emb=135,334,515,806
+R=./src/maxII_atoms.v|359
+
+[maxii_asynch_lcell]
+A/maxii_asynch_lcell=22|./src/maxII_atoms.v|519|1*11814
+B/maxii_asynch_lcell=3*11601
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_asynch_lcell=4*2830
+P/~emb=916,1607,2774,3274
+R=./src/maxII_atoms.v|519
+
+[maxii_b17mux21]
+A/maxii_b17mux21=22|./src/maxII_atoms.v|399|1*8530
+B/maxii_b17mux21=3*7073
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=195,363,519,609
+R=./src/maxII_atoms.v|399
+
+[maxii_b5mux21]
+A/maxii_b5mux21=22|./src/maxII_atoms.v|420|1*9742
+B/maxii_b5mux21=3*9326
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=190,356,512,602
+R=./src/maxII_atoms.v|420
+
+[maxii_bmux21]
+A/maxii_bmux21=22|./src/maxII_atoms.v|388|1*7909
+B/maxii_bmux21=3*5581
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=191,357,513,603
+R=./src/maxII_atoms.v|388
+
+[maxii_crcblock]
+A/maxii_crcblock=22|./src/maxII_atoms.v|488|1*11111
+B/maxii_crcblock=3*11140
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=288,513,664,765
+R=./src/maxII_atoms.v|488
+
+[maxii_dffe]
+A/maxii_dffe=22|./src/maxII_atoms.v|171|1*2847
+B/maxii_dffe=3*1867
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_dffe=4*0
+P/~emb=235,513,733,932
+R=./src/maxII_atoms.v|171
+
+[maxii_io]
+A/maxii_io=22|./src/maxII_atoms.v|1608|1*20758
+B/maxii_io=3*140393
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_io=4*9071
+P/~emb=328,815,1261,1620
+R=./src/maxII_atoms.v|1608
+
+[maxii_jtag]
+A/maxii_jtag=22|./src/maxII_atoms.v|441|1*10364
+B/maxii_jtag=3*10819
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=651,932,1185,1352
+R=./src/maxII_atoms.v|441
+
+[maxii_latch]
+A/maxii_latch=22|./src/maxII_atoms.v|220|1*3802
+B/maxii_latch=3*2696
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_latch=4*1012
+P/~emb=206,408,651,859
+R=./src/maxII_atoms.v|220
+
+[maxii_lcell]
+A/maxii_lcell=22|./src/maxII_atoms.v|1080|1*15950
+B/maxii_lcell=3*64112
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1179,1760,2338,2896
+R=./src/maxII_atoms.v|1080
+
+[maxii_lcell_register]
+A/maxii_lcell_register=22|./src/maxII_atoms.v|879|1*14041
+B/maxii_lcell_register=3*54332
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_lcell_register=4*5614
+P/~emb=651,1156,1767,2144
+R=./src/maxII_atoms.v|879
+
+[maxii_mux21]
+A/maxii_mux21=22|./src/maxII_atoms.v|278|1*4790
+B/maxii_mux21=3*3734
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_mux21=4*1657
+P/~emb=171,353,551,694
+R=./src/maxII_atoms.v|278
+
+[maxii_mux41]
+A/maxii_mux41=22|./src/maxII_atoms.v|305|1*5554
+B/maxii_mux41=3*4396
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_mux41=4*1959
+P/~emb=242,452,724,910
+R=./src/maxII_atoms.v|305
+
+[maxii_nmux21]
+A/maxii_nmux21=22|./src/maxII_atoms.v|410|1*9153
+B/maxii_nmux21=3*8567
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=173,334,474,564
+R=./src/maxII_atoms.v|410
+
+[maxii_routing_wire]
+A/maxii_routing_wire=22|./src/maxII_atoms.v|1802|1*22063
+B/maxii_routing_wire=3*152806
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_routing_wire=4*9535
+P/~emb=155,328,476,602
+R=./src/maxII_atoms.v|1802
+
+[maxii_ufm]
+A/maxii_ufm=22|./src/maxII_atoms.v|1207|1*17354
+B/maxii_ufm=3*66035
+C=8.2.1986.SP1.35.3497  (Windows)
+D/maxii_ufm=4*7312
+P/~emb=3574,4581,5834,6356
+R=./src/maxII_atoms.v|1207
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, MAXII VERILOG LIBRARY.
+LastVerilogToplevel=maxii_routing_wire
+ModifyID=183
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/maxII_atoms.v=0*24800*37595
+
+[~MFT]
+0=23|0ovi_maxII.mgf|37595|0
+1=21|1ovi_maxII.mgf|22063|0
+3=21|3ovi_maxII.mgf|152806|0
+4=10|4ovi_maxII.mgf|9535|0
+
+[~U]
+$root=12|0*0|
+MAXII_PRIM_DFFE=12|0*310||0xa0
+MAXII_PRIM_DFFEAS=12|0*1126||0xa0
+MAXII_PRIM_DFFEAS_HIGH=12|0*1912||0xa0
+maxii_and1=12|0*5998||0x90
+maxii_and16=12|0*6425||0x90
+maxii_asynch_lcell=12|0*10262||0x80
+maxii_b17mux21=12|0*7554||0x90
+maxii_b5mux21=12|0*8510||0x90
+maxii_bmux21=12|0*7061||0x90
+maxii_crcblock=12|0*9719||0x90
+maxii_dffe=12|0*2703||0x90
+maxii_io=12|0*22244||0x90
+maxii_jtag=12|0*8988||0x90
+maxii_latch=12|0*3658||0x90
+maxii_lcell=12|0*16222||0x90
+maxii_lcell_register=12|0*13993||0x80
+maxii_mux21=12|0*4534||0x90
+maxii_mux41=12|0*5186||0x90
+maxii_nmux21=12|0*8049||0x90
+maxii_routing_wire=12|0*24269||0x90
+maxii_ufm=12|0*17882||0x90
+

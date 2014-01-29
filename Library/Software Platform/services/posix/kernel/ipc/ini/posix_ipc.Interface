@@ -1,0 +1,7 @@
+[Interface]
+Name=posix_ipc
+Category=SERVICE
+Description=Support for posix multithreading ipc
+PublicDir=services\posix\kernel\ipc\include
+
+

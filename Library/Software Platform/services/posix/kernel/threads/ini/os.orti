@@ -1,0 +1,24 @@
+[Available_If]
+Plugin=posix_threads
+
+[Declaration]
+Out0=OS
+Out1={
+Out2=	CTYPE "int" RUNNINGTHREAD, "Running thread";
+Out3=	CTYPE "int" RUNNINGPRIORITY, "Running priority";
+Out4=	CTYPE "int" THREADSJOIN, "Threads joined";
+Out5=	CTYPE "int" THREADSEXIT, "Threads exited";
+Out6=},"System Status";
+
+
+[Implementation]
+Out0=OS status
+Out1={
+Out2=	RUNNINGTHREAD    = "(unsigned long)_posix_current_thread ? _posix_current_thread->thread_id: -1 ";
+Out3=	RUNNINGPRIORITY  = "(unsigned long)_posix_current_thread ? _posix_current_thread->priority:-1";
+Out4=	THREADSJOIN      = "_posix_pthread_no_joined";
+Out5=	THREADSEXIT      = "_posix_pthread_no_exited";
+Out6=};
+Number=1
+
+ 

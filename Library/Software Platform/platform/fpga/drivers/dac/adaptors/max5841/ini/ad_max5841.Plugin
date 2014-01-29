@@ -1,0 +1,13 @@
+[Plugin]
+Name=ad_dac_max5841
+Description=Adapts max5841 DAC driver to DAC generic driver
+SourceDir=platform\fpga\drivers\dac\adaptors\max5841\src
+Implement=ad_dac
+InitHandler=ad_max5841_init
+InitHandlerPriority=16
+compileOption0=-I"$(SSASROOT)\platform\fpga\drivers\dac\internal"
+compileOption1=-I"$(SSASROOT)\platform\fpga\drivers\dac\include"
+
+[Instance]
+Require0=drv_max5841
+

@@ -1,0 +1,10 @@
+[Plugin]
+Name=pal_arch_405_virtual
+Description=Pal implements the Tasking Virtual Architecture
+Caption=PPC405A Virtual derivative
+GenerateFile=pal_variant_cfg
+GlobalCompileOption0=-I"$(SSASROOT)\platform\fpga\processors\cppc\internal"
+Implement=pal_arch_405
+PassiveImplementor=True
+Virtual=True
+

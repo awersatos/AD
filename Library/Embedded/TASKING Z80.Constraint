@@ -1,0 +1,20 @@
+;...............................................................................
+;Constraints File
+;   Device  :
+;   Board   :
+;   Project :
+;
+;   Created 21/10/2004
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Main Memory                | Memory_BusName=code |  Memory_Width=8 | Memory_Depth=64k     | ProgramDownloadAddress=0x0        | Memory_BusType=cz80:mem_bus | Memory_Description=External memory{n}Contains both{n}code and data
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Special Function Registers | Memory_BusName=SFR |  Memory_Width=8 | Memory_Depth=64k     | ProgramDownloadAddress=0x0        | Memory_BusType=cz80:sfr_bus | Memory_Description=
+                                                                 
+Record=NEXUS_CORE | ComponentDesignator=xrom  | Memory_Depth=32k  | Memory_UsageType=rom | ProgramDownloadAddress=0x0     | Memory_BusType=cz80:mem_bus | Default=True
+Record=NEXUS_CORE | ComponentDesignator=xram  | Memory_Depth=32k  | Memory_UsageType=ram | ProgramDownloadAddress=0x8000  | Memory_BusType=cz80:mem_bus | Default=True
+Record=NEXUS_CORE | ComponentDesignator=sfr   | Memory_Depth=64k  | Memory_UsageType=ram | ProgramDownloadAddress=0x0     | Memory_BusType=cz80:sfr_bus
+

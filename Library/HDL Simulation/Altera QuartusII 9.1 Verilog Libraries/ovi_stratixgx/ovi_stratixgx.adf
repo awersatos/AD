@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_stratixgx
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+ovi_stratixgx=.
+
+[Library]
+ovi_stratixgx=.\ovi_stratixgx.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/stratixgx_atoms.v=-1
+/update_ovi_stratixgx.do=-1
+
+[Files.Data]
+.\src\stratixgx_atoms.v=Verilog Source Code
+.\src\update_ovi_stratixgx.do=Macro
+

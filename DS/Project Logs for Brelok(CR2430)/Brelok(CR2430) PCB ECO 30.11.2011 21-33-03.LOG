@@ -1,0 +1,81 @@
+Added Component: Designator=BAT1(HU2430)
+Added Component: Designator=C1(C0805)
+Added Component: Designator=C2(CAP 5mm Horizontal)
+Added Component: Designator=D1(SOT23_N)
+Added Component: Designator=R1(C0805)
+Added Component: Designator=S1(SWT-41)
+Added Component: Designator=S2(SWT-41)
+Added Component: Designator=U1(TR24A)
+Added Component: Designator=U2(20S_M)
+Added Component: Designator=VD1(GNL-1210UEUGC-INVERT)
+Added Component: Designator=X1(SH06V)
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=D1-3
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=GND Pin=U1-10
+Added Pin To Net: NetName=GND Pin=U1-11
+Added Pin To Net: NetName=GND Pin=U1-12
+Added Pin To Net: NetName=GND Pin=U2-10
+Added Pin To Net: NetName=GND Pin=X1-6
+Added Net: Name=GND
+Added Pin To Net: NetName=GREEN Pin=U2-16
+Added Pin To Net: NetName=GREEN Pin=VD1-3
+Added Net: Name=GREEN
+Added Pin To Net: NetName=NetBAT1_- Pin=BAT1--
+Added Pin To Net: NetName=NetBAT1_- Pin=S1-1
+Added Pin To Net: NetName=NetBAT1_- Pin=S1-2
+Added Pin To Net: NetName=NetBAT1_- Pin=S2-1
+Added Pin To Net: NetName=NetBAT1_- Pin=S2-2
+Added Net: Name=NetBAT1_-
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=S1-3
+Added Pin To Net: NetName=NetD1_1 Pin=S1-4
+Added Pin To Net: NetName=NetD1_1 Pin=U2-6
+Added Net: Name=NetD1_1
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetD1_2 Pin=S2-3
+Added Pin To Net: NetName=NetD1_2 Pin=S2-4
+Added Pin To Net: NetName=NetD1_2 Pin=U2-7
+Added Net: Name=NetD1_2
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=VD1-1
+Added Pin To Net: NetName=NetR1_2 Pin=VD1-4
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=PKT_F Pin=U1-8
+Added Pin To Net: NetName=PKT_F Pin=U2-12
+Added Net: Name=PKT_F
+Added Pin To Net: NetName=RED Pin=U2-15
+Added Pin To Net: NetName=RED Pin=VD1-2
+Added Net: Name=RED
+Added Pin To Net: NetName=RESET_TR Pin=U1-3
+Added Pin To Net: NetName=RESET_TR Pin=U2-14
+Added Net: Name=RESET_TR
+Added Pin To Net: NetName=RESET Pin=U2-1
+Added Pin To Net: NetName=RESET Pin=X1-5
+Added Net: Name=RESET
+Added Pin To Net: NetName=SPI_MISO/DO Pin=U1-5
+Added Pin To Net: NetName=SPI_MISO/DO Pin=U2-18
+Added Pin To Net: NetName=SPI_MISO/DO Pin=X1-3
+Added Net: Name=SPI_MISO/DO
+Added Pin To Net: NetName=SPI_MOSI/DI Pin=U1-2
+Added Pin To Net: NetName=SPI_MOSI/DI Pin=U2-17
+Added Pin To Net: NetName=SPI_MOSI/DI Pin=X1-4
+Added Net: Name=SPI_MOSI/DI
+Added Pin To Net: NetName=SPI_SCK Pin=U1-4
+Added Pin To Net: NetName=SPI_SCK Pin=U2-19
+Added Pin To Net: NetName=SPI_SCK Pin=X1-2
+Added Net: Name=SPI_SCK
+Added Pin To Net: NetName=SPI_SS Pin=U1-6
+Added Pin To Net: NetName=SPI_SS Pin=U2-13
+Added Net: Name=SPI_SS
+Added Pin To Net: NetName=VCC Pin=BAT1-+
+Added Pin To Net: NetName=VCC Pin=BAT1-+
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Pin To Net: NetName=VCC Pin=C2-1
+Added Pin To Net: NetName=VCC Pin=U1-1
+Added Pin To Net: NetName=VCC Pin=U2-20
+Added Pin To Net: NetName=VCC Pin=X1-1
+Added Net: Name=VCC
+Added Class: Name=Brelok(CR2430)
+Added Room: Name=Brelok(CR2430)

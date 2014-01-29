@@ -1,0 +1,23 @@
+[Plugin]
+Name=drv_cellular
+Caption=Cellular Modem Driver
+Description=
+SourceDir=platform\fpga\drivers\cellular\src
+GlobalCompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\cellular\include"
+GlobalCompileOption1=-I"$(SSASROOT)\platform\fpga\drivers\uart8\include"
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\uart8\internal"
+CompileOption1=-I"$(SSASROOT)\platform\fpga\drivers\cellular\internal"
+Implement=drv_cellular
+Extend=drv_uart8
+Bitmap=drv_cellular.bmp
+
+[Available_If0]
+kind=INTERFACE
+Object=per_cellular
+Condition=EQ
+
+[Instance]
+Caption=Cellular Modem Driver
+Description=
+Require0=per_cellular
+

@@ -1,0 +1,6 @@
+[Plugin]
+Name=filesystem_require_sockfs
+Caption=filesystem require by sockfs
+Description=empty plugin to indirectly require posix_filesystem_mounting by sockfs
+Implement=filesystem_require_sockfs
+Require0=posix_filesystem_mounting

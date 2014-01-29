@@ -1,0 +1,868 @@
+timestamp=0
+
+[cycloneiv_hssi_calibration_block]
+A/sim_calib_arch=21|./src/cycloneiv_hssi_atoms.vhd|85848|1*0
+B/sim_calib_arch=3*15788100
+C=8.2.1986.SP1.35.3497  (Windows)
+C/sim_calib_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3541714
+I/sim_calib_arch=0*3542023
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3539538*0xb29a0cfbd1f4eca85452b6ae18740e724cd5d223|0*3540670*0xf2538cdc6f7b23a146389216c886e772
+M/sim_calib_arch=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3540768*0x6764f42d94b33ffdd30e504fb5256b4eaa744be6|0*3541097*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|85819
+
+[cycloneiv_hssi_cmu]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|83639|1*1235
+B/trans=3*15678193
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3543250
+I/trans=0*3543657
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3474730*0x67ec4269d85a9e38319f98aa15fb04c0a8870987|0*3478529*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3478613*0x3684e295df1914e59924b3305b30aa05e7468e5f|0*3539445*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|83445
+
+[cycloneiv_hssi_cmu_auto_speed_neg]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|82026|1*22573
+B/trans=3*15569542
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3545036
+I/trans=0*3545394
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3440026*0xb16e820d0e01bad7044e9466594ae3d3fdc43ea5|0*3441581*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3441680*0xc7a299a2bdbbf6b77dfe2130ef0fe6e7f35e9756|0*3447621*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|81966
+
+[cycloneiv_hssi_cmu_chnl_reset]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|81902|1*24567
+B/trans=3*15562449
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3546144
+I/trans=0*3546498
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3436772*0x3a361f76244bd90f0fc32a57d8c02052f66c7b15|0*3438137*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3438232*0xa2cbeb2a7a2dc11bd391a1da7ff9088f639e8040|0*3439922*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|81844
+
+[cycloneiv_hssi_cmu_clk_ctl]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|82402|1*25713
+B/trans=3*15595556
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3547193
+I/trans=0*3547544
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3448671*0xad4b626558c46d117012564cda036a48fddc8d68|0*3449530*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3449622*0xc62e471b87977a7e0a8c0db7117c68597939bebf|0*3451753*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|82377
+
+[cycloneiv_hssi_cmu_clk_gating]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|82358|1*27035
+B/trans=3*15594552
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3548191
+I/trans=0*3548545
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3447729*0x934dfec5eeb9d143b2e8895cf45144f696443695|0*3448215*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3448310*0x110a6bc7b1cb32001576a2a687e77245030100a2|0*3448567*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|82347
+
+[cycloneiv_hssi_cmu_quad_reset]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|81745|1*27637
+B/trans=3*15548419
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3549339
+I/trans=0*3549693
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3431887*0xe2944d94ed5c46676bd37b5dc2bf58bf5a46e167|0*3433663*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3433758*0x3dfd527c9a4a6068a1dddb5b0454cb55d1accd54|0*3436668*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|81669
+
+[cycloneiv_hssi_cmu_rx_ctrl]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|82538|1*29199
+B/trans=3*15602873
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3550372
+I/trans=0*3550723
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3451854*0x486cc6291cf6c05cf042cd7271307f2dd0614706|0*3452643*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3452735*0x53f32387fca760b01f2f7ab79d03b18019444a5e|0*3456450*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|82509
+
+[cycloneiv_hssi_cmu_rxclk_ctl]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|82798|1*30569
+B/trans=3*15624679
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3551545
+I/trans=0*3551898
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3457507*0x9f650baf2d4d0c22e0bf4042f062c6094aef2534|0*3459082*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3459176*0xfe89f176955fd111c91493b3adbb83447f67561d|0*3463774*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|82729
+
+[cycloneiv_hssi_cmu_rxclk_gating]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|82712|1*32867
+B/trans=3*15623675
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3552549
+I/trans=0*3552905
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3456551*0x4dbb69dc78f33f2742146ce2c905198fb5e6daf8|0*3457043*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3457140*0xc93d428d25719451b6fb0e83c3cad55b00b8396a|0*3457401*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|82701
+
+[cycloneiv_hssi_cmu_tx_ctrl]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|83029|1*33469
+B/trans=3*15642589
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3553586
+I/trans=0*3553937
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3463877*0x4bd88a4cad1a2e5d800513d232ebb42abcdc8f61|0*3464678*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3464770*0x76a2a9525832fff83726bc1c87b95968ea859aeb|0*3468653*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|83000
+
+[cycloneiv_hssi_cmu_txclk_ctl]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|83281|1*34855
+B/trans=3*15664395
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3554711
+I/trans=0*3555064
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3469710*0x83b5d902d284eff832b18147a96901498bbf0f8f|0*3470947*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3471041*0xfa310d87303a49937d538c88bd95bf0d416ee74f|0*3474627*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|83224
+
+[cycloneiv_hssi_cmu_txclk_gating]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|83208|1*36865
+B/trans=3*15663391
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3555715
+I/trans=0*3556071
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3468754*0xa66a1dd9a20fc2e5652141233d1b7f2f5aaee3a0|0*3469246*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3469343*0x801ecba05602652bff06032380191f2759816d07|0*3469604*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|83197
+
+[cycloneiv_hssi_components]
+B/cycloneiv_hssi_components=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*37467
+I=0*3557643
+I/cycloneiv_hssi_components=I/CYCLONEIV_HSSI_COMPONENTS 0*3557897
+M=3|0|v63|0|./src/cycloneiv_hssi_components.vhd|0*0*0xe37f46c1100d18086eeedadbe44e8746dcc12e00|0*30896*0xf2538cdc6f7b23a146389216c886e772
+M/cycloneiv_hssi_components=M/CYCLONEIV_HSSI_COMPONENTS 4|0|v63|0|./src/cycloneiv_hssi_components.vhd|0*30992*0xf54ae32b2819e08db1b23e8aa62faf954a0b4e66|0*39201*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_components.vhd|23
+
+[cycloneiv_hssi_digi_chnl_hip_spt]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|1881|1*41481
+B/trans=3*94193
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3558662
+I/trans=0*3559019
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*81380*0x1c3979d67c9b3814afd5a4d490e9d7d35df118db|0*83310*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*83408*0x4194ed3c503242537f1559a14628a05b2786832e|0*84628*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|1830
+
+[cycloneiv_hssi_dskw_sm]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|75720|1*43027
+B/rtl=3*14337029
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3559697
+I/rtl=I/RTL 0*3559900
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3193456*0x59479fad87029d94731339f03af4bee9a06de728|0*3194045*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3194133*0x63c13fb1cfddfdf889b90c87a0deae3c48d5c4dc|0*3210140*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|75704
+
+[cycloneiv_hssi_pcs_reset]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|1780|1*47707
+B/trans=3*90096
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3560408
+I/trans=0*3560757
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*79795*0xf4ac263626b0f6bf727707f4179d61c19e390124|0*80356*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*80446*0x64ef0e88244bab5196a18f051e58d1ddcb882cfe|0*81281*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|1765
+
+[cycloneiv_hssi_phystatus_generator]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|2378|1*48533
+B/rtl=3*119672
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3561503
+I/rtl=I/RTL 0*3561718
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*91273*0x7729da276233c712ce90c1751e172f66b8d1b529|0*92256*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*92356*0xfe8f1da2ec80df822d6f4dd44785f6fee186169a|0*102570*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|2351
+
+[cycloneiv_hssi_phystatus_generator_fsm]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|2048|1*52061
+B/trans=3*100954
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3562412
+I/trans=0*3562775
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*84735*0xcf10839df9930f0a28b3dd6462ced6b4943ee429|0*85711*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*85815*0x3474779e8f8851d3aca9c9f6f7ed8d3c12072746|0*91160*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|1963
+
+[cycloneiv_hssi_q_pipe_interface_top]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|4309|1*53623
+B/trans=3*367317
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3563792
+I/trans=0*3564152
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*144741*0xd86309e89db3c26bfdf114f9918c3c1d898f6ec9|0*147067*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*147168*0xee8ad5831165a0794c7349a0081615825d80f349|0*157276*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|4098
+
+[cycloneiv_hssi_rcv_sm]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|78956|1*57985
+B/rtl=3*15061514
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3564992
+I/rtl=I/RTL 0*3565194
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3319011*0xa2697319fe8525203694f41e192a3e1942c3ef5b|0*3319829*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3319916*0x69145e93ac81a15669953607c5fceb0f5375e604|0*3431793*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|78934
+
+[cycloneiv_hssi_rx_digi]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|68529|1*83945
+B/trans=3*13790392
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3567539
+I/trans=0*3567886
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2920071*0xe30cf86e6c8918a4c79ba0cfe1a77ea2ddfe8ff2|0*2930529*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2930617*0x7c96113acd736de3a93f6be73568e24e275a88cc|0*2976371*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|68118
+
+[cycloneiv_hssi_rx_digi_auto_speed_neg]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|22532|1*107091
+B/rtl=3*3427794
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3569177
+I/rtl=I/RTL 0*3569395
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*782033*0xc9ead056a785873b66e0631d9e335650c69be182|0*783106*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*783209*0xce1c09d4fa3e8f41452b2c71019421ed16d6e137|0*811086*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|22503
+
+[cycloneiv_hssi_rx_digi_bist_ver]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|23373|1*114731
+B/rtl=3*3571463
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3570085
+I/rtl=I/RTL 0*3570297
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*811196*0x70f2c08c57f8f778a13861e837d169327ee9c03e|0*812147*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*812244*0x249e6e4bdb2953cefadf1782e2f59384fc9fba89|0*968884*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|23346
+
+[cycloneiv_hssi_rx_digi_cdr_ctrl]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|26910|1*149235
+B/rtl=3*4438616
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3571029
+I/rtl=I/RTL 0*3571241
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*968988*0xed30259dcc913d92fe055606ed8af4c9ecc7ba4f|0*969865*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*969962*0x7954203c9d1e285ec1c2d03a4abd135335eeb024|0*999479*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|26884
+
+[cycloneiv_hssi_rx_digi_comp_chnl_top]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|27977|1*157755
+B/rtl=3*4581161
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3572266
+I/rtl=I/RTL 0*3572483
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*999583*0x0f1a13fdfaf67af3fa93effb5ac7c8f7c5c85ab7|0*1002322*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1002424*0x3d1e53557484205fe9e224a424fda8eb393a59af|0*1271383*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|27898
+
+[cycloneiv_hssi_rx_digi_dec_chnl_top]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|43671|1*219011
+B/rtl=3*7935197
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3573288
+I/rtl=I/RTL 0*3573472
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1706399*0xd34c2067260cb3dc8dfb268c66841f4b004bced3|0*1707414*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1707515*0xbc4098e5f0697264a35054b9532239545f50a782|0*1811524*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|43645
+
+[cycloneiv_hssi_rx_digi_dskw_fifo]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|45608|1*240891
+B/rtl=3*8318746
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3574001
+I/rtl=I/RTL 0*3574214
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1811632*0xe6b667e60f6db6acc066f9b83369feb53ed8073c|0*1812370*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1812468*0xa42a37249e283e572e75c37677b6d756248afc58|0*1847174*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|45587
+
+[cycloneiv_hssi_rx_digi_eii_module]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|48686|1*250419
+B/rtl=3*8866564
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3574949
+I/rtl=I/RTL 0*3575163
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1907873*0xefafe9dbf05aca0825fc58703b6ecb90f149c3b7|0*1908847*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1908946*0x48ca62e1ab3ba6d9e54519f126c2d64bba3f2b85|0*2006891*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|48659
+
+[cycloneiv_hssi_rx_digi_freqdet]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|46769|1*271995
+B/rtl=3*8487423
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3575912
+I/rtl=I/RTL 0*3576123
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1847279*0x1b96c5883f217410e0758199456e24ea1fd6d280|0*1848092*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1848188*0x71b5b7ca379fb19565331a61b6adb0f16747e4cc|0*1907770*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|46745
+
+[cycloneiv_hssi_rx_digi_iq_pipe_rx]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|51358|1*286915
+B/rtl=3*9342305
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3576840
+I/rtl=I/RTL 0*3577022
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2025649*0xc989ab53338013fb531f08e915fdf50052fdfbdf|0*2027188*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2027287*0x9d7f98bfaae8d8a672619f15f321cfc8420c3bfd|0*2033987*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|51318
+
+[cycloneiv_hssi_rx_digi_pcs_channel_testbus]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|50900|1*289259
+B/rtl=3*9277945
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3577511
+I/rtl=I/RTL 0*3577702
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2006997*0x6c668db52416cf4e50b607240b0ca3f04e40f6c9|0*2007893*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2008001*0x86a8d8e15ee4d0e4dae3fc82e538606283762e9f|0*2025534*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|50880
+
+[cycloneiv_hssi_rx_digi_prbs_ver]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|51639|1*294035
+B/rtl=3*9371729
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3578285
+I/rtl=I/RTL 0*3578497
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2034093*0x7f9b21ba35d8d280f38668c45397702ce175d8da|0*2034955*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2035052*0x3c992d68e57e08ab37bf1fbc8c7d3396cc94e019|0*2156098*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|51614
+
+[cycloneiv_hssi_rx_digi_rx_ctrl]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|34630|1*320171
+B/rtl=3*5713211
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3579788
+I/rtl=I/RTL 0*3579999
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1271492*0xd1e3f47d2cd3a925550b8d2a434969bc940664e0|0*1275220*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*1275316*0xffe15cd1ef640a23717bb06d9115b0f0df668f5d|0*1706296*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|34525
+
+[cycloneiv_hssi_rx_digi_rxclk_ctl]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|22277|1*408291
+B/trans=3*3409884
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3580843
+I/trans=0*3581200
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*775631*0x4bc7bdfb404413273ae2aedf6d28c54999db410d|0*777212*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*777310*0xe0409e6d863b3fb7e5940e4a40c3d6fb0bf7cebe|0*781926*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|22208
+
+[cycloneiv_hssi_rx_digi_wordalign]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|54448|1*410589
+B/rtl=3*10208342
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3582304
+I/rtl=I/RTL 0*3582517
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2156202*0x76f042d29f03a7ecad74cab9273cc0ac71e4db6d|0*2158491*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2158589*0x584928a7e461ed4c8312f0becaae228b0395deba|0*2919966*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|54380
+
+[cycloneiv_hssi_rx_digis_ph_fifo]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|21090|1*554773
+B/trans=3*3295106
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3582974
+I/trans=0*3583330
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*739647*0x2a8dcd8efd7c37f3caf2e09777c8064c2ae1d781|0*740833*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*740930*0xad20043ca81600346d6ed73665e261f1ab90ab12|0*748433*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|21046
+
+[cycloneiv_hssi_rx_digis_ram16x14_syn]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|21558|1*556799
+B/trans=3*3337996
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3584085
+I/trans=0*3584446
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*748539*0x3cd4d57fc9830aa19e19a0131a0c031579ae5d55|0*749348*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*749450*0x7a354e6fa56cdfba871c08d99a70a3b5ed900033|0*760715*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|21537
+
+[cycloneiv_hssi_rx_digis_ram20x16_syn]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|21842|1*558681
+B/trans=3*3372958
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3585158
+I/trans=0*3585519
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*760826*0x90e8dd204967890ab708c63d0ac933e2728935e2|0*761595*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*761697*0x16a0fb282428611f3146a995e36c2d3296b838ce|0*774534*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|21823
+
+[cycloneiv_hssi_rx_digis_ram8x70_syn]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|20903|1*560787
+B/trans=3*3275940
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3586214
+I/trans=0*3586574
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*733498*0x79bd73a46f36c2fdf022a449713952c3c9f5f342|0*734179*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*734280*0x5fae3c16db5e2276849b1242c16d01975c5dfe46|0*739537*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|20886
+
+[cycloneiv_hssi_rx_digis_rxclk_gating]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|22188|1*562221
+B/trans=3*3408880
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3587189
+I/trans=0*3587550
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*774645*0x1645861d74fdb63dc065a8db2c27023c7f9f4d5c|0*775149*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*775251*0xac6b89dc73c4d4f6e6e58f255af5e4f520492ff3|0*775520*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|22177
+
+[cycloneiv_hssi_rx_pcs]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|70360|1*562823
+B/trans=3*13835278
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3590119
+I/trans=0*3590529
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2976468*0xe825635e2052dbbe4ddb0bf4947116ed1be0de3e|0*2987847*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*2987934*0x270b46725e0feabc58e4cb945099378b15bb6df7|0*3193360*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|70071
+
+[cycloneiv_hssi_rx_pipe_interface]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|2852|1*630881
+B/rtl=3*160428
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3591494
+I/rtl=I/RTL 0*3591675
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*102677*0xb338e7316b4e3534607f9620883dd93b4c26e327|0*103591*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*103689*0x37ff9ec3a62d3d4d46c841c4397f9d5885c8a4dd|0*133615*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|2824
+
+[cycloneiv_hssi_rx_pma]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|1513|1*639065
+B/trans=3*75438
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3592606
+I/trans=0*3592920
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*72892*0x32f715bfc3436fb10746ba466cd1576b3cb399c8|0*74971*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*75058*0x4eaac9ad8cb76e65f2d27a9b8c39c25a49c5729e|0*79699*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|1460
+
+[cycloneiv_hssi_rx_pma_sub_clkdiv]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|1371|1*641907
+B/trans=3*72549
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3593613
+I/trans=0*3593874
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*70982*0x3149fd6245eebb5c8594cbd19c26af610808f82c|0*71420*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*71518*0xfd3add5d14ffc33c9ee4b78dbeb5eb0916491d96|0*72785*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|1359
+
+[cycloneiv_hssi_rx_pma_sub_deser]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|1306|1*642717
+B/trans=3*71052
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3594433
+I/trans=0*3594693
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*69476*0x53ec99cd28afe1a5e0aa8607336dde069062880f|0*69976*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*70073*0xfe3dd98777f9542f14423ec3de2083fc231a1c25|0*70876*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|1292
+
+[cycloneiv_hssi_tx_digi]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|17648|1*643543
+B/trans=3*3053399
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3595994
+I/trans=0*3596341
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*613776*0x59d79717f37443516038d17eb44542ed7de26866|0*618527*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*618615*0x05735f8408be73e060f769110b0451c545a1cfa6|0*639083*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|17468
+
+[cycloneiv_hssi_tx_digi_bist_gen]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|6478|1*653425
+B/rtl=3*535551
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3597210
+I/rtl=I/RTL 0*3597422
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*198215*0xe079825da220948c03c1ce5d70c6de41506c534b|0*198838*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*198935*0xd9bdab323c0aa8a7fc3da75ccc78b2b5c8befbff|0*351470*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|6462
+
+[cycloneiv_hssi_tx_digi_enc_chnl_top]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|12719|1*689273
+B/rtl=3*1843501
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3598222
+I/rtl=I/RTL 0*3598438
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*429882*0xdf89c27151442bbfc6da37f9b8b0c080d2aa57d5|0*431428*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*431529*0xda68478bb6995e37eaf18b85861031cde2ab695e|0*607386*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|12676
+
+[cycloneiv_hssi_tx_digi_iq_pipe_tx]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|17296|1*727553
+B/rtl=3*3032003
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3599128
+I/rtl=I/RTL 0*3599310
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*607494*0xf0ac7b2e8987b1879f6f479f32d016b7288c325c|0*608711*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*608810*0x3628c15f8a58596f23f7abd3fa68a2e201fabea3|0*613670*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|17264
+
+[cycloneiv_hssi_tx_digi_prbs_gen]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|10584|1*729433
+B/rtl=3*1271124
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3599804
+I/rtl=I/RTL 0*3600016
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*351574*0x36a7a78afd6c70fa7c8d65401b19339c9f505fa4|0*352170*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*352267*0xb92e60d4540bc6fc68cbe7459cdf7e483d173d1e|0*429778*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|10568
+
+[cycloneiv_hssi_tx_digi_tx_ctrl]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|5864|1*747713
+B/trans=3*469205
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3601179
+I/trans=0*3601534
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*178477*0x2df53709b118a2099245fa59bd9b17acd80408df|0*181838*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*181934*0x6de9212dc2da26376b8bcf9aaf55c936b1a70839|0*198110*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|5685
+
+[cycloneiv_hssi_tx_digi_txclk_ctl]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|4857|1*753435
+B/trans=3*393423
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3602364
+I/trans=0*3602721
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*158371*0xb647f2527fff544c95fc77f1659cd5754b7bf8ec|0*159618*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*159716*0x365e40ec1fcf8b10c45a9097a6aa8322d967b5ef|0*163342*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|4800
+
+[cycloneiv_hssi_tx_digis_ph_fifo]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|5226|1*755445
+B/trans=3*426387
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3603520
+I/trans=0*3603876
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*169454*0x2ade4583cbdc328ca2aded3202941df23944e1ce|0*170537*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*170634*0xfe8a2ef8f253062a2b35ffd06ea209260efd50a2|0*178371*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|5182
+
+[cycloneiv_hssi_tx_digis_ram8x49_syn]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|5037|1*757615
+B/trans=3*407221
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3604614
+I/trans=0*3604974
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*163449*0x54a68f60cdeb1962f836bad259cba4223d80f63f|0*164130*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*164231*0x441330640119e01cb8df92612f4d9c9ed4b300d5|0*169344*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|5020
+
+[cycloneiv_hssi_tx_digis_txclk_gating]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|4781|1*759049
+B/trans=3*392419
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3605589
+I/trans=0*3605950
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*157386*0x9df159b8d885e26b0ae57bf9b1c83ac1add673c1|0*157890*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*157992*0x396f18f53ad3a5714895a388d810bdf503684d9a|0*158260*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|4770
+
+[cycloneiv_hssi_tx_pcs]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|18567|1*759651
+B/trans=3*3069297
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3607975
+I/trans=0*3608385
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*639180*0x443f3ddcf77d4a20115faa55c3a0ea7016206a28|0*648969*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*649056*0x09d33a233c38485f5f9f671496089cac049b0d78|0*733402*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|18311
+
+[cycloneiv_hssi_tx_pipe_interface]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|3733|1*789021
+B/rtl=3*322001
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3609366
+I/rtl=I/RTL 0*3609579
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*133720*0x79499ba17520e1c6177090cd9ddbd0192cce0af9|0*134783*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*134881*0x7b4eed933da0614b900e29dae52b2c1984f004bd|0*144636*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|3703
+
+[cycloneiv_hssi_tx_pma]
+A/trans=21|./src/cycloneiv_hssi_atoms.vhd|1083|1*792661
+B/trans=3*51930
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*3610430
+I/trans=0*3610840
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*62750*0xde208c108ba0700934a91034273faace206b5755|0*64325*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*64412*0xffcc4198273a82e6f15799bd2ee1affcc823ff3c|0*69380*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|1042
+
+[cycloneiv_hssi_tx_pma_sub_out_block]
+A/vital_tx_out_block=21|./src/cycloneiv_hssi_atoms.vhd|103|1*795487
+B/vital_tx_out_block=3*17744
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_tx_out_block=8.2.1986.SP1.35.3497  (Windows)
+I=0*3611680
+I/vital_tx_out_block=0*3612024
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*40533*0x5f4dd7862ed5f3066e9f9e63713bad805ef39c5a|0*41151*0xf2538cdc6f7b23a146389216c886e772
+M/vital_tx_out_block=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*41252*0x969f5c11c46b0110720c049f523f60be3bc7988e|0*41857*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|88
+
+[cycloneiv_hssi_tx_pma_sub_parallel_register]
+A/vital_tx_reg=21|./src/cycloneiv_hssi_atoms.vhd|170|1*796294
+B/vital_tx_reg=3*19322
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_tx_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*3612723
+I/vital_tx_reg=0*3613075
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*41980*0x2275ec937a995056da18bb73ea8b594bbc4b3d31|0*42614*0xf2538cdc6f7b23a146389216c886e772
+M/vital_tx_reg=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*42723*0x399c9cf664c1667acff73285ffd5e2839b40f22f|0*43344*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|156
+
+[cycloneiv_hssi_tx_pma_sub_reg]
+A/vital_cycloneiv_hssi_tx_pma_sub_reg=21|./src/cycloneiv_hssi_atoms.vhd|54|1*797127
+B/vital_cycloneiv_hssi_tx_pma_sub_reg=3*17038
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_cycloneiv_hssi_tx_pma_sub_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*3613682
+I/vital_cycloneiv_hssi_tx_pma_sub_reg=0*3613988
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*39325*0x9f23e49dd2bd2655b3ccacee21bbe7410f5717bb|0*39834*0xf2538cdc6f7b23a146389216c886e772
+M/vital_cycloneiv_hssi_tx_pma_sub_reg=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*39929*0x8a9400be778f9c4e2075a906fb35d87e7e29dc06|0*40399*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|43
+
+[cycloneiv_hssi_tx_pma_sub_ser]
+A/vital_transmitter_atom=21|./src/cycloneiv_hssi_atoms.vhd|267|1*797759
+B/vital_transmitter_atom=3*20834
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_transmitter_atom=8.2.1986.SP1.35.3497  (Windows)
+I=0*3614844
+I/vital_transmitter_atom=0*3615262
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*43469*0x52abe8fe16d425326fc499c858b8ee858f2f7851|0*44916*0xf2538cdc6f7b23a146389216c886e772
+M/vital_transmitter_atom=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*45011*0xf40d413e9fb63fd40c214140ecb797a8bc7b4637|0*49773*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|236
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det]
+A/tx_rx_det_arch=21|./src/cycloneiv_hssi_atoms.vhd|971|1*800250
+B/tx_rx_det_arch=3*50224
+C=8.2.1986.SP1.35.3497  (Windows)
+C/tx_rx_det_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3616095
+I/tx_rx_det_arch=0*3616279
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*60918*0x13b723e28cd0e6c58f7a003d556eee24daa83d02|0*61360*0xf2538cdc6f7b23a146389216c886e772
+M/tx_rx_det_arch=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*61461*0xbba5fe98e081d6fcd000ae7d0facec90a5adc9fa|0*62631*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|962
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen]
+A/clk_gen_arch=21|./src/cycloneiv_hssi_atoms.vhd|559|1*801197
+B/clk_gen_arch=3*41026
+C=8.2.1986.SP1.35.3497  (Windows)
+C/clk_gen_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3616798
+I/clk_gen_arch=0*3616990
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*50967*0x0dbd6ef4abaa76d30b3a521f5bb0e49796e87a2c|0*51361*0xf2538cdc6f7b23a146389216c886e772
+M/clk_gen_arch=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*51470*0xbebb786d5ee7f37b31f7615d32f3ec5290dbc441|0*52431*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|552
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2]
+A/div_by_2_arch=21|./src/cycloneiv_hssi_atoms.vhd|513|1*801918
+B/div_by_2_arch=3*39541
+C=8.2.1986.SP1.35.3497  (Windows)
+C/div_by_2_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3617516
+I/div_by_2_arch=0*3617709
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*49894*0x83fb55f376f4525429cf49d80f9ca4fa86933849|0*50234*0xf2538cdc6f7b23a146389216c886e772
+M/div_by_2_arch=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*50344*0x04bf9a90e166ee58d4ba27ad2232f76ca855e77b|0*50840*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|470
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control]
+A/rcv_det_control_arch=21|./src/cycloneiv_hssi_atoms.vhd|821|1*802544
+B/rcv_det_control_arch=3*48346
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rcv_det_control_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3618212
+I/rcv_det_control_arch=0*3618412
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*56513*0x386c4e13927d385aab5aad093670345b0a479cd5|0*57138*0xf2538cdc6f7b23a146389216c886e772
+M/rcv_det_control_arch=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*57255*0x5af5efacff866e1095429814dda66e98c5dd78e5|0*58581*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|809
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital]
+A/rcv_det_digital_arch=21|./src/cycloneiv_hssi_atoms.vhd|898|1*803465
+B/rcv_det_digital_arch=3*49285
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rcv_det_digital_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3619025
+I/rcv_det_digital_arch=0*3619225
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*58722*0x6266b02e95a1520e42df052fc87fd78a9df00772|0*59349*0xf2538cdc6f7b23a146389216c886e772
+M/rcv_det_digital_arch=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*59466*0x58305f2e6a538861548efd1318e7b9e1139af61d|0*60777*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|886
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm]
+A/rcv_det_fsm_arch=21|./src/cycloneiv_hssi_atoms.vhd|668|1*804418
+B/rcv_det_fsm_arch=3*42594
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rcv_det_fsm_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3619850
+I/rcv_det_fsm_arch=0*3620046
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*53744*0x7db9c2806364bffea3987606aca162a33c99fdd0|0*54204*0xf2538cdc6f7b23a146389216c886e772
+M/rcv_det_fsm_arch=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*54317*0xc6275f76ddbc9bbdd5e122b30eb779ad716aa997|0*56380*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|657
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync]
+A/rcv_det_sync_arch=21|./src/cycloneiv_hssi_atoms.vhd|622|1*805495
+B/rcv_det_sync_arch=3*41373
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rcv_det_sync_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*3620520
+I/rcv_det_sync_arch=0*3620717
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*52556*0x2cb98c18c4d69f3e24075f274c5d8f99337b8236|0*52938*0xf2538cdc6f7b23a146389216c886e772
+M/rcv_det_sync_arch=21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*53052*0x088c1267bddc0ca8b57aa497cbacb179649111f2|0*53609*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|614
+
+[cycloneiv_hssi_tx_sm]
+A/rtl=A/RTL 21|./src/cycloneiv_hssi_atoms.vhd|76310|1*806109
+B/rtl=3*14432169
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*3621245
+I/rtl=I/RTL 0*3621446
+M=11|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3210235*0x416a6e68de6b802a1e84d7f06717877bad5e8391|0*3210913*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_hssi_atoms.vhd|0*3210999*0x765cc97b1521de8c943ff69e0dc26ea86a8dbe5c|0*3318918*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_hssi_atoms.vhd|76291
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, CYCLONEIV_HSSI VHDL LIBRARY
+ModifyID=435
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=0|0cycloneiv_hssi.mgf|3621446|0
+1=0|1cycloneiv_hssi.mgf|806109|0
+3=0|3cycloneiv_hssi.mgf|15788100|0
+
+[~U]
+cycloneiv_hssi_calibration_block=11|0*3541213|
+cycloneiv_hssi_cmu=11|0*3542347|
+cycloneiv_hssi_cmu_auto_speed_neg=11|0*3544438|
+cycloneiv_hssi_cmu_chnl_reset=11|0*3545758|
+cycloneiv_hssi_cmu_clk_ctl=11|0*3546858|
+cycloneiv_hssi_cmu_clk_gating=11|0*3547949|
+cycloneiv_hssi_cmu_quad_reset=11|0*3548905|
+cycloneiv_hssi_cmu_rx_ctrl=11|0*3550053|
+cycloneiv_hssi_cmu_rxclk_ctl=11|0*3551080|
+cycloneiv_hssi_cmu_rxclk_gating=11|0*3552305|
+cycloneiv_hssi_cmu_tx_ctrl=11|0*3553267|
+cycloneiv_hssi_cmu_txclk_ctl=11|0*3554294|
+cycloneiv_hssi_cmu_txclk_gating=11|0*3555471|
+cycloneiv_hssi_components=CYCLONEIV_HSSI_COMPONENTS 3|0*3556433|0*3556622
+cycloneiv_hssi_digi_chnl_hip_spt=11|0*3558177|
+cycloneiv_hssi_dskw_sm=11|0*3559382|
+cycloneiv_hssi_pcs_reset=11|0*3560155|
+cycloneiv_hssi_phystatus_generator=11|0*3561112|
+cycloneiv_hssi_phystatus_generator_fsm=11|0*3562033|
+cycloneiv_hssi_q_pipe_interface_top=11|0*3563144|
+cycloneiv_hssi_rcv_sm=11|0*3564646|
+cycloneiv_hssi_rx_digi=11|0*3565448|
+cycloneiv_hssi_rx_digi_auto_speed_neg=11|0*3568735|
+cycloneiv_hssi_rx_digi_bist_ver=11|0*3569713|
+cycloneiv_hssi_rx_digi_cdr_ctrl=11|0*3570641|
+cycloneiv_hssi_rx_digi_comp_chnl_top=11|0*3571537|
+cycloneiv_hssi_rx_digi_dec_chnl_top=11|0*3572896|
+cycloneiv_hssi_rx_digi_dskw_fifo=11|0*3573660|
+cycloneiv_hssi_rx_digi_eii_module=11|0*3574527|
+cycloneiv_hssi_rx_digi_freqdet=11|0*3575541|
+cycloneiv_hssi_rx_digi_iq_pipe_rx=11|0*3576418|
+cycloneiv_hssi_rx_digi_pcs_channel_testbus=11|0*3577208|
+cycloneiv_hssi_rx_digi_prbs_ver=11|0*3577897|
+cycloneiv_hssi_rx_digi_rx_ctrl=11|0*3578873|
+cycloneiv_hssi_rx_digi_rxclk_ctl=11|0*3580374|
+cycloneiv_hssi_rx_digi_wordalign=11|0*3581611|
+cycloneiv_hssi_rx_digis_ph_fifo=11|0*3582570|
+cycloneiv_hssi_rx_digis_ram16x14_syn=11|0*3583740|
+cycloneiv_hssi_rx_digis_ram20x16_syn=11|0*3584813|
+cycloneiv_hssi_rx_digis_ram8x70_syn=11|0*3585886|
+cycloneiv_hssi_rx_digis_rxclk_gating=11|0*3586940|
+cycloneiv_hssi_rx_pcs=11|0*3587917|
+cycloneiv_hssi_rx_pipe_interface=11|0*3591105|
+cycloneiv_hssi_rx_pma=11|0*3591860|
+cycloneiv_hssi_rx_pma_sub_clkdiv=11|0*3593320|
+cycloneiv_hssi_rx_pma_sub_deser=11|0*3594141|
+cycloneiv_hssi_tx_digi=11|0*3594959|
+cycloneiv_hssi_tx_digi_bist_gen=11|0*3596902|
+cycloneiv_hssi_tx_digi_enc_chnl_top=11|0*3597718|
+cycloneiv_hssi_tx_digi_iq_pipe_tx=11|0*3598738|
+cycloneiv_hssi_tx_digi_prbs_gen=11|0*3599496|
+cycloneiv_hssi_tx_digi_tx_ctrl=11|0*3600360|
+cycloneiv_hssi_tx_digi_txclk_ctl=11|0*3601943|
+cycloneiv_hssi_tx_digis_ph_fifo=11|0*3603132|
+cycloneiv_hssi_tx_digis_ram8x49_syn=11|0*3604286|
+cycloneiv_hssi_tx_digis_txclk_gating=11|0*3605340|
+cycloneiv_hssi_tx_pcs=11|0*3606317|
+cycloneiv_hssi_tx_pipe_interface=11|0*3608961|
+cycloneiv_hssi_tx_pma=11|0*3609844|
+cycloneiv_hssi_tx_pma_sub_out_block=11|0*3611352|
+cycloneiv_hssi_tx_pma_sub_parallel_register=11|0*3612387|
+cycloneiv_hssi_tx_pma_sub_reg=11|0*3613440|
+cycloneiv_hssi_tx_pma_sub_ser=11|0*3614330|
+cycloneiv_hssi_tx_pma_sub_tx_rx_det=11|0*3615831|
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen=11|0*3616542|
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2=11|0*3617259|
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control=11|0*3617916|
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital=11|0*3618729|
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm=11|0*3619558|
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync=11|0*3620259|
+cycloneiv_hssi_tx_sm=11|0*3620932|
+

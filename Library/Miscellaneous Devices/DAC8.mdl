@@ -1,0 +1,4 @@
+* 8-Bit generic D/A converter
+* INPUTS VCC, GND, D7, D6, D5, D4, D3, D2, D1, D0, VRM, VRP;
+* OUTPUTS VCC_LD, D7_LD, D6_LD, D5_LD, D4_LD, D3_LD, D2_LD, D1_LD, D0_LD, VOUT;
+.MODEL DAC8 xsimcode(file="{MODEL_PATH}DAC8.scb" func=DAC8 {mntymx})

@@ -1,0 +1,28 @@
+[Plugin]
+Name=per_can
+Description=Stand-alone controller for a Controller Area Network conforming to the CAN 2.0B specification.
+Caption=CAN Controller
+Implement=per_can
+HardwareID=CANB_W
+Bitmap=per_can.bmp
+LargeBitmap=per_can_large.bmp
+
+[Instance]
+;dummy command to force instance creation
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=TRX interrupt
+Description=CAN controller interrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

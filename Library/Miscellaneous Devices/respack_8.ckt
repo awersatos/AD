@@ -1,0 +1,15 @@
+* 8 resistor pack
+*
+*
+.subckt respack_8 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 PARAMS: Value=1k
+*
+R1 1 16 {Value}
+R2 2 15 {Value}
+R3 3 14 {Value}
+R4 4 13 {Value}
+R5 5 12 {Value}
+R6 6 11 {Value}
+R7 7 10 {Value}
+R8 8 9  {Value}
+*
+.ends respack_8

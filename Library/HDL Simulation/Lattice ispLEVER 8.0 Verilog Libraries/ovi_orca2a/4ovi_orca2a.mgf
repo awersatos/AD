@@ -1,0 +1,68 @@
+V 000038 56 743 1265381453364 ROM16X1
+(_unit ROM16X1
+	(_specify
+		(_specparam AD0DLYLH integer (0 0 0))
+		(_specparam AD0DLYHL integer (0 0 0))
+		(_specparam AD1DLYLH integer (0 0 0))
+		(_specparam AD1DLYHL integer (0 0 0))
+		(_specparam AD2DLYLH integer (0 0 0))
+		(_specparam AD2DLYHL integer (0 0 0))
+		(_specparam AD3DLYLH integer (0 0 0))
+		(_specparam AD3DLYHL integer (0 0 0))
+		(_specparam DO0DLYLH integer (0 0 0))
+		(_specparam DO0DLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 146
+			(_port AD0 in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 147
+			(_port AD1 in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 148
+			(_port AD2 in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 149
+			(_port AD3 in )
+			(_port DO0 out )
+		)
+	)
+)
+V 000038 56 901 1265381453369 ROM32X1
+(_unit ROM32X1
+	(_specify
+		(_specparam AD0DLYLH integer (0 0 0))
+		(_specparam AD0DLYHL integer (0 0 0))
+		(_specparam AD1DLYLH integer (0 0 0))
+		(_specparam AD1DLYHL integer (0 0 0))
+		(_specparam AD2DLYLH integer (0 0 0))
+		(_specparam AD2DLYHL integer (0 0 0))
+		(_specparam AD3DLYLH integer (0 0 0))
+		(_specparam AD3DLYHL integer (0 0 0))
+		(_specparam AD4DLYLH integer (0 0 0))
+		(_specparam AD4DLYHL integer (0 0 0))
+		(_specparam DO0DLYLH integer (0 0 0))
+		(_specparam DO0DLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 164
+			(_port AD0 in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 165
+			(_port AD1 in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 166
+			(_port AD2 in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 167
+			(_port AD3 in )
+			(_port DO0 out )
+		)
+		(_modpath parallel unknown 0 168
+			(_port AD4 in )
+			(_port DO0 out )
+		)
+	)
+)

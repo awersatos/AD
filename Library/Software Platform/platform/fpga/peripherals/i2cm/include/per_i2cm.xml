@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_i2cm" description="I2CM Controller">
+		<sfr name="CTRL"	 offset="0" size="8" description="Control Register">
+			<bitfield name="NACK"	start="7"  end="7"  access="rw" description="Generate Read Acknowledge Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="STA"	start="6"  end="6"  access="rw" description="Generate A Start Condition Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="STO"	start="5"  end="5"  access="rw" description="Generate A Stop Condition Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="RD"	start="4"  end="4"  access="rw" description="Read Data From I2C Bus Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="WR"	start="3"  end="3"  access="rw" description="Write Data To I2C Bus Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IACK"	start="2"  end="2"  access="rw" description="Interrupt Acknowledge Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IEN"	start="1"  end="1"  access="rw" description="Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="STAT"	 offset="1" size="8" description="Status Register">
+			<bitfield name="BUSY"	start="2"  end="2"  access="r" description="Core Busy Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXACK"	start="1"  end="1"  access="r" description="Receive Acknowledge Flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="INTREQ"	start="0"  end="0"  access="r" description="Interrupt Request Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="CLK0"	 offset="2" size="8" description="Clock Divisor Low Byte Register"/>
+		<sfr name="CLK1"	 offset="3" size="8" description="Clock Divisor High Byte Data Register"/>
+		<sfr name="WRDAT"	 offset="4" size="8" description="Write Data Buffer Register"/>
+		<sfr name="RDDAT"	 offset="5" size="8" description="Read Data Buffer Register" access="r"/>
+	</group>
+</sfrfile>

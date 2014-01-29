@@ -1,0 +1,751 @@
+timestamp=1265381553788
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[AO222S]
+A/AO222S=22|./src/rtl/structural/clk_filter.v|79|1*125339
+B/AO222S=3*1510332
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=246,471,623,825
+R=./src/rtl/structural/clk_filter.v|79
+
+[BLOCKRAM_SL]
+A/BLOCKRAM_SL=22|./src/rtl/behavioral/BLOCKRAM_SL.v|18|1*43488
+B/BLOCKRAM_SL=3*375373
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=768,1187,1732,1976
+R=./src/rtl/behavioral/BLOCKRAM_SL.v|18
+
+[BOXT]
+A/BOXT=22|./src/rtl/structural/BOXT.v|37|1*96425
+B/BOXT=3*1452265
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=15326,20288,26506,35032
+R=./src/rtl/structural/BOXT.v|37
+
+[BOXT_HRESETN]
+A/BOXT_HRESETN=22|./src/rtl/behavioral/clock_gen.v|380|1*17097
+B/BOXT_HRESETN=3*33249
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=194,414,573,699
+R=./src/rtl/behavioral/clock_gen.v|380
+
+[CCLK_TREE]
+A/CCLK_TREE=22|./src/rtl/behavioral/clock_gen.v|290|1*11863
+B/CCLK_TREE=3*31053
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=115,298,410,529
+R=./src/rtl/behavioral/clock_gen.v|290
+
+[DELC0P1]
+A/DELC0P1=22|./src/rtl/structural/clk_filter.v|68|1*124691
+B/DELC0P1=3*1510182
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=111,304,448,600
+R=./src/rtl/structural/clk_filter.v|68
+
+[FMCLK_TREE]
+A/FMCLK_TREE=22|./src/rtl/behavioral/clock_gen.v|331|1*13576
+B/FMCLK_TREE=3*31512
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=117,301,413,532
+R=./src/rtl/behavioral/clock_gen.v|331
+
+[FSCLK_TREE]
+A/FSCLK_TREE=22|./src/rtl/behavioral/clock_gen.v|346|1*14147
+B/FSCLK_TREE=3*31665
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=117,301,413,532
+R=./src/rtl/behavioral/clock_gen.v|346
+
+[HCLK_TREE]
+A/HCLK_TREE=22|./src/rtl/behavioral/clock_gen.v|268|1*11293
+B/HCLK_TREE=3*30901
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=115,299,411,530
+R=./src/rtl/behavioral/clock_gen.v|268
+
+[MPC_ABLK]
+A/MPC_ABLK=22|./src/rtl/behavioral/MPC_ABLK.v|19|1*39565
+B/MPC_ABLK=3*322939
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1950,2962,4729,5536
+R=./src/rtl/behavioral/MPC_ABLK.v|19
+
+[MPC_AFSM]
+A/MPC_AFSM=22|./src/rtl/behavioral/MPC_AFSM.v|19|1*91824
+B/MPC_AFSM=3*1403763
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=912,1461,2052,2374
+R=./src/rtl/behavioral/MPC_AFSM.v|19
+
+[MPC_CLK_TREE]
+A/MPC_CLK_TREE=22|./src/rtl/behavioral/clock_gen.v|316|1*13003
+B/MPC_CLK_TREE=3*31357
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=121,308,420,539
+R=./src/rtl/behavioral/clock_gen.v|316
+
+[MPC_MBLK]
+A/MPC_MBLK=22|./src/rtl/behavioral/MPC_MBLK.v|18|1*34448
+B/MPC_MBLK=3*273299
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1465,2081,2975,3615
+R=./src/rtl/behavioral/MPC_MBLK.v|18
+
+[MPC_MFSM]
+A/MPC_MFSM=22|./src/rtl/behavioral/MPC_MFSM.v|18|1*89591
+B/MPC_MFSM=3*1347118
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1557,2435,3634,4119
+R=./src/rtl/behavioral/MPC_MFSM.v|18
+
+[MPC_PULSE]
+A/MPC_PULSE=22|./src/rtl/behavioral/MPC_PULSE.v|19|1*42422
+B/MPC_PULSE=3*369308
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=278,522,932,1084
+R=./src/rtl/behavioral/MPC_PULSE.v|19
+
+[MPC_RDREG]
+A/MPC_RDREG=22|./src/rtl/behavioral/MPC_RDREG.v|19|1*38163
+B/MPC_RDREG=3*311477
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=603,1087,1615,2030
+R=./src/rtl/behavioral/MPC_RDREG.v|19
+
+[MPC_SHT16]
+A/MPC_SHT16=22|./src/rtl/behavioral/MPC_SHT16.v|22|1*36233
+B/MPC_SHT16=3*282283
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=473,1103,2001,2265
+R=./src/rtl/behavioral/MPC_SHT16.v|22
+
+[MPC_TOP]
+A/MPC_TOP=22|./src/rtl/behavioral/MPC_TOP.v|18|1*29730
+B/MPC_TOP=3*247908
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2272,3560,5380,7207
+R=./src/rtl/behavioral/MPC_TOP.v|18
+
+[MPI_DELAYS]
+A/MPI_DELAYS=22|./src/rtl/structural/MPI_DELAYS.v|24|1*108256
+B/MPI_DELAYS=3*1482038
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=954,1711,2542,3971
+R=./src/rtl/structural/MPI_DELAYS.v|24
+
+[MRRST_N_TREE]
+A/MRRST_N_TREE=22|./src/rtl/behavioral/clock_gen.v|364|1*15951
+B/MRRST_N_TREE=3*32939
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=121,310,422,541
+R=./src/rtl/behavioral/clock_gen.v|364
+
+[OSC_DIV]
+A/OSC_DIV=22|./src/rtl/behavioral/clock_gen.v|257|1*15287
+B/OSC_DIV=3*31969
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=182,358,504,587
+R=./src/rtl/behavioral/clock_gen.v|257
+
+[SCLK_TREE]
+A/SCLK_TREE=22|./src/rtl/behavioral/clock_gen.v|306|1*12433
+B/SCLK_TREE=3*31205
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=115,298,410,529
+R=./src/rtl/behavioral/clock_gen.v|306
+
+[SLRST_N_TREE]
+A/SLRST_N_TREE=22|./src/rtl/behavioral/clock_gen.v|372|1*16524
+B/SLRST_N_TREE=3*33094
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=121,309,421,540
+R=./src/rtl/behavioral/clock_gen.v|372
+
+[SYSBUSA_sim]
+A/SYSBUSA_sim=22|./src/SYSBUSA_sim.v|6|1*147889
+B/SYSBUSA_sim=3*1592836
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=45032,53100,63576,71772
+R=./src/SYSBUSA_sim.v|6
+
+[SYS_TREES]
+A/SYS_TREES=22|./src/rtl/structural/SYS_TREES.v|3|1*95791
+B/SYS_TREES=3*1452113
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=115,335,505,689
+R=./src/rtl/structural/SYS_TREES.v|3
+
+[TCK_TREE]
+A/TCK_TREE=22|./src/rtl/behavioral/clock_gen.v|355|1*14718
+B/TCK_TREE=3*31818
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=113,295,407,526
+R=./src/rtl/behavioral/clock_gen.v|355
+
+[UM_DEL]
+A/UM_DEL=22|./src/rtl/behavioral/ulogic_mr.v|702|1*83633
+B/UM_DEL=3*1282185
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=109,295,407,523
+R=./src/rtl/behavioral/ulogic_mr.v|702
+
+[USR_MR_TOP]
+A/USR_MR_TOP=22|./src/rtl/structural/USR_MR_TOP.v|15|1*120058
+B/USR_MR_TOP=3*1505555
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1319,1925,2523,3424
+R=./src/rtl/structural/USR_MR_TOP.v|15
+
+[USR_SL_TOP]
+A/USR_SL_TOP=22|./src/rtl/structural/USR_SL_TOP.v|17|1*121653
+B/USR_SL_TOP=3*1507717
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1127,1693,2248,3080
+R=./src/rtl/structural/USR_SL_TOP.v|17
+
+[US_DEL]
+A/US_DEL=22|./src/rtl/behavioral/ulogic_sl.v|324|1*87657
+B/US_DEL=3*1326098
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=109,295,407,523
+R=./src/rtl/behavioral/ulogic_sl.v|324
+
+[algn_cascade]
+A/algn_cascade=22|./src/rtl/pcs/algn_cascade.v|72|1*125986
+B/algn_cascade=3*1510481
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3637,4903,7387,9261
+R=./src/rtl/pcs/algn_cascade.v|72
+
+[algn_ck_2ph]
+A/algn_ck_2ph=22|./src/rtl/pcs/algn_ck_2ph.v|43|1*130097
+B/algn_ck_2ph=3*1546786
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=194,366,537,643
+R=./src/rtl/pcs/algn_ck_2ph.v|43
+
+[ao_22222222]
+A/ao_22222222=22|./src/rtl/pcs/algn_cascade.v|637|1*131545
+B/ao_22222222=3*1549315
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=156,417,633,993
+R=./src/rtl/pcs/algn_cascade.v|637
+
+[aoi222x2v1mce]
+A/aoi222x2v1mce=22|./src/lib/aoi222x2v1mce.v|10|1*7514
+B/aoi222x2v1mce=3*2000
+C=8.2.1986.SP1.35.3497  (Windows)
+D/aoi222x2v1mce=4*2615
+P/~emb=260,458,598,757
+R=./src/lib/aoi222x2v1mce.v|10
+
+[aoi_2_2]
+A/aoi_2_2=22|./src/rtl/pcs/algn_cascade.v|713|1*133805
+B/aoi_2_2=3*1552178
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=194,361,535,647
+R=./src/rtl/pcs/algn_cascade.v|713
+
+[aoi_2_2_2_2]
+A/aoi_2_2_2_2=22|./src/rtl/pcs/algn_cascade.v|678|1*134421
+B/aoi_2_2_2_2=3*1552920
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=310,516,722,995
+R=./src/rtl/pcs/algn_cascade.v|678
+
+[arbiter]
+A/arbiter=22|./src/rtl/behavioral/arbiter.v|34|1*44668
+B/arbiter=3*383972
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1155,1827,3164,3490
+R=./src/rtl/behavioral/arbiter.v|34
+
+[bsctl8]
+A/bsctl8=22|./src/rtl/behavioral/bsctl8.v|171|1*23408
+B/bsctl8=3*125268
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2412,4046,6928,8075
+R=./src/rtl/behavioral/bsctl8.v|171
+
+[bstapfsm]
+A/bstapfsm=22|./src/rtl/behavioral/bstapfsm.v|14|1*28425
+B/bstapfsm=3*212507
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=946,1454,2076,2361
+R=./src/rtl/behavioral/bstapfsm.v|14
+
+[cfg]
+A/cfg=22|./src/rtl/structural/cfg.v|23|1*111972
+B/cfg=3*1484067
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=8634,11516,15987,21646
+R=./src/rtl/structural/cfg.v|23
+
+[cfg_clock]
+A/cfg_clock=22|./src/rtl/behavioral/cfg_clock.v|20|1*65508
+B/cfg_clock=3*840733
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1909,2876,3970,4480
+R=./src/rtl/behavioral/cfg_clock.v|20
+
+[cfg_cntl]
+A/cfg_cntl=22|./src/rtl/behavioral/cfg_cntl.v|20|1*76634
+B/cfg_cntl=3*1062945
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3087,4274,5899,6587
+R=./src/rtl/behavioral/cfg_cntl.v|20
+
+[cfg_dec]
+A/cfg_dec=22|./src/rtl/behavioral/cfg_dec.v|19|1*74274
+B/cfg_dec=3*1005757
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1073,1775,2494,2848
+R=./src/rtl/behavioral/cfg_dec.v|19
+
+[cfg_div]
+A/cfg_div=22|./src/rtl/behavioral/cfg_div.v|18|1*63868
+B/cfg_div=3*754225
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=854,1235,2850,3233
+R=./src/rtl/behavioral/cfg_div.v|18
+
+[cfg_dly]
+A/cfg_dly=22|./src/rtl/structural/cfg_dly.v|18|1*123771
+B/cfg_dly=3*1510032
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=713,1110,1483,1942
+R=./src/rtl/structural/cfg_dly.v|18
+
+[cfg_front]
+A/cfg_front=22|./src/rtl/behavioral/cfg_front.v|20|1*69686
+B/cfg_front=3*912423
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4281,5869,8283,9921
+R=./src/rtl/behavioral/cfg_front.v|20
+
+[cfg_if]
+A/cfg_if=22|./src/rtl/behavioral/cfg_if.v|20|1*55107
+B/cfg_if=3*521790
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2914,3928,5207,5812
+R=./src/rtl/behavioral/cfg_if.v|20
+
+[cfg_master]
+A/cfg_master=22|./src/rtl/behavioral/cfg_master.v|20|1*51990
+B/cfg_master=3*451383
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2460,3734,5284,6032
+R=./src/rtl/behavioral/cfg_master.v|20
+
+[cfg_ram]
+A/cfg_ram=22|./src/rtl/behavioral/cfg_ram.v|20|1*57322
+B/cfg_ram=3*544985
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1292,1986,2659,2979
+R=./src/rtl/behavioral/cfg_ram.v|20
+
+[cfg_reg]
+A/cfg_reg=22|./src/rtl/behavioral/cfg_reg.v|20|1*59106
+B/cfg_reg=3*554956
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4113,5907,8786,10080
+R=./src/rtl/behavioral/cfg_reg.v|20
+
+[cfg_spi]
+A/cfg_spi=22|./src/rtl/behavioral/cfg_spi.v|20|1*67950
+B/cfg_spi=3*887995
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1197,2026,2705,2877
+R=./src/rtl/behavioral/cfg_spi.v|20
+
+[clk_filter]
+A/clk_filter=22|./src/rtl/structural/clk_filter.v|25|1*10626
+B/clk_filter=3*30748
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=117,360,528,736
+R=./src/rtl/structural/clk_filter.v|25
+
+[clock_gen]
+A/clock_gen=22|./src/rtl/behavioral/clock_gen.v|25|1*8712
+B/clock_gen=3*17422
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1689,2623,3577,4583
+R=./src/rtl/behavioral/clock_gen.v|25
+
+[cmux_4_to_1]
+A/cmux_4_to_1=22|./src/rtl/pcs/algn_cascade.v|599|1*133169
+B/cmux_4_to_1=3*1550591
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=255,433,623,781
+R=./src/rtl/pcs/algn_cascade.v|599
+
+[cmux_8_to_1]
+A/cmux_8_to_1=22|./src/rtl/pcs/algn_cascade.v|577|1*130765
+B/cmux_8_to_1=3*1548641
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=166,408,609,862
+R=./src/rtl/pcs/algn_cascade.v|577
+
+[ctr_cntl]
+A/ctr_cntl=22|./src/rtl/structural/ctr_cntl.v|17|1*109867
+B/ctr_cntl=3*1482191
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3664,4495,5595,7421
+R=./src/rtl/structural/ctr_cntl.v|17
+
+[decoder]
+A/decoder=22|./src/rtl/behavioral/decoder.v|23|1*47715
+B/decoder=3*418606
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=538,851,1123,1283
+R=./src/rtl/behavioral/decoder.v|23
+
+[defaultslave]
+A/defaultslave=22|./src/rtl/behavioral/defaultslave.v|20|1*51049
+B/defaultslave=3*446439
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=344,618,1030,1184
+R=./src/rtl/behavioral/defaultslave.v|20
+
+[delc0p2x2v1mce]
+A/delc0p2x2v1mce=22|./src/lib/delc0p2x2v1mce.v|11|1*390
+B/delc0p2x2v1mce=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+D/delc0p2x2v1mce=4*0
+P/~emb=125,296,399,499
+R=./src/lib/delc0p2x2v1mce.v|11
+
+[delc0p5x2v1mce]
+A/delc0p5x2v1mce=22|./src/lib/delc0p5x2v1mce.v|11|1*3921
+B/delc0p5x2v1mce=3*1075
+C=8.2.1986.SP1.35.3497  (Windows)
+D/delc0p5x2v1mce=4*1272
+P/~emb=125,296,399,499
+R=./src/lib/delc0p5x2v1mce.v|11
+
+[delc1x2v1mce]
+A/delc1x2v1mce=22|./src/lib/delc1x2v1mce.v|11|1*1570
+B/delc1x2v1mce=3*460
+C=8.2.1986.SP1.35.3497  (Windows)
+D/delc1x2v1mce=4*430
+P/~emb=121,290,393,493
+R=./src/lib/delc1x2v1mce.v|11
+
+[delc2x2v1mce]
+A/delc2x2v1mce=22|./src/lib/delc2x2v1mce.v|11|1*981
+B/delc2x2v1mce=3*305
+C=8.2.1986.SP1.35.3497  (Windows)
+D/delc2x2v1mce=4*217
+P/~emb=121,290,393,493
+R=./src/lib/delc2x2v1mce.v|11
+
+[invx16v1mce]
+A/invx16v1mce=22|./src/lib/invx16v1mce.v|11|1*5099
+B/invx16v1mce=3*1385
+C=8.2.1986.SP1.35.3497  (Windows)
+D/invx16v1mce=4*1698
+P/~emb=119,285,388,488
+R=./src/lib/invx16v1mce.v|11
+
+[invx4v1mce]
+A/invx4v1mce=22|./src/lib/invx4v1mce.v|11|1*4512
+B/invx4v1mce=3*1232
+C=8.2.1986.SP1.35.3497  (Windows)
+D/invx4v1mce=4*1489
+P/~emb=117,282,385,485
+R=./src/lib/invx4v1mce.v|11
+
+[muxm2s]
+A/muxm2s=22|./src/rtl/behavioral/muxm2s.v|23|1*48507
+B/muxm2s=3*423921
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1586,2007,2642,2945
+R=./src/rtl/behavioral/muxm2s.v|23
+
+[muxs2m]
+A/muxs2m=22|./src/rtl/behavioral/muxs2m.v|21|1*49730
+B/muxs2m=3*435968
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1352,1862,2409,2691
+R=./src/rtl/behavioral/muxs2m.v|21
+
+[nor2ix4v1mce]
+A/nor2ix4v1mce=22|./src/lib/nor2ix4v1mce.v|10|1*6861
+B/nor2ix4v1mce=3*1845
+C=8.2.1986.SP1.35.3497  (Windows)
+D/nor2ix4v1mce=4*2327
+P/~emb=148,324,443,569
+R=./src/lib/nor2ix4v1mce.v|10
+
+[oa_22222222]
+A/oa_22222222=22|./src/rtl/pcs/algn_cascade.v|732|1*132357
+B/oa_22222222=3*1549953
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=156,416,632,992
+R=./src/rtl/pcs/algn_cascade.v|732
+
+[oa_2_2]
+A/oa_2_2=22|./src/rtl/pcs/algn_cascade.v|824|1*136501
+B/oa_2_2=3*1554770
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=192,359,523,626
+R=./src/rtl/pcs/algn_cascade.v|824
+
+[oai_2_2]
+A/oai_2_2=22|./src/rtl/pcs/algn_cascade.v|809|1*135153
+B/oai_2_2=3*1553462
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=194,362,528,631
+R=./src/rtl/pcs/algn_cascade.v|809
+
+[oai_2_2_2_2]
+A/oai_2_2_2_2=22|./src/rtl/pcs/algn_cascade.v|774|1*135769
+B/oai_2_2_2_2=3*1554204
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=310,517,727,995
+R=./src/rtl/pcs/algn_cascade.v|774
+
+[pcs_sl]
+A/pcs_sl=22|./src/rtl/behavioral/pcs_sl.v|17|1*93864
+B/pcs_sl=3*1431478
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1113,1907,2839,3248
+R=./src/rtl/behavioral/pcs_sl.v|17
+
+[quad_delay]
+A/quad_delay=22|./src/rtl/structural/MPI_DELAYS.v|134|1*123168
+B/quad_delay=3*1509879
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=117,319,452,593
+R=./src/rtl/structural/MPI_DELAYS.v|134
+
+[reg_3efxx]
+A/reg_3efxx=22|./src/rtl/pcs/reg_3efxx.v|87|1*137116
+B/reg_3efxx=3*1555487
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1433,1932,2872,3225
+R=./src/rtl/pcs/reg_3efxx.v|87
+
+[regfile]
+A/regfile=22|./src/rtl/behavioral/regfile.v|99|1*17798
+B/regfile=3*33804
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3685,5976,9608,10554
+R=./src/rtl/behavioral/regfile.v|99
+
+[reset_deassert_sync]
+A/reset_deassert_sync=22|./src/rtl/behavioral/reset_deassert_sync.v|35|1*33740
+B/reset_deassert_sync=3*271172
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=187,379,568,722
+R=./src/rtl/behavioral/reset_deassert_sync.v|35
+
+[sbnx16v1mce]
+A/sbnx16v1mce=22|./src/lib/sbnx16v1mce.v|11|1*2746
+B/sbnx16v1mce=3*768
+C=8.2.1986.SP1.35.3497  (Windows)
+D/sbnx16v1mce=4*852
+P/~emb=119,287,390,490
+R=./src/lib/sbnx16v1mce.v|11
+
+[sbnx1v1mce]
+A/sbnx1v1mce=22|./src/lib/sbnx1v1mce.v|11|1*3334
+B/sbnx1v1mce=3*922
+C=8.2.1986.SP1.35.3497  (Windows)
+D/sbnx1v1mce=4*1063
+P/~emb=117,284,387,487
+R=./src/lib/sbnx1v1mce.v|11
+
+[sbnx2v1mce]
+A/sbnx2v1mce=22|./src/lib/sbnx2v1mce.v|11|1*2159
+B/sbnx2v1mce=3*615
+C=8.2.1986.SP1.35.3497  (Windows)
+D/sbnx2v1mce=4*643
+P/~emb=117,284,387,487
+R=./src/lib/sbnx2v1mce.v|11
+
+[sbnx4v1mce]
+A/sbnx4v1mce=22|./src/lib/sbnx4v1mce.v|11|1*6274
+B/sbnx4v1mce=3*1692
+C=8.2.1986.SP1.35.3497  (Windows)
+D/sbnx4v1mce=4*2118
+P/~emb=117,284,387,487
+R=./src/lib/sbnx4v1mce.v|11
+
+[sbnx8v1mce]
+A/sbnx8v1mce=22|./src/lib/sbnx8v1mce.v|11|1*5687
+B/sbnx8v1mce=3*1539
+C=8.2.1986.SP1.35.3497  (Windows)
+D/sbnx8v1mce=4*1909
+P/~emb=117,284,387,487
+R=./src/lib/sbnx8v1mce.v|11
+
+[sys_bus_top]
+A/sys_bus_top=22|./src/sys_bus_top.v|28|1*139459
+B/sys_bus_top=3*1581796
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=16792,21134,25757,33395
+R=./src/sys_bus_top.v|28
+
+[timeout_preset]
+A/timeout_preset=22|./src/rtl/behavioral/timeout_preset.v|6|1*93225
+B/timeout_preset=3*1424512
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=168,591,964,1053
+R=./src/rtl/behavioral/timeout_preset.v|6
+
+[timeoutcounter]
+A/timeoutcounter=22|./src/rtl/behavioral/timeoutcounter.v|8|1*46884
+B/timeoutcounter=3*417340
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=296,556,799,969
+R=./src/rtl/behavioral/timeoutcounter.v|8
+
+[tx_alignment]
+A/tx_alignment=22|./src/rtl/pcs/tx_alignment.v|2|1*138838
+B/tx_alignment=3*1581641
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=213,424,574,737
+R=./src/rtl/pcs/tx_alignment.v|2
+
+[ulogic_mr]
+A/ulogic_mr=22|./src/rtl/behavioral/ulogic_mr.v|17|1*80181
+B/ulogic_mr=3*1124042
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1886,2981,4824,6019
+R=./src/rtl/behavioral/ulogic_mr.v|17
+
+[ulogic_sl]
+A/ulogic_sl=22|./src/rtl/behavioral/ulogic_sl.v|22|1*85279
+B/ulogic_sl=3*1290264
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1266,2123,3325,4126
+R=./src/rtl/behavioral/ulogic_sl.v|22
+
+[umfifo]
+A/umfifo=22|./src/rtl/behavioral/umfifo.v|16|1*84200
+B/umfifo=3*1282334
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=437,731,1134,1288
+R=./src/rtl/behavioral/umfifo.v|16
+
+[usfifo]
+A/usfifo=22|./src/rtl/behavioral/usfifo.v|21|1*88224
+B/usfifo=3*1326247
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=618,983,1647,1845
+R=./src/rtl/behavioral/usfifo.v|21
+
+[~A]
+./src/lib/delc0p2x2v1mce.v_delc2x2v1mce.v_delc1x2v1mce.v_sbnx2v1mce.v_sbnx16v1mce.v_sbnx1v1mce.v_delc0p5x2v1mce.v_invx4v1mce.v_invx16v1mce.v_sbnx8v1mce.v_sbnx4v1mce.v_nor2ix4v1mce.v_aoi222x2v1mce.v_clock_gen.v_regfile.v_bsctl8.v_MPC_TOP.v_BLOCKRAM_SL.v_arbiter.v_decoder.v_muxm2s.v_muxs2m.v_defaultslave.v_cfg_master.v_cfg_if.v_cfg_ram.v_cfg_reg.v_cfg_clock.v_cfg_spi.v_cfg_front.v_cfg_cntl.v_reset_deassert_sync.v_MPC_PULSE.v_ulogic_mr.v_ulogic_sl.v_bstapfsm.v_MPC_MBLK.v_MPC_SHT16.v_MPC_RDREG.v_MPC_ABLK.v_timeoutcounter.v_cfg_div.v_cfg_dec.v_umfifo.v_usfifo.v_MPC_MFSM.v_MPC_AFSM.v_timeout_preset.v_pcs_sl.v_SYS_TREES.v_BOXT.v_MPI_DELAYS.v_ctr_cntl.v_cfg.v_USR_MR_TOP.v_USR_SL_TOP.v_cfg_dly.v_clk_filter.v_algn_cascade.v_reg_3efxx.v_tx_alignment.v_algn_ck_2ph.v_sys_bus_top.v_SYSBUSA_sim.v=0*253441*415556
+Comment=LATTICE ispLEVER 8.0,  SYSBUSA_ALDEC_WORK LIBRARY
+LastVerilogToplevel=SYSBUSA_sim
+ModifyID=646
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+
+[~MFT]
+0=91|0sysbusa_aldec_work.mgf|415556|0
+1=89|1sysbusa_aldec_work.mgf|147889|0
+3=89|3sysbusa_aldec_work.mgf|1592836|0
+4=12|4sysbusa_aldec_work.mgf|2615|0
+
+[~U]
+$root=12|0*0|
+AO222S=12|0*196175||0x80
+BLOCKRAM_SL=12|0*61020||0x80
+BOXT=12|0*152749||0x80
+BOXT_HRESETN=12|0*15961||0x80
+CCLK_TREE=12|0*11815||0x80
+DELC0P1=12|0*195655||0x80
+FMCLK_TREE=12|0*13160||0x80
+FSCLK_TREE=12|0*13619||0x80
+HCLK_TREE=12|0*11373||0x80
+MPC_ABLK=12|0*54601||0x80
+MPC_AFSM=12|0*145540||0x80
+MPC_CLK_TREE=12|0*12699||0x80
+MPC_MBLK=12|0*46588||0x80
+MPC_MFSM=12|0*141067||0x80
+MPC_PULSE=12|0*59986||0x80
+MPC_RDREG=12|0*52511||0x80
+MPC_SHT16=12|0*49013||0x80
+MPC_TOP=12|0*40560||0x80
+MPI_DELAYS=12|0*171988||0x80
+MRRST_N_TREE=12|0*15039||0x80
+OSC_DIV=12|0*14519||0x80
+SCLK_TREE=12|0*12257||0x80
+SLRST_N_TREE=12|0*15500||0x80
+SYSBUSA_sim=12|0*227347||0x90
+SYS_TREES=12|0*152131||0x80
+TCK_TREE=12|0*14078||0x80
+UM_DEL=12|0*132613||0x80
+USR_MR_TOP=12|0*189774||0x80
+USR_SL_TOP=12|0*191929||0x80
+US_DEL=12|0*138365||0x80
+algn_cascade=12|0*196790||0x80
+algn_ck_2ph=12|0*202803||0x80
+ao_22222222=12|0*204171||0x80
+aoi222x2v1mce=12|0*6282||0x80
+aoi_2_2=12|0*206623||0x80
+aoi_2_2_2_2=12|0*207143||0x80
+arbiter=12|0*63016||0x80
+bsctl8=12|0*28480||0x80
+bstapfsm=12|0*38567||0x80
+cfg=12|0*177672||0x80
+cfg_clock=12|0*101582||0x80
+cfg_cntl=12|0*119970||0x80
+cfg_dec=12|0*116538||0x80
+cfg_div=12|0*98470||0x80
+cfg_dly=12|0*194479||0x80
+cfg_front=12|0*108176||0x80
+cfg_if=12|0*80461||0x80
+cfg_master=12|0*73730||0x80
+cfg_ram=12|0*84452||0x80
+cfg_reg=12|0*86892||0x80
+cfg_spi=12|0*105528||0x80
+clk_filter=12|0*10722||0x80
+clock_gen=12|0*7352||0x80
+cmux_4_to_1=12|0*205987||0x80
+cmux_8_to_1=12|0*203391||0x80
+ctr_cntl=12|0*174287||0x80
+decoder=12|0*67791||0x80
+defaultslave=12|0*72645||0x80
+delc0p2x2v1mce=12|0*630||0x80
+delc0p5x2v1mce=12|0*3441||0x80
+delc1x2v1mce=12|0*1586||0x80
+delc2x2v1mce=12|0*1109||0x80
+invx16v1mce=12|0*4379||0x80
+invx4v1mce=12|0*3920||0x80
+muxm2s=12|0*68839||0x80
+muxs2m=12|0*70702||0x80
+nor2ix4v1mce=12|0*5757||0x80
+oa_22222222=12|0*205079||0x80
+oa_2_2=12|0*209143||0x80
+oai_2_2=12|0*207891||0x80
+oai_2_2_2_2=12|0*208395||0x80
+pcs_sl=12|0*148620||0x80
+quad_delay=12|0*193956||0x80
+reg_3efxx=12|0*209646||0x80
+regfile=12|0*16550||0x80
+reset_deassert_sync=12|0*45944||0x80
+sbnx16v1mce=12|0*2522||0x80
+sbnx1v1mce=12|0*2982||0x80
+sbnx2v1mce=12|0*2063||0x80
+sbnx4v1mce=12|0*5298||0x80
+sbnx8v1mce=12|0*4839||0x80
+sys_bus_top=12|0*212741||0x80
+timeout_preset=12|0*147741||0x80
+timeoutcounter=12|0*66912||0x80
+tx_alignment=12|0*212152||0x80
+ulogic_mr=12|0*125275||0x80
+ulogic_sl=12|0*134355||0x80
+umfifo=12|0*133068||0x80
+usfifo=12|0*138820||0x80
+

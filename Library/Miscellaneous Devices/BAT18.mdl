@@ -1,0 +1,5 @@
+*****************************************************************
+* BAT18 Diode Model
+.MODEL BAT18 D(IS=185F RS=.30 N=1.305 BV=70 IBV=.1N
++ CJO=1.17P VJ=.12 M=.096 TT=125N)
+* SIEMENS 40 Volt 125ns  Si-PIN-Switch  17-03-1996 Moschovis

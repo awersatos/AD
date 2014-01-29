@@ -1,0 +1,19 @@
+[Plugin]
+Name=emac32_to_ethernet
+Description=Adapts the emac32 device to Ethernet platform level.
+SourceDir=services\platform\ethernet\adaptors\emac32\src
+CompileOption0=-I"$(SSASROOT)\services\platform\ethernet\include"
+CompileOption1=-I"$(SSASROOT)\services\platform\ethernet\internal"
+InitHandler=emac32_to_ethernet_init
+InitHandlerPriority=8
+Implement=ethernet_adaptor
+Require0=ethernet
+
+[Available_If0]
+kind=PLUGIN
+Object=drv_emac32
+Condition=EQ
+
+[Instance]
+Require0=drv_emac32
+

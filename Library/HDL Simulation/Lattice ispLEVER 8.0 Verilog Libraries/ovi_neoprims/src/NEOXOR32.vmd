@@ -1,0 +1,116 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Copyright (c) 2005 by Lattice Semiconductor Corporation
+// --------------------------------------------------------------------
+//
+//
+//                     Lattice Semiconductor Corporation
+//                     5555 NE Moore Court
+//                     Hillsboro, OR 97214
+//                     U.S.A.
+//
+//                     TEL: 1-800-Lattice  (USA and Canada)
+//                          1-408-826-6000 (other locations)
+//
+//                     web: http://www.latticesemi.com/
+//                     email: techsupport@latticesemi.com
+//
+// --------------------------------------------------------------------
+//
+// Simulation Library File for NEOPRIMS
+//
+// $Header: /home/dmsys/pvcs/RCSMigTest/rcs/verilog/pkg/versclibs/data/neoprims/RCS/NEOXOR32.vmd,v 1.3 2005/05/19 18:23:58 pradeep Exp $ 
+//
+`timescale 1 ns / 100 ps
+`celldefine
+
+   module NEOXOR32 (OUT, IN0,  IN1,  IN2,  IN3,  IN4,  IN5,  IN6,  IN7,
+                         IN8,  IN9,  IN10, IN11, IN12, IN13, IN14, IN15,
+                         IN16, IN17, IN18, IN19, IN20, IN21, IN22, IN23,
+                         IN24, IN25, IN26, IN27, IN28, IN29, IN30, IN31 );
+
+      output OUT ;
+      input IN0,  IN1,  IN2,  IN3,  IN4,  IN5,  IN6,  IN7,
+            IN8,  IN9,  IN10, IN11, IN12, IN13, IN14, IN15,
+            IN16, IN17, IN18, IN19, IN20, IN21, IN22, IN23,
+            IN24, IN25, IN26, IN27, IN28, IN29, IN30, IN31 ;
+
+      xor (OUT, IN0,  IN1,  IN2,  IN3,  IN4,  IN5,  IN6,  IN7,
+                IN8,  IN9,  IN10, IN11, IN12, IN13, IN14, IN15,
+                IN16, IN17, IN18, IN19, IN20, IN21, IN22, IN23,
+                IN24, IN25, IN26, IN27, IN28, IN29, IN30, IN31 );
+
+   specify
+
+      specparam INDLYLH0     = 0:0:0,  INDLYLH1     = 0:0:0 ;
+      specparam INDLYLH2     = 0:0:0,  INDLYLH3     = 0:0:0 ;
+      specparam INDLYLH4     = 0:0:0,  INDLYLH5     = 0:0:0 ;
+      specparam INDLYLH6     = 0:0:0,  INDLYLH7     = 0:0:0 ;
+      specparam INDLYLH8     = 0:0:0,  INDLYLH9     = 0:0:0 ;
+      specparam INDLYLH10    = 0:0:0,  INDLYLH11    = 0:0:0 ;
+      specparam INDLYLH12    = 0:0:0,  INDLYLH13    = 0:0:0 ;
+      specparam INDLYLH14    = 0:0:0,  INDLYLH15    = 0:0:0 ;
+      specparam INDLYLH16    = 0:0:0,  INDLYLH17    = 0:0:0 ;
+      specparam INDLYLH18    = 0:0:0,  INDLYLH19    = 0:0:0 ;
+      specparam INDLYLH20    = 0:0:0,  INDLYLH21    = 0:0:0 ;
+      specparam INDLYLH22    = 0:0:0,  INDLYLH23    = 0:0:0 ;
+      specparam INDLYLH24    = 0:0:0,  INDLYLH25    = 0:0:0 ;
+      specparam INDLYLH26    = 0:0:0,  INDLYLH27    = 0:0:0 ;
+      specparam INDLYLH28    = 0:0:0,  INDLYLH29    = 0:0:0 ;
+      specparam INDLYLH30    = 0:0:0,  INDLYLH31    = 0:0:0 ;
+      specparam INDLYHL0     = 0:0:0,  INDLYHL1     = 0:0:0 ;
+      specparam INDLYHL2     = 0:0:0,  INDLYHL3     = 0:0:0 ;
+      specparam INDLYHL4     = 0:0:0,  INDLYHL5     = 0:0:0 ;
+      specparam INDLYHL6     = 0:0:0,  INDLYHL7     = 0:0:0 ;
+      specparam INDLYHL8     = 0:0:0,  INDLYHL9     = 0:0:0 ;
+      specparam INDLYHL10    = 0:0:0,  INDLYHL11    = 0:0:0 ;
+      specparam INDLYHL12    = 0:0:0,  INDLYHL13    = 0:0:0 ;
+      specparam INDLYHL14    = 0:0:0,  INDLYHL15    = 0:0:0 ;
+      specparam INDLYHL16    = 0:0:0,  INDLYHL17    = 0:0:0 ;
+      specparam INDLYHL18    = 0:0:0,  INDLYHL19    = 0:0:0 ;
+      specparam INDLYHL20    = 0:0:0,  INDLYHL21    = 0:0:0 ;
+      specparam INDLYHL22    = 0:0:0,  INDLYHL23    = 0:0:0 ;
+      specparam INDLYHL24    = 0:0:0,  INDLYHL25    = 0:0:0 ;
+      specparam INDLYHL26    = 0:0:0,  INDLYHL27    = 0:0:0 ;
+      specparam INDLYHL28    = 0:0:0,  INDLYHL29    = 0:0:0 ;
+      specparam INDLYHL30    = 0:0:0,  INDLYHL31    = 0:0:0 ;
+      specparam OUTDLYLH     = 0:0:0,  OUTDLYHL     = 0:0:0 ;
+
+
+      (IN0 => OUT) = (INDLYLH0 +OUTDLYLH, INDLYHL0 +OUTDLYHL);
+      (IN1 => OUT) = (INDLYLH1 +OUTDLYLH, INDLYHL1 +OUTDLYHL);
+      (IN2 => OUT) = (INDLYLH2 +OUTDLYLH, INDLYHL2 +OUTDLYHL);
+      (IN3 => OUT) = (INDLYLH3 +OUTDLYLH, INDLYHL3 +OUTDLYHL);
+      (IN4 => OUT) = (INDLYLH4 +OUTDLYLH, INDLYHL4 +OUTDLYHL);
+      (IN5 => OUT) = (INDLYLH5 +OUTDLYLH, INDLYHL5 +OUTDLYHL);
+      (IN6 => OUT) = (INDLYLH6 +OUTDLYLH, INDLYHL6 +OUTDLYHL);
+      (IN7 => OUT) = (INDLYLH7 +OUTDLYLH, INDLYHL7 +OUTDLYHL);
+      (IN8 => OUT) = (INDLYLH8 +OUTDLYLH, INDLYHL8 +OUTDLYHL);
+      (IN9 => OUT) = (INDLYLH9 +OUTDLYLH, INDLYHL9 +OUTDLYHL);
+      (IN10=> OUT) = (INDLYLH10+OUTDLYLH, INDLYHL10+OUTDLYHL);
+      (IN11=> OUT) = (INDLYLH11+OUTDLYLH, INDLYHL11+OUTDLYHL);
+      (IN12=> OUT) = (INDLYLH12+OUTDLYLH, INDLYHL12+OUTDLYHL);
+      (IN13=> OUT) = (INDLYLH13+OUTDLYLH, INDLYHL13+OUTDLYHL);
+      (IN14=> OUT) = (INDLYLH14+OUTDLYLH, INDLYHL14+OUTDLYHL);
+      (IN15=> OUT) = (INDLYLH15+OUTDLYLH, INDLYHL15+OUTDLYHL);
+      (IN16=> OUT) = (INDLYLH16+OUTDLYLH, INDLYHL16+OUTDLYHL);
+      (IN17=> OUT) = (INDLYLH17+OUTDLYLH, INDLYHL17+OUTDLYHL);
+      (IN18=> OUT) = (INDLYLH18+OUTDLYLH, INDLYHL18+OUTDLYHL);
+      (IN19=> OUT) = (INDLYLH19+OUTDLYLH, INDLYHL19+OUTDLYHL);
+      (IN20=> OUT) = (INDLYLH20+OUTDLYLH, INDLYHL20+OUTDLYHL);
+      (IN21=> OUT) = (INDLYLH21+OUTDLYLH, INDLYHL21+OUTDLYHL);
+      (IN22=> OUT) = (INDLYLH22+OUTDLYLH, INDLYHL22+OUTDLYHL);
+      (IN23=> OUT) = (INDLYLH23+OUTDLYLH, INDLYHL23+OUTDLYHL);
+      (IN24=> OUT) = (INDLYLH24+OUTDLYLH, INDLYHL24+OUTDLYHL);
+      (IN25=> OUT) = (INDLYLH25+OUTDLYLH, INDLYHL25+OUTDLYHL);
+      (IN26=> OUT) = (INDLYLH26+OUTDLYLH, INDLYHL26+OUTDLYHL);
+      (IN27=> OUT) = (INDLYLH27+OUTDLYLH, INDLYHL27+OUTDLYHL);
+      (IN28=> OUT) = (INDLYLH28+OUTDLYLH, INDLYHL28+OUTDLYHL);
+      (IN29=> OUT) = (INDLYLH29+OUTDLYLH, INDLYHL29+OUTDLYHL);
+      (IN30=> OUT) = (INDLYLH30+OUTDLYLH, INDLYHL30+OUTDLYHL);
+      (IN31=> OUT) = (INDLYLH31+OUTDLYLH, INDLYHL31+OUTDLYHL);
+
+   endspecify
+   endmodule
+`endcelldefine

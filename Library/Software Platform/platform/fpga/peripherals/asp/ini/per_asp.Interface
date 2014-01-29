@@ -1,0 +1,7 @@
+[Interface]
+Name=per_asp
+Category=INTERNAL
+Description=ASP core to manage interaction with CHC compiler. 
+
+; NOTE: This interface is internal to make sure it is not 
+;       included in a software platform document.

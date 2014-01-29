@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_ide
+Category=DRIVER
+System=False
+Description=IDE driver
+PublicDir=platform\fpga\drivers\ide\include
+

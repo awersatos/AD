@@ -1,0 +1,108 @@
+;...............................................................................
+;Constraints File
+;   Devices : 6-ports featuring PWM, Relay, and RS485/422 or RS232 communication.
+;   Board   : PB11 6-Channel Power Control Peripheral Board For NB02
+;
+;   Created 22-Jan-2008
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB       | TargetId=PB11.01 | Image=PB11.01 | ImageOffsetX=12 | ImageOffsetY=16 | Description=6-Channel Power Control Board
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Connector | TargetId=HDR1
+;...............................................................................
+
+;...............................................................................
+; Port 1
+;...............................................................................
+
+Record=Constraint | TargetKind=Port | TargetId=PORT1_RS485_232     | ConnectTo=HDR1-2     ;Operates as RS485/422 when logic high, operates as RS-232 when logic low
+Record=Constraint | TargetKind=Port | TargetId=PORT1_RXD           | ConnectTo=HDR1-30    ;RS485/422 or RS232 receiver output
+Record=Constraint | TargetKind=Port | TargetId=PORT1_CTS           | ConnectTo=HDR1-32    ;RS232 receiver output
+Record=Constraint | TargetKind=Port | TargetId=PORT1_RTS           | ConnectTo=HDR1-34    ;RS485/422 driver enable or RS232 driver input
+Record=Constraint | TargetKind=Port | TargetId=PORT1_HDPLX         | ConnectTo=HDR1-44    ;Operates in full-duplex mode when low, operates in half-duplex mode when high
+Record=Constraint | TargetKind=Port | TargetId=PORT1_TXD           | ConnectTo=HDR1-42    ;RS485/422 or RS232 driver input
+Record=Constraint | TargetKind=Port | TargetId=PORT1_RELAY         | ConnectTo=HDR1-26    ;Relay connected to +B when high, disconnected when low.
+Record=Constraint | TargetKind=Port | TargetId=PORT1_PWM           | ConnectTo=HDR1-6     ;Fast pulse width modulation output. (NB. connected to relay output)
+
+;...............................................................................
+; Port 2
+;...............................................................................
+
+Record=Constraint | TargetKind=Port | TargetId=PORT2_RS485_232     | ConnectTo=HDR1-52
+Record=Constraint | TargetKind=Port | TargetId=PORT2_RXD           | ConnectTo=HDR1-20
+Record=Constraint | TargetKind=Port | TargetId=PORT2_CTS           | ConnectTo=HDR1-58
+Record=Constraint | TargetKind=Port | TargetId=PORT2_RTS           | ConnectTo=HDR1-60
+Record=Constraint | TargetKind=Port | TargetId=PORT2_HDPLX         | ConnectTo=HDR1-64
+Record=Constraint | TargetKind=Port | TargetId=PORT2_TXD           | ConnectTo=HDR1-62
+Record=Constraint | TargetKind=Port | TargetId=PORT2_RELAY         | ConnectTo=HDR1-56
+Record=Constraint | TargetKind=Port | TargetId=PORT2_PWM           | ConnectTo=HDR1-14
+
+;...............................................................................
+; Port 3
+;...............................................................................
+
+Record=Constraint | TargetKind=Port | TargetId=PORT3_RS485_232     | ConnectTo=HDR1-24
+Record=Constraint | TargetKind=Port | TargetId=PORT3_RXD           | ConnectTo=HDR1-78
+Record=Constraint | TargetKind=Port | TargetId=PORT3_CTS           | ConnectTo=HDR1-80
+Record=Constraint | TargetKind=Port | TargetId=PORT3_RTS           | ConnectTo=HDR1-86
+Record=Constraint | TargetKind=Port | TargetId=PORT3_HDPLX         | ConnectTo=HDR1-76
+Record=Constraint | TargetKind=Port | TargetId=PORT3_TXD           | ConnectTo=HDR1-88
+Record=Constraint | TargetKind=Port | TargetId=PORT3_RELAY         | ConnectTo=HDR1-68
+Record=Constraint | TargetKind=Port | TargetId=PORT3_PWM           | ConnectTo=HDR1-82
+
+;...............................................................................
+; Port 4
+;...............................................................................
+
+Record=Constraint | TargetKind=Port | TargetId=PORT4_RS485_232     | ConnectTo=HDR1-10
+Record=Constraint | TargetKind=Port | TargetId=PORT4_RXD           | ConnectTo=HDR1-28
+Record=Constraint | TargetKind=Port | TargetId=PORT4_CTS           | ConnectTo=HDR1-8
+Record=Constraint | TargetKind=Port | TargetId=PORT4_RTS           | ConnectTo=HDR1-12
+Record=Constraint | TargetKind=Port | TargetId=PORT4_HDPLX         | ConnectTo=HDR1-46
+Record=Constraint | TargetKind=Port | TargetId=PORT4_TXD           | ConnectTo=HDR1-38
+Record=Constraint | TargetKind=Port | TargetId=PORT4_RELAY         | ConnectTo=HDR1-56
+Record=Constraint | TargetKind=Port | TargetId=PORT4_PWM           | ConnectTo=HDR1-36
+
+;...............................................................................
+; Port 5
+;...............................................................................
+
+Record=Constraint | TargetKind=Port | TargetId=PORT5_RS485_232     | ConnectTo=HDR1-72
+Record=Constraint | TargetKind=Port | TargetId=PORT5_RXD           | ConnectTo=HDR1-50
+Record=Constraint | TargetKind=Port | TargetId=PORT5_CTS           | ConnectTo=HDR1-48
+Record=Constraint | TargetKind=Port | TargetId=PORT5_RTS           | ConnectTo=HDR1-18
+Record=Constraint | TargetKind=Port | TargetId=PORT5_HDPLX         | ConnectTo=HDR1-74
+Record=Constraint | TargetKind=Port | TargetId=PORT5_TXD           | ConnectTo=HDR1-66
+Record=Constraint | TargetKind=Port | TargetId=PORT5_RELAY         | ConnectTo=HDR1-70
+Record=Constraint | TargetKind=Port | TargetId=PORT5_PWM           | ConnectTo=HDR1-16
+
+;...............................................................................
+; Port 6
+;...............................................................................
+
+Record=Constraint | TargetKind=Port | TargetId=PORT6_RS485_232     | ConnectTo=HDR1-10
+Record=Constraint | TargetKind=Port | TargetId=PORT6_RXD           | ConnectTo=HDR1-96
+Record=Constraint | TargetKind=Port | TargetId=PORT6_CTS           | ConnectTo=HDR1-94
+Record=Constraint | TargetKind=Port | TargetId=PORT6_RTS           | ConnectTo=HDR1-98
+Record=Constraint | TargetKind=Port | TargetId=PORT6_HDPLX         | ConnectTo=HDR1-90
+Record=Constraint | TargetKind=Port | TargetId=PORT6_TXD           | ConnectTo=HDR1-92
+Record=Constraint | TargetKind=Port | TargetId=PORT6_RELAY         | ConnectTo=HDR1-84
+Record=Constraint | TargetKind=Port | TargetId=PORT6_PWM           | ConnectTo=HDR1-100
+
+;...............................................................................
+; 12-Bit ADC
+;...............................................................................
+
+Record=Constraint | TargetKind=Port | TargetId=EOC1          | ConnectTo=HDR1-4        ; Active-low End of Conversion
+
+
+;...............................................................................
+

@@ -1,0 +1,50 @@
+*  
+* Diode Model Produced by Altium Ltd  
+* Date:  10-Mar-2004 
+*  
+* Manufacturer: Agilent  
+* Component Name: HDSP-A511  
+*  
+* Parameters derived from information available in data sheet.  
+*
+*                 common-anode
+*                 |  cathode-f
+*                 |  |  cathode-g
+*                 |  |  |  cathode-e
+*                 |  |  |  |  cathode-d
+*                 |  |  |  |  |  common-anode
+*                 |  |  |  |  |  |  cathode-DP
+*                 |  |  |  |  |  |  |  cathode-c
+*                 |  |  |  |  |  |  |  |  cathode-b
+*                 |  |  |  |  |  |  |  |  |  cathode-a
+*                 |  |  |  |  |  |  |  |  |  |
+.SUBCKT HDSP_A511 1  2  3  4  5  6  7  8  9  10
+
+DA1  1  10 dHDSP_A511
+DB1  1   9 dHDSP_A511
+DC1  1   8 dHDSP_A511
+DD1  1   5 dHDSP_A511
+DE1  1   4 dHDSP_A511
+DF1  1   2 dHDSP_A511
+DG1  1   3 dHDSP_A511
+DDP1 1   7 dHDSP_A511
+
+DA2  6  10 dHDSP_A511
+DB2  6   9 dHDSP_A511
+DC2  6   8 dHDSP_A511
+DD2  6   5 dHDSP_A511
+DE2  6   4 dHDSP_A511
+DF2  6   2 dHDSP_A511
+DG2  6   3 dHDSP_A511
+DDP2 6   7 dHDSP_A511
+
+.MODEL dHDSP_A511 D
++ (  
++     IS = 1.61114016E-27 
++      N = 1.30291189 
++     RS = 12.83456794 
++     BV = 50 
++    IBV = 100u 
++ )   
+
+.ENDS HDSP_A511

@@ -1,0 +1,93 @@
+//============================================================
+# ls47 source
+//74LS47 4-bit BCD to 7_segment decoder O/C output
+//All data obtained from TI (not listed in signetics)
+//The RBO/BI is treated as an input
+//Used one propagation delay since both are equal in data book
+//rbd 8-11-97: Added IO_PAIRS.
+//  Added io parameter to input LOAD.
+//  Removed v1 and r1 parameters from Vcc LOAD.
+//  Reduced ttlh_val/tthl_val to just tt_val.
+//dm 10-6-97: changed DRIVE v1 from voh_param to gnd_param to
+//  prevent a high level on the output without a pull-up resistor.
+// jjt 10/1/2002: copied ls47 in LS.txt and modified truth table to suit.
+//============================================================
+INPUTS VCC, GND, IND, INC, INB, INA, TEST, RBI, BI;
+OUTPUTS VCC_LD, IND_LD, INC_LD, INB_LD, INA_LD, TEST_LD, RBI_LD, BI_LD, 
+        OUTG, OUTF, OUTE, OUTD, OUTC, OUTB, OUTA;
+INTEGERS tblIndex;
+REALS tt_val, tplh_val, tphl_val, ril_val, rih_val,
+      ricc_val;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.75,5.25);	//check for min supply=4.75 and max supply=5.25
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.25,1.35);	//set input threshold values: vil and vih
+IO_PAIRS(INA:INA_LD, INB:INB_LD, INC:INC_LD, IND:IND_LD, TEST:TEST_LD, RBI:RBI_LD,
+         BI:BI_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tIND\tINC\tINB\tINA\tTEST\tRBI\tBI\tOUTA\tOUTB\tOUTC\tOUTD\tOUTE\tOUTF\tOUTG");
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 5n,  NULL));
+
+    tplh_val= (MIN_TYP_MAX(tp_param: NULL, NULL, 100n));
+    tphl_val= (MIN_TYP_MAX(tp_param: NULL, NULL, 100n));
+
+    //LS std output drive IOL max=8mA @ vol=0.4V: rol_param=(0.4-vol_param)/8mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 25,  NULL));
+
+    //open collector output
+    roh_param= (1e12);
+
+    //LS input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+    ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //LS input load IIL=-0.4mA @ 0.4V: r1= (voh_param-0.4)/0.4mA
+    rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 10.5k));
+
+    //Icc @ 5V: 200= 25mA typical, 131.6= 38mA max
+    ricc_val= (MIN_TYP_MAX(i_param: NULL, 200, 131.6));
+
+    STATE OUTA,OUTB,OUTC,OUTD,OUTE,OUTF,OUTG = UNKNOWN;	//initialize output
+    EXIT;
+  END;
+//MESSAGE("ttlh=%f\ttthl=%f\ttplh=%f\ttphl=%f",ttlh_val,tthl_val,tplh_val,tphl_val);
+DRIVE OUTA,OUTB,OUTC,OUTD,OUTE,OUTF,OUTG=
+     (v0=vol_param,v1=gnd_param,ttlh=tt_val,tthl=tt_val);
+LOAD IND_LD, INC_LD, INB_LD, INA_LD, TEST_LD, RBI_LD, BI_LD=
+     (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+
+TABLE tblIndex
+IND INC INB INA TEST RBI  BI   OUTA OUTB OUTC OUTD OUTE OUTF OUTG
+0   0   0   0   1    1    1    L    L    L    L    L    L    H    //0
+0   0   0   1   1    X    1    H    L    L    H    H    H    H    //1
+0   0   1   0   1    X    1    L    L    H    L    L    H    L    //2
+0   0   1   1   1    X    1    L    L    L    L    H    H    L    //3
+0   1   0   0   1    X    1    H    L    L    H    H    L    L    //4
+0   1   0   1   1    X    1    L    H    L    L    H    L    L    //5
+0   1   1   0   1    X    1    H    H    L    L    L    L    L    //6
+0   1   1   1   1    X    1    L    L    L    H    H    H    H    //7
+1   0   0   0   1    X    1    L    L    L    L    L    L    L    //8
+1   0   0   1   1    X    1    L    L    L    H    H    L    L    //9
+1   0   1   0   1    X    1    H    H    H    L    L    H    L    //A
+1   0   1   1   1    X    1    H    H    L    L    H    H    L    //B
+1   1   0   0   1    X    1    H    L    H    H    H    L    L    //C
+1   1   0   1   1    X    1    L    H    H    L    H    L    L    //D
+1   1   1   0   1    X    1    H    H    H    L    L    L    L    //E
+1   1   1   1   1    X    1    H    H    H    H    H    H    H    //F
+X   X   X   X   X    X    0    H    H    H    H    H    H    H    //BI
+0   0   0   0   1    0    0    H    H    H    H    H    H    H    //RBI
+X   X   X   X   0    X    1    L    L    L    L    L    L    L;   //TEST
+
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",present_time,
+//        IND,INC,INB,INA,TEST,RBI,BI,OUTA,OUTB,OUTC,OUTD,OUTE,OUTF,OUTG);
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+DELAY OUTA,OUTB,OUTC,OUTD,OUTE,OUTF,OUTG =
+  CASE (TRAN_LX) : tplh_val
+  CASE (TRAN_XL) : tphl_val
+END;
+EXIT;

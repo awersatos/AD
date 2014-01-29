@@ -1,0 +1,478 @@
+V 000046 56 976 1260919192553 cycloneiii_dffe
+(_unit cycloneiii_dffe
+	(_specify
+		(_specparam TREG integer 0)
+		(_specparam TREN integer 0)
+		(_specparam TRSU integer 0)
+		(_specparam TRH integer 0)
+		(_specparam TRPR integer 0)
+		(_specparam TRCL integer 0)
+		(_tchk setup 0 210
+			(_port D ())
+			(_port CLK (posedge) (_code  1 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 211
+			(_port CLK (posedge) (_code  2 legal))
+			(_port D ())
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 212
+			(_port ENA ())
+			(_port CLK (posedge) (_code  3 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 213
+			(_port CLK (posedge) (_code  4 legal))
+			(_port ENA ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 215
+			(_port CLRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 216
+			(_port PRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 217
+			(_port CLK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+	)
+)
+V 000047 56 608 1260919192558 cycloneiii_latch
+(_unit cycloneiii_latch
+	(_specify
+		(_tchk setup 0 233
+			(_port D ())
+			(_port ENA (posedge))
+		)
+		(_tchk hold 0 234
+			(_port ENA (negedge))
+			(_port D ())
+		)
+		(_modpath parallel unknown 0 236
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 237
+			(_port ENA in posedge)
+			(_port Q out posedge)
+			(_datain q_out in posedge)
+		)
+		(_modpath parallel positive 0 238
+			(_port PRE in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+		(_modpath parallel positive 0 239
+			(_port CLR in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+	)
+)
+V 000047 56 265 1260919192563 cycloneiii_mux21
+(_unit cycloneiii_mux21
+	(_specify
+		(_modpath parallel unknown 0 297
+			(_port A in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 298
+			(_port B in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 299
+			(_port S in )
+			(_port MO out )
+		)
+	)
+)
+V 000047 56 530 1260919192568 cycloneiii_mux41
+(_unit cycloneiii_mux41
+	(_specify
+		(_modpath parallel unknown 0 334
+			(_port IN0 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 335
+			(_port IN1 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 336
+			(_port IN2 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 337
+			(_port IN3 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 338
+			(_port S (_constant \1\) in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 339
+			(_port S (_constant \0\) in )
+			(_port MO out )
+		)
+	)
+)
+V 000046 56 115 1260919192573 cycloneiii_and1
+(_unit cycloneiii_and1
+	(_specify
+		(_modpath parallel unknown 0 355
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000047 56 116 1260919192578 cycloneiii_and16
+(_unit cycloneiii_and16
+	(_specify
+		(_modpath parallel unknown 0 368
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000054 56 132 1260919192599 cycloneiii_routing_wire
+(_unit cycloneiii_routing_wire
+	(_specify
+		(_modpath parallel unknown 0 462
+			(_port datain in )
+			(_port dataout out )
+		)
+	)
+)
+V 000045 56 204 1260919192620 cycloneiii_pll
+(_unit cycloneiii_pll
+	(_specify
+		(_tchk setuphold 0 1072
+			(_port scanclk (negedge))
+			(_port scandata ())
+		)
+		(_tchk setuphold 0 1073
+			(_port scanclk (negedge))
+			(_port scanclkena ())
+		)
+	)
+)
+V 000052 56 712 1260919192625 cycloneiii_lcell_comb
+(_unit cycloneiii_lcell_comb
+	(_specify
+		(_modpath parallel unknown 0 4183
+			(_port dataa in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 4184
+			(_port datab in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 4185
+			(_port datac in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 4186
+			(_port datad in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 4187
+			(_port cin in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 4189
+			(_port dataa in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 4190
+			(_port datab in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 4191
+			(_port cin in )
+			(_port cout out )
+		)
+	)
+)
+V 000045 56 1057 1260919192630 cycloneiii_ff
+(_unit cycloneiii_ff
+	(_specify
+		(_tchk setuphold 0 4338
+			(_port clk (posedge) (_code  8 nosloadsclr))
+			(_port d ())
+			(_register (d_viol))
+		)
+		(_tchk setuphold 0 4339
+			(_port clk (posedge) (_code  9 reset))
+			(_port sclr ())
+			(_register (sclr_viol))
+		)
+		(_tchk setuphold 0 4340
+			(_port clk (posedge) (_code  10 reset))
+			(_port sload ())
+			(_register (sload_viol))
+		)
+		(_tchk setuphold 0 4341
+			(_port clk (posedge) (_code  11 sloaddata))
+			(_port asdata ())
+			(_register (asdata_viol))
+		)
+		(_tchk setuphold 0 4342
+			(_port clk (posedge) (_code  12 reset))
+			(_port ena ())
+			(_register (ena_viol))
+		)
+		(_modpath parallel positive 0 4344
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 4345
+			(_port clrn in posedge)
+			(_port q out posedge)
+		)
+		(_modpath parallel positive 0 4346
+			(_port aload in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel unknown 0 4347
+			(_port asdata in )
+			(_port q out )
+		)
+	)
+)
+V 000061 56 248 1260919192635 cycloneiii_ram_pulse_generator
+(_unit cycloneiii_ram_pulse_generator
+	(_specify
+		(_specparam t_decode integer 0)
+		(_specparam t_access integer 0)
+		(_modpath parallel positive 0 4445
+			(_port clk in posedge)
+			(_port pulse out posedge)
+			(_datain state in posedge)
+		)
+	)
+)
+V 000055 56 1194 1260919192640 cycloneiii_ram_register
+(_unit cycloneiii_ram_register
+	(_specify
+		(_tchk setup 0 4520
+			(_port d ())
+			(_port clk (posedge) (_code  6 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 4521
+			(_port aclr ())
+			(_port clk (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 4522
+			(_port ena ())
+			(_port clk (posedge) (_code  7 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 4523
+			(_port stall ())
+			(_port clk (posedge) (_code  8 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 4524
+			(_port clk (posedge) (_code  9 reset))
+			(_port d ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 4525
+			(_port clk (posedge))
+			(_port aclr ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 4526
+			(_port clk (posedge) (_code  10 reset))
+			(_port ena ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 4527
+			(_port clk (posedge) (_code  11 reset))
+			(_port stall ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 4528
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_reg in posedge)
+		)
+		(_modpath parallel positive 0 4529
+			(_port aclr in posedge)
+			(_port q out posedge)
+			(_datain q_reg in posedge)
+		)
+	)
+)
+V 000054 56 513 1260919192649 cycloneiii_mac_data_reg
+(_unit cycloneiii_mac_data_reg
+	(_specify
+		(_tchk setuphold 0 5816
+			(_port clk (posedge) (_code  6 enable))
+			(_port data ())
+			(_register (d_viol))
+		)
+		(_tchk setuphold 0 5817
+			(_port clk (posedge) (_code  7 no_clr))
+			(_port ena ())
+			(_register (ena_viol))
+		)
+		(_modpath parallel positive 0 5819
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+		(_modpath parallel positive 0 5820
+			(_port aclr in posedge)
+			(_port dataout out posedge)
+		)
+	)
+)
+V 000054 56 492 1260919192654 cycloneiii_mac_sign_reg
+(_unit cycloneiii_mac_sign_reg
+	(_specify
+		(_tchk setuphold 0 5927
+			(_port clk (posedge) (_code  4 enable))
+			(_port d ())
+			(_register (d_viol))
+		)
+		(_tchk setuphold 0 5928
+			(_port clk (posedge) (_code  5 enable))
+			(_port ena ())
+			(_register (ena_viol))
+		)
+		(_modpath parallel positive 0 5930
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 5931
+			(_port aclr in posedge)
+			(_port q out posedge)
+		)
+	)
+)
+V 000059 56 376 1260919192659 cycloneiii_mac_mult_internal
+(_unit cycloneiii_mac_mult_internal
+	(_specify
+		(_modpath full unknown 0 6020
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 6021
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 6022
+			(_port signa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 6023
+			(_port signb in )
+			(_port dataout out )
+		)
+	)
+)
+V 000049 56 578 1260919192668 cycloneiii_mac_out
+(_unit cycloneiii_mac_out
+	(_specify
+		(_modpath parallel positive 0 6274
+			(_code  7 use_reg)
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+		(_modpath parallel positive 0 6275
+			(_port aclr in posedge)
+			(_port dataout out posedge)
+		)
+		(_modpath full unknown 0 6277
+			(_code -1 )
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_tchk setuphold 0 6279
+			(_port clk (posedge) (_code  8 enable))
+			(_port dataa ())
+		)
+		(_tchk setuphold 0 6281
+			(_port clk (posedge) (_code  9 no_aclr))
+			(_port ena ())
+		)
+	)
+)
+V 000049 56 195 1260919192673 cycloneiii_io_ibuf
+(_unit cycloneiii_io_ibuf
+	(_specify
+		(_modpath parallel unknown 0 6346
+			(_port i in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 6347
+			(_port ibar in )
+			(_port o out )
+		)
+	)
+)
+V 000049 56 350 1260919192678 cycloneiii_io_obuf
+(_unit cycloneiii_io_obuf
+	(_specify
+		(_modpath parallel unknown 0 6443
+			(_port i in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 6444
+			(_port i in )
+			(_port obar out )
+		)
+		(_modpath parallel unknown 0 6445
+			(_port oe in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 6446
+			(_port oe in )
+			(_port obar out )
+		)
+	)
+)
+V 000049 56 276 1260919192699 cycloneiii_ena_reg
+(_unit cycloneiii_ena_reg
+	(_specify
+		(_tchk setuphold 0 7007
+			(_port clk (posedge) (_code  4 reset))
+			(_port d ())
+			(_register (d_viol))
+		)
+		(_modpath parallel positive 0 7009
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+	)
+)
+V 000049 56 122 1260919192704 cycloneiii_clkctrl
+(_unit cycloneiii_clkctrl
+	(_specify
+		(_modpath full unknown 0 7099
+			(_port inclk in )
+			(_port outclk out )
+		)
+	)
+)
+V 000052 56 145 1260919192737 cycloneiii_oscillator
+(_unit cycloneiii_oscillator
+	(_specify
+		(_modpath parallel positive 0 7916
+			(_port oscena in posedge)
+			(_port clkout out posedge)
+		)
+	)
+)

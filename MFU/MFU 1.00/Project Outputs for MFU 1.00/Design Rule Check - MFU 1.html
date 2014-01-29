@@ -1,0 +1,400 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD 10\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">26.04.2013</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">16:56:56</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:08</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc" class="file"><acronym title="E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc">E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">5</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDASAE5T"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAEBE5T">Room BLUETOOTH_UNIT (Bounding Region = (126.2mm, 60.3mm, 154.1mm, 86.3mm) (InComponentClass('BLUETOOTH_UNIT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAKBE5T">Room GSM_UNIT (Bounding Region = (74.9mm, 15.3mm, 154.1mm, 47mm) (InComponentClass('GSM_UNIT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAQBE5T">Room NAVIGATION_UNIT (Bounding Region = (114.9mm, 89.5mm, 154.4mm, 111.1mm) (InComponentClass('NAVIGATION_UNIT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAWBE5T">Room MFU 1.00 (Bounding Region = (74.6mm, 49.3mm, 138.3mm, 109.9mm) (InComponentClass('MFU 1.00'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA2BE5T">Net Antennae (Tolerance=50mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDACCE5T">Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAVDE5T">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA1DE5T">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Disabled)(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDABEE5T">Pads and Vias to follow the Drill pairs settings</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAHEE5T">Hole Size Constraint (Min=0.3mm) (Max=5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDANEE5T">Component Clearance Constraint ( Horizontal Gap = 0.3mm, Vertical Gap = 0.3mm ) (Disabled)(All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDATEE5T">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (Disabled)(InComponent('C10')),(InComponent('R1')) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAZEE5T">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA5EE5T">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAFFE5T">Short-Circuit Constraint (Allowed=Yes) (InComponent('ANT1')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDALFE5T">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.3mm) (Air Gap=0.3mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDARFE5T">Width Constraint (Min=0.2mm) (Max=12mm) (Preferred=0.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAXFE5T">Clearance Constraint (Gap=0.3mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA3FE5T">Clearance Constraint (Gap=0.5mm) (InPolygon),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDADGE5T">Clearance Constraint (Gap=0.2mm) (InComponent('U12','U7','U9','U8') And IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAJGE5T">Clearance Constraint (Gap=0.2mm) (InRegion(3140,2260 ,4450 ,3400)),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAPGE5T">Room CAR ALARM_UNIT (Bounding Region = (5mm, 15.3mm, 71.7mm, 103.5mm) (InComponentClass('CAR ALARM_UNIT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAVGE5T">Room POWER_UNIT (Bounding Region = (19.3mm, 79.1mm, 86.4mm, 111.4mm) (InComponentClass('POWER_UNIT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">5</td>
+</tr>
+</table><br><hr><a name="IDACCE5T"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2335.567mil|Location2.X=2481.362mil|Location1.Y=1044.015mil|Location2.Y=1189.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2335.567mil|Location2.X=2481.362mil|Location1.Y=1044.015mil|Location2.Y=1189.811mil|Absolute=True">Pad K1-4(61.175mm,28.37mm)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2486.158mil|Location2.X=2553.213mil|Location1.Y=1161.354mil|Location2.Y=1220.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2486.158mil|Location2.X=2553.213mil|Location1.Y=1161.354mil|Location2.Y=1220.535mil|Absolute=True">Pad R4-2(64mm,30.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.064mil|Location2.X=2328.741mil|Location1.Y=3311.024mil|Location2.Y=3344.488mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.064mil|Location2.X=2328.741mil|Location1.Y=3311.024mil|Location2.Y=3344.488mil|Absolute=True">Pad U12-5(58.1mm,84.525mm)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.583mil|Location2.X=2378.016mil|Location1.Y=3324.74mil|Location2.Y=3364.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.583mil|Location2.X=2378.016mil|Location1.Y=3324.74mil|Location2.Y=3364.236mil|Absolute=True">Pad C45-1(59.85mm,84.95mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.064mil|Location2.X=2328.741mil|Location1.Y=3362.206mil|Location2.Y=3395.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.064mil|Location2.X=2328.741mil|Location1.Y=3362.206mil|Location2.Y=3395.67mil|Absolute=True">Pad U12-7(58.1mm,85.825mm)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.583mil|Location2.X=2378.016mil|Location1.Y=3324.74mil|Location2.Y=3364.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.583mil|Location2.X=2378.016mil|Location1.Y=3324.74mil|Location2.Y=3364.236mil|Absolute=True">Pad C45-1(59.85mm,84.95mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.064mil|Location2.X=2328.741mil|Location1.Y=3336.614mil|Location2.Y=3370.078mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.064mil|Location2.X=2328.741mil|Location1.Y=3336.614mil|Location2.Y=3370.078mil|Absolute=True">Pad U12-6(58.1mm,85.175mm)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.583mil|Location2.X=2378.016mil|Location1.Y=3324.74mil|Location2.Y=3364.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.583mil|Location2.X=2378.016mil|Location1.Y=3324.74mil|Location2.Y=3364.236mil|Absolute=True">Pad C45-1(59.85mm,84.95mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.064mil|Location2.X=2328.741mil|Location1.Y=3311.024mil|Location2.Y=3344.488mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.064mil|Location2.X=2328.741mil|Location1.Y=3311.024mil|Location2.Y=3344.488mil|Absolute=True">Pad U12-5(58.1mm,84.525mm)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.583mil|Location2.X=2378.016mil|Location1.Y=3269.622mil|Location2.Y=3309.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.583mil|Location2.X=2378.016mil|Location1.Y=3269.622mil|Location2.Y=3309.118mil|Absolute=True">Pad C45-2(59.85mm,83.55mm)  Top Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

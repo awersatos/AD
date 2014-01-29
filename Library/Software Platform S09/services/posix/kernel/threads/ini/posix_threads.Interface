@@ -1,0 +1,9 @@
+[Interface]
+Name=posix_threads
+Category=SERVICE
+System=False
+Description=Support for posix threads
+PublicDir=services\posix\kernel\include
+
+
+

@@ -1,0 +1,7 @@
+*10TQ035 MCE 3/26/98
+*Ref: IR Power Semiconductors Product Digest '94
+*MCE 35V 10A 3us pkg:TO-220 3,1
+.MODEL 10TQ035 D (IS=14.2N RS=4.2M N=1.7 BV=35 IBV=15M
++ CJO=412P VJ=0.75 M=0.333 TT=4.32U EG=.69 XTI=2)
+
+

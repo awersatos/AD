@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_can
+Category=DRIVER
+System=False
+Description=CAN device driver
+PublicDir=platform\fpga\drivers\can\include

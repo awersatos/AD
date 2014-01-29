@@ -1,0 +1,28 @@
+[Plugin]
+Name=per_tmr3
+Description=Software configurable dual 8/13/16-bit timer/counter unit with rising clock edge detection.
+Caption=TMR3 Dual Timer Unit
+Implement=per_tmr3
+HardwareID=TMR3_W
+Bitmap=per_tmr3.bmp
+LargeBitmap=per_tmr3_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+CodeName=interrupt
+Description=interrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

@@ -1,0 +1,4650 @@
+// -------------------------------------------------------------------- 
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<< 
+// -------------------------------------------------------------------- 
+// Copyright (c) 2005 by Lattice Semiconductor Corporation 
+// -------------------------------------------------------------------- 
+// 
+// 
+//                     Lattice Semiconductor Corporation 
+//                     5555 NE Moore Court 
+//                     Hillsboro, OR 97214 
+//                     U.S.A 
+// 
+//                     TEL: 1-800-Lattice (USA and Canada) 
+//                          408-826-6000 (other locations) 
+// 
+//                     web: http://www.latticesemi.com/ 
+//                     email: techsupport@latticesemi.com 
+// 
+// -------------------------------------------------------------------- 
+// 
+/*************************************************************************/
+/*************************************************************************/
+/**                                                                     **/
+/**  Copyright 1987-1990  Data I/O Corporation  All Rights Reserved     **/
+/**                                                                     **/
+/**                     PROPRIETARY NOTICE                              **/
+/**  This document is the property of the Data I/O Corporation, with    **/
+/**  the information herein reserved as proprietary to Data I/O         **/
+/**  Corporation, and is not to be published, reproduced, copied,       **/
+/**  disclosed, or used without the express written consent of a duly   **/
+/**  authorized representative of Data I/O Corporation.                 **/
+/**                                                                     **/
+/*************************************************************************/
+/*************************************************************************/
+/*`ifdef powerup_state
+`else
+  `define powerup_state 1'b0
+`endif */
+`define powerup_state 1'b0
+/********************** Denny ******************************************/
+
+/************************************************************************
+*                                                                       *
+*    PRIMITIVE: RSFF                                                    *
+*     Positive edge triggered RS flip flop with asyn clear and set.     *
+*DS                                                                     *
+1************************************************************************/
+primitive rsff_primitive_p0 (Q, S, R, CP, RB, SB);
+ 
+    output Q;  
+    input  S, R, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED RS FLIP-FLOP WITH ACTIVE HIGK
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  S   R    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0   1   (01)    0   0   :   ?   :   0;  // reset to 0
+        1   0   (01)    0   0   :   ?   :   1;  // set to 1
+        0   0   (01)    0   0   :   ?   :   -;  // 
+ 
+        ?   ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)  ?    ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        ? (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        
+        ?   ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?   ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?   ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?   ?    ?      0   1   :   ?   :   1;  // asynchronous set
+        ?   ?  (X0)     0   0   :   ?   :   -;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+//
+/************************************************************************
+*                                                                       *
+*    PRIMITIVE: RSFF                                                    *
+*     Positive edge triggered RS flip flop with asyn clear and set.     *
+*DS                                                                     *
+*************************************************************************/
+primitive rsff_primitive_p1 (Q, S, R, CP, RB, SB);
+ 
+    output Q;  
+    input  S, R, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b1;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED RS FLIP-FLOP WITH ACTIVE HIGK
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  S   R    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0   1   (01)    0   0   :   ?   :   0;  // reset to 0
+        1   0   (01)    0   0   :   ?   :   1;  // set to 1
+        0   0   (01)    0   0   :   ?   :   -;  // 
+ 
+        ?   ?   (?0)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)  ?    ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        ? (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        
+        ?   ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?   ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?   ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?   ?    ?      0   1   :   ?   :   1;  // asynchronous set
+//        ?   ?    ?      1   1   :   ?   :   x;  // will be x anyway if left out
+        ?   ?  (X0)     0   0   :   ?   :   -;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*    PRIMITIVE: RSFF                                                    *
+*     Positive edge triggered RS flip flop with asyn clear and set.     *
+*DS                                                                     *
+*************************************************************************/
+primitive rsff_primitive_px (Q, S, R, CP, RB, SB);
+ 
+    output Q;  
+    input  S, R, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'bx;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED RS FLIP-FLOP WITH ACTIVE HIGK
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  S   R    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0   1   (01)    0   0   :   ?   :   0;  // reset to 0
+        1   0   (01)    0   0   :   ?   :   1;  // set to 1
+        0   0   (01)    0   0   :   ?   :   -;  // 
+ 
+        ?   ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)  ?    ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        ? (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        
+        ?   ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?   ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?   ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?   ?    ?      0   1   :   ?   :   1;  // asynchronous set
+        ?   ?    ?      1   1   :   ?   :   x;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*    PRIMITIVE: RSFF                                                    *
+*     Positive edge triggered RS flip flop with asyn clear and set.     *
+*DS                                                                     *
+1************************************************************************/
+primitive rsff_primitive_pu (Q, S, R, CP, RB, SB);
+ 
+    output Q;  
+    input  S, R, CP, RB, SB;
+    reg    Q; 
+    initial Q = `powerup_state;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED RS FLIP-FLOP WITH ACTIVE HIGK
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  S   R    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0   1   (01)    0   0   :   ?   :   0;  // reset to 0
+        1   0   (01)    0   0   :   ?   :   1;  // set to 1
+        0   0   (01)    0   0   :   ?   :   -;  // 
+ 
+        ?   ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)  ?    ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        ? (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        
+        ?   ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?   ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?   ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?   ?    ?      0   1   :   ?   :   1;  // asynchronous set
+        ?   ?    ?      1   1   :   ?   :   x;  // will be x anyway if left out
+        ?   ?   (x0)    ?   ?   :   ?   :   -;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+//
+/************************************************************************
+*                                                                       *
+*   MODULE : JKFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+primitive jkff_primitive_p0 (Q, J, K, CP, RB, SB);
+ 
+    output Q;  
+    input  J, K, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED JK FLIP-FLOP WITH ACTIVE LOW
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  J   K    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0   1   (01)    0   0   :   ?   :   0;  //
+        1   0   (01)    0   0   :   ?   :   1;  //
+        0   0   (01)    0   0   :   ?   :   -;  // 
+        1   1   (01)    0   0   :   0   :   1;  //
+        1   1   (01)    0   0   :   1   :   0;  //
+ 
+        ?   ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)  ?    ?      ?   ?   :   ?   :   -;  // ignore transitions on J
+        ? (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on K
+        
+        ?   ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?   ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?   ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?   ?    ?      0   1   :   ?   :   1;  // asynchronous set
+ 
+        ?   ?  (x0)     ?   ?   :   ?   :   -;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+//
+/************************************************************************
+*                                                                       *
+*   MODULE : JKFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+primitive jkff_primitive_p1 (Q, J, K, CP, RB, SB);
+ 
+    output Q;  
+    input  J, K, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b1;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED JK FLIP-FLOP WITH ACTIVE LOW
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  J   K    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0   1   (01)    0   0   :   ?   :   0;  //
+        1   0   (01)    0   0   :   ?   :   1;  //
+        0   0   (01)    0   0   :   ?   :   -;  // 
+        1   1   (01)    0   0   :   0   :   1;  //
+        1   1   (01)    0   0   :   1   :   0;  //
+ 
+        ?   ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)  ?    ?      ?   ?   :   ?   :   -;  // ignore transitions on J
+        ? (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on K
+        
+        ?   ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?   ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?   ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?   ?    ?      0   1   :   ?   :   1;  // asynchronous set
+ 
+        ?   ?  (x0)     ?   ?   :   ?   :   -;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*   MODULE : JKFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+primitive jkff_primitive_px (Q, J, K, CP, RB, SB);
+ 
+    output Q;  
+    input  J, K, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'bx;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED JK FLIP-FLOP WITH ACTIVE LOW
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  J   K    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0   1   (01)    0   0   :   ?   :   0;  //
+        1   0   (01)    0   0   :   ?   :   1;  //
+        0   0   (01)    0   0   :   ?   :   -;  // 
+        1   1   (01)    0   0   :   0   :   1;  //
+        1   1   (01)    0   0   :   1   :   0;  //
+ 
+        ?   ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)  ?    ?      ?   ?   :   ?   :   -;  // ignore transitions on J
+        ? (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on K
+        
+        ?   ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?   ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?   ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?   ?    ?      0   1   :   ?   :   1;  // asynchronous set
+ 
+        ?   ?    ?      1   1   :   ?   :   x;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*   MODULE : JKFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+primitive jkff_primitive_pu (Q, J, K, CP, RB, SB);
+ 
+    output Q;  
+    input  J, K, CP, RB, SB;
+    reg    Q; 
+    initial Q = `powerup_state;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED JK FLIP-FLOP WITH ACTIVE LOW
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  J   K    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0   1   (01)    0   0   :   ?   :   0;  //
+        1   0   (01)    0   0   :   ?   :   1;  //
+        0   0   (01)    0   0   :   ?   :   -;  // 
+        1   1   (01)    0   0   :   0   :   1;  //
+        1   1   (01)    0   0   :   1   :   0;  //
+ 
+        ?   ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)  ?    ?      ?   ?   :   ?   :   -;  // ignore transitions on J
+        ? (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on K
+        
+        ?   ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?   ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?   ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?   ?    ?      0   1   :   ?   :   1;  // asynchronous set
+ 
+        ?   ?  (x0)     ?   ?   :   ?   :   -;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: LFF                                                       *
+*    A  low transparent latch async preset and reset.                   *
+*DS                                                                     *
+*************************************************************************/
+primitive lff_primitive_p0 (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+// FUNCTION :  LOW TRANSPARENT LATCH WIT
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0     0     0   0   :   ?   :   0;
+        1     0     0   0   :   ?   :   1;
+        ?     1     0   0   :   ?   :   -;
+ 
+        ?     ?     1   0   :   ?   :   0;
+        ?     ?     0   1   :   ?   :   1;
+
+        ?   (??)    0   0   :   ?   :   -;  // ignore 
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on data
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+    endtable
+endprimitive
+//
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: LFF                                                       *
+*    A  low transparent latch async preset and reset.                   *
+*DS                                                                     *
+*************************************************************************/
+primitive lff_primitive_p1 (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b1;
+ 
+// FUNCTION :  LOW TRANSPARENT LATCH WIT
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0     0     0   0   :   ?   :   0;
+        1     0     0   0   :   ?   :   1;
+        ?     1     0   0   :   ?   :   -;
+ 
+        ?     ?     1   0   :   ?   :   0;
+        ?     ?     0   1   :   ?   :   1;
+
+        ?   (??)    0   0   :   ?   :   -;  // ignore 
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on data
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+    endtable
+endprimitive
+//
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: LFF                                                       *
+*    A  low transparent latch async preset and reset.                   *
+*DS                                                                     *
+*************************************************************************/
+primitive lff_primitive_px (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'bx;
+ 
+// FUNCTION :  LOW TRANSPARENT LATCH WIT
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0     0     0   0   :   ?   :   0;
+        1     0     0   0   :   ?   :   1;
+        ?     1     0   0   :   ?   :   -;
+ 
+        ?     ?     1   0   :   ?   :   0;
+        ?     ?     0   1   :   ?   :   1;
+
+        ?   (??)    0   0   :   ?   :   -;  // ignore 
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on data
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+    endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: LFFH                                                      *
+*    A high transparent latch async preset and reset.                   *
+*DS                                                                     *
+*************************************************************************/
+primitive lffh_primitive_p0 (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+// FUNCTION :  HIGH TRANSPARENT LATCH WIT
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0     1     0   0   :   ?   :   0;
+        1     1     0   0   :   ?   :   1;
+        ?     0     0   0   :   ?   :   -;
+ 
+        ?     ?     1   0   :   ?   :   0;
+        ?     ?     0   1   :   ?   :   1;
+
+        ?   (??)    0   0   :   ?   :   -;  // ignore 
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on data
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+    endtable
+endprimitive
+//
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: LFFH                                                      *
+*    A  high transparent latch async preset and reset.                  *
+*DS                                                                     *
+*************************************************************************/
+primitive lffh_primitive_p1 (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b1;
+ 
+// FUNCTION :  HIGH TRANSPARENT LATCH WIT
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0     1     0   0   :   ?   :   0;
+        1     1     0   0   :   ?   :   1;
+        ?     0     0   0   :   ?   :   -;
+ 
+        ?     ?     1   0   :   ?   :   0;
+        ?     ?     0   1   :   ?   :   1;
+
+        ?   (??)    0   0   :   ?   :   -;  // ignore 
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on data
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+    endtable
+endprimitive
+//
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: LFFH                                                      *
+*    A  high transparent latch async preset and reset.                  *
+*DS                                                                     *
+*************************************************************************/
+primitive lffh_primitive_px (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'bx;
+ 
+// FUNCTION :  HIGH TRANSPARENT LATCH WIT
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0     1     0   0   :   ?   :   0;
+        1     1     0   0   :   ?   :   1;
+        ?     0     0   0   :   ?   :   -;
+ 
+        ?     ?     1   0   :   ?   :   0;
+        ?     ?     0   1   :   ?   :   1;
+
+        ?   (??)    0   0   :   ?   :   -;  // ignore 
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on data
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+    endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: LFFH                                                      *
+*    A  high transparent latch async preset and reset.                  *
+*DS                                                                     *
+*************************************************************************/
+primitive lffh_primitive_pu (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = `powerup_state;
+ 
+// FUNCTION :  HIGH TRANSPARENT LATCH WIT
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        0     1     0   0   :   ?   :   0;
+        1     1     0   0   :   ?   :   1;
+        ?     0     0   0   :   ?   :   -;
+ 
+        ?     ?     1   0   :   ?   :   0;
+        ?     ?     0   1   :   ?   :   1;
+
+        ?   (??)    0   0   :   ?   :   -;  // ignore 
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on data
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+    endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*   Tff_P PROMITIVE :                                                   *
+*      Positive edge trigger t flap flop with async clear and set.      *
+*DS                                                                     *
+*************************************************************************/
+primitive tff_primitive_p0 (Q, T, CP, RB, SB);
+ 
+    output Q;  
+    input  T, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED T FLIP-FLOP WITH ACTIVE LOW
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  T    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        1   (01)    0   0   :   0   :   1;  // Toggle to 1
+        1   (01)    0   0   :   1   :   0;  // Toggle to 0
+        0   (01)    0   0   :   0   :   -;  // same state
+        0   (01)    0   0   :   1   :   -;  // same state
+ 
+        ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+        ?   (?0)    ?   ?   :   ?   :   -;  // ignore falling edge
+ 
+      (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?      0   1   :   ?   :   1;  // asynchronous set
+        ?    ?      1   1   :   ?   :   x;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+//
+/************************************************************************
+*                                                                       *
+*   Tff_P PROMITIVE :                                                   *
+*      Positive edge trigger t flap flop with async clear and set.      *
+*DS                                                                     *
+*************************************************************************/
+primitive tff_primitive_p1 (Q, T, CP, RB, SB);
+ 
+    output Q;  
+    input  T, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b1;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED T FLIP-FLOP WITH ACTIVE LOW
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  T    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        1   (01)    0   0   :   0   :   1;  // Toggle to 1
+        1   (01)    0   0   :   1   :   0;  // Toggle to 0
+        0   (01)    0   0   :   0   :   -;  // same state
+        0   (01)    0   0   :   1   :   -;  // same state
+ 
+        ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+        ?   (?0)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on T
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?      0   1   :   ?   :   1;  // asynchronous set
+        ?    ?      1   1   :   ?   :   x;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*   Tff_P PROMITIVE :                                                   *
+*      Positive edge trigger t flap flop with async clear and set.      *
+*DS                                                                     *
+*************************************************************************/
+primitive tff_primitive_px (Q, T, CP, RB, SB);
+ 
+    output Q;  
+    input  T, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'bx;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED T FLIP-FLOP WITH ACTIVE LOW
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  T    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        1   (01)    0   0   :   0   :   1;  // Toggle to 1
+        1   (01)    0   0   :   1   :   0;  // Toggle to 0
+        0   (01)    0   0   :   0   :   -;  // same state
+        0   (01)    0   0   :   1   :   -;  // same state
+ 
+        ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+        ?   (?0)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+      (??)   ?      0   0   :   ?   :   -;  // ignore transitions on T
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?      0   1   :   ?   :   1;  // asynchronous set
+        ?    ?      1   1   :   ?   :   x;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*   Tff_P PROMITIVE :                                                   *
+*      Positive edge trigger t flap flop with async clear and set.      *
+*DS                                                                     *
+*************************************************************************/
+primitive tff_primitive_pu (Q, T, CP, RB, SB);
+ 
+    output Q;  
+    input  T, CP, RB, SB;
+    reg    Q; 
+   // initial Q = `powerup_state;
+    initial Q = 1'b0;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED T FLIP-FLOP WITH ACTIVE LOW
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  T    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        1   (01)    0   0   :   0   :   1;  // Toggle to 1
+        1   (01)    0   0   :   1   :   0;  // Toggle to 0
+        0   (01)    0   0   :   0   :   -;  // same state
+        0   (01)    0   0   :   1   :   -;  // same state
+ 
+        ?   (1?)    0   0   :   ?   :   -;  // ignore falling edge
+        ?   (?0)    ?   ?   :   ?   :   -;  // ignore falling edge
+ 
+      (??)   ?      ?   ?   :   ?   :   -;  // ignore transitions on T
+        
+        ?    ?     (??) ?   :   ?   :   -; // ignore transitions on RB
+        ?    ?      ?  (??) :   ?   :   -; // ignore transitions on SB
+ 
+        ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?      0   1   :   ?   :   1;  // asynchronous set
+        ?    ?      1   1   :   ?   :   x;  // will be x anyway if left out
+ 
+endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: DFF_PRIMITIVE                                             *
+*    A low to high edge-triggered D flip-flop with high async set and   *
+*  clear (edge-sensitive sequential with level-sensitive inputs)        *
+*DS                                                                     *
+*************************************************************************/
+primitive dff_primitive_p0 (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED D FLIP-FLOP WITH ACTIVE HIGH
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        1   (01)    0   0   :   ?   :   1;  // clocked data
+        1   (01)    0   x   :   ?   :   1;  // pessimism
+        ?    ?      0   x   :   1   :   1;  // pessimism
+ 
+        0   (01)    0   0   :   ?   :   0;  // clocked data
+        0   (01)    x   0   :   ?   :   0;  // pessimism
+        ?    ?      x   0   :   0   :   0;  // pessimism
+                                                           
+        1   (0x)    0   0   :   1   :   1;  // reducing pessimism
+        0   (0x)    0   0   :   0   :   0;                          
+        ?   (?0)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+        ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?      0   1   :   ?   :   1;  // asynchronous set
+ 
+        ?   (?0)    ?   ?   :   ?   :   -;  // ignore falling clock
+        ?   (1x)    ?   ?   :   ?   :   -;  // ignore rising clock
+ 
+        ?    ?     (?1) ?   :   ?   :   -;  // ignore the edges on 
+        ?    ?     (?0) ?   :   ?   :   -;  // ignore the edges on 
+        ?    ?      ?  (?1) :   ?   :   -;  //
+        ?    ?      ?  (?0) :   ?   :   -;  // 
+      (??)   ?      ?   ?   :   ?   :   -;  // 
+ 
+    endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: DFF_PRIMITIVE                                             *
+*    A low to high edge-triggered D flip-flop with high async set and   *
+*  clear (edge-sensitive sequential with level-sensitive inputs)        *
+*DS                                                                     *
+*************************************************************************/
+primitive dff_primitive_p1 (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b1;
+ 
+// FUNCTION : POSITIVE EDGE TRIGGERED D FLIP-FLOP WITH ACTIVE HIGH
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        1   (01)    0   0   :   ?   :   1;  // clocked data
+        1   (01)    0   x   :   ?   :   1;  // pessimism
+        ?    ?      0   x   :   1   :   1;  // pessimism
+ 
+        0   (01)    0   0   :   ?   :   0;  // clocked data
+        0   (01)    x   0   :   ?   :   0;  // pessimism
+        ?    ?      x   0   :   0   :   0;  // pessimism
+                                                           
+        1   (0x)    0   0   :   1   :   1;  // reducing pessimism
+        0   (0x)    0   0   :   0   :   0;                          
+        ?   (?0)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+        ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?      0   1   :   ?   :   1;  // asynchronous set
+ 
+        ?   (?0)    ?   ?   :   ?   :   -;  // ignore falling clock
+        ?   (1x)    ?   ?   :   ?   :   -;  // ignore rising clock
+ 
+        ?    ?     (?1) ?   :   ?   :   -;  // ignore the edges on 
+        ?    ?     (?0) ?   :   ?   :   -;  // ignore the edges on 
+        ?    ?      ?  (?1) :   ?   :   -;  //
+        ?    ?      ?  (?0) :   ?   :   -;  // 
+      (??)   ?      ?   ?   :   ?   :   -;  // 
+ 
+    endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: DFF_PRIMITIVE                                             *
+*    A low to high edge-triggered D flip-flop with high async set and   *
+*  clear (edge-sensitive sequential with level-sensitive inputs)        *
+*DS                                                                     *
+*************************************************************************/
+primitive dff_primitive_px (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+// FUNCTION : POSIIVE EDGE TRIGGERED D FLIP-FLOP WITH ACTIVE HIGH
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        1   (01)    0   0   :   ?   :   1;  // clocked data
+        1   (01)    0   x   :   ?   :   1;  // pessimism
+        ?    ?      0   x   :   1   :   1;  // pessimism
+ 
+        0   (01)    0   0   :   ?   :   0;  // clocked data
+        0   (01)    x   0   :   ?   :   0;  // pessimism
+        ?    ?      x   0   :   0   :   0;  // pessimism
+                                                           
+        1   (0x)    0   0   :   1   :   1;  // reducing pessimism
+        0   (0x)    0   0   :   0   :   0;                          
+        ?   (?0)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+        ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?      0   1   :   ?   :   1;  // asynchronous set
+ 
+        ?   (?0)    ?   ?   :   ?   :   -;  // ignore falling clock
+        ?   (1x)    ?   ?   :   ?   :   -;  // ignore rising clock
+ 
+        ?    ?     (?1) ?   :   ?   :   -;  // ignore the edges on 
+        ?    ?     (?0) ?   :   ?   :   -;  // ignore the edges on 
+        ?    ?      ?  (?1) :   ?   :   -;  //
+        ?    ?      ?  (?0) :   ?   :   -;  // 
+      (??)   0      0   0   :   ?   :   -;  // 
+      (??)   1      0   0   :   ?   :   -;  // 
+ 
+    endtable
+endprimitive
+/************************************************************************
+*                                                                       *
+*  PRIMITIVE: DFF_PRIMITIVE                                             *
+*    A low to high edge-triggered D flip-flop with high async set and   *
+*  clear (edge-sensitive sequential with level-sensitive inputs)        *
+*DS                                                                     *
+*************************************************************************/
+primitive dff_primitive_pu (Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+// FUNCTION : POSIIVE EDGE TRIGGERED D FLIP-FLOP WITH ACTIVE HIGH
+//            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+ 
+    table
+ 
+    //  D    CP     RB  SB  :   Qt  :   Qt+1
+ 
+        1   (01)    0   0   :   ?   :   1;  // clocked data
+        1   (01)    0   x   :   ?   :   1;  // pessimism
+        ?    ?      0   x   :   1   :   1;  // pessimism
+ 
+        0   (01)    0   0   :   ?   :   0;  // clocked data
+        0   (01)    x   0   :   ?   :   0;  // pessimism
+        ?    ?      x   0   :   0   :   0;  // pessimism
+                                                           
+        1   (0x)    0   0   :   1   :   1;  // reducing pessimism
+        0   (0x)    0   0   :   0   :   0;                          
+        ?   (?0)    0   0   :   ?   :   -;  // ignore falling edge
+ 
+        ?    ?      1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?      0   1   :   ?   :   1;  // asynchronous set
+ 
+        ?   (?0)    ?   ?   :   ?   :   -;  // ignore falling clock
+        ?   (1x)    ?   ?   :   ?   :   -;  // ignore rising clock
+ 
+        ?    ?     (?1) ?   :   ?   :   -;  // ignore the edges on 
+        ?    ?     (?0) ?   :   ?   :   -;  // ignore the edges on 
+        ?    ?      ?  (?1) :   ?   :   -;  //
+        ?    ?      ?  (?0) :   ?   :   -;  // 
+      (??)   0      0   0   :   ?   :   -;  // 
+      (??)   1      0   0   :   ?   :   -;  // 
+ 
+    endtable
+endprimitive
+/**********************  End Denny *************************************/
+/************************************************************************
+*                                                                       *
+*  Primitive: dffe_pri                                                  *
+*    Low to high edge-triggered D flip-flops with clock enable high     *
+*    async set and clear (edge-sensitive sequential with level-         *
+*    sensitive inputs)                                                  *
+*                                                                       *
+*    The 4 variants of this primitive cover the various power-up        *
+*    initialization states (`powerup_state, 0, 1, x)                    *
+*                                                                       *
+*************************************************************************/        
+primitive dffe_pri (Q, D, CP, CE, CLR, PRE);
+ 
+    output Q;  
+    input  D, CP, CE, CLR, PRE;
+    reg    Q; 
+    initial Q = `powerup_state;
+ 
+    table
+ 
+    //  D    CP   CE  CLR PRE :   Qt  :   Qt+1
+ 
+        ?    *    0   0   ?   :   1   :   1;  // clock disabled
+        ?    *    0   ?   0   :   0   :   0;
+        ?    ?    *   0   0   :   ?   :   -;  // ignore edges on clock enable
+ 
+        1    r    1   0   ?   :   ?   :   1;  // clocked data = 1
+        1    *    ?   0   ?   :   1   :   1;  // reduce pessimism
+
+        0    r    1   ?   0   :   ?   :   0;  // clocked data = 0                                                     
+        0    *    ?   ?   0   :   0   :   0;  // reduce pessimism
+                     
+        ?    n    ?   0   ?   :   1   :   1;  // ignore falling edge on clock
+        ?    n    ?   ?   0   :   0   :   0;
+
+        *    ?    ?   0   0   :   ?   :   -;  // ignore edges on D
+  
+        ?    ?    ?   1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?    ?   x   0   :   0   :   0;  // reduce pessimism
+        ?    ?    ?   *   0   :   0   :   -;  // ignore edges
+
+        ?    ?    ?   0   1   :   ?   :   1;  // asynchronous set
+        ?    ?    ?   0   x   :   1   :   1;  // reduce pessimism
+        ?    ?    ?   0   *   :   1   :   -;  // ignore edges
+
+    endtable
+endprimitive // dffe_pri
+
+primitive dffe_pri_p0 (Q, D, CP, CE, CLR, PRE);
+ 
+    output Q;  
+    input  D, CP, CE, CLR, PRE;
+    reg    Q; 
+    initial Q = 1'b0;
+ 
+    table
+ 
+    //  D    CP   CE  CLR PRE :   Qt  :   Qt+1
+ 
+        ?    *    0   0   ?   :   1   :   1;  // clock disabled
+        ?    *    0   ?   0   :   0   :   0;
+        ?    ?    *   0   0   :   ?   :   -;  // ignore edges on clock enable
+ 
+        1    r    1   0   ?   :   ?   :   1;  // clocked data = 1
+        1    *    ?   0   ?   :   1   :   1;  // reduce pessimism
+
+        0    r    1   ?   0   :   ?   :   0;  // clocked data = 0                                                     
+        0    *    ?   ?   0   :   0   :   0;  // reduce pessimism
+                     
+        ?    n    ?   0   ?   :   1   :   1;  // ignore falling edge on clock
+        ?    n    ?   ?   0   :   0   :   0;
+
+        *    ?    ?   0   0   :   ?   :   -;  // ignore edges on D
+  
+        ?    ?    ?   1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?    ?   x   0   :   0   :   0;  // reduce pessimism
+        ?    ?    ?   *   0   :   0   :   -;  // ignore edges
+
+        ?    ?    ?   0   1   :   ?   :   1;  // asynchronous set
+        ?    ?    ?   0   x   :   1   :   1;  // reduce pessimism
+        ?    ?    ?   0   *   :   1   :   -;  // ignore edges
+
+    endtable
+endprimitive // dffe_pri_p0
+
+primitive dffe_pri_p1 (Q, D, CP, CE, CLR, PRE);
+ 
+    output Q;  
+    input  D, CP, CE, CLR, PRE;
+    reg    Q; 
+    initial Q = 1'b1;
+ 
+    table
+ 
+    //  D    CP   CE  CLR PRE :   Qt  :   Qt+1
+ 
+        ?    *    0   0   ?   :   1   :   1;  // clock disabled
+        ?    *    0   ?   0   :   0   :   0;
+        ?    ?    *   0   0   :   ?   :   -;  // ignore edges on clock enable
+ 
+        1    r    1   0   ?   :   ?   :   1;  // clocked data = 1
+        1    *    ?   0   ?   :   1   :   1;  // reduce pessimism
+
+        0    r    1   ?   0   :   ?   :   0;  // clocked data = 0                                                     
+        0    *    ?   ?   0   :   0   :   0;  // reduce pessimism
+                     
+        ?    n    ?   0   ?   :   1   :   1;  // ignore falling edge on clock
+        ?    n    ?   ?   0   :   0   :   0;
+
+        *    ?    ?   0   0   :   ?   :   -;  // ignore edges on D
+  
+        ?    ?    ?   1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?    ?   x   0   :   0   :   0;  // reduce pessimism
+        ?    ?    ?   *   0   :   0   :   -;  // ignore edges
+
+        ?    ?    ?   0   1   :   ?   :   1;  // asynchronous set
+        ?    ?    ?   0   x   :   1   :   1;  // reduce pessimism
+        ?    ?    ?   0   *   :   1   :   -;  // ignore edges
+
+    endtable
+endprimitive // dffe_pri_p1
+
+primitive dffe_pri_px (Q, D, CP, CE, CLR, PRE);
+ 
+    output Q;  
+    input  D, CP, CE, CLR, PRE;
+    reg    Q; 
+    initial Q = 1'bx;
+ 
+    table
+ 
+    //  D    CP   CE  CLR PRE :   Qt  :   Qt+1
+ 
+        ?    *    0   0   ?   :   1   :   1;  // clock disabled
+        ?    *    0   ?   0   :   0   :   0;
+        ?    ?    *   0   0   :   ?   :   -;  // ignore edges on clock enable
+ 
+        1    r    1   0   ?   :   ?   :   1;  // clocked data = 1
+        1    *    ?   0   ?   :   1   :   1;  // reduce pessimism
+
+        0    r    1   ?   0   :   ?   :   0;  // clocked data = 0                                                     
+        0    *    ?   ?   0   :   0   :   0;  // reduce pessimism
+                     
+        ?    n    ?   0   ?   :   1   :   1;  // ignore falling edge on clock
+        ?    n    ?   ?   0   :   0   :   0;
+
+        *    ?    ?   0   0   :   ?   :   -;  // ignore edges on D
+  
+        ?    ?    ?   1   0   :   ?   :   0;  // asynchronous clear
+        ?    ?    ?   x   0   :   0   :   0;  // reduce pessimism
+        ?    ?    ?   *   0   :   0   :   -;  // ignore edges
+
+        ?    ?    ?   0   1   :   ?   :   1;  // asynchronous set
+        ?    ?    ?   0   x   :   1   :   1;  // reduce pessimism
+        ?    ?    ?   0   *   :   1   :   -;  // ignore edges
+
+    endtable
+endprimitive // dffe_pri_px
+
+/************************************************************************
+*                                                                       *
+*  Primitive: jkff_pri                                                  *
+*    An edge triggered JK-type flip flop with asynchronous preset and   *
+*    clear                                                              *
+*                                                                       *
+*    The 4 variants of this primitive cover the various power-up        *
+*    initialization states (`powerup_state, 0, 1, x)                    *
+*                                                                       *
+*************************************************************************/
+primitive jkff_pri (q, j, k, clk, pre, clr);
+
+   output q; reg q;
+   input j, k, clk, pre, clr;
+   initial q = `powerup_state;
+
+   table
+
+    //  j k  clk  pre clr   q  next state
+    // preset logic
+        ? ?   ?   1   0  :  ?  :  1     ;  // set output to 1 on preset
+        ? ?   ?   x   0  :  1  :  1     ;  // reduce pessimism
+        ? ?   ?   *   0  :  ?  :  -     ;  // ignore edges
+
+        ? ?   ?   0   1  :  ?  :  0     ;  // set output to 0 on clear
+        ? ?   ?   0   x  :  0  :  0     ;  // reduce pessimism
+        ? ?   ?   0   *  :  ?  :  -     ;  // ignore edges
+ 
+        0 0   *   0   ?  :  0  :  0     ;  // on any clock, j=k=0, hold state
+        0 0   *   ?   0  :  1  :  1     ;
+
+        0 1   r   0   ?  :  ?  :  0     ;  // on 0-1 trans, if j != k, q follows j
+        0 ?   p   0   ?  :  0  :  0     ;  // reduce pessimism
+
+        1 0   r   ?   0  :  ?  :  1     ;  // on 0-1 trans, if j != k, q follows j
+        ? 0   p   ?   0  :  1  :  1     ;  // reduce pessimism
+
+        1 1   r   ?   0  :  0  :  1     ;  // on 0-1 trans, if j=k=1, q toggles
+        1 1   r   0   ?  :  1  :  0     ;  // same thing; toggle from 1 to 0
+
+        ? ?   n   0   0  :  ?  :  -     ;  // on a negative clock edge, hold state
+
+        * ?   ?   0   0  :  ?  :  -     ;  // ignore edges on j
+        ? *   ?   0   0  :  ?  :  -     ;  // ignore edges on k
+
+    endtable
+endprimitive // jkff_pri
+
+primitive jkff_pri_p0 (q, j, k, clk, pre, clr);
+
+   output q; reg q;
+   input j, k, clk, pre, clr;
+   initial q = 1'b0;
+
+   table
+
+    //  j k  clk  pre clr   q  next state
+    // preset logic
+        ? ?   ?   1   0  :  ?  :  1     ;  // set output to 1 on preset
+        ? ?   ?   x   0  :  1  :  1     ;  // reduce pessimism
+        ? ?   ?   *   0  :  ?  :  -     ;  // ignore edges
+
+        ? ?   ?   0   1  :  ?  :  0     ;  // set output to 0 on clear
+        ? ?   ?   0   x  :  0  :  0     ;  // reduce pessimism
+        ? ?   ?   0   *  :  ?  :  -     ;  // ignore edges
+ 
+        0 0   *   0   ?  :  0  :  0     ;  // on any clock, j=k=0, hold state
+        0 0   *   ?   0  :  1  :  1     ;
+
+        0 1   r   0   ?  :  ?  :  0     ;  // on 0-1 trans, if j != k, q follows j
+        0 ?   p   0   ?  :  0  :  0     ;  // reduce pessimism
+
+        1 0   r   ?   0  :  ?  :  1     ;  // on 0-1 trans, if j != k, q follows j
+        ? 0   p   ?   0  :  1  :  1     ;  // reduce pessimism
+
+        1 1   r   ?   0  :  0  :  1     ;  // on 0-1 trans, if j=k=1, q toggles
+        1 1   r   0   ?  :  1  :  0     ;  // same thing; toggle from 1 to 0
+
+        ? ?   n   0   0  :  ?  :  -     ;  // on a negative clock edge, hold state
+
+        * ?   ?   0   0  :  ?  :  -     ;  // ignore edges on j
+        ? *   ?   0   0  :  ?  :  -     ;  // ignore edges on k
+
+    endtable
+endprimitive // jkff_pri_p0
+
+primitive jkff_pri_p1 (q, j, k, clk, pre, clr);
+
+   output q; reg q;
+   input j, k, clk, pre, clr;
+   initial q = 1'b1;
+
+   table
+
+    //  j k  clk  pre clr   q  next state
+    // preset logic
+        ? ?   ?   1   0  :  ?  :  1     ;  // set output to 1 on preset
+        ? ?   ?   x   0  :  1  :  1     ;  // reduce pessimism
+        ? ?   ?   *   0  :  ?  :  -     ;  // ignore edges
+
+        ? ?   ?   0   1  :  ?  :  0     ;  // set output to 0 on clear
+        ? ?   ?   0   x  :  0  :  0     ;  // reduce pessimism
+        ? ?   ?   0   *  :  ?  :  -     ;  // ignore edges
+ 
+        0 0   *   0   ?  :  0  :  0     ;  // on any clock, j=k=0, hold state
+        0 0   *   ?   0  :  1  :  1     ;
+
+        0 1   r   0   ?  :  ?  :  0     ;  // on 0-1 trans, if j != k, q follows j
+        0 ?   p   0   ?  :  0  :  0     ;  // reduce pessimism
+
+        1 0   r   ?   0  :  ?  :  1     ;  // on 0-1 trans, if j != k, q follows j
+        ? 0   r   ?   0  :  1  :  1     ;  // reduce pessimism
+
+        1 1   r   ?   0  :  0  :  1     ;  // on 0-1 trans, if j=k=1, q toggles
+        1 1   p   0   ?  :  1  :  0     ;  // same thing; toggle from 1 to 0
+
+        ? ?   n   0   0  :  ?  :  -     ;  // on a negative clock edge, hold state
+
+        * ?   ?   0   0  :  ?  :  -     ;  // ignore edges on j
+        ? *   ?   0   0  :  ?  :  -     ;  // ignore edges on k
+
+    endtable
+endprimitive // jkff_pri_p1
+
+primitive jkff_pri_px (q, j, k, clk, pre, clr);
+
+   output q; reg q;
+   input j, k, clk, pre, clr;
+   initial q = 1'bx;
+
+   table
+
+    //  j k  clk  pre clr   q  next state
+    // preset logic
+        ? ?   ?   1   0  :  ?  :  1     ;  // set output to 1 on preset
+        ? ?   ?   x   0  :  1  :  1     ;  // reduce pessimism
+        ? ?   ?   *   0  :  ?  :  -     ;  // ignore edges
+
+        ? ?   ?   0   1  :  ?  :  0     ;  // set output to 0 on clear
+        ? ?   ?   0   x  :  0  :  0     ;  // reduce pessimism
+        ? ?   ?   0   *  :  ?  :  -     ;  // ignore edges
+ 
+        0 0   *   0   ?  :  0  :  0     ;  // on any clock, j=k=0, hold state
+        0 0   *   ?   0  :  1  :  1     ;
+
+        0 1   r   0   ?  :  ?  :  0     ;  // on 0-1 trans, if j != k, q follows j
+        0 ?   p   0   ?  :  0  :  0     ;  // reduce pessimism
+
+        1 0   r   ?   0  :  ?  :  1     ;  // on 0-1 trans, if j != k, q follows j
+        ? 0   p   ?   0  :  1  :  1     ;  // reduce pessimism
+
+        1 1   r   ?   0  :  0  :  1     ;  // on 0-1 trans, if j=k=1, q toggles
+        1 1   r   0   ?  :  1  :  0     ;  // same thing; toggle from 1 to 0
+
+        ? ?   n   0   0  :  ?  :  -     ;  // on a negative clock edge, hold state
+
+        * ?   ?   0   0  :  ?  :  -     ;  // ignore edges on j
+        ? *   ?   0   0  :  ?  :  -     ;  // ignore edges on k
+
+    endtable
+endprimitive // jkff_pri_px
+
+/************************************************************************
+*                                                                       *
+*  Primitive: rsff_pri                                                  *
+*    An edge triggered RS-type flip flop with asynchronous preset and   *
+*    clear                                                              *
+*                                                                       *
+*    The 4 variants of this primitive cover the various power-up        *
+*    initialization states (`powerup_state, 0, 1, x)                    *
+*                                                                       *
+*************************************************************************/
+primitive rsff_pri (q, s, r, clk, pre, clr);
+
+   output q; reg q;
+   input s, r, clk, pre, clr;
+   initial q = `powerup_state;
+
+   table
+
+    //  s r  clk  pre clr   q  next state
+    // preset logic
+        ? ?   ?   1   0  :  ?  :  1     ;  // set output to 1 on preset
+        ? ?   ?   x   0  :  1  :  1     ;  // reduce pessimism
+        ? ?   ?   *   0  :  ?  :  -     ;  // ignore edges
+
+        ? ?   ?   0   1  :  ?  :  0     ;  // set output to 0 on clear
+        ? ?   ?   0   x  :  0  :  0     ;  // reduce pessimism
+        ? ?   ?   0   *  :  ?  :  -     ;  // ignore edges
+ 
+        0 0   *   0   ?  :  0  :  0     ;  // on any clock, s=r=0, hold state
+        0 0   *   ?   0  :  1  :  1     ;
+
+        0 1   r   0   ?  :  ?  :  0     ;  // on 0-1 trans, if s != r, q follows s
+        0 ?   p   0   ?  :  0  :  0     ;  // reduce pessimism
+
+        1 0   r   ?   0  :  ?  :  1     ;  // on 0-1 trans, if s != r, q follows s
+        ? 0   p   ?   0  :  1  :  1     ;  // reduce pessimism
+
+        ? ?   n   0   0  :  ?  :  -     ;  // on a negative clock edge, hold state
+
+        * ?   ?   0   0  :  ?  :  -     ;  // ignore edges on s
+        ? *   ?   0   0  :  ?  :  -     ;  // ignore edges on r
+
+    endtable
+endprimitive // rsff_pri
+
+primitive rsff_pri_p0 (q, s, r, clk, pre, clr);
+
+   output q; reg q;
+   input s, r, clk, pre, clr;
+   initial q = 1'b0;
+
+   table
+
+    //  s r  clk  pre clr   q  next state
+    // preset logic
+        ? ?   ?   1   0  :  ?  :  1     ;  // set output to 1 on preset
+        ? ?   ?   x   0  :  1  :  1     ;  // reduce pessimism
+        ? ?   ?   *   0  :  ?  :  -     ;  // ignore edges
+
+        ? ?   ?   0   1  :  ?  :  0     ;  // set output to 0 on clear
+        ? ?   ?   0   x  :  0  :  0     ;  // reduce pessimism
+        ? ?   ?   0   *  :  ?  :  -     ;  // ignore edges
+ 
+        0 0   *   0   ?  :  0  :  0     ;  // on any clock, s=r=0, hold state
+        0 0   *   ?   0  :  1  :  1     ;
+
+        0 1   r   0   ?  :  ?  :  0     ;  // on 0-1 trans, if s != r, q follows s
+        0 ?   p   0   ?  :  0  :  0     ;  // reduce pessimism
+
+        1 0   r   ?   0  :  ?  :  1     ;  // on 0-1 trans, if s != r, q follows s
+        ? 0   p   ?   0  :  1  :  1     ;  // reduce pessimism
+
+        ? ?   n   0   0  :  ?  :  -     ;  // on a negative clock edge, hold state
+
+        * ?   ?   0   0  :  ?  :  -     ;  // ignore edges on s
+        ? *   ?   0   0  :  ?  :  -     ;  // ignore edges on r
+
+    endtable
+endprimitive // rsff_pri_p0
+
+primitive rsff_pri_p1 (q, s, r, clk, pre, clr);
+
+   output q; reg q;
+   input s, r, clk, pre, clr;
+   initial q = 1'b1;
+
+   table
+
+    //  s r  clk  pre clr   q  next state
+    // preset logic
+        ? ?   ?   1   0  :  ?  :  1     ;  // set output to 1 on preset
+        ? ?   ?   x   0  :  1  :  1     ;  // reduce pessimism
+        ? ?   ?   *   0  :  ?  :  -     ;  // ignore edges
+
+        ? ?   ?   0   1  :  ?  :  0     ;  // set output to 0 on clear
+        ? ?   ?   0   x  :  0  :  0     ;  // reduce pessimism
+        ? ?   ?   0   *  :  ?  :  -     ;  // ignore edges
+ 
+        0 0   *   0   ?  :  0  :  0     ;  // on any clock, s=r=0, hold state
+        0 0   *   ?   0  :  1  :  1     ;
+
+        0 1   r   0   ?  :  ?  :  0     ;  // on 0-1 trans, if s != r, q follows s
+        0 ?   p   0   ?  :  0  :  0     ;  // reduce pessimism
+
+        1 0   r   ?   0  :  ?  :  1     ;  // on 0-1 trans, if s != r, q follows s
+        ? 0   r   ?   0  :  1  :  1     ;  // reduce pessimism
+
+        ? ?   n   0   0  :  ?  :  -     ;  // on a negative clock edge, hold state
+
+        * ?   ?   0   0  :  ?  :  -     ;  // ignore edges on s
+        ? *   ?   0   0  :  ?  :  -     ;  // ignore edges on r
+
+    endtable
+endprimitive // rsff_pri_p1
+
+primitive rsff_pri_px (q, s, r, clk, pre, clr);
+
+   output q; reg q;
+   input s, r, clk, pre, clr;
+   initial q = 1'bx;
+
+   table
+
+    //  s r  clk  pre clr   q  next state
+    // preset logic
+        ? ?   ?   1   0  :  ?  :  1     ;  // set output to 1 on preset
+        ? ?   ?   x   0  :  1  :  1     ;  // reduce pessimism
+        ? ?   ?   *   0  :  ?  :  -     ;  // ignore edges
+
+        ? ?   ?   0   1  :  ?  :  0     ;  // set output to 0 on clear
+        ? ?   ?   0   x  :  0  :  0     ;  // reduce pessimism
+        ? ?   ?   0   *  :  ?  :  -     ;  // ignore edges
+ 
+        0 0   *   0   ?  :  0  :  0     ;  // on any clock, s=r=0, hold state
+        0 0   *   ?   0  :  1  :  1     ;
+
+        0 1   r   0   ?  :  ?  :  0     ;  // on 0-1 trans, if s != r, q follows s
+        0 ?   p   0   ?  :  0  :  0     ;  // reduce pessimism
+
+        1 0   r   ?   0  :  ?  :  1     ;  // on 0-1 trans, if s != r, q follows s
+        ? 0   p   ?   0  :  1  :  1     ;  // reduce pessimism
+
+        ? ?   n   0   0  :  ?  :  -     ;  // on a negative clock edge, hold state
+
+        * ?   ?   0   0  :  ?  :  -     ;  // ignore edges on s
+        ? *   ?   0   0  :  ?  :  -     ;  // ignore edges on r
+
+    endtable
+endprimitive // rsff_pri_px
+
+/************************************************************************
+*                                                                       *
+*  Primitive: lffh_primitive                                            *
+*    A high transparent latch asynchronous preset and reset.            *
+*                                                                       *
+*    The 4 variants of this primitive cover the various power-up        *
+*    initialization states (`powerup_state, 0, 1, x)                    *
+*                                                                       *
+*************************************************************************/
+primitive lffh_primitive(Q, D, CP, RB, SB);
+ 
+    output Q;  
+    input  D, CP, RB, SB;
+    reg    Q; 
+    initial Q = `powerup_state;
+ 
+   table
+ 
+    //  D  CP  RB  SB   :   Qt  :   Qt+1
+ 
+        0   1   ?   0   :   ?   :   0  ;  // transparent mode
+        1   1   0   ?   :   ?   :   1  ;
+        ?   0   0   0   :   ?   :   -  ;  // latched mode
+ 
+        ?   ?   1   0   :   ?   :   0  ;  // clear
+        ?   ?   0   1   :   ?   :   1  ;  // preset
+
+        0   x   ?   0   :   0   :   -  ;  // reduce pessimism
+        1   x   0   ?   :   1   :   -  ; 
+
+   endtable
+
+endprimitive // lffh_primitive
+
+/************************************************************************
+*                                                                       *
+*  Primitive: tff_pri                                                   *
+*    An edge triggered T flip flop, with Preset and Clear               *
+*                                                                       *
+*    The 4 variants of this primitive cover the various power-up        *
+*    initialization states (`powerup_state, 0, 1, x)                    *
+*                                                                       *
+*************************************************************************/
+primitive tff_pri (q, clk, t, pre, clr, sp, sr);
+
+output q; reg q;
+input clk, t, pre, clr, sp, sr;
+initial q = `powerup_state;
+
+   table
+
+    //  clk  t  pre clr sp sr  q   q(next)
+    
+         r   1   ?   0   ?  0 :  0 :  1 ;  // rising clock - toggle if t=1
+         r   1   0   ?   0  ? :  1 :  0 ;
+
+         ?   *   0   0   ?  ? :  ? :  - ;  // stable clock - ignore t transition
+
+         n   ?   0   0   ?  ? :  ? :  - ;  // falling clock - hold
+
+         ?   ?   1   0   ?  ? :  ? :  1 ;  // preset logic
+         ?   ?   x   0   ?  ? :  1 :  1 ;  // reduce pessimism
+         ?   ?   *   0   ?  ? :  ? :  - ;  // ignore edges on pre
+    
+         ?   ?   0   1   ?  ? :  ? :  0 ;  // clear logic
+         ?   ?   0   x   ?  ? :  0 :  0 ;  // reduce pessimism
+         ?   ?   0   *   ?  ? :  ? :  - ;  // ignore edges on clr
+
+         r   ?   ?   0   1  0 :  ? :  1 ;  // sync preset
+         p   0   ?   0   ?  0 :  1 :  1 ;  // reduce pessimism
+         ?   ?   0   0   *  ? :  ? :  - ;  // ignore edges on sp
+
+         r   ?   0   ?   0  1 :  ? :  0 ;  // sync reset
+         p   0   0   ?   0  ? :  0 :  0 ;  // reduce pessimism
+         ?   ?   0   0   ?  * :  ? :  - ;  // ignore edges on sr
+
+   endtable 
+endprimitive // tff_pri
+
+primitive tff_pri_p0 (q, clk, t, pre, clr, sp, sr);
+
+   output q; reg q;
+   input clk, t, pre, clr, sp, sr;
+   initial q = 1'b0;
+
+   table
+
+    //  clk  t  pre clr sp sr  q   q(next)
+    
+         r   1   ?   0   ?  0 :  0 :  1 ;  // rising clock - toggle if t=1
+         r   1   0   ?   0  ? :  1 :  0 ;
+
+         ?   *   0   0   ?  ? :  ? :  - ;  // stable clock - ignore t transition
+
+         n   ?   0   0   ?  ? :  ? :  - ;  // falling clock - hold
+
+         ?   ?   1   0   ?  ? :  ? :  1 ;  // preset logic
+         ?   ?   x   0   ?  ? :  1 :  1 ;  // reduce pessimism
+         ?   ?   *   0   ?  ? :  ? :  - ;  // ignore edges on pre
+    
+         ?   ?   0   1   ?  ? :  ? :  0 ;  // clear logic
+         ?   ?   0   x   ?  ? :  0 :  0 ;  // reduce pessimism
+         ?   ?   0   *   ?  ? :  ? :  - ;  // ignore edges on clr
+
+         r   ?   ?   0   1  0 :  ? :  1 ;  // sync preset
+         p   0   ?   0   ?  0 :  1 :  1 ;  // reduce pessimism
+         ?   ?   0   0   *  ? :  ? :  - ;  // ignore edges on sp
+
+         r   ?   0   ?   0  1 :  ? :  0 ;  // sync reset
+         p   0   0   ?   0  ? :  0 :  0 ;  // reduce pessimism
+         ?   ?   0   0   ?  * :  ? :  - ;  // ignore edges on sr
+
+   endtable   
+endprimitive // tff_pri_p0
+
+primitive tff_pri_p1 (q, clk, t, pre, clr, sp, sr);
+
+   output q; reg q;
+   input clk, t, pre, clr, sp, sr;
+   initial q = 1'b1;
+
+   table
+
+    //  clk  t  pre clr sp sr  q   q(next)
+    
+         r   1   ?   0   ?  0 :  0 :  1 ;  // rising clock - toggle if t=1
+         r   1   0   ?   0  ? :  1 :  0 ;
+
+         ?   *   0   0   ?  ? :  ? :  - ;  // stable clock - ignore t transition
+
+         n   ?   0   0   ?  ? :  ? :  - ;  // falling clock - hold
+
+         ?   ?   1   0   ?  ? :  ? :  1 ;  // preset logic
+         ?   ?   x   0   ?  ? :  1 :  1 ;  // reduce pessimism
+         ?   ?   *   0   ?  ? :  ? :  - ;  // ignore edges on pre
+    
+         ?   ?   0   1   ?  ? :  ? :  0 ;  // clear logic
+         ?   ?   0   x   ?  ? :  0 :  0 ;  // reduce pessimism
+         ?   ?   0   *   ?  ? :  ? :  - ;  // ignore edges on clr
+
+         r   ?   ?   0   1  0 :  ? :  1 ;  // sync preset
+         p   0   ?   0   ?  0 :  1 :  1 ;  // reduce pessimism
+         ?   ?   0   0   *  ? :  ? :  - ;  // ignore edges on sp
+
+         r   ?   0   ?   0  1 :  ? :  0 ;  // sync reset
+         p   0   0   ?   0  ? :  0 :  0 ;  // reduce pessimism
+         ?   ?   0   0   ?  * :  ? :  - ;  // ignore edges on sr
+
+   endtable 
+endprimitive // tffe_pri_p1
+
+primitive tff_pri_px (q, clk, t, pre, clr, sp, sr);
+
+   output q; reg q;
+   input clk, t, pre, clr, sp, sr;
+   initial q = 1'bx;
+
+   table
+
+    //  clk  t  pre clr sp sr  q   q(next)
+    
+         r   1   ?   0   ?  0 :  0 :  1 ;  // rising clock - toggle if t=1
+         r   1   0   ?   0  ? :  1 :  0 ;
+
+         ?   *   0   0   ?  ? :  ? :  - ;  // stable clock - ignore t transition
+
+         n   ?   0   0   ?  ? :  ? :  - ;  // falling clock - hold
+
+         ?   ?   1   0   ?  ? :  ? :  1 ;  // preset logic
+         ?   ?   x   0   ?  ? :  1 :  1 ;  // reduce pessimism
+         ?   ?   *   0   ?  ? :  ? :  - ;  // ignore edges on pre
+    
+         ?   ?   0   1   ?  ? :  ? :  0 ;  // clear logic
+         ?   ?   0   x   ?  ? :  0 :  0 ;  // reduce pessimism
+         ?   ?   0   *   ?  ? :  ? :  - ;  // ignore edges on clr
+
+         r   ?   ?   0   1  0 :  ? :  1 ;  // sync preset
+         p   0   ?   0   ?  0 :  1 :  1 ;  // reduce pessimism
+         ?   ?   0   0   *  ? :  ? :  - ;  // ignore edges on sp
+
+         r   ?   0   ?   0  1 :  ? :  0 ;  // sync reset
+         p   0   0   ?   0  ? :  0 :  0 ;  // reduce pessimism
+         ?   ?   0   0   ?  * :  ? :  - ;  // ignore edges on sr
+
+   endtable
+endprimitive // tff_pri_px
+
+/************************************************************************
+*                                                                       *
+*   Primitive : smux                                                    *
+*     4 to 1 mux                                                        *
+*                                                                       *
+*************************************************************************/
+primitive smux (O, I0, I1, I2, I3, S0, S1);
+ 
+   output O;  
+   input  I0,I1,I2,I3,S0,S1;
+ 
+   table
+ 
+    //   I0   I1   I2   I3  S0   S1 :   O
+ 
+         0    ?    ?    ?    0    0 :   0;   
+         1    ?    ?    ?    0    0 :   1;   
+         x    ?    ?    ?    0    0 :   x;   
+ 
+         ?    0    ?    ?    0    1 :   0;   
+         ?    1    ?    ?    0    1 :   1;   
+         ?    x    ?    ?    0    1 :   x;   
+ 
+         ?    ?    0    ?    1    0 :   0;   
+         ?    ?    1    ?    1    0 :   1;   
+         ?    ?    x    ?    1    0 :   x;   
+ 
+         ?    ?    ?    0    1    1 :   0;   
+         ?    ?    ?    1    1    1 :   1;   
+         ?    ?    ?    x    1    1 :   x;   
+
+   endtable
+endprimitive // smux
+
+/************************************************************************
+*                                                                       *
+*   Primitive : smux2                                                   *
+*     2-to-1 mux
+*                                                                       *
+*************************************************************************/
+primitive smux2 (O, I0, I1, S0);
+ 
+    output O;  
+    input  I0,I1,S0;
+ 
+    table
+ 
+    //   I0   I1   S0  :   O
+ 
+         0    ?    0   :   0;   
+         1    ?    0   :   1;   
+         x    ?    0   :   x;   
+ 
+         ?    0    1   :   0;   
+         ?    1    1   :   1;   
+         ?    x    1   :   x;   
+ 
+    endtable
+endprimitive // smux2
+
+
+/************************************************************************
+*                                                                       *
+*  Module: g_fadd                                                   --1 *
+*    Full-Adder                                                         *
+*                                                                       *
+*************************************************************************/
+module g_fadd (SUM, CO, A, B, CI);
+
+   input A, B, CI;
+   output SUM, CO;
+
+   assign {CO, SUM} = A + B + CI;
+
+endmodule // g_fadd
+
+/************************************************************************
+*                                                                       *
+*  Module:  g_hadd                                                  --2 *
+*    Half-adder                                                         *
+*                                                                       *
+*************************************************************************/
+module g_hadd (SUM, CO, A, B);
+
+   input A, B;
+   output SUM, CO;
+
+   assign SUM = A ^ B;
+
+   assign CO = A & B;
+
+endmodule // g_hadd
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2and                                                --3 *
+*    2 input AND                                                        *
+*                                                                       *
+*************************************************************************/
+module g_2and (Y, A, B);
+
+   input A, B;
+   output Y;
+
+   and (Y, A, B);
+
+endmodule // g_2and
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2and1                                               --4 *
+*    2 input AND with 1 inverted input                                  *
+*                                                                       *
+*************************************************************************/
+module g_2and1 (Y, AN, B);
+
+   input AN, B;
+   output Y;
+
+   and (Y, ~AN, B);
+
+endmodule // g_2and1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2and2                                               --5 *
+*    2 input AND with 2 inverted input                                  *
+*                                                                       *
+*************************************************************************/
+module g_2and2 (Y, AN, BN);
+
+   input AN, BN;
+   output Y;
+
+   and (Y, ~AN, ~BN);
+
+endmodule // g_2and2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2nand                                               --6 *
+*    2 input NAND                                                       *
+*                                                                       *
+*************************************************************************/
+module g_2nand (YN, A, B);
+
+   input A, B;
+   output YN;
+
+   nand (YN, A, B);
+
+endmodule // g_2nand
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2nand1                                              --7 *
+*    2 input NAND with 1 inverted input                                 *
+*                                                                       *
+*************************************************************************/
+module g_2nand1 (YN, AN, B);
+
+   input AN, B;
+   output YN;
+
+   nand (YN, ~AN, B);
+
+endmodule // g_2nand1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2nand2                                              --8 *
+*    2 input NAND with 2 inverted input                                 *
+*                                                                       *
+*************************************************************************/
+module g_2nand2 (YN, AN, BN);
+
+   input AN, BN;
+   output YN;
+
+   nand (YN, ~AN, ~BN);
+
+endmodule // g_2nand2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2nor                                                --9 *
+*    2 input NOR                                                        *
+*                                                                       *
+*************************************************************************/
+module g_2nor (YN, A, B);
+
+   input A, B;
+   output YN;
+
+   nor (YN, A, B);
+
+endmodule // g_2nor
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2nor1                                              --10 *
+*    2 input NOR with 1 inverted input                                  *
+*                                                                       *
+*************************************************************************/
+module g_2nor1 (YN, AN, B);
+
+   input AN, B;
+   output YN;
+
+   nor (YN, ~AN, B);
+
+endmodule // g_2nor1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2nor2                                              --11 *
+*    2 input NOR with 2 inverted input                                  *
+*                                                                       *
+*************************************************************************/
+module g_2nor2 (YN, AN, BN);
+
+   input AN, BN;
+   output YN;
+
+   nor (YN, ~AN, ~BN);
+
+endmodule // g_2nor2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2or                                                --12 *
+*    2 input OR                                                         *
+*                                                                       *
+*************************************************************************/
+module g_2or (Y, A, B);
+
+   input A, B;
+   output Y;
+
+   or (Y, A, B);
+
+endmodule // g_2or
+
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2or1                                               --13 *
+*    2 input OR with 1 inverted input                                   *
+*                                                                       *
+*************************************************************************/
+module g_2or1 (Y, AN, B);
+
+   input AN, B;
+   output Y;
+
+   or (Y, ~AN, B);
+
+endmodule // g_2or1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_2or2                                               --14 *
+*    2 input OR with 2 inverted input                                   *
+*                                                                       *
+*************************************************************************/
+module g_2or2 (Y, AN, BN);
+
+   input AN, BN;
+   output Y;
+
+   or (Y, ~AN, ~BN);
+
+endmodule // g_2or2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3and                                               --15 *
+*    3 input AND                                                        *
+*                                                                       *
+*************************************************************************/
+module g_3and (Y, A, B, C);
+
+   input A, B, C;
+   output Y;
+
+   and (Y, A, B, C);
+
+endmodule // g_3and
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3and1                                              --16 *
+*    3 input AND with 1 inverted input                                  *
+*                                                                       *
+*************************************************************************/
+module g_3and1 (Y, AN, B, C);
+
+   input AN, B, C;
+   output Y;
+
+   and (Y, ~AN, B, C);
+
+endmodule // g_3and1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3and2                                              --17 *
+*    3 input AND with 2 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_3and2 (Y, AN, BN, C);
+
+   input AN, BN, C;
+   output Y;
+
+   and (Y, ~AN, ~BN, C);
+
+endmodule // g_3and2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3and3                                              --18 *
+*    3 input AND with 3 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_3and3 (Y, AN, BN, CN);
+
+   input AN, BN, CN;
+   output Y;
+
+   and (Y, ~AN, ~BN, ~CN);
+
+endmodule // g_3and3
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3nand                                              --19 *
+*    3 input NAND                                                       *
+*                                                                       *
+*************************************************************************/
+module g_3nand (YN, A, B, C);
+
+   input A, B, C;
+   output YN;
+
+   nand (YN, A, B, C);
+
+endmodule // g_3nand
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3nand1                                             --20 *
+*    3 input NAND with 1 inverted input                                 *
+*                                                                       *
+*************************************************************************/
+module g_3nand1 (YN, AN, B, C);
+
+   input AN, B, C;
+   output YN;
+
+   nand (YN, ~AN, B, C);
+
+endmodule // g_3nand1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3nand2                                             --21 *
+*    3 input NAND with 2 inverted inputs                                *
+*                                                                       *
+*************************************************************************/
+module g_3nand2 (YN, AN, BN, C);
+
+   input AN, BN, C;
+   output YN;
+
+   nand (YN, ~AN, ~BN, C);
+
+endmodule // g_3nand2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3nand3                                             --22 *
+*    3 input NAND with 3 inverted inputs                                *
+*                                                                       *
+*************************************************************************/
+module g_3nand3 (YN, AN, BN, CN);
+
+   input AN, BN, CN;
+   output YN;
+
+   nand (YN, ~AN, ~BN, ~CN);
+
+endmodule // g_3nand3
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3nor                                               --23 *
+*    3 input NOR                                                        *
+*                                                                       *
+*************************************************************************/
+module g_3nor (YN, A, B, C);
+
+   input A, B, C;
+   output YN;
+
+   nor (YN, A, B, C);
+
+endmodule // g_3nor
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3nor1                                              --24 *
+*    3 input NOR with 1 inverted input                                  *
+*                                                                       *
+*************************************************************************/
+module g_3nor1 (YN, AN, B, C);
+
+   input AN, B, C;
+   output YN;
+
+   nor (YN, ~AN, B, C);
+
+endmodule // g_3nor1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3nor2                                              --25 *
+*    3 input NOR with 2 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_3nor2 (YN, AN, BN, C);
+
+   input AN, BN, C;
+   output YN;
+
+   nor (YN, ~AN, ~BN, C);
+
+endmodule // g_3nor2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3nor3                                              --26 *
+*    3 input NOR with 3 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_3nor3 (YN, AN, BN, CN);
+
+   input AN, BN, CN;
+   output YN;
+
+   nor (YN, ~AN, ~BN, ~CN);
+
+endmodule // g_3nor3
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3or                                                --27 *
+*    3 input OR                                                         *
+*                                                                       *
+*************************************************************************/
+module g_3or (Y, A, B, C);
+
+   input A, B, C;
+   output Y;
+
+   or (Y, A, B, C);
+
+endmodule // g_3or
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3or1                                               --28 *
+*    3 input OR with 1 inverted input                                   *
+*                                                                       *
+*************************************************************************/
+module g_3or1 (Y, AN, B, C);
+
+   input AN, B, C;
+   output Y;
+
+   or (Y, ~AN, B, C);
+
+endmodule // g_3or1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3or2                                               --29 *
+*    3 input OR with 2 inverted inputs                                  *
+*                                                                       *
+*************************************************************************/
+module g_3or2 (Y, AN, BN, C);
+
+   input AN, BN, C;
+   output Y;
+
+   or (Y, ~AN, ~BN, C);
+
+endmodule // g_3or2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_3or3                                               --30 *
+*    3 input OR with 3 inverted inputs                                  *
+*                                                                       *
+*************************************************************************/
+module g_3or3 (Y, AN, BN, CN);
+
+   input AN, BN, CN;
+   output Y;
+
+   or (Y, ~AN, ~BN, ~CN);
+
+endmodule // g_3or3
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4and                                               --31 *
+*    4 input AND                                                        *
+*                                                                       *
+*************************************************************************/
+module g_4and (Y, A, B, C, D);
+
+   input A, B, C, D;
+   output Y;
+
+   and (Y, A, B, C, D);
+
+endmodule // g_4and
+
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4and1                                              --32 *
+*    4 input AND with 1 inverted input                                  *
+*                                                                       *
+*************************************************************************/
+module g_4and1 (Y, AN, B, C, D);
+
+   input AN, B, C, D;
+   output Y;
+
+   and (Y, ~AN, B, C, D);
+
+endmodule // g_4and1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4and2                                              --33 *
+*    4 input AND with 2 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_4and2 (Y, AN, BN, C, D);
+
+   input AN, BN, C, D;
+   output Y;
+
+   and (Y, ~AN, ~BN, C, D);
+
+endmodule // g_4and2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4and3                                              --34 *
+*    4 input AND with 3 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_4and3 (Y, AN, BN, CN, D);
+
+   input AN, BN, CN, D;
+   output Y;
+
+   and (Y, ~AN, ~BN, ~CN, D);
+
+endmodule // g_4and3
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4and4                                              --35 *
+*    4 input AND with 4 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_4and4 (Y, AN, BN, CN, DN);
+
+   input AN, BN, CN, DN;
+   output Y;
+
+   and (Y, ~AN, ~BN, ~CN, ~DN);
+
+endmodule // g_4and4
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nand                                              --36 *
+*    4 input NAND                                                       *
+*                                                                       *
+*************************************************************************/
+module g_4nand (YN, A, B, C, D);
+
+   input A, B, C, D;
+   output YN;
+
+   nand (YN, A, B, C, D);
+
+endmodule // g_4nand
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nand1                                             --37 *
+*    4 input NAND with 1 inverted input                                 *
+*                                                                       *
+*************************************************************************/
+module g_4nand1 (YN, AN, B, C, D);
+
+   input AN, B, C, D;
+   output YN;
+
+   nand (YN, ~AN, B, C, D);
+
+endmodule // g_4nand1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nand2                                             --38 *
+*    4 input NAND with 2 inverted inputs                                *
+*                                                                       *
+*************************************************************************/
+module g_4nand2 (YN, AN, BN, C, D);
+
+   input AN, BN, C, D;
+   output YN;
+
+   nand (YN, ~AN, ~BN, C, D);
+
+endmodule // g_4nand2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nand3                                             --39 *
+*    4 input NAND with 3 inverted inputs                                *
+*                                                                       *
+*************************************************************************/
+module g_4nand3 (YN, AN, BN, CN, D);
+
+   input AN, BN, CN, D;
+   output YN;
+
+   nand (YN, ~AN, ~BN, ~CN, D);
+
+endmodule // g_4nand3
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nand4                                             --40 *
+*    4 input NAND with 4 inverted inputs                                *
+*                                                                       *
+*************************************************************************/
+module g_4nand4 (YN, AN, BN, CN, DN);
+
+   input AN, BN, CN, DN;
+   output YN;
+
+   nand (YN, ~AN, ~BN, ~CN, ~DN);
+
+endmodule // g_4nand4
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nor                                               --41 *
+*    4 input NOR                                                        *
+*                                                                       *
+*************************************************************************/
+module g_4nor (YN, A, B, C, D);
+
+   input A, B, C, D;
+   output YN;
+
+   nor (YN, A, B, C, D);
+
+endmodule // g_4nor
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nor1                                              --42 *
+*    4 input NOR with 1 inverted input                                  *
+*                                                                       *
+*************************************************************************/
+module g_4nor1 (YN, AN, B, C, D);
+
+   input AN, B, C, D;
+   output YN;
+
+   nor (YN, ~AN, B, C, D);
+
+endmodule // g_4nor1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nor2                                              --43 *
+*    4 input NOR with 2 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_4nor2 (YN, AN, BN, C, D);
+
+   input AN, BN, C, D;
+   output YN;
+
+   nor (YN, ~AN, ~BN, C, D);
+
+endmodule // g_4nor2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nor3                                              --44 *
+*    4 input NOR with 3 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_4nor3 (YN, AN, BN, CN, D);
+
+   input AN, BN, CN, D;
+   output YN;
+
+   nor (YN, ~AN, ~BN, ~CN, D);
+
+endmodule // g_4nor3
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4nor4                                              --45 *
+*    4 input NOR with 4 inverted inputs                                 *
+*                                                                       *
+*************************************************************************/
+module g_4nor4 (YN, AN, BN, CN, DN);
+
+   input AN, BN, CN, DN;
+   output YN;
+
+   nor (YN, ~AN, ~BN, ~CN, ~DN);
+
+endmodule // g_4nor4
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4or                                                --46 *
+*    4 input OR                                                         *
+*                                                                       *
+*************************************************************************/
+module g_4or (Y, A, B, C, D);
+
+   input A, B, C, D;
+   output Y;
+
+   or (Y, A, B, C, D);
+
+endmodule // g_4or
+
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4or1                                               --47 *
+*    4 input OR with 1 inverted input                                   *
+*                                                                       *
+*************************************************************************/
+module g_4or1 (Y, AN, B, C, D);
+
+   input AN, B, C, D;
+   output Y;
+
+   or (Y, ~AN, B, C, D);
+
+endmodule // g_4or1
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4or2                                               --48 *
+*    4 input OR with 2 inverted inputs                                  *
+*                                                                       *
+*************************************************************************/
+module g_4or2 (Y, AN, BN, C, D);
+
+   input AN, BN, C, D;
+   output Y;
+
+   or (Y, ~AN, ~BN, C, D);
+
+endmodule // g_4or2
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4or3                                               --49 *
+*    4 input OR with 3 inverted inputs                                  *
+*                                                                       *
+*************************************************************************/
+module g_4or3 (Y, AN, BN, CN, D);
+
+   input AN, BN, CN, D;
+   output Y;
+
+   or (Y, ~AN, ~BN, ~CN, D);
+
+endmodule // g_4or3
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_4or4                                               --50 *
+*    4 input OR with 4 inverted inputs                                  *
+*                                                                       *
+*************************************************************************/
+module g_4or4 (Y, AN, BN, CN, DN);
+
+   input AN, BN, CN, DN;
+   output Y;
+
+   or (Y, ~AN, ~BN, ~CN, ~DN);
+
+endmodule // g_4or4
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_buf                                                --51 *
+*    buffer                                                             *
+*                                                                       *
+*************************************************************************/
+module g_buf (Y, A);
+
+	input A;
+	output Y;
+	
+	buf (Y, A);
+
+endmodule // g_buf
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_bufb                                               --52 *
+*    buffer with inverted input                                         *
+*                                                                       *
+*************************************************************************/
+module g_bufb (Y, AN);
+
+	input AN;
+	output Y;
+
+	buf( Y, ~AN);
+
+endmodule // g_bufb
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_inv                                                --53 *
+*    inverter                                                           *
+*                                                                       *
+*************************************************************************/
+module g_inv (YN, A);
+
+	input A;
+	output YN;
+
+	not(YN, A);
+
+endmodule // g_inv
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_xnor                                               --54 *
+*    2 input XNOR                                                       *
+*                                                                       *
+*************************************************************************/
+module g_xnor (YN, A, B);
+
+	input A, B;
+	output YN;
+
+	xnor(YN, A, B);
+
+endmodule // g_xnor
+
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_xor                                                --55 *
+*    2 input XOR                                                        *
+*                                                                       *
+*************************************************************************/
+module g_xor (Y, A, B);
+
+	input A, B;
+	output Y;
+
+	xor(Y, A, B);
+
+endmodule // g_xor
+
+
+/************************************************************************
+*                                                                       *
+*  Module: g_bidir                                                 --56 *
+*    Bidirectional Output Pad.                                          *
+*                                                                       *
+*************************************************************************/
+module g_bidir (I, O, FBK, OE);
+   input I, OE;
+   output O, FBK;
+
+   bufif1 (O, I, OE);
+   buf (FBK, O);
+
+endmodule // g_bidir
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_clkbuf                                             --57 *
+*    buffer                                                             *
+*                                                                       *
+*************************************************************************/
+module g_clkbuf (O, I);
+
+	input I;
+	output O;
+
+	buf(O, I);
+
+endmodule // g_clkbuf
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_input                                              --58 *
+*    Input Pad                                                          *
+*                                                                       *
+*************************************************************************/
+module g_input (O, I);
+
+	input I;
+	output O;
+
+	buf(O, I);
+
+endmodule // g_input
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_output                                             --59 *
+*    Output Pad                                                         *
+*                                                                       *
+*************************************************************************/
+module g_output (O, I);
+
+	input I;
+	output O;
+
+	buf(O, I);
+
+endmodule // g_output
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_tri                                                --60 *
+*    Tri-buffer Pad                                                     *
+*                                                                       *
+*************************************************************************/
+module g_tri (O, I, OE);
+
+	input I, OE;
+	output O;
+
+	bufif1(O, I, OE);
+
+endmodule // g_tri
+
+/************************************************************************
+*                                                                       *
+*  Module: g_mux21                                                 --61 *
+*    2-to-1 Muxtiplexer                                                 *
+*                                                                       *
+*************************************************************************/
+module g_mux21 (Y, A, B, S);
+
+   input A, B, S;
+   output Y;
+
+   assign Y = (A & ~S) | (B & S); 
+
+endmodule // g_mux21
+
+/************************************************************************
+*                                                                       *
+*  Module: g_mux41                                                 --62 *
+*    4-to-1 Muxtiplexer                                                 *
+*                                                                       *
+*************************************************************************/
+module g_mux41 (Y, A, B, C, D, S1, S0);
+
+   input A, B, C, D, S1, S0;
+   output Y;
+
+   assign Y = (A & ~S1 & ~S0) | (B & ~S1 & S0) | (C & S1 & ~S0) | (D & S1 & S0);
+
+endmodule // g_mux41
+
+/************************************************************************
+*                                                                       *
+*  Module: g_mux81                                                 --63 *
+*    8-to-1 Muxtiplexer                                                 *
+*                                                                       *
+*************************************************************************/
+module g_mux81 (Y, A, B, C, D, E, F, G, H, S2, S1, S0);
+
+   input A, B, C, D, E, F, G, H, S2, S1, S0;
+   output Y;
+
+   assign Y = (A & ~S2 & ~S1 & ~S0) | (B & ~S2 & ~S1 & S0) | (C & ~S2 & S1 & ~S0) 
+         | (D & ~S2 & S1 & S0) | (E & S2 & ~S1 & ~S0) | (F & S2 & ~S1 & S0)
+         | (G & S2 & S1 & ~S0) | (H & S2 & S1 & S0);
+
+endmodule // g_mux41
+
+/************************************************************************
+*                                                                       *
+*  Module: g_d                                                     --64 *
+*    A low to high edge-triggered D flip-flop                           *
+*                                                                       *
+*************************************************************************/
+module g_d (Q, D, CLK); //DS
+
+   input D, CLK;
+   output Q;
+
+//   dffe_pri dffe (Q, D, CLK, 1, 0, 0);
+     dff_primitive_pu dff (Q, D, CLK, 0, 0);
+
+endmodule // g_d
+
+/************************************************************************
+*                                                                       *
+*  Module: g_dc                                                    --65 *
+*    A low to high edge-triggered D flip-flop with active high clear    *
+*                                                                       *
+*************************************************************************/
+module g_dc (Q, D, CLK, C); //DS
+
+   input D, CLK, C;
+   output Q;
+   reg Q;
+
+   wire   Q_int;
+   initial Q = 1'b0;
+
+     dff_primitive_pu  dff(Q_int, D, CLK, C, 0);
+
+   always@(Q_int)
+     Q = Q_int;
+
+
+endmodule // g_dc   
+
+/************************************************************************
+*                                                                       *
+*  Module: g_dec                                                   --66 *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    async clear                                                        *
+*                                                                       *
+*************************************************************************/
+module g_dec (Q, D, CLK, E, C);   //MS
+
+   input D, CLK, E, C;
+   reg CLKEN;
+   output Q;
+
+   initial CLKEN = 0;
+   always @(posedge CLK or negedge CLK) begin
+     if (E == 1) begin
+      CLKEN = CLK;
+     end
+   end
+
+//   dffe_pri dffe (Q, D, CLK, E, C, 0);
+   dff_primitive_pu  dff(Q, D, CLKEN, C, 0);
+   
+
+endmodule // g_dec
+
+/************************************************************************
+*                                                                       *
+*  Module: g_dep                                                   --67 *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    async set                                                          *
+*                                                                       *
+*************************************************************************/
+module g_dep (Q, D, CLK, E, P);  //MS
+
+   input D, CLK, E, P;
+   reg CLKEN;
+   output Q;
+
+   initial CLKEN = 0;
+   always @(posedge CLK or negedge CLK) begin
+     if (E == 1) begin
+      CLKEN = CLK;
+     end
+   end
+//   dffe_pri dffe (Q, D, CLK, E, 0, P);
+   dff_primitive_pu  dff(Q, D, CLKEN, 0, P);
+
+endmodule // g_dep
+
+/************************************************************************
+*                                                                       *
+*  Module: g_dp                                                    --68 *
+*    A low to high edge-triggered D flip-flop with active high preset   *
+*                                                                       *
+*************************************************************************/
+module g_dp (Q, D, CLK, P);  //MS
+
+   input D, CLK, P;
+   output Q;
+
+//   dffe_pri dffe (Q, D, CLK, 1, 0, P);
+   dff_primitive_pu  dff(Q, D, CLK, 0, P);
+
+endmodule // g_dp
+
+
+
+
+
+
+/************************************************************************
+*                                                                       *
+*  Module: g_jk                                                    --69 *
+*    An edge triggered JK-type flip flop                                *
+*                                                                       *
+*************************************************************************/
+module g_jk (Q, J, K, CLK);  //DS
+
+   input J, K, CLK;
+   output Q;
+
+//   jkff_pri jkff (Q, J, K, CLK, 0, 0);
+     jkff_primitive_pu jkff (Q, J, K, CLK, 0, 0);
+
+endmodule // g_jk
+
+/************************************************************************
+*                                                                       *
+*  Module: g_jkc                                                   --70 *
+*    An edge triggered JK-type flip flop with asychronous clear         *
+*                                                                       *
+*************************************************************************/
+module g_jkc  (Q, J, K, CLK, C); //DS
+
+   input J, K, CLK, C;
+   output Q;
+
+//   jkff_pri jkff (Q, J, K, CLK, 0, C);
+   jkff_primitive_pu jkff (Q, J, K, CLK, C, 0);
+
+endmodule // g_jkc
+
+
+/************************************************************************
+*                                                                       *
+*  Module: g_jkp                                                   --71 *
+*    An edge triggered JK-type flip flop with asynchronous preset       *
+*                                                                       *
+*************************************************************************/
+module g_jkp (Q, J, K, CLK, P); //DS
+
+   input J, K, CLK, P;
+   output Q;
+
+//   jkff_pri jkff (Q, J, K, CLK, P, 0);
+   jkff_primitive_pu jkff (Q, J, K, CLK, 0, P);
+
+endmodule // g_jkp
+
+/************************************************************************
+*                                                                       *
+*  Module:  g_latch                                                --72 *
+*    Active-high level-sensitive latch                                  *
+*                                                                       *
+*************************************************************************/
+module g_latch (Q, E, D);
+
+   input E, D;
+   output Q;
+
+   lffh_primitive_pu lffh (Q, D, E, 0, 0);
+
+endmodule // g_latch
+
+/************************************************************************
+*                                                                       *
+*  Primitive: RS                                                   --73 *
+*    An edge triggered JK-type flip flop                                *
+*                                                                       *
+*************************************************************************/
+module g_rs (Q, S, R, CLK);  //DS
+
+   input S, R, CLK;
+   output Q;
+
+//   rsff_pri rsff (Q, S, R, CLK, 0, 0);
+     rsff_primitive_pu rsff (Q, S, R, CLK, 0, 0);
+
+endmodule // g_rs
+
+/************************************************************************
+*                                                                       *
+*  Module: g_rsc                                                   --74 *
+*    An edge triggered JK-type flip flop with asynchronous clear        *
+*                                                                       *
+*************************************************************************/
+module g_rsc  (Q, S, R, CLK, C); //DS
+
+   input S, R, CLK, C;
+   output Q;
+
+//   rsff_pri rsff (Q, S, R, CLK, 0, C);
+   rsff_primitive_pu rsff (Q, S, R, CLK, C, 0);
+
+endmodule // g_rsc
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_rsp                                                --75 *
+*    An edge triggered JK-type flip flop with asynchronous preset       *
+*                                                                       *
+*************************************************************************/
+module g_rsp (Q, S, R, CLK, P); //DS
+
+   input S, R, CLK, P;
+   output Q;
+
+//   rsff_pri rsff (Q, S, R, CLK, P, 0);
+   rsff_primitive_pu rsff (Q, S, R, CLK, 0, P);
+
+endmodule // g_rsp
+
+/************************************************************************
+*                                                                       *
+*  Module: g_t                                                     --76 *
+*    An edge triggered T-type flip flop                                 *
+*                                                                       *
+*************************************************************************/
+module g_t (Q, T, CLK); //DS
+
+   input T, CLK;
+   output Q;
+   reg    Q; 
+   wire   Q_int;
+   initial Q = 1'b0;
+
+//   tff_pri tff (Q, CLK, T, 0, 0, 0, 0);
+  tff_primitive_pu tff (Q_int,T, CLK, 0, 0);
+
+   always@(Q_int)
+     Q = Q_int;
+  
+
+endmodule // g_t
+
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_tc                                                 --77 *
+*    An edge triggered t-type flip flop with asynchronous clear         *
+*                                                                       *
+*************************************************************************/
+module g_tc (Q, T, C, CLK); //DS
+
+   input T, C, CLK;
+   output Q;
+
+//   tff_pri tff (Q, CLK, T, 0, C, 0, 0);
+   tff_primitive_pu tff (Q,T, CLK, C, 0);
+
+endmodule // g_tc
+
+/************************************************************************
+*                                                                       *
+*  Primitive: g_tp                                                 --78 *
+*    An edge triggered t-type flip flop with asynchronous clear         *
+*                                                                       *
+*************************************************************************/
+module g_tp (Q, T, P, CLK); //DS
+
+   input T, P, CLK;
+   output Q;
+
+//   tff_pri tff (Q, CLK, T, P, 0, 0, 0);
+   tff_primitive_pu tff (Q,T, CLK, 0, P);
+
+endmodule // g_tp
+
+
+
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_spar_p0                                                *
+*      Leading edge trigger TFF with synchronous preset and             *
+*      asynchronous reset, power up to 0                                *
+*                                                                       *
+*************************************************************************/
+module tff_spar_p0(q,qb,t,clk,pst_h,rst_h);
+   output q,qb;
+   input  t,clk,pst_h,rst_h;
+   wire   rst_pst;
+
+   tff_pri_p0 tff (q,clk,t,0,rst_h,pst_h,0);
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // tff_spar_p0
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_spar_p1                                                *
+*                                                                       *
+*************************************************************************/
+module tff_spar_p1(q,qb,t,clk,pst_h,rst_h);
+   output q,qb;
+   input  t,clk,pst_h,rst_h;
+   wire   rst_pst;
+
+   tff_pri_p1 tff (q,clk,t,0,rst_h,pst_h,0);
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+endmodule // tff_spar_p1
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_spar_px                                                *
+*                                                                       *
+*************************************************************************/
+module tff_spar_px(q,qb,t,clk,pst_h,rst_h);
+   output q,qb;
+   input  t,clk,pst_h,rst_h;
+   wire   rst_pst;
+
+   tff_pri_px tff (q,clk,t,0,rst_h,pst_h,0);
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+endmodule // tff_spar_px
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_apsr_p0                                                *
+*      Leading edge trigger TFF with asynchronous preset and            *
+*      synchronous reset, power up to 0                                 *
+*                                                                       *
+*************************************************************************/
+module tff_apsr_p0(q,qb,t,clk,pst_h,rst_h);
+   output q, qb;
+   input  t, clk, pst_h, rst_h;
+   wire   rst_pst;
+
+   tff_pri_p0 tff (q,clk,t,pst_h,0,0,rst_h);
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // tff_apsr_p0
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_apsr_p1                                                *
+*      Leading edge trigger TFF with asynchronous preset and            *
+*      synchronous reset, power up to 1                                 *
+*                                                                       *
+*************************************************************************/
+module tff_apsr_p1(q,qb,t,clk,pst_h,rst_h);
+   output q, qb;
+   input  t, clk, pst_h, rst_h;
+   wire   rst_pst;
+
+   tff_pri_p1 tff (q,clk,t,pst_h,0,0,rst_h);
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // tff_apsr_p1
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_apsr_px                                                *
+*      Leading edge trigger TFF with asynchronous preset and            *
+*      synchronous reset, power up to x                                 *
+*                                                                       *
+*************************************************************************/
+module tff_apsr_px(q,qb,t,clk,pst_h,rst_h);
+   output q, qb;
+   input  t, clk, pst_h, rst_h;
+   wire   rst_pst;
+
+   tff_pri_px tff (q,clk,t,pst_h,0,0,rst_h);
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // tff_apsr_px
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_spsr_p0                                                *
+*      Leading edge trigger TFF with sychronous preset and reset,       *
+*      power up to 0                                                    *
+*                                                                       *
+*************************************************************************/
+module tff_spsr_p0(q,qb,t,clk,pst_h,rst_h);
+   output q, qb;
+   input  t, clk, pst_h, rst_h;
+   wire   rst_pst;
+
+   tff_pri_p0 tff (q,clk,t,0,0,pst_h,rst_h);
+
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // tff_spsr_p0
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_spsr_p1                                                *
+*      Leading edge triggered TFF with synchronous preset and reset,    *
+*      power up to 1                                                    *
+*                                                                       *
+*************************************************************************/
+module tff_spsr_p1(q,qb,t,clk,pst_h,rst_h);
+   output q, qb;
+   input  t, clk, pst_h, rst_h;
+   wire   rst_pst;
+
+   tff_pri_p1 tff (q,clk,t,0,0,pst_h,rst_h);
+
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // tff_spsr_p1
+
+/************************************************************************
+*                                                                       *
+*    Module: tff_spsr_px                                                *
+*      Leading edge triggered TFF with synchronous preset and reset,    *
+*      power up to x                                                    *
+*                                                                       *
+*************************************************************************/
+module tff_spsr_px(q,qb,t,clk,pst_h,rst_h);
+   output q, qb;
+   input  t, clk, pst_h, rst_h;
+   wire   rst_pst;
+
+   tff_pri_px tff (q,clk,t,0,0,pst_h,rst_h);
+
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // tff_spsr_px
+/************************************************************************
+*                                                                       *
+*   Module : rsff_spar_p0                                               *
+*     Leading edge triggered RSFF with synchronous preset and           *
+*     asynchronous reset, power up to 0                                 *
+*                                                                       *
+*************************************************************************/
+module rsff_spar_p0(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   sORp, rANDp;
+ 
+   or (sORp, s, pst_h);
+   and (rANDp, r, ~pst_h);
+
+   rsff_primitive_p0 rsff (q,sORp,rANDp,clk,rst_h,0);
+
+   not(qb,q);
+ 
+
+endmodule // rsff_spar_p0
+
+/************************************************************************
+*                                                                       *
+*   Module : rsff_spar_p1                                               *
+*     Leading edge triggered RSFF with synchronous preset and           *
+*     asynchronous reset, power up to 1                                 *
+*                                                                       *
+*************************************************************************/
+module rsff_spar_p1(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   sORp, rANDp;
+ 
+   or (sORp, s, pst_h);
+   and (rANDp, r, ~pst_h);
+ 
+   rsff_primitive_p1 rsff (q,sORp,rANDp,clk,rst_h,0);
+
+   not(qb,q);
+ 
+
+endmodule // rsff_spar_p1
+
+/************************************************************************
+*                                                                       *
+*   Module : rsff_spar_px                                               *
+*     Leading edge triggered RSFF with synchronous preset and           *
+*     asynchronous reset, power up to x                                 *
+*                                                                       *
+*************************************************************************/
+module rsff_spar_px(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   sORp, rANDp;
+ 
+   or (sORp, s, pst_h);
+   and (rANDp, r, ~pst_h);
+ 
+   rsff_primitive_px rsff (q,sORp,rANDp,clk,rst_h,0);
+
+   not(qb,q);
+ 
+endmodule // rsff_spar_px
+
+/************************************************************************
+*                                                                       *
+*   Module : rsff_apsr_p0                                               *
+*     Leading edge triggered RSFF with asynchronous preset and          *
+*     synchronous reset, power up to 0                                  *
+*                                                                       *
+*************************************************************************/
+module rsff_apsr_p0(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   rORc, sANDc;
+ 
+   or (rORc, r, rst_h);
+   and (sANDc, s, ~rst_h);
+
+   rsff_primitive_p0 rsff (q,sANDc,rORc,clk,0,pst_h);
+
+   not(qb,q);
+ 
+
+endmodule // rsff_apsr_p0
+
+/************************************************************************
+*                                                                       *
+*   Module : rsff_apsr_p1                                               *
+*     Leading edge triggered RSFF with asynchronous preset and          *
+*     synchronous reset, power up to 1                                  *
+*                                                                       *
+*************************************************************************/
+module rsff_apsr_p1(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   rORc, sANDc;
+ 
+   or (rORc, r, rst_h);
+   and (sANDc, s, ~rst_h);
+ 
+   rsff_primitive_p1 rsff (q,sANDc,rORc,clk,0,pst_h);
+
+   not(qb,q);
+ 
+
+endmodule // rsff_apsr_p1
+
+/************************************************************************
+*                                                                       *
+*   Module : rsff_apsr_px                                               *
+*     Leading edge triggered RSFF with asynchronous preset and          *
+*     synchronous reset, power up to x                                  *
+*                                                                       *
+*************************************************************************/
+module rsff_apsr_px(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   rORc, sANDc;
+ 
+   or (rORc, r, rst_h);
+   and (sANDc, s, ~rst_h);
+ 
+   rsff_primitive_px rsff (q,sANDc,rORc,clk,0,pst_h);
+
+   not(qb,q);
+ 
+
+endmodule // rsff_apsr_px
+
+/************************************************************************
+*                                                                       *
+*   Module : rsff_spsr_p0                                               *
+*     Leading edge triggered RSFF with synchronous preset and reset,    *
+*     power up to 0                                                     *
+*                                                                       *
+*************************************************************************/
+module rsff_spsr_p0(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   rANDp, sANDc, sANDcORp, rANDpORc;
+ 
+   and (sANDc, s, ~rst_h);
+   or (sANDcORp, sANDc, pst_h);
+
+
+   and (rANDp, r, ~pst_h);
+   or (rANDpORc, rANDp, rst_h);
+
+   rsff_primitive_p0 rsff (q,sANDcORp,rANDpORc,clk,0,0);
+
+   not(qb,q);
+ 
+endmodule // rsff_spsr_p0
+
+/************************************************************************
+*                                                                       *
+*   Module : rsff_spsr_p1                                               *
+*     Leading edge triggered RSFF with synchronous preset and reset,    *
+*     power up to 1                                                     *
+*                                                                       *
+*************************************************************************/
+module rsff_spsr_p1(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   rANDp, sANDc, sANDcORp, rANDpORc;
+ 
+   and (sANDc, s, ~rst_h);
+   or (sANDcORp, sANDc, pst_h);
+
+   and (rANDp, r, ~pst_h);
+   or (rANDpORc, rANDp, rst_h);
+ 
+   rsff_primitive_p1 rsff (q,sANDcORp,rANDpORc,clk,0,0);
+
+   not(qb,q);
+ 
+endmodule // rsff_spsr_p1
+
+/************************************************************************
+*                                                                       *
+*   Module : rsff_spsr_px                                               *
+*     Leading edge triggered RSFF with synchronous preset and reset,    *
+*     power up to x                                                     *
+*                                                                       *
+*************************************************************************/
+module rsff_spsr_px(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  s, r, clk, pst_h, rst_h;
+   wire   rANDp, sANDc, sANDcORp, rANDpORc;
+ 
+   and (sANDc, s, ~rst_h);
+   or (sANDcORp, sANDc, pst_h);
+
+   and (rANDp, r, ~pst_h);
+   or (rANDpORc, rANDp, rst_h);
+ 
+   rsff_primitive_px rsff (q,sANDcORp,rANDpORc,clk,0,0);
+
+   not(qb,q);
+ 
+endmodule // rsff_spsr_px
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_spar_p0                                               *
+*     Leading edge triggered RSFF with synchronous preset and           *
+*     asynchronous reset, power up to 0                                 *
+*                                                                       *
+*************************************************************************/
+module jkff_spar_p0(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  j,k,clk,pst_h,rst_h;
+   wire   jORp, kANDp;
+ 
+   or (jORp, j, pst_h);
+   and (kANDp, k, ~pst_h);
+ 
+   jkff_primitive_p0 jkff (q,jORp,kANDp,clk,rst_h,0);
+ 
+   not(qb,q);
+ 
+endmodule // jkff_spar_p0
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_spar_p1                                               *
+*     Leading edge triggered RSFF with synchronous preset and           *
+*     asynchronous reset, power up to 1                                 *
+*                                                                       *
+*************************************************************************/
+module jkff_spar_p1(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  j, k, clk, pst_h, rst_h;
+   wire   jORp, kANDp;
+ 
+   or (jORp, j, pst_h);
+   and (kANDp, k, ~pst_h);
+ 
+   jkff_primitive_p1 jkff (q,jORp,kANDp,clk,rst_h,0); 
+
+   not(qb,q);
+ 
+
+endmodule // jkff_spar_p1
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_spar_px                                               *
+*     Leading edge triggered RSFF with synchronous preset and           *
+*     asynchronous reset, power up to x                                 *
+*                                                                       *
+*************************************************************************/
+module jkff_spar_px(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  j, k, clk, pst_h, rst_h;
+   wire   jORp, kANDp;
+ 
+   or (jORp, j, pst_h);
+   and (kANDp, k, ~pst_h);
+ 
+   jkff_primitive_px jkff (q,jORp,kANDp,clk,rst_h,0); 
+
+   not(qb,q);
+ 
+
+endmodule // jkff_spar_px
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_apsr_p0                                               *
+*     Leading edge triggered RSFF with asynchronous preset and          *
+*     synchronous reset, power up to 0                                  *
+*                                                                       *
+*************************************************************************/
+module jkff_apsr_p0(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  j, k, clk, pst_h, rst_h;
+   wire   kORc, jANDc;
+ 
+   or (kORc, k, rst_h);
+   and (jANDc, j, ~rst_h);
+  
+   jkff_primitive_p0 jkff (q,jANDc,kORc,clk,0,pst_h);
+
+   not(qb,q);
+ 
+
+endmodule // jkff_apsr_p0
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_apsr_p1                                               *
+*     Leading edge triggered RSFF with asynchronous preset and          *
+*     synchronous reset, power up to 1                                  *
+*                                                                       *
+*************************************************************************/
+module jkff_apsr_p1(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  j, k, clk, pst_h, rst_h;
+   wire   kORc, jANDc;
+ 
+   or (kORc, k, rst_h);
+   and (jANDc, j, ~rst_h);
+  
+   jkff_primitive_p1 jkff (q,jANDc,kORc,clk,0,pst_h);
+ 
+   not(qb,q);
+ 
+
+endmodule // jkff_apsr_p1
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_apsr_px                                               *
+*     Leading edge triggered RSFF with asynchronous preset and          *
+*     synchronous reset, power up to x                                  *
+*                                                                       *
+*************************************************************************/
+module jkff_apsr_px(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  j, k, clk, pst_h, rst_h;
+   wire   kORc, jANDc;
+ 
+   or (kORc, k, rst_h);
+   and (jANDc, j, ~rst_h);
+  
+   jkff_primitive_px jkff (q,jANDc,kORc,clk,0,pst_h);
+ 
+   not(qb,q);
+ 
+endmodule // jkff_apsr_px
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_spsr_p0                                               *
+*     Leading edge triggered RSFF with synchronous preset and reset,    *
+*     power up to 0                                                     *
+*                                                                       *
+*************************************************************************/
+module jkff_spsr_p0(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  j, k, clk, pst_h, rst_h;
+   wire   kANDp, jANDc, jANDcORp, kANDpORc;
+ 
+   and (jANDc, j, ~rst_h);
+   or (jANDcORp, jANDc, pst_h);
+
+   and (kANDp, k, ~pst_h);
+   or (kANDpORc, kANDp, rst_h);
+ 
+   jkff_primitive_p0 jkff (q,jANDcORp,kANDpORc,clk,0,0);
+
+   not(qb,q);
+ 
+endmodule // jkff_spsr_p0
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_spsr_p1                                               *
+*     Leading edge triggered RSFF with synchronous preset and reset,    *
+*     power up to 1                                                     *
+*                                                                       *
+*************************************************************************/
+module jkff_spsr_p1(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  j, k, clk, pst_h, rst_h;
+   wire   kANDp, jANDc, jANDcORp, kANDpORc;
+ 
+   and (jANDc, j, ~rst_h);
+   or (jANDcORp, jANDc, pst_h);
+
+   and (kANDp, k, ~pst_h);
+   or (kANDpORc, kANDp, rst_h);
+ 
+   jkff_primitive_p1 jkff (q,jANDcORp,kANDpORc,clk,0,0);
+
+   not(qb,q);
+ 
+endmodule // jkff_spsr_p1
+
+/************************************************************************
+*                                                                       *
+*   Module : jkff_spsr_px                                               *
+*     Leading edge triggered RSFF with synchronous preset and reset,    *
+*     power up to x                                                     *
+*                                                                       *
+*************************************************************************/
+module jkff_spsr_px(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  j, k, clk, pst_h, rst_h;
+   wire   kANDp, jANDc, jANDcORp, kANDpORc;
+ 
+   and (jANDc, j, ~rst_h);
+   or (jANDcORp, jANDc, pst_h);
+
+   and (kANDp, k, ~pst_h);
+   or (kANDpORc, kANDp, rst_h);
+ 
+   jkff_primitive_px jkff (q,jANDcORp,kANDpORc,clk,0,0);
+
+   not(qb,q);
+ 
+
+endmodule // jkff_spsr_px
+
+/************************************************************************
+*                                                                       *
+*  Module:  jkdff_p0                                                    *
+*    Leading edge triggered JKFF with load, power up to x               *
+*                                                                       *
+*************************************************************************/
+module jkdff_p0(q,qb,ji,ki,jf,kf,clk,ld,sel,pst_h,rst_h);
+   output q, qb;
+   input  ji, ki, jf, kf, clk, ld, sel, pst_h, rst_h;
+   wire   rst_pst;
+
+   jkff_pri_p0 jkff (q,j,k,clk,pst_h,rst_h);
+
+   smux sm1(j,ji,jf,0,0,0,ld); 
+   nand(j_not,j); 
+   smux sm2(k,ki,j_not,kf,kf,ld,sel); 
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // jkdff_p0
+
+/************************************************************************
+*                                                                       *
+*  Module:  jkdff_p1                                                    *
+*    Leading edge triggered JKFF with load, power up to 1               *
+*                                                                       *
+*************************************************************************/
+module jkdff_p1(q,qb,ji,ki,jf,kf,clk,ld,sel,pst_h,rst_h);
+   output q, qb;
+   input  ji, ki, jf, kf, clk, ld, sel, pst_h, rst_h;
+   wire   rst_pst;
+
+   jkff_pri_p1 jkff (q,j,k,clk,pst_h,rst_h);
+
+   smux sm1(j,ji,jf,0,0,0,ld); 
+   nand(j_not,j); 
+   smux sm2(k,ki,j_not,kf,kf,ld,sel); 
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // jkdff_p1
+
+/************************************************************************
+*                                                                       *
+*  Module:  jkdff                                                       *
+*    Leading edge triggered JKFF with load, power up to x               *
+*                                                                       *
+*************************************************************************/
+module jkdff_px(q,qb,ji,ki,jf,kf,clk,ld,sel,pst_h,rst_h);
+   output q, qb;
+   input  ji, ki, jf, kf, clk, ld, sel, pst_h, rst_h;
+   wire   rst_pst;
+
+   jkff_pri_px jkff (q,j,k,clk,pst_h,rst_h);
+
+   smux sm1(j,ji,jf,0,0,0,ld); 
+   nand(j_not,j); 
+   smux sm2(k,ki,j_not,kf,kf,ld,sel); 
+ 
+   nand(qb,q);
+ 
+   assign rst_pst = ~rst_h && ~pst_h;
+
+// Timing check
+
+endmodule // jkdff_px
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_spar_p0                                                *
+*     Transparent-high latch with synchronous preset and                *
+*     asynchronous reset, power up to 0                                 *
+*                                                                       *
+*************************************************************************/
+module lffh_spar_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dORp;
+ 
+   or (dORp, d, pst_h);
+
+   lffh_primitive_p0 lffh (q,dORp,clk,rst_h,0);
+
+   not (qb,q);
+  
+
+endmodule // lffh_spar_p0
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_spar_p1                                                *
+*     Transparent-high latch with synchronous preset and                *
+*     asynchronous reset, power up to 1                                 *
+*                                                                       *
+*************************************************************************/
+module lffh_spar_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dORp;
+ 
+   or (dORp, d, pst_h);
+
+   lffh_primitive_p1 lffh (q,dORp,clk,rst_h,0);
+
+   not (qb,q);
+  
+
+endmodule // lffh_spar_p1
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_spar_px                                                *
+*     Transparent-high latch with synchronous preset and                *
+*     asynchronous reset, power up to x                                 *
+*                                                                       *
+*************************************************************************/
+module lffh_spar_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dORp;
+ 
+   or (dORp, d, pst_h);
+
+   lffh_primitive_px lffh (q,dORp,clk,rst_h,0);
+
+   not (qb,q);
+  
+
+endmodule // lffh_spar_px
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_apsr_p0                                                *
+*     Transparent-high latch with asynchronous preset and               *
+*     synchronous reset, power up to 0                                  *
+*                                                                       *
+*************************************************************************/
+module lffh_apsr_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire  dANDc;
+ 
+   and (dANDc, d, ~rst_h);
+
+   lffh_primitive_p0 lffh (q,dANDc,clk,0,pst_h);
+
+   not (qb,q);
+  
+endmodule // lffh_apsr_p0
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_apsr_p1                                                *
+*     Transparent-high latch with asynchronous preset and               *
+*     synchronous reset, power up to 1                                  *
+*                                                                       *
+*************************************************************************/
+module lffh_apsr_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dANDc;
+ 
+   and (dANDc, d, ~rst_h);
+
+   lffh_primitive_p1 lffh (q,dANDc,clk,0,pst_h);
+
+   not (qb,q);
+  
+
+endmodule // lffh_apsr_p1
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_apsr_px                                                *
+*     Transparent-high latch with asynchronous preset and               *
+*     synchronous reset, power up to x                                  *
+*                                                                       *
+*************************************************************************/
+module lffh_apsr_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dANDc;
+ 
+   and (dANDc, d, ~rst_h);
+
+   lffh_primitive_px lffh (q,dANDc,clk,0,pst_h);
+
+   not (qb,q);
+  
+endmodule // lffh_apsr_px
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_spsr_p0                                                *
+*     Transparent-high latch with synchronous preset and reset,         *
+*     power up to 0                                                     *
+*                                                                       *
+*************************************************************************/
+module lffh_spsr_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dANDc, dANDcORp;
+
+   and (dANDc, d, ~rst_h);
+   or (dANDcORp, dANDc, pst_h);
+
+   lffh_primitive_p0 lffh (q,dANDcORp,clk,0,0);
+
+   not (qb,q);
+  
+endmodule // lffh_spsr_p0
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_spsr_p1                                                *
+*     Transparent-high latch with synchronous preset and reset,         *
+*     power up to 1                                                     *
+*                                                                       *
+*************************************************************************/
+module lffh_spsr_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire  dANDc, dANDcORp;
+
+   and (dANDc, d, ~rst_h);
+   or (dANDcORp, dANDc, pst_h);
+
+   lffh_primitive_p1 lffh (q,dANDcORp,clk,0,0);
+
+   not (qb,q);
+  
+
+endmodule // lffh_spsr_p1
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_spsr_px                                                *
+*     Transparent-high latch with synchronous preset and reset,         *
+*     power up to x                                                     *
+*                                                                       *
+*************************************************************************/
+module lffh_spsr_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   rst_pst, dANDc, dANDcORp;
+
+   and (dANDc, d, ~rst_h);
+   or (dANDcORp, dANDc, pst_h);
+
+   lffh_primitive_px lffh (q,dANDcORp,clk,0,0);
+
+   not (qb,q);
+  
+endmodule // lffh_spsr_px
+
+/************************************************************************
+*                                                                       *
+*   Module: lff_apar_p0_ce                                              *
+*     Transparent-low latch with clock enable, asynchronous preset      *
+*     and reset, power up to 0                                          *
+*                                                                       *
+*************************************************************************/
+module lff_apar_p0_ce(q,qb,d,clk,ce,pst_h,rst_h);
+   output q, qb;
+   input  d, clk, ce, pst_h, rst_h;
+
+   or clke_or (clke,clk,~ce);
+ 
+   lff_primitive_p0 lff (q,d,clke,rst_h,pst_h);
+
+   not (qb,q);
+  
+
+endmodule // lff_apar_p0_ce
+
+/************************************************************************
+*                                                                       *
+*   Module: lff_apar_p1_ce                                              *
+*     Transparent-low latch with clock enable asynchronous preset       *
+*     and reset, power up to 1                                          *
+*                                                                       *
+*************************************************************************/
+module lff_apar_p1_ce(q,qb,d,clk,ce,pst_h,rst_h);
+   output q, qb;
+   input  d, clk, ce, pst_h, rst_h;
+
+   or clke_or (clke,clk,~ce);
+
+   lff_primitive_p1 lff (q,d,clke,rst_h,pst_h);
+
+   not (qb,q);
+  
+endmodule // lff_apar_p1_ce
+
+/************************************************************************
+*                                                                       *
+*   Module: lff_apar_px_ce                                              *
+*     Transparent-low latch with clock enable, asynchronous preset      *
+*     and reset,  power up to x                                         * 
+*                                                                       *
+*************************************************************************/
+module lff_apar_px_ce(q,qb,d,clk,ce,pst_h,rst_h);
+   output q, qb;
+   input  d, clk, ce, pst_h, rst_h;
+
+   or clke_or (clke,clk,~ce);
+
+   lff_primitive_px lff (q,d,clke,rst_h,pst_h);
+
+   not (qb,q);
+
+endmodule // lff_apar_px_ce
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_apar_p0_ce                                             *
+*     Transparent-high latch with asynchronous preset and reset,        *
+*     clock enable, power up to 0                                       *
+*                                                                       *
+*************************************************************************/
+module lffh_apar_p0_ce(q,qb,d,clk,ce,pst_h,rst_h);
+   output q, qb;
+   input  d, clk, ce, pst_h, rst_h;
+
+   and clk_and (clke,clk,ce); 
+
+   lffh_primitive_p0 lffh (q,d,clke,rst_h,pst_h);
+
+   not (qb,q);
+  
+endmodule // lffh_apar_p0_ce
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_apar_p1_ce                                             *
+*     Transparent-high latch with asynchronous preset and reset,        *
+*     clock enable, power up to 1                                       *
+*                                                                       *
+*************************************************************************/
+module lffh_apar_p1_ce(q,qb,d,clk,ce,pst_h,rst_h);
+   output q, qb;
+   input  d, clk, ce, pst_h, rst_h;
+
+   and clke_and (clke,clk,ce);
+
+   lffh_primitive_p1 lffh (q,d,clke,rst_h,pst_h);
+
+   not (qb,q);
+  
+
+endmodule // lffh_apar_p1_ce
+
+/************************************************************************
+*                                                                       *
+*   Module: lffh_apar_px_ce                                             *
+*     Transparent-high latch with asynchronous preset and reset,        *
+*     clock enable, power up to x                                       *
+*                                                                       *
+*************************************************************************/
+module lffh_apar_px_ce(q,qb,d,clk,ce,pst_h,rst_h);
+   output q, qb;
+   input  d, clk, ce, pst_h, rst_h;
+
+   and clke_and (clke,clk,ce);
+
+   lffh_primitive_px lffh (q,d,clke,rst_h,pst_h);
+
+   not (qb,q);
+  
+endmodule // lffh_apar_px_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_apar_p0_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    asynchronous preset and clear, power up to 0                       *
+*                                                                       *
+*************************************************************************/
+module dff_apar_p0_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst;
+
+   not (qn, q);
+   dffe_pri_p0 dffe (q, d, clk, e, c, p);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_apar_p0_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_apar_p1_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    asynchronous preset and clear, power up to 1                       *
+*                                                                       *
+*************************************************************************/
+module dff_apar_p1_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst;
+
+   not (qn, q);
+   dffe_pri_p1 dffe (q, d, clk, e, c, p);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_apar_p1_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_apar_px_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    asynchronous preset and clear, power up to x                       *
+*                                                                       *
+*************************************************************************/
+module dff_apar_px_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst;
+
+   not (qn, q);
+   dffe_pri_px dffe (q, d, clk, e, c, p);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_apar_px_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_spar_p0_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    synchronous preset and asynchronous clear, power up to 0           *
+*                                                                       *
+*************************************************************************/
+module dff_spar_p0_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dORp, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   or (dORp, din, p);
+   dffe_pri_p0 dffe (q, dORp, clk, 1, c, 0);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_spar_p0_ce
+ 
+/************************************************************************
+*                                                                       *
+*  Module: dff_spar_p1_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    synchronous preset and asynchronous clear, power up to 1           *
+*                                                                       *
+*************************************************************************/
+module dff_spar_p1_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dORp, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   or (dORp, din, p);
+   dffe_pri_p1 dffe (q, dORp, clk, 1, c, 0);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_spar_p1_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_spar_px_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    synchronous preset and asynchronous clear, power up to x           *
+*                                                                       *
+*************************************************************************/
+module dff_spar_px_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dORp, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   or (dORp, din, p);
+   dffe_pri_px dffe (q, dORp, clk, 1, c, 0);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_spar_px_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_apsr_p0_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    asynchronous preset and synchronous clear, power up to 0           *
+*                                                                       *
+*************************************************************************/
+module dff_apsr_p0_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dANDc, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   and (dANDc, din, ~c);
+   dffe_pri_p0 dffe (q, dANDc, clk, 1, 0, p);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_apsr_p0_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_apsr_p1_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    asynchronous preset and synchronous clear, power up to 1           *
+*                                                                       *
+*************************************************************************/
+module dff_apsr_p1_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dANDc, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   and (dANDc, din, ~c);
+   dffe_pri_p1 dffe (q, dANDc, clk, 1, 0, p);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_apsr_p1_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_apsr_px_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    asynchronous preset and synchronous clear, power up to x           *
+*                                                                       *
+*************************************************************************/
+module dff_apsr_px_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dANDc, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   and (dANDc, din, ~c);
+   dffe_pri_px dffe (q, dANDc, clk, 1, 0, p);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_apsr_px_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_spsr_p0_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    synchronous preset and clear, power up to 0                        *
+*                                                                       *
+*************************************************************************/
+module dff_spsr_p0_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dANDc, dANDcORp, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   and (dANDc, din, ~c);
+   or (dANDcORp, dANDc, p);
+   dffe_pri_p0 dffe (q, dANDcORp, clk, 1, 0, 0);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_spsr_p0_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_spsr_p1_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    synchronous preset and clear, power up to 1                        *
+*                                                                       *
+*************************************************************************/
+module dff_spsr_p1_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dANDc, dANDcORp, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   and (dANDc, din, ~c);
+   or (dANDcORp, dANDc, p);
+   dffe_pri_p1 dffe (q, dANDcORp, clk, 1, 0, 0);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_spsr_p1_ce
+
+/************************************************************************
+*                                                                       *
+*  Module: dff_spsr_px_ce                                               *
+*    A low to high edge-triggered D flip-flop with clock enable high    *
+*    synchronous preset and clear, power up to x                        *
+*                                                                       *
+*************************************************************************/
+module dff_spsr_px_ce (q, qn, d, clk, e, p, c);
+
+   input d, clk, e, p, c;
+   output q, qn;
+   wire rst_pst, dANDc, dANDcORp, dANDce, qANDce, din;
+
+   and (qANDce, q, ~e);
+   and (dANDce, d, e);
+   or (din, dANDce, qANDce);
+
+   not (qn, q);
+   and (dANDc, din, ~c);
+   or (dANDcORp, dANDc, p);
+   dffe_pri_px dffe (q, dANDcORp, clk, 1, 0, 0);
+
+// Timing check
+   assign rst_pst = ~p && ~c && e;
+
+
+endmodule // dff_spsr_px_ce
+
+/************************************************************************
+*                                                                       *
+*  Module:  g_bufif1                                                    *
+*     QuickLogic bufif1                                                 *
+*                                                                       *
+*************************************************************************/
+module g_bufif1 (Q, D, E);
+inout Q;
+input D, E;
+
+   bufif1(Q, D, E);
+
+endmodule
+
+/************************************************************************
+*                                                                       *
+*  Module:  g_notif1                                                    *
+*     QuickLogic notif1                                                 *
+*                                                                       *
+*************************************************************************/
+module g_notif1 (Q, D, E);
+inout Q;
+input D, E;
+
+   notif1(Q, D, E);
+
+endmodule
+/* --------------- DENNY'S --------------------------------------------*/
+/************************************************************************
+*                                                                       *
+*   MODULE : RSFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+module rsff_apar_p0(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  s,r,clk,pst_h,rst_h;
+
+   rsff_primitive_p0 RSFF(q,s,r,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE : RSFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+module rsff_apar_p1(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  s,r,clk,pst_h,rst_h;
+ 
+   rsff_primitive_p1 RSFF(q,s,r,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE : RSFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+module rsff_apar_px(q,qb,s,r,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  s,r,clk,pst_h,rst_h;
+ 
+   rsff_primitive_px RSFF(q,s,r,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE : JKFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+module jkff_apar_p0(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  j,k,clk,pst_h,rst_h;
+ 
+
+   jkff_primitive_p0 JKFF(q,j,k,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE : JKFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+module jkff_apar_p1(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  j,k,clk,pst_h,rst_h;
+ 
+   jkff_primitive_p1 JKFF(q,j,k,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE : JKFF                                                       *
+*DS                                                                     *
+*************************************************************************/
+module jkff_apar_px(q,qb,j,k,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  j,k,clk,pst_h,rst_h;
+ 
+   jkff_primitive_px JKFF(q,j,k,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: LFF :                                                      *
+*      Leading edge triggered VXFF.                                     *
+*DS                                                                     *
+*************************************************************************/
+module lffh_apar_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+
+   lffh_primitive_p0 lFF(q,d,clk,rst_h,pst_h);
+   nand (qb,q);
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: LFF :                                                      *
+*      Leading edge triggered VXFF.                                     *
+*DS                                                                     *
+*************************************************************************/
+module lffh_apar_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+ 
+   lffh_primitive_p1 lFF(q,d,clk,rst_h,pst_h);
+   nand (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: LFFH :                                                      *
+*      Leading edge triggered VXFF.                                     *
+*DS                                                                     *
+*************************************************************************/
+module lffh_apar_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+ 
+   lffh_primitive_px lFF(q,d,clk,rst_h,pst_h);
+   nand (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: LFF :                                                      *
+*      Leading edge triggered VXFF.                                     *
+*DS                                                                     *
+*************************************************************************/
+module lff_apar_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+ 
+
+   lff_primitive_p0 lFF(q,d,clk,rst_h,pst_h);
+   nand (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: LFFH :                                                      *
+*      Leading edge triggered VXFF.                                     *
+*DS                                                                     *
+*************************************************************************/
+module lff_apar_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+ 
+
+   lff_primitive_p1 lFF(q,d,clk,rst_h,pst_h);
+   nand (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: LFF :                                                      *
+*      Leading edge triggered VXFF.                                     *
+*DS                                                                     *
+*************************************************************************/
+module lff_apar_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+ 
+
+   lff_primitive_px lFF(q,d,clk,rst_h,pst_h);
+   nand (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*    MODULE: TFF                                                        *
+*DS                                                                     *
+*************************************************************************/
+module tff_apar_p0(q,qb,t,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  t,clk,pst_h,rst_h;
+
+   tff_primitive_p0 TFF(q,t,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*    MODULE: TFF                                                        *
+*DS                                                                     *
+*************************************************************************/
+module tff_apar_p1(q,qb,t,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  t,clk,pst_h,rst_h;
+
+   tff_primitive_p1 TFF(q,t,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*    MODULE: TFF                                                        *
+*DS                                                                     *
+*************************************************************************/
+module tff_apar_px(q,qb,t,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  t,clk,pst_h,rst_h;
+
+   tff_primitive_px TFF(q,t,clk,rst_h,pst_h);
+   nand(qb,q);
+ 
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: DFF_E :                                                     *
+*      Leading edge triggered DFF.                                      *
+*DS                                                                     *
+*************************************************************************/
+module dff_apar_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+ 
+   dff_primitive_p0 DFF(q,d,clk,rst_h,pst_h);
+   nand (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: dff_apar_p1:                                                *
+*      Leading edge triggered DFF.                                      *
+*DS                                                                     *
+*************************************************************************/
+module dff_apar_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+
+   dff_primitive_p1 DFF(q,d,clk,rst_h,pst_h);
+   nand (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   Module: dff_apar_px                                                 *
+*     Leading edge triggered DFF with asynchronous preset and reset     *
+*     and power up to x                                                 *
+*DS                                                                     *
+*************************************************************************/
+module dff_apar_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+   reg    q; 
+   wire   q_int;
+   initial q = 1'b0;
+
+   dff_primitive_px DFF(q_int,d,clk,rst_h,pst_h);
+   not (qb,q_int);
+
+   always@(q_int)
+     q = q_int;
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   Module: dff_spar_p0                                                 *
+*     Leading edge triggered DFF with synchronous preset asynchronous   *
+*     reset, power up to 0                                              *
+*                                                                       *
+*************************************************************************/
+module dff_spar_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dORp;
+ 
+//   dffe_pri_p0 dffe (q,dORp,clk,1,rst_h,0);
+   dff_primitive_p0 DFF(q,dORp,clk,rst_h,0);
+
+   or (dORp,d,pst_h); /* sync preset*/
+ 
+   not (qb,q);
+
+endmodule // dff_spar_p0
+
+/************************************************************************
+*                                                                       *
+*   Module: dff_spar_p1                                                 *
+*     Leading edge triggered DFF with synchronous preset asynchronous   *
+*     reset, power up to 1                                              *
+*                                                                       *
+*************************************************************************/
+module dff_spar_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dORp;
+ 
+//   dffe_pri_p1 dffe (q,dORc,clk,1,rst_h,0);
+   dff_primitive_p1 DFF(q,dORp,clk,rst_h,0);
+
+   or (dORc,d,pst_h);  /* async preset*/
+ 
+   not (qb,q);
+  
+endmodule // dff_spar_p1
+
+/************************************************************************
+*                                                                       *
+*   Module: dff_spar_px                                                 *
+*     Leading edge triggered DFF with synchronous preset asynchronous   *
+*     reset, power up to x                                              *
+*                                                                       *
+*************************************************************************/
+module dff_spar_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dORc;
+ 
+//   dffe_pri_px dffe (q,dORc,clk,1,rst_h,0);
+   dff_primitive_px DFF(q,dORp,clk,rst_h,0);
+
+   or (dORc,d,pst_h);  /* async preset*/
+ 
+   not (qb,q);
+  
+endmodule // dff_spar_px
+/************************************************************************
+*                                                                       *
+*   Module: dff_spsr_p0                                                 *
+*     Leading edge triggered DFF with synchronous preset and reset,     *
+*     power up to 0                                                     *
+*DS                                                                     *
+*************************************************************************/
+module dff_spsr_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+   wire   dORspsr;
+ 
+
+//  Leading edge triggered DFF 
+   assign dORspsr = (d || pst_h) && ~rst_h;
+   dff_primitive_p0 DFF(q,dORspsr,clk,0,0);
+   nand (qb,q);
+
+endmodule
+/************************************************************************
+*                                                                       *
+*   Module: dff_spsr_p1                                                 *
+*     Leading edge triggered DFF with synchronous preset and reset,     *
+*     power up to 1                                                     *
+*DS                                                                     *
+*************************************************************************/
+module dff_spsr_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+   wire  dORspsr;
+ 
+   assign dORspsr = (d || pst_h) && ~rst_h;
+   dff_primitive_p1 DFF(q,dORspsr,clk,0,0);
+   nand (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   Module: dff_spsr_px                                                 *
+*     Leading edge triggered DFF with synchronous preset and reset,     *
+*     power up to x                                                     *
+*DS                                                                     *
+*************************************************************************/
+module dff_spsr_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q,qb;
+   input  d,clk,pst_h,rst_h;
+   wire  dORspsr;
+ 
+   assign dORspsr = (d || pst_h) && ~rst_h;
+   dff_primitive_px DFF(q,dORspsr,clk,0,0);
+   not (qb,q);
+  
+endmodule
+/************************************************************************
+*                                                                       *
+*   Module: dff_apsr_p0                                                 *
+*      Leading edge triggered DFF with asynchronous preset and          *
+*      synchrounous reset, power up to 0                                *
+*                                                                       *
+*************************************************************************/
+module dff_apsr_p0(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dANDc;
+
+   and (dANDc,d,~rst_h);  /* sync reset*/
+   dff_primitive_p0 dff (q,dANDc,clk,0,pst_h);
+   not (qb,q);
+  
+endmodule // dff_apsr_p0
+
+/************************************************************************
+*                                                                       *
+*   Module: dff_apsr_p1                                                 *
+*      Leading edge triggered DFF with asynchronous preset and          *
+*      synchrounous reset, power up to 1                                *
+*                                                                       *
+*************************************************************************/
+module dff_apsr_p1(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dANDc;
+
+   and (dANDc,d,~rst_h);  /* sync reset*/
+   dff_primitive_p1 dff (q,dANDc,clk,0,pst_h);
+   not (qb,q);
+
+endmodule // dff_apsr_p1
+
+/************************************************************************
+*                                                                       *
+*   Module: dff_apsr_px                                                 *
+*      Leading edge triggered DFF with asynchronous preset and          *
+*      synchrounous reset, power up to x                                *
+*                                                                       *
+*************************************************************************/
+module dff_apsr_px(q,qb,d,clk,pst_h,rst_h); //DS
+   output q, qb;
+   input  d, clk, pst_h, rst_h;
+   wire   dANDc;
+
+   and (dANDc,d,~rst_h);  /* sync reset*/
+   dff_primitive_px dffe (q,dANDc,clk,0,pst_h);
+   not (qb,q);
+  
+endmodule // dff_apsr_px
+

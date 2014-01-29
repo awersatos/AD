@@ -1,0 +1,13 @@
+[Plugin]
+Name=ide_to_blockio
+Description=IDE blockio adaptor.
+Implement=blockio_adaptor
+Require0=blockio
+SourceDir=services\posix\devio\blockio\adaptors\ide\src
+InitHandler=ide_to_blockio_plugin_init
+InitHandlerPriority=8
+CompileOption0=-I"$(SSASROOT)\platform\peripherals\ide\include"
+CompileOption1=-I"$(SERROOT)\posix\internal"
+
+[Instance]
+Require0=drv_ide

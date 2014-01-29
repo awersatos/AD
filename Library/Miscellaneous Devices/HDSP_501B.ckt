@@ -1,0 +1,50 @@
+*  
+* Diode Model Produced by Altium Ltd  
+* Date:  4-May-2004 
+*  
+* Manufacturer: Renesas  
+* Component Name: HDSP-501B  
+*  
+* Parameters derived from information available in data sheet.  
+*
+*                 cathode-e
+*                 |  cathode-d
+*                 |  |  common-anode
+*                 |  |  |  cathode-c
+*                 |  |  |  |  cathode-DP
+*                 |  |  |  |  |  cathode-b
+*                 |  |  |  |  |  |  cathode-a
+*                 |  |  |  |  |  |  |  common-anode
+*                 |  |  |  |  |  |  |  |  cathode-f
+*                 |  |  |  |  |  |  |  |  |  cathode-g
+*                 |  |  |  |  |  |  |  |  |  |  
+.SUBCKT HDSP_501B 1  2  3  4  5  6  7  8  9  10
+
+DA1  3  7  dHDSP_501B
+DB1  3  6  dHDSP_501B
+DC1  3  4  dHDSP_501B
+DD1  3  2  dHDSP_501B
+DE1  3  1  dHDSP_501B
+DF1  3  9  dHDSP_501B
+DG1  3 10  dHDSP_501B
+DDP1 3  5  dHDSP_501B
+
+DA2  8  7  dHDSP_501B
+DB2  8  6  dHDSP_501B
+DC2  8  4  dHDSP_501B
+DD2  8  2  dHDSP_501B
+DE2  8  1  dHDSP_501B
+DF2  8  9  dHDSP_501B
+DG2  8 10  dHDSP_501B
+DDP2 8  5  dHDSP_501B
+
+.MODEL dHDSP_501B D
++ (  
++    IS = 2.15137703E-17 
++    N  = 4.02940472 
++    RS = 16.32357710 
++    BV = 4.50000000 
++    IBV = 100u 
++ )  
+
+.ENDS HDSP_501B

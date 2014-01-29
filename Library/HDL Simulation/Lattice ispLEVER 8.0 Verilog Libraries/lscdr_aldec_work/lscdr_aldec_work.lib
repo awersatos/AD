@@ -1,0 +1,297 @@
+timestamp=1265381546475
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[LSCDR_sim]
+A/LSCDR_sim=22|./src/LSCDR_sim.v|4|1*45355
+B/LSCDR_sim=3*229850
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6888,8480,10619,14308
+R=./src/LSCDR_sim.v|4
+
+[cdrDFF]
+A/cdrDFF=22|./src/src_files/cdr_slaveDecoder.v|729|1*42506
+B/cdrDFF=3*225074
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=193,371,533,651
+R=./src/src_files/cdr_slaveDecoder.v|729
+
+[cdrDlatch]
+A/cdrDlatch=22|./src/src_files/cdr_slaveDecoder.v|751|1*43169
+B/cdrDlatch=3*226572
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=170,344,483,569
+R=./src/src_files/cdr_slaveDecoder.v|751
+
+[cdr_alu]
+A/cdr_alu=22|./src/src_files/cdr_alu.v|17|1*13344
+B/cdr_alu=3*37023
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2222,3202,4628,5819
+R=./src/src_files/cdr_alu.v|17
+
+[cdr_delayline]
+A/cdr_delayline=22|./src/src_files/cdr_delayline.v|11|1*11746
+B/cdr_delayline=3*36867
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1580,2192,2889,4424
+R=./src/src_files/cdr_delayline.v|11
+
+[cdr_delayline_16]
+A/cdr_delayline_16=22|./src/src_files/cdr_delayline.v|138|1*20337
+B/cdr_delayline_16=3*96975
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=364,947,1516,2307
+R=./src/src_files/cdr_delayline.v|138
+
+[cdr_delchain]
+A/cdr_delchain=22|./src/src_files/cdr_delayline.v|231|1*22546
+B/cdr_delchain=3*101566
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=189,543,828,1423
+R=./src/src_files/cdr_delayline.v|231
+
+[cdr_divideby128]
+A/cdr_divideby128=22|./src/src_files/cdr_lockdetect.v|253|1*44555
+B/cdr_divideby128=3*228467
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=176,383,586,695
+R=./src/src_files/cdr_lockdetect.v|253
+
+[cdr_divideby256]
+A/cdr_divideby256=22|./src/src_files/cdr_lockdetect.v|219|1*43803
+B/cdr_divideby256=3*227400
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=176,375,537,620
+R=./src/src_files/cdr_lockdetect.v|219
+
+[cdr_fdel]
+A/cdr_fdel=22|./src/src_files/cdr_delayline.v|264|1*25460
+B/cdr_fdel=3*104188
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=141,308,450,533
+R=./src/src_files/cdr_delayline.v|264
+
+[cdr_fifo_read]
+A/cdr_fifo_read=22|./src/src_files/cdr_slave_fifo.v|147|1*40687
+B/cdr_fifo_read=3*209548
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=298,584,811,903
+R=./src/src_files/cdr_slave_fifo.v|147
+
+[cdr_fifo_reg]
+A/cdr_fifo_reg=22|./src/src_files/cdr_slave_fifo.v|200|1*41549
+B/cdr_fifo_reg=3*211901
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=420,658,998,1223
+R=./src/src_files/cdr_slave_fifo.v|200
+
+[cdr_fifo_write]
+A/cdr_fifo_write=22|./src/src_files/cdr_slave_fifo.v|349|1*39664
+B/cdr_fifo_write=3*205930
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=300,575,910,1002
+R=./src/src_files/cdr_slave_fifo.v|349
+
+[cdr_lockdetect]
+A/cdr_lockdetect=22|./src/src_files/cdr_lockdetect.v|34|1*37745
+B/cdr_lockdetect=3*187839
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=560,1176,2064,2270
+R=./src/src_files/cdr_lockdetect.v|34
+
+[cdr_master]
+A/cdr_master=22|./src/src_files/cdr_master.v|62|1*5504
+B/cdr_master=3*20088
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=700,1865,2815,4176
+R=./src/src_files/cdr_master.v|62
+
+[cdr_master_lockdetect]
+A/cdr_master_lockdetect=22|./src/src_files/cdr_master_lockdetect.v|41|1*17089
+B/cdr_master_lockdetect=3*88869
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1054,1708,2421,3264
+R=./src/src_files/cdr_master_lockdetect.v|41
+
+[cdr_master_lockdetect_hold]
+A/cdr_master_lockdetect_hold=22|./src/src_files/cdr_master_lockdetect_hold.v|21|1*29284
+B/cdr_master_lockdetect_hold=3*119686
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=237,482,696,782
+R=./src/src_files/cdr_master_lockdetect_hold.v|21
+
+[cdr_pd]
+A/cdr_pd=22|./src/src_files/cdr_pd.v|22|1*16250
+B/cdr_pd=3*85723
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=272,491,738,830
+R=./src/src_files/cdr_pd.v|22
+
+[cdr_slave]
+A/cdr_slave=22|./src/src_files/cdr_slave.v|24|1*18711
+B/cdr_slave=3*92982
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=956,1657,2276,2811
+R=./src/src_files/cdr_slave.v|24
+
+[cdr_slaveDecoder]
+A/cdr_slaveDecoder=22|./src/src_files/cdr_slaveDecoder.v|97|1*31710
+B/cdr_slaveDecoder=3*130478
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=852,2383,5572,6941
+R=./src/src_files/cdr_slaveDecoder.v|97
+
+[cdr_slave_9]
+A/cdr_slave_9=22|./src/src_files/cdr_slave_9.v|11|1*8107
+B/cdr_slave_9=3*32363
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2662,3356,4350,6403
+R=./src/src_files/cdr_slave_9.v|11
+
+[cdr_slave_fifo]
+A/cdr_slave_fifo=22|./src/src_files/cdr_slave_fifo.v|28|1*30143
+B/cdr_slave_fifo=3*122488
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=327,830,1463,1796
+R=./src/src_files/cdr_slave_fifo.v|28
+
+[cdr_sync]
+A/cdr_sync=22|./src/src_files/cdr_sync.v|17|1*26061
+B/cdr_sync=3*105091
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=230,568,1110,1277
+R=./src/src_files/cdr_sync.v|17
+
+[cdr_top]
+A/cdr_top=22|./src/src_files/cdr_top.v|3|1*406
+B/cdr_top=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9886,11948,15010,17842
+R=./src/src_files/cdr_top.v|3
+
+[cdrmux41x1m4mce]
+A/cdrmux41x1m4mce=22|./src/src_files/cdr_delayline.v|279|1*21874
+B/cdrmux41x1m4mce=3*99771
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=239,454,609,701
+R=./src/src_files/cdr_delayline.v|279
+
+[delaylineDFFR]
+A/delaylineDFFR=22|./src/src_files/cdr_delayline.v|299|1*24184
+B/delaylineDFFR=3*102212
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=184,364,503,589
+R=./src/src_files/cdr_delayline.v|299
+
+[delaylineDFFS]
+A/delaylineDFFS=22|./src/src_files/cdr_delayline.v|315|1*24822
+B/delaylineDFFS=3*103200
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=180,355,494,580
+R=./src/src_files/cdr_delayline.v|315
+
+[lockdetectDFF]
+A/lockdetectDFF=22|./src/src_files/cdr_master_lockdetect.v|252|1*28614
+B/lockdetectDFF=3*118181
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=207,390,538,656
+R=./src/src_files/cdr_master_lockdetect.v|252
+
+[lockdetectMUX21]
+A/lockdetectMUX21=22|./src/src_files/cdr_master_lockdetect.v|244|1*27990
+B/lockdetectMUX21=3*117551
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=183,359,487,573
+R=./src/src_files/cdr_master_lockdetect.v|244
+
+[lockdetectMux41]
+A/lockdetectMux41=22|./src/src_files/cdr_master_lockdetect.v|227|1*27350
+B/lockdetectMux41=3*115744
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=267,479,606,701
+R=./src/src_files/cdr_master_lockdetect.v|227
+
+[maco_tie]
+A/maco_tie=22|./src/src_files/cdr_top.v|402|1*9991
+B/maco_tie=3*36414
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=214,428,591,769
+R=./src/src_files/cdr_top.v|402
+
+[syncDFFR]
+A/syncDFFR=22|./src/src_files/cdr_delayline.v|329|1*23471
+B/syncDFFR=3*101721
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,426,602,774
+R=./src/src_files/cdr_delayline.v|329
+
+[vhim4mce]
+A/vhim4mce=22|./src/src_files/vhim4mce.v|11|1*10576
+B/vhim4mce=3*36565
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=88,233,336,430
+R=./src/src_files/vhim4mce.v|11
+
+[vlom4mce]
+A/vlom4mce=22|./src/src_files/vlom4mce.v|11|1*11161
+B/vlom4mce=3*36716
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=88,233,336,430
+R=./src/src_files/vlom4mce.v|11
+
+[~A]
+./src/src_files/cdr_top.v_cdr_master.v_cdr_slave_9.v_vhim4mce.v_vlom4mce.v_cdr_delayline.v_cdr_alu.v_cdr_pd.v_cdr_master_lockdetect.v_cdr_slave.v_cdr_sync.v_cdr_master_lockdetect_hold.v_cdr_slave_fifo.v_cdr_slaveDecoder.v_cdr_lockdetect.v_LSCDR_sim.v=0*60353*93477
+Comment=LATTICE ispLEVER 8.0,  LSCDR_ALDEC_WORK LIBRARY
+LastVerilogToplevel=LSCDR_sim
+ModifyID=249
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+
+[~MFT]
+0=36|0lscdr_aldec_work.mgf|93477|0
+1=34|1lscdr_aldec_work.mgf|45355|0
+3=34|3lscdr_aldec_work.mgf|229850|0
+
+[~U]
+$root=12|0*0|
+LSCDR_sim=12|0*55271||0x90
+cdrDFF=12|0*53014||0x80
+cdrDlatch=12|0*53565||0x80
+cdr_alu=12|0*18000||0x80
+cdr_delayline=12|0*15474||0x80
+cdr_delayline_16=12|0*28239||0x80
+cdr_delchain=12|0*30880||0x80
+cdr_divideby128=12|0*54647||0x80
+cdr_divideby256=12|0*54071||0x80
+cdr_fdel=12|0*33570||0x80
+cdr_fifo_read=12|0*50795||0x80
+cdr_fifo_reg=12|0*51641||0x80
+cdr_fifo_write=12|0*49884||0x80
+cdr_lockdetect=12|0*47581||0x80
+cdr_master=12|0*7824||0x80
+cdr_master_lockdetect=12|0*23823||0x80
+cdr_master_lockdetect_hold=12|0*37154||0x80
+cdr_pd=12|0*23112||0x80
+cdr_slave=12|0*26245||0x80
+cdr_slaveDecoder=12|0*39804||0x80
+cdr_slave_9=12|0*11147||0x80
+cdr_slave_fifo=12|0*37933||0x80
+cdr_sync=12|0*34027||0x80
+cdr_top=12|0*358||0x80
+cdrmux41x1m4mce=12|0*30240||0x80
+delaylineDFFR=12|0*32550||0x80
+delaylineDFFS=12|0*33060||0x80
+lockdetectDFF=12|0*36596||0x80
+lockdetectMUX21=12|0*36132||0x80
+lockdetectMux41=12|0*35524||0x80
+maco_tie=12|0*14135||0x90
+syncDFFR=12|0*31917||0x80
+vhim4mce=12|0*14720||0x80
+vlom4mce=12|0*15097||0x80
+

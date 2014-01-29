@@ -1,0 +1,229 @@
+V 000050 56 120 1260919350518 hardcopyiv_hssi_pll
+(_unit hardcopyiv_hssi_pll
+	(_specify
+		(_modpath full unknown 0 5134
+			(_port inclk in )
+			(_port clk out )
+		)
+	)
+)
+V 000053 56 191 1260919350523 hardcopyiv_hssi_tx_pma
+(_unit hardcopyiv_hssi_tx_pma
+	(_specify
+		(_modpath parallel positive 0 6199
+			(_port rxdetecten in posedge)
+			(_port rxfoundout out posedge)
+			(_datain xtx_rx_found in posedge)
+		)
+	)
+)
+V 000053 56 196 1260919350528 hardcopyiv_hssi_rx_pma
+(_unit hardcopyiv_hssi_rx_pma
+	(_specify
+		(_modpath parallel positive 0 8756
+			(_port adaptcapture in posedge)
+			(_port adaptdone out posedge)
+			(_datain xadce_adapt_done in posedge)
+		)
+	)
+)
+V 000054 56 1378 1260919350605 hardcopyiv_hssi_tx_pcs
+(_unit hardcopyiv_hssi_tx_pcs
+	(_specify
+		(_tchk setuphold 0 23126
+			(_port coreclk (posedge))
+			(_port ctrlenable ())
+		)
+		(_tchk setuphold 0 23127
+			(_port coreclk (posedge))
+			(_port datain ())
+		)
+		(_tchk setuphold 0 23128
+			(_port coreclk (posedge))
+			(_port detectrxloop ())
+		)
+		(_tchk setuphold 0 23129
+			(_port coreclk (posedge))
+			(_port dispval ())
+		)
+		(_tchk setuphold 0 23130
+			(_port coreclk (posedge))
+			(_port forcedisp ())
+		)
+		(_tchk setuphold 0 23131
+			(_port coreclk (posedge))
+			(_port forcedispcompliance ())
+		)
+		(_tchk setuphold 0 23132
+			(_port coreclk (posedge))
+			(_port phfifowrenable ())
+		)
+		(_tchk setuphold 0 23133
+			(_port coreclk (posedge))
+			(_port forceelecidle ())
+		)
+		(_tchk setuphold 0 23134
+			(_port coreclk (posedge))
+			(_port powerdn ())
+		)
+		(_tchk setuphold 0 23135
+			(_port coreclk (posedge))
+			(_port pipetxdeemph ())
+		)
+		(_tchk setuphold 0 23136
+			(_port coreclk (posedge))
+			(_port pipetxswing ())
+		)
+		(_tchk setuphold 0 23137
+			(_port coreclk (posedge))
+			(_port pipetxmargin ())
+		)
+		(_modpath parallel positive 0 23139
+			(_port coreclk in posedge)
+			(_port phfifooverflow out posedge)
+			(_datain td_out_full_tx in posedge)
+		)
+		(_modpath parallel positive 0 23140
+			(_port coreclk in posedge)
+			(_port phfifounderflow out posedge)
+			(_datain td_out_empty_tx in posedge)
+		)
+	)
+)
+V 000054 56 3234 1260919350971 hardcopyiv_hssi_rx_pcs
+(_unit hardcopyiv_hssi_rx_pcs
+	(_specify
+		(_modpath parallel positive 0 60194
+			(_port coreclk in posedge)
+			(_port a1a2sizeout out posedge)
+			(_datain a1a2sizeout_reg in posedge)
+		)
+		(_modpath parallel positive 0 60195
+			(_port coreclk in posedge)
+			(_port ctrldetect out posedge)
+			(_datain ctrldetect_reg in posedge)
+		)
+		(_modpath parallel positive 0 60196
+			(_port coreclk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_reg in posedge)
+		)
+		(_modpath parallel positive 0 60197
+			(_port coreclk in posedge)
+			(_port disperr out posedge)
+			(_datain disperr_reg in posedge)
+		)
+		(_modpath parallel positive 0 60198
+			(_port coreclk in posedge)
+			(_port errdetect out posedge)
+			(_datain errdetect_reg in posedge)
+		)
+		(_modpath parallel positive 0 60199
+			(_port coreclk in posedge)
+			(_port patterndetect out posedge)
+			(_datain patterndetect_reg in posedge)
+		)
+		(_modpath parallel positive 0 60200
+			(_port coreclk in posedge)
+			(_port rmfifodatadeleted out posedge)
+			(_datain rmfifodatadeleted_reg in posedge)
+		)
+		(_modpath parallel positive 0 60201
+			(_port coreclk in posedge)
+			(_port rmfifodatainserted out posedge)
+			(_datain rmfifodatainserted_reg in posedge)
+		)
+		(_modpath parallel positive 0 60202
+			(_port coreclk in posedge)
+			(_port runningdisp out posedge)
+			(_datain runningdisp_reg in posedge)
+		)
+		(_modpath parallel positive 0 60203
+			(_port coreclk in posedge)
+			(_port syncstatus out posedge)
+			(_datain syncstatus_reg in posedge)
+		)
+		(_modpath parallel positive 0 60205
+			(_port coreclk in posedge)
+			(_port pipebufferstat (_constant \0\) out posedge)
+			(_datain rd_out_rxd (_constant \13\) in posedge)
+		)
+		(_modpath parallel positive 0 60206
+			(_port coreclk in posedge)
+			(_port pipebufferstat (_constant \1\) out posedge)
+			(_datain rd_out_rxd (_constant \14\) in posedge)
+		)
+		(_modpath parallel positive 0 60207
+			(_port coreclk in posedge)
+			(_port pipebufferstat (_constant \2\) out posedge)
+			(_datain rd_out_rxd (_constant \45\) in posedge)
+		)
+		(_modpath parallel positive 0 60208
+			(_port coreclk in posedge)
+			(_port pipebufferstat (_constant \3\) out posedge)
+			(_datain rd_out_rxd (_constant \46\) in posedge)
+		)
+		(_modpath parallel positive 0 60209
+			(_port coreclk in posedge)
+			(_port byteorderalignstatus out posedge)
+			(_datain rd_out_byteord_flag in posedge)
+		)
+		(_modpath parallel positive 0 60210
+			(_port coreclk in posedge)
+			(_port phfifooverflow out posedge)
+			(_datain rd_out_full_rx in posedge)
+		)
+		(_modpath parallel positive 0 60211
+			(_port coreclk in posedge)
+			(_port phfifounderflow out posedge)
+			(_datain rd_out_empty_rx in posedge)
+		)
+		(_modpath parallel positive 0 60212
+			(_port coreclk in posedge)
+			(_port pipestatus out posedge)
+			(_datain hs_out_rxstatus_ch in posedge)
+		)
+		(_modpath parallel positive 0 60213
+			(_port coreclk in posedge)
+			(_port pipephydonestatus out posedge)
+			(_datain hs_out_phystatus in posedge)
+		)
+		(_modpath parallel positive 0 60214
+			(_port coreclk in posedge)
+			(_port pipedatavalid out posedge)
+			(_datain hs_out_rxvalid in posedge)
+		)
+		(_tchk setuphold 0 60216
+			(_port coreclk (posedge))
+			(_port phfifordenable ())
+		)
+	)
+)
+V 000050 56 399 1260919351691 hardcopyiv_hssi_cmu
+(_unit hardcopyiv_hssi_cmu
+	(_specify
+		(_tchk setuphold 0 85776
+			(_port dpclk (posedge))
+			(_port dprioin ())
+		)
+		(_modpath parallel positive 0 85778
+			(_port dpclk in posedge)
+			(_port dprioout out posedge)
+			(_datain dprioout_tim in posedge)
+		)
+		(_modpath parallel positive 0 85779
+			(_port dpclk in posedge)
+			(_port dpriooe out posedge)
+			(_datain dpriooe_tim in posedge)
+		)
+	)
+)
+V 000061 56 139 1260919351711 hardcopyiv_hssi_refclk_divider
+(_unit hardcopyiv_hssi_refclk_divider
+	(_specify
+		(_modpath parallel unknown 0 86953
+			(_port inclk in )
+			(_port clkout out )
+		)
+	)
+)

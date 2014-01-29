@@ -1,0 +1,8 @@
+[Interface]
+Name=usbhost_keyboard
+Category=DRIVER
+System=False
+Description=USB Host Keyboard driver
+PublicDir=services\usbhost\usbhost_keyboard\include
+
+

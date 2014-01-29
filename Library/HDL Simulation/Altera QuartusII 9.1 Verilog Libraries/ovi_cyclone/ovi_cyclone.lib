@@ -1,0 +1,287 @@
+timestamp=1260919187533
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[CYCLONE_PRIM_DFFE]
+A/CYCLONE_PRIM_DFFE=22|./src/cyclone_atoms.v|22|1*518
+B/CYCLONE_PRIM_DFFE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=290,498,980,1014
+R=./src/cyclone_atoms.v|22
+
+[CYCLONE_PRIM_DFFEAS]
+A/CYCLONE_PRIM_DFFEAS=22|./src/cyclone_atoms.v|95|1*1320
+B/CYCLONE_PRIM_DFFEAS=3*720
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=414,648,1026,1060
+R=./src/cyclone_atoms.v|95
+
+[CYCLONE_PRIM_DFFEAS_HIGH]
+A/CYCLONE_PRIM_DFFEAS_HIGH=22|./src/cyclone_atoms.v|133|1*2108
+B/CYCLONE_PRIM_DFFEAS_HIGH=3*1294
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=424,663,1041,1075
+R=./src/cyclone_atoms.v|133
+
+[cyclone_and1]
+A/cyclone_and1=22|./src/cyclone_atoms.v|346|1*6556
+B/cyclone_and1=3*5288
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_and1=4*2542
+P/~emb=125,274,376,465
+R=./src/cyclone_atoms.v|346
+
+[cyclone_and16]
+A/cyclone_and16=22|./src/cyclone_atoms.v|359|1*7145
+B/cyclone_and16=3*5443
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_and16=4*2697
+P/~emb=139,337,518,809
+R=./src/cyclone_atoms.v|359
+
+[cyclone_asmiblock]
+A/cyclone_asmiblock=22|./src/cyclone_atoms.v|7131|1*55008
+B/cyclone_asmiblock=3*1010845
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=288,491,653,768
+R=./src/cyclone_atoms.v|7131
+
+[cyclone_asynch_io]
+A/cyclone_asynch_io=22|./src/cyclone_atoms.v|6738|1*51459
+B/cyclone_asynch_io=3*979504
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_asynch_io=4*8907
+P/~emb=384,835,1272,1655
+R=./src/cyclone_atoms.v|6738
+
+[cyclone_asynch_lcell]
+A/cyclone_asynch_lcell=22|./src/cyclone_atoms.v|444|1*10438
+B/cyclone_asynch_lcell=3*10845
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_asynch_lcell=4*2854
+P/~emb=920,1607,2778,3271
+R=./src/cyclone_atoms.v|444
+
+[cyclone_b17mux21]
+A/cyclone_b17mux21=22|./src/cyclone_atoms.v|399|1*8598
+B/cyclone_b17mux21=3*7093
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=199,367,523,613
+R=./src/cyclone_atoms.v|399
+
+[cyclone_b5mux21]
+A/cyclone_b5mux21=22|./src/cyclone_atoms.v|420|1*9814
+B/cyclone_b5mux21=3*9350
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=194,359,515,605
+R=./src/cyclone_atoms.v|420
+
+[cyclone_bmux21]
+A/cyclone_bmux21=22|./src/cyclone_atoms.v|388|1*7975
+B/cyclone_bmux21=3*5599
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=195,360,516,606
+R=./src/cyclone_atoms.v|388
+
+[cyclone_crcblock]
+A/cyclone_crcblock=22|./src/cyclone_atoms.v|6672|1*50013
+B/cyclone_crcblock=3*978562
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=327,556,717,824
+R=./src/cyclone_atoms.v|6672
+
+[cyclone_dffe]
+A/cyclone_dffe=22|./src/cyclone_atoms.v|171|1*2901
+B/cyclone_dffe=3*1873
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_dffe=4*0
+P/~emb=239,517,737,936
+R=./src/cyclone_atoms.v|171
+
+[cyclone_dll]
+A/cyclone_dll=22|./src/cyclone_atoms.v|6291|1*47700
+B/cyclone_dll=3*948039
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=370,1228,2060,2455
+R=./src/cyclone_atoms.v|6291
+
+[cyclone_io]
+A/cyclone_io=22|./src/cyclone_atoms.v|6916|1*52757
+B/cyclone_io=3*990950
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1198,2057,3175,3888
+R=./src/cyclone_atoms.v|6916
+
+[cyclone_jtag]
+A/cyclone_jtag=22|./src/cyclone_atoms.v|6625|1*49264
+B/cyclone_jtag=3*978239
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=657,938,1191,1358
+R=./src/cyclone_atoms.v|6625
+
+[cyclone_latch]
+A/cyclone_latch=22|./src/cyclone_atoms.v|220|1*3874
+B/cyclone_latch=3*2704
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_latch=4*1016
+P/~emb=210,412,655,863
+R=./src/cyclone_atoms.v|220
+
+[cyclone_lcell]
+A/cyclone_lcell=22|./src/cyclone_atoms.v|1005|1*14546
+B/cyclone_lcell=3*63384
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1185,1763,2345,2916
+R=./src/cyclone_atoms.v|1005
+
+[cyclone_lcell_register]
+A/cyclone_lcell_register=22|./src/cyclone_atoms.v|804|1*12651
+B/cyclone_lcell_register=3*53626
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_lcell_register=4*5642
+P/~emb=655,1156,1762,2133
+R=./src/cyclone_atoms.v|804
+
+[cyclone_m_cntr]
+A/cyclone_m_cntr=22|./src/cyclone_atoms.v|2124|1*25349
+B/cyclone_m_cntr=3*261860
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=315,589,864,1057
+R=./src/cyclone_atoms.v|2124
+
+[cyclone_mux21]
+A/cyclone_mux21=22|./src/cyclone_atoms.v|278|1*4864
+B/cyclone_mux21=3*3744
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_mux21=4*1665
+P/~emb=175,356,554,697
+R=./src/cyclone_atoms.v|278
+
+[cyclone_mux41]
+A/cyclone_mux41=22|./src/cyclone_atoms.v|305|1*5630
+B/cyclone_mux41=3*4408
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_mux41=4*1971
+P/~emb=246,453,725,911
+R=./src/cyclone_atoms.v|305
+
+[cyclone_n_cntr]
+A/cyclone_n_cntr=22|./src/cyclone_atoms.v|2202|1*26276
+B/cyclone_n_cntr=3*266586
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=260,653,929,1122
+R=./src/cyclone_atoms.v|2202
+
+[cyclone_nmux21]
+A/cyclone_nmux21=22|./src/cyclone_atoms.v|410|1*9223
+B/cyclone_nmux21=3*8589
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=177,338,478,568
+R=./src/cyclone_atoms.v|410
+
+[cyclone_pll]
+A/cyclone_pll=22|./src/cyclone_atoms.v|2482|1*28982
+B/cyclone_pll=3*285402
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_pll=4*8650
+P/~emb=10430,18226,29176,33625
+R=./src/cyclone_atoms.v|2482
+
+[cyclone_pll_reg]
+A/cyclone_pll_reg=22|./src/cyclone_atoms.v|2422|1*28278
+B/cyclone_pll_reg=3*283867
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=244,415,620,747
+R=./src/cyclone_atoms.v|2422
+
+[cyclone_ram_block]
+A/cyclone_ram_block=22|./src/cyclone_atoms.v|1254|1*18353
+B/cyclone_ram_block=3*86061
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=8948,11149,14559,16393
+R=./src/cyclone_atoms.v|1254
+
+[cyclone_ram_pulse_generator]
+A/cyclone_ram_pulse_generator=22|./src/cyclone_atoms.v|1130|1*15952
+B/cyclone_ram_pulse_generator=3*65309
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_ram_pulse_generator=4*7344
+P/~emb=252,507,766,940
+R=./src/cyclone_atoms.v|1130
+
+[cyclone_ram_register]
+A/cyclone_ram_register=22|./src/cyclone_atoms.v|1177|1*16988
+B/cyclone_ram_register=3*68528
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_ram_register=4*7647
+P/~emb=402,713,1144,1375
+R=./src/cyclone_atoms.v|1177
+
+[cyclone_routing_wire]
+A/cyclone_routing_wire=22|./src/cyclone_atoms.v|6701|1*50718
+B/cyclone_routing_wire=3*979025
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cyclone_routing_wire=4*8726
+P/~emb=159,331,479,605
+R=./src/cyclone_atoms.v|6701
+
+[cyclone_scale_cntr]
+A/cyclone_scale_cntr=22|./src/cyclone_atoms.v|2287|1*27203
+B/cyclone_scale_cntr=3*272104
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=430,831,1231,1494
+R=./src/cyclone_atoms.v|2287
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, CYCLONE VERILOG LIBRARY.
+LastVerilogToplevel=cyclone_asmiblock
+ModifyID=256
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/cyclone_atoms.v=0*81602*137119
+
+[~MFT]
+0=33|0ovi_cyclone.mgf|137119|0
+1=31|1ovi_cyclone.mgf|55008|0
+3=31|3ovi_cyclone.mgf|1010845|0
+4=12|4ovi_cyclone.mgf|8907|0
+
+[~U]
+$root=12|0*0|
+CYCLONE_PRIM_DFFE=12|0*390||0xa0
+CYCLONE_PRIM_DFFEAS=12|0*1208||0xa0
+CYCLONE_PRIM_DFFEAS_HIGH=12|0*1996||0xa0
+cyclone_and1=12|0*6108||0x90
+cyclone_and16=12|0*6537||0x90
+cyclone_asmiblock=12|0*81072||0x90
+cyclone_asynch_io=12|0*76387||0x80
+cyclone_asynch_lcell=12|0*9078||0x80
+cyclone_b17mux21=12|0*7654||0x90
+cyclone_b5mux21=12|0*8598||0x90
+cyclone_bmux21=12|0*7175||0x90
+cyclone_crcblock=12|0*75293||0x90
+cyclone_dffe=12|0*2805||0x80
+cyclone_dll=12|0*71220||0x90
+cyclone_io=12|0*78293||0x90
+cyclone_jtag=12|0*74576||0x90
+cyclone_latch=12|0*3762||0x90
+cyclone_lcell=12|0*15010||0x90
+cyclone_lcell_register=12|0*12795||0x80
+cyclone_m_cntr=12|0*29253||0x80
+cyclone_mux21=12|0*4640||0x80
+cyclone_mux41=12|0*5294||0x90
+cyclone_n_cntr=12|0*30228||0x80
+cyclone_nmux21=12|0*8135||0x90
+cyclone_pll=12|0*33590||0x90
+cyclone_pll_reg=12|0*32918||0x80
+cyclone_ram_block=12|0*18881||0x90
+cyclone_ram_pulse_generator=12|0*16672||0x80
+cyclone_ram_register=12|0*17564||0x80
+cyclone_routing_wire=12|0*75854||0x90
+cyclone_scale_cntr=12|0*31379||0x80
+

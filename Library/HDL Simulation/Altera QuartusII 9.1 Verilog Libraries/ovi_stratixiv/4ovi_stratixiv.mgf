@@ -1,0 +1,1189 @@
+V 000045 56 975 1260919667942 stratixiv_dffe
+(_unit stratixiv_dffe
+	(_specify
+		(_specparam TREG integer 0)
+		(_specparam TREN integer 0)
+		(_specparam TRSU integer 0)
+		(_specparam TRH integer 0)
+		(_specparam TRPR integer 0)
+		(_specparam TRCL integer 0)
+		(_tchk setup 0 210
+			(_port D ())
+			(_port CLK (posedge) (_code  1 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 211
+			(_port CLK (posedge) (_code  2 legal))
+			(_port D ())
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 212
+			(_port ENA ())
+			(_port CLK (posedge) (_code  3 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 213
+			(_port CLK (posedge) (_code  4 legal))
+			(_port ENA ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 215
+			(_port CLRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 216
+			(_port PRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 217
+			(_port CLK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+	)
+)
+V 000046 56 607 1260919667947 stratixiv_latch
+(_unit stratixiv_latch
+	(_specify
+		(_tchk setup 0 233
+			(_port D ())
+			(_port ENA (posedge))
+		)
+		(_tchk hold 0 234
+			(_port ENA (negedge))
+			(_port D ())
+		)
+		(_modpath parallel unknown 0 236
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 237
+			(_port ENA in posedge)
+			(_port Q out posedge)
+			(_datain q_out in posedge)
+		)
+		(_modpath parallel positive 0 238
+			(_port PRE in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+		(_modpath parallel positive 0 239
+			(_port CLR in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+	)
+)
+V 000046 56 264 1260919667952 stratixiv_mux21
+(_unit stratixiv_mux21
+	(_specify
+		(_modpath parallel unknown 0 297
+			(_port A in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 298
+			(_port B in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 299
+			(_port S in )
+			(_port MO out )
+		)
+	)
+)
+V 000046 56 529 1260919667957 stratixiv_mux41
+(_unit stratixiv_mux41
+	(_specify
+		(_modpath parallel unknown 0 334
+			(_port IN0 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 335
+			(_port IN1 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 336
+			(_port IN2 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 337
+			(_port IN3 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 338
+			(_port S (_constant \1\) in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 339
+			(_port S (_constant \0\) in )
+			(_port MO out )
+		)
+	)
+)
+V 000045 56 114 1260919667962 stratixiv_and1
+(_unit stratixiv_and1
+	(_specify
+		(_modpath parallel unknown 0 355
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000046 56 115 1260919667967 stratixiv_and16
+(_unit stratixiv_and16
+	(_specify
+		(_modpath parallel unknown 0 368
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000052 56 2120 1260919667996 stratixiv_lcell_comb
+(_unit stratixiv_lcell_comb
+	(_specify
+		(_modpath parallel unknown 0 727
+			(_port dataa in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 728
+			(_port datab in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 729
+			(_port datac in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 730
+			(_port datad in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 731
+			(_port datae in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 732
+			(_port dataf in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 733
+			(_port datag in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 735
+			(_port dataa in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 736
+			(_port datab in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 737
+			(_port datac in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 738
+			(_port datad in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 739
+			(_port dataf in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 740
+			(_port cin in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 741
+			(_port sharein in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 743
+			(_port dataa in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 744
+			(_port datab in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 745
+			(_port datac in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 746
+			(_port datad in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 747
+			(_port dataf in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 748
+			(_port cin in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 749
+			(_port sharein in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 751
+			(_port dataa in )
+			(_port shareout out )
+		)
+		(_modpath parallel unknown 0 752
+			(_port datab in )
+			(_port shareout out )
+		)
+		(_modpath parallel unknown 0 753
+			(_port datac in )
+			(_port shareout out )
+		)
+		(_modpath parallel unknown 0 754
+			(_port datad in )
+			(_port shareout out )
+		)
+	)
+)
+V 000053 56 131 1260919668001 stratixiv_routing_wire
+(_unit stratixiv_routing_wire
+	(_specify
+		(_modpath parallel unknown 0 890
+			(_port datain in )
+			(_port dataout out )
+		)
+	)
+)
+V 000052 56 479 1260919668006 stratixiv_lvds_tx_reg
+(_unit stratixiv_lvds_tx_reg
+	(_specify
+		(_tchk setuphold 0 943
+			(_port clk (posedge))
+			(_port d ())
+		)
+		(_modpath parallel positive 0 944
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 945
+			(_port clrn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+		(_modpath parallel positive 0 946
+			(_port prn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+	)
+)
+V 000066 56 269 1260919668011 stratixiv_lvds_tx_parallel_register
+(_unit stratixiv_lvds_tx_parallel_register
+	(_specify
+		(_modpath parallel positive 0 1016
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+		(_tchk setuphold 0 1018
+			(_port clk (posedge))
+			(_port datain ())
+		)
+	)
+)
+V 000058 56 525 1260919668016 stratixiv_lvds_tx_out_block
+(_unit stratixiv_lvds_tx_out_block
+	(_specify
+		(_modpath parallel unknown 0 1104
+			(_code  4 bypass_mode*EQ*1)
+			(_port clk in )
+			(_port dataout out )
+		)
+		(_modpath parallel positive 0 1107
+			(_code  5 bypass_mode*EQ*0*AN*falling_clk_out*EQ*1)
+			(_port clk in negedge)
+			(_port dataout out negedge)
+			(_datain dataout_tmp in negedge)
+		)
+		(_modpath parallel positive 0 1110
+			(_code  6 bypass_mode*EQ*0*AN*falling_clk_out*EQ*0)
+			(_port datain in )
+			(_port dataout out )
+			(_datain dataout_tmp in )
+		)
+	)
+)
+V 000057 56 458 1260919668021 stratixiv_lvds_transmitter
+(_unit stratixiv_lvds_transmitter
+	(_specify
+		(_modpath parallel unknown 0 1249
+			(_code  7 serial_din_mode*EQ*1)
+			(_port serialdatain in )
+			(_port dataout out )
+		)
+		(_modpath parallel unknown 0 1252
+			(_code  8 postdpa_serial_din_mode*EQ*1)
+			(_port postdpaserialdatain in )
+			(_port dataout out )
+		)
+		(_modpath parallel unknown 0 1255
+			(_code  9 enable_dpaclk_to_lvdsout_signal*EQ*1)
+			(_port dpaclkin in )
+			(_port dataout out )
+		)
+	)
+)
+V 000060 56 247 1260919668030 stratixiv_ram_pulse_generator
+(_unit stratixiv_ram_pulse_generator
+	(_specify
+		(_specparam t_decode integer 0)
+		(_specparam t_access integer 0)
+		(_modpath parallel positive 0 1400
+			(_port clk in posedge)
+			(_port pulse out posedge)
+			(_datain state in posedge)
+		)
+	)
+)
+V 000054 56 1193 1260919668035 stratixiv_ram_register
+(_unit stratixiv_ram_register
+	(_specify
+		(_tchk setup 0 1475
+			(_port d ())
+			(_port clk (posedge) (_code  6 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 1476
+			(_port aclr ())
+			(_port clk (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 1477
+			(_port ena ())
+			(_port clk (posedge) (_code  7 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 1478
+			(_port stall ())
+			(_port clk (posedge) (_code  8 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1479
+			(_port clk (posedge) (_code  9 reset))
+			(_port d ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1480
+			(_port clk (posedge))
+			(_port aclr ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1481
+			(_port clk (posedge) (_code  10 reset))
+			(_port ena ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1482
+			(_port clk (posedge) (_code  11 reset))
+			(_port stall ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 1483
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_reg in posedge)
+		)
+		(_modpath parallel positive 0 1484
+			(_port aclr in posedge)
+			(_port q out posedge)
+			(_datain q_reg in posedge)
+		)
+	)
+)
+V 000044 56 1056 1260919668044 stratixiv_ff
+(_unit stratixiv_ff
+	(_specify
+		(_tchk setuphold 0 2859
+			(_port clk (posedge) (_code  8 nosloadsclr))
+			(_port d ())
+			(_register (d_viol))
+		)
+		(_tchk setuphold 0 2860
+			(_port clk (posedge) (_code  9 reset))
+			(_port sclr ())
+			(_register (sclr_viol))
+		)
+		(_tchk setuphold 0 2861
+			(_port clk (posedge) (_code  10 reset))
+			(_port sload ())
+			(_register (sload_viol))
+		)
+		(_tchk setuphold 0 2862
+			(_port clk (posedge) (_code  11 sloaddata))
+			(_port asdata ())
+			(_register (asdata_viol))
+		)
+		(_tchk setuphold 0 2863
+			(_port clk (posedge) (_code  12 reset))
+			(_port ena ())
+			(_register (ena_viol))
+		)
+		(_modpath parallel positive 0 2865
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 2866
+			(_port clrn in posedge)
+			(_port q out posedge)
+		)
+		(_modpath parallel positive 0 2867
+			(_port aload in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel unknown 0 2868
+			(_port asdata in )
+			(_port q out )
+		)
+	)
+)
+V 000050 56 651 1260919668049 stratixiv_clkselect
+(_unit stratixiv_clkselect
+	(_specify
+		(_modpath parallel unknown 0 2967
+			(_port inclk (_constant \3\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2968
+			(_port inclk (_constant \2\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2969
+			(_port inclk (_constant \1\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2970
+			(_port inclk (_constant \0\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2972
+			(_port clkselect (_constant \1\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2973
+			(_port clkselect (_constant \0\) in )
+			(_port outclk out )
+		)
+	)
+)
+V 000045 56 192 1260919668054 stratixiv_and2
+(_unit stratixiv_and2
+	(_specify
+		(_modpath parallel unknown 0 3011
+			(_port IN1 in )
+			(_port Y out )
+		)
+		(_modpath parallel unknown 0 3012
+			(_port IN2 in )
+			(_port Y out )
+		)
+	)
+)
+V 000048 56 275 1260919668059 stratixiv_ena_reg
+(_unit stratixiv_ena_reg
+	(_specify
+		(_tchk setuphold 0 3066
+			(_port clk (posedge) (_code  4 reset))
+			(_port d ())
+			(_register (d_viol))
+		)
+		(_modpath parallel positive 0 3068
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+	)
+)
+V 000066 56 253 1260919668068 stratixiv_mlab_cell_pulse_generator
+(_unit stratixiv_mlab_cell_pulse_generator
+	(_specify
+		(_specparam t_decode integer 0)
+		(_specparam t_access integer 0)
+		(_modpath parallel positive 0 3202
+			(_port clk in posedge)
+			(_port pulse out posedge)
+			(_datain state in posedge)
+		)
+	)
+)
+V 000050 56 850 1260919668073 stratixiv_mlab_cell
+(_unit stratixiv_mlab_cell
+	(_specify
+		(_tchk setup 0 3294
+			(_port portaaddr ())
+			(_port clk0 (negedge) (_code  10 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 3295
+			(_port portabyteenamasks ())
+			(_port clk0 (negedge) (_code  11 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 3296
+			(_port ena0 ())
+			(_port clk0 (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 3297
+			(_port clk0 (negedge) (_code  12 reset))
+			(_port portaaddr ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 3298
+			(_port clk0 (negedge) (_code  13 reset))
+			(_port portabyteenamasks ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 3299
+			(_port clk0 (posedge))
+			(_port ena0 ())
+			(_register (viol_notifier))
+		)
+		(_modpath full unknown 0 3300
+			(_port portbaddr in )
+			(_port portbdataout out )
+		)
+	)
+)
+V 000048 56 194 1260919668078 stratixiv_io_ibuf
+(_unit stratixiv_io_ibuf
+	(_specify
+		(_modpath parallel unknown 0 3440
+			(_port i in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 3441
+			(_port ibar in )
+			(_port o out )
+		)
+	)
+)
+V 000048 56 349 1260919668083 stratixiv_io_obuf
+(_unit stratixiv_io_obuf
+	(_specify
+		(_modpath parallel unknown 0 3543
+			(_port i in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 3544
+			(_port i in )
+			(_port obar out )
+		)
+		(_modpath parallel unknown 0 3545
+			(_port oe in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 3546
+			(_port oe in )
+			(_port obar out )
+		)
+	)
+)
+V 000054 56 1042 1260919668100 stratixiv_mac_register
+(_unit stratixiv_mac_register
+	(_specify
+		(_specparam TSU integer 0)
+		(_specparam TH integer 0)
+		(_specparam TCO integer 0)
+		(_specparam TCLR integer 0)
+		(_specparam TCLR_MIN_PW integer 0)
+		(_specparam TPRE integer 0)
+		(_specparam TPRE_MIN_PW integer 0)
+		(_specparam TCLK_MIN_PW integer 0)
+		(_specparam TCE_MIN_PW integer 0)
+		(_specparam TCLKL integer 0)
+		(_specparam TCLKH integer 0)
+		(_tchk setup 0 4211
+			(_port datain ())
+			(_port clk (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 4212
+			(_port clk (posedge))
+			(_port datain ())
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 4213
+			(_port sload ())
+			(_port clk (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 4214
+			(_port clk (posedge))
+			(_port sload ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 4215
+			(_port aclr in posedge)
+			(_port dataout out posedge)
+		)
+		(_modpath parallel positive 0 4216
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+	)
+)
+V 000055 56 372 1260919668105 stratixiv_mac_multiplier
+(_unit stratixiv_mac_multiplier
+	(_specify
+		(_modpath full unknown 0 4286
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4287
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4288
+			(_port signa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4289
+			(_port signb in )
+			(_port dataout out )
+		)
+	)
+)
+V 000060 56 295 1260919668118 stratixiv_first_stage_add_sub
+(_unit stratixiv_first_stage_add_sub
+	(_specify
+		(_modpath full unknown 0 4777
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4778
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4779
+			(_port sign in )
+			(_port dataout out )
+		)
+	)
+)
+V 000063 56 826 1260919668123 stratixiv_second_stage_add_accum
+(_unit stratixiv_second_stage_add_accum
+	(_specify
+		(_modpath full unknown 0 4854
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4855
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4856
+			(_port sign in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4857
+			(_port dataa in )
+			(_port overflow out )
+		)
+		(_modpath full unknown 0 4858
+			(_port datab in )
+			(_port overflow out )
+		)
+		(_modpath full unknown 0 4859
+			(_port sign in )
+			(_port overflow out )
+		)
+		(_modpath full unknown 0 4862
+			(_code  4 operation*EQ*4'b011*OR*operation*EQ*4'b0100)
+			(_port accumin in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4865
+			(_code  5 operation*EQ*4'b011*OR*operation*EQ*4'b0100)
+			(_port accumin in )
+			(_port overflow out )
+		)
+	)
+)
+V 000061 56 927 1260919668136 stratixiv_round_saturate_block
+(_unit stratixiv_round_saturate_block
+	(_specify
+		(_modpath full unknown 0 5214
+			(_port datain in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5215
+			(_port round in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5216
+			(_port saturate in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5217
+			(_port signa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5218
+			(_port signb in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5219
+			(_port datain in )
+			(_port saturationoverflow out )
+		)
+		(_modpath full unknown 0 5220
+			(_port round in )
+			(_port saturationoverflow out )
+		)
+		(_modpath full unknown 0 5221
+			(_port saturate in )
+			(_port saturationoverflow out )
+		)
+		(_modpath full unknown 0 5222
+			(_port signa in )
+			(_port saturationoverflow out )
+		)
+		(_modpath full unknown 0 5223
+			(_port signb in )
+			(_port saturationoverflow out )
+		)
+	)
+)
+V 000059 56 302 1260919668141 stratixiv_rotate_shift_block
+(_unit stratixiv_rotate_shift_block
+	(_specify
+		(_modpath full unknown 0 5286
+			(_port datain in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5287
+			(_port rotate in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5288
+			(_port shiftright in )
+			(_port dataout out )
+		)
+	)
+)
+V 000058 56 213 1260919668146 stratixiv_carry_chain_adder
+(_unit stratixiv_carry_chain_adder
+	(_specify
+		(_modpath full unknown 0 5327
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5328
+			(_port datab in )
+			(_port dataout out )
+		)
+	)
+)
+V 000052 56 1121 1260919668163 stratixiv_ddr_io_reg
+(_unit stratixiv_ddr_io_reg
+	(_specify
+		(_tchk setuphold 0 7169
+			(_port clk (posedge) (_code  5 nosloadsclr))
+			(_port d ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 7170
+			(_port clk (posedge) (_code  6 reset))
+			(_port sclr ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 7171
+			(_port clk (posedge) (_code  7 reset))
+			(_port sload ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 7172
+			(_port clk (posedge) (_code  8 sloaddata))
+			(_port asdata ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 7173
+			(_port clk (posedge) (_code  9 reset))
+			(_port ena ())
+			(_register (viol))
+		)
+		(_modpath parallel positive 0 7175
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain d in posedge)
+		)
+		(_modpath parallel positive 0 7176
+			(_port clrn in posedge)
+			(_port q out posedge)
+		)
+		(_modpath parallel positive 0 7177
+			(_port prn in posedge)
+			(_port q out posedge)
+		)
+		(_modpath parallel positive 0 7178
+			(_port aload in posedge)
+			(_port q out posedge)
+			(_datain d in posedge)
+		)
+		(_modpath parallel unknown 0 7179
+			(_port asdata in )
+			(_port q out )
+		)
+	)
+)
+V 000045 56 1368 1260919668168 stratixiv_dll
+(_unit stratixiv_dll
+	(_specify
+		(_modpath parallel positive 0 7413
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \0\) out posedge)
+			(_datain delayctrl_out (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 7414
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \1\) out posedge)
+			(_datain delayctrl_out (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 7415
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \2\) out posedge)
+			(_datain delayctrl_out (_constant \2\) in posedge)
+		)
+		(_modpath parallel positive 0 7416
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \3\) out posedge)
+			(_datain delayctrl_out (_constant \3\) in posedge)
+		)
+		(_modpath parallel positive 0 7417
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \4\) out posedge)
+			(_datain delayctrl_out (_constant \4\) in posedge)
+		)
+		(_modpath parallel positive 0 7418
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \5\) out posedge)
+			(_datain delayctrl_out (_constant \5\) in posedge)
+		)
+		(_modpath parallel positive 0 7420
+			(_port clk in posedge)
+			(_port upndnout out posedge)
+			(_datain upndn_out in posedge)
+		)
+		(_tchk setuphold 0 7422
+			(_port clk (posedge))
+			(_port upndnin ())
+		)
+		(_tchk setuphold 0 7423
+			(_port clk (posedge))
+			(_port upndninclkena ())
+		)
+	)
+)
+V 000057 56 1820 1260919668173 stratixiv_dll_offset_ctrl
+(_unit stratixiv_dll_offset_ctrl
+	(_specify
+		(_modpath parallel positive 0 8058
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \0\) out posedge)
+			(_datain offsetctrl_out (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 8059
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \1\) out posedge)
+			(_datain offsetctrl_out (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 8060
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \2\) out posedge)
+			(_datain offsetctrl_out (_constant \2\) in posedge)
+		)
+		(_modpath parallel positive 0 8061
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \3\) out posedge)
+			(_datain offsetctrl_out (_constant \3\) in posedge)
+		)
+		(_modpath parallel positive 0 8062
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \4\) out posedge)
+			(_datain offsetctrl_out (_constant \4\) in posedge)
+		)
+		(_modpath parallel positive 0 8063
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \5\) out posedge)
+			(_datain offsetctrl_out (_constant \5\) in posedge)
+		)
+		(_modpath parallel unknown 0 8065
+			(_port offset in )
+			(_port offsetctrlout out )
+		)
+		(_tchk setuphold 0 8067
+			(_port clk (posedge))
+			(_port offset (_constant \0\) ())
+		)
+		(_tchk setuphold 0 8068
+			(_port clk (posedge))
+			(_port offset (_constant \1\) ())
+		)
+		(_tchk setuphold 0 8069
+			(_port clk (posedge))
+			(_port offset (_constant \2\) ())
+		)
+		(_tchk setuphold 0 8070
+			(_port clk (posedge))
+			(_port offset (_constant \3\) ())
+		)
+		(_tchk setuphold 0 8071
+			(_port clk (posedge))
+			(_port offset (_constant \4\) ())
+		)
+		(_tchk setuphold 0 8072
+			(_port clk (posedge))
+			(_port offset (_constant \5\) ())
+		)
+		(_tchk setuphold 0 8073
+			(_port clk (posedge))
+			(_port addnsub ())
+		)
+	)
+)
+V 000057 56 1402 1260919668178 stratixiv_dqs_delay_chain
+(_unit stratixiv_dqs_delay_chain
+	(_specify
+		(_modpath parallel unknown 0 8311
+			(_port dqsin in )
+			(_port dqsbusout out )
+		)
+		(_tchk setuphold 0 8313
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \0\) ())
+		)
+		(_tchk setuphold 0 8314
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \1\) ())
+		)
+		(_tchk setuphold 0 8315
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \2\) ())
+		)
+		(_tchk setuphold 0 8316
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \3\) ())
+		)
+		(_tchk setuphold 0 8317
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \4\) ())
+		)
+		(_tchk setuphold 0 8318
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \5\) ())
+		)
+		(_tchk setuphold 0 8320
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \0\) ())
+		)
+		(_tchk setuphold 0 8321
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \1\) ())
+		)
+		(_tchk setuphold 0 8322
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \2\) ())
+		)
+		(_tchk setuphold 0 8323
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \3\) ())
+		)
+		(_tchk setuphold 0 8324
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \4\) ())
+		)
+		(_tchk setuphold 0 8325
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \5\) ())
+		)
+	)
+)
+V 000051 56 222 1260919668183 stratixiv_dqs_enable
+(_unit stratixiv_dqs_enable
+	(_specify
+		(_modpath parallel unknown 0 8433
+			(_port dqsin in )
+			(_port dqsbusout out )
+		)
+		(_modpath parallel unknown 0 8434
+			(_port dqsenable in )
+			(_port dqsbusout out )
+		)
+	)
+)
+V 000052 56 131 1260919668192 stratixiv_delay_chain
+(_unit stratixiv_delay_chain
+	(_specify
+		(_modpath parallel unknown 0 8761
+			(_port datain in )
+			(_port dataout out )
+		)
+	)
+)
+V 000057 56 132 1260919668197 stratixiv_io_clock_divider
+(_unit stratixiv_io_clock_divider
+	(_specify
+		(_modpath parallel unknown 0 8937
+			(_port clk in )
+			(_port clkout out )
+		)
+	)
+)
+V 000050 56 255 1260919668214 stratixiv_io_config
+(_unit stratixiv_io_config
+	(_specify
+		(_modpath parallel positive 0 10110
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain tmp_dataout in posedge)
+		)
+		(_tchk setuphold 0 10112
+			(_port clk (posedge))
+			(_port datain ())
+		)
+	)
+)
+V 000051 56 256 1260919668219 stratixiv_dqs_config
+(_unit stratixiv_dqs_config
+	(_specify
+		(_modpath parallel positive 0 10272
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain tmp_dataout in posedge)
+		)
+		(_tchk setuphold 0 10274
+			(_port clk (posedge))
+			(_port datain ())
+		)
+	)
+)
+V 000044 56 205 1260919668260 stratixiv_pll
+(_unit stratixiv_pll
+	(_specify
+		(_tchk setuphold 0 12169
+			(_port scanclk (negedge))
+			(_port scandata ())
+		)
+		(_tchk setuphold 0 12170
+			(_port scanclk (negedge))
+			(_port scanclkena ())
+		)
+	)
+)
+V 000053 56 314 1260919668277 stratixiv_lvds_rx_fifo
+(_unit stratixiv_lvds_rx_fifo
+	(_specify
+		(_modpath parallel positive 0 15866
+			(_port rclk in posedge)
+			(_port dataout out posedge)
+			(_datain data_out in posedge)
+		)
+		(_modpath parallel positive 0 15867
+			(_port dparst in posedge)
+			(_port dataout out posedge)
+			(_datain data_out in posedge)
+		)
+	)
+)
+V 000056 56 329 1260919668282 stratixiv_lvds_rx_bitslip
+(_unit stratixiv_lvds_rx_bitslip
+	(_specify
+		(_modpath parallel positive 0 16001
+			(_port clk0 in posedge)
+			(_port bslipmax out posedge)
+			(_datain bslipmax_tmp in posedge)
+		)
+		(_modpath parallel positive 0 16002
+			(_port bsliprst in posedge)
+			(_port bslipmax out posedge)
+			(_datain bslipmax_tmp in posedge)
+		)
+	)
+)
+V 000049 56 412 1260919668287 stratixiv_lvds_reg
+(_unit stratixiv_lvds_reg
+	(_specify
+		(_modpath parallel positive 0 16280
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 16281
+			(_port clrn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+		(_modpath parallel positive 0 16282
+			(_port prn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+	)
+)
+V 000054 56 182 1260919668292 stratixiv_lvds_rx_deser
+(_unit stratixiv_lvds_rx_deser
+	(_specify
+		(_modpath parallel positive 0 16145
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+	)
+)
+V 000061 56 189 1260919668297 stratixiv_lvds_rx_parallel_reg
+(_unit stratixiv_lvds_rx_parallel_reg
+	(_specify
+		(_modpath parallel positive 0 16211
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+	)
+)
+V 000054 56 183 1260919668318 stratixiv_lvds_receiver
+(_unit stratixiv_lvds_receiver
+	(_specify
+		(_modpath parallel positive 0 16977
+			(_port clk0 in posedge)
+			(_port dpalock out posedge)
+			(_datain dpalock_tmp in posedge)
+		)
+	)
+)
+V 000051 56 495 1260919668335 stratixiv_bias_block
+(_unit stratixiv_bias_block
+	(_specify
+		(_tchk setuphold 0 17429
+			(_port clk (posedge))
+			(_port din ())
+			(_register (din_viol))
+		)
+		(_tchk setuphold 0 17430
+			(_port clk (posedge))
+			(_port shiftnld ())
+			(_register (shiftnld_viol))
+		)
+		(_tchk setuphold 0 17431
+			(_port clk (posedge))
+			(_port captnupdt ())
+			(_register (captnupdt_viol))
+		)
+		(_modpath parallel positive 0 17433
+			(_port clk in posedge)
+			(_port dout out posedge)
+			(_datain dout_tmp in posedge)
+		)
+	)
+)

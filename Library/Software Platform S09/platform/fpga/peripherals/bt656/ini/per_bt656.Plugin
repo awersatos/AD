@@ -1,0 +1,35 @@
+[Plugin]
+Name=per_bt656
+Caption=BT656 Video Capture Controller
+Description=8-bit parallel ITU-R BT.656 compatible video stream decoder
+Bitmap=per_bt656.bmp
+LargeBitmap=per_bt656_large.bmp
+HardwareID=BT656
+Implement=per_bt656
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=Hardware base address
+Kind=POINTER
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Frame Interrupt
+CodeName=frame_interrupt
+Description=Interrupt when next frame is being written
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option2]
+Name=interrupt1
+GUIName=Line Interrupt
+CodeName=line_interrupt
+Description=Interrupt when next line is being written
+Kind=INTERRUPT
+Auto=True

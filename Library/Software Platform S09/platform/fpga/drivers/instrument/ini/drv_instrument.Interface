@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_instrument
+Category=DRIVER
+System=False
+Description=Custom Instrument Driver
+PublicDir=platform\fpga\drivers\instrument\include
+

@@ -1,0 +1,42 @@
+################################################################################
+#
+#                          EDL Macromodel Library File
+#       Filename: u_tr.lib
+#        Creator: INCASES Engineering GmbH
+#        Version: 1.1
+#      Last Save: Mon Nov 09 16:50:18 1998
+#
+################################################################################
+@IDBM:CONNECTOR_TL_xtr.mac
+################################################################################
+#
+#         Header: 1.0;
+#       Filename: CONNECTOR_TL_xtr.mac;
+#        FileRev: 1.00;
+#           Date: Mon Nov 09 16:50:18 1998;
+#     Permission: ;
+#      Simulator: ;
+#      Modeltype: 100;
+#     Technology: UK;
+#        Changes: ;
+#          Notes: ;
+#
+# RefSource
+#      Component: ;
+#   Manufacturer: ;
+#     Buffername: ;
+#     Buffertype: BI->IN;
+#           Pins: ;
+#         Method: ;
+#      Copyright: ;
+#     Disclaimer: ;
+#          Notes: ;
+#
+################################################################################
+TRANSMISSION_LINE_DESCRIPTION
+CA	 1.00e-012
+CB	 1.00e-012
+LL	 1.80e-002
+TD	 1.25e-010
+ZL	 5.70e+001
+END

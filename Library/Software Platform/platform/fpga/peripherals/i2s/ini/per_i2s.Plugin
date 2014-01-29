@@ -1,0 +1,28 @@
+[Plugin]
+Name=per_i2s
+Description=I2S audio streaming controller with configurable hardware buffer size.
+Caption=I2S Master Controller
+SourceDir=platform\fpga\peripherals\i2s\src
+Implement=per_i2s
+HardwareID=WB_I2S
+Bitmap=per_i2s.bmp
+LargeBitmap=per_i2s_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=Hardware base address.
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+CodeName=wm_interrupt
+Description=Interrupt number for transmitter/receiver watermark interrupt.
+Kind=INTERRUPT
+Auto=True

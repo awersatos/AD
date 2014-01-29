@@ -1,0 +1,20 @@
+[Plugin]
+Name=per_ir38k
+Description=Infrared Remote Control (38KHz) Receiver
+Caption=IR38K RX Unit
+HardwareID=WB_IR38KRX
+Implement=per_ir38k
+Bitmap=per_ir38k.bmp
+LargeBitmap=per_ir38k_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=interrupt0
+GUIName=RX interrupt
+CodeName=rxinterrupt
+Description=Interrupt indicating received data
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

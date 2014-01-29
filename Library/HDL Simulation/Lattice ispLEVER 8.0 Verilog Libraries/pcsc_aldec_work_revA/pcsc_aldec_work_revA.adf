@@ -1,0 +1,24 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=pcsc_aldec_work_revA
+
+[Library]
+pcsc_aldec_work_revA=.\pcsc_aldec_work_revA.LIB
+
+[$LibMap$]
+pcsc_aldec_work_revA=.
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

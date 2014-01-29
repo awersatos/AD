@@ -1,0 +1,43 @@
+[Plugin]
+Name=per_vga32_16bpp
+Description=VGA controller with fixed 16 bpp color quality, screen resolution up to 800 x 600, and refresh rate up to 75 Hz.
+Caption=VGA 16bpp Controller
+Implement=per_vga32_16bpp
+HardwareID=VGA32_16BPP
+Bitmap=per_vga32_16bpp.bmp
+LargeBitmap=per_vga32_16bpp_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=POINTER
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=VSYNC Interrupt
+CodeName=vsync_interrupt
+Description=vsync interrupt number
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option2]
+Name=interrupt1
+GUIName=HSYNC Interrupt
+CodeName=hsync_interrupt
+Description=hsync interrupt number
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option3]
+Name=interrupt2
+GUIName=BLANK Interrupt
+CodeName=blank_interrupt
+Description=blank interrupt number
+Kind=INTERRUPT
+Auto=True

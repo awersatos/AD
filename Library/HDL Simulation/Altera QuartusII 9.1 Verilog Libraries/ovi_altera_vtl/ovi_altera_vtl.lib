@@ -1,0 +1,782 @@
+timestamp=1260919159580
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[AND1]
+A/AND1=22|./src/alt_max2.vo|297|1*4393
+B/AND1=3*2557
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND1=4*0
+P/~emb=127,276,393,487
+R=./src/alt_max2.vo|297
+
+[AND10]
+A/AND10=22|./src/alt_max2.vo|540|1*11126
+B/AND10=3*13573
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND10=4*3987
+P/~emb=392,569,751,875
+R=./src/alt_max2.vo|540
+
+[AND11]
+A/AND11=22|./src/alt_max2.vo|577|1*11932
+B/AND11=3*14798
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND11=4*4813
+P/~emb=423,603,792,919
+R=./src/alt_max2.vo|577
+
+[AND12]
+A/AND12=22|./src/alt_max2.vo|616|1*12754
+B/AND12=3*16023
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND12=4*5716
+P/~emb=454,637,832,961
+R=./src/alt_max2.vo|616
+
+[AND13]
+A/AND13=22|./src/alt_max2.vo|657|1*13592
+B/AND13=3*17248
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND13=4*6696
+P/~emb=485,671,874,1007
+R=./src/alt_max2.vo|657
+
+[AND14]
+A/AND14=22|./src/alt_max2.vo|700|1*14446
+B/AND14=3*18473
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND14=4*7754
+P/~emb=516,705,914,1050
+R=./src/alt_max2.vo|700
+
+[AND15]
+A/AND15=22|./src/alt_max2.vo|745|1*15300
+B/AND15=3*19698
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND15=4*8889
+P/~emb=547,739,956,1093
+R=./src/alt_max2.vo|745
+
+[AND16]
+A/AND16=22|./src/alt_max2.vo|792|1*16170
+B/AND16=3*20923
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND16=4*10101
+P/~emb=578,773,998,1138
+R=./src/alt_max2.vo|792
+
+[AND2]
+A/AND2=22|./src/alt_max2.vo|316|1*5086
+B/AND2=3*3781
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND2=4*139
+P/~emb=156,307,433,532
+R=./src/alt_max2.vo|316
+
+[AND3]
+A/AND3=22|./src/alt_max2.vo|337|1*5795
+B/AND3=3*5005
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND3=4*354
+P/~emb=185,339,472,575
+R=./src/alt_max2.vo|337
+
+[AND4]
+A/AND4=22|./src/alt_max2.vo|360|1*6520
+B/AND4=3*6229
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND4=4*645
+P/~emb=214,371,510,615
+R=./src/alt_max2.vo|360
+
+[AND5]
+A/AND5=22|./src/alt_max2.vo|385|1*7261
+B/AND5=3*7453
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND5=4*1012
+P/~emb=243,403,550,659
+R=./src/alt_max2.vo|385
+
+[AND6]
+A/AND6=22|./src/alt_max2.vo|412|1*8018
+B/AND6=3*8677
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND6=4*1455
+P/~emb=272,435,588,700
+R=./src/alt_max2.vo|412
+
+[AND7]
+A/AND7=22|./src/alt_max2.vo|441|1*8775
+B/AND7=3*9901
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND7=4*1974
+P/~emb=301,467,628,741
+R=./src/alt_max2.vo|441
+
+[AND8]
+A/AND8=22|./src/alt_max2.vo|472|1*9548
+B/AND8=3*11125
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND8=4*2569
+P/~emb=330,499,668,784
+R=./src/alt_max2.vo|472
+
+[AND9]
+A/AND9=22|./src/alt_max2.vo|505|1*10337
+B/AND9=3*12349
+C=8.2.1986.SP1.35.3497  (Windows)
+D/AND9=4*3240
+P/~emb=359,531,706,827
+R=./src/alt_max2.vo|505
+
+[CLKLOCK]
+A/CLKLOCK=22|./src/alt_max2.vo|2868|1*66097
+B/CLKLOCK=3*111799
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,660,1010,1201
+R=./src/alt_max2.vo|2868
+
+[DELAY]
+A/DELAY=22|./src/alt_max2.vo|2515|1*56512
+B/DELAY=3*83370
+C=8.2.1986.SP1.35.3497  (Windows)
+D/DELAY=4*46383
+P/~emb=129,278,395,489
+R=./src/alt_max2.vo|2515
+
+[DFF]
+A/DFF=22|./src/alt_max2.vo|2552|1*57898
+B/DFF=3*85818
+C=8.2.1986.SP1.35.3497  (Windows)
+D/DFF=4*46663
+P/~emb=192,399,549,665
+R=./src/alt_max2.vo|2552
+
+[DFF1]
+A/DFF1=22|./src/alt_max2.vo|2580|1*58638
+B/DFF1=3*86320
+C=8.2.1986.SP1.35.3497  (Windows)
+D/DFF1=4*47343
+P/~emb=194,402,551,667
+R=./src/alt_max2.vo|2580
+
+[DFFE]
+A/DFFE=22|./src/alt_max2.vo|2608|1*59379
+B/DFFE=3*86823
+C=8.2.1986.SP1.35.3497  (Windows)
+D/DFFE=4*48025
+P/~emb=223,438,594,722
+R=./src/alt_max2.vo|2608
+
+[DFFE1]
+A/DFFE1=22|./src/alt_max2.vo|2640|1*60152
+B/DFFE1=3*87646
+C=8.2.1986.SP1.35.3497  (Windows)
+D/DFFE1=4*48908
+P/~emb=225,438,594,722
+R=./src/alt_max2.vo|2640
+
+[FILTER]
+A/FILTER=22|./src/alt_max2.vo|2672|1*60926
+B/FILTER=3*88470
+C=8.2.1986.SP1.35.3497  (Windows)
+D/FILTER=4*49793
+P/~emb=113,275,378,467
+R=./src/alt_max2.vo|2672
+
+[INV]
+A/INV=22|./src/alt_max2.vo|2534|1*57206
+B/INV=3*84595
+C=8.2.1986.SP1.35.3497  (Windows)
+D/INV=4*46525
+P/~emb=125,269,386,480
+R=./src/alt_max2.vo|2534
+
+[LATCH]
+A/LATCH=22|./src/alt_max2.vo|2702|1*62124
+B/LATCH=3*88768
+C=8.2.1986.SP1.35.3497  (Windows)
+D/LATCH=4*50333
+P/~emb=136,314,430,534
+R=./src/alt_max2.vo|2702
+
+[NAND1]
+A/NAND1=22|./src/alt_max2.vo|841|1*17056
+B/NAND1=3*22148
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND1=4*11390
+P/~emb=129,280,397,491
+R=./src/alt_max2.vo|841
+
+[NAND10]
+A/NAND10=22|./src/alt_max2.vo|1084|1*23814
+B/NAND10=3*33173
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND10=4*15419
+P/~emb=394,573,755,879
+R=./src/alt_max2.vo|1084
+
+[NAND11]
+A/NAND11=22|./src/alt_max2.vo|1121|1*24621
+B/NAND11=3*34399
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND11=4*16257
+P/~emb=425,607,796,923
+R=./src/alt_max2.vo|1121
+
+[NAND12]
+A/NAND12=22|./src/alt_max2.vo|1160|1*25444
+B/NAND12=3*35625
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND12=4*17173
+P/~emb=456,641,836,965
+R=./src/alt_max2.vo|1160
+
+[NAND13]
+A/NAND13=22|./src/alt_max2.vo|1201|1*26283
+B/NAND13=3*36851
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND13=4*18167
+P/~emb=487,675,878,1011
+R=./src/alt_max2.vo|1201
+
+[NAND14]
+A/NAND14=22|./src/alt_max2.vo|1244|1*27138
+B/NAND14=3*38077
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND14=4*19240
+P/~emb=518,709,918,1054
+R=./src/alt_max2.vo|1244
+
+[NAND15]
+A/NAND15=22|./src/alt_max2.vo|1289|1*28009
+B/NAND15=3*39303
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND15=4*20391
+P/~emb=549,743,960,1097
+R=./src/alt_max2.vo|1289
+
+[NAND16]
+A/NAND16=22|./src/alt_max2.vo|1336|1*28880
+B/NAND16=3*40529
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND16=4*21620
+P/~emb=580,777,1002,1142
+R=./src/alt_max2.vo|1336
+
+[NAND2]
+A/NAND2=22|./src/alt_max2.vo|860|1*17750
+B/NAND2=3*23373
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND2=4*11531
+P/~emb=158,311,437,536
+R=./src/alt_max2.vo|860
+
+[NAND3]
+A/NAND3=22|./src/alt_max2.vo|881|1*18460
+B/NAND3=3*24598
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND3=4*11748
+P/~emb=187,343,476,579
+R=./src/alt_max2.vo|881
+
+[NAND4]
+A/NAND4=22|./src/alt_max2.vo|904|1*19186
+B/NAND4=3*25823
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND4=4*12041
+P/~emb=216,375,514,619
+R=./src/alt_max2.vo|904
+
+[NAND5]
+A/NAND5=22|./src/alt_max2.vo|929|1*19928
+B/NAND5=3*27048
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND5=4*12410
+P/~emb=245,407,554,663
+R=./src/alt_max2.vo|929
+
+[NAND6]
+A/NAND6=22|./src/alt_max2.vo|956|1*20686
+B/NAND6=3*28273
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND6=4*12855
+P/~emb=274,439,592,704
+R=./src/alt_max2.vo|956
+
+[NAND7]
+A/NAND7=22|./src/alt_max2.vo|985|1*21444
+B/NAND7=3*29498
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND7=4*13376
+P/~emb=303,471,632,745
+R=./src/alt_max2.vo|985
+
+[NAND8]
+A/NAND8=22|./src/alt_max2.vo|1016|1*22218
+B/NAND8=3*30723
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND8=4*13980
+P/~emb=332,503,672,788
+R=./src/alt_max2.vo|1016
+
+[NAND9]
+A/NAND9=22|./src/alt_max2.vo|1049|1*23008
+B/NAND9=3*31948
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NAND9=4*14661
+P/~emb=361,535,710,831
+R=./src/alt_max2.vo|1049
+
+[NOR1]
+A/NOR1=22|./src/alt_max2.vo|1929|1*42414
+B/NOR1=3*61330
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR1=4*34421
+P/~emb=127,277,394,488
+R=./src/alt_max2.vo|1929
+
+[NOR10]
+A/NOR10=22|./src/alt_max2.vo|2172|1*49163
+B/NOR10=3*72346
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR10=4*38453
+P/~emb=392,570,752,876
+R=./src/alt_max2.vo|2172
+
+[NOR11]
+A/NOR11=22|./src/alt_max2.vo|2209|1*49969
+B/NOR11=3*73571
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR11=4*39289
+P/~emb=423,604,793,920
+R=./src/alt_max2.vo|2209
+
+[NOR12]
+A/NOR12=22|./src/alt_max2.vo|2248|1*50791
+B/NOR12=3*74796
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR12=4*40203
+P/~emb=454,638,833,962
+R=./src/alt_max2.vo|2248
+
+[NOR13]
+A/NOR13=22|./src/alt_max2.vo|2289|1*51629
+B/NOR13=3*76021
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR13=4*41195
+P/~emb=485,672,875,1008
+R=./src/alt_max2.vo|2289
+
+[NOR14]
+A/NOR14=22|./src/alt_max2.vo|2332|1*52483
+B/NOR14=3*77246
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR14=4*42266
+P/~emb=516,706,915,1051
+R=./src/alt_max2.vo|2332
+
+[NOR15]
+A/NOR15=22|./src/alt_max2.vo|2377|1*53337
+B/NOR15=3*78471
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR15=4*43415
+P/~emb=547,740,957,1094
+R=./src/alt_max2.vo|2377
+
+[NOR16]
+A/NOR16=22|./src/alt_max2.vo|2424|1*54207
+B/NOR16=3*79696
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR16=4*44642
+P/~emb=578,774,999,1139
+R=./src/alt_max2.vo|2424
+
+[NOR2]
+A/NOR2=22|./src/alt_max2.vo|1948|1*43107
+B/NOR2=3*62554
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR2=4*34561
+P/~emb=156,308,434,533
+R=./src/alt_max2.vo|1948
+
+[NOR3]
+A/NOR3=22|./src/alt_max2.vo|1969|1*43816
+B/NOR3=3*63778
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR3=4*34778
+P/~emb=185,340,473,576
+R=./src/alt_max2.vo|1969
+
+[NOR4]
+A/NOR4=22|./src/alt_max2.vo|1992|1*44541
+B/NOR4=3*65002
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR4=4*35072
+P/~emb=214,372,511,616
+R=./src/alt_max2.vo|1992
+
+[NOR5]
+A/NOR5=22|./src/alt_max2.vo|2017|1*45282
+B/NOR5=3*66226
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR5=4*35443
+P/~emb=243,404,551,660
+R=./src/alt_max2.vo|2017
+
+[NOR6]
+A/NOR6=22|./src/alt_max2.vo|2044|1*46039
+B/NOR6=3*67450
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR6=4*35891
+P/~emb=272,436,589,701
+R=./src/alt_max2.vo|2044
+
+[NOR7]
+A/NOR7=22|./src/alt_max2.vo|2073|1*46796
+B/NOR7=3*68674
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR7=4*36416
+P/~emb=301,468,629,742
+R=./src/alt_max2.vo|2073
+
+[NOR8]
+A/NOR8=22|./src/alt_max2.vo|2104|1*47569
+B/NOR8=3*69898
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR8=4*37018
+P/~emb=330,500,669,785
+R=./src/alt_max2.vo|2104
+
+[NOR9]
+A/NOR9=22|./src/alt_max2.vo|2137|1*48358
+B/NOR9=3*71122
+C=8.2.1986.SP1.35.3497  (Windows)
+D/NOR9=4*37697
+P/~emb=359,532,707,828
+R=./src/alt_max2.vo|2137
+
+[OR1]
+A/OR1=22|./src/alt_max2.vo|1385|1*29767
+B/OR1=3*41755
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR1=4*22927
+P/~emb=125,272,389,483
+R=./src/alt_max2.vo|1385
+
+[OR10]
+A/OR10=22|./src/alt_max2.vo|1628|1*36491
+B/OR10=3*52762
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR10=4*26941
+P/~emb=390,569,751,874
+R=./src/alt_max2.vo|1628
+
+[OR11]
+A/OR11=22|./src/alt_max2.vo|1665|1*37296
+B/OR11=3*53986
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR11=4*27775
+P/~emb=421,604,793,919
+R=./src/alt_max2.vo|1665
+
+[OR12]
+A/OR12=22|./src/alt_max2.vo|1704|1*38117
+B/OR12=3*55210
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR12=4*28687
+P/~emb=452,638,833,961
+R=./src/alt_max2.vo|1704
+
+[OR13]
+A/OR13=22|./src/alt_max2.vo|1745|1*38954
+B/OR13=3*56434
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR13=4*29677
+P/~emb=483,672,875,1007
+R=./src/alt_max2.vo|1745
+
+[OR14]
+A/OR14=22|./src/alt_max2.vo|1788|1*39807
+B/OR14=3*57658
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR14=4*30746
+P/~emb=514,706,915,1051
+R=./src/alt_max2.vo|1788
+
+[OR15]
+A/OR15=22|./src/alt_max2.vo|1833|1*40660
+B/OR15=3*58882
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR15=4*31893
+P/~emb=545,740,957,1093
+R=./src/alt_max2.vo|1833
+
+[OR16]
+A/OR16=22|./src/alt_max2.vo|1880|1*41529
+B/OR16=3*60106
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR16=4*33118
+P/~emb=576,774,999,1138
+R=./src/alt_max2.vo|1880
+
+[OR2]
+A/OR2=22|./src/alt_max2.vo|1404|1*30459
+B/OR2=3*42978
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR2=4*23065
+P/~emb=154,304,430,528
+R=./src/alt_max2.vo|1404
+
+[OR3]
+A/OR3=22|./src/alt_max2.vo|1425|1*31167
+B/OR3=3*44201
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR3=4*23280
+P/~emb=183,336,469,571
+R=./src/alt_max2.vo|1425
+
+[OR4]
+A/OR4=22|./src/alt_max2.vo|1448|1*31891
+B/OR4=3*45424
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR4=4*23572
+P/~emb=212,368,507,611
+R=./src/alt_max2.vo|1448
+
+[OR5]
+A/OR5=22|./src/alt_max2.vo|1473|1*32631
+B/OR5=3*46647
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR5=4*23941
+P/~emb=241,400,547,655
+R=./src/alt_max2.vo|1473
+
+[OR6]
+A/OR6=22|./src/alt_max2.vo|1500|1*33387
+B/OR6=3*47870
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR6=4*24387
+P/~emb=270,432,585,696
+R=./src/alt_max2.vo|1500
+
+[OR7]
+A/OR7=22|./src/alt_max2.vo|1529|1*34143
+B/OR7=3*49093
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR7=4*24910
+P/~emb=299,464,625,738
+R=./src/alt_max2.vo|1529
+
+[OR8]
+A/OR8=22|./src/alt_max2.vo|1560|1*34915
+B/OR8=3*50316
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR8=4*25510
+P/~emb=328,496,665,780
+R=./src/alt_max2.vo|1560
+
+[OR9]
+A/OR9=22|./src/alt_max2.vo|1593|1*35703
+B/OR9=3*51539
+C=8.2.1986.SP1.35.3497  (Windows)
+D/OR9=4*26187
+P/~emb=357,528,703,823
+R=./src/alt_max2.vo|1593
+
+[PRIM_DFF]
+A/PRIM_DFF=22|./src/alt_max2.vo|30|1*870
+B/PRIM_DFF=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=196,371,758,792
+R=./src/alt_max2.vo|30
+
+[PRIM_DFF1]
+A/PRIM_DFF1=22|./src/alt_max2.vo|91|1*1599
+B/PRIM_DFF1=3*711
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=198,374,761,795
+R=./src/alt_max2.vo|91
+
+[PRIM_DFFE]
+A/PRIM_DFFE=22|./src/alt_max2.vo|152|1*2329
+B/PRIM_DFFE=3*1275
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=235,420,854,888
+R=./src/alt_max2.vo|152
+
+[PRIM_DFFE1]
+A/PRIM_DFFE1=22|./src/alt_max2.vo|216|1*3075
+B/PRIM_DFFE1=3*1839
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=237,423,857,891
+R=./src/alt_max2.vo|216
+
+[PRIM_LATCH]
+A/PRIM_LATCH=22|./src/alt_max2.vo|280|1*3822
+B/PRIM_LATCH=3*2404
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=148,300,434,468
+R=./src/alt_max2.vo|280
+
+[RISEFALL]
+A/RISEFALL=22|./src/alt_max2.vo|2724|1*62834
+B/RISEFALL=3*89244
+C=8.2.1986.SP1.35.3497  (Windows)
+D/RISEFALL=4*50831
+P/~emb=117,282,385,474
+R=./src/alt_max2.vo|2724
+
+[TRIBUF]
+A/TRIBUF=22|./src/alt_max2.vo|2688|1*61525
+B/TRIBUF=3*88619
+C=8.2.1986.SP1.35.3497  (Windows)
+D/TRIBUF=4*50023
+P/~emb=140,309,420,513
+R=./src/alt_max2.vo|2688
+
+[XNOR2]
+A/XNOR2=22|./src/alt_max2.vo|2494|1*55802
+B/XNOR2=3*82145
+C=8.2.1986.SP1.35.3497  (Windows)
+D/XNOR2=4*46164
+P/~emb=158,311,437,536
+R=./src/alt_max2.vo|2494
+
+[XOR2]
+A/XOR2=22|./src/alt_max2.vo|2473|1*55093
+B/XOR2=3*80921
+C=8.2.1986.SP1.35.3497  (Windows)
+D/XOR2=4*45947
+P/~emb=156,308,434,533
+R=./src/alt_max2.vo|2473
+
+[dpram_segment]
+A/dpram_segment=22|./src/alt_max2.vo|2794|1*64343
+B/dpram_segment=3*99559
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=394,632,915,1070
+R=./src/alt_max2.vo|2794
+
+[ram_segment]
+A/ram_segment=22|./src/alt_max2.vo|2739|1*63419
+B/ram_segment=3*89395
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=338,588,859,1007
+R=./src/alt_max2.vo|2739
+
+[rom_segment]
+A/rom_segment=22|./src/alt_max2.vo|2845|1*65269
+B/rom_segment=3*108308
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=281,490,725,831
+R=./src/alt_max2.vo|2845
+
+[~A]
+Comment=ALTERA MAX+plus II 10.2, VERILOG LIBRARY FOR TIMING DESIGNS
+LastVerilogToplevel=CLKLOCK
+ModifyID=760
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/alt_max2.vo=0*52889*59361
+
+[~MFT]
+0=87|0ovi_altera_vtl.mgf|59361|0
+1=85|1ovi_altera_vtl.mgf|66097|0
+3=85|3ovi_altera_vtl.mgf|111799|0
+4=75|4ovi_altera_vtl.mgf|50831|0
+
+[~U]
+$root=12|0*0|
+AND1=12|0*3817||0x90
+AND10=12|0*8550||0x90
+AND11=12|0*9180||0x90
+AND12=12|0*9826||0x90
+AND13=12|0*10488||0x90
+AND14=12|0*11166||0x90
+AND15=12|0*11860||0x90
+AND16=12|0*12570||0x90
+AND2=12|0*4254||0x90
+AND3=12|0*4723||0x90
+AND4=12|0*5208||0x90
+AND5=12|0*5725||0x90
+AND6=12|0*6258||0x90
+AND7=12|0*6807||0x90
+AND8=12|0*7372||0x90
+AND9=12|0*7953||0x90
+CLKLOCK=12|0*51217||0x90
+DELAY=12|0*42976||0x90
+DFF=12|0*43850||0x90
+DFF1=12|0*44526||0x90
+DFFE=12|0*45219||0x90
+DFFE1=12|0*45960||0x90
+FILTER=12|0*46702||0x90
+INV=12|0*43414||0x90
+LATCH=12|0*47660||0x90
+NAND1=12|0*13296||0x90
+NAND10=12|0*18102||0x90
+NAND11=12|0*18733||0x90
+NAND12=12|0*19380||0x90
+NAND13=12|0*20059||0x90
+NAND14=12|0*20738||0x90
+NAND15=12|0*21433||0x90
+NAND16=12|0*22144||0x90
+NAND2=12|0*13734||0x90
+NAND3=12|0*14204||0x90
+NAND4=12|0*14706||0x90
+NAND5=12|0*15224||0x90
+NAND6=12|0*15758||0x90
+NAND7=12|0*16308||0x90
+NAND8=12|0*16890||0x90
+NAND9=12|0*17488||0x90
+NOR1=12|0*32462||0x90
+NOR10=12|0*37259||0x90
+NOR11=12|0*37889||0x90
+NOR12=12|0*38535||0x90
+NOR13=12|0*39213||0x90
+NOR14=12|0*39891||0x90
+NOR15=12|0*40585||0x90
+NOR16=12|0*41295||0x90
+NOR2=12|0*32899||0x90
+NOR3=12|0*33368||0x90
+NOR4=12|0*33869||0x90
+NOR5=12|0*34386||0x90
+NOR6=12|0*34919||0x90
+NOR7=12|0*35468||0x90
+NOR8=12|0*36049||0x90
+NOR9=12|0*36646||0x90
+OR1=12|0*22871||0x90
+OR10=12|0*27675||0x90
+OR11=12|0*28304||0x90
+OR12=12|0*28965||0x90
+OR13=12|0*29642||0x90
+OR14=12|0*30335||0x90
+OR15=12|0*31028||0x90
+OR16=12|0*31737||0x90
+OR2=12|0*23307||0x90
+OR3=12|0*23775||0x90
+OR4=12|0*24275||0x90
+OR5=12|0*24791||0x90
+OR6=12|0*25323||0x90
+OR7=12|0*25887||0x90
+OR8=12|0*26467||0x90
+OR9=12|0*27063||0x90
+PRIM_DFF=12|0*534||0xa0
+PRIM_DFF1=12|0*1215||0xa0
+PRIM_DFFE=12|0*1897||0xa0
+PRIM_DFFE1=12|0*2643||0xa0
+PRIM_LATCH=12|0*3390||0xa0
+RISEFALL=12|0*48242||0x90
+TRIBUF=12|0*47157||0x90
+XNOR2=12|0*42506||0x90
+XOR2=12|0*42037||0x90
+dpram_segment=12|0*49623||0x90
+ram_segment=12|0*48683||0x90
+rom_segment=12|0*50549||0x90
+

@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_led
+Category=DRIVER
+System=False
+Description=LED Controller driver
+PublicDir=platform\fpga\drivers\led\include
+

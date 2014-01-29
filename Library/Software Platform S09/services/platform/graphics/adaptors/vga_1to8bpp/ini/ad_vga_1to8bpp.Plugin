@@ -1,0 +1,12 @@
+[Plugin]
+Name=ad_vga_1to8bpp
+Description=Adapts VGA 1/2/4/8 bpp graphics driver to graphics services
+SourceDir=services\platform\graphics\adaptors\vga_1to8bpp\src
+Implement=ad_graphics
+InitHandler=ad_vga_1to8bpp_init
+InitHandlerPriority=16
+CompileOption0=-I"$(SSASROOT)\services\platform\graphics\internal"
+
+[Instance]
+Require0=drv_vga_1to8bpp
+

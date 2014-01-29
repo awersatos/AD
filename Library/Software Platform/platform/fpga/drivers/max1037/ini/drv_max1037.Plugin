@@ -1,0 +1,79 @@
+[Plugin]
+Name=drv_max1037
+Description=MAX1037 A/D Converter Driver
+Caption=MAX1037 ADC Driver
+SourceDir=platform\fpga\drivers\max1037\src
+PrivateDir=platform\fpga\drivers\max1037\internal
+Implement=drv_max1037
+Bitmap=drv_max1037.bmp
+
+[Available_If0]
+Kind=PLUGIN
+Object=drv_i2cm
+Condition=EQ
+
+[Instance]
+Require0=drv_i2cm
+
+[Instance_Option0]
+Name=USE_MUTEX
+GUIName=Mutltithread safe
+Description=Use locking to make driver multithread safe
+Kind=BOOLEAN
+AutoValue=False
+
+[Instance_Option0_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option0_Available_If1]
+Kind=False
+
+[Instance_Option1]
+; Bus sharing: enable if you have more than one device connected to the bus and want the driver to lock the I2C bus in between I2C calls
+Name=bus_sharing
+GUIName=Bus sharing
+Description=Set if you want the driver to handle bus sharing
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option2]
+Name=setupbyte
+GUIName=Setup register
+Description=Contents of the setup byte
+Kind=BITMASK8
+Type=UINT8
+BitName2=BIP/nUNI
+BitDescription2=0: unipolair, 1: bipolair
+BitName3=CLK
+BitDescription3=0: Internal clock, 1: external clock
+BitName4=SEL0
+BitDescription4=See chip documentation
+BitName5=SEL1
+BitDescription5=See chip documentation
+BitName6=SEL2
+BitDescription6=See chip documentation
+DefaultValue=0x81
+
+[Instance_Option3]
+Name=configbyte
+GUIName=Configuration register
+Description=Contents of the configuration byte
+Kind=BITMASK8
+Type=UINT8
+BitName0=SGL/nDIF
+BitDescription0=1: single ended, 0: pseudo differential
+BitName1=CS0
+BitDescription1=Channel select 0
+BitName2=CS1
+BitDescription2=Channel select 1
+BitName3=CS2
+BitDescription3=Channel select 2
+BitName4=CS3
+BitDescription4=Channel select 3
+BitName5=SCAN0
+BitDescription5=Scan select 0
+BitName6=SCAN1
+BitDescription6=Scan select 1
+DefaultValue=0x61

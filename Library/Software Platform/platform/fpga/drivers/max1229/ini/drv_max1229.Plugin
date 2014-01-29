@@ -1,0 +1,97 @@
+[Plugin]
+Name=drv_max1229
+Description=MAX1229 12x12 ADC Driver
+Caption=MAX1229 12x12 ADC Driver
+SourceDir=platform\fpga\drivers\max1229\src
+Implement=drv_max1229
+Bitmap=drv_max1229.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=drv_spi
+Condition=EQ
+
+[Instance]
+Require0=drv_spi
+
+[Instance_Option0]
+Name=bus_sharing
+GUIName=SPI bus sharing
+Description=Handle multidrop SPI bus sharing at driver level
+Kind=BOOLEAN
+DefaultValue=True
+Auto=False
+
+[Instance_Option1]
+Name=channel
+GUIName=SPI channel
+Description=SPI channel number for this device. This should be 17(0x11) or 18(0x12) when using NanoBoard SPI multiplexer
+Kind=UINT8
+MinRange=1
+DefaultValue=17
+Auto=False
+
+[Instance_Option1_Available_If0]
+Kind=OPTION
+Object=bus_sharing
+Condition=EQ
+Value=True
+
+[Instance_Option2]
+Name=multithread_safe
+GUIName=Mutltithread safe
+Description=Use locking to make driver multithread safe
+Kind=BOOLEAN
+DefaultValue=False
+Auto=False
+
+[Instance_Option2_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option2_Available_If1]
+Kind=False
+
+[Instance_Option3]
+Name=wait_mode
+GUIName=Wait mode
+Description=Activity while waiting on SPI bus to become available
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+DefaultValue=NOP
+
+[Instance_Option3_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option3_Available_If1]
+Kind=OPTION
+Object=bus_sharing
+Condition=EQ
+Value=True
+
+[Instance_Option4]
+Name=wait_sleepms
+GUIName=Wait sleep duration
+Kind=INT
+Description=Sleep duration if thread has to wait and Wait mode is SLEEP
+DefaultValue=100
+
+[Instance_Option4_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option4_Available_If1]
+Kind=OPTION
+Object=bus_sharing
+Condition=EQ
+Value=True
+

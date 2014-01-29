@@ -1,0 +1,53 @@
+[Plugin]
+Name=drv_adc084s021
+Description=ADC084S021 4 Channel, 50 ksps to 200 Ksps, 8-Bit A/D Converter
+Caption=ADC084S021 ADC Driver
+SourceDir=platform\fpga\drivers\adc084s021\src
+InitHandlerPriority=8
+Implement=drv_adc084s021
+MinInstances=1
+Bitmap=drv_adc084s021.bmp
+
+[Available_If0]
+Kind=PLUGIN
+Object=drv_spi
+Condition=EQ
+
+[Instance]
+Require0=drv_spi
+
+[Instance_Option0]
+Name=dummy1
+Kind=INT32
+AutoValue=1
+
+[Instance_Option1]
+Name=bus_sharing
+GUIName=SPI bus sharing
+Description=Handle NanoBoard SPI bus sharing
+Kind=BOOLEAN
+DefaultValue=False
+Auto=False
+
+[Instance_Option2]
+Name=spi_channel
+GUIName=SPI Channel
+Kind=UINT8
+Description=SPI channel number for this device. Only used when SPI bus is shared
+DefaultValue=1
+MinRange=1
+Auto=False
+
+[Instance_Option0_AutoSet0]
+Interface=drv_spi
+Option=spimode
+AutoValue=MODE3
+
+[Instance_Option0_Hide_If0]
+Kind=True
+
+[Instance_Option2_Hide_If0]
+Kind=OPTION
+Object=bus_sharing
+Condition=EQ
+Value=False

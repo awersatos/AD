@@ -1,0 +1,27 @@
+[Plugin]
+Name=per_ps2
+Caption=PS/2 Controller
+Description=Bidirectional, synchronous serial interface to a PS/2 device (keyboard or mouse).
+Bitmap=per_ps2.bmp
+LargeBitmap=per_ps2_large.bmp
+Implement=per_ps2
+HardwareID=PS2_W
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=Hardware base address
+Kind=POINTER
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+Description=Interrupt number for the PS/2 controller.
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

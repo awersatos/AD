@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_sdhc" description="SD Host Controller">
+		<sfr name="CDIV"            offset="0"  size="32"   description="Clock Divisor Register">
+            <bitfield name="CLOCKDIV" start="9" end="0" description="Clock divisor"/>
+        </sfr>
+		<sfr name="CTRL"            offset="4"  size="32"   description="Control Register">
+			<bitfield name="SETMASK"	start="31" end="31" access="w" description="Set Bits Only Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Set mask"/>
+			</bitfield>
+			<bitfield name="RSTMASK"	start="30" end="30" access="w" description="Reset Bits Only Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Reset mask"/>
+			</bitfield>
+			<bitfield name="DMA_ENDIANESS"	start="5" end="5" access="rw" description="DMA Endianess Bit">
+				<value value="0" description="Big"/>
+				<value value="1" description="Little"/>
+			</bitfield>
+			<bitfield name="DAT_RXENABLE"	start="4" end="4" access="rw" description="Data Receiver Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DAT_TXENABLE"	start="3" end="3" access="rw" description="Data Transmit Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="CMD_RXENABLE"	start="2" end="2" access="rw" description="Cmd Receive Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="CMD_TXENABLE"	start="1" end="1" access="rw" description="Cmd Transmit Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="RESET"	start="0" end="0" access="w" description="Core Reset Bit">
+				<value value="0" description="Run"/>
+				<value value="1" description="Reset"/>
+			</bitfield>
+        </sfr>
+		<sfr name="STAT"            offset="8"  size="32"   description="Status Register">
+			<bitfield name="DAT_READY"	start="16" end="16" access="r" description="Data Receiver Ready Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DAT_CRCERR"	start="15" end="15" access="r" description="Data Receiver CRC Error Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DAT_TIMEOUT"	start="14" end="14" access="r" description="Data Receiver Underrun Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DAT_RXBUSY"	start="13" end="13" access="r" description="Data Receiver Busy Bit">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="DAT_RXENABLE"	start="12" end="12" access="r" description="Data Receiver Enabled Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DAT_TXBUSY"	start="11" end="11" access="r" description="Data Transmitter Busy Bit">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="DAT_TXENABLE"	start="10" end="10" access="r" description="Data Transmitter Enabled Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="CMD_CRCERR"	start="9" end="9" access="r" description="Cmd Receiver CRC Error Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="CMD_RXEMPTY"	start="8" end="8" access="r" description="Cmd Receiver FIFO Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="CMD_RXFULL"	start="7" end="7" access="r" description="Cmd Receiver FIFO Full Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="CMD_RXBUSY"	start="6" end="6" access="r" description="Cmd Receiver Busy Bit">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="CMD_RXENABLE"	start="5" end="5" access="r" description="Cmd Receiver Enabled Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="CMD_TXBUSY"	start="4" end="4" access="r" description="Cmd Transmitter Busy Bit">
+				<value value="0" description="Ready"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+			<bitfield name="CMD_TXENABLE"	start="3" end="3" access="r" description="Cmd Transmitter Enabled Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="SD_REMOVED"	start="2" end="2" access="h" description="SD Card removed">
+				<value value="0" description="Card available"/>
+				<value value="1" description="Card has been removed"/>
+			</bitfield>
+			<bitfield name="SD_PROTECT"	start="1" end="1" access="h" description="SD Protect Pin Bit">
+				<value value="0" description="Writeable"/>
+				<value value="1" description="Write protected"/>
+			</bitfield>
+			<bitfield name="SD_DETECT"	start="0" end="0" access="h" description="SD Detect Pin Bit">
+				<value value="0" description="No card"/>
+				<value value="1" description="Card detected"/>
+			</bitfield>
+        </sfr>
+		<sfr name="CMD_TXCMD"       offset="12" size="32"    description="Cmd Transmitter Command Register"/>
+		<sfr name="CMD_TXARG"       offset="16" size="32"   description="Cmd Transmitter Argument Register"/>
+		<sfr name="CMD_RXSIZE"      offset="20" size="32"   description="Cmd Receiver Size Register"/>
+		<sfr name="CMD_RXFIFO"      offset="24" size="32"   description="Cmd Receiver Data Register"/>
+		<sfr name="DAT_BLKSIZE"     offset="28" size="32"   description="Data Block Size"/>
+		<sfr name="DAT_MEMSIZE"     offset="32" size="32"   description="Data Size"/>
+		<sfr name="DAT_MEMADR"      offset="36" size="32"   description="Data DMA Address"/>
+		<sfr name="VERSION_INFO"    offset="60" size="32"   description="Version Identifier And Configuration Information">
+            <bitfield name="COREVERSION" start="31" end="24" access="r" description="Core version identifier"/>
+            <bitfield name="CMDRFIFOSIZE" start="15" end="8" access="r" description="Command receiver FIFO size"/>
+            <bitfield name="MEMADRSIZE" start="7" end="0" access="r" description="Size of memory address bus"/>
+        </sfr>
+	</group>
+</sfrfile>
+

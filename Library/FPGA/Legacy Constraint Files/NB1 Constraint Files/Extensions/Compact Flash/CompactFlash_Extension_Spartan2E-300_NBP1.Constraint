@@ -1,0 +1,64 @@
+;...............................................................................
+;Constraints File
+;   NBP Device    : NBP1 Xilinx Spartan IIe XC2S300E-6PQ208C
+;   NB1 Extension : Burch B5-Compact-Flash
+;   Project       : Any
+;
+;   Created 13-January-2005
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB  | TargetId=Burch B5-Compact-Flash
+;...............................................................................
+
+;...............................................................................
+; Burch Style 20-Pin Headers
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=RESET                | FPGA_PINNUM=P49
+Record=Constraint | TargetKind=Port | TargetId=IORDY                | FPGA_PINNUM=P48
+Record=Constraint | TargetKind=Port | TargetId=DASP                 | FPGA_PINNUM=P47
+Record=Constraint | TargetKind=Port | TargetId=PDIAG                | FPGA_PINNUM=P46
+Record=Constraint | TargetKind=Port | TargetId=IOCS16               | FPGA_PINNUM=P42
+Record=Constraint | TargetKind=Port | TargetId=CS0                  | FPGA_PINNUM=P24
+Record=Constraint | TargetKind=Port | TargetId=CardPresent          | FPGA_PINNUM=P125
+Record=Constraint | TargetKind=Port | TargetId=CS1                  | FPGA_PINNUM=P115
+Record=Constraint | TargetKind=Port | TargetId=IORD                 | FPGA_PINNUM=P114
+Record=Constraint | TargetKind=Port | TargetId=IOWR                 | FPGA_PINNUM=P113
+Record=Constraint | TargetKind=Port | TargetId=INTRQ                | FPGA_PINNUM=P112
+Record=Constraint | TargetKind=Port | TargetId=D[15..0]             | FPGA_PINNUM=P116,P120,P121,P122,P123,P43,P44,P45,P23,P22,P21,P127,P126,P41,P40,P36
+Record=Constraint | TargetKind=Port | TargetId=A[2..0]              | FPGA_PINNUM=P33,P34,P35
+;...............................................................................
+                                                                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

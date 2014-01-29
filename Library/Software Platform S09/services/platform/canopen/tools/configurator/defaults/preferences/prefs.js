@@ -1,0 +1,1 @@
+pref("toolkit.defaultChromeURI", "chrome://odeditor/content/device.xul");

@@ -1,0 +1,35 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=arriagx_hssi
+
+[Library]
+arriagx_hssi=.\arriagx_hssi.LIB
+
+[$LibMap$]
+arriagx_hssi=.
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[Files]
+/update_arriagx_hssi.do=-1
+/arriagx_hssi_atoms.vhd=-1
+/arriagx_hssi_components.vhd=-1
+
+[Files.Data]
+.\src\update_arriagx_hssi.do=Macro
+.\src\arriagx_hssi_atoms.vhd=VHDL Source Code
+.\src\arriagx_hssi_components.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

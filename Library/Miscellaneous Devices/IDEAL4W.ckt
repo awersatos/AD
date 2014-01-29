@@ -1,0 +1,23 @@
+*Ideal Transformer Subcircuit Parameters
+*RATIO1 = turns ratio (= secondary1/primary)
+*RATIO2 = turns ratio (= secondary2/primary)
+*RATIO3 = turns ratio (= secondary3/primary)
+*
+*Ideal Transformer with four windings
+*dw 18/12/00: created
+*Connections:
+*               Pri+
+*               | Pri-
+*               | | Sec1+
+*               | | | Sec1-
+*               | | | | Sec2+
+*               | | | | | Sec2-
+*               | | | | | | Sec3+
+*               | | | | | | | Sec3-
+*               | | | | | | | |
+.SUBCKT IDEAL4W 1 2 3 4 5 6 7 8 PARAMS: RATIO1=1 RATIO2=1 RATIO3=1
+BP  1 2 I=( -I(BS1)*{RATIO1} - I(BS2)*{RATIO2} - I(BS3)*{RATIO3} )
+BS1 3 4 V=( V(1,2)*{RATIO1} )
+BS2 5 6 V=( V(1,2)*{RATIO2} )
+BS3 7 8 V=( V(1,2)*{RATIO3} )
+.ENDS IDEAL4W

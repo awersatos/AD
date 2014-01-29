@@ -1,0 +1,14 @@
+[Interface]
+Name=bsd_system
+Category=SERVICE
+CanBeVisible=False
+Description=BSD System Support
+
+[Available_If0]
+Kind=INTERFACE
+Object=bsd_framework
+Condition=EQ
+
+
+
+

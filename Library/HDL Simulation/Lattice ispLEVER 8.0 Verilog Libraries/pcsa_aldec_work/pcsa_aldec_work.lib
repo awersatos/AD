@@ -1,0 +1,1349 @@
+timestamp=1265381525303
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[AO222S]
+A/AO222S=22|./src/channel_top_files/cor_reset.v|97|1*114705
+B/AO222S=3*1364573
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=246,473,625,827
+R=./src/channel_top_files/cor_reset.v|97
+
+[AO222S_QIF]
+A/AO222S_QIF=22|./src/rtl_files/cor_reset_qif.v|97|1*188403
+B/AO222S_QIF=3*1837560
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=254,480,632,834
+R=./src/rtl_files/cor_reset_qif.v|97
+
+[CDCHK_UDP]
+A/CDCHK_UDP=22|./src/rtl_files/CDCHK_UDP.v|8|1*130991
+B/CDCHK_UDP=3*1448490
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=172,338,482,516
+R=./src/rtl_files/CDCHK_UDP.v|8
+
+[DNEQ_UDP]
+A/DNEQ_UDP=22|./src/rtl_files/DNEQ_UDP.v|8|1*130390
+B/DNEQ_UDP=3*1448339
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=168,329,550,584
+R=./src/rtl_files/DNEQ_UDP.v|8
+
+[NP_UDP]
+A/NP_UDP=22|./src/rtl_files/NP_UDP.v|5|1*131561
+B/NP_UDP=3*1448642
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=141,293,415,449
+R=./src/rtl_files/NP_UDP.v|5
+
+[PC12BBIST]
+A/PC12BBIST=22|./src/channel_top_files/PC12BBIST.v|1071|1*33945
+B/PC12BBIST=3*645393
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=521,1000,1436,1923
+R=./src/channel_top_files/PC12BBIST.v|1071
+
+[PC12BI]
+A/PC12BI=22|./src/channel_top_files/PC12BI.v|284|1*35171
+B/PC12BI=3*646642
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=831,1178,1651,2138
+R=./src/channel_top_files/PC12BI.v|284
+
+[PC12BI_AMUX]
+A/PC12BI_AMUX=22|./src/channel_top_files/PC12BI.v|21|1*44365
+B/PC12BI_AMUX=3*733021
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=342,581,833,970
+R=./src/channel_top_files/PC12BI.v|21
+
+[PC12BI_CMUX]
+A/PC12BI_CMUX=22|./src/channel_top_files/PC12BI.v|91|1*45257
+B/PC12BI_CMUX=3*746317
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=428,656,926,1081
+R=./src/channel_top_files/PC12BI.v|91
+
+[PC12BI_DMUX]
+A/PC12BI_DMUX=22|./src/channel_top_files/PC12BI.v|160|1*46117
+B/PC12BI_DMUX=3*750856
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=217,411,609,731
+R=./src/channel_top_files/PC12BI.v|160
+
+[PC12BI_EVAL]
+A/PC12BI_EVAL=22|./src/channel_top_files/PC12BI.v|208|1*46929
+B/PC12BI_EVAL=3*754003
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=234,522,786,929
+R=./src/channel_top_files/PC12BI.v|208
+
+[PC12B_AGEN]
+A/PC12B_AGEN=22|./src/channel_top_files/PC12BBIST.v|854|1*42439
+B/PC12B_AGEN=3*723057
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=409,712,1099,1353
+R=./src/channel_top_files/PC12BBIST.v|854
+
+[PC12B_CNTL]
+A/PC12B_CNTL=22|./src/channel_top_files/PC12BBIST.v|753|1*41276
+B/PC12B_CNTL=3*722504
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=672,1195,1686,2274
+R=./src/channel_top_files/PC12BBIST.v|753
+
+[PC12B_EVAL]
+A/PC12B_EVAL=22|./src/channel_top_files/PC12BBIST.v|984|1*43458
+B/PC12B_EVAL=3*729755
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=358,642,952,1117
+R=./src/channel_top_files/PC12BBIST.v|984
+
+[PC12B_FSMINT]
+A/PC12B_FSMINT=22|./src/channel_top_files/PC12BBIST.v|399|1*39155
+B/PC12B_FSMINT=3*702512
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=839,1207,1693,1896
+R=./src/channel_top_files/PC12BBIST.v|399
+
+[PC12B_MAINFSM]
+A/PC12B_MAINFSM=22|./src/channel_top_files/PC12BBIST.v|26|1*38085
+B/PC12B_MAINFSM=3*678674
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=520,1039,1678,2113
+R=./src/channel_top_files/PC12BBIST.v|26
+
+[PC12B_RTFSM]
+A/PC12B_RTFSM=22|./src/channel_top_files/PC12BBIST.v|514|1*40272
+B/PC12B_RTFSM=3*709444
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=480,876,1393,1725
+R=./src/channel_top_files/PC12BBIST.v|514
+
+[PC16BBIST]
+A/PC16BBIST=22|./src/rtl_files/PC16BBIST.v|1071|1*170302
+B/PC16BBIST=3*1692765
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=521,991,1427,1914
+R=./src/rtl_files/PC16BBIST.v|1071
+
+[PC16BI]
+A/PC16BI=22|./src/rtl_files/PC16BI.v|281|1*175128
+B/PC16BI=3*1728620
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=831,1169,1640,2127
+R=./src/rtl_files/PC16BI.v|281
+
+[PC16BI_AMUX]
+A/PC16BI_AMUX=22|./src/rtl_files/PC16BI.v|21|1*171512
+B/PC16BI_AMUX=3*1694014
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=342,573,826,963
+R=./src/rtl_files/PC16BI.v|21
+
+[PC16BI_CMUX]
+A/PC16BI_CMUX=22|./src/rtl_files/PC16BI.v|88|1*172404
+B/PC16BI_CMUX=3*1707286
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=428,648,918,1073
+R=./src/rtl_files/PC16BI.v|88
+
+[PC16BI_DMUX]
+A/PC16BI_DMUX=22|./src/rtl_files/PC16BI.v|157|1*173264
+B/PC16BI_DMUX=3*1711729
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=217,403,601,723
+R=./src/rtl_files/PC16BI.v|157
+
+[PC16BI_EVAL]
+A/PC16BI_EVAL=22|./src/rtl_files/PC16BI.v|205|1*174076
+B/PC16BI_EVAL=3*1714924
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=234,526,790,933
+R=./src/rtl_files/PC16BI.v|205
+
+[PC16B_AGEN]
+A/PC16B_AGEN=22|./src/rtl_files/PC16BBIST.v|854|1*168392
+B/PC16B_AGEN=3*1682813
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=409,704,1091,1345
+R=./src/rtl_files/PC16BBIST.v|854
+
+[PC16B_CNTL]
+A/PC16B_CNTL=22|./src/rtl_files/PC16BBIST.v|753|1*167245
+B/PC16B_CNTL=3*1682260
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=672,1187,1678,2266
+R=./src/rtl_files/PC16BBIST.v|753
+
+[PC16B_EVAL]
+A/PC16B_EVAL=22|./src/rtl_files/PC16BBIST.v|984|1*169411
+B/PC16B_EVAL=3*1689499
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=358,634,944,1109
+R=./src/rtl_files/PC16BBIST.v|984
+
+[PC16B_FSMINT]
+A/PC16B_FSMINT=22|./src/rtl_files/PC16BBIST.v|399|1*165140
+B/PC16B_FSMINT=3*1662268
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=839,1199,1685,1888
+R=./src/rtl_files/PC16BBIST.v|399
+
+[PC16B_MAINFSM]
+A/PC16B_MAINFSM=22|./src/rtl_files/PC16BBIST.v|26|1*164070
+B/PC16B_MAINFSM=3*1638490
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=520,1031,1670,2105
+R=./src/rtl_files/PC16BBIST.v|26
+
+[PC16B_RTFSM]
+A/PC16B_RTFSM=22|./src/rtl_files/PC16BBIST.v|514|1*166257
+B/PC16B_RTFSM=3*1669200
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=480,868,1385,1717
+R=./src/rtl_files/PC16BBIST.v|514
+
+[PC64BBIST]
+A/PC64BBIST=22|./src/channel_top_files/PC64BBIST.v|1071|1*79592
+B/PC64BBIST=3*1136933
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=521,999,1435,1922
+R=./src/channel_top_files/PC64BBIST.v|1071
+
+[PC64BI]
+A/PC64BI=22|./src/channel_top_files/PC64BI.v|307|1*80802
+B/PC64BI=3*1138182
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=831,1178,1646,2133
+R=./src/channel_top_files/PC64BI.v|307
+
+[PC64BI_AMUX]
+A/PC64BI_AMUX=22|./src/channel_top_files/PC64BI.v|21|1*90942
+B/PC64BI_AMUX=3*1253293
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=342,581,834,971
+R=./src/channel_top_files/PC64BI.v|21
+
+[PC64BI_CMUX]
+A/PC64BI_CMUX=22|./src/channel_top_files/PC64BI.v|88|1*91850
+B/PC64BI_CMUX=3*1266565
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=428,656,926,1081
+R=./src/channel_top_files/PC64BI.v|88
+
+[PC64BI_DMUX]
+A/PC64BI_DMUX=22|./src/channel_top_files/PC64BI.v|158|1*92726
+B/PC64BI_DMUX=3*1272304
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=217,411,610,732
+R=./src/channel_top_files/PC64BI.v|158
+
+[PC64BI_EVAL]
+A/PC64BI_EVAL=22|./src/channel_top_files/PC64BI.v|207|1*93538
+B/PC64BI_EVAL=3*1276999
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=234,606,879,1025
+R=./src/channel_top_files/PC64BI.v|207
+
+[PC64B_AGEN]
+A/PC64B_AGEN=22|./src/channel_top_files/PC64BBIST.v|854|1*89016
+B/PC64B_AGEN=3*1243341
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=409,712,1099,1353
+R=./src/channel_top_files/PC64BBIST.v|854
+
+[PC64B_CNTL]
+A/PC64B_CNTL=22|./src/channel_top_files/PC64BBIST.v|753|1*87853
+B/PC64B_CNTL=3*1242788
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=672,1195,1686,2274
+R=./src/channel_top_files/PC64BBIST.v|753
+
+[PC64B_EVAL]
+A/PC64B_EVAL=22|./src/channel_top_files/PC64BBIST.v|984|1*90035
+B/PC64B_EVAL=3*1250027
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=358,642,952,1117
+R=./src/channel_top_files/PC64BBIST.v|984
+
+[PC64B_FSMINT]
+A/PC64B_FSMINT=22|./src/channel_top_files/PC64BBIST.v|399|1*85732
+B/PC64B_FSMINT=3*1222796
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=839,1207,1693,1896
+R=./src/channel_top_files/PC64BBIST.v|399
+
+[PC64B_MAINFSM]
+A/PC64B_MAINFSM=22|./src/channel_top_files/PC64BBIST.v|26|1*84662
+B/PC64B_MAINFSM=3*1199018
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=520,1039,1678,2113
+R=./src/channel_top_files/PC64BBIST.v|26
+
+[PC64B_RTFSM]
+A/PC64B_RTFSM=22|./src/channel_top_files/PC64BBIST.v|514|1*86849
+B/PC64B_RTFSM=3*1229728
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=480,876,1393,1725
+R=./src/channel_top_files/PC64BBIST.v|514
+
+[PCSA_sim]
+A/PCSA_sim=22|./src/PCSA_sim.v|6|1*262022
+B/PCSA_sim=3*2306674
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=18450,23830,27686,32778
+R=./src/PCSA_sim.v|6
+
+[POSCDAC_UDP]
+A/POSCDAC_UDP=22|./src/rtl_files/POSCDAC_UDP.v|9|1*129054
+B/POSCDAC_UDP=3*1448031
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=204,388,783,817
+R=./src/rtl_files/POSCDAC_UDP.v|9
+
+[POSFFAC_UDP]
+A/POSFFAC_UDP=22|./src/rtl_files/POSFFAC_UDP.v|9|1*129738
+B/POSFFAC_UDP=3*1448185
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=256,447,746,780
+R=./src/rtl_files/POSFFAC_UDP.v|9
+
+[RS_UDP]
+A/RS_UDP=22|./src/rtl_files/RS_UDP.v|6|1*135046
+B/RS_UDP=3*1449555
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=188,347,524,558
+R=./src/rtl_files/RS_UDP.v|6
+
+[TGM2_UDP]
+A/TGM2_UDP=22|./src/rtl_files/TGM2_UDP.v|6|1*133890
+B/TGM2_UDP=3*1449251
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=172,333,475,509
+R=./src/rtl_files/TGM2_UDP.v|6
+
+[algn_e2p]
+A/algn_e2p=22|./src/rtl_files/algn_e2p.v|46|1*150301
+B/algn_e2p=3*1540835
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=207,409,607,713
+R=./src/rtl_files/algn_e2p.v|46
+
+[algn_fifo]
+A/algn_fifo=22|./src/rtl_files/algn_fifo.v|69|1*151062
+B/algn_fifo=3*1542135
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=967,1559,2261,2907
+R=./src/rtl_files/algn_fifo.v|69
+
+[algn_fifo_read]
+A/algn_fifo_read=22|./src/rtl_files/algn_fifo_read.v|65|1*154735
+B/algn_fifo_read=3*1564433
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=433,810,1179,1361
+R=./src/rtl_files/algn_fifo_read.v|65
+
+[algn_fifo_write]
+A/algn_fifo_write=22|./src/rtl_files/algn_fifo_write.v|68|1*153583
+B/algn_fifo_write=3*1556734
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=492,849,1235,1425
+R=./src/rtl_files/algn_fifo_write.v|68
+
+[algn_ls_if]
+A/algn_ls_if=22|./src/rtl_files/algn_ls_if.v|72|1*162427
+B/algn_ls_if=3*1620451
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1482,1997,2910,3320
+R=./src/rtl_files/algn_ls_if.v|72
+
+[algn_quad]
+A/algn_quad=22|./src/rtl_files/algn_quad.v|76|1*157290
+B/algn_quad=3*1582531
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2109,2778,3541,5091
+R=./src/rtl_files/algn_quad.v|76
+
+[algn_sync]
+A/algn_sync=22|./src/rtl_files/algn_sync.v|72|1*159060
+B/algn_sync=3*1585136
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1160,1814,2758,3583
+R=./src/rtl_files/algn_sync.v|72
+
+[algn_sync_sm]
+A/algn_sync_sm=22|./src/rtl_files/algn_sync_sm.v|57|1*161150
+B/algn_sync_sm=3*1598522
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=573,969,1462,1711
+R=./src/rtl_files/algn_sync_sm.v|57
+
+[aoi222x2v1mce]
+A/aoi222x2v1mce=22|./src/rtl_files/aoi222x2v1mce.v|10|1*115368
+B/aoi222x2v1mce=3*1364722
+C=8.2.1986.SP1.35.3497  (Windows)
+D/aoi222x2v1mce=4*12338
+P/~emb=260,464,604,763
+R=./src/rtl_files/aoi222x2v1mce.v|10
+
+[auto_toh]
+A/auto_toh=22|./src/channel_top_files/auto_toh.v|51|1*59073
+B/auto_toh=3*891658
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1278,2111,3185,4251
+R=./src/channel_top_files/auto_toh.v|51
+
+[b2_aux_ch]
+A/b2_aux_ch=22|./src/rtl_files/b2_serdes_model.v|2058|1*241480
+B/b2_aux_ch=3*2128736
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1511,2553,3851,4454
+R=./src/rtl_files/b2_serdes_model.v|2058
+
+[b2_single_ch_serdes]
+A/b2_single_ch_serdes=22|./src/rtl_files/b2_serdes_model.v|2498|1*244338
+B/b2_single_ch_serdes=3*2189058
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3355,5359,7961,9125
+R=./src/rtl_files/b2_serdes_model.v|2498
+
+[b2bis_chbist_jj]
+A/b2bis_chbist_jj=22|./src/rtl_files/b2_serdes_model.v|3345|1*251351
+B/b2bis_chbist_jj=3*2305537
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=795,1129,1473,1654
+R=./src/rtl_files/b2_serdes_model.v|3345
+
+[b2top_quad]
+A/b2top_quad=22|./src/rtl_files/b2_serdes_model.v|204|1*233803
+B/b2top_quad=3*2061729
+C=8.2.1986.SP1.35.3497  (Windows)
+D/b2top_quad=4*22347
+P/~emb=10764,13835,17466,22788
+R=./src/rtl_files/b2_serdes_model.v|204
+
+[bist_char]
+A/bist_char=22|./src/rtl_files/bist_char.v|71|1*195160
+B/bist_char=3*1896411
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=977,1514,2341,2614
+R=./src/rtl_files/bist_char.v|71
+
+[char_test_logic]
+A/char_test_logic=22|./src/rtl_files/char_test_logic.v|99|1*199562
+B/char_test_logic=3*1928336
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3346,4325,5540,7107
+R=./src/rtl_files/char_test_logic.v|99
+
+[chif]
+A/chif=22|./src/channel_top_files/chif.v|100|1*101358
+B/chif=3*1322691
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3384,4690,6721,8123
+R=./src/channel_top_files/chif.v|100
+
+[chif_counter]
+A/chif_counter=22|./src/channel_top_files/chif_counter.v|16|1*110471
+B/chif_counter=3*1359193
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=284,522,727,849
+R=./src/channel_top_files/chif_counter.v|16
+
+[cor_reset]
+A/cor_reset=22|./src/channel_top_files/cor_reset.v|20|1*111300
+B/cor_reset=3*1361697
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=176,471,760,1023
+R=./src/channel_top_files/cor_reset.v|20
+
+[cor_reset_qif]
+A/cor_reset_qif=22|./src/rtl_files/cor_reset_qif.v|20|1*186755
+B/cor_reset_qif=3*1835139
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=184,482,771,1034
+R=./src/rtl_files/cor_reset_qif.v|20
+
+[counter]
+A/counter=22|./src/channel_top_files/counter.v|23|1*63182
+B/counter=3*938030
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=441,791,1274,1546
+R=./src/channel_top_files/counter.v|23
+
+[crc_rx]
+A/crc_rx=22|./src/channel_top_files/crc_rx.v|88|1*51937
+B/crc_rx=3*790812
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1093,2049,5769,6083
+R=./src/channel_top_files/crc_rx.v|88
+
+[crc_tx]
+A/crc_tx=22|./src/channel_top_files/crc_tx.v|67|1*56282
+B/crc_tx=3*857287
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=523,987,3068,3265
+R=./src/channel_top_files/crc_tx.v|67
+
+[daisy_chain_mux]
+A/daisy_chain_mux=22|./src/rtl_files/sonet_fbrx_resets.v|396|1*139945
+B/daisy_chain_mux=3*1466135
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=552,825,1120,1268
+R=./src/rtl_files/sonet_fbrx_resets.v|396
+
+[del1]
+A/del1=22|./src/rtl_files/qif.v|657|1*182526
+B/del1=3*1817644
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=105,304,464,668
+R=./src/rtl_files/qif.v|657
+
+[del6_pulse]
+A/del6_pulse=22|./src/rtl_files/qif.v|678|1*183139
+B/del6_pulse=3*1817791
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=150,463,674,1031
+R=./src/rtl_files/qif.v|678
+
+[delc0p5x2v1mce]
+A/delc0p5x2v1mce=22|./src/rtl_files/delc0p5x2v1mce.v|11|1*128463
+B/delc0p5x2v1mce=3*1447874
+C=8.2.1986.SP1.35.3497  (Windows)
+D/delc0p5x2v1mce=4*18112
+P/~emb=125,302,405,505
+R=./src/rtl_files/delc0p5x2v1mce.v|11
+
+[delc1x2v1mce]
+A/delc1x2v1mce=22|./src/rtl_files/delc1x2v1mce.v|11|1*114116
+B/delc1x2v1mce=3*1364418
+C=8.2.1986.SP1.35.3497  (Windows)
+D/delc1x2v1mce=4*12125
+P/~emb=121,296,399,499
+R=./src/rtl_files/delc1x2v1mce.v|11
+
+[delc2x2v1mce]
+A/delc2x2v1mce=22|./src/rtl_files/delc2x2v1mce.v|11|1*109295
+B/delc2x2v1mce=3*1358885
+C=8.2.1986.SP1.35.3497  (Windows)
+D/delc2x2v1mce=4*11281
+P/~emb=121,296,399,499
+R=./src/rtl_files/delc2x2v1mce.v|11
+
+[delc3x2v1mce]
+A/delc3x2v1mce=22|./src/rtl_files/delc3x2v1mce.v|11|1*112841
+B/delc3x2v1mce=3*1364107
+C=8.2.1986.SP1.35.3497  (Windows)
+D/delc3x2v1mce=4*11912
+P/~emb=121,296,399,499
+R=./src/rtl_files/delc3x2v1mce.v|11
+
+[dffprqnx4v1mce]
+A/dffprqnx4v1mce=22|./src/rtl_files/dffprqnx4v1mce.v|14|1*107984
+B/dffprqnx4v1mce=3*1356247
+C=8.2.1986.SP1.35.3497  (Windows)
+D/dffprqnx4v1mce=4*9716
+P/~emb=209,525,739,980
+R=./src/rtl_files/dffprqnx4v1mce.v|14
+
+[fb_rf]
+A/fb_rf=22|./src/channel_top_files/fb_rf.v|55|1*390
+B/fb_rf=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=451,694,1078,1249
+R=./src/channel_top_files/fb_rf.v|55
+
+[fb_rx]
+A/fb_rx=22|./src/channel_top_files/fb_rx.v|126|1*1420
+B/fb_rx=3*9245
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=613,1081,1751,2191
+R=./src/channel_top_files/fb_rx.v|126
+
+[fb_tx]
+A/fb_tx=22|./src/channel_top_files/fb_tx.v|100|1*2994
+B/fb_tx=3*17870
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=446,843,1360,1784
+R=./src/channel_top_files/fb_tx.v|100
+
+[fmux_41]
+A/fmux_41=22|./src/rtl_files/sonet_fbrx_resets.v|431|1*139313
+B/fmux_41=3*1464552
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=247,428,614,768
+R=./src/rtl_files/sonet_fbrx_resets.v|431
+
+[glitch_filter]
+A/glitch_filter=22|./src/channel_top_files/cor_reset.v|77|1*113430
+B/glitch_filter=3*1364262
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=123,379,549,758
+R=./src/channel_top_files/cor_reset.v|77
+
+[glitch_filter_qif]
+A/glitch_filter_qif=22|./src/rtl_files/cor_reset_qif.v|77|1*187713
+B/glitch_filter_qif=3*1837400
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=131,389,559,768
+R=./src/rtl_files/cor_reset_qif.v|77
+
+[int_lane]
+A/int_lane=22|./src/channel_top_files/int_lane.v|16|1*106487
+B/int_lane=3*1355492
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1880,2698,3395,4378
+R=./src/channel_top_files/int_lane.v|16
+
+[int_quad]
+A/int_quad=22|./src/rtl_files/int_quad.v|16|1*183902
+B/int_quad=3*1817944
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=956,1447,1854,2379
+R=./src/rtl_files/int_quad.v|16
+
+[int_sub]
+A/int_sub=22|./src/channel_top_files/int_sub.v|16|1*116566
+B/int_sub=3*1380144
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=307,653,1391,2062
+R=./src/channel_top_files/int_sub.v|16
+
+[int_sub_qif]
+A/int_sub_qif=22|./src/rtl_files/int_sub_qif.v|16|1*184967
+B/int_sub_qif=3*1818555
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=315,661,1399,2070
+R=./src/rtl_files/int_sub_qif.v|16
+
+[invx4v1mce]
+A/invx4v1mce=22|./src/rtl_files/invx4v1mce.v|11|1*109884
+B/invx4v1mce=3*1359040
+C=8.2.1986.SP1.35.3497  (Windows)
+D/invx4v1mce=4*11494
+P/~emb=117,288,391,491
+R=./src/rtl_files/invx4v1mce.v|11
+
+[lock_det_model]
+A/lock_det_model=22|./src/rtl_files/b2_serdes_model.v|3391|1*249880
+B/lock_det_model=3*2284638
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=294,865,1431,1724
+R=./src/rtl_files/b2_serdes_model.v|3391
+
+[mpi_pulse]
+A/mpi_pulse=22|./src/channel_top_files/chif.v|550|1*105821
+B/mpi_pulse=3*1355340
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=162,437,597,801
+R=./src/channel_top_files/chif.v|550
+
+[mpi_pulse_qif]
+A/mpi_pulse_qif=22|./src/rtl_files/qif.v|715|1*181888
+B/mpi_pulse_qif=3*1817488
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=170,416,561,739
+R=./src/rtl_files/qif.v|715
+
+[mux21x4v1mce]
+A/mux21x4v1mce=22|./src/rtl_files/mux21x4v1mce.v|11|1*104517
+B/mux21x4v1mce=3*1354412
+C=8.2.1986.SP1.35.3497  (Windows)
+D/mux21x4v1mce=4*9016
+P/~emb=177,374,491,601
+R=./src/rtl_files/mux21x4v1mce.v|11
+
+[mux_4_to_1]
+A/mux_4_to_1=22|./src/rtl_files/pcs_quad_clk_mux.v|252|1*232002
+B/mux_4_to_1=3*2057506
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=253,436,622,776
+R=./src/rtl_files/pcs_quad_clk_mux.v|252
+
+[or2x1v1mce]
+A/or2x1v1mce=22|./src/rtl_files/or2x1v1mce.v|10|1*133287
+B/or2x1v1mce=3*1449098
+C=8.2.1986.SP1.35.3497  (Windows)
+D/or2x1v1mce=4*18823
+P/~emb=142,318,428,533
+R=./src/rtl_files/or2x1v1mce.v|10
+
+[or2x2v1mce]
+A/or2x2v1mce=22|./src/rtl_files/or2x2v1mce.v|10|1*134443
+B/or2x2v1mce=3*1449402
+C=8.2.1986.SP1.35.3497  (Windows)
+D/or2x2v1mce=4*19106
+P/~emb=142,318,428,533
+R=./src/rtl_files/or2x2v1mce.v|10
+
+[or2x4v1mce]
+A/or2x4v1mce=22|./src/rtl_files/or2x4v1mce.v|10|1*132096
+B/or2x4v1mce=3*1448791
+C=8.2.1986.SP1.35.3497  (Windows)
+D/or2x4v1mce=4*18329
+P/~emb=142,318,428,533
+R=./src/rtl_files/or2x4v1mce.v|10
+
+[pcs_channel_top]
+A/pcs_channel_top=22|./src/channel_top_files/pcs_channel_top.v|180|1*119469
+B/pcs_channel_top=3*1398578
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6554,10034,13305,18996
+R=./src/channel_top_files/pcs_channel_top.v|180
+
+[pcs_mca_control]
+A/pcs_mca_control=22|./src/rtl_files/pcs_mca_control.v|109|1*146539
+B/pcs_mca_control=3*1498875
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2235,3298,5531,6277
+R=./src/rtl_files/pcs_mca_control.v|109
+
+[pcs_quad]
+A/pcs_quad=22|./src/rtl_files/pcs_quad.v|254|1*214794
+B/pcs_quad=3*2001882
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=15861,20062,24402,35707
+R=./src/rtl_files/pcs_quad.v|254
+
+[pcs_quad_buffers]
+A/pcs_quad_buffers=22|./src/rtl_files/pcs_quad_buffers.v|56|1*142591
+B/pcs_quad_buffers=3*1468258
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=979,1717,2599,4333
+R=./src/rtl_files/pcs_quad_buffers.v|56
+
+[pcs_quad_clk_mux]
+A/pcs_quad_clk_mux=22|./src/rtl_files/pcs_quad_clk_mux.v|23|1*230177
+B/pcs_quad_clk_mux=3*2055498
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2121,2868,3746,5545
+R=./src/rtl_files/pcs_quad_clk_mux.v|23
+
+[pcs_quad_clocks]
+A/pcs_quad_clocks=22|./src/rtl_files/pcs_quad_clocks.expt.v|208|1*225999
+B/pcs_quad_clocks=3*2004238
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4800,6013,8479,10845
+R=./src/rtl_files/pcs_quad_clocks.expt.v|208
+
+[pcs_quad_logic]
+A/pcs_quad_logic=22|./src/rtl_files/pcs_quad_logic.v|198|1*203529
+B/pcs_quad_logic=3*1964899
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=10753,15567,19445,26662
+R=./src/rtl_files/pcs_quad_logic.v|198
+
+[pcs_quad_top]
+A/pcs_quad_top=22|./src/pcs_quad_top.v|190|1*252151
+B/pcs_quad_top=3*2306143
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=14451,19079,23125,32873
+R=./src/pcs_quad_top.v|190
+
+[pcs_reset]
+A/pcs_reset=22|./src/rtl_files/pcs_reset.v|62|1*225269
+B/pcs_reset=3*2002817
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=228,426,652,795
+R=./src/rtl_files/pcs_reset.v|62
+
+[pcsm_16x12]
+A/pcsm_16x12=22|./src/channel_top_files/pcsm_16x12.v|18|1*36266
+B/pcsm_16x12=3*647635
+C=8.2.1986.SP1.35.3497  (Windows)
+D/pcsm_16x12=4*0
+P/~emb=436,1136,1692,1892
+R=./src/channel_top_files/pcsm_16x12.v|18
+
+[pcsm_16x12b]
+A/pcsm_16x12b=22|./src/channel_top_files/pcsm_16x12b.v|16|1*10774
+B/pcsm_16x12b=3*146019
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=556,1079,1546,2263
+R=./src/channel_top_files/pcsm_16x12b.v|16
+
+[pcsm_64x16]
+A/pcsm_64x16=22|./src/rtl_files/pcsm_64x16.v|18|1*176207
+B/pcsm_64x16=3*1729613
+C=8.2.1986.SP1.35.3497  (Windows)
+D/pcsm_64x16=4*19389
+P/~emb=436,1553,2280,2496
+R=./src/rtl_files/pcsm_64x16.v|18
+
+[pcsm_64x16b]
+A/pcsm_64x16b=22|./src/rtl_files/pcsm_64x16b.v|16|1*155854
+B/pcsm_64x16b=3*1572343
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=556,1075,1539,2254
+R=./src/rtl_files/pcsm_64x16b.v|16
+
+[pcsm_64x40]
+A/pcsm_64x40=22|./src/channel_top_files/pcsm_64x40.v|18|1*81897
+B/pcsm_64x40=3*1139175
+C=8.2.1986.SP1.35.3497  (Windows)
+D/pcsm_64x40=4*2338
+P/~emb=436,1679,2664,2868
+R=./src/channel_top_files/pcsm_64x40.v|18
+
+[pcsm_64x40b]
+A/pcsm_64x40b=22|./src/channel_top_files/pcsm_64x40b.v|16|1*69576
+B/pcsm_64x40b=3*1033085
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=556,1084,1548,2264
+R=./src/channel_top_files/pcsm_64x40b.v|16
+
+[pp_an]
+A/pp_an=22|./src/channel_top_files/pp_an.v|101|1*4264
+B/pp_an=3*22451
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1452,2746,4228,5015
+R=./src/channel_top_files/pp_an.v|101
+
+[pp_cc]
+A/pp_cc=22|./src/channel_top_files/pp_cc.v|193|1*6958
+B/pp_cc=3*84009
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1349,2495,4262,5231
+R=./src/channel_top_files/pp_cc.v|193
+
+[pp_dec8b10b]
+A/pp_dec8b10b=22|./src/channel_top_files/pp_dec8b10b.v|78|1*12210
+B/pp_dec8b10b=3*156207
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=390,976,1941,2477
+R=./src/channel_top_files/pp_dec8b10b.v|78
+
+[pp_enc8b10b]
+A/pp_enc8b10b=22|./src/channel_top_files/pp_enc8b10b.v|65|1*13726
+B/pp_enc8b10b=3*222739
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=486,1033,1620,2006
+R=./src/channel_top_files/pp_enc8b10b.v|65
+
+[pp_fc_sync]
+A/pp_fc_sync=22|./src/channel_top_files/pp_fc_sync.v|76|1*19103
+B/pp_fc_sync=3*296680
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=634,1248,1918,2227
+R=./src/channel_top_files/pp_fc_sync.v|76
+
+[pp_ge_idle]
+A/pp_ge_idle=22|./src/channel_top_files/pp_ge_idle.v|70|1*32606
+B/pp_ge_idle=3*630562
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=455,943,1408,1671
+R=./src/channel_top_files/pp_ge_idle.v|70
+
+[pp_ge_mca_sm]
+A/pp_ge_mca_sm=22|./src/rtl_files/pp_ge_mca_sm.v|67|1*144368
+B/pp_ge_mca_sm=3*1468417
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=654,1009,1371,1586
+R=./src/rtl_files/pp_ge_mca_sm.v|67
+
+[pp_link_sync]
+A/pp_link_sync=22|./src/channel_top_files/pp_link_sync.v|135|1*15018
+B/pp_link_sync=3*252239
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=938,1543,2232,2585
+R=./src/channel_top_files/pp_link_sync.v|135
+
+[pp_pcie_scram]
+A/pp_pcie_scram=22|./src/channel_top_files/pp_pcie_scram.v|155|1*16711
+B/pp_pcie_scram=3*275688
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=372,823,1266,1511
+R=./src/channel_top_files/pp_pcie_scram.v|155
+
+[pp_rio_ls]
+A/pp_rio_ls=22|./src/channel_top_files/pp_rio_ls.v|71|1*17941
+B/pp_rio_ls=3*286510
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=467,852,1268,1489
+R=./src/channel_top_files/pp_rio_ls.v|71
+
+[pp_rio_mca_sm]
+A/pp_rio_mca_sm=22|./src/rtl_files/pp_rio_mca_sm.v|64|1*145421
+B/pp_rio_mca_sm=3*1490050
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=491,830,1204,1407
+R=./src/rtl_files/pp_rio_mca_sm.v|64
+
+[pp_rsm]
+A/pp_rsm=22|./src/channel_top_files/pp_rsm.v|54|1*21924
+B/pp_rsm=3*347661
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=752,1109,1646,1842
+R=./src/channel_top_files/pp_rsm.v|54
+
+[pp_rsm_1g]
+A/pp_rsm_1g=22|./src/channel_top_files/pp_rsm_1g.v|91|1*23131
+B/pp_rsm_1g=3*357728
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1541,2780,4047,4712
+R=./src/channel_top_files/pp_rsm_1g.v|91
+
+[pp_rsm_ce]
+A/pp_rsm_ce=22|./src/channel_top_files/pp_rsm_ce.v|59|1*20618
+B/pp_rsm_ce=3*333667
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=721,1117,1771,2010
+R=./src/channel_top_files/pp_rsm_ce.v|59
+
+[pp_rx_top]
+A/pp_rx_top=22|./src/channel_top_files/pp_rx_top.v|106|1*97778
+B/pp_rx_top=3*1309497
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2652,4159,6099,8126
+R=./src/channel_top_files/pp_rx_top.v|106
+
+[pp_tsm]
+A/pp_tsm=22|./src/channel_top_files/pp_tsm.v|76|1*25573
+B/pp_tsm=3*452994
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1120,1697,2689,3044
+R=./src/channel_top_files/pp_tsm.v|76
+
+[pp_tsm_1g]
+A/pp_tsm_1g=22|./src/channel_top_files/pp_tsm_1g.v|94|1*27436
+B/pp_tsm_1g=3*500537
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1393,2335,3450,3907
+R=./src/channel_top_files/pp_tsm_1g.v|94
+
+[pp_tsm_fc]
+A/pp_tsm_fc=22|./src/channel_top_files/pp_tsm_fc.v|101|1*29606
+B/pp_tsm_fc=3*590911
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=482,832,1172,1345
+R=./src/channel_top_files/pp_tsm_fc.v|101
+
+[pp_tx_top]
+A/pp_tx_top=22|./src/channel_top_files/pp_tx_top.v|72|1*95624
+B/pp_tx_top=3*1303144
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1885,2888,4139,5344
+R=./src/channel_top_files/pp_tx_top.v|72
+
+[pp_word_align]
+A/pp_word_align=22|./src/channel_top_files/pp_word_align.v|66|1*30672
+B/pp_word_align=3*594984
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=580,1082,2514,2742
+R=./src/channel_top_files/pp_word_align.v|66
+
+[ptr_interpreter]
+A/ptr_interpreter=22|./src/channel_top_files/ptr_interpreter.v|23|1*64502
+B/ptr_interpreter=3*946193
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=938,2676,6221,7456
+R=./src/channel_top_files/ptr_interpreter.v|23
+
+[qif]
+A/qif=22|./src/rtl_files/qif.v|119|1*178346
+B/qif=3*1783704
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=5420,7038,9669,11058
+R=./src/rtl_files/qif.v|119
+
+[rsffrqnx2v1mce]
+A/rsffrqnx2v1mce=22|./src/rtl_files/rsffrqnx2v1mce.v|12|1*118350
+B/rsffrqnx2v1mce=3*1396724
+C=8.2.1986.SP1.35.3497  (Windows)
+D/rsffrqnx2v1mce=4*16809
+P/~emb=205,474,666,911
+R=./src/rtl_files/rsffrqnx2v1mce.v|12
+
+[rx_test_mux]
+A/rx_test_mux=22|./src/rtl_files/serdes_char.v|228|1*198222
+B/rx_test_mux=3*1916284
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1639,2134,2919,3211
+R=./src/rtl_files/serdes_char.v|228
+
+[sb_prbs]
+A/sb_prbs=22|./src/channel_top_files/sb_prbs.v|71|1*49299
+B/sb_prbs=3*775036
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=706,1122,1770,1979
+R=./src/channel_top_files/sb_prbs.v|71
+
+[sb_rx]
+A/sb_rx=22|./src/channel_top_files/sb_rx.v|72|1*47965
+B/sb_rx=3*766475
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=540,949,1543,1841
+R=./src/channel_top_files/sb_rx.v|72
+
+[sb_tx]
+A/sb_tx=22|./src/channel_top_files/sb_tx.v|68|1*50635
+B/sb_tx=3*783011
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=454,852,1385,1655
+R=./src/channel_top_files/sb_tx.v|68
+
+[sbnx16v1mce]
+A/sbnx16v1mce=22|./src/rtl_files/sbnx16v1mce.v|11|1*132699
+B/sbnx16v1mce=3*1448944
+C=8.2.1986.SP1.35.3497  (Windows)
+D/sbnx16v1mce=4*18612
+P/~emb=119,293,396,496
+R=./src/rtl_files/sbnx16v1mce.v|11
+
+[sbnx2v1mce]
+A/sbnx2v1mce=22|./src/rtl_files/sbnx2v1mce.v|11|1*112254
+B/sbnx2v1mce=3*1363954
+C=8.2.1986.SP1.35.3497  (Windows)
+D/sbnx2v1mce=4*11703
+P/~emb=117,290,393,493
+R=./src/rtl_files/sbnx2v1mce.v|11
+
+[sbnx4v1mce]
+A/sbnx4v1mce=22|./src/rtl_files/sbnx4v1mce.v|11|1*105234
+B/sbnx4v1mce=3*1355187
+C=8.2.1986.SP1.35.3497  (Windows)
+D/sbnx4v1mce=4*9507
+P/~emb=117,290,393,493
+R=./src/rtl_files/sbnx4v1mce.v|11
+
+[scan_mpif_char]
+A/scan_mpif_char=22|./src/rtl_files/scan_mpif_char.v|65|1*201962
+B/scan_mpif_char=3*1949984
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1294,1774,2556,2798
+R=./src/rtl_files/scan_mpif_char.v|65
+
+[select_clocks]
+A/select_clocks=22|./src/rtl_files/pcs_quad_clk_mux.v|285|1*232653
+B/select_clocks=3*2059092
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=731,1142,1553,2107
+R=./src/rtl_files/pcs_quad_clk_mux.v|285
+
+[serdes_char]
+A/serdes_char=22|./src/rtl_files/serdes_char.v|69|1*196962
+B/serdes_char=3*1914873
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1890,2357,2931,3708
+R=./src/rtl_files/serdes_char.v|69
+
+[sonet_fbrx_resets]
+A/sonet_fbrx_resets=22|./src/rtl_files/sonet_fbrx_resets.v|54|1*136799
+B/sonet_fbrx_resets=3*1450006
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2491,3358,4758,5820
+R=./src/rtl_files/sonet_fbrx_resets.v|54
+
+[sonet_fbrx_resets_buf]
+A/sonet_fbrx_resets_buf=22|./src/rtl_files/sonet_fbrx_resets_buf.v|44|1*140761
+B/sonet_fbrx_resets_buf=3*1468094
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3179,3912,4918,6296
+R=./src/rtl_files/sonet_fbrx_resets_buf.v|44
+
+[sonet_rx_top]
+A/sonet_rx_top=22|./src/channel_top_files/sonet_rx_top.v|15|1*71028
+B/sonet_rx_top=3*1043273
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1243,2085,3010,4153
+R=./src/channel_top_files/sonet_rx_top.v|15
+
+[state_toh]
+A/state_toh=22|./src/channel_top_files/toh_pipe.v|92|1*94702
+B/state_toh=3*1297775
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=331,587,839,1002
+R=./src/channel_top_files/toh_pipe.v|92
+
+[stm_ais_insert]
+A/stm_ais_insert=22|./src/channel_top_files/stm_ais_insert.v|15|1*77738
+B/stm_ais_insert=3*1118608
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=561,946,1334,1486
+R=./src/channel_top_files/stm_ais_insert.v|15
+
+[stm_bip_check]
+A/stm_bip_check=22|./src/channel_top_files/stm_bip_check.v|15|1*76732
+B/stm_bip_check=3*1110951
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=524,871,1207,1390
+R=./src/channel_top_files/stm_bip_check.v|15
+
+[stm_descrambler]
+A/stm_descrambler=22|./src/channel_top_files/stm_descrambler.v|15|1*75756
+B/stm_descrambler=3*1102968
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=482,814,1122,1287
+R=./src/channel_top_files/stm_descrambler.v|15
+
+[stm_fram48]
+A/stm_fram48=22|./src/channel_top_files/stm_fram48.v|20|1*73297
+B/stm_fram48=3*1053057
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1086,2005,3487,3683
+R=./src/channel_top_files/stm_fram48.v|20
+
+[stm_rdil_check]
+A/stm_rdil_check=22|./src/channel_top_files/stm_rdil_check.v|15|1*78777
+B/stm_rdil_check=3*1132947
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=325,594,816,924
+R=./src/channel_top_files/stm_rdil_check.v|15
+
+[sync_rstn_scan]
+A/sync_rstn_scan=22|./src/rtl_files/sync_rstn_scan.v|45|1*152720
+B/sync_rstn_scan=3*1550336
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=247,460,704,810
+R=./src/rtl_files/sync_rstn_scan.v|45
+
+[toh_pipe]
+A/toh_pipe=22|./src/channel_top_files/toh_pipe.v|25|1*62213
+B/toh_pipe=3*934490
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=290,567,850,1049
+R=./src/channel_top_files/toh_pipe.v|25
+
+[toh_timing]
+A/toh_timing=22|./src/channel_top_files/toh_timing.v|20|1*61146
+B/toh_timing=3*910547
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=817,1219,1825,2143
+R=./src/channel_top_files/toh_timing.v|20
+
+[ubs1x12]
+A/ubs1x12=22|./src/rtl_files/ubs1x12.v|824|1*193760
+B/ubs1x12=3*1895653
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=834,1431,1957,2702
+R=./src/rtl_files/ubs1x12.v|824
+
+[ubs1x12_MUX]
+A/ubs1x12_MUX=22|./src/rtl_files/ubs1x12.v|32|1*189054
+B/ubs1x12_MUX=3*1837713
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=190,380,630,784
+R=./src/rtl_files/ubs1x12.v|32
+
+[ubs1x12_bistctl_int]
+A/ubs1x12_bistctl_int=22|./src/rtl_files/ubs1x12.v|702|1*192620
+B/ubs1x12_bistctl_int=3*1885822
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=518,879,1315,1581
+R=./src/rtl_files/ubs1x12.v|702
+
+[ubs1x12_sbric_rs]
+A/ubs1x12_sbric_rs=22|./src/rtl_files/ubs1x12.v|317|1*190891
+B/ubs1x12_sbric_rs=3*1851333
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=670,1248,2273,2890
+R=./src/rtl_files/ubs1x12.v|317
+
+[ubs1x12_sbric_st]
+A/ubs1x12_sbric_st=22|./src/rtl_files/ubs1x12.v|114|1*189834
+B/ubs1x12_sbric_st=3*1841076
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=369,756,1269,1639
+R=./src/rtl_files/ubs1x12.v|114
+
+[vhiv1mce]
+A/vhiv1mce=22|./src/rtl_files/vhiv1mce.v|11|1*135629
+B/vhiv1mce=3*1449704
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=88,235,338,432
+R=./src/rtl_files/vhiv1mce.v|11
+
+[vlov1mce]
+A/vlov1mce=22|./src/rtl_files/vlov1mce.v|11|1*136214
+B/vlov1mce=3*1449855
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=88,235,338,432
+R=./src/rtl_files/vlov1mce.v|11
+
+[~A]
+./src/channel_top_files/fb_rf.v_fb_rx.v_fb_tx.v_pp_an.v_pp_cc.v_pp_dec8b10b.v_pp_enc8b10b.v_pp_link_sync.v_pp_pcie_scram.v_pp_rio_ls.v_pp_fc_sync.v_pp_rsm_ce.v_pp_rsm.v_pp_rsm_1g.v_pp_tsm.v_pp_tsm_1g.v_pp_tsm_fc.v_pp_word_align.v_pp_ge_idle.v_pcsm_16x12b.v_PC12BBIST.v_PC12BI.v_pcsm_16x12.v_sb_rx.v_sb_tx.v_sb_prbs.v_crc_rx.v_crc_tx.v_auto_toh.v_counter.v_ptr_interpreter.v_sonet_rx_top.v_stm_ais_insert.v_stm_bip_check.v_stm_descrambler.v_stm_fram48.v_stm_rdil_check.v_pcsm_64x40b.v_PC64BBIST.v_PC64BI.v_pcsm_64x40.v_toh_pipe.v_toh_timing.v_pp_tx_top.v_pp_rx_top.v_chif.v_chif_counter.v_cor_reset.v_int_sub.v_int_lane.v_pcs_channel_top.v_POSCDAC_UDP.v_POSFFAC_UDP.v_DNEQ_UDP.v_CDCHK_UDP.v_dffprqnx4v1mce.v_delc2x2v1mce.v_delc0p5x2v1mce.v_aoi222x2v1mce.v_invx4v1mce.v_or2x4v1mce.v_sbnx16v1mce.v_or2x1v1mce.v_TGM2_UDP.v_mux21x4v1mce.v_delc1x2v1mce.v_delc3x2v1mce.v_or2x2v1mce.v_rsffrqnx2v1mce.v_sbnx2v1mce.v_sbnx4v1mce.v_vhiv1mce.v_vlov1mce.v_RS_UDP.v_NP_UDP.v_sonet_fbrx_resets.v_sonet_fbrx_resets_buf.v_pcs_quad_buffers.v_p=0*390637*630952
+Comment=LATTICE ispLEVER 8.0, PCSA_ALDEC_WORK LIBRARY
+LastVerilogToplevel=PCSA_sim
+ModifyID=1170
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+
+[~MFT]
+0=165|0pcsa_aldec_work.mgf|630952|0
+1=163|1pcsa_aldec_work.mgf|262022|0
+3=163|3pcsa_aldec_work.mgf|2306674|0
+4=18|4pcsa_aldec_work.mgf|22347|0
+
+[~U]
+$root=12|0*0|
+AO222S=12|0*174485||0x80
+AO222S_QIF=12|0*269171||0x80
+CDCHK_UDP=12|0*193795||0xa0
+DNEQ_UDP=12|0*193274||0xa0
+NP_UDP=12|0*194253||0xa0
+PC12BBIST=12|0*61383||0x80
+PC12BI=12|0*62881||0x80
+PC12BI_AMUX=12|0*76651||0x80
+PC12BI_CMUX=12|0*77543||0x80
+PC12BI_DMUX=12|0*78403||0x80
+PC12BI_EVAL=12|0*79071||0x80
+PC12B_AGEN=12|0*74309||0x80
+PC12B_CNTL=12|0*72730||0x80
+PC12B_EVAL=12|0*75616||0x80
+PC12B_FSMINT=12|0*69521||0x80
+PC12B_MAINFSM=12|0*66963||0x80
+PC12B_RTFSM=12|0*70862||0x80
+PC16BBIST=12|0*244912||0x80
+PC16BI=12|0*249882||0x80
+PC16BI_AMUX=12|0*246394||0x80
+PC16BI_CMUX=12|0*247270||0x80
+PC16BI_DMUX=12|0*248114||0x80
+PC16BI_EVAL=12|0*248766||0x80
+PC16B_AGEN=12|0*242602||0x80
+PC16B_CNTL=12|0*241023||0x80
+PC16B_EVAL=12|0*243893||0x80
+PC16B_FSMINT=12|0*237830||0x80
+PC16B_MAINFSM=12|0*235288||0x80
+PC16B_RTFSM=12|0*239155||0x80
+PC64BBIST=12|0*127714||0x80
+PC64BI=12|0*129212||0x80
+PC64BI_AMUX=12|0*144470||0x80
+PC64BI_CMUX=12|0*145362||0x80
+PC64BI_DMUX=12|0*146238||0x80
+PC64BI_EVAL=12|0*146906||0x80
+PC64B_AGEN=12|0*142128||0x80
+PC64B_CNTL=12|0*140549||0x80
+PC64B_EVAL=12|0*143435||0x80
+PC64B_FSMINT=12|0*137340||0x80
+PC64B_MAINFSM=12|0*134782||0x80
+PC64B_RTFSM=12|0*138681||0x80
+PCSA_sim=12|0*376306||0x90
+POSCDAC_UDP=12|0*191970||0xa0
+POSFFAC_UDP=12|0*192654||0xa0
+RS_UDP=12|0*197050||0xa0
+TGM2_UDP=12|0*196118||0xa0
+algn_e2p=12|0*217199||0x80
+algn_fifo=12|0*217832||0x80
+algn_fifo_read=12|0*222001||0x80
+algn_fifo_write=12|0*220641||0x80
+algn_ls_if=12|0*232749||0x80
+algn_quad=12|0*225084||0x80
+algn_sync=12|0*227702||0x80
+algn_sync_sm=12|0*230880||0x80
+aoi222x2v1mce=12|0*175116||0x80
+auto_toh=12|0*94125||0x80
+b2_aux_ch=12|0*345894||0x80
+b2_single_ch_serdes=12|0*350416||0x80
+b2bis_chbist_jj=12|0*361731||0x80
+b2top_quad=12|0*333785||0x80
+bist_char=12|0*279336||0x80
+char_test_logic=12|0*285258||0x80
+chif=12|0*159092||0x80
+chif_counter=12|0*170683||0x80
+cor_reset=12|0*171432||0x80
+cor_reset_qif=12|0*267539||0x80
+counter=12|0*101322||0x80
+crc_rx=12|0*84831||0x80
+crc_tx=12|0*90758||0x80
+daisy_chain_mux=12|0*202557||0x80
+del1=12|0*262318||0x80
+del6_pulse=12|0*262947||0x80
+delc0p5x2v1mce=12|0*191491||0x80
+delc1x2v1mce=12|0*174008||0x80
+delc2x2v1mce=12|0*169731||0x80
+delc3x2v1mce=12|0*172861||0x80
+dffprqnx4v1mce=12|0*168644||0x80
+fb_rf=12|0*982||0x80
+fb_rx=12|0*2012||0x80
+fb_tx=12|0*4066||0x80
+fmux_41=12|0*201925||0x80
+glitch_filter=12|0*173338||0x80
+glitch_filter_qif=12|0*268497||0x80
+int_lane=12|0*166235||0x80
+int_quad=12|0*263886||0x80
+int_sub=12|0*176186||0x80
+int_sub_qif=12|0*265335||0x80
+invx4v1mce=12|0*170208||0x80
+lock_det_model=12|0*359284||0x80
+mpi_pulse=12|0*165537||0x80
+mpi_pulse_qif=12|0*261680||0x80
+mux21x4v1mce=12|0*164473||0x80
+mux_4_to_1=12|0*331600||0x80
+or2x1v1mce=12|0*195627||0x80
+or2x2v1mce=12|0*196559||0x80
+or2x4v1mce=12|0*194660||0x80
+pcs_channel_top=12|0*179377||0x80
+pcs_mca_control=12|0*211711||0x80
+pcs_quad=12|0*306298||0x80
+pcs_quad_buffers=12|0*205955||0x80
+pcs_quad_clk_mux=12|0*328671||0x80
+pcs_quad_clocks=12|0*321967||0x80
+pcs_quad_logic=12|0*291609||0x80
+pcs_quad_top=12|0*362643||0x80
+pcs_reset=12|0*321269||0x80
+pcsm_16x12=12|0*64200||0x80
+pcsm_16x12b=12|0*18164||0x80
+pcsm_64x16=12|0*251185||0x80
+pcsm_64x16b=12|0*223328||0x80
+pcsm_64x40=12|0*130515||0x80
+pcsm_64x40b=12|0*113586||0x80
+pp_an=12|0*5768||0x80
+pp_cc=12|0*12062||0x80
+pp_dec8b10b=12|0*19936||0x80
+pp_enc8b10b=12|0*25244||0x80
+pp_fc_sync=12|0*35933||0x80
+pp_ge_idle=12|0*59564||0x80
+pp_ge_mca_sm=12|0*208628||0x80
+pp_link_sync=12|0*28840||0x80
+pp_pcie_scram=12|0*31765||0x80
+pp_rio_ls=12|0*34147||0x80
+pp_rio_mca_sm=12|0*210145||0x80
+pp_rsm=12|0*40498||0x80
+pp_rsm_1g=12|0*42057||0x80
+pp_rsm_ce=12|0*38680||0x80
+pp_rx_top=12|0*153066||0x80
+pp_tsm=12|0*48035||0x80
+pp_tsm_1g=12|0*51338||0x80
+pp_tsm_fc=12|0*55636||0x80
+pp_tx_top=12|0*149312||0x80
+pp_word_align=12|0*56846||0x80
+ptr_interpreter=12|0*103106||0x80
+qif=12|0*255036||0x80
+rsffrqnx2v1mce=12|0*178386||0x80
+rx_test_mux=12|0*283374||0x80
+sb_prbs=12|0*81665||0x80
+sb_rx=12|0*80155||0x80
+sb_tx=12|0*83433||0x80
+sbnx16v1mce=12|0*195151||0x80
+sbnx2v1mce=12|0*172386||0x80
+sbnx4v1mce=12|0*165062||0x80
+scan_mpif_char=12|0*289482||0x80
+select_clocks=12|0*332235||0x80
+serdes_char=12|0*281730||0x80
+sonet_fbrx_resets=12|0*198275||0x80
+sonet_fbrx_resets_buf=12|0*203373||0x80
+sonet_rx_top=12|0*115358||0x80
+state_toh=12|0*148262||0x80
+stm_ais_insert=12|0*125556||0x80
+stm_bip_check=12|0*124374||0x80
+stm_descrambler=12|0*123158||0x80
+stm_fram48=12|0*118651||0x80
+stm_rdil_check=12|0*126899||0x80
+sync_rstn_scan=12|0*219906||0x80
+toh_pipe=12|0*100305||0x80
+toh_timing=12|0*98022||0x80
+ubs1x12=12|0*277424||0x80
+ubs1x12_MUX=12|0*269790||0x80
+ubs1x12_bistctl_int=12|0*275980||0x80
+ubs1x12_sbric_rs=12|0*272443||0x80
+ubs1x12_sbric_st=12|0*270554||0x80
+vhiv1mce=12|0*197521||0x80
+vlov1mce=12|0*197898||0x80
+

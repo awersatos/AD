@@ -1,0 +1,94 @@
+//============================================================
+# hcc4078 source
+//jjt 23/5/2000: HCC/HCF4078.txt are exactly the same.
+//4078B: 8-input NOR gate 
+//dm 8-11-97: replaced vol_param and voh_param= (); with VOL_VOH_MIN()
+//dm 8-18-97: updated to use PWL_TABLE statements
+//jjt 23/5/2000:
+//    One output added.
+//    OUT corresponds to the original OUT. 
+//    OUTN is the OR function and OUT is the NOR function. 
+//    The commented message() calls have had tabs added and the new 
+//    output.
+// jjt 25/5/2000: changed initialisation values for OUT and OUTN.
+//============================================================
+INPUTS VDD, GND, INA, INB, INC, IND, INE, INF, ING, INH;
+OUTPUTS VDD_LD, INA_LD, INB_LD, INC_LD, IND_LD, INE_LD, INF_LD, ING_LD, INH_LD,
+                OUT, OUTN;
+INTEGERS tblIndex;
+REALS tt_val, tt_5, tt_10, tt_15, tplh_5, tplh_10,
+      tplh_15, tphl_5, tphl_10, tphl_15, rout_5,
+          rout_10, rout_15, rin_val, ridd_val, vdd_val;
+
+PWR_GND_PINS(VDD,GND);  //set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(3,18);   //check for min supply=3 and max supply=18
+VOL_VOH_MIN(0,0,0.1);   //set min vol_param=gnd_param+0, max voh_param=pwr_param-0
+VIL_VIH_PERCENT(33,66); //CMOS vil=33% of supply, vih=66% of supply
+IO_PAIRS(INA:INA_LD, INB:INB_LD, INC:INC_LD, IND:IND_LD,
+         INE:INE_LD, INF:INF_LD, ING:ING_LD, INH:INH_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tINA\tINB\tINC\tIND\tOUTN\tOUT");
+        //Note: ttlh and tthl are the same
+        tt_5= (MIN_TYP_MAX(tt_param: NULL, 60n, 120n));
+        tt_10= (MIN_TYP_MAX(tt_param: NULL, 30n, 60n));
+        tt_15= (MIN_TYP_MAX(tt_param: NULL, 20n, 40n));
+
+    tphl_5= (MIN_TYP_MAX(tp_param: NULL, 80n, 160n));
+    tphl_10= (MIN_TYP_MAX(tp_param: NULL, 35n, 70n));
+    tphl_15= (MIN_TYP_MAX(tp_param: NULL, 25n, 50n));
+
+    tplh_5= (MIN_TYP_MAX(tp_param: NULL, 80n, 160n));
+    tplh_10= (MIN_TYP_MAX(tp_param: NULL, 35n, 70n));
+    tplh_15= (MIN_TYP_MAX(tp_param: NULL, 25n, 50n));
+
+        //CMOS B IOH min=0.44mA @ Vdd=5V and Voh=4.6V: rout=(Vdd-Voh)/IOH=909
+        //CMOS B IOL min=0.44mA @ Vdd=5V and Vol=0.4V: rout=Vol/IOL=909
+    rout_5= (MIN_TYP_MAX(drv_param: 909,NULL,NULL));
+
+        //CMOS B IOH min=1.1mA @ Vdd=10V and Voh=9.5V: rout=(Vdd-Voh)/IOH=454.5
+        //CMOS B IOL min=1.1mA @ Vdd=10V and Voh=0.5V: rout=Vol/IOL=454.5
+    rout_10= (MIN_TYP_MAX(drv_param: 454.5,NULL,NULL));
+
+        //CMOS B IOH min=3mA @ Vdd=15V and Voh=13.5V: rout=(Vdd-Voh)/IOH=500
+        //CMOS B IOL min=3mA @ Vdd=15V and Vol=1.5V: rout=Vol/IOL=500
+    rout_15= (MIN_TYP_MAX(drv_param: 500,NULL,NULL));
+
+        //Note: Input loading and Idd are linear over Vdd ranges
+    //CMOS input current @ 25'C: IIN=0.1uA @ VDD=15v rin= (15/0.1uA);
+        rin_val= (MIN_TYP_MAX(ld_param: NULL, 1.5E8, NULL));
+
+        //Idd @ 10V: 1E9= 10/10nA typical, 5Meg= 10/2uA
+        ridd_val= (MIN_TYP_MAX(i_param: NULL, 1E9, 5Meg));
+
+        STATE OUT = ONE;       //initialize NOR output
+        STATE OUTN = ZERO;       //initialize OR output
+        EXIT;
+  END;
+
+vdd_val= (pwr_param - gnd_param);
+rol_param= (PWL_TABLE(vdd_val: 5,rout_5,10,rout_10,15,rout_15));
+roh_param= (rol_param);                 // Drive high same as drive low
+tt_val= (PWL_TABLE(vdd_val:5,tt_5,10,tt_10,15,tt_15));
+
+DRIVE OUT OUTN =
+  (v0=gnd_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD INA_LD INB_LD INC_LD IND_LD INE_LD INF_LD ING_LD INH_LD =
+  (v0=vol_param,r0=rin_val,v1=voh_param,r1=rin_val,io=1e12,t=1p);
+
+TABLE tblIndex
+INA     INB     INC     IND     INE     INF     ING     INH     OUT     OUTN
+0       0       0       0       0       0       0       0       H       L
+X       X       X       X       X       X       X       X       L       H; 
+
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d",present_time,INA,INB,INC,IND,OUT,OUTN);
+
+LOAD VDD_LD = (v0=gnd_param,r0=ridd_val,t=1p);
+
+DELAY OUT OUTN=
+  CASE (TRAN_LH) : (PWL_TABLE(vdd_val:5,tplh_5,10,tplh_10,15,tplh_15))
+  CASE (TRAN_HL) : (PWL_TABLE(vdd_val:5,tphl_5,10,tphl_10,15,tphl_15))
+END;
+EXIT;

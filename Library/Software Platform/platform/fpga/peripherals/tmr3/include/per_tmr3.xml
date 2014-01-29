@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_tmr3" description="TMR3 Dual Timer Controller">
+		<sfr name="TCON"	offset="0"  size="8" description="Timer Control Register">
+			<bitfield name="TRA"	start="4" end="4" access="rw" description="Timer A Run Control Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TFA"	start="5" end="5" access="rw" description="Timer A Overflow Flag Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TRB"	start="6" end="6" access="rw" description="Timer B Run Control Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TFB"	start="7" end="7" access="rw" description="Timer B Overflow Flag Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="TMOD"	offset="1"  size="8" description="Timer Mode Register">
+			<bitfield name="TA_MODE"	start="0" end="1" access="rw" description="Timer A Mode Bits">
+				<value value="0" description="13-bit Timer/Counter"/>
+				<value value="1" description="16-bit Timer/Counter"/>
+				<value value="2" description=" 8-bit Auto-reload Timer/Counter"/>
+				<value value="3" description="Stop Timer/Counter"/>
+			</bitfield>
+			<bitfield name="TA_COUNTER"	start="2" end="2" access="rw" description="Timer A Counter Operation Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TA_GATE"	start="3" end="3" access="rw" description="Timer A External Trigger Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TB_MODE"	start="5" end="4" access="rw" description="Timer B Mode Bits">
+				<value value="0" description="13-bit Timer/Counter"/>
+				<value value="1" description="16-bit Timer/Counter"/>
+				<value value="2" description=" 8-bit Auto-reload Timer/Counter"/>
+				<value value="3" description="Stop Timer/Counter"/>
+			</bitfield>
+			<bitfield name="TB_COUNTER"	start="6" end="6" access="rw" description="Timer B Counter Operation Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TB_GATE"	start="7" end="7" access="rw" description="Timer B External Trigger Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="TLA"		offset="2"  size="8" description="Timer A Low Byte Register"/>
+		<sfr name="TLB"		offset="3"  size="8" description="Timer B Low Byte Register"/>
+		<sfr name="THA"		offset="4"  size="8" description="Timer A High Byte Register"/>
+		<sfr name="THA"		offset="5"  size="8" description="Timer B High Byte Register"/>
+	</group>
+</sfrfile>

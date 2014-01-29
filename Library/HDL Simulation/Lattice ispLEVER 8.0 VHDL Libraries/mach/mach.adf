@@ -1,0 +1,27 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=mach
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+mach=.
+
+[Library]
+mach=.\mach.LIB
+
+[Files]
+/mach.vhd=-1
+/mach_components.vhd=-1
+/update_mach.do=-1
+
+[Files.Data]
+.\src\mach.vhd=VHDL Source Code
+.\src\mach_components.vhd=VHDL Source Code
+.\src\update_mach.do=Macro
+

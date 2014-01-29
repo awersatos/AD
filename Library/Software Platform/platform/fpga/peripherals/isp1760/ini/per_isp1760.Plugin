@@ -1,0 +1,19 @@
+[Plugin]
+Name=per_isp1760
+Caption=ISP1760 USB Host Controller
+Description=ISP1760 USB Host Controller
+Bitmap=per_isp1760.bmp
+LargeBitmap=per_isp1760_large.bmp
+HardwareID=USB_WB_SHARED_MEM_CTRL
+Implement=per_isp1760
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=Hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True

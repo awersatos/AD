@@ -1,0 +1,957 @@
+timestamp=1275984581506
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[CBD16CE]
+A/CBD16CE=22|./src/cpld_det_sim.v|9|1*918
+B/CBD16CE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=304,510,742,851
+R=./src/cpld_det_sim.v|9
+S/cbd16ce=S/CBD16CE 40|0|2*0
+
+[CBD16CLE]
+A/CBD16CLE=22|./src/cpld_det_sim.v|35|1*1790
+B/CBD16CLE=3*3247
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=367,581,829,944
+R=./src/cpld_det_sim.v|35
+S/cbd16cle=S/CBD16CLE 40|0|2*4242
+
+[CBD16CLED]
+A/CBD16CLED=22|./src/cpld_det_sim.v|66|1*2695
+B/CBD16CLED=3*7263
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=452,691,979,1109
+R=./src/cpld_det_sim.v|66
+S/cbd16cled=S/CBD16CLED 40|0|2*9637
+
+[CBD16RE]
+A/CBD16RE=22|./src/cpld_det_sim.v|104|1*3633
+B/CBD16RE=3*12468
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=300,507,738,849
+R=./src/cpld_det_sim.v|104
+S/cbd16re=S/CBD16RE 40|0|2*15600
+
+[CBD16RLE]
+A/CBD16RLE=22|./src/cpld_det_sim.v|132|1*4505
+B/CBD16RLE=3*15519
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=363,577,828,945
+R=./src/cpld_det_sim.v|132
+S/cbd16rle=S/CBD16RLE 40|0|2*19847
+
+[CBD16X1]
+A/CBD16X1=22|./src/cpld_det_sim.v|163|1*5410
+B/CBD16X1=3*19427
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=518,786,1151,1330
+R=./src/cpld_det_sim.v|163
+S/cbd16x1=S/CBD16X1 40|0|2*25245
+
+[CBD16X2]
+A/CBD16X2=22|./src/cpld_det_sim.v|235|1*6490
+B/CBD16X2=3*26142
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=514,781,1159,1341
+R=./src/cpld_det_sim.v|235
+S/cbd16x2=S/CBD16X2 40|0|2*32215
+
+[CBD2CE]
+A/CBD2CE=22|./src/cpld_det_sim.v|306|1*7570
+B/CBD2CE=3*32809
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=2-Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=286,487,720,829
+R=./src/cpld_det_sim.v|306
+S/cbd2ce=S/CBD2CE 40|0|2*39182
+
+[CBD2CLE]
+A/CBD2CLE=22|./src/cpld_det_sim.v|332|1*8441
+B/CBD2CLE=3*35907
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=2-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=349,558,809,924
+R=./src/cpld_det_sim.v|332
+S/cbd2cle=S/CBD2CLE 40|0|2*43405
+
+[CBD2CLED]
+A/CBD2CLED=22|./src/cpld_det_sim.v|363|1*9345
+B/CBD2CLED=3*39910
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=2-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=419,651,946,1076
+R=./src/cpld_det_sim.v|363
+S/cbd2cled=S/CBD2CLED 40|0|2*48781
+
+[CBD2RE]
+A/CBD2RE=22|./src/cpld_det_sim.v|401|1*10298
+B/CBD2RE=3*45114
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=2-Bit Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=282,484,719,830
+R=./src/cpld_det_sim.v|401
+S/cbd2re=S/CBD2RE 40|0|2*54724
+
+[CBD2RLE]
+A/CBD2RLE=22|./src/cpld_det_sim.v|429|1*11169
+B/CBD2RLE=3*48164
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=2-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=345,554,808,925
+R=./src/cpld_det_sim.v|429
+S/cbd2rle=S/CBD2RLE 40|0|2*58952
+
+[CBD2X1]
+A/CBD2X1=22|./src/cpld_det_sim.v|460|1*12073
+B/CBD2X1=3*52071
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=2-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=485,745,1117,1299
+R=./src/cpld_det_sim.v|460
+S/cbd2x1=S/CBD2X1 40|0|2*64331
+
+[CBD2X2]
+A/CBD2X2=22|./src/cpld_det_sim.v|532|1*13152
+B/CBD2X2=3*58785
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=2-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=481,740,1112,1292
+R=./src/cpld_det_sim.v|532
+S/cbd2x2=S/CBD2X2 40|0|2*71281
+
+[CBD4CE]
+A/CBD4CE=22|./src/cpld_det_sim.v|603|1*14215
+B/CBD4CE=3*65451
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=288,492,725,834
+R=./src/cpld_det_sim.v|603
+S/cbd4ce=S/CBD4CE 40|0|2*78228
+
+[CBD4CLE]
+A/CBD4CLE=22|./src/cpld_det_sim.v|629|1*15086
+B/CBD4CLE=3*68549
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=351,562,813,928
+R=./src/cpld_det_sim.v|629
+S/cbd4cle=S/CBD4CLE 40|0|2*82453
+
+[CBD4CLED]
+A/CBD4CLED=22|./src/cpld_det_sim.v|660|1*15990
+B/CBD4CLED=3*72552
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=423,663,953,1083
+R=./src/cpld_det_sim.v|660
+S/cbd4cled=S/CBD4CLED 40|0|2*87831
+
+[CBD4RE]
+A/CBD4RE=22|./src/cpld_det_sim.v|698|1*16927
+B/CBD4RE=3*77480
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=284,489,724,835
+R=./src/cpld_det_sim.v|698
+S/cbd4re=S/CBD4RE 40|0|2*93776
+
+[CBD4RLE]
+A/CBD4RLE=22|./src/cpld_det_sim.v|726|1*17798
+B/CBD4RLE=3*80530
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=347,558,812,929
+R=./src/cpld_det_sim.v|726
+S/cbd4rle=S/CBD4RLE 40|0|2*98006
+
+[CBD4X1]
+A/CBD4X1=22|./src/cpld_det_sim.v|757|1*18702
+B/CBD4X1=3*84437
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=489,758,1127,1306
+R=./src/cpld_det_sim.v|757
+S/cbd4x1=S/CBD4X1 40|0|2*103387
+
+[CBD4X2]
+A/CBD4X2=22|./src/cpld_det_sim.v|827|1*19781
+B/CBD4X2=3*91151
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=481,751,1083,1271
+R=./src/cpld_det_sim.v|827
+S/cbd4x2=S/CBD4X2 40|0|2*110339
+
+[CBD8CE]
+A/CBD8CE=22|./src/cpld_det_sim.v|901|1*20764
+B/CBD8CE=3*97229
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=292,496,729,838
+R=./src/cpld_det_sim.v|901
+S/cbd8ce=S/CBD8CE 40|0|2*117404
+
+[CBD8CLE]
+A/CBD8CLE=22|./src/cpld_det_sim.v|927|1*21635
+B/CBD8CLE=3*100327
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=355,567,818,933
+R=./src/cpld_det_sim.v|927
+S/cbd8cle=S/CBD8CLE 40|0|2*121633
+
+[CBD8CLED]
+A/CBD8CLED=22|./src/cpld_det_sim.v|958|1*22539
+B/CBD8CLED=3*104330
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=431,667,962,1092
+R=./src/cpld_det_sim.v|958
+S/cbd8cled=S/CBD8CLED 40|0|2*127021
+
+[CBD8RE]
+A/CBD8RE=22|./src/cpld_det_sim.v|996|1*23492
+B/CBD8RE=3*109534
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=288,493,728,839
+R=./src/cpld_det_sim.v|996
+S/cbd8re=S/CBD8RE 40|0|2*132968
+
+[CBD8RLE]
+A/CBD8RLE=22|./src/cpld_det_sim.v|1024|1*24363
+B/CBD8RLE=3*112584
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=351,563,817,934
+R=./src/cpld_det_sim.v|1024
+S/cbd8rle=S/CBD8RLE 40|0|2*137202
+
+[CBD8X1]
+A/CBD8X1=22|./src/cpld_det_sim.v|1055|1*25267
+B/CBD8X1=3*116491
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+P/~emb=497,761,1130,1309
+R=./src/cpld_det_sim.v|1055
+S/cbd8x1=S/CBD8X1 40|0|2*142587
+
+[CBD8X2]
+A/CBD8X2=22|./src/cpld_det_sim.v|1125|1*26346
+B/CBD8X2=3*123205
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+P/~emb=489,753,1085,1273
+R=./src/cpld_det_sim.v|1125
+S/cbd8x2=S/CBD8X2 40|0|2*149541
+
+[CDD4CE]
+A/CDD4CE=22|./src/cpld_det_sim.v|1199|1*27329
+B/CDD4CE=3*129283
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Cascadable Dual Edge Triggered BCD Counter with Clock Enable and Asynchronous Clear
+P/~emb=227,445,669,791
+R=./src/cpld_det_sim.v|1199
+S/cdd4ce=S/CDD4CE 40|0|2*156610
+
+[CDD4CLE]
+A/CDD4CLE=22|./src/cpld_det_sim.v|1238|1*28088
+B/CDD4CLE=3*131929
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Cascadable Dual Edge Triggered BCD Counter with Clock Enable and Asynchronous Clear
+P/~emb=284,509,755,883
+R=./src/cpld_det_sim.v|1238
+S/cdd4cle=S/CDD4CLE 40|0|2*160746
+
+[CDD4RE]
+A/CDD4RE=22|./src/cpld_det_sim.v|1281|1*28880
+B/CDD4RE=3*134900
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Cascadable Dual Edge Triggered BCD Counter with Clock Enable and Synchronous Reset
+P/~emb=223,442,668,792
+R=./src/cpld_det_sim.v|1281
+S/cdd4re=S/CDD4RE 40|0|2*166025
+
+[CDD4RLE]
+A/CDD4RLE=22|./src/cpld_det_sim.v|1320|1*29639
+B/CDD4RLE=3*137498
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Cascadable Dual Edge Triggered BCD Counter with Clock Enable and Synchronous Reset
+P/~emb=280,505,755,887
+R=./src/cpld_det_sim.v|1320
+S/cdd4rle=S/CDD4RLE 40|0|2*170162
+
+[CJD4CE]
+A/CJD4CE=22|./src/cpld_det_sim.v|1363|1*30415
+B/CJD4CE=3*140421
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Asynchronous Clear
+P/~emb=195,368,543,659
+R=./src/cpld_det_sim.v|1363
+S/cjd4ce=S/CJD4CE 40|0|2*175444
+
+[CJD4RE]
+A/CJD4RE=22|./src/cpld_det_sim.v|1388|1*31174
+B/CJD4RE=3*147519
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Synchronous Reset
+P/~emb=191,361,538,656
+R=./src/cpld_det_sim.v|1388
+S/cjd4re=S/CJD4RE 40|0|2*178610
+
+[CJD5CE]
+A/CJD5CE=22|./src/cpld_det_sim.v|1413|1*31933
+B/CJD5CE=3*154497
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=5-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Asynchronous Clear
+P/~emb=195,368,543,659
+R=./src/cpld_det_sim.v|1413
+S/cjd5ce=S/CJD5CE 40|0|2*181773
+
+[CJD5RE]
+A/CJD5RE=22|./src/cpld_det_sim.v|1438|1*32692
+B/CJD5RE=3*161595
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=5-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Synchronous Reset
+P/~emb=191,361,538,656
+R=./src/cpld_det_sim.v|1438
+S/cjd5re=S/CJD5RE 40|0|2*184939
+
+[CJD8CE]
+A/CJD8CE=22|./src/cpld_det_sim.v|1463|1*33451
+B/CJD8CE=3*168573
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Asynchronous Clear
+P/~emb=195,368,543,659
+R=./src/cpld_det_sim.v|1463
+S/cjd8ce=S/CJD8CE 40|0|2*188102
+
+[CJD8RE]
+A/CJD8RE=22|./src/cpld_det_sim.v|1488|1*34210
+B/CJD8RE=3*175671
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Synchronous Reset
+P/~emb=191,361,538,656
+R=./src/cpld_det_sim.v|1488
+S/cjd8re=S/CJD8RE 40|0|2*191268
+
+[FDD]
+A/FDD=22|./src/cpld_det_sim.v|1513|1*34969
+B/FDD=3*182649
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop
+P/~emb=127,274,396,479
+R=./src/cpld_det_sim.v|1513
+S/fdd=S/FDD 40|0|2*194431
+
+[FDD16]
+A/FDD16=22|./src/cpld_det_sim.v|1530|1*35581
+B/FDD16=3*183339
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16 Dual Edge Triggered D Flip-Flops
+P/~emb=143,297,436,519
+R=./src/cpld_det_sim.v|1530
+S/fdd16=S/FDD16 40|0|2*196722
+
+[FDD16CE]
+A/FDD16CE=22|./src/cpld_det_sim.v|1547|1*36227
+B/FDD16CE=3*184055
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Dual Edge Triggered Data Registers with Clock Enable and Asynchronous Clear
+P/~emb=203,376,537,643
+R=./src/cpld_det_sim.v|1547
+S/fdd16ce=S/FDD16CE 40|0|2*199313
+
+[FDD16RE]
+A/FDD16RE=22|./src/cpld_det_sim.v|1571|1*36907
+B/FDD16RE=3*185025
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Dual Edge Triggered Data Registers with Clock Enable and Synchronous Reset
+P/~emb=199,369,532,623
+R=./src/cpld_det_sim.v|1571
+S/fdd16re=S/FDD16RE 40|0|2*203077
+
+[FDD4]
+A/FDD4=22|./src/cpld_det_sim.v|1593|1*37587
+B/FDD4=3*185947
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4 Dual Edge Triggered D Flip-Flops
+P/~emb=139,291,430,513
+R=./src/cpld_det_sim.v|1593
+S/fdd4=S/FDD4 40|0|2*206840
+
+[FDD4CE]
+A/FDD4CE=22|./src/cpld_det_sim.v|1610|1*38232
+B/FDD4CE=3*186662
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Dual Edge Triggered Data Registers with Clock Enable and Asynchronous Clear
+P/~emb=199,371,532,638
+R=./src/cpld_det_sim.v|1610
+S/fdd4ce=S/FDD4CE 40|0|2*209426
+
+[FDD4RE]
+A/FDD4RE=22|./src/cpld_det_sim.v|1634|1*38911
+B/FDD4RE=3*187631
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Dual Edge Triggered Data Registers with Clock Enable and Synchronous Reset
+P/~emb=195,364,527,618
+R=./src/cpld_det_sim.v|1634
+S/fdd4re=S/FDD4RE 40|0|2*213185
+
+[FDD8]
+A/FDD8=22|./src/cpld_det_sim.v|1656|1*39590
+B/FDD8=3*188552
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8 Dual Edge Triggered D Flip-Flops
+P/~emb=139,291,430,513
+R=./src/cpld_det_sim.v|1656
+S/fdd8=S/FDD8 40|0|2*216943
+
+[FDD8CE]
+A/FDD8CE=22|./src/cpld_det_sim.v|1673|1*40235
+B/FDD8CE=3*189267
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Dual Edge Triggered Data Registers with Clock Enable and Asynchronous Clear
+P/~emb=199,371,532,638
+R=./src/cpld_det_sim.v|1673
+S/fdd8ce=S/FDD8CE 40|0|2*219529
+
+[FDD8RE]
+A/FDD8RE=22|./src/cpld_det_sim.v|1697|1*40914
+B/FDD8RE=3*190236
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Dual Edge Triggered Data Registers with Clock Enable and Synchronous Reset
+P/~emb=195,364,527,618
+R=./src/cpld_det_sim.v|1697
+S/fdd8re=S/FDD8RE 40|0|2*223290
+
+[FDDC]
+A/FDDC=22|./src/cpld_det_sim.v|1719|1*41593
+B/FDDC=3*191157
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=D Dual Edge Triggered Flip-Flop with Asynchronous Clear
+P/~emb=158,312,449,552
+R=./src/cpld_det_sim.v|1719
+S/fddc=S/FDDC 40|0|2*227044
+
+[FDDCE]
+A/FDDCE=22|./src/cpld_det_sim.v|1742|1*42206
+B/FDDCE=3*192136
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Clock Enable and Asynchronous Clear
+P/~emb=187,349,493,599
+R=./src/cpld_det_sim.v|1742
+S/fddce=S/FDDCE 40|0|2*229992
+
+[FDDCP]
+A/FDDCP=22|./src/cpld_det_sim.v|1767|1*42836
+B/FDDCP=3*193201
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual EdgeArchitectures Supported Triggered D Flip-Flop Asynchronous Preset and Clear
+P/~emb=189,352,495,601
+R=./src/cpld_det_sim.v|1767
+S/fddcp=S/FDDCP 40|0|2*233442
+
+[FDDCPE]
+A/FDDCPE=22|./src/cpld_det_sim.v|1794|1*43466
+B/FDDCPE=3*194470
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Clock Enable and Asynchronous Preset and Clear
+P/~emb=218,386,537,646
+R=./src/cpld_det_sim.v|1794
+S/fddcpe=S/FDDCPE 40|0|2*237034
+
+[FDDP]
+A/FDDP=22|./src/cpld_det_sim.v|1821|1*44113
+B/FDDP=3*195812
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Asynchronous Preset
+P/~emb=158,312,449,552
+R=./src/cpld_det_sim.v|1821
+S/fddp=S/FDDP 40|0|2*241133
+
+[FDDPE]
+A/FDDPE=22|./src/cpld_det_sim.v|1844|1*44726
+B/FDDPE=3*196791
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Clock Enable and Asynchronous Preset
+P/~emb=187,349,493,599
+R=./src/cpld_det_sim.v|1844
+S/fddpe=S/FDDPE 40|0|2*244077
+
+[FDDR]
+A/FDDR=22|./src/cpld_det_sim.v|1868|1*45356
+B/FDDR=3*197856
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Reset
+P/~emb=154,306,445,550
+R=./src/cpld_det_sim.v|1868
+S/fddr=S/FDDR 40|0|2*247523
+
+[FDDRE]
+A/FDDRE=22|./src/cpld_det_sim.v|1891|1*45969
+B/FDDRE=3*198787
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Clock Enable and Synchronous Reset
+P/~emb=183,342,488,596
+R=./src/cpld_det_sim.v|1891
+S/fddre=S/FDDRE 40|0|2*250468
+
+[FDDRS]
+A/FDDRS=22|./src/cpld_det_sim.v|1915|1*46599
+B/FDDRS=3*199803
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Reset and Set
+P/~emb=181,337,485,595
+R=./src/cpld_det_sim.v|1915
+S/fddrs=S/FDDRS 40|0|2*253925
+
+[FDDRSE]
+A/FDDRSE=22|./src/cpld_det_sim.v|1941|1*47229
+B/FDDRSE=3*200976
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Reset and Set and Clock Enable
+P/~emb=210,373,528,641
+R=./src/cpld_det_sim.v|1941
+S/fddrse=S/FDDRSE 40|0|2*257503
+
+[FDDS]
+A/FDDS=22|./src/cpld_det_sim.v|1968|1*47860
+B/FDDS=3*202234
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Set
+P/~emb=154,306,443,546
+R=./src/cpld_det_sim.v|1968
+S/fdds=S/FDDS 40|0|2*388027
+
+[FDDSE]
+A/FDDSE=22|./src/cpld_det_sim.v|1992|1*48473
+B/FDDSE=3*203165
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=D Flip-Flop with Clock Enable and Synchronous Set
+P/~emb=183,342,486,592
+R=./src/cpld_det_sim.v|1992
+S/fddse=S/FDDSE 40|0|2*261594
+
+[FDDSR]
+A/FDDSR=22|./src/cpld_det_sim.v|2016|1*49103
+B/FDDSR=3*204181
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Set and Reset
+P/~emb=181,337,485,595
+R=./src/cpld_det_sim.v|2016
+S/fddsr=S/FDDSR 40|0|2*265024
+
+[FDDSRE]
+A/FDDSRE=22|./src/cpld_det_sim.v|2042|1*49733
+B/FDDSRE=3*205354
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Set and Reset and Clock Enable
+P/~emb=210,373,528,641
+R=./src/cpld_det_sim.v|2042
+S/fddsre=S/FDDSRE 40|0|2*268602
+
+[FTDC]
+A/FTDC=22|./src/cpld_det_sim.v|2069|1*50364
+B/FTDC=3*206612
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle Flip-Flop with Asynchronous Clear
+P/~emb=158,317,492,595
+R=./src/cpld_det_sim.v|2069
+S/ftdc=S/FTDC 40|0|2*390958
+
+[FTDCE]
+A/FTDCE=22|./src/cpld_det_sim.v|2096|1*51057
+B/FTDCE=3*207980
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle Flip-Flop with Toggle and Clock Enable and Asynchronous Clear
+P/~emb=187,352,534,640
+R=./src/cpld_det_sim.v|2096
+S/ftdce=S/FTDCE 40|0|2*272693
+
+[FTDCLE]
+A/FTDCLE=22|./src/cpld_det_sim.v|2123|1*51751
+B/FTDCLE=3*209433
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Asynchronous Clear
+P/~emb=239,413,608,720
+R=./src/cpld_det_sim.v|2123
+S/ftdcle=S/FTDCLE 40|0|2*287937
+
+[FTDCLEX]
+A/FTDCLEX=22|./src/cpld_det_sim.v|2154|1*52462
+B/FTDCLEX=3*211199
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Asynchronous Clear
+P/~emb=241,416,611,723
+R=./src/cpld_det_sim.v|2154
+S/ftdclex=S/FTDCLEX 40|0|2*292414
+
+[FTDCP]
+A/FTDCP=22|./src/cpld_det_sim.v|2185|1*53174
+B/FTDCP=3*212966
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Toggle Flip-Flop with Toggle Enable and Asynchronous Clear and Preset
+P/~emb=189,355,537,643
+R=./src/cpld_det_sim.v|2185
+S/ftdcp=S/FTDCP 40|0|2*276169
+
+[FTDCPE]
+A/FTDCPE=22|./src/cpld_det_sim.v|2214|1*53868
+B/FTDCPE=3*214623
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Toggle Flip-Flop with Toggle Enable and Asynchronous Clear and Clock Enable and Preset
+P/~emb=218,389,578,687
+R=./src/cpld_det_sim.v|2214
+S/ftdcpe=S/FTDCPE 40|0|2*279728
+
+[FTDCPLE]
+A/FTDCPLE=22|./src/cpld_det_sim.v|2244|1*54579
+B/FTDCPLE=3*216365
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Asynchronous Clear and Preset
+P/~emb=270,450,652,767
+R=./src/cpld_det_sim.v|2244
+S/ftdcple=S/FTDCPLE 40|0|2*393911
+
+[FTDPE]
+A/FTDPE=22|./src/cpld_det_sim.v|2278|1*55307
+B/FTDPE=3*218420
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle Flip-Flop with Toggle and Clock Enable and Asynchronous Preset
+P/~emb=187,354,536,642
+R=./src/cpld_det_sim.v|2278
+S/ftdpe=S/FTDPE 40|0|2*399020
+
+[FTDPLE]
+A/FTDPLE=22|./src/cpld_det_sim.v|2305|1*56001
+B/FTDPLE=3*219873
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Asynchronous Preset
+P/~emb=239,415,610,722
+R=./src/cpld_det_sim.v|2305
+S/ftdple=S/FTDPLE 40|0|2*402485
+
+[FTDRSE]
+A/FTDRSE=22|./src/cpld_det_sim.v|2336|1*56712
+B/FTDRSE=3*221639
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle Flip-Flop with Toggle and Clock Enable and Synchronous Reset and Set
+P/~emb=210,373,569,682
+R=./src/cpld_det_sim.v|2336
+S/ftdrse=S/FTDRSE 40|0|2*283830
+
+[FTDRSLE]
+A/FTDRSLE=22|./src/cpld_det_sim.v|2366|1*57407
+B/FTDRSLE=3*223285
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Synchronous Reset and Set
+P/~emb=262,437,643,762
+R=./src/cpld_det_sim.v|2366
+S/ftdrsle=S/FTDRSLE 40|0|2*296912
+
+[FTDSRE]
+A/FTDSRE=22|./src/cpld_det_sim.v|2400|1*58135
+B/FTDSRE=3*225244
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle Flip-Flop with Toggle and Clock Enable and Synchronous Reset and Set
+P/~emb=210,376,569,682
+R=./src/cpld_det_sim.v|2400
+S/ftdsre=S/FTDSRE 40|0|2*406950
+
+[FTDSRLE]
+A/FTDSRLE=22|./src/cpld_det_sim.v|2430|1*58846
+B/FTDSRLE=3*226890
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Synchronous Reset and Set
+P/~emb=262,437,643,762
+R=./src/cpld_det_sim.v|2430
+S/ftdsrle=S/FTDSRLE 40|0|2*411050
+
+[SRD16CE]
+A/SRD16CE=22|./src/cpld_det_sim.v|2464|1*59574
+B/SRD16CE=3*228849
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=227,408,574,680
+R=./src/cpld_det_sim.v|2464
+S/srd16ce=S/SRD16CE 40|0|2*302020
+
+[SRD16CLE]
+A/SRD16CLE=22|./src/cpld_det_sim.v|2487|1*60334
+B/SRD16CLE=3*232788
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=290,478,661,773
+R=./src/cpld_det_sim.v|2487
+S/srd16cle=S/SRD16CLE 40|0|2*305714
+
+[SRD16CLED]
+A/SRD16CLED=22|./src/cpld_det_sim.v|2514|1*61127
+B/SRD16CLED=3*237704
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=352,553,742,860
+R=./src/cpld_det_sim.v|2514
+S/srd16cled=S/SRD16CLED 40|0|2*310568
+
+[SRD16RE]
+A/SRD16RE=22|./src/cpld_det_sim.v|2544|1*61937
+B/SRD16RE=3*245245
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=223,402,572,682
+R=./src/cpld_det_sim.v|2544
+S/srd16re=S/SRD16RE 40|0|2*316370
+
+[SRD16RLE]
+A/SRD16RLE=22|./src/cpld_det_sim.v|2567|1*62697
+B/SRD16RLE=3*249124
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=286,472,659,775
+R=./src/cpld_det_sim.v|2567
+S/srd16rle=S/SRD16RLE 40|0|2*320055
+
+[SRD16RLED]
+A/SRD16RLED=22|./src/cpld_det_sim.v|2594|1*63490
+B/SRD16RLED=3*253956
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=16-Bit Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=348,548,742,864
+R=./src/cpld_det_sim.v|2594
+S/srd16rled=S/SRD16RLED 40|0|2*324906
+
+[SRD4CE]
+A/SRD4CE=22|./src/cpld_det_sim.v|2624|1*64300
+B/SRD4CE=3*261449
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=224,403,569,675
+R=./src/cpld_det_sim.v|2624
+S/srd4ce=S/SRD4CE 40|0|2*330709
+
+[SRD4CLE]
+A/SRD4CLE=22|./src/cpld_det_sim.v|2647|1*65059
+B/SRD4CLE=3*265387
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=287,473,656,768
+R=./src/cpld_det_sim.v|2647
+S/srd4cle=S/SRD4CLE 40|0|2*334399
+
+[SRD4CLED]
+A/SRD4CLED=22|./src/cpld_det_sim.v|2674|1*65851
+B/SRD4CLED=3*270302
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=349,548,737,855
+R=./src/cpld_det_sim.v|2674
+S/srd4cled=S/SRD4CLED 40|0|2*339249
+
+[SRD4RE]
+A/SRD4RE=22|./src/cpld_det_sim.v|2704|1*66660
+B/SRD4RE=3*277842
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=220,397,567,677
+R=./src/cpld_det_sim.v|2704
+S/srd4re=S/SRD4RE 40|0|2*345047
+
+[SRD4RLE]
+A/SRD4RLE=22|./src/cpld_det_sim.v|2727|1*67419
+B/SRD4RLE=3*281720
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=283,467,658,774
+R=./src/cpld_det_sim.v|2727
+S/srd4rle=S/SRD4RLE 40|0|2*348728
+
+[SRD4RLED]
+A/SRD4RLED=22|./src/cpld_det_sim.v|2754|1*68211
+B/SRD4RLED=3*286563
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=4-Bit Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=345,543,746,868
+R=./src/cpld_det_sim.v|2754
+S/srd4rled=S/SRD4RLED 40|0|2*353575
+
+[SRD8CE]
+A/SRD8CE=22|./src/cpld_det_sim.v|2784|1*69020
+B/SRD8CE=3*294055
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=224,403,569,675
+R=./src/cpld_det_sim.v|2784
+S/srd8ce=S/SRD8CE 40|0|2*359374
+
+[SRD8CLE]
+A/SRD8CLE=22|./src/cpld_det_sim.v|2807|1*69779
+B/SRD8CLE=3*297993
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=287,473,656,768
+R=./src/cpld_det_sim.v|2807
+S/srd8cle=S/SRD8CLE 40|0|2*363058
+
+[SRD8CLED]
+A/SRD8CLED=22|./src/cpld_det_sim.v|2834|1*70571
+B/SRD8CLED=3*302908
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+P/~emb=349,548,737,855
+R=./src/cpld_det_sim.v|2834
+S/srd8cled=S/SRD8CLED 40|0|2*367904
+
+[SRD8RE]
+A/SRD8RE=22|./src/cpld_det_sim.v|2864|1*71380
+B/SRD8RE=3*310448
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=220,397,567,677
+R=./src/cpld_det_sim.v|2864
+S/srd8re=S/SRD8RE 40|0|2*373702
+
+[SRD8RLE]
+A/SRD8RLE=22|./src/cpld_det_sim.v|2887|1*72139
+B/SRD8RLE=3*314326
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=283,467,654,770
+R=./src/cpld_det_sim.v|2887
+S/srd8rle=S/SRD8RLE 40|0|2*377387
+
+[SRD8RLED]
+A/SRD8RLED=22|./src/cpld_det_sim.v|2914|1*72931
+B/SRD8RLED=3*319169
+C=8.2.1986.SP1.35.3497  (Windows)
+P/description=8-Bit Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+P/~emb=345,543,737,859
+R=./src/cpld_det_sim.v|2914
+S/srd8rled=S/SRD8RLED 40|0|2*382232
+
+[~A]
+Comment=XILINX ISE 12.1, CPLD VERILOG LIBRARY
+LastVerilogToplevel=SRD8RLED
+ModifyID=2140
+ReadOnly=1
+Standard=1
+Vendor=XILINX
+Version=73
+h:/ncsrc/vlib/xilinx_verilog/ovi_cpld/src/cpld_det.v=0*37262*39259
+h:/ncsrc/vlib/xilinx_verilog/ovi_cpld/src/cpld_det_sim.v=0*103548*108125
+
+[~MFT]
+0=0|0ovi_cpld.mgf|108125|0
+1=0|1ovi_cpld.mgf|72931|0
+2=0|2ovi_cpld.mgf|411050|0
+3=0|3ovi_cpld.mgf|319169|0
+
+[~U]
+$root=12|0*39616|
+CBD16CE=12|0*40150||0x93
+CBD16CLE=12|0*40862||0x93
+CBD16CLED=12|0*41639||0x93
+CBD16RE=12|0*42545||0x93
+CBD16RLE=12|0*43257||0x93
+CBD16X1=12|0*44034||0x93
+CBD16X2=12|0*45258||0x93
+CBD2CE=12|0*46482||0x93
+CBD2CLE=12|0*47177||0x93
+CBD2CLED=12|0*47937||0x93
+CBD2RE=12|0*48826||0x93
+CBD2RLE=12|0*49537||0x93
+CBD2X1=12|0*50297||0x93
+CBD2X2=12|0*51504||0x93
+CBD4CE=12|0*52679||0x93
+CBD4CLE=12|0*53374||0x93
+CBD4CLED=12|0*54134||0x93
+CBD4RE=12|0*55023||0x93
+CBD4RLE=12|0*55734||0x93
+CBD4X1=12|0*56494||0x93
+CBD4X2=12|0*57685||0x93
+CBD8CE=12|0*58876||0x93
+CBD8CLE=12|0*59587||0x93
+CBD8CLED=12|0*60347||0x93
+CBD8RE=12|0*61252||0x93
+CBD8RLE=12|0*61963||0x93
+CBD8X1=12|0*62723||0x93
+CBD8X2=12|0*63914||0x93
+CDD4CE=12|0*65105||0x93
+CDD4CLE=12|0*65848||0x93
+CDD4RE=12|0*66640||0x93
+CDD4RLE=12|0*67383||0x93
+CJD4CE=12|0*68175||0x93
+CJD4RE=12|0*68774||0x93
+CJD5CE=12|0*69373||0x93
+CJD5RE=12|0*69988||0x93
+CJD8CE=12|0*70587||0x93
+CJD8RE=12|0*71202||0x93
+FDD=12|0*71801||0x93
+FDD16=12|0*72221||0x93
+FDD16CE=12|0*72691||0x93
+FDD16RE=12|0*73259||0x93
+FDD4=12|0*73811||0x93
+FDD4CE=12|0*74264||0x93
+FDD4RE=12|0*74815||0x93
+FDD8=12|0*75366||0x93
+FDD8CE=12|0*75819||0x93
+FDD8RE=12|0*76386||0x93
+FDDC=12|0*76937||0x93
+FDDCE=12|0*77422||0x93
+FDDCP=12|0*77940||0x93
+FDDCPE=12|0*78474||0x93
+FDDP=12|0*79025||0x93
+FDDPE=12|0*79510||0x93
+FDDR=12|0*80012||0x93
+FDDRE=12|0*80497||0x93
+FDDRS=12|0*80999||0x93
+FDDRSE=12|0*81517||0x93
+FDDS=12|0*82068||0x93
+FDDSE=12|0*82553||0x93
+FDDSR=12|0*83055||0x93
+FDDSRE=12|0*83573||0x93
+FTDC=12|0*84108||0x93
+FTDCE=12|0*84641||0x93
+FTDCLE=12|0*85191||0x93
+FTDCLEX=12|0*85790||0x93
+FTDCP=12|0*86406||0x93
+FTDCPE=12|0*86988||0x93
+FTDCPLE=12|0*87587||0x93
+FTDPE=12|0*88235||0x93
+FTDPLE=12|0*88785||0x93
+FTDRSE=12|0*89384||0x93
+FTDRSLE=12|0*89967||0x93
+FTDSRE=12|0*90599||0x93
+FTDSRLE=12|0*91198||0x93
+SRD16CE=12|0*91830||0x93
+SRD16CLE=12|0*92414||0x93
+SRD16CLED=12|0*93079||0x93
+SRD16RE=12|0*93793||0x93
+SRD16RLE=12|0*94393||0x93
+SRD16RLED=12|0*95042||0x93
+SRD4CE=12|0*95756||0x93
+SRD4CLE=12|0*96339||0x93
+SRD4CLED=12|0*96987||0x93
+SRD4RE=12|0*97700||0x93
+SRD4RLE=12|0*98283||0x93
+SRD4RLED=12|0*98947||0x93
+SRD8CE=12|0*99660||0x93
+SRD8CLE=12|0*100243||0x93
+SRD8CLED=12|0*100891||0x93
+SRD8RE=12|0*101604||0x93
+SRD8RLE=12|0*102187||0x93
+SRD8RLED=12|0*102835||0x93
+

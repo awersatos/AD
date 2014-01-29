@@ -1,0 +1,51 @@
+[Plugin]
+Name=canopen
+Caption=CANopen Protocol Service
+Description=CANopen communication protocol service
+SourceDir=services\platform\canopen\src
+Implement=canopen
+Bitmap=canopen.bmp
+
+[PluginApplicationCode]
+NoGenerate=True
+
+[Instance]
+Caption=CANopen Protocol Context
+Description=CANopen communication protocol context
+Require0=drv_can
+
+[CustomGeneration0]
+Caption=CANopen Configurator...
+GeneratorKind=EXE
+GeneratorPath=services\platform\canopen\tools\configurator\odeditor.exe
+
+[Instance_Option0]
+Name=Dummy
+Kind=UINT8
+AutoValue=0
+
+[Instance_Option0_Hide_If0]
+Kind=TRUE
+
+[Instance_Option0_AutoSet0]
+Interface=timing
+Option=USETIMERS
+AutoValue=True
+
+[Instance_Option1]
+Name=Dummy1
+Kind=UINT8
+AutoValue=0
+
+[Instance_Option1_Hide_If0]
+Kind=TRUE
+
+[Instance_Option1_AutoSet0]
+Interface=drv_can
+Option=rx_buffer
+AutoValue=0
+
+[Instance_Option1_AutoSet1]
+Interface=drv_can
+Option=tx_buffer
+AutoValue=0

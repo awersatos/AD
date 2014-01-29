@@ -1,0 +1,186 @@
+[Plugin]
+Name=drv_vga_1to8bpp
+Description=VGA 1 to 8 Bpp Driver
+Caption=VGA 1 to 8 Bpp Driver
+SourceDir=platform\fpga\drivers\vga_1to8bpp\src
+InitHandler=
+InitHandlerPriority=16
+Implement=drv_vga_1to8bpp
+MinInstances=1
+Bitmap=drv_vga_1to8bpp.bmp
+FrameworkCompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\vga_1to8bpp\include"
+
+[Available_If0]
+kind=PLUGIN
+Object=per_vga32
+Condition=EQ
+
+[Instance]
+Require0=per_vga32
+
+[Instance_Option0]
+Name=resolution
+GUIName=Resolution
+Description=Resolution and Refresh Rate
+UserTypeHeaderFile=drv_vga_1to8bpp.h
+Kind=ENUM
+Type=UINT8
+DefaultValue=640x480
+Enum0=CUSTOM
+Enum1=320x240
+Enum2=640x480
+Enum3=800x600
+Enum4=1024x768
+Enum5=PAL_720x288
+Enum6=NTSC_720x240
+EnumDescription0=Set your own resolution and refresh rate. The user must take care the parameters provided result in valid core-settings.
+EnumDescription1=320 x 240, 70Hz
+EnumDescription2=640 x 480, 60Hz
+EnumDescription3=800 x 600, 60Hz
+EnumDescription4=1024 x 768, 60Hz
+EnumDescription5=720 x 288, 50Hz, PAL, first field and second field contain the same data
+EnumDescription6=720 x 240, 60Hz, NTSC, first field and second field contain the same data
+EnumValue0=VGA_1TO8BPP_RES_CUSTOM
+EnumValue1=VGA_1TO8BPP_RES_320X240
+EnumValue2=VGA_1TO8BPP_RES_640X480
+EnumValue3=VGA_1TO8BPP_RES_800X600
+EnumValue4=VGA_1TO8BPP_RES_1024X768
+EnumValue5=VGA_1TO8BPP_RES_PAL720X288
+EnumValue6=VGA_1TO8BPP_RES_NTSC720X240
+
+[Instance_Option0_AutoSet0]
+Option=hor_res
+AutoValueEnum0=hor_res
+AutoValueEnum1=320
+AutoValueEnum2=640
+AutoValueEnum3=800
+AutoValueEnum4=1024
+AutoValueEnum5=720
+AutoValueEnum6=720
+
+[Instance_Option0_AutoSet1]
+Option=vert_res
+AutoValueEnum0=vert_res
+AutoValueEnum1=240
+AutoValueEnum2=480
+AutoValueEnum3=600
+AutoValueEnum4=768
+AutoValueEnum5=288
+AutoValueEnum6=240
+
+
+[Instance_Option1]
+Name=hor_res
+GUIName=Horizontal Pixel Resolution
+Description=Horizontal Resolution in pixels
+Kind=UINT16
+DefaultValue=640
+MaxRange=1024
+
+[Instance_Option1_Hide_If0]
+Object=resolution
+Kind=OPTION
+Condition=NOTEQ
+Value=CUSTOM
+
+
+
+[Instance_Option2]
+Name=vert_res
+GUIName=Vertical Pixel Resolution
+Description=Vertical Resolution in pixels
+Kind=UINT16
+DefaultValue=480
+MaxRange=768
+
+[Instance_Option2_Hide_If0]
+Object=resolution
+Kind=OPTION
+Condition=NOTEQ
+Value=CUSTOM
+
+
+
+[Instance_Option3]
+Name=hor_freq
+GUIName=Horizontal Frequency
+Description=lines per second
+Kind=UINT32
+DefaultValue=31000
+MaxRange=100000
+
+[Instance_Option3_Hide_If0]
+Object=resolution
+Kind=OPTION
+Condition=NOTEQ
+Value=CUSTOM
+
+
+
+[Instance_Option4]
+Name=vert_freq
+GUIName=Vertical Frequency
+Description=Frame per second
+Kind=UINT8
+DefaultValue=72
+MaxRange=100
+
+[Instance_Option4_Hide_If0]
+Object=resolution
+Kind=OPTION
+Condition=NOTEQ
+Value=CUSTOM
+
+
+
+[Instance_Option5]
+Name=back_porch
+GUIName=Back Porch
+Description=Back Porch is the time between the end of the horizontal sync pulse and the start of active video of the next line. Enter a relative value, 0 = short, 10 = long.
+Kind=UINT8
+DefaultValue=5
+MaxRange=10
+
+[Instance_Option5_Hide_If0]
+Object=resolution
+Kind=OPTION
+Condition=NOTEQ
+Value=CUSTOM
+
+
+
+[Instance_Option6]
+Name=vert_back_porch
+GUIName=Vertical Back Porch
+Description=Vertical back porch is the time between the end of the vertical sync pulse and the start of the first active video line. Enter a relative value, 0 = short, 10 = long.
+Kind=UINT8
+DefaultValue=5
+MaxRange=10
+
+[Instance_Option6_Hide_If0]
+Object=resolution
+Kind=OPTION
+Condition=NOTEQ
+Value=CUSTOM
+
+
+[Instance_Option7]
+Name=color_format
+Description=Color Depth
+UserTypeHeaderFile=drv_vga_1to8bpp.h
+Kind=ENUM
+Type=UINT8
+DefaultValue=COLOR_PALETTE8
+Enum0=COLOR_PALETTE8
+Enum1=COLOR_PALETTE4
+Enum2=COLOR_PALETTE2
+Enum3=COLOR_PALETTE1
+EnumDescription0=8 bpp color palette (256 colors)
+EnumDescription1=4 bpp color palette (16 colors)
+EnumDescription2=2 bpp color palette (4 colors)
+EnumDescription3=1 bpp color palette (2 colors)
+EnumValue0=VGA_1TO8BPP_COLOR_PALETTE8
+EnumValue1=VGA_1TO8BPP_COLOR_PALETTE4
+EnumValue2=VGA_1TO8BPP_COLOR_PALETTE2
+EnumValue3=VGA_1TO8BPP_COLOR_PALETTE1
+

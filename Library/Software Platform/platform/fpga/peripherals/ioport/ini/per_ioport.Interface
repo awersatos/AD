@@ -1,0 +1,6 @@
+[Interface]
+Name=per_ioport
+Category=PERIPHERAL
+System=False
+Description=IOPORT peripheral
+PublicDir=platform\fpga\peripherals\ioport\include

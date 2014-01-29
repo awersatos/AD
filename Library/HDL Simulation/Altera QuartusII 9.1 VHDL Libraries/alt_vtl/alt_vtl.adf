@@ -1,0 +1,32 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=alt_vtl
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+alt_vtl=.
+
+[Library]
+alt_vtl=.\alt_vtl.LIB
+
+[Files]
+/alt_vtl.vhd=-1
+/alt_vtl_cmp.vhd=-1
+/update_alt_vtl.do=-1
+
+[Files.Data]
+.\src\alt_vtl.vhd=VHDL Source Code
+.\src\alt_vtl_cmp.vhd=VHDL Source Code
+.\src\update_alt_vtl.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

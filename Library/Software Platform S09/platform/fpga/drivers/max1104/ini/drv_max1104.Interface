@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_max1104
+Category=DRIVER
+System=False
+Description=MAX1104 8-bit analog-to-digital converter (ADC) and an 8-bit digital-to-analog converter (DAC)
+PublicDir=platform\fpga\drivers\max1104\include
+
+

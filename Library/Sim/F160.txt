@@ -1,0 +1,181 @@
+//============================================================
+# f160 source
+//74F160A Decade counter
+//dm 10-20-97: copied ls160 in LS.TXT
+//	changed SUPPLY_MIN_MAX, VIL_VIL_VALUE,
+//  iol, ioh, iil, iih, icc, rise, fall
+//  setup, hold, width, prop delays values
+//  and count > 9 function.
+//dm 5-18-98: added count_index variable.
+//dw 17-4-00: changed count_index= (internal_reg-9); 
+//  to count_index= (internal_reg-10);
+//  fixing counting from values greater than 9.
+//============================================================
+INPUTS VCC, GND, CEP, CET, CP, PEN, D3, D2, D1, D0, MRN;
+OUTPUTS VCC_LD, CEP_LD, CET_LD, CP_LD, PEN_LD, D3_LD, D2_LD,
+        D1_LD, D0_LD, MRN_LD, TC, Q3, Q2, Q1, Q0;
+INTEGERS internal_reg, count, load, cet_changed, count_index;
+REALS tt_val, tplh_CP_TC, tphl_CP_TC, tplh_COUNT, tphl_COUNT,
+      tplh_LOAD, tphl_LOAD, tplh_CET_TC, tphl_CET_TC, tphl_MR_Q,
+	  tphl_MR_TC, twh_CP_load, twl_CP_load, twh_CP_count,
+	  twl_CP_count, twl_MR, ts_CP_D, th_CP_D, tsh_CP_CE_PE,
+	  tsl_CP_CE_PE, th_CP_CE_PE, trec_MR, ril_val, rih_val,
+	  rih_PE_CET_val, ricc_val;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.5,5.5);	//check for min supply=4.5 and max supply=5.5
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.45,1.55);	//set input threshold values: vil and vih
+IO_PAIRS(CEP:CEP_LD, CET:CET_LD, CP:CP_LD, PEN:PEN_LD, D3:D3_LD,
+         D2:D2_LD, D1:D1_LD, D0:D0_LD, MRN:MRN_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tMRN\tCP\tCEP\tCET\tPEN\tD3\tD2\tD1\tD0\tQ3\tQ2\tQ1\tQ0\tTC");
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 2.5n,  NULL));
+
+    tplh_COUNT= (MIN_TYP_MAX(tp_param: 2n, 4.5n, 7n));
+    tphl_COUNT= (MIN_TYP_MAX(tp_param: 4n, 7n, 10n));
+
+    tplh_LOAD= (MIN_TYP_MAX(tp_param: 2n, 4.5n, 7.5n));
+    tphl_LOAD= (MIN_TYP_MAX(tp_param: 4n, 6n, 8.5n));
+
+    tplh_CP_TC= (MIN_TYP_MAX(tp_param: 4.5n, 8n, 10.5n));
+    tphl_CP_TC= (MIN_TYP_MAX(tp_param: 4.5n, 7.5n, 9.5n));
+
+    tplh_CET_TC= (MIN_TYP_MAX(tp_param: 1.5n, 4n, 6.5n));
+    tphl_CET_TC= (MIN_TYP_MAX(tp_param: 2.5n, 5n, 7n));
+	
+    tphl_MR_Q= (MIN_TYP_MAX(tp_param: 6.5n, 9n, 12n));
+    tphl_MR_TC= (MIN_TYP_MAX(tp_param: 6n, 8n, 10n));
+
+    ts_CP_D = (5n);
+    th_CP_D = (0n);
+    tsh_CP_CE_PE = (11n);
+    tsl_CP_CE_PE = (7n);
+    th_CP_CE_PE = (0n);
+    twh_CP_load = (4n);
+    twl_CP_load = (5n);
+    twh_CP_count = (4n);
+    twl_CP_count = (5.5n);
+    twl_MR = (5n);
+    trec_MR = (5n);
+
+    //F std output drive IOL max=20mA @ vol=0.5V: rol_param=(0.5-vol_param)/20mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 15,  NULL));
+
+    //F std output drive IOH max=-1mA @ voh=4.5V: roh_param=(voh_param-4.5)/1mA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 100, NULL));
+
+    //F input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+    ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //F input load IIL=-600uA @ 0.5V: rih= (voh_param-0.5)/600uA
+    rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 6833.3));
+
+    //F input load IIL=-1.2mA @ 0.5V: rih= (voh_param-0.5)/1.2mA
+    rih_PE_CET_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 3416.7));
+
+    //Icc: 102= 5V/49mA typical, 84.6= 5.5V/65mA max 
+    ricc_val= (MIN_TYP_MAX(i_param: NULL, 102, 84.6));
+
+    internal_reg= (0);					//clear internal register
+    STATE Q0 Q1 Q2 Q3 TC = ZERO;	//initialize outputs
+    EXIT;
+  END;
+
+DRIVE Q0 Q1 Q2 Q3 TC = (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD PEN_LD, CET_LD =
+  (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_PE_CET_val,io=1e9,t=1p);
+LOAD MRN_LD, D0_LD, D1_LD, D2_LD, D3_LD, CEP_LD CP_LD =
+  (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+
+count= (0);
+load= (0);
+IF (MRN) THEN
+  BEGIN
+    IF (CHANGED_LH(CP)) THEN
+      BEGIN									//clock changed L->H
+        IF (PEN) THEN
+          BEGIN
+            IF (CEP && CET) THEN
+              BEGIN							//count
+                count= (1);
+                internal_reg= (internal_reg + 1);
+                IF (internal_reg > 9) THEN
+                  BEGIN
+				    //count from->to: 9->0, 10->11, 11->4, 12->13, 13->4, 14->15, 15->0
+				    count_index= (internal_reg-10);
+					internal_reg= (SELECT_VALUE(count_index:0,11,4,13,4,15,0));
+                  END;
+              END;
+          ELSE								//parallel load
+            load= (1);
+            internal_reg= (NUMBER(D3 D2 D1 D0));
+          END;
+      END;										
+  ELSE
+    internal_reg= (0);						//reset
+  END;
+
+STATE_BIT Q0 Q1 Q2 Q3 = (internal_reg);
+IF (CET && (internal_reg = 9)) THEN			//set terminal count state
+  BEGIN
+    STATE TC = ONE;
+  ELSE
+    STATE TC = ZERO;
+  END;
+
+IF (warn_param) THEN
+  BEGIN
+    WIDTH(MRN Twl= twl_MR "MR");
+    IF (MRN) THEN
+      BEGIN
+	    IF (load) THEN
+		  BEGIN
+            WIDTH(CP Twl= twl_CP_load Twh= twh_CP_load "CP");
+		  ELSE
+		    IF (count) THEN
+			  BEGIN
+                WIDTH(CP Twl= twl_CP_count Twh= twh_CP_count "CP");
+			  END;
+		  END;
+
+        SETUP_HOLD(CP=LH PEN Tsh=tsh_CP_CE_PE Tsl=tsl_CP_CE_PE Th=th_CP_CE_PE "PE->CP");
+        IF (load) THEN
+          BEGIN
+            SETUP_HOLD(CP=LH D0 D1 D2 D3 Ts=ts_CP_D Th=th_CP_D "Dn->CP");
+          ELSE
+            SETUP_HOLD(CP=LH CEP CET Tsh=tsh_CP_CE_PE Tsl=tsl_CP_CE_PE Th=th_CP_CE_PE "CEP or CET->CP");
+          END;
+      END;
+    RECOVER(CP=LH MRN Trec=trec_MR "CLK->MR");
+  END;
+
+//MESSAGE("%f\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//        present_time,MRN,CP,CEP,CET,PEN,D3,D2,D1,D0,Q3,Q2,Q1,Q0,TC);
+
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+DELAY Q0 Q1 Q2 Q3 =
+  CASE (count && TRAN_LH) : tplh_COUNT
+  CASE (count && TRAN_HL) : tphl_COUNT
+
+  CASE (load && TRAN_LH) : tplh_LOAD
+  CASE (load && TRAN_HL) : tphl_LOAD
+
+  CASE (1) : tphl_MR_Q
+END;
+
+cet_changed= (CHANGED(CET));
+DELAY TC =
+  CASE (cet_changed && TRAN_LH) : tplh_CET_TC
+  CASE (cet_changed && TRAN_HL) : tphl_CET_TC
+
+  CASE (TRAN_LH && MRN) : tplh_CP_TC
+  CASE (TRAN_HL && MRN) : tphl_CP_TC
+
+  CASE (1) : tphl_MR_TC
+END;
+EXIT;

@@ -1,0 +1,467 @@
+V 000041 56 971 1260919119845 maxii_dffe
+(_unit maxii_dffe
+	(_specify
+		(_specparam TREG integer 0)
+		(_specparam TREN integer 0)
+		(_specparam TRSU integer 0)
+		(_specparam TRH integer 0)
+		(_specparam TRPR integer 0)
+		(_specparam TRCL integer 0)
+		(_tchk setup 0 206
+			(_port D ())
+			(_port CLK (posedge) (_code  1 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 207
+			(_port CLK (posedge) (_code  2 legal))
+			(_port D ())
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 208
+			(_port ENA ())
+			(_port CLK (posedge) (_code  3 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 209
+			(_port CLK (posedge) (_code  4 legal))
+			(_port ENA ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 211
+			(_port CLRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 212
+			(_port PRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 213
+			(_port CLK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+	)
+)
+V 000042 56 603 1260919119850 maxii_latch
+(_unit maxii_latch
+	(_specify
+		(_tchk setup 0 229
+			(_port D ())
+			(_port ENA (posedge))
+		)
+		(_tchk hold 0 230
+			(_port ENA (negedge))
+			(_port D ())
+		)
+		(_modpath parallel unknown 0 232
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 233
+			(_port ENA in posedge)
+			(_port Q out posedge)
+			(_datain q_out in posedge)
+		)
+		(_modpath parallel positive 0 234
+			(_port PRE in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+		(_modpath parallel positive 0 235
+			(_port CLR in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+	)
+)
+V 000042 56 260 1260919119855 maxii_mux21
+(_unit maxii_mux21
+	(_specify
+		(_modpath parallel unknown 0 293
+			(_port A in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 294
+			(_port B in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 295
+			(_port S in )
+			(_port MO out )
+		)
+	)
+)
+V 000042 56 525 1260919119860 maxii_mux41
+(_unit maxii_mux41
+	(_specify
+		(_modpath parallel unknown 0 330
+			(_port IN0 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 331
+			(_port IN1 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 332
+			(_port IN2 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 333
+			(_port IN3 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 334
+			(_port S (_constant \1\) in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 335
+			(_port S (_constant \0\) in )
+			(_port MO out )
+		)
+	)
+)
+V 000041 56 110 1260919119865 maxii_and1
+(_unit maxii_and1
+	(_specify
+		(_modpath parallel unknown 0 351
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000042 56 111 1260919119870 maxii_and16
+(_unit maxii_and16
+	(_specify
+		(_modpath parallel unknown 0 364
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000050 56 2734 1260919119899 maxii_asynch_lcell
+(_unit maxii_asynch_lcell
+	(_specify
+		(_modpath parallel unknown 0 601
+			(_port dataa in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 602
+			(_port datab in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 603
+			(_port datac in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 604
+			(_port datad in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 605
+			(_port cin in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 606
+			(_port cin0 in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 607
+			(_port cin1 in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 608
+			(_port inverta in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 610
+			(_code  6 qfbk_mode*EQ*1)
+			(_port qfbkin in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 612
+			(_port dataa in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 613
+			(_port datab in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 614
+			(_port cin in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 615
+			(_port cin0 in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 616
+			(_port cin1 in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 617
+			(_port inverta in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 619
+			(_port dataa in )
+			(_port cout0 out )
+		)
+		(_modpath parallel unknown 0 620
+			(_port datab in )
+			(_port cout0 out )
+		)
+		(_modpath parallel unknown 0 621
+			(_port cin0 in )
+			(_port cout0 out )
+		)
+		(_modpath parallel unknown 0 622
+			(_port inverta in )
+			(_port cout0 out )
+		)
+		(_modpath parallel unknown 0 624
+			(_port dataa in )
+			(_port cout1 out )
+		)
+		(_modpath parallel unknown 0 625
+			(_port datab in )
+			(_port cout1 out )
+		)
+		(_modpath parallel unknown 0 626
+			(_port cin1 in )
+			(_port cout1 out )
+		)
+		(_modpath parallel unknown 0 627
+			(_port inverta in )
+			(_port cout1 out )
+		)
+		(_modpath parallel unknown 0 629
+			(_port dataa in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 630
+			(_port datab in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 631
+			(_port datac in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 632
+			(_port datad in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 633
+			(_port cin in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 634
+			(_port cin0 in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 635
+			(_port cin1 in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 636
+			(_port inverta in )
+			(_port regin out )
+		)
+		(_modpath parallel unknown 0 638
+			(_code  7 qfbk_mode*EQ*1)
+			(_port qfbkin in )
+			(_port regin out )
+		)
+	)
+)
+V 000052 56 1646 1260919119904 maxii_lcell_register
+(_unit maxii_lcell_register
+	(_specify
+		(_tchk setuphold 0 960
+			(_port clk (posedge) (_code  6 reset))
+			(_port regcascin ())
+			(_register (regcascin_viol))
+		)
+		(_tchk setuphold 0 961
+			(_port clk (posedge) (_code  7 nosload))
+			(_port datain ())
+			(_register (datain_viol))
+		)
+		(_tchk setuphold 0 962
+			(_port clk (posedge) (_code  8 reset))
+			(_port datac ())
+			(_register (datac_viol))
+		)
+		(_tchk setuphold 0 963
+			(_port clk (posedge) (_code  9 reset))
+			(_port sclr ())
+			(_register (sclr_viol))
+		)
+		(_tchk setuphold 0 964
+			(_port clk (posedge) (_code  10 reset))
+			(_port sload ())
+			(_register (sload_viol))
+		)
+		(_tchk setuphold 0 965
+			(_port clk (posedge) (_code  11 reset))
+			(_port ena ())
+			(_register (ena_viol))
+		)
+		(_modpath parallel positive 0 967
+			(_port clk in posedge)
+			(_port regout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel positive 0 968
+			(_port aclr in posedge)
+			(_port regout out posedge)
+		)
+		(_modpath parallel positive 0 969
+			(_port aload in posedge)
+			(_port regout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel unknown 0 970
+			(_port datac in )
+			(_port regout out )
+		)
+		(_modpath parallel positive 0 971
+			(_port clk in posedge)
+			(_port qfbkout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel positive 0 972
+			(_port aclr in posedge)
+			(_port qfbkout out posedge)
+		)
+		(_modpath parallel positive 0 973
+			(_port aload in posedge)
+			(_port qfbkout out posedge)
+			(_datain iregout in posedge)
+		)
+		(_modpath parallel unknown 0 974
+			(_port datac in )
+			(_port qfbkout out )
+		)
+	)
+)
+V 000041 56 1718 1260919119913 maxii_ufm
+(_unit maxii_ufm
+	(_specify
+		(_modpath parallel unknown 0 1346
+			(_port sbdin in )
+			(_port sbdout out )
+		)
+		(_tchk setup 0 1348
+			(_port arshft ())
+			(_port arclk (posedge))
+		)
+		(_tchk setup 0 1349
+			(_port ardin ())
+			(_port arclk (posedge))
+		)
+		(_tchk setup 0 1350
+			(_port drshft ())
+			(_port drclk (posedge))
+		)
+		(_tchk setup 0 1351
+			(_port drdin ())
+			(_port drclk (posedge))
+		)
+		(_tchk setup 0 1352
+			(_port oscena ())
+			(_port program (posedge))
+		)
+		(_tchk setup 0 1353
+			(_port oscena ())
+			(_port erase (posedge))
+		)
+		(_tchk hold 0 1355
+			(_port arclk (posedge))
+			(_port arshft ())
+		)
+		(_tchk hold 0 1356
+			(_port arclk (posedge))
+			(_port ardin ())
+		)
+		(_tchk hold 0 1357
+			(_port drclk (posedge))
+			(_port drshft ())
+		)
+		(_tchk hold 0 1358
+			(_port drclk (posedge))
+			(_port drdin ())
+		)
+		(_tchk hold 0 1359
+			(_port drclk (posedge))
+			(_port program ())
+		)
+		(_tchk hold 0 1360
+			(_port arclk (posedge))
+			(_port erase ())
+		)
+		(_tchk hold 0 1361
+			(_port busy (negedge))
+			(_port program ())
+		)
+		(_tchk hold 0 1362
+			(_port busy (negedge))
+			(_port erase ())
+		)
+		(_tchk hold 0 1363
+			(_port program (negedge))
+			(_port oscena ())
+		)
+		(_tchk hold 0 1364
+			(_port erase (negedge))
+			(_port oscena ())
+		)
+		(_modpath parallel positive 0 1366
+			(_port program in posedge)
+			(_port busy out posedge)
+		)
+		(_modpath parallel positive 0 1367
+			(_port erase in posedge)
+			(_port busy out posedge)
+		)
+		(_modpath parallel positive 0 1368
+			(_port drclk in posedge)
+			(_port drdout out posedge)
+			(_datain data_reg_msb in posedge)
+		)
+		(_modpath parallel positive 0 1369
+			(_port oscena in posedge)
+			(_port osc out posedge)
+		)
+	)
+)
+V 000039 56 425 1260919119918 maxii_io
+(_unit maxii_io
+	(_specify
+		(_modpath parallel unknown 0 1643
+			(_port padio in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 1644
+			(_port datain in )
+			(_port padio out )
+		)
+		(_modpath parallel positive 0 1645
+			(_port oe in posedge)
+			(_port padio out posedge)
+			(_datain padio_tmp in posedge)
+		)
+		(_modpath parallel positive 0 1646
+			(_port oe in negedge)
+			(_port padio out negedge)
+		)
+	)
+)
+V 000049 56 128 1260919119923 maxii_routing_wire
+(_unit maxii_routing_wire
+	(_specify
+		(_modpath parallel unknown 0 1818
+			(_port datain in )
+			(_port dataout out )
+		)
+	)
+)

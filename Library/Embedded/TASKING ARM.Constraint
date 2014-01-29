@@ -1,0 +1,19 @@
+;...............................................................................
+;Constraints File
+;   Device  :
+;   Board   :
+;   Project :
+;
+;   Created 21/10/2004
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+; Defines the processor's bus layout
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Internal | Memory_BusName=Main | Memory_Width=2 | Memory_Depth=0xFFFFFFFF | ProgramDownloadAddress=0x00000000 | Memory_BusType=ARM:local_bus | Memory_Description = Generic Address Space
+
+; Defines the processor's memory layout on the buses
+Record=NEXUS_CORE | ComponentDesignator=iram | Memory_Width=32 | Memory_Depth=64K  | Memory_PhysicalType=nvram | Memory_UsageType=nvram | ProgramDownloadAddress=0x0000000 | Memory_BusType=ARM:local_bus | Default=True 
+Record=NEXUS_CORE | ComponentDesignator=xram | Memory_Width=32 | Memory_Depth=512k | Memory_PhysicalType=ram   | Memory_UsageType=ram   | ProgramDownloadAddress=0x1000000  | Memory_BusType=ARM:local_bus | Default=True

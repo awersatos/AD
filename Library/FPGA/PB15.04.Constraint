@@ -1,0 +1,63 @@
+;........................................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+Record=Constraint | TargetKind=PCB | TargetId=PB15.04  | Image=PB15.04 | ImageOffsetX=12 | ImageOffsetY=16 | Description=GSM-GPRS-GPS Peripheral Board
+;........................................................................................
+
+;........................................................................................
+Record=Constraint | TargetKind=Connector | TargetId=HDR1
+;........................................................................................
+
+;........................................................................................
+;  NOTE: All ports are named from the FPGA perspective
+;  (e.g. the CTS port below is connected to the RTS port on the SIMCom module).
+;........................................................................................
+
+;........................................................................................
+;  2G Ports
+;........................................................................................
+Record=Constraint | TargetKind=Port | TargetId=RXD_2G_GSM            | ConnectTo=HDR1-4
+Record=Constraint | TargetKind=Port | TargetId=TXD_2G_GSM            | ConnectTo=HDR1-2
+
+Record=Constraint | TargetKind=Port | TargetId=RXD_2G_GPS            | ConnectTo=HDR1-10
+Record=Constraint | TargetKind=Port | TargetId=TXD_2G_GPS            | ConnectTo=HDR1-12
+
+Record=Constraint | TargetKind=Port | TargetId=PWR_TOGGLE_2G         | ConnectTo=HDR1-18
+Record=Constraint | TargetKind=Port | TargetId=PWR_STAT_2G           | ConnectTo=HDR1-22
+Record=Constraint | TargetKind=Port | TargetId=NET_STAT_2G_GSM       | ConnectTo=HDR1-20
+
+Record=Constraint | TargetKind=Port | TargetId=GPIO0_2G              | ConnectTo=HDR1-24
+Record=Constraint | TargetKind=Port | TargetId=GPIO1_2G              | ConnectTo=HDR1-26
+;........................................................................................
+
+
+;........................................................................................
+;  3G Ports
+;........................................................................................
+Record=Constraint | TargetKind=Port | TargetId=RXD_3G                | ConnectTo=HDR1-70
+Record=Constraint | TargetKind=Port | TargetId=TXD_3G                | ConnectTo=HDR1-72
+Record=Constraint | TargetKind=Port | TargetId=RTS_3G                | ConnectTo=HDR1-74
+Record=Constraint | TargetKind=Port | TargetId=DCD_3G                | ConnectTo=HDR1-76
+Record=Constraint | TargetKind=Port | TargetId=CTS_3G                | ConnectTo=HDR1-78
+Record=Constraint | TargetKind=Port | TargetId=DTR_3G                | ConnectTo=HDR1-80
+Record=Constraint | TargetKind=Port | TargetId=RI_3G                 | ConnectTo=HDR1-82
+
+Record=Constraint | TargetKind=Port | TargetId=PWR_TOGGLE_3G         | ConnectTo=HDR1-84
+Record=Constraint | TargetKind=Port | TargetId=RESET_3G              | ConnectTo=HDR1-88
+
+Record=Constraint | TargetKind=Port | TargetId=GPIO0_3G              | ConnectTo=HDR1-90
+Record=Constraint | TargetKind=Port | TargetId=GPIO1_3G              | ConnectTo=HDR1-92  | TargetIdAlias=NET_STAT_3G_GSM
+Record=Constraint | TargetKind=Port | TargetId=GPIO2_3G              | ConnectTo=HDR1-94
+Record=Constraint | TargetKind=Port | TargetId=GPIO3_3G              | ConnectTo=HDR1-30
+Record=Constraint | TargetKind=Port | TargetId=GPIO4_3G              | ConnectTo=HDR1-96
+Record=Constraint | TargetKind=Port | TargetId=GPIO5_3G              | ConnectTo=HDR1-32
+;........................................................................................
+
+;........................................................................................
+;  Module LEDs
+;........................................................................................
+Record=Constraint | TargetKind=Port | TargetId=LED_PWR_ON            | ConnectTo=HDR1-98
+Record=Constraint | TargetKind=Port | TargetId=LED_GSM_NET           | ConnectTo=HDR1-100
+Record=Constraint | TargetKind=Port | TargetId=LED_STATUS            | ConnectTo=HDR1-28
+;........................................................................................
+
+

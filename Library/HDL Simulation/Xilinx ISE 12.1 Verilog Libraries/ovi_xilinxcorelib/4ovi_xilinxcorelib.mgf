@@ -1,0 +1,270 @@
+V 000045 56 1165 1275984312989 BLKMEMDP_V6_2
+(_unit BLKMEMDP_V6_2
+	(_specify
+		(_tchk recovery 0 1298
+			(_port CLKB (posedge))
+			(_port CLKA (posedge) (_code  52 collision_posa_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1299
+			(_port CLKA (posedge))
+			(_port CLKB (posedge) (_code  53 collision_posa_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1302
+			(_port CLKB (negedge))
+			(_port CLKA (posedge) (_code  54 collision_posa_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1303
+			(_port CLKA (posedge))
+			(_port CLKB (negedge) (_code  55 collision_posa_negb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1306
+			(_port CLKB (posedge))
+			(_port CLKA (negedge) (_code  56 collision_nega_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1307
+			(_port CLKA (negedge))
+			(_port CLKB (posedge) (_code  57 collision_nega_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1310
+			(_port CLKB (negedge))
+			(_port CLKA (negedge) (_code  58 collision_nega_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1311
+			(_port CLKA (negedge))
+			(_port CLKB (negedge) (_code  59 collision_nega_negb))
+			(_register (recovery_a))
+		)
+	)
+)
+V 000045 56 1165 1275984349116 BLKMEMDP_V6_3
+(_unit BLKMEMDP_V6_3
+	(_specify
+		(_tchk recovery 0 1298
+			(_port CLKB (posedge))
+			(_port CLKA (posedge) (_code  52 collision_posa_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1299
+			(_port CLKA (posedge))
+			(_port CLKB (posedge) (_code  53 collision_posa_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1302
+			(_port CLKB (negedge))
+			(_port CLKA (posedge) (_code  54 collision_posa_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1303
+			(_port CLKA (posedge))
+			(_port CLKB (negedge) (_code  55 collision_posa_negb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1306
+			(_port CLKB (posedge))
+			(_port CLKA (negedge) (_code  56 collision_nega_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1307
+			(_port CLKA (negedge))
+			(_port CLKB (posedge) (_code  57 collision_nega_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1310
+			(_port CLKB (negedge))
+			(_port CLKA (negedge) (_code  58 collision_nega_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1311
+			(_port CLKA (negedge))
+			(_port CLKB (negedge) (_code  59 collision_nega_negb))
+			(_register (recovery_a))
+		)
+	)
+)
+V 000045 56 1165 1275984413447 BLKMEMDP_V4_0
+(_unit BLKMEMDP_V4_0
+	(_specify
+		(_tchk recovery 0 1160
+			(_port CLKB (posedge))
+			(_port CLKA (posedge) (_code  52 collision_posa_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1161
+			(_port CLKA (posedge))
+			(_port CLKB (posedge) (_code  53 collision_posa_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1164
+			(_port CLKB (negedge))
+			(_port CLKA (posedge) (_code  54 collision_posa_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1165
+			(_port CLKA (posedge))
+			(_port CLKB (negedge) (_code  55 collision_posa_negb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1168
+			(_port CLKB (posedge))
+			(_port CLKA (negedge) (_code  56 collision_nega_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1169
+			(_port CLKA (negedge))
+			(_port CLKB (posedge) (_code  57 collision_nega_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1172
+			(_port CLKB (negedge))
+			(_port CLKA (negedge) (_code  58 collision_nega_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1173
+			(_port CLKA (negedge))
+			(_port CLKB (negedge) (_code  59 collision_nega_negb))
+			(_register (recovery_a))
+		)
+	)
+)
+V 000045 56 1165 1275984466509 BLKMEMDP_V5_0
+(_unit BLKMEMDP_V5_0
+	(_specify
+		(_tchk recovery 0 1162
+			(_port CLKB (posedge))
+			(_port CLKA (posedge) (_code  52 collision_posa_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1163
+			(_port CLKA (posedge))
+			(_port CLKB (posedge) (_code  53 collision_posa_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1166
+			(_port CLKB (negedge))
+			(_port CLKA (posedge) (_code  54 collision_posa_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1167
+			(_port CLKA (posedge))
+			(_port CLKB (negedge) (_code  55 collision_posa_negb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1170
+			(_port CLKB (posedge))
+			(_port CLKA (negedge) (_code  56 collision_nega_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1171
+			(_port CLKA (negedge))
+			(_port CLKB (posedge) (_code  57 collision_nega_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1174
+			(_port CLKB (negedge))
+			(_port CLKA (negedge) (_code  58 collision_nega_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1175
+			(_port CLKA (negedge))
+			(_port CLKB (negedge) (_code  59 collision_nega_negb))
+			(_register (recovery_a))
+		)
+	)
+)
+V 000045 56 1165 1275984538024 BLKMEMDP_V6_0
+(_unit BLKMEMDP_V6_0
+	(_specify
+		(_tchk recovery 0 1296
+			(_port CLKB (posedge))
+			(_port CLKA (posedge) (_code  52 collision_posa_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1297
+			(_port CLKA (posedge))
+			(_port CLKB (posedge) (_code  53 collision_posa_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1300
+			(_port CLKB (negedge))
+			(_port CLKA (posedge) (_code  54 collision_posa_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1301
+			(_port CLKA (posedge))
+			(_port CLKB (negedge) (_code  55 collision_posa_negb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1304
+			(_port CLKB (posedge))
+			(_port CLKA (negedge) (_code  56 collision_nega_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1305
+			(_port CLKA (negedge))
+			(_port CLKB (posedge) (_code  57 collision_nega_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1308
+			(_port CLKB (negedge))
+			(_port CLKA (negedge) (_code  58 collision_nega_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1309
+			(_port CLKA (negedge))
+			(_port CLKB (negedge) (_code  59 collision_nega_negb))
+			(_register (recovery_a))
+		)
+	)
+)
+V 000045 56 1165 1275984542055 BLKMEMDP_V6_1
+(_unit BLKMEMDP_V6_1
+	(_specify
+		(_tchk recovery 0 1296
+			(_port CLKB (posedge))
+			(_port CLKA (posedge) (_code  52 collision_posa_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1297
+			(_port CLKA (posedge))
+			(_port CLKB (posedge) (_code  53 collision_posa_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1300
+			(_port CLKB (negedge))
+			(_port CLKA (posedge) (_code  54 collision_posa_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1301
+			(_port CLKA (posedge))
+			(_port CLKB (negedge) (_code  55 collision_posa_negb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1304
+			(_port CLKB (posedge))
+			(_port CLKA (negedge) (_code  56 collision_nega_posb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1305
+			(_port CLKA (negedge))
+			(_port CLKB (posedge) (_code  57 collision_nega_posb))
+			(_register (recovery_a))
+		)
+		(_tchk recovery 0 1308
+			(_port CLKB (negedge))
+			(_port CLKA (negedge) (_code  58 collision_nega_negb))
+			(_register (recovery_b))
+		)
+		(_tchk recovery 0 1309
+			(_port CLKA (negedge))
+			(_port CLKB (negedge) (_code  59 collision_nega_negb))
+			(_register (recovery_a))
+		)
+	)
+)

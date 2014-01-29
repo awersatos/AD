@@ -1,0 +1,177 @@
+timestamp=1260919157611
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[io_buf_opdrn]
+A/io_buf_opdrn=22|./src/sgate.v|248|1*3996
+B/io_buf_opdrn=3*30319
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=143,318,472,586
+R=./src/sgate.v|248
+
+[io_buf_tri]
+A/io_buf_tri=22|./src/sgate.v|220|1*3329
+B/io_buf_tri=3*29089
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=166,342,501,620
+R=./src/sgate.v|220
+
+[mux21]
+A/mux21=22|./src/sgate.v|190|1*2603
+B/mux21=3*27684
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=207,392,569,691
+R=./src/sgate.v|190
+
+[oper_add]
+A/oper_add=22|./src/sgate.v|18|1*550
+B/oper_add=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=342,891,1236,1505
+R=./src/sgate.v|18
+
+[oper_addsub]
+A/oper_addsub=22|./src/sgate.v|95|1*1519
+B/oper_addsub=3*6172
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=324,706,1029,1191
+R=./src/sgate.v|95
+
+[oper_bus_mux]
+A/oper_bus_mux=22|./src/sgate.v|1072|1*16548
+B/oper_bus_mux=3*167596
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=280,676,1029,1253
+R=./src/sgate.v|1072
+
+[oper_decoder]
+A/oper_decoder=22|./src/sgate.v|1036|1*15719
+B/oper_decoder=3*164812
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=191,508,728,911
+R=./src/sgate.v|1036
+
+[oper_div]
+A/oper_div=22|./src/sgate.v|394|1*6587
+B/oper_div=3*52320
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=278,823,1237,1499
+R=./src/sgate.v|394
+
+[oper_latch]
+A/oper_latch=22|./src/sgate.v|1135|1*17537
+B/oper_latch=3*181885
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=251,432,568,674
+R=./src/sgate.v|1135
+
+[oper_left_shift]
+A/oper_left_shift=22|./src/sgate.v|572|1*8877
+B/oper_left_shift=3*88678
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=341,730,1028,1180
+R=./src/sgate.v|572
+
+[oper_less_than]
+A/oper_less_than=22|./src/sgate.v|853|1*12961
+B/oper_less_than=3*133944
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=337,702,1037,1221
+R=./src/sgate.v|853
+
+[oper_mod]
+A/oper_mod=22|./src/sgate.v|483|1*7732
+B/oper_mod=3*70505
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=278,825,1240,1502
+R=./src/sgate.v|483
+
+[oper_mult]
+A/oper_mult=22|./src/sgate.v|274|1*4649
+B/oper_mult=3*31491
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=356,841,1236,1464
+R=./src/sgate.v|274
+
+[oper_mux]
+A/oper_mux=22|./src/sgate.v|945|1*13984
+B/oper_mux=3*155667
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=228,503,723,848
+R=./src/sgate.v|945
+
+[oper_right_shift]
+A/oper_right_shift=22|./src/sgate.v|649|1*9869
+B/oper_right_shift=3*103106
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=343,733,1042,1206
+R=./src/sgate.v|649
+
+[oper_rotate_left]
+A/oper_rotate_left=22|./src/sgate.v|732|1*10878
+B/oper_rotate_left=3*119679
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=314,828,1153,1373
+R=./src/sgate.v|732
+
+[oper_rotate_right]
+A/oper_rotate_right=22|./src/sgate.v|793|1*11919
+B/oper_rotate_right=3*126811
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=316,831,1157,1378
+R=./src/sgate.v|793
+
+[oper_selector]
+A/oper_selector=22|./src/sgate.v|991|1*14809
+B/oper_selector=3*159779
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=238,534,781,914
+R=./src/sgate.v|991
+
+[tri_bus]
+A/tri_bus=22|./src/sgate.v|347|1*5715
+B/tri_bus=3*47389
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=225,522,753,879
+R=./src/sgate.v|347
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, SGATE VERILOG LIBRARY.
+LastVerilogToplevel=oper_latch
+ModifyID=161
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+h:/ncsrc/vlib/altera_verilog/ovi_sgate/src/sgate.v=0*20348*25719
+
+[~MFT]
+0=21|0ovi_sgate.mgf|25719|0
+1=19|1ovi_sgate.mgf|17537|0
+3=19|3ovi_sgate.mgf|181885|0
+
+[~U]
+$root=12|0*0|
+io_buf_opdrn=12|0*4188||0x90
+io_buf_tri=12|0*3617||0x90
+mux21=12|0*3019||0x90
+oper_add=12|0*374||0x90
+oper_addsub=12|0*1711||0x90
+oper_bus_mux=12|0*18628||0x90
+oper_decoder=12|0*17831||0x90
+oper_div=12|0*6875||0x90
+oper_latch=12|0*19793||0x90
+oper_left_shift=12|0*9901||0x90
+oper_less_than=12|0*14833||0x90
+oper_mod=12|0*8388||0x90
+oper_mult=12|0*4729||0x90
+oper_mux=12|0*16128||0x90
+oper_right_shift=12|0*11085||0x90
+oper_rotate_left=12|0*12334||0x90
+oper_rotate_right=12|0*13583||0x90
+oper_selector=12|0*16921||0x90
+tri_bus=12|0*6019||0x90
+

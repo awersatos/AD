@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_sdcard
+Category=DRIVER
+System=False
+Description=SD card driver
+PublicDir=platform\fpga\drivers\sdcard\include
+
+

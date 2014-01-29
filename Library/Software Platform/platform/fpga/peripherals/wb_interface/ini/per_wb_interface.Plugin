@@ -1,0 +1,43 @@
+[Plugin]
+Name=per_wb_interface
+Implement=per_wb_interface
+HardwareID=WB_INTERFACE
+Caption=Custom Wishbone Device
+Description=Configurable wishbone device to access custom FPGA logic.
+Bitmap=per_wb_interface.bmp
+LargeBitmap=per_wb_interface_large.bmp
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+
+[Instance]
+Require0=
+
+[Instance_CustomGeneration0]
+HeaderFile=wb_interfaces.h
+SourceFile=wb_interfaces.c
+GeneratorKind=CCC
+GeneratorId=WB_INTERFACE
+
+[Instance_Option0]
+Name=BaseAddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+; Note: don't generate any code, this is done by the configurator
+[Instance_Option1]
+Name=FullParamString
+Description=All options encoded in parameter list format. Hidden.
+Kind=String
+Auto=True
+NoGenerate=True
+
+[Instance_Option1_Hide_If0]
+Kind=True

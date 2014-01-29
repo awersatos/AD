@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=machxo
+
+[Library]
+machxo=.\machxo.LIB
+
+[$LibMap$]
+machxo=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_machxo.do=-1
+
+[Files.Data]
+.\src\update_machxo.do=Macro
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+

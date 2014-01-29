@@ -1,0 +1,27 @@
+[Plugin]
+Name=interrupts
+Description=Interrupt management routines
+Caption=Interrupt Management
+InitHandler=interrupts_init
+InitHandlerPriority=10
+SourceDir=services\platform\interrupts\src
+Implement=interrupts
+Require0=pal
+
+[Option0]
+Name=APPLICATION_MASK      
+GUIName=Application Mask     
+Description=Set n-th bit in this mask when the handling of n-interrupt must happen in application code (and not in platform drivers).   
+Kind=UINT32
+DefaultValue=0
+
+[Option1]
+Name=ISR_MAX      
+GUIName=Maximum isrs      
+Description=You use more than one isr per interrupt line if (a) several devices share one line, (b) software reasons or (c) several threads wait simultaneously one one interrupt. Currently not supported and ISR_MAX is fixed to 1. 
+Kind=UINT8
+DefaultValue=1
+MinRange=1
+Auto=True
+
+

@@ -1,0 +1,19 @@
+[Plugin]
+Name=usb_host_network_to_ethernet
+Description=Adapts a usb network device to Ethernet platform level.
+SourceDir=services\platform\ethernet\adaptors\usb_host_network\src
+CompileOption0=-I"$(SSASROOT)\services\platform\ethernet\include"
+CompileOption1=-I"$(SSASROOT)\services\platform\ethernet\internal"
+InitHandler=usb_host_network_to_ethernet_init
+InitHandlerPriority=8
+Implement=ethernet_adaptor
+Require0=ethernet
+
+[Available_If0]
+kind=PLUGIN
+Object=usbhost_network
+Condition=EQ
+
+[Instance]
+Require0=usbhost_network
+

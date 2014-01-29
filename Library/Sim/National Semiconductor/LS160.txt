@@ -1,0 +1,211 @@
+//============================================================
+# ls160 source
+//74LS160A Decade counter
+//INPUTS/OUTPUTS modified to match device symbol: 6-4-97
+//changed STATE to STATE_BIT: dennis 7-20-97
+//rbd 8-22-97: Added IO_PAIRS.
+//  Added io parameter to input LOAD.
+//  Removed v1 and r1 parameters from Vcc LOAD.
+//  Reduced ttlh_val/tthl_val to just tt_val.
+//  Changed Icc calc. to use Vcc max.
+//jm 9-8-97
+//  Changed assigned values of ril_val and ricc_val.
+//  Split ril_val and rih_val into ril1_val, rih1_val, ril2_val, and rih2_val
+//    because Iil and Iih values are double for some pins.
+//  Changed parameter var names to match simcode standard conventions.
+//  Corrected errors setup and hold equations.
+// jjt 17/1/2002: changed out-of-range behaviour to match NSC datasheet.
+//============================================================
+INPUTS VCC, GND, CEP, CET, CP, PEN, D3, D2, D1, D0, MRN;
+OUTPUTS VCC_LD, CEP_LD, CET_LD, CP_LD, PEN_LD, D3_LD, D2_LD,
+        D1_LD, D0_LD, MRN_LD, TC, Q3, Q2, Q1, Q0;
+INTEGERS internal_reg, count, load, cet_changed;
+REALS tt_val, tplh_CP_TC, tphl_CP_TC, tplh_COUNT,
+      tphl_COUNT, tplh_LOAD, tphl_LOAD, tplh_CET_TC, tphl_CET_TC,
+      tphl_RESET, twl_CP, twl_MR, ts_CP_D, th_CP_D, ts_CP_CE_PE,
+      th_CP_CE_PE, trec_MR, ril1_val, ril2_val, rih1_val, rih2_val, ricc_val;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.75,5.25);	//check for min supply=4.75 and max supply=5.25
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.25,1.35);	//set input threshold values: vil and vih
+IO_PAIRS(CEP:CEP_LD, CET:CET_LD, CP:CP_LD, PEN:PEN_LD, D3:D3_LD,
+         D2:D2_LD, D1:D1_LD, D0:D0_LD, MRN:MRN_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tMRN\tCP\tCEP\tCET\tPEN\tD3\tD2\tD1\tD0\tQ3\tQ2\tQ1\tQ0\tTC");
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 5n,  NULL));
+
+    tplh_CP_TC= (MIN_TYP_MAX(tp_param: NULL, 20n, 35n));
+    tphl_CP_TC= (MIN_TYP_MAX(tp_param: NULL, 18n, 35n));
+
+    tplh_COUNT= (MIN_TYP_MAX(tp_param: NULL, 13n, 24n));
+    tphl_COUNT= (MIN_TYP_MAX(tp_param: NULL, 18n, 27n));
+
+    tplh_LOAD= (MIN_TYP_MAX(tp_param: NULL, 13n, 24n));
+    tphl_LOAD= (MIN_TYP_MAX(tp_param: NULL, 18n, 27n));
+
+    tplh_CET_TC= (MIN_TYP_MAX(tp_param: NULL, 9n, 14n));
+    tphl_CET_TC= (MIN_TYP_MAX(tp_param: NULL, 9n, 14n));
+	
+    tphl_RESET= (MIN_TYP_MAX(tp_param: NULL, 20n, 28n));
+
+    twl_CP = (25n);
+    twl_MR = (20n);
+    ts_CP_D = (20n);
+    th_CP_D = (3n);
+    ts_CP_CE_PE = (20n);
+    th_CP_CE_PE = (0n);
+    trec_MR = (15n);
+
+    //LS input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+	ril1_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //LS input load IIL=-0.4mA @ 0.4V: r1= (voh_param-0.4)/0.4mA
+	rih1_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 10.5k));
+
+    //LS input load IIH=40uA @ 2.7V: ril= (2.7-vol_param)/40uA;
+	ril2_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 62.5k));
+
+    //LS input load IIL=-0.8mA @ 0.4V: r1= (voh_param-0.4)/0.8mA
+	rih2_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 5.25k));
+
+    //One device per package, so use full Icc
+	//Icc Typ: 5.0V/19mA = 263ohms
+	//Icc Max: 5.25V/32mA = 164ohms
+    ricc_val= (MIN_TYP_MAX(i_param: NULL, 263, 164));
+
+    internal_reg= (0);					//clear internal register
+    STATE Q0 Q1 Q2 Q3 TC = ZERO;	//initialize outputs
+    EXIT;
+  END;
+
+DRIVE Q0 Q1 Q2 Q3 TC = (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+
+LOAD MRN_LD, D0_LD, D1_LD, D2_LD, D3_LD, CEP_LD =
+  (v0=vol_param,r0=ril1_val,v1=voh_param,r1=rih1_val,io=1e9,t=1p);
+
+LOAD CP_LD, PEN_LD, CET_LD =
+  (v0=vol_param,r0=ril2_val,v1=voh_param,r1=rih2_val,io=1e9,t=1p);
+
+count= (0);
+load= (0);
+IF (MRN) THEN
+  BEGIN
+    IF (CHANGED_LH(CP)) THEN
+      BEGIN										//clock changed L->H
+        IF (PEN) THEN
+          BEGIN
+            IF (CEP && CET) THEN
+              BEGIN								//count
+                count= (1);
+                internal_reg= (internal_reg + 1);
+                IF (internal_reg > 9) THEN
+                  BEGIN
+                    IF (internal_reg = 10) THEN
+                       BEGIN
+                        internal_reg= (11);
+                       ELSE
+                          IF (internal_reg = 11) THEN
+                             BEGIN
+                                internal_reg= (4);
+                             ELSE
+                                IF (internal_reg = 12) THEN
+                                   BEGIN
+                                      internal_reg= (13);
+                                 ELSE
+                                    IF (internal_reg = 13) THEN
+                                       BEGIN
+                                          internal_reg= (4);
+                                     ELSE
+                                        IF (internal_reg = 14) THEN
+                                           BEGIN
+                                              internal_reg= (15);
+                                         ELSE
+                                            IF (internal_reg = 15) THEN
+                                               BEGIN
+                                                   internal_reg= (8);
+                                               END;
+                                           END;
+                                       END;
+                                   END;
+                             END;
+                       END;
+
+                  END;
+              END;
+          ELSE									//parallel load
+            load= (1);
+            internal_reg= (NUMBER(D3 D2 D1 D0));
+          END;
+      END;										
+  ELSE
+    internal_reg= (0);								//reset
+  END;
+
+STATE_BIT Q0 Q1 Q2 Q3 = (internal_reg);
+IF (CET && (internal_reg = 9)) THEN			//set terminal count state
+  BEGIN
+    STATE TC = ONE;
+  ELSE
+    STATE TC = ZERO;
+  END;
+
+IF (warn_param) THEN
+  BEGIN
+    WIDTH(MRN Twl= twl_MR "MR");
+
+//The following warnings are only applicable to the standard 74160 series. rbd 8-22-97
+//    IF (~(CP)) THEN
+//      BEGIN
+//        IF (CHANGED_HL(CEP) || CHANGED_HL(CET)) THEN
+//          BEGIN
+//            MESSAGE("WARNING: CP was LOW when CEP/CET changed H->L");
+//          ELSE
+//            IF (CHANGED_LH(PEN)) THEN
+//              BEGIN
+//                MESSAGE("WARNING: CP was LOW when PE changed L->H");
+//              END;
+//          END;
+//      END;
+
+    IF (MRN) THEN
+      BEGIN
+        WIDTH(CP Twl= twl_CP "CP");
+        SETUP_HOLD(CP=LH PEN Ts=ts_CP_CE_PE Th=th_CP_CE_PE "PE->CP");
+        IF (load) THEN
+          BEGIN
+            SETUP_HOLD(CP=LH D0 D1 D2 D3 Ts=ts_CP_D Th=th_CP_D "Dn->CP");
+          ELSE
+            SETUP_HOLD(CP=LH CEP CET Ts=ts_CP_CE_PE Th=th_CP_CE_PE "CEP or CET ->CP");
+          END;
+      END;
+    RECOVER(CP=LH MRN Trec=trec_MR "CLK->MR");
+  END;
+
+//MESSAGE("%f\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//        present_time,MRN,CP,CEP,CET,PEN,D3,D2,D1,D0,Q3,Q2,Q1,Q0,TC);
+
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+DELAY Q0 Q1 Q2 Q3 =
+  CASE (count && TRAN_LH) : tplh_COUNT
+  CASE (count && TRAN_HL) : tphl_COUNT
+
+  CASE (load && TRAN_LH) : tplh_LOAD
+  CASE (load && TRAN_HL) : tphl_LOAD
+
+  CASE (1) : tphl_RESET			//longest delay used for default
+END;
+
+cet_changed= (CHANGED(CET));
+DELAY TC =
+  CASE (cet_changed && TRAN_LH) : tplh_CET_TC
+  CASE (cet_changed && TRAN_HL) : tphl_CET_TC
+
+  CASE (TRAN_LH) : tplh_CP_TC	//longest delay used for default
+  CASE (TRAN_HL) : tphl_CP_TC	//longest delay used for default
+END;
+EXIT;

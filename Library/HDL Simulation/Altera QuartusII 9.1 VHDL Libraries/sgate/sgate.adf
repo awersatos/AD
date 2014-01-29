@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=sgate
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+sgate=.
+
+[Library]
+sgate=.\sgate.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/sgate.vhd=-1
+/sgate_pack.vhd=-1
+/update_sgate.do=-1
+
+[Files.Data]
+.\src\sgate.vhd=VHDL Source Code
+.\src\sgate_pack.vhd=VHDL Source Code
+.\src\update_sgate.do=Macro
+

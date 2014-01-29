@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_cycloneii
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+ovi_cycloneii=.
+
+[Library]
+ovi_cycloneii=.\ovi_cycloneii.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/cycloneii_atoms.v=-1
+/update_ovi_cycloneii.do=-1
+
+[Files.Data]
+.\src\cycloneii_atoms.v=Verilog Source Code
+.\src\update_ovi_cycloneii.do=Macro
+

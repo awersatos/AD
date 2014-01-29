@@ -1,0 +1,7 @@
+[Plugin]
+Name=ifconfig
+Description=system interface configuration
+SourceDir=system\ifconfig\src
+GlobalCompileOption0=-I"$(SSASROOT)\system\ifconfig\include"
+Implement=ifconfig
+

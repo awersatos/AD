@@ -1,0 +1,10 @@
+[Plugin]
+Name=pal_arch_arm_virtual
+Description=Pal implements the Tasking Virtual Architecture
+Caption=ARM Virtual derivative
+GenerateFile=pal_variant_cfg
+GlobalCompileOption0=-I"$(PRODDIR)\..\..\Library\Software Platform\platform\fpga\processors\carm\internal"
+Implement=pal_arch_arm
+PassiveImplementor=True
+Virtual=True
+

@@ -1,0 +1,30 @@
+[Plugin]
+Name=drv_pwm8
+Description=PWM8 Pulse Width Modulator Driver
+Caption=PWM8 Driver
+SourceDir=platform\fpga\drivers\pwm8\src
+Implement=drv_pwm8
+MinInstances=1
+Bitmap=drv_pwm8.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_pwm8
+Condition=EQ
+
+[Instance]
+Require0=per_pwm8
+
+[Instance_Option0]
+Name=DUTYCYCLE
+GUIName=Duty cycle
+Description=Duty cycle as a percentage of maximum pulse width (256).
+Kind=UINT8
+MaxRange=100
+
+[Instance_Option1]
+Name=FREQUENCY
+GUIName=Signal frequency
+Description=Output signal frequency in Hz. 
+Kind=UINT32
+

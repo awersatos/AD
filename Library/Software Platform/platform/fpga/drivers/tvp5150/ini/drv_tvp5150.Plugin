@@ -1,0 +1,79 @@
+[Plugin]
+Name=drv_tvp5150
+Description=TVP5150 Video Decoder Driver
+Caption=TVP5150 Video Decoder Driver
+Bitmap=drv_tvp5150.bmp
+;HardwareID=VIDEO_INPUT_CTRL ; Not used: no designator by default
+Implement=drv_tvp5150
+SourceDir=platform\fpga\drivers\tvp5150\src
+
+[Option0]
+GUIName=Thread Safe Operation
+Name=USE_MUTEX
+Description=Use a mutex to protect access to TVP5150 devices.
+Kind=BOOLEAN
+DefaultValue=FALSE
+
+[Option0_Available_If0]
+Kind=FALSE
+Object=posix_threads
+Condition=EQ
+
+[Instance]
+Require0=drv_i2cm
+
+[Instance_Option0]
+Name=busaddress
+GUIName=I2C Bus Address
+Description=Address on the I2C bus (default is Nanoboard address).
+Kind=UINT8
+DefaultValue=0xB8
+
+[Instance_Option1]
+Name=format_and_rates
+GUIName=FORMAT
+Description=Outputs and rates register. See TVP5150 documentation.
+Kind=UINT8
+AutoValue=0x27
+
+;; Note: always hidden
+[Instance_Option1_Hide_If0]
+Kind=INTERFACE
+Object=drv_tvp5150
+Condition=EQ
+
+[Instance_Option2]
+Name=shared_pins
+GUIName=SHARED PINS
+Description=Shared pins configuration register. See TVP5150 documentation.
+Kind=UINT8
+AutoValue=0x02
+
+;; Note: always hidden
+[Instance_Option2_Hide_If0]
+Kind=INTERFACE
+Object=drv_tvp5150
+Condition=EQ
+
+[Instance_Option3]
+Name=misc
+GUIName=MISCELLANEOUS
+Description=Miscellaneous control register. See TVP5150 documentation.
+Kind=UINT8
+AutoValue=0xAF
+
+;; Note: always hidden
+[Instance_Option3_Hide_If0]
+Kind=INTERFACE
+Object=drv_tvp5150
+Condition=EQ
+
+[Instance_Option4]
+Name=video_input
+GUIName=Video Source
+Description=Video input source selection. See TVP5150 documentation.
+Kind=ENUM
+Enum0=COMPOSITE_1
+Enum1=SVIDEO
+Enum2=COMPOSITE_2
+DefaultValue=COMPOSITE_1

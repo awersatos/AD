@@ -1,0 +1,348 @@
+object Report: TppReport
+  AutoStop = False
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Message List Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 10160
+  PrinterSetup.mmMarginRight = 10160
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297127
+  PrinterSetup.mmPaperWidth = 210079
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Altium Designer Winter 09\Templates\DRCReport.r' +
+    'tm'
+  Template.Format = ftASCII
+  DeviceType = 'Printer'
+  SavePrinterSetup = True
+  Left = 48
+  Top = 80
+  Version = '6.03'
+  mmColumnWidth = 189759
+  object ppTitleBand1: TppTitleBand
+    mmBottomOffset = 0
+    mmHeight = 20108
+    mmPrintPosition = 0
+    object ppTitleLabel: TppLabel
+      UserName = 'TitleLabel'
+      AutoSize = False
+      Caption = 'Design Rules Verification Report'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 3175
+      mmWidth = 70644
+      BandType = 1
+    end
+    object ProjectLabel: TppLabel
+      UserName = 'ProjectLabel'
+      Caption = 'Project'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      CharWrap = True
+      mmHeight = 15054
+      mmLeft = 0
+      mmTop = 8203
+      mmWidth = 170644
+      BandType = 1
+    end
+    object WarningCountLabel: TppLabel
+      UserName = 'WarningCountLabel'
+      Caption = 'Warning Count'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = []
+      Transparent = True
+      Alignment = taRightJustify
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 8023
+      mmWidth = 40000
+      BandType = 1
+    end
+    object ViolationCountLabel: TppLabel
+      UserName = 'ViolationCountLabel'
+      Caption = 'Violation Count'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = []
+      Transparent = True
+      Alignment = taRightJustify
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 13050
+      mmWidth = 40000
+      BandType = 1
+    end
+  end
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppDetailBand1: TppDetailBand
+    PrintHeight = phStatic
+    mmBottomOffset = 0
+    mmHeight = 4500
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      ParentHeight = True
+      ParentWidth = True
+      Position = lpBottom
+      ShiftWithParent = True
+      Weight = 0.750000000000000000
+      mmHeight = 4500
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 167250
+      BandType = 4
+    end
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      ParentHeight = True
+      ParentWidth = True
+      Position = lpLeft
+      StretchWithParent = True
+      Weight = 0.750000000000000000
+      mmHeight = 4500
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 167250
+      BandType = 4
+    end
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      ParentHeight = True
+      ParentWidth = True
+      Position = lpRight
+      StretchWithParent = True
+      Weight = 0.750000000000000000
+      mmHeight = 4500
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 167250
+      BandType = 4
+    end
+    object ppTitleColumn: TppDBMemo
+      UserName = 'ppTitleColumn'
+      CharWrap = False
+      DataField = 'TitleColumn'
+      KeepTogether = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Stretch = False
+      Transparent = True
+      mmHeight = 4500
+      mmLeft = 1000
+      mmTop = 0
+      mmWidth = 138000
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 500
+    end
+    object ppCountColumn: TppDBMemo
+      UserName = 'ppCountColumn'
+      TextAlignment = taRightJustified
+      CharWrap = False
+      DataField = 'CountColumn'
+      KeepTogether = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Stretch = False
+      Transparent = True
+      mmHeight = 4500
+      mmLeft = 140000
+      mmTop = 0
+      mmWidth = 10000
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 500
+    end
+    object ppSpanColumn: TppDBMemo
+      UserName = 'ppSpanColumn'
+      CharWrap = False
+      DataField = 'SpanColumn'
+      KeepTogether = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Stretch = False
+      Transparent = True
+      mmHeight = 4500
+      mmLeft = 1000
+      mmTop = 0
+      mmWidth = 165250
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 500
+    end
+    object ppLeftColumn: TppDBMemo
+      UserName = 'ppLeftColumn'
+      CharWrap = False
+      DataField = 'LeftColumn'
+      KeepTogether = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Stretch = False
+      Transparent = True
+      mmHeight = 4500
+      mmLeft = 1000
+      mmTop = 0
+      mmWidth = 82125
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 500
+    end
+    object ppRightColumn: TppDBMemo
+      UserName = 'ppRightColumn'
+      CharWrap = False
+      DataField = 'RightColumn'
+      KeepTogether = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Stretch = False
+      Transparent = True
+      mmHeight = 4500
+      mmLeft = 83125
+      mmTop = 0
+      mmWidth = 82125
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 500
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 5556
+    mmPrintPosition = 0
+    object ppLine5: TppLine
+      UserName = 'Line5'
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 1588
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 167250
+      BandType = 8
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      VarType = vtPrintDateTime
+      DisplayFormat = 'dddd d mmm yyyy   h:nn:ss AM/PM'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 4500
+      mmLeft = 0
+      mmTop = 1323
+      mmWidth = 44450
+      BandType = 8
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable2'
+      VarType = vtPageSetDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4500
+      mmLeft = 152250
+      mmTop = 1058
+      mmWidth = 15000
+      BandType = 8
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Group'
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = ''
+    KeepTogether = True
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 7938
+      mmPrintPosition = 0
+      object ppShape: TppShape
+        UserName = 'Shape'
+        Brush.Color = clBlack
+        ParentWidth = True
+        mmHeight = 4500
+        mmLeft = 0
+        mmTop = 3800
+        mmWidth = 167250
+        BandType = 3
+        GroupNo = 0
+      end
+      object GroupHeaderLabel: TppDBText
+        UserName = 'GroupHeaderLabel'
+        DataField = 'Group'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4500
+        mmLeft = 1000
+        mmTop = 3800
+        mmWidth = 165250
+        BandType = 3
+        GroupNo = 0
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+end

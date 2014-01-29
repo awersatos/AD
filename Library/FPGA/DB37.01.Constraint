@@ -1,0 +1,487 @@
+;-------------------------------------------------------------------------------
+;Constraints File
+;   Device  : Xilinx Virtex5 XC5VLX50T-1FF1136C
+;   Board   : NB2 Style - Daughter Board with 3 x 100 Pin Molex Connectors
+;   Created 08-April-2008
+;   Altium Limited
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+Record=FileHeader | Id=DXP Constraints v1.0
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=PCB       | TargetId=DB37.01 | Image=DB37.01 | ImageOffsetX=58 | ImageOffsetY=132 | Description=Xilinx Virtex5 XC5VLX50T-1FF1136C
+Record=Constraint | TargetKind=Part      | TargetId=XC5VLX50T-1FF1136C
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Declare Connectors
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Connector | TargetId=HDR_T | Index=0
+Record=Constraint | TargetKind=Connector | TargetId=HDR_B | Index=1
+Record=Constraint | TargetKind=Connector | TargetId=HDR_L | Index=2
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; General Purpose I/O
+;-------------------------------------------------------------------------------
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-3  | FPGA_PINNUM=AN12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-5  | FPGA_PINNUM=AP12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-7  | FPGA_PINNUM=AP14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-9  | FPGA_PINNUM=AN14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-11 | FPGA_PINNUM=AH10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-13 | FPGA_PINNUM=AG11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-15 | FPGA_PINNUM=AF13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-17 | FPGA_PINNUM=AE14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-19 | FPGA_PINNUM=AH14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-21 | FPGA_PINNUM=AE16
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-23 | FPGA_PINNUM=AG13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-25 | FPGA_PINNUM=AF14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-27 | FPGA_PINNUM=AF15
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-29 | FPGA_PINNUM=AF16
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-31 | FPGA_PINNUM=AG16
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-33 | FPGA_PINNUM=AH17
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-35 | FPGA_PINNUM=AE17
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-37 | FPGA_PINNUM=AG17
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-39 | FPGA_PINNUM=AF18
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-41 | FPGA_PINNUM=AE19
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-43 | FPGA_PINNUM=AD19
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-45 | FPGA_PINNUM=AD20
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-47 | FPGA_PINNUM=AE21
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-49 | FPGA_PINNUM=AE22
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-51 | FPGA_PINNUM=AG18
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-53 | FPGA_PINNUM=AF19
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-55 | FPGA_PINNUM=AF20
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-57 | FPGA_PINNUM=AF21
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-59 | FPGA_PINNUM=AH25
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-61 | FPGA_PINNUM=AE13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-63 | FPGA_PINNUM=AN13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-65 | FPGA_PINNUM=AH8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-67 | FPGA_PINNUM=AH9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-69 | FPGA_PINNUM=AF10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-71 | FPGA_PINNUM=AE11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-73 | FPGA_PINNUM=AE12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-75 | FPGA_PINNUM=AE18
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-77 | FPGA_PINNUM=AE24
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-79 | FPGA_PINNUM=AF25
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-81 | FPGA_PINNUM=AG26
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-83 | FPGA_PINNUM=AH27
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-85 | FPGA_PINNUM=AE23
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-87 | FPGA_PINNUM=AG25
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-89 | FPGA_PINNUM=AJ27
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-91 | FPGA_PINNUM=AK28
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-2  | FPGA_PINNUM=AG22
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-4  | FPGA_PINNUM=AG21
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-6  | FPGA_PINNUM=AH5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-8  | FPGA_PINNUM=AK6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-10 | FPGA_PINNUM=AJ6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-12 | FPGA_PINNUM=AK7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-14 | FPGA_PINNUM=AJ7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-16 | FPGA_PINNUM=AK8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-18 | FPGA_PINNUM=AJ9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-20 | FPGA_PINNUM=AK9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-22 | FPGA_PINNUM=AJ10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-24 | FPGA_PINNUM=AL10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-26 | FPGA_PINNUM=AL11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-28 | FPGA_PINNUM=AM11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-30 | FPGA_PINNUM=AK11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-32 | FPGA_PINNUM=AM12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-34 | FPGA_PINNUM=AH12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-36 | FPGA_PINNUM=AM13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-38 | FPGA_PINNUM=AH13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-40 | FPGA_PINNUM=AH18
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-42 | FPGA_PINNUM=AH19
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-44 | FPGA_PINNUM=AH20
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-46 | FPGA_PINNUM=AG20
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-48 | FPGA_PINNUM=AH22
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-50 | FPGA_PINNUM=AG23
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-52 | FPGA_PINNUM=AF23
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-54 | FPGA_PINNUM=AF24
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-56 | FPGA_PINNUM=AJ25
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-58 | FPGA_PINNUM=AK26
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-60 | FPGA_PINNUM=AJ26
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-62 | FPGA_PINNUM=AK27
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-64 | FPGA_PINNUM=AK29
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-66 | FPGA_PINNUM=AJ30
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-68 | FPGA_PINNUM=AJ31
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-70 | FPGA_PINNUM=AK31
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-72 | FPGA_PINNUM=AK32
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-74 | FPGA_PINNUM=AM32
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-76 | FPGA_PINNUM=AJ32
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-78 | FPGA_PINNUM=AH30
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-80 | FPGA_PINNUM=AH32
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-82 | FPGA_PINNUM=AG31
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-84 | FPGA_PINNUM=AG32
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-86 | FPGA_PINNUM=AF30
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-88 | FPGA_PINNUM=AF31
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-90 | FPGA_PINNUM=AE31
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-92 | FPGA_PINNUM=AE32
+
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-2  | FPGA_PINNUM=E6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-4  | FPGA_PINNUM=G8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-6  | FPGA_PINNUM=E7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-8  | FPGA_PINNUM=F8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-10 | FPGA_PINNUM=H9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-12 | FPGA_PINNUM=E9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-14 | FPGA_PINNUM=F11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-16 | FPGA_PINNUM=G12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-18 | FPGA_PINNUM=F13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-20 | FPGA_PINNUM=J12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-22 | FPGA_PINNUM=F10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-24 | FPGA_PINNUM=G11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-26 | FPGA_PINNUM=H12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-28 | FPGA_PINNUM=G13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-30 | FPGA_PINNUM=J14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-32 | FPGA_PINNUM=J15
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-44 | FPGA_PINNUM=H13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-46 | FPGA_PINNUM=K14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-48 | FPGA_PINNUM=L15
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-50 | FPGA_PINNUM=L16
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-52 | FPGA_PINNUM=K16
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-64 | FPGA_PINNUM=P15
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-68 | FPGA_PINNUM=N14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-76 | FPGA_PINNUM=K24
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-80 | FPGA_PINNUM=J25
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-82 | FPGA_PINNUM=J20 | FPGA_CLOCK_ALLOW_ON_NON_CLOCK_PIN=True
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-84 | FPGA_PINNUM=G27
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-90 | FPGA_PINNUM=H14
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-89 | FPGA_PINNUM=T30
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-87 | FPGA_PINNUM=R29
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-85 | FPGA_PINNUM=P29
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-83 | FPGA_PINNUM=N30
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-81 | FPGA_PINNUM=M32
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-79 | FPGA_PINNUM=M30
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-77 | FPGA_PINNUM=L31
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-75 | FPGA_PINNUM=C32
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-73 | FPGA_PINNUM=D32
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-71 | FPGA_PINNUM=E31
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-69 | FPGA_PINNUM=F31
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-67 | FPGA_PINNUM=F30
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-65 | FPGA_PINNUM=E29
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-63 | FPGA_PINNUM=F29
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-61 | FPGA_PINNUM=E28
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-59 | FPGA_PINNUM=F28
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-57 | FPGA_PINNUM=E27
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-55 | FPGA_PINNUM=E26
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-53 | FPGA_PINNUM=G25
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-51 | FPGA_PINNUM=F25
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-49 | FPGA_PINNUM=G23
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-47 | FPGA_PINNUM=G22
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-45 | FPGA_PINNUM=H22
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-43 | FPGA_PINNUM=J21
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-41 | FPGA_PINNUM=H20
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-39 | FPGA_PINNUM=K19
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-37 | FPGA_PINNUM=H19
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-35 | FPGA_PINNUM=J19
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-33 | FPGA_PINNUM=H18
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-31 | FPGA_PINNUM=K12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-29 | FPGA_PINNUM=J17
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-27 | FPGA_PINNUM=H17
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-25 | FPGA_PINNUM=J16
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-23 | FPGA_PINNUM=G16
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-21 | FPGA_PINNUM=G15
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-19 | FPGA_PINNUM=H15
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-17 | FPGA_PINNUM=E13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-15 | FPGA_PINNUM=C13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-13 | FPGA_PINNUM=E12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-11 | FPGA_PINNUM=C12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-9  | FPGA_PINNUM=D12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-7  | FPGA_PINNUM=D11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-5  | FPGA_PINNUM=E11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_T-3  | FPGA_PINNUM=D10
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-2  | FPGA_PINNUM=F9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-4  | FPGA_PINNUM=E8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-6  | FPGA_PINNUM=AG8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-8  | FPGA_PINNUM=AD11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-10 | FPGA_PINNUM=AF9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-12 | FPGA_PINNUM=AE9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-14 | FPGA_PINNUM=K8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-16 | FPGA_PINNUM=N10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-18 | FPGA_PINNUM=G5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-20 | FPGA_PINNUM=H5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-22 | FPGA_PINNUM=K7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-24 | FPGA_PINNUM=L9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-26 | FPGA_PINNUM=R11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-28 | FPGA_PINNUM=P10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-30 | FPGA_PINNUM=J6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-32 | FPGA_PINNUM=L4
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-34 | FPGA_PINNUM=M5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-36 | FPGA_PINNUM=N5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-38 | FPGA_PINNUM=P5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-40 | FPGA_PINNUM=R6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-42 | FPGA_PINNUM=T10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-44 | FPGA_PINNUM=J5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-46 | FPGA_PINNUM=M7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-48 | FPGA_PINNUM=P7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-50 | FPGA_PINNUM=T8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-52 | FPGA_PINNUM=L5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-54 | FPGA_PINNUM=P6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-56 | FPGA_PINNUM=T6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-58 | FPGA_PINNUM=Y6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-60 | FPGA_PINNUM=AA5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-62 | FPGA_PINNUM=AB5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-64 | FPGA_PINNUM=AC5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-66 | FPGA_PINNUM=AD4
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-68 | FPGA_PINNUM=AB6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-70 | FPGA_PINNUM=AB8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-72 | FPGA_PINNUM=AF5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-74 | FPGA_PINNUM=AD6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-76 | FPGA_PINNUM=AA9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-78 | FPGA_PINNUM=Y9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-80 | FPGA_PINNUM=AD7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-82 | FPGA_PINNUM=AE6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-84 | FPGA_PINNUM=AG5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-86 | FPGA_PINNUM=AA10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-88 | FPGA_PINNUM=AC9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-90 | FPGA_PINNUM=AB10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-92 | FPGA_PINNUM=AE7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-94 | FPGA_PINNUM=AG6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-96 | FPGA_PINNUM=AC4
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-98 | FPGA_PINNUM=AE8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-100 | FPGA_PINNUM=AG7
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-1  | FPGA_PINNUM=H10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-3  | FPGA_PINNUM=F6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-5  | FPGA_PINNUM=AH7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-7  | FPGA_PINNUM=F5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-9  | FPGA_PINNUM=G6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-11 | FPGA_PINNUM=H7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-13 | FPGA_PINNUM=L10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-15 | FPGA_PINNUM=M10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-17 | FPGA_PINNUM=G10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-19 | FPGA_PINNUM=J7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-21 | FPGA_PINNUM=N9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-23 | FPGA_PINNUM=T11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-25 | FPGA_PINNUM=U10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-27 | FPGA_PINNUM=U8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-29 | FPGA_PINNUM=K6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-31 | FPGA_PINNUM=L8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-33 | FPGA_PINNUM=M8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-35 | FPGA_PINNUM=N8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-37 | FPGA_PINNUM=P9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-39 | FPGA_PINNUM=R9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-41 | FPGA_PINNUM=T9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-43 | FPGA_PINNUM=U7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-45 | FPGA_PINNUM=L6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-47 | FPGA_PINNUM=N7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-49 | FPGA_PINNUM=R8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-51 | FPGA_PINNUM=M6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-53 | FPGA_PINNUM=R7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-55 | FPGA_PINNUM=W6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-57 | FPGA_PINNUM=W7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-59 | FPGA_PINNUM=Y7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-61 | FPGA_PINNUM=AA6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-63 | FPGA_PINNUM=AB7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-65 | FPGA_PINNUM=AD5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-67 | FPGA_PINNUM=V7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-69 | FPGA_PINNUM=W9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-71 | FPGA_PINNUM=Y8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-73 | FPGA_PINNUM=AA8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-75 | FPGA_PINNUM=AC7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-77 | FPGA_PINNUM=V8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-79 | FPGA_PINNUM=V9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-81 | FPGA_PINNUM=W10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-83 | FPGA_PINNUM=AC8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-85 | FPGA_PINNUM=AF6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-87 | FPGA_PINNUM=V10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-89 | FPGA_PINNUM=Y11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-91 | FPGA_PINNUM=W11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-93 | FPGA_PINNUM=AD9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-95 | FPGA_PINNUM=AC10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-97 | FPGA_PINNUM=AF8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_L-99 | FPGA_PINNUM=AD10
+;..............................................................................
+; Local resources
+;..............................................................................
+
+;..............................................................................
+;   Shared Memory Interface
+;..............................................................................
+Record=Constraint | TargetKind=Port | TargetId=BUS_SDRAM_FEEDBACK   | FPGA_PINNUM=K17  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_SDRAM_NRAS       | FPGA_PINNUM=K11  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_SDRAM_NCS        | FPGA_PINNUM=L18  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_SDRAM_NCAS       | FPGA_PINNUM=K23  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_SDRAM_CLK        | FPGA_PINNUM=J11  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_SDRAM_CKE        | FPGA_PINNUM=K13  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_RAM_NCS          | FPGA_PINNUM=AD25  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_NWE              | FPGA_PINNUM=P25  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_NOE              | FPGA_PINNUM=L24  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_FLASH_NBUSY      | FPGA_PINNUM=C34  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_FLASH_NRESET     | FPGA_PINNUM=C33  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_FLASH_NCS        | FPGA_PINNUM=E34  | FPGA_SLEW=FAST
+
+Record=Constraint | TargetKind=Port | TargetId=BUS_NBE3             | FPGA_PINNUM=U30  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_NBE2             | FPGA_PINNUM=B13  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_NBE1             | FPGA_PINNUM=N24  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_NBE0             | FPGA_PINNUM=A33  | FPGA_SLEW=FAST
+;Record=Constraint | TargetKind=Port | TargetId=BUS_NBE[3..0] | FPGA_PINNUM=U30,B13,N24,A33 | FPGA_SLEW=FAST,FAST,FAST,FAST
+
+Record=Constraint | TargetKind=Port | TargetId=BUS_D0               | FPGA_PINNUM=AE27  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D1               | FPGA_PINNUM=AF28  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D2               | FPGA_PINNUM=AG28  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D3               | FPGA_PINNUM=AH29  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D4               | FPGA_PINNUM=U27   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D5               | FPGA_PINNUM=U26   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D6               | FPGA_PINNUM=T25   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D7               | FPGA_PINNUM=R26   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D8               | FPGA_PINNUM=U25   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D9               | FPGA_PINNUM=T24   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D10              | FPGA_PINNUM=R24   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D11              | FPGA_PINNUM=P24   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D12              | FPGA_PINNUM=T34   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D13              | FPGA_PINNUM=R32   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D14              | FPGA_PINNUM=P32   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D15              | FPGA_PINNUM=N32   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D16              | FPGA_PINNUM=M26   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D17              | FPGA_PINNUM=L26   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D18              | FPGA_PINNUM=K28   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D19              | FPGA_PINNUM=H29   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D20              | FPGA_PINNUM=G31   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D21              | FPGA_PINNUM=J30   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D22              | FPGA_PINNUM=G32   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D23              | FPGA_PINNUM=H30   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D24              | FPGA_PINNUM=K31   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D25              | FPGA_PINNUM=L29   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D26              | FPGA_PINNUM=M28   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D27              | FPGA_PINNUM=N28   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D28              | FPGA_PINNUM=U28   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D29              | FPGA_PINNUM=T26   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D30              | FPGA_PINNUM=R27   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_D31              | FPGA_PINNUM=P26   | FPGA_SLEW=FAST
+;Record=Constraint | TargetKind=Port | TargetId=BUS_D[31..0] | FPGA_PINNUM= P26,R27,T26,U28,N28,M28,L29,K31,H30,G32,J30,G31,H29,K28,L26,N32,P32,R32,T34,P24,R24,T24,U25,R26,T25,U26,U27,AH29,AG28,AF28,AE27 | FPGA_SLEW=FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST
+
+Record=Constraint | TargetKind=Port | TargetId=BUS_A1               | FPGA_PINNUM=E33   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A2               | FPGA_PINNUM=W31   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A3               | FPGA_PINNUM=Y31   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A4               | FPGA_PINNUM=AA24  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A5               | FPGA_PINNUM=AB26  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A6               | FPGA_PINNUM=AC25  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A7               | FPGA_PINNUM=N27   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A8               | FPGA_PINNUM=M27   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A9               | FPGA_PINNUM=L28   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A10              | FPGA_PINNUM=K29   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A11              | FPGA_PINNUM=J29   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A12              | FPGA_PINNUM=AB27  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A13              | FPGA_PINNUM=AA25  | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A14              | FPGA_PINNUM=Y24   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A15              | FPGA_PINNUM=W24   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A16              | FPGA_PINNUM=V24   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A17              | FPGA_PINNUM=K32   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A18              | FPGA_PINNUM=K26   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A19              | FPGA_PINNUM=J26   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A20              | FPGA_PINNUM=V25   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A21              | FPGA_PINNUM=D34   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A22              | FPGA_PINNUM=H28   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A23              | FPGA_PINNUM=U32   | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port | TargetId=BUS_A24              | FPGA_PINNUM=U31   | FPGA_SLEW=FAST
+;Record=Constraint | TargetKind=Port | TargetId=BUS_A[24..1] | FPGA_PINNUM=U31,U32,H28,D34,V25,J26,K26,K32,V24,W24,Y24,AA25,AB27,J29,K29,L28,M27,N27,AC25,AB26,AA24,Y31,W31,E33 | FPGA_SLEW=FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST
+
+
+
+;..............................................................................
+;   SRAM0 Interface
+;..............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_W      | FPGA_PINNUM=AA29
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_OE     | FPGA_PINNUM=AD26
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_E      | FPGA_PINNUM=AA30
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_LB     | FPGA_PINNUM=AE29
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_UB     | FPGA_PINNUM=AC27
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D15    | FPGA_PINNUM=AD27
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D14    | FPGA_PINNUM=AC28
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D13    | FPGA_PINNUM=AB28
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D12    | FPGA_PINNUM=AA26
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D11    | FPGA_PINNUM=Y26
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D10    | FPGA_PINNUM=W25
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D9     | FPGA_PINNUM=W26
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D8     | FPGA_PINNUM=V27
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D7     | FPGA_PINNUM=AA31
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D6     | FPGA_PINNUM=Y28
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D5     | FPGA_PINNUM=W29
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D4     | FPGA_PINNUM=V30
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D3     | FPGA_PINNUM=W32
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D2     | FPGA_PINNUM=W30
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D1     | FPGA_PINNUM=Y32
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_D0     | FPGA_PINNUM=Y29
+;Record=Constraint | TargetKind=Port | TargetId=SRAM0_D[15..0] | FPGA_PINNUM=AD27,AC28,AB28,AA26,Y26,W25,W26,V27,AA31,Y28,W29,V30,W32,W30,Y32,Y29
+
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A18    | FPGA_PINNUM=AD29
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A17    | FPGA_PINNUM=AG30
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A16    | FPGA_PINNUM=AF29
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A15    | FPGA_PINNUM=AE28
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A14    | FPGA_PINNUM=AC29
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A13    | FPGA_PINNUM=AB32
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A12    | FPGA_PINNUM=AA28
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A11    | FPGA_PINNUM=Y27
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A10    | FPGA_PINNUM=W27
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A9     | FPGA_PINNUM=V29
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A8     | FPGA_PINNUM=V28
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A7     | FPGA_PINNUM=AD30
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A6     | FPGA_PINNUM=AC30
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A5     | FPGA_PINNUM=AB30
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A4     | FPGA_PINNUM=AD31
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A3     | FPGA_PINNUM=AD32
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A2     | FPGA_PINNUM=AC32
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A1     | FPGA_PINNUM=AB31
+Record=Constraint | TargetKind=Port | TargetId=SRAM0_A0     | FPGA_PINNUM=AB33
+;Record=Constraint | TargetKind=Port | TargetId=SRAM0_A[18..0] | FPGA_PINNUM=AD29,AG30,AF29,AE28,AC29,AB32,AA28,Y27,W27,V29,V28,AD30,AC30,AB30,AD31,AD32,AC32,AB31,AB33
+
+;..............................................................................
+;   SRAM1 Interface
+;..............................................................................
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_W     | FPGA_PINNUM=AE34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_OE    | FPGA_PINNUM=V33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_E     | FPGA_PINNUM=AL34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_LB    | FPGA_PINNUM=AB25
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_UB    | FPGA_PINNUM=V34
+
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D15    | FPGA_PINNUM=AC24
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D14    | FPGA_PINNUM=AD24
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D13    | FPGA_PINNUM=AE26
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D12    | FPGA_PINNUM=AF26
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D11    | FPGA_PINNUM=AG27
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D10    | FPGA_PINNUM=AH28
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D9     | FPGA_PINNUM=AJ29
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D8     | FPGA_PINNUM=AM33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D7     | FPGA_PINNUM=AE33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D6     | FPGA_PINNUM=AF34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D5     | FPGA_PINNUM=AF33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D4     | FPGA_PINNUM=AH34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D3     | FPGA_PINNUM=AH33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D2     | FPGA_PINNUM=AJ34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D1     | FPGA_PINNUM=AK34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_D0     | FPGA_PINNUM=AK33
+;Record=Constraint | TargetKind=Port | TargetId=SRAM1_D[15..0] | FPGA_PINNUM=AC24,AD24,AE26,AF26,AG27,AH28,AJ29,AM33,AE33,AF34,AF33,AH34,AH33,AJ34,AK34,AK33
+
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A18    | FPGA_PINNUM=V32
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A17    | FPGA_PINNUM=Y33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A16    | FPGA_PINNUM=Y34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A15    | FPGA_PINNUM=W34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A14    | FPGA_PINNUM=N25
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A13    | FPGA_PINNUM=M25
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A12    | FPGA_PINNUM=L25
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A11    | FPGA_PINNUM=K27
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A10    | FPGA_PINNUM=J27
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A9     | FPGA_PINNUM=AA34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A8     | FPGA_PINNUM=AA33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A7     | FPGA_PINNUM=AC34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A6     | FPGA_PINNUM=AC33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A5     | FPGA_PINNUM=AD34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A4     | FPGA_PINNUM=AL33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A3     | FPGA_PINNUM=AN34
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A2     | FPGA_PINNUM=AN33
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A1     | FPGA_PINNUM=AP32
+Record=Constraint | TargetKind=Port | TargetId=SRAM1_A0     | FPGA_PINNUM=AN32
+;Record=Constraint | TargetKind=Port | TargetId=SRAM1_A[18..0] | FPGA_PINNUM=V32,Y33,Y34,W34,N25,M25,L25,K27,J27,AA34,AA33,AC34,AC33,AD34,AL33,AN34,AN33,AP32,AN32
+
+
+
+

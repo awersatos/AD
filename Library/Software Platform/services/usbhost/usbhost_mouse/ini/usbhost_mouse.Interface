@@ -1,0 +1,8 @@
+[Interface]
+Name=usbhost_mouse
+Category=SERVICE
+System=False
+Description=USB Host Mouse Service
+PublicDir=services\usbhost\usbhost_mouse\include
+
+

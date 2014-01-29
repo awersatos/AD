@@ -1,0 +1,20 @@
+[Plugin]
+Name=bsd_system
+Description=BSD System Support
+Caption=BSD System
+SourceDir=services\bsd\bsd_system\src
+GlobalCompileOption0=-I"$(SSASROOT)\services\bsd\bsd_system\src\sys"
+GlobalCompileOption1=-D__POSIX_NETWORKING=1
+; Use our ERRNO not LWIP version
+GlobalCompileOption2=-D__ARCH_LWIP_ERRNO_H__
+GlobalCompileOption3=-I"$(SSASROOT)\system\sysutils\include"
+GlobalCompileOption4=-I"$(SSASROOT)\services\bsd\bsd_system\include"
+CompileOption0=-H"$(SSASROOT)\services\bsd\bsd_system\src\swp\stdinc.h"
+CompileOption1="-Wc--no-warnings=505,507,523,524,526,531,536,537,544,553,556,558,560,577"
+InitHandler=bsd_subystem_init
+InitHandlerPriority=1
+Implement=bsd_system
+Require0=posix_threads
+
+
+

@@ -1,0 +1,88 @@
+[Plugin]
+Name=drv_irrc
+Description=Infrared Remote Control Driver
+Caption=IrRC Driver
+SourceDir=platform\fpga\drivers\irrc\src
+Implement=drv_irrc
+MinInstances=1
+Bitmap=drv_irrc.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_irrc
+Condition=EQ
+
+[Instance]
+Require0=per_irrc
+
+[Instance_Option0]
+Name=codec
+GUIName=Codec type
+Description=Codec used for transceiving IR data
+Kind=ENUM
+DefaultValue=NEC
+Enum0=RAW
+Enum1=NEC
+Enum2=RC5
+
+[Instance_Option0_AutoSet0]
+Option=fcarrier
+AutoValueEnum0=fcarrier
+AutoValueEnum1=38222
+AutoValueEnum2=36000
+
+[Instance_Option1]
+Name=fcarrier
+GUIName=Carrier frequency
+Description=Carrier frequency (NEC: 38222Hz, RC5: 36kHz)
+Kind=UINT32
+
+[Instance_Option2]
+Name=rxbuffer
+GUIName=Buffer size
+Description=Buffer for received data. If buffer size is 0, buffering and interrupt generation is disabled.
+Kind=BUFFER
+DefaultValue=32
+UserTypeHeaderFile=irrxbuffer_type.h
+Type=irrxbuffer_t
+
+[Instance_Option3]
+Name=wait_mode
+GUIName=Wait mode
+Description=Activity while waiting on peripheral
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+DefaultValue=YIELD
+
+[Instance_Option3_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option4]
+Name=wait_sleepms
+GUIName=Wait sleep duration
+Kind=INT
+Description=Sleep duration if thread has to wait and Wait mode is SLEEP
+DefaultValue=100
+
+[Instance_Option4_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option5]
+name=interrupt_value
+GUIName=Interrupt value
+Description=Inherited from hardware wrapper. If the interrupt is not connected (value is -1) the software buffer size should be 0. 
+NoGenerate=True
+Kind=INT8
+MinRange=-1
+MaxRange=31
+AutoValue=per_irrc.interrupt0
+

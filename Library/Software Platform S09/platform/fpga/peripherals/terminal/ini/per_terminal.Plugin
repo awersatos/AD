@@ -1,0 +1,20 @@
+[Plugin]
+Name=per_terminal
+Description=Terminal with an associated virtual instrument panel on the host PC, acting as a UART interface on the FPGA.
+Caption=Virtual Terminal Instrument
+SourceDir=platform\fpga\peripherals\terminal\src
+Implement=per_terminal
+HardwareID=TERMINAL
+Bitmap=per_terminal.bmp
+LargeBitmap=per_terminal_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=Hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True

@@ -1,0 +1,30 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=a3200dx
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+a3200dx=.
+
+[Library]
+a3200dx=.\a3200dx.LIB
+
+[Files]
+/3200dx.vhd=-1
+/update_a3200dx.do=-1
+
+[Files.Data]
+.\src\3200dx.vhd=VHDL Source Code
+.\src\update_a3200dx.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

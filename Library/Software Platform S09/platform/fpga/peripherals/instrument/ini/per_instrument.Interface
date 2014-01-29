@@ -1,0 +1,6 @@
+[Interface]
+Name=per_instrument
+Category=PERIPHERAL
+System=False
+Description=Custom Instrument
+PublicDir=platform\fpga\peripherals\instrument\include

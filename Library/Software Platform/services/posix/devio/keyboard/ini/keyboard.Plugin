@@ -1,0 +1,19 @@
+[Plugin]
+Name=keyboard
+Caption=Keyboard I/O Services
+Description=POSIX compatible interface for keyboard devices.
+SourceDir=services\posix\devio\keyboard\src
+Implement=keyboard
+Require0=posix_devio
+Bitmap=keyboard.bmp
+
+[PluginApplicationCode]
+IsDeviceIO=True
+
+[Instance]
+Caption=Keyboard I/O Context
+Description=POSIX compatible interface for keyboard devices.
+Require0=keyboard_adaptor
+GenerateName=True
+MultipleLinks=True
+

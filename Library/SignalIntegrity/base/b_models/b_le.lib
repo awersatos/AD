@@ -1,0 +1,660 @@
+###############################################################################
+#                         EDL Macromodel Library File
+#    Filename: b_le.lib
+#     Creator: INCASES Engineering GmbH
+#     Version: 1.1
+#   Last Save: Tue Mar 17 10:52:07 MET 1998
+#
+###############################################################################
+#
+#   Copyright: Copyright (C) 1998, INCASES Engineering GmbH.
+#              Unauthorized reproduction and/or distribution is strictly
+#              prohibited. All rights reserved.
+#
+#  Disclaimer: Please be aware that in the absence of a written agreement
+#              to the contrary, INCASES Engineering GmbH assumes no
+#              liability for:
+#              (1) the accuracy of the macromodels provided to your company;
+#              (2) the proper functioning of these models in your design
+#                  system or for any resulting applications;
+#              (3) infringement of patents, copyrights or intellectual
+#                  property rights resulting from your use of these models.
+#
+###############################################################################
+@IDBM:SLC_HDI3_RA_Z73t100_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI3_RA_Z73t100_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 11:13:42 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 3 ROW (RA), row A, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	3.5000000e-09
+CB1	6.5000000e-13
+CA2	6.5000000e-13
+L2	3.5000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_HDI3_RB_Z73t125_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI3_RB_Z73t125_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 11:13:42 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 3 ROW (RA), row B, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	4.5000000e-09
+CB1	8.5000000e-13
+CA2	8.5000000e-13
+L2	4.5000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_HDI3_RC_Z81t150_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI3_RC_Z81t150_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 11:13:42 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 3 ROW (RA), row C, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	6.0000000e-09
+CB1	9.0000000e-13
+CA2	9.0000000e-13
+L2	6.0000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_HDI4S_RAD_Z77t100_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4S_RAD_Z77t100_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 11:13:42 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (ST), row A+D, open pin field, parallel (stacking),
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 500ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	3.9000000e-09
+CB1	6.5000000e-13
+CA2	6.5000000e-13
+L2	3.9000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_HDI4S_RBC_Z68t110_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4S_RBC_Z68t110_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 11:13:42 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (ST), row B+C, open pin field, parallel (stacking),
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 500ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	3.5000000e-09
+CB1	7.5000000e-13
+CA2	7.5000000e-13
+L2	3.5000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_HDI4_RA_Z73t100_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4_RA_Z73t100_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 12:21:10 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (RA), row A, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	3.5000000e-09
+CB1	6.5000000e-13
+CA2	6.5000000e-13
+L2	3.5000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_HDI4_RB_Z73t120_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4_RB_Z73t120_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 12:21:10 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (RA), row B, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	4.5000000e-09
+CB1	8.5000000e-13
+CA2	8.5000000e-13
+L2	4.5000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_HDI4_RC_Z76t140_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4_RC_Z76t140_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 12:21:10 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (RA), row C, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	5.5000000e-09
+CB1	9.5000000e-13
+CA2	9.5000000e-13
+L2	5.5000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_HDI4_RD_Z81t160_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4_RD_Z81t160_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 12:21:10 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (RA), row D, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	6.5000000e-09
+CB1	1.0000000e-12
+CA2	1.0000000e-12
+L2	6.5000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_TBC4_RA_Z71t90_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_TBC4_RA_Z71t90_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 12:21:10 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : TBC 4 ROW (RA), row A, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	3.5000000e-09
+CB1	7.0000000e-13
+CA2	7.0000000e-13
+L2	3.5000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_TBC4_RB_Z69t110_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_TBC4_RB_Z69t110_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 12:21:10 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : TBC 4 ROW (RA), row B, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	4.3000000e-09
+CB1	9.0000000e-13
+CA2	9.0000000e-13
+L2	4.3000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_TBC4_RC_Z73t130_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_TBC4_RC_Z73t130_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 12:21:10 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : TBC 4 ROW (RA), row C, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	5.3000000e-09
+CB1	1.0000000e-12
+CA2	1.0000000e-12
+L2	5.3000000e-09
+CB2	1.1000000e-12 
+END
+@IDBM:SLC_TBC4_RD_Z84t150_xle.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_TBC4_RD_Z84t150_xle.mac;
+# FileRev     : 1;
+# Date        : Fri Mar 13 12:21:10 1998;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 101;
+# Technology  : ;
+# Changes     : ;
+# Notes       : TBC 4 ROW (RA), row D, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm
+#		for edge speeds of 750ps or slower;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+LUMPED_ELEMENTS_DESCRIPTION
+anz_int	2
+CA1	1.1000000e-12
+L1	7.0000000e-09
+CB1	1.0000000e-12
+CA2	1.0000000e-12
+L2	7.0000000e-09
+CB2	1.1000000e-12 
+END

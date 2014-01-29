@@ -1,0 +1,37 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_altera
+
+[Library]
+ovi_altera=.\ovi_altera.lib
+
+[$LibMap$]
+ovi_altera=.
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files.Data]
+.\src\altera_primitives.v=Verilog Source Code
+.\src\update_ovi_altera.do=Macro
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[Files]
+/altera_primitives.v=-1
+/update_ovi_altera.do=-1
+

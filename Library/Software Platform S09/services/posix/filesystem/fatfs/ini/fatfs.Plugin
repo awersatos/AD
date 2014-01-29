@@ -1,0 +1,47 @@
+[Plugin]
+Name=fatfs
+Caption=FAT File System
+Description=Implementation of posix file system (C library) interface for FAT.
+Bitmap=fatfs.bmp
+Implement=fatfs
+Require0=posix_devio
+Require1=blockio
+SourceDir=services\posix\filesystem\fatfs\src
+; Make sure this is not run first
+InitHandler=fatfs_plugin_init
+InitHandlerPriority=4
+
+[Option0]
+Name=MOUNT_MAX
+GUIName=Mount Point Limit
+Description=Maximum number of mounted FAT file systems.
+Kind=UINT32
+DefaultValue=1
+MinRange=1
+
+[Option1]
+Name=CACHE_ELEM
+GUIName=Cached Sectors
+Description=Number of cached sectors for each mounted FAT file system.
+Kind=UINT32
+DefaultValue=3
+MinRange=1
+
+[Option2]
+Name=USE_MUTEX
+GUIName=Thread Safe Operation
+Description=Use a mutex to protect access to the file system.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option2_Available_If0]
+Object=posix_threads
+Kind=INTERFACE
+Condition=EQ
+
+[Option3]
+Name=USE_LFN
+GUIName=Long Filename Support
+Description=Support long filenames. Without this option only DOS (8.3) style filenames are supported.
+Kind=BOOLEAN
+DefaultValue=False

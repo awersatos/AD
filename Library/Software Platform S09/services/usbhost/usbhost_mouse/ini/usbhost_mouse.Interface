@@ -1,0 +1,8 @@
+[Interface]
+Name=usbhost_mouse
+Category=DRIVER
+System=False
+Description=USB Host Mouse driver
+PublicDir=services\usbhost\usbhost_mouse\include
+
+

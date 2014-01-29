@@ -1,0 +1,27 @@
+[Plugin]
+Name=per_i2cm
+Description=I2C serial bus master for communication with multiple I2C slave devices external to the FPGA.
+Caption=I2C Master Controller
+Implement=per_i2cm
+HardwareID=WB_I2CM
+Bitmap=per_i2cm.bmp
+LargeBitmap=per_i2cm_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=WB_I2CM controller base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+CodeName=interrupt
+GUIName=Interrupt
+Description=WB_I2CM controller interrupt number
+Kind=INTERRUPT
+Auto=True

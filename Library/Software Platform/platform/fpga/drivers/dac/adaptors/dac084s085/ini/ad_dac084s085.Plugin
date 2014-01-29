@@ -1,0 +1,13 @@
+[Plugin]
+Name=ad_dac_dac084s085
+Description=Adapts dac084s085 DAC driver to DAC generic driver
+SourceDir=platform\fpga\drivers\dac\adaptors\dac084s085\src
+Implement=ad_dac
+InitHandler=ad_dac084s085_init
+InitHandlerPriority=16
+compileOption0=-I"$(SSASROOT)\platform\fpga\drivers\dac\internal"
+compileOption1=-I"$(SSASROOT)\platform\fpga\drivers\dac\include"
+
+[Instance]
+Require0=drv_dac084s085
+

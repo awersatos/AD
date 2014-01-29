@@ -1,0 +1,24 @@
+[Plugin]
+Name=drv_gps_nmea
+Caption=GPS NMEA Driver
+Description=GPS-NMEA over serial communication
+SourceDir=platform\fpga\drivers\gps_nmea\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\gps_nmea\internal"
+CompileOption1=-I"$(SSASROOT)\platform\fpga\drivers\uart8\internal"
+Bitmap=drv_gps_nmea.bmp
+Implement=drv_gps_nmea
+MinInstances=1
+Extend=drv_uart8
+
+[PluginApplicationCode]
+OpenType=drv_gps_nmea_t *
+OpenFunction=drv_gps_nmea_open
+
+[Available_If0]
+kind=PLUGIN
+Object=per_gps_nmea
+Condition=EQ
+
+[Instance]
+Require0=per_gps_nmea
+

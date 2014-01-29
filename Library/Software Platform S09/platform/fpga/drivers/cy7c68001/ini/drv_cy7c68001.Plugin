@@ -1,0 +1,17 @@
+[Plugin]
+Name=drv_cy7c68001
+Description=CY7C68001 high-speed USB 2.0 device with Serial Interface Engine
+Caption=USB Driver
+SourceDir=platform\fpga\drivers\cy7c68001\src
+Implement=drv_cy7c68001
+Bitmap=drv_cy7c68001.bmp
+Require0=sysutils
+
+[Available_If0]
+kind=PLUGIN
+Object=per_cy7c68001
+Condition=EQ
+
+[Instance]
+Require0=per_cy7c68001
+

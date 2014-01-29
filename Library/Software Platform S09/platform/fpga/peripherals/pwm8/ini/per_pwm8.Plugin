@@ -1,0 +1,27 @@
+[Plugin]
+Name=per_pwm8
+Description=PWM8 Pulse Width Modulator with 8-bit resolution.
+Caption=PWM8 Controller
+Implement=per_pwm8
+HardwareID=WB_PWM8
+Bitmap=per_pwm8.bmp
+LargeBitmap=per_pwm8_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+CodeName=interrupt
+Description=interrupt number
+Kind=INTERRUPT
+Auto=True

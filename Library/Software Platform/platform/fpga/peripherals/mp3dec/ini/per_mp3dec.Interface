@@ -1,0 +1,6 @@
+[Interface]
+Name=per_mp3dec
+Category=PERIPHERAL
+System=False
+Description=MP3 decoder peripheral
+PublicDir=platform\fpga\peripherals\mp3dec\include

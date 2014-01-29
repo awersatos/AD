@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_pwm8
+Category=DRIVER
+System=False
+Description=PWM8 driver
+PublicDir=platform\fpga\drivers\pwm8\include

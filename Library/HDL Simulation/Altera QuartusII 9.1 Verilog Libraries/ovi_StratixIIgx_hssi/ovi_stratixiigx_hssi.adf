@@ -1,0 +1,43 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_stratixiigx_hssi
+
+[Library]
+ovi_stratixiigx_hssi=.\ovi_stratixiigx_hssi.lib
+
+[$LibMap$]
+ovi_stratixiigx_hssi=.
+Active_lib=
+xilinxun=
+UnlinkedDesignLibrary=
+DESIGNS=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FAMILY=Altera Stratix
+VerilogDirsChanged=1
+
+[Verilog Library]
+ovi_Stratix=
+ovi_lpm=
+
+[Files]
+/stratixiigx_hssi_atoms.v=-1
+/update_ovi_stratixiigx_hssi.do=-1
+
+[Files.Data]
+.\src\stratixiigx_hssi_atoms.v=Verilog Source Code
+.\src\update_ovi_stratixiigx_hssi.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

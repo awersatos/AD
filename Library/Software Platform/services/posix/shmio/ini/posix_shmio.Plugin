@@ -1,0 +1,10 @@
+[Plugin]
+Name=posix_shmio
+Caption=Shared Memory I/O
+Description=Standard POSIX device Shared Memory routines
+SourceDir=services\posix\shmio\src
+FrameworkCompileOption0=-I"$(SSASROOT)\services\posix\shmio\internal"
+GlobalCompileOption0=-D__POSIX_SHARED_MEMORY_OBJECTS
+GlobalCompileOption1=-D__POSIX_MAPPED_FILES=1
+Require0=shmfs
+Implement=posix_shmio

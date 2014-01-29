@@ -1,0 +1,24 @@
+[Plugin]
+Name=ramdisk
+Implement=ramdisk
+Caption=RAM Disk
+Bitmap=ramdisk.bmp
+LargeBitmap=ramdisk_large.bmp
+Description=Virtual device driver for memory based block devices (i.e. RAM disks)
+ManualPlacement=True
+
+[PluginApplicationCode]
+NoGenerate=True
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=ramdisk
+GUIName=Reserved Memory
+Description=Memory to be reserved for the RAM disk
+Kind=BUFFER
+Type=UINT8
+DoubleBufferSupport=False
+AllocMemory=True
+DefaultValue=40960

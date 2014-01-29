@@ -1,0 +1,9 @@
+* Generic tunnel diode. Written 30/11/2001.
+*
+.SUBCKT DTUNNEL2 1 2 PARAMS: Vp=60mV Ip=5mA Vv=0.3V Iv=0.3mA Vpp=500mV Vt=26mV
+
+BTHE  1 2 I = {Ip}*exp(-{Vpp}/{Vt})*(exp(v(1,2)/{vt})-1)
+BTUN  1 2 I = {Ip}*(v(1,2)/{Vp})*exp(1-v(1,2)/{Vp})
+BEXC  1 2 I = {Iv}*exp(v(1,2)-{Vv})
+
+.ENDS DTUNNEL2

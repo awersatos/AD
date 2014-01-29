@@ -1,0 +1,1802 @@
+// -------------------------------------------------------------------- 
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<< 
+// -------------------------------------------------------------------- 
+// Copyright (c) 2005 by Lattice Semiconductor Corporation 
+// -------------------------------------------------------------------- 
+// 
+// 
+//                     Lattice Semiconductor Corporation 
+//                     5555 NE Moore Court 
+//                     Hillsboro, OR 97214 
+//                     U.S.A 
+// 
+//                     TEL: 1-800-Lattice (USA and Canada) 
+//                          408-826-6000 (other locations) 
+// 
+//                     web: http://www.latticesemi.com/ 
+//                     email: techsupport@latticesemi.com 
+// 
+// -------------------------------------------------------------------- 
+// 
+// Simulation Library File for CPLD macros
+// 
+// -------------------------------------------------------------------- 
+// 
+// Revision History : 
+// 
+/*************************************************************************/
+/**     Prepared by Sunnyvale Applications Center                       **/
+/**     Rev. 1.0   ---   October 15, 1998                               **/
+/**                                                                     **/
+/*************************************************************************/
+
+
+`ifdef powerup_state
+`else
+   `define powerup_state 1'bx
+`endif
+
+
+/* Verilog model created from schematic comp8eq.sch -- Oct 13, 1998 09:02 */
+
+module comp8eq( EQ, G, P0, P1, P2, P3, P4, P5, P6, P7, Q0, Q1, Q2, Q3, Q4, Q5,
+                Q6, Q7 );
+output EQ;
+ input G, P0, P1, P2, P3, P4, P5, P6, P7, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+
+and I_15 ( N_10, N_13, N_14, N_15 );
+not I_1 ( N_11, G );
+xnor I_3 ( N_2, P2, Q2 );
+xnor I_4 ( N_1, P3, Q3 );
+xnor I_5 ( N_4, P0, Q0 );
+xnor I_6 ( N_3, P1, Q1 );
+xnor I_7 ( N_6, P4, Q4 );
+xnor I_8 ( N_5, P5, Q5 );
+xnor I_9 ( N_8, P6, Q6 );
+xnor I_10 ( N_7, P7, Q7 );
+and I_16 ( EQ, N_9, N_10 );
+and I_17 ( N_9, N_11, N_12 );
+and I_11 ( N_12, N_4, N_3 );
+and I_12 ( N_13, N_2, N_1 );
+and I_13 ( N_14, N_6, N_5 );
+and I_14 ( N_15, N_8, N_7 );
+
+endmodule // comp8eq
+/* Verilog model created from schematic dec2to4.sch -- Oct 13, 1998 10:28 */
+
+module dec2to4( A0, A1, EN, Y0, Y1, Y2, Y3 );
+ input A0, A1, EN;
+output Y0, Y1, Y2, Y3;
+wire N_3;
+wire N_1;
+wire N_2;
+
+not I_1 ( N_2, A0 );
+not I_2 ( N_3, A1 );
+not I_3 ( N_1, EN );
+and I_4 ( Y0, N_2, N_3, N_1 );
+and I_5 ( Y1, A0, N_3, N_1 );
+and I_6 ( Y2, N_2, A1, N_1 );
+and I_7 ( Y3, A0, A1, N_1 );
+
+endmodule // dec2to4
+
+
+/* Verilog model created from schematic enc8to3.sch -- Jan 28, 1999 19:48 */
+
+module enc8to3( A0, A1, A2, A3, A4, A5, A6, A7, ENI, ENO, GS, Y0, Y1, Y2 );
+ input A0, A1, A2, A3, A4, A5, A6, A7, ENI;
+output ENO, GS, Y0, Y1, Y2;
+wire N_59;
+wire N_54;
+wire N_55;
+wire N_56;
+wire N_57;
+wire N_58;
+wire N_39;
+wire N_41;
+wire N_42;
+wire N_43;
+wire N_44;
+wire N_45;
+wire N_46;
+wire N_48;
+wire N_49;
+wire N_50;
+wire N_51;
+wire N_52;
+wire N_53;
+wire N_38;
+wire N_36;
+wire N_25;
+wire N_26;
+wire N_27;
+wire N_7;
+wire N_8;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_15;
+wire N_16;
+wire N_18;
+wire N_19;
+wire N_21;
+wire N_22;
+
+buf I60 ( ENO, N_59 );
+or I38 ( Y0, N_18, N_10, N_15, N_27 );
+or I39 ( Y1, N_22, N_16, N_11, N_21 );
+or I40 ( Y2, N_53, N_13, N_12, N_19 );
+nor I41 ( GS, N_38, N_59 );
+and I_34 ( N_59, N_58, N_56, N_57 );
+and I_35 ( N_56, N_41, N_42, N_43 );
+and I_26 ( N_26, N_43, N_48, N_45 );
+and I_5 ( N_10, N_36, N_41, N_50 );
+and I_36 ( N_57, N_44, N_45, N_46, N_55 );
+and I_6 ( N_21, N_36, N_42, N_43, N_52 );
+and I_7 ( N_11, N_36, N_42, N_43, N_51 );
+and I_8 ( N_15, N_36, N_41, N_43, N_51 );
+not I51 ( N_55, A0 );
+not I43 ( N_42, A5 );
+not I44 ( N_39, ENI );
+not I45 ( N_54, A7 );
+not I46 ( N_41, A6 );
+not I47 ( N_43, A4 );
+not I48 ( N_44, A3 );
+not I49 ( N_45, A2 );
+not I50 ( N_46, A1 );
+not I52 ( N_49, N_54 );
+not I53 ( N_7, N_41 );
+not I54 ( N_50, N_42 );
+not I55 ( N_8, N_43 );
+not I56 ( N_51, N_44 );
+not I57 ( N_48, N_46 );
+not I58 ( N_52, N_45 );
+not I59 ( N_36, N_39 );
+not I_17 ( N_38, N_36 );
+and I_37 ( N_58, N_54, N_36 );
+and I_30 ( N_27, N_25, N_26 );
+and I_31 ( N_25, N_36, N_41 );
+and I_19 ( N_18, N_36, N_49 );
+and I_20 ( N_22, N_36, N_49 );
+and I_21 ( N_16, N_36, N_7 );
+and I_22 ( N_12, N_36, N_50 );
+and I_23 ( N_19, N_36, N_8 );
+and I_24 ( N_53, N_36, N_49 );
+and I_25 ( N_13, N_36, N_7 );
+
+endmodule // enc8to3
+
+/* Verilog model created from schematic dec3to8.sch -- Oct 13, 1998 10:36 */
+
+module dec3to8( A0, A1, A2, EN1, EN2, EN3, Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7 );
+ input A0, A1, A2, EN1, EN2, EN3;
+output Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7;
+wire N_22;
+wire N_1;
+wire N_3;
+wire N_5;
+wire N_7;
+wire N_9;
+wire N_11;
+wire N_13;
+wire N_15;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_21;
+
+not I_30 ( N_22, EN2 );
+not I_1 ( N_20, A0 );
+not I_2 ( N_19, A1 );
+not I_3 ( N_18, A2 );
+not I_4 ( N_1, EN3 );
+and I_13 ( N_17, N_20, N_19, N_18 );
+and I_14 ( N_15, A0, N_19, N_18 );
+and I_15 ( N_13, N_20, A1, N_18 );
+and I_16 ( N_11, A0, A1, N_18 );
+and I_17 ( N_9, N_20, N_19, A2 );
+and I_18 ( N_7, A0, N_19, A2 );
+and I_19 ( N_5, N_20, A1, A2 );
+and I_20 ( N_3, A0, A1, A2 );
+and I_21 ( N_21, N_1, N_22, EN1 );
+and I_22 ( Y0, N_17, N_21 );
+and I_23 ( Y1, N_15, N_21 );
+and I_24 ( Y2, N_13, N_21 );
+and I_25 ( Y3, N_11, N_21 );
+and I_26 ( Y4, N_9, N_21 );
+and I_27 ( Y5, N_7, N_21 );
+and I_28 ( Y6, N_5, N_21 );
+and I_29 ( Y7, N_3, N_21 );
+
+endmodule // dec3to8
+/* Verilog model created from schematic mux4to1.sch -- Oct 13, 1998 21:56 */
+
+module mux4to1( A0, A1, A2, A3, EN, S0, S1, Y );
+ input A0, A1, A2, A3, EN, S0, S1;
+output Y;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+
+not I_3 ( N_1, EN );
+not I_1 ( N_3, S1 );
+not I_2 ( N_2, S0 );
+or I_4 ( Y, N_4, N_5, N_6, N_7 );
+and I_5 ( N_4, N_1, S1, S0, A3 );
+and I_6 ( N_5, N_1, S1, N_2, A2 );
+and I_7 ( N_6, N_1, S0, N_3, A1 );
+and I_8 ( N_7, N_1, N_2, N_3, A0 );
+
+endmodule // mux4to1
+/* Verilog model created from schematic dec4to16.sch -- Oct 13, 1998 10:56 */
+
+module dec4to16( A0, A1, A2, A3, EN1, EN2, Y0, Y1, Y10, Y11, Y12, Y13, Y14, Y15,
+                 Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9 );
+ input A0, A1, A2, A3, EN1, EN2;
+output Y0, Y1, Y10, Y11, Y12, Y13, Y14, Y15, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9;
+wire N_1;
+wire N_2;
+wire N_4;
+wire N_6;
+wire N_8;
+wire N_10;
+wire N_12;
+wire N_14;
+wire N_16;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_22;
+wire N_24;
+wire N_26;
+wire N_28;
+wire N_30;
+wire N_32;
+wire N_34;
+wire N_36;
+wire N_38;
+wire N_39;
+wire N_40;
+wire N_41;
+wire N_42;
+wire N_43;
+wire N_44;
+wire N_45;
+wire N_46;
+wire N_47;
+wire N_48;
+
+and I_30 ( N_36, N_44, N_42, N_41 );
+and I_31 ( N_34, A0, N_42, N_41 );
+and I_32 ( N_32, N_44, A1, N_41 );
+and I_33 ( N_30, A0, A1, N_41 );
+and I_34 ( N_28, N_44, N_42, A2 );
+and I_35 ( N_26, A0, N_42, A2 );
+and I_36 ( N_24, N_44, A1, A2 );
+and I_37 ( N_22, A0, A1, A2 );
+and I_38 ( N_47, N_20, N_19, A3 );
+and I_13 ( N_18, N_46, N_45, N_43 );
+and I_14 ( N_16, A0, N_45, N_43 );
+and I_15 ( N_14, N_46, A1, N_43 );
+and I_16 ( N_12, A0, A1, N_43 );
+and I_17 ( N_10, N_46, N_45, A2 );
+and I_18 ( N_8, A0, N_45, A2 );
+and I_19 ( N_6, N_46, A1, A2 );
+and I_20 ( N_4, A0, A1, A2 );
+and I_21 ( N_48, N_2, N_1, N_40 );
+and I_39 ( Y8, N_36, N_47 );
+and I_40 ( Y9, N_34, N_47 );
+and I_41 ( Y10, N_32, N_47 );
+and I_42 ( Y11, N_30, N_47 );
+and I_43 ( Y12, N_28, N_47 );
+and I_44 ( Y13, N_26, N_47 );
+and I_45 ( Y14, N_24, N_47 );
+and I_46 ( Y15, N_22, N_47 );
+and I_22 ( Y0, N_18, N_48 );
+and I_23 ( Y1, N_16, N_48 );
+and I_24 ( Y2, N_14, N_48 );
+and I_25 ( Y3, N_12, N_48 );
+and I_26 ( Y4, N_10, N_48 );
+and I_27 ( Y5, N_8, N_48 );
+and I_28 ( Y6, N_6, N_48 );
+and I_29 ( Y7, N_4, N_48 );
+not I_64 ( N_19, N_39 );
+not I_47 ( N_1, N_39 );
+not I_48 ( N_44, A0 );
+not I_49 ( N_42, A1 );
+not I_50 ( N_41, A2 );
+not I_51 ( N_20, N_39 );
+not I_60 ( N_46, A0 );
+not I_61 ( N_45, A1 );
+not I_62 ( N_43, A2 );
+not I_63 ( N_2, N_39 );
+not I_1 ( N_40, A3 );
+not I_2 ( N_38, EN2 );
+nand I_65 ( N_39, N_38, EN1 );
+
+endmodule // dec4to16
+/* Verilog model created from schematic enc10to4.sch -- Oct 15, 1998 15:33 */
+
+module enc10to4( A1, A2, A3, A4, A5, A6, A7, A8, A9, Y0, Y1, Y2, Y3 );
+ input A1, A2, A3, A4, A5, A6, A7, A8, A9;
+output Y0, Y1, Y2, Y3;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+
+nor I_1 ( N_6, A9, A8 );
+and I_36 ( N_12, N_3, N_2, A1 );
+and I_3 ( N_8, N_6, N_5, A5 );
+not I_4 ( N_5, A6 );
+not I_6 ( N_4, A5 );
+not I_5 ( N_3, A4 );
+not I_7 ( N_2, A2 );
+and I_21 ( N_9, N_6, N_3, N_4, A3 );
+and I_22 ( N_14, N_6, N_4, N_3, A2 );
+and I_23 ( N_7, N_6, N_5, N_3, A3 );
+or I_41 ( Y0, A9, N_20 );
+or I_24 ( Y3, A9, A8 );
+or I_42 ( N_20, N_11, N_8, N_7, N_1 );
+or I_25 ( Y2, N_19, N_18, N_17, N_16 );
+or I_26 ( Y1, N_15, N_10, N_9, N_14 );
+and I_39 ( N_13, N_6, N_5 );
+and I_40 ( N_1, N_13, N_12 );
+and I_28 ( N_19, N_6, A7 );
+and I_29 ( N_18, N_6, A6 );
+and I_30 ( N_17, N_6, A5 );
+and I_31 ( N_16, N_6, A4 );
+and I_32 ( N_15, N_6, A7 );
+and I_33 ( N_10, N_6, A6 );
+and I_34 ( N_11, N_6, A7 );
+
+endmodule // enc10to4
+/* Verilog model created from schematic mux16to1.sch -- Oct 13, 1998 17:27 */
+
+module mux16to1( A0, A1, A10, A11, A12, A13, A14, A15, A2, A3, A4, A5, A6, A7,
+                 A8, A9, EN, S0, S1, S2, S3, Y );
+ input A0, A1, A10, A11, A12, A13, A14, A15, A2, A3, A4, A5, A6, A7, A8, A9,
+      EN, S0, S1, S2, S3;
+output Y;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+wire N_26;
+wire N_27;
+wire N_28;
+wire N_29;
+wire N_30;
+wire N_31;
+wire N_32;
+wire N_33;
+wire N_34;
+wire N_35;
+wire N_36;
+wire N_37;
+wire N_38;
+wire N_39;
+wire N_40;
+wire N_41;
+wire N_42;
+wire N_43;
+wire N_44;
+wire N_45;
+wire N_46;
+wire N_47;
+wire N_48;
+wire N_49;
+wire N_50;
+wire N_51;
+wire N_52;
+wire N_53;
+wire N_54;
+wire N_55;
+wire N_56;
+wire N_57;
+wire N_58;
+wire N_59;
+wire N_60;
+wire N_61;
+wire N_62;
+wire N_63;
+wire N_64;
+wire N_65;
+wire N_66;
+wire N_67;
+
+or I_10 ( N_31, N_29, N_25, N_24, N_23 );
+or I_11 ( N_30, N_22, N_26, N_27, N_28 );
+or I_8 ( N_67, N_65, N_61, N_60, N_59 );
+or I_9 ( N_66, N_58, N_62, N_63, N_64 );
+and I_20 ( N_13, N_3, N_2, A0 );
+and I_21 ( N_12, N_3, S0, A1 );
+and I_22 ( N_11, S1, N_2, A2 );
+and I_23 ( N_10, S1, S0, A3 );
+and I_24 ( N_9, N_3, N_2, A4 );
+and I_25 ( N_8, N_3, S0, A5 );
+and I_26 ( N_7, S1, N_2, A6 );
+and I_27 ( N_6, S1, S0, A7 );
+and I_12 ( N_49, N_39, N_38, A8 );
+and I_13 ( N_48, N_39, S0, A9 );
+and I_14 ( N_47, S1, N_38, A10 );
+and I_15 ( N_46, S1, S0, A11 );
+and I_16 ( N_45, N_39, N_38, A12 );
+and I_17 ( N_44, N_39, S0, A13 );
+and I_18 ( N_43, S1, N_38, A14 );
+and I_19 ( N_42, S1, S0, A15 );
+and I_44 ( N_21, N_5, N_4 );
+and I_45 ( N_29, N_21, N_13 );
+and I_46 ( N_20, N_5, N_4 );
+and I_47 ( N_25, N_20, N_12 );
+and I_48 ( N_19, N_5, N_4 );
+and I_49 ( N_24, N_19, N_11 );
+and I_50 ( N_18, N_5, N_4 );
+and I_51 ( N_23, N_18, N_10 );
+and I_52 ( N_17, N_5, S2 );
+and I_53 ( N_22, N_17, N_9 );
+and I_54 ( N_16, N_5, S2 );
+and I_55 ( N_26, N_16, N_8 );
+and I_56 ( N_15, N_5, S2 );
+and I_57 ( N_27, N_15, N_7 );
+and I_58 ( N_14, N_5, S2 );
+and I_59 ( N_28, N_14, N_6 );
+and I_28 ( N_57, N_41, N_40 );
+and I_29 ( N_65, N_57, N_49 );
+and I_30 ( N_56, N_41, N_40 );
+and I_31 ( N_61, N_56, N_48 );
+and I_32 ( N_55, N_41, N_40 );
+and I_33 ( N_60, N_55, N_47 );
+and I_34 ( N_54, N_41, N_40 );
+and I_35 ( N_59, N_54, N_46 );
+and I_36 ( N_53, N_41, S2 );
+and I_37 ( N_58, N_53, N_45 );
+and I_38 ( N_52, N_41, S2 );
+and I_39 ( N_62, N_52, N_44 );
+and I_40 ( N_51, N_41, S2 );
+and I_41 ( N_63, N_51, N_43 );
+and I_42 ( N_50, N_41, S2 );
+and I_43 ( N_64, N_50, N_42 );
+nand I_71 ( N_1, N_36, N_34 );
+nand I_70 ( N_37, N_36, S3 );
+not I_64 ( N_2, S0 );
+not I_65 ( N_3, S1 );
+not I_66 ( N_4, S2 );
+not I_67 ( N_5, N_1 );
+not I_4 ( N_36, EN );
+not I_5 ( Y, N_35 );
+not I_3 ( N_34, S3 );
+not I_60 ( N_38, S0 );
+not I_61 ( N_39, S1 );
+not I_62 ( N_40, S2 );
+not I_63 ( N_41, N_37 );
+or I_69 ( N_32, N_31, N_30 );
+or I_6 ( N_35, N_33, N_32 );
+or I_68 ( N_33, N_67, N_66 );
+
+endmodule // mux16to1
+/* Verilog model created from schematic mux8to1.sch -- Oct 13, 1998 22:18 */
+
+module mux8to1( A0, A1, A2, A3, A4, A5, A6, A7, EN, S0, S1, S2, Y );
+ input A0, A1, A2, A3, A4, A5, A6, A7, EN, S0, S1, S2;
+output Y;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+wire N_26;
+wire N_27;
+wire N_28;
+wire N_29;
+wire N_30;
+
+not I_1 ( N_1, S0 );
+not I_2 ( N_2, S1 );
+not I_3 ( N_3, S2 );
+not I_4 ( N_4, EN );
+or I_5 ( Y, N_30, N_29 );
+or I_6 ( N_30, N_28, N_24, N_23, N_22 );
+or I_7 ( N_29, N_21, N_25, N_26, N_27 );
+and I_8 ( N_12, N_2, N_1, A0 );
+and I_9 ( N_11, N_2, S0, A1 );
+and I_10 ( N_10, S1, N_1, A2 );
+and I_11 ( N_9, S1, S0, A3 );
+and I_12 ( N_8, N_2, N_1, A4 );
+and I_13 ( N_7, N_2, S0, A5 );
+and I_14 ( N_6, S1, N_1, A6 );
+and I_15 ( N_5, S1, S0, A7 );
+and I_16 ( N_20, N_4, N_3 );
+and I_17 ( N_28, N_20, N_12 );
+and I_18 ( N_19, N_4, N_3 );
+and I_19 ( N_24, N_19, N_11 );
+and I_20 ( N_18, N_4, N_3 );
+and I_21 ( N_23, N_18, N_10 );
+and I_22 ( N_17, N_4, N_3 );
+and I_23 ( N_22, N_17, N_9 );
+and I_24 ( N_16, N_4, S2 );
+and I_25 ( N_21, N_16, N_8 );
+and I_26 ( N_15, N_4, S2 );
+and I_27 ( N_25, N_15, N_7 );
+and I_28 ( N_14, N_4, S2 );
+and I_29 ( N_26, N_14, N_6 );
+and I_30 ( N_13, N_4, S2 );
+and I_31 ( N_27, N_13, N_5 );
+
+endmodule // mux8to1
+/* Verilog model created from schematic cnt4buda.sch -- Oct 13, 1998 06:54 */
+
+module cnt4buda( BO, CK, CL, CO, D0, D1, D2, D3, DN, LD, Q0, Q1, Q2, Q3, UP );
+output BO;
+ input CK, CL;
+output CO;
+ input D0, D1, D2, D3, DN, LD;
+output Q0, Q1, Q2, Q3;
+ input UP;
+wire N_49;
+wire N_32;
+wire N_33;
+wire N_34;
+wire N_35;
+wire N_36;
+wire N_37;
+wire N_38;
+wire N_39;
+wire N_40;
+wire N_41;
+wire N_42;
+wire N_43;
+wire N_44;
+wire N_46;
+wire N_47;
+wire N_48;
+wire N_1;
+wire N_3;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_12;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_20;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+wire N_26;
+wire N_28;
+wire N_29;
+wire N_30;
+wire N_31;
+
+g_tc I_58 ( .C(CL), .CLK(CK), .Q(Q3), .T(N_30) );
+g_tc I_59 ( .C(CL), .CLK(CK), .Q(Q0), .T(N_8) );
+g_tc I_60 ( .C(CL), .CLK(CK), .Q(Q1), .T(N_29) );
+g_tc I_61 ( .C(CL), .CLK(CK), .Q(Q2), .T(N_31) );
+and I_46 ( N_37, LD, Q0, N_42 );
+and I_47 ( N_36, LD, N_49, N_46 );
+and I_48 ( N_41, Q1, Q0, N_42 );
+and I_49 ( N_40, N_44, N_49, N_46 );
+and I_44 ( N_22, Q0, LD, N_42 );
+and I_45 ( N_21, N_49, LD, N_46 );
+and I_41 ( N_5, Q0, Q1, N_42, LD );
+and I_42 ( N_25, N_49, N_44, N_46, LD );
+or I_43 ( N_30, N_28, N_32, N_33 );
+or I_9 ( N_8, N_23, N_7, N_26 );
+or I_10 ( N_29, N_24, N_22, N_21 );
+or I_11 ( N_31, N_20, N_5, N_25 );
+xor I_12 ( N_6, D2, Q2 );
+xor I_13 ( N_17, D0, Q0 );
+xor I_14 ( N_16, D1, Q1 );
+xor I_15 ( N_18, D3, Q3 );
+not I_28 ( CO, N_47 );
+not I_29 ( BO, N_48 );
+not I_24 ( N_12, Q3 );
+not I_25 ( N_43, Q2 );
+not I_26 ( N_49, Q0 );
+not I_27 ( N_44, Q1 );
+not I_30 ( N_15, LD );
+not I_31 ( N_3, DN );
+not I_32 ( N_1, UP );
+and I_50 ( N_32, N_35, N_37 );
+and I_51 ( N_33, N_34, N_36 );
+and I_52 ( N_35, Q2, Q1 );
+and I_53 ( N_34, N_43, N_44 );
+and I_54 ( N_48, N_38, N_40 );
+and I_55 ( N_39, Q3, Q2 );
+and I_56 ( N_38, N_12, N_43 );
+and I_57 ( N_47, N_39, N_41 );
+and I_33 ( N_23, N_17, N_15 );
+and I_34 ( N_7, N_42, LD );
+and I_35 ( N_26, N_46, LD );
+and I_36 ( N_24, N_16, N_15 );
+and I_37 ( N_20, N_6, N_15 );
+and I_38 ( N_28, N_18, N_15 );
+and I_39 ( N_42, UP, N_3 );
+and I_40 ( N_46, N_1, DN );
+
+endmodule // cnt4buda
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module sr4univ(D0,D1,D2,D3,S0,S1,SINR,SINL,CL,CK,Q0,Q1,Q2,Q3);
+input D0,D1,D2,D3,S0,S1,SINR,SINL,CL,CK;
+inout Q0,Q1,Q2,Q3;
+wire Q0_D,Q0_C,Q1_D,Q1_C,Q2_D,Q2_C,Q3_D,Q3_C;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q0_D = (CL && S0 && !S1 && SINR
+     || CL && S0 && S1 && D0
+     || CL && !S0 && !S1 && Q0
+     || CL && !S0 && S1 && Q1);
+
+assign Q0_C = (CK);
+
+dff_apar_p0 Q0_ff(Q0_Q, Q0_QB,Q0_D,Q0_C,GND,GND);
+
+bufif1 Q0_buf(Q0, Q0_Q, VCC);
+
+assign Q1_D = (CL && S0 && !S1 && Q0
+     || CL && S0 && S1 && D1
+     || CL && !S0 && !S1 && Q1
+     || CL && !S0 && S1 && Q2);
+
+assign Q1_C = (CK);
+
+dff_apar_p0 Q1_ff(Q1_Q, Q1_QB,Q1_D,Q1_C,GND,GND);
+
+bufif1 Q1_buf(Q1, Q1_Q, VCC);
+
+assign Q2_D = (CL && S0 && !S1 && Q1
+     || CL && S0 && S1 && D2
+     || CL && !S0 && S1 && Q3
+     || CL && !S0 && !S1 && Q2);
+
+assign Q2_C = (CK);
+
+dff_apar_p0 Q2_ff(Q2_Q, Q2_QB,Q2_D,Q2_C,GND,GND);
+
+bufif1 Q2_buf(Q2, Q2_Q, VCC);
+
+assign Q3_D = (CL && !S0 && !S1 && Q3
+     || CL && S0 && !S1 && Q2
+     || CL && !S0 && S1 && SINL
+     || CL && D3 && S0 && S1);
+
+assign Q3_C = (CK);
+
+dff_apar_p0 Q3_ff(Q3_Q, Q3_QB,Q3_D,Q3_C,GND,GND);
+
+bufif1 Q3_buf(Q3, Q3_Q, VCC);
+
+endmodule
+/* Verilog model created from schematic fadd2c.sch -- Oct 13, 1998 15:01 */
+
+module fadd2c( A0, A1, B0, B1, CI, CO, S0, S1 );
+ input A0, A1, B0, B1, CI;
+output CO, S0, S1;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+
+and I_4 ( N_7, N_3, CI );
+and I_5 ( N_6, B0, A0 );
+and I_6 ( N_9, B1, A1 );
+and I_7 ( N_4, N_5, N_8 );
+or I_1 ( CO, N_9, N_4 );
+or I_10 ( N_8, N_7, N_6 );
+xor I_22 ( S1, N_2, N_8 );
+xor I_23 ( N_2, A1, B1 );
+xor I_24 ( S0, N_1, CI );
+xor I_25 ( N_1, A0, B0 );
+xor I_11 ( N_5, A1, B1 );
+xor I_12 ( N_3, A0, B0 );
+
+endmodule // fadd2c
+/* Verilog model created from schematic fadd4c.sch -- Oct 13, 1998 15:21 */
+
+module fadd4c( A0, A1, A2, A3, B0, B1, B2, B3, CI, CO, S0, S1, S2, S3 );
+ input A0, A1, A2, A3, B0, B1, B2, B3, CI;
+output CO, S0, S1, S2, S3;
+wire C2;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+
+and I_14 ( N_12, N_9, C2 );
+and I_13 ( N_8, B2, A2 );
+and I_15 ( N_18, B3, A3 );
+and I_16 ( N_17, N_15, N_14 );
+and I_4 ( N_11, N_3, CI );
+and I_5 ( N_10, B0, A0 );
+and I_6 ( N_16, B1, A1 );
+and I_7 ( N_4, N_5, N_13 );
+or I_19 ( N_14, N_8, N_12 );
+or I_20 ( CO, N_18, N_17 );
+or I_10 ( N_13, N_11, N_10 );
+or I_1 ( C2, N_16, N_4 );
+xor I_30 ( S3, N_7, N_14 );
+xor I_31 ( N_7, A3, B3 );
+xor I_32 ( S2, N_6, B2 );
+xor I_33 ( N_6, C2, A2 );
+xor I_34 ( N_2, A1, B1 );
+xor I_35 ( S1, N_2, N_13 );
+xor I_36 ( S0, N_1, CI );
+xor I_37 ( N_1, A0, B0 );
+xor I_22 ( N_9, A2, B2 );
+xor I_21 ( N_15, A3, B3 );
+xor I_11 ( N_5, A1, B1 );
+xor I_12 ( N_3, A0, B0 );
+
+endmodule // fadd4c
+/* Verilog model created from schematic sr8sipo.sch -- Oct 14, 1998 08:58 */
+
+module sr8sipo( CK, CL, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, SIN );
+ input CK, CL;
+output Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7;
+ input SIN;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+
+g_d I_1 ( .CLK(CK), .D(N_1), .Q(Q7) );
+g_d I_2 ( .CLK(CK), .D(N_2), .Q(Q6) );
+g_d I_3 ( .CLK(CK), .D(N_3), .Q(Q5) );
+g_d I_4 ( .CLK(CK), .D(N_8), .Q(Q4) );
+g_d I_5 ( .CLK(CK), .D(N_5), .Q(Q3) );
+g_d I_6 ( .CLK(CK), .D(N_6), .Q(Q2) );
+g_d I_7 ( .CLK(CK), .D(N_7), .Q(Q1) );
+g_d I_8 ( .CLK(CK), .D(N_4), .Q(Q0) );
+and I_17 ( N_4, SIN, CL );
+and I_10 ( N_8, Q3, CL );
+and I_11 ( N_5, Q2, CL );
+and I_12 ( N_1, Q6, CL );
+and I_13 ( N_2, Q5, CL );
+and I_14 ( N_3, Q4, CL );
+and I_15 ( N_6, Q1, CL );
+and I_16 ( N_7, Q0, CL );
+
+endmodule // sr8sipo
+/* Verilog model created from schematic cnt4duda.sch -- Oct 13, 1998 08:58 */
+
+module cnt4duda( BO, CK, CL, CO, D0, D1, D2, D3, DN, LD, Q0, Q1, Q2, Q3, UP );
+output BO;
+ input CK, CL;
+output CO;
+ input D0, D1, D2, D3, DN, LD;
+output Q0, Q1, Q2, Q3;
+ input UP;
+wire N_77;
+wire N_76;
+wire N_74;
+wire N_75;
+wire N_71;
+wire N_72;
+wire N_73;
+wire N_70;
+wire N_68;
+wire N_69;
+wire N_36;
+wire N_37;
+wire N_38;
+wire N_40;
+wire N_42;
+wire N_44;
+wire N_47;
+wire N_49;
+wire N_50;
+wire N_51;
+wire N_52;
+wire N_53;
+wire N_54;
+wire N_55;
+wire N_56;
+wire N_57;
+wire N_58;
+wire N_59;
+wire N_60;
+wire N_61;
+wire N_62;
+wire N_63;
+wire N_64;
+wire N_65;
+wire N_66;
+wire N_67;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_18;
+wire N_22;
+wire N_25;
+wire N_26;
+wire N_27;
+wire N_28;
+wire N_31;
+wire N_34;
+wire N_35;
+
+g_tc I_65 ( .C(CL), .CLK(CK), .Q(Q0), .T(N_9) );
+g_tc I_66 ( .C(CL), .CLK(CK), .Q(Q1), .T(N_34) );
+g_tc I_67 ( .C(CL), .CLK(CK), .Q(Q2), .T(N_35) );
+g_tc I_68 ( .C(CL), .CLK(CK), .Q(Q3), .T(N_51) );
+and I_41 ( N_44, N_47, N_70, LD );
+and I_63 ( N_72, N_71, N_68, N_69 );
+and I_45 ( N_60, LD, Q0, N_70 );
+and I_43 ( N_52, Q0, LD, N_70 );
+and I_44 ( N_53, Q3, N_61, N_68 );
+and I_46 ( N_59, LD, N_71, N_69 );
+and I_47 ( N_67, N_68, Q0, N_70 );
+and I_48 ( N_66, N_68, N_71, N_69 );
+nand I_1 ( N_22, N_68, N_61, N_47 );
+or I_49 ( N_38, Q2, Q3 );
+and I_7 ( N_26, Q0, LD, N_70, N_47 );
+and I_8 ( N_25, N_71, LD, N_69, N_22 );
+or I_11 ( N_35, N_36, N_37, N_40 );
+or I_9 ( N_9, N_27, N_8, N_31 );
+or I_10 ( N_34, N_28, N_26, N_25 );
+xor I_13 ( N_77, D0, Q0 );
+xor I_15 ( N_55, D3, Q3 );
+xor I_12 ( N_7, D2, Q2 );
+xor I_14 ( N_18, D1, Q1 );
+or I_16 ( N_51, N_57, N_49, N_56, N_50 );
+not I_31 ( N_75, DN );
+not I_32 ( N_74, UP );
+not I_28 ( CO, N_63 );
+not I_29 ( BO, N_62 );
+not I_24 ( N_47, Q3 );
+not I_25 ( N_61, Q2 );
+not I_26 ( N_71, Q0 );
+not I_27 ( N_68, Q1 );
+not I_30 ( N_76, LD );
+and I_39 ( N_70, UP, N_75 );
+and I_40 ( N_69, N_74, DN );
+and I_64 ( N_73, LD, N_38 );
+and I_50 ( N_37, N_42, N_44 );
+and I_51 ( N_40, N_72, N_73 );
+and I_52 ( N_42, Q0, Q1 );
+and I_54 ( N_49, N_53, N_52 );
+and I_55 ( N_54, Q2, Q1 );
+and I_56 ( N_56, N_54, N_60 );
+and I_38 ( N_57, N_55, N_76 );
+and I_57 ( N_58, N_61, N_68 );
+and I_58 ( N_50, N_58, N_59 );
+and I_59 ( N_63, N_65, N_67 );
+and I_60 ( N_62, N_64, N_66 );
+and I_61 ( N_65, Q3, N_61 );
+and I_62 ( N_64, N_47, N_61 );
+and I_33 ( N_27, N_77, N_76 );
+and I_34 ( N_8, N_70, LD );
+and I_35 ( N_31, N_69, LD );
+and I_36 ( N_28, N_18, N_76 );
+and I_37 ( N_36, N_7, N_76 );
+
+endmodule // cnt4duda
+/* Verilog model created from schematic cnt4dul.sch -- Oct 15, 1998 15:24 */
+
+module cnt4dul( CK, CL, CO, D0, D1, D2, D3, ENP, ENT, LD, Q0, Q1, Q2, Q3 );
+ input CK, CL;
+output CO;
+ input D0, D1, D2, D3, ENP, ENT, LD;
+output Q0, Q1, Q2, Q3;
+wire N_51;
+wire N_52;
+wire N_53;
+wire N_54;
+wire N_55;
+wire N_56;
+wire N_57;
+wire N_58;
+wire N_49;
+wire N_50;
+wire N_23;
+wire N_24;
+wire N_26;
+wire N_28;
+wire N_30;
+wire N_31;
+wire N_33;
+wire N_34;
+wire N_35;
+wire N_36;
+wire N_43;
+wire N_45;
+wire N_46;
+wire N_48;
+wire N_2;
+wire N_5;
+wire N_6;
+wire N_8;
+wire N_9;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_18;
+wire N_19;
+wire N_20;
+
+or I_44 ( N_58, N_53, N_54, N_55 );
+or I_45 ( N_56, N_57, N_58 );
+or I_46 ( N_57, N_51, N_52 );
+and I_41 ( N_50, N_2, N_48, Q3 );
+and I_1 ( N_54, N_6, Q0, Q3 );
+and I_2 ( N_12, N_6, Q0, N_5 );
+and I_40 ( N_6, ENT, LD, ENP, CL );
+and I_3 ( N_36, N_6, Q0, Q1, CL );
+and I_4 ( N_13, D1, N_24, N_43, CL );
+and I_5 ( N_14, Q1, N_23, N_43, CL );
+and I_6 ( N_19, D0, N_9, N_43, CL );
+and I_7 ( N_20, Q0, N_8, N_43, CL );
+and I_8 ( N_34, Q2, N_26, N_43, CL );
+and I_9 ( N_35, D2, N_28, N_43, CL );
+and I_10 ( N_53, Q0, Q1, Q2, N_6 );
+and I_11 ( N_52, Q3, N_45, N_43, CL );
+and I_12 ( N_51, D3, N_46, N_43, CL );
+not I_34 ( N_23, D1 );
+not I_35 ( N_24, Q1 );
+not I_36 ( N_28, Q2 );
+not I_37 ( N_26, D2 );
+not I_38 ( N_45, D3 );
+not I_39 ( N_46, Q3 );
+not I_13 ( N_48, Q2 );
+not I_14 ( N_2, Q1 );
+not I_15 ( N_5, Q3 );
+not I_16 ( N_8, D0 );
+not I_17 ( N_9, Q0 );
+not I_18 ( N_43, LD );
+not I_19 ( N_16, CL );
+g_t I_20 ( .CLK(CK), .Q(Q3), .T(N_56) );
+g_t I_21 ( .CLK(CK), .Q(Q2), .T(N_30) );
+g_t I_22 ( .CLK(CK), .Q(Q1), .T(N_31) );
+g_t I_23 ( .CLK(CK), .Q(Q0), .T(N_18) );
+or I_25 ( N_30, N_36, N_35, N_34, N_33 );
+or I_26 ( N_31, N_13, N_14, N_12, N_11 );
+or I_27 ( N_18, N_6, N_19, N_20, N_15 );
+and I_42 ( CO, N_49, N_50 );
+and I_43 ( N_49, ENT, Q0 );
+and I_29 ( N_55, N_16, Q3 );
+and I_30 ( N_33, N_16, Q2 );
+and I_31 ( N_11, N_16, Q1 );
+and I_32 ( N_15, N_16, Q0 );
+
+endmodule // cnt4dul
+/* Verilog model created from schematic sr8univ.sch -- Oct 14, 1998 09:52 */
+
+module sr8univ( CK, CL, D0, D1, D2, D3, D4, D5, D6, D7, Q0, Q1, Q2, Q3, Q4, Q5,
+                Q6, Q7, S0, S1, SINL, SINR );
+ input CK, CL, D0, D1, D2, D3, D4, D5, D6, D7;
+output Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7;
+ input S0, S1, SINL, SINR;
+
+sr4univ I_3 ( .CK(CK), .CL(CL), .D0(D0), .D1(D1), .D2(D2), .D3(D3), .Q0(Q0), .Q1(Q1),
+           .Q2(Q2), .Q3(Q3), .S0(S0), .S1(S1), .SINL(Q4), .SINR(SINR) );
+sr4univ I_4 ( .CK(CK), .CL(CL), .D0(D4), .D1(D5), .D2(D6), .D3(D7), .Q0(Q4), .Q1(Q5),
+           .Q2(Q6), .Q3(Q7), .S0(S0), .S1(S1), .SINL(SINL), .SINR(Q3) );
+
+endmodule // sr8univ
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module lat8addr(DIN,S2,S1,S0,CL,LEN,Q7,Q6,Q5,Q4,Q3,Q2,Q1,Q0);
+input DIN,S2,S1,S0,CL,LEN;
+inout Q7,Q6,Q5,Q4,Q3,Q2,Q1,Q0;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q7 = (!LEN && S0 && S1 && S2 && DIN
+     || CL && !S2 && Q7
+     || CL && !S1 && Q7
+     || CL && !S0 && Q7
+     || CL && LEN && Q7);
+
+assign Q6 = (!LEN && !S0 && S1 && S2 && DIN
+     || CL && !S2 && Q6
+     || CL && !S1 && Q6
+     || CL && S0 && Q6
+     || CL && LEN && Q6);
+
+assign Q5 = (!LEN && S0 && !S1 && S2 && DIN
+     || CL && !S2 && Q5
+     || CL && S1 && Q5
+     || CL && !S0 && Q5
+     || CL && LEN && Q5);
+
+assign Q4 = (!LEN && !S0 && !S1 && S2 && DIN
+     || CL && !S2 && Q4
+     || CL && S1 && Q4
+     || CL && S0 && Q4
+     || CL && LEN && Q4);
+
+assign Q3 = (!LEN && S0 && S1 && !S2 && DIN
+     || CL && S2 && Q3
+     || CL && !S1 && Q3
+     || CL && !S0 && Q3
+     || CL && LEN && Q3);
+
+assign Q2 = (!LEN && !S0 && S1 && !S2 && DIN
+     || CL && S2 && Q2
+     || CL && !S1 && Q2
+     || CL && S0 && Q2
+     || CL && LEN && Q2);
+
+assign Q1 = (!LEN && S0 && !S1 && !S2 && DIN
+     || CL && S2 && Q1
+     || CL && S1 && Q1
+     || CL && !S0 && Q1
+     || CL && LEN && Q1);
+
+assign Q0 = (!LEN && !S0 && !S1 && !S2 && DIN
+     || CL && Q0 && S2
+     || CL && Q0 && S1
+     || CL && Q0 && S0
+     || CL && LEN && Q0);
+
+endmodule
+/* Verilog model created from schematic prty9evn.sch -- Oct 13, 1998 22:48 */
+
+module prty9evn( A0, A1, A2, A3, A4, A5, A6, A7, A8, EVEN );
+ input A0, A1, A2, A3, A4, A5, A6, A7, A8;
+output EVEN;
+wire pnode1;
+wire pnode2;
+wire pnode3;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+
+xnor I_5 ( EVEN, N_3, pnode3 );
+xor I_13 ( N_3, pnode1, pnode2 );
+xor I_7 ( pnode3, N_4, A8 );
+xor I_8 ( N_4, A6, A7 );
+xor I_9 ( pnode2, N_2, A5 );
+xor I_10 ( N_2, A3, A4 );
+xor I_11 ( pnode1, N_1, A2 );
+xor I_12 ( N_1, A0, A1 );
+
+endmodule // prty9evn
+/* Verilog model created from schematic prty9odd.sch -- Oct 13, 1998 23:05 */
+
+module prty9odd( A0, A1, A2, A3, A4, A5, A6, A7, A8, ODD );
+ input A0, A1, A2, A3, A4, A5, A6, A7, A8;
+output ODD;
+wire pnode1;
+wire pnode2;
+wire pnode3;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+
+xor I14 ( ODD, N_3, pnode3 );
+xor I_13 ( N_3, pnode1, pnode2 );
+xor I_7 ( pnode3, N_4, A8 );
+xor I_8 ( N_4, A6, A7 );
+xor I_9 ( pnode2, N_2, A5 );
+xor I_10 ( N_2, A3, A4 );
+xor I_11 ( pnode1, N_1, A2 );
+xor I_12 ( N_1, A0, A1 );
+
+endmodule // prty9odd
+/* Verilog model created from schematic mux4r21.sch -- Oct 13, 1998 21:42 */
+
+module mux4r21( A0, A1, B0, B1, C0, C1, CK, D0, D1, QA, QB, QC, QD, S );
+ input A0, A1, B0, B1, C0, C1, CK, D0, D1;
+output QA, QB, QC, QD;
+ input S;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+
+not I_1 ( N_1, S );
+or I_2 ( N_2, N_4, N_3 );
+or I_3 ( N_5, N_7, N_6 );
+or I_4 ( N_8, N_10, N_9 );
+or I_5 ( N_11, N_13, N_12 );
+and I_6 ( N_4, S, D1 );
+and I_7 ( N_3, N_1, D0 );
+and I_8 ( N_7, S, C1 );
+and I_9 ( N_6, N_1, C0 );
+and I_10 ( N_10, S, B1 );
+and I_11 ( N_9, N_1, B0 );
+and I_12 ( N_13, S, A1 );
+and I_13 ( N_12, N_1, A0 );
+g_d I_14 ( .CLK(CK), .D(N_2), .Q(QD) );
+g_d I_15 ( .CLK(CK), .D(N_5), .Q(QC) );
+g_d I_16 ( .CLK(CK), .D(N_8), .Q(QB) );
+g_d I_17 ( .CLK(CK), .D(N_11), .Q(QA) );
+
+endmodule // mux4r21
+/* Verilog model created from schematic sr8siso.sch -- Oct 14, 1998 09:39 */
+
+module sr8siso( CK, Q7, SI0, SI1 );
+ input CK;
+output Q7;
+ input SI0, SI1;
+wire N_8;
+wire N_9;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_5;
+wire N_6;
+wire N_7;
+
+and I_1 ( N_9, SI1, SI0 );
+g_d I_2 ( .CLK(CK), .D(N_7), .Q(N_6) );
+g_d I_3 ( .CLK(CK), .D(N_9), .Q(N_7) );
+g_d I_4 ( .CLK(CK), .D(N_1), .Q(Q7) );
+g_d I_5 ( .CLK(CK), .D(N_2), .Q(N_1) );
+g_d I_6 ( .CLK(CK), .D(N_3), .Q(N_2) );
+g_d I_7 ( .CLK(CK), .D(N_8), .Q(N_3) );
+g_d I_8 ( .CLK(CK), .D(N_5), .Q(N_8) );
+g_d I_9 ( .CLK(CK), .D(N_6), .Q(N_5) );
+
+endmodule // sr8siso
+/* Verilog model created from schematic cnt4bul.sch -- Oct 13, 1998 07:13 */
+
+module cnt4bul( CK, CL, CO, D0, D1, D2, D3, ENP, ENT, LD, Q0, Q1, Q2, Q3 );
+ input CK, CL;
+output CO;
+ input D0, D1, D2, D3, ENP, ENT, LD;
+output Q0, Q1, Q2, Q3;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_17;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+wire N_26;
+wire N_27;
+wire N_28;
+wire N_29;
+wire N_30;
+wire N_31;
+wire N_32;
+wire N_33;
+wire N_34;
+wire N_35;
+wire N_36;
+wire N_37;
+wire N_38;
+
+not I_34 ( N_4, D1 );
+not I_35 ( N_7, Q1 );
+not I_1 ( N_8, D2 );
+not I_2 ( N_11, Q2 );
+not I_3 ( N_12, D3 );
+not I_4 ( N_14, Q3 );
+not I_5 ( N_1, D0 );
+not I_6 ( N_3, Q0 );
+not I_7 ( N_15, LD );
+not I_8 ( N_38, CL );
+g_t I_9 ( .CLK(CK), .Q(Q3), .T(N_13) );
+g_t I_10 ( .CLK(CK), .Q(Q2), .T(N_9) );
+g_t I_11 ( .CLK(CK), .Q(Q1), .T(N_5) );
+g_t I_12 ( .CLK(CK), .Q(Q0), .T(N_2) );
+or I_13 ( N_13, N_36, N_29, N_34, N_37 );
+or I_14 ( N_9, N_28, N_10, N_32, N_35 );
+or I_15 ( N_5, N_27, N_6, N_30, N_33 );
+or I_16 ( N_2, N_17, N_26, N_25, N_31 );
+and I_44 ( CO, N_22, N_24 );
+and I_45 ( N_22, ENT, Q0 );
+and I_42 ( N_36, N_21, N_23 );
+and I_43 ( N_21, N_17, Q0 );
+and I_17 ( N_33, N_38, Q1 );
+and I_18 ( N_37, N_38, Q3 );
+and I_19 ( N_35, N_38, Q2 );
+and I_20 ( N_31, N_38, Q0 );
+and I_46 ( N_24, Q1, Q2, Q3 );
+and I_41 ( N_23, Q1, Q2, CL );
+and I_23 ( N_27, N_17, Q0, CL );
+and I_24 ( N_6, D1, N_7, N_15, CL );
+and I_25 ( N_17, ENT, LD, ENP, CL );
+and I_26 ( N_25, Q0, N_1, N_15, CL );
+and I_27 ( N_26, D0, N_3, N_15, CL );
+and I_28 ( N_30, Q1, N_4, N_15, CL );
+and I_29 ( N_28, N_17, Q0, Q1, CL );
+and I_30 ( N_10, D2, N_11, N_15, CL );
+and I_31 ( N_32, Q2, N_8, N_15, CL );
+and I_32 ( N_29, D3, N_14, N_15, CL );
+and I_33 ( N_34, Q3, N_12, N_15, CL );
+
+endmodule // cnt4bul
+/* Verilog model created from schematic fadd1c.sch -- Oct 13, 1998 14:48 */
+
+module fadd1c( A, B, CI, CO, S );
+ input A, B, CI;
+output CO, S;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_4;
+
+xor I_1 ( N_5, A, B );
+xor I_6 ( S, N_4, CI );
+xor I_7 ( N_4, A, B );
+or I_2 ( CO, N_7, N_6 );
+and I_4 ( N_7, N_5, CI );
+and I_5 ( N_6, B, A );
+
+endmodule // fadd1c
+/* Verilog model created from schematic comp4mag.sch -- Oct 13, 1998 08:51 */
+
+module comp4mag( A0, A1, A2, A3, AEQBI, AEQBO, AGTBI, AGTBO, ALTBI, ALTBO, B0,
+                 B1, B2, B3 );
+ input A0, A1, A2, A3, AEQBI;
+output AEQBO;
+ input AGTBI;
+output AGTBO;
+ input ALTBI;
+output ALTBO;
+ input B0, B1, B2, B3;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+wire N_26;
+wire N_27;
+wire N_28;
+wire N_29;
+wire N_30;
+wire N_31;
+wire N_32;
+wire N_33;
+wire N_34;
+wire N_35;
+wire N_36;
+
+not I_32 ( N_10, N_24 );
+not I_33 ( N_12, A2 );
+not I_34 ( N_7, N_26 );
+not I_35 ( N_9, B2 );
+not I_30 ( N_13, N_29 );
+not I_31 ( N_15, B1 );
+not I_28 ( N_16, N_27 );
+not I_29 ( N_17, A1 );
+not I_24 ( N_22, N_25 );
+not I_25 ( N_23, A0 );
+not I_26 ( N_19, N_28 );
+not I_27 ( N_21, B0 );
+not I_36 ( N_5, A3 );
+not I_37 ( N_4, AGTBI );
+not I_38 ( N_1, ALTBI );
+not I_39 ( N_3, B3 );
+or I_6 ( N_27, N_8, N_24 );
+or I_5 ( N_29, N_11, N_26 );
+or I_4 ( N_25, N_14, N_27 );
+or I_3 ( N_28, N_31, N_29 );
+or I_1 ( ALTBO, N_32, N_28 );
+or I_2 ( AGTBO, N_20, N_25 );
+or I_7 ( N_26, N_30, ALTBI );
+or I_8 ( N_24, N_2, AGTBI );
+xnor I_10 ( N_35, A2, B2 );
+xnor I_11 ( N_34, A0, B0 );
+xnor I_12 ( N_18, A1, B1 );
+xnor I_9 ( N_33, A3, B3 );
+and I_13 ( AEQBO, N_36, N_6, AEQBI );
+and I_19 ( N_8, N_9, N_7, A2 );
+and I_20 ( N_11, N_12, N_10, B2 );
+and I_23 ( N_14, N_15, N_13, A1 );
+and I_18 ( N_31, N_17, N_16, B1 );
+and I_16 ( N_32, N_23, N_22, B0 );
+and I_17 ( N_20, N_21, N_19, A0 );
+and I_21 ( N_2, N_3, N_1, A3 );
+and I_22 ( N_30, N_5, N_4, B3 );
+and I_14 ( N_36, N_34, N_18 );
+and I_15 ( N_6, N_35, N_33 );
+
+endmodule // comp4mag
+/* Verilog model created from schematic sr5univ.sch -- Oct 14, 1998 08:19 */
+
+module sr5univ( CK, CL, D0, D1, D2, D3, D4, LD, Q0, Q1, Q2, Q3, Q4, SIN );
+ input CK, CL, D0, D1, D2, D3, D4, LD;
+output Q0, Q1, Q2, Q3, Q4;
+ input SIN;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+
+or I_1 ( N_10, N_24, N_5 );
+or I_2 ( N_9, N_22, N_4 );
+or I_3 ( N_8, N_20, N_3 );
+or I_4 ( N_7, N_18, N_2 );
+or I_5 ( N_6, N_16, N_1 );
+and I_6 ( N_24, Q3, N_15 );
+and I_7 ( N_5, LD, D4 );
+and I_8 ( N_22, Q2, N_14 );
+and I_9 ( N_4, LD, D3 );
+and I_10 ( N_20, Q1, N_13 );
+and I_11 ( N_3, LD, D2 );
+and I_12 ( N_18, Q0, N_12 );
+and I_13 ( N_2, LD, D1 );
+and I_14 ( N_16, SIN, N_11 );
+and I_15 ( N_1, LD, D0 );
+g_dc I_16 ( .C(N_25), .CLK(CK), .D(N_10), .Q(Q4) );
+g_dc I_17 ( .C(N_23), .CLK(CK), .D(N_9), .Q(Q3) );
+g_dc I_18 ( .C(N_21), .CLK(CK), .D(N_8), .Q(Q2) );
+g_dc I_19 ( .C(N_19), .CLK(CK), .D(N_7), .Q(Q1) );
+g_dc I_20 ( .C(N_17), .CLK(CK), .D(N_6), .Q(Q0) );
+not I_34 ( N_23, CL );
+not I_35 ( N_21, CL );
+not I_36 ( N_19, CL );
+not I_29 ( N_17, CL );
+not I_33 ( N_25, CL );
+not I_22 ( N_15, LD );
+not I_24 ( N_14, LD );
+not I_26 ( N_13, LD );
+not I_28 ( N_12, LD );
+not I_30 ( N_11, LD );
+
+endmodule // sr5univ
+/* Verilog model created from schematic dff8ar.sch -- Oct 15, 1998 15:32 */
+
+module dff8ar( CK, CL, D0, D1, D2, D3, D4, D5, D6, D7, Q0, Q1, Q2, Q3, Q4, Q5,
+               Q6, Q7 );
+ input CK, CL, D0, D1, D2, D3, D4, D5, D6, D7;
+output Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7;
+wire N_1;
+
+not I1 ( N_1, CL );
+g_dc I2 ( .C(N_1), .CLK(CK), .D(D7), .Q(Q7) );
+g_dc I3 ( .C(N_1), .CLK(CK), .D(D6), .Q(Q6) );
+g_dc I4 ( .C(N_1), .CLK(CK), .D(D5), .Q(Q5) );
+g_dc I5 ( .C(N_1), .CLK(CK), .D(D4), .Q(Q4) );
+g_dc I6 ( .C(N_1), .CLK(CK), .D(D3), .Q(Q3) );
+g_dc I7 ( .C(N_1), .CLK(CK), .D(D2), .Q(Q2) );
+g_dc I8 ( .C(N_1), .CLK(CK), .D(D1), .Q(Q1) );
+g_dc I9 ( .C(N_1), .CLK(CK), .D(D0), .Q(Q0) );
+
+endmodule // dff8ar
+/* Verilog model created from schematic inv8.sch -- Oct 13, 1998 15:34 */
+
+module inv8( A0, A1, A2, A3, A4, A5, A6, A7, Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7 );
+ input A0, A1, A2, A3, A4, A5, A6, A7;
+output Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7;
+
+not I1 ( Y7, A7 );
+not I2 ( Y6, A6 );
+not I3 ( Y5, A5 );
+not I4 ( Y4, A4 );
+not I5 ( Y3, A3 );
+not I6 ( Y2, A2 );
+not I7 ( Y1, A1 );
+not I8 ( Y0, A0 );
+
+endmodule // inv8
+/* Verilog model created from schematic lat8.sch -- Oct 13, 1998 15:41 */
+
+module lat8( D0, D1, D2, D3, D4, D5, D6, D7, LE, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7 );
+ input D0, D1, D2, D3, D4, D5, D6, D7, LE;
+output Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7;
+wire N_1;
+
+not I1 ( N_1, LE );
+g_latch I2 ( .D(D7), .E(N_1), .Q(Q7) );
+g_latch I3 ( .D(D6), .E(N_1), .Q(Q6) );
+g_latch I4 ( .D(D5), .E(N_1), .Q(Q5) );
+g_latch I5 ( .D(D4), .E(N_1), .Q(Q4) );
+g_latch I6 ( .D(D3), .E(N_1), .Q(Q3) );
+g_latch I7 ( .D(D2), .E(N_1), .Q(Q2) );
+g_latch I8 ( .D(D1), .E(N_1), .Q(Q1) );
+g_latch I9 ( .D(D0), .E(N_1), .Q(Q0) );
+
+endmodule // lat8
+/* Verilog model created from schematic sr8piso.sch -- Oct 15, 1998 15:51 */
+
+module sr8piso( CE, CK, CL, D0, D1, D2, D3, D4, D5, D6, D7, LD, Q7, SDI );
+ input CE, CK, CL, D0, D1, D2, D3, D4, D5, D6, D7, LD;
+output Q7;
+ input SDI;
+wire N_55;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+wire N_26;
+wire N_27;
+wire N_28;
+wire N_29;
+wire N_30;
+wire N_31;
+wire N_32;
+wire N_33;
+wire N_34;
+wire N_35;
+wire N_36;
+wire N_37;
+wire N_38;
+wire N_39;
+wire N_40;
+wire N_41;
+wire N_42;
+wire N_43;
+wire N_44;
+wire N_45;
+wire N_46;
+wire N_47;
+wire N_48;
+wire N_49;
+wire N_50;
+wire N_51;
+wire N_52;
+wire N_53;
+wire N_54;
+
+not I_1 ( N_48, CE );
+not I_2 ( N_53, LD );
+not I_3 ( N_34, CE );
+not I_4 ( N_39, LD );
+not I_5 ( N_20, CE );
+not I_6 ( N_25, LD );
+not I_7 ( N_6, CE );
+not I_8 ( N_11, LD );
+not I_9 ( N_44, CE );
+not I_10 ( N_49, LD );
+not I_11 ( N_30, CE );
+not I_12 ( N_35, LD );
+not I_13 ( N_16, CE );
+not I_14 ( N_21, LD );
+not I_15 ( N_2, CE );
+not I_16 ( N_7, LD );
+g_d I_17 ( .CLK(CK), .D(N_52), .Q(Q7) );
+g_d I_18 ( .CLK(CK), .D(N_38), .Q(N_42) );
+g_d I_19 ( .CLK(CK), .D(N_24), .Q(N_28) );
+g_d I_20 ( .CLK(CK), .D(N_10), .Q(N_14) );
+g_d I_21 ( .CLK(CK), .D(N_46), .Q(N_55) );
+g_d I_22 ( .CLK(CK), .D(N_32), .Q(N_41) );
+g_d I_23 ( .CLK(CK), .D(N_18), .Q(N_27) );
+g_d I_24 ( .CLK(CK), .D(N_4), .Q(N_13) );
+or I_25 ( N_52, N_47, N_51, N_54 );
+or I_26 ( N_38, N_33, N_37, N_40 );
+or I_27 ( N_24, N_19, N_23, N_26 );
+or I_28 ( N_10, N_5, N_9, N_12 );
+or I_29 ( N_46, N_43, N_45, N_50 );
+or I_30 ( N_32, N_29, N_31, N_36 );
+or I_31 ( N_18, N_15, N_17, N_22 );
+or I_32 ( N_4, N_1, N_3, N_8 );
+and I_33 ( N_54, CL, CE, Q7 );
+and I_34 ( N_40, CL, CE, N_42 );
+and I_35 ( N_26, CL, CE, N_28 );
+and I_36 ( N_12, CL, CE, N_14 );
+and I_37 ( N_50, CL, CE, N_55 );
+and I_38 ( N_36, CL, CE, N_41 );
+and I_39 ( N_22, CL, CE, N_27 );
+and I_40 ( N_8, CL, CE, N_13 );
+and I_41 ( N_51, CL, D7, N_48, N_53 );
+and I_42 ( N_47, CL, N_42, N_48, LD );
+and I_43 ( N_37, CL, D6, N_34, N_39 );
+and I_44 ( N_33, CL, N_28, N_34, LD );
+and I_45 ( N_23, CL, D5, N_20, N_25 );
+and I_46 ( N_19, CL, N_14, N_20, LD );
+and I_47 ( N_9, CL, D4, N_6, N_11 );
+and I_48 ( N_5, CL, N_55, N_6, LD );
+and I_49 ( N_45, CL, D3, N_44, N_49 );
+and I_50 ( N_43, CL, N_41, N_44, LD );
+and I_51 ( N_31, CL, D2, N_30, N_35 );
+and I_52 ( N_29, CL, N_27, N_30, LD );
+and I_53 ( N_17, CL, D1, N_16, N_21 );
+and I_54 ( N_15, CL, N_13, N_16, LD );
+and I_55 ( N_3, CL, D0, N_2, N_7 );
+and I_56 ( N_1, CL, SDI, N_2, LD );
+
+endmodule // sr8piso
+/* Verilog model created from schematic sr4pisod.sch -- Oct 14, 1998 07:16 */
+
+module sr4pisod( A0, A1, A2, A3, B0, B1, B2, B3, CK, CL, LDA, LDB, Q3, SIN );
+ input A0, A1, A2, A3, B0, B1, B2, B3, CK, CL, LDA, LDB;
+output Q3;
+ input SIN;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+wire N_5;
+wire N_6;
+wire N_7;
+wire N_8;
+wire N_9;
+wire N_10;
+wire N_11;
+wire N_12;
+wire N_13;
+wire N_14;
+wire N_15;
+wire N_16;
+wire N_17;
+wire N_18;
+wire N_19;
+wire N_20;
+wire N_21;
+wire N_22;
+wire N_23;
+wire N_24;
+wire N_25;
+wire N_26;
+wire N_27;
+
+not I_8 ( N_14, LDA );
+not I_9 ( N_11, LDB );
+not I_10 ( N_15, B1 );
+not I_11 ( N_12, LDB );
+not I_12 ( N_13, B2 );
+not I_13 ( N_10, LDB );
+not I_14 ( N_9, LDB );
+not I_15 ( N_25, LDA );
+g_dc I_16 ( .C(CL), .CLK(CK), .D(N_6), .Q(N_18) );
+g_dc I_17 ( .C(CL), .CLK(CK), .D(N_8), .Q(N_21) );
+g_dc I_18 ( .C(CL), .CLK(CK), .D(N_4), .Q(N_24) );
+g_dc I_7 ( .C(CL), .CLK(CK), .D(N_2), .Q(Q3) );
+or I_19 ( N_6, N_17, N_5, N_16 );
+or I_20 ( N_8, N_20, N_7, N_19 );
+or I_21 ( N_4, N_23, N_3, N_22 );
+or I_3 ( N_2, N_27, N_1, N_26 );
+and I_22 ( N_17, SIN, N_14, N_11 );
+and I_23 ( N_20, N_18, N_15, N_12 );
+and I_24 ( N_23, N_21, N_13, N_10 );
+and I_4 ( N_27, N_24, N_25, N_9 );
+and I_25 ( N_16, LDA, A0 );
+and I_26 ( N_5, LDB, B0 );
+and I_27 ( N_19, LDA, A1 );
+and I_28 ( N_7, LDB, B1 );
+and I_29 ( N_22, LDA, A2 );
+and I_30 ( N_3, LDB, B2 );
+and I_6 ( N_26, LDA, A3 );
+and I_5 ( N_1, LDB, B3 );
+
+endmodule // sr4pisod
+/* Verilog model created from schematic dec4t10.sch -- Oct 14, 1998 14:39 */
+
+module dec4t10( A0, A1, A2, A3, Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9 );
+ input A0, A1, A2, A3;
+output Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+
+and I_42 ( Y0, N_4, N_3, N_2, N_1 );
+and I_43 ( Y1, A0, N_3, N_2, N_1 );
+and I_44 ( Y2, N_4, A1, N_2, N_1 );
+and I_45 ( Y3, A0, A1, N_2, N_1 );
+and I_46 ( Y4, N_4, N_3, A2, N_1 );
+and I_47 ( Y5, A0, N_3, A2, N_1 );
+and I_48 ( Y6, N_4, A1, A2, N_1 );
+and I_49 ( Y7, A0, A1, A2, N_1 );
+and I_50 ( Y8, N_4, N_3, N_2, A3 );
+and I_51 ( Y9, A0, N_3, N_2, A3 );
+not I_41 ( N_1, A3 );
+not I_38 ( N_4, A0 );
+not I_39 ( N_3, A1 );
+not I_40 ( N_2, A2 );
+
+endmodule // dec4t10
+/* Verilog model created from schematic dec4t10n.sch -- Oct 14, 1998 14:54 */
+
+module dec4t10n( A0, A1, A2, A3, Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9 );
+ input A0, A1, A2, A3;
+output Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9;
+wire N_1;
+wire N_2;
+wire N_3;
+wire N_4;
+
+nand I_28 ( Y0, N_4, N_3, N_2, N_1 );
+nand I_29 ( Y5, A0, N_3, A2, N_1 );
+nand I_30 ( Y8, N_4, N_3, N_2, A3 );
+nand I_31 ( Y1, A0, N_3, N_2, N_1 );
+nand I_32 ( Y2, N_4, A1, N_2, N_1 );
+nand I_33 ( Y3, A0, A1, N_2, N_1 );
+nand I_34 ( Y4, N_4, N_3, A2, N_1 );
+nand I_35 ( Y6, N_4, A1, A2, N_1 );
+nand I_36 ( Y7, A0, A1, A2, N_1 );
+nand I_37 ( Y9, A0, N_3, N_2, A3 );
+not I_38 ( N_4, A0 );
+not I_39 ( N_3, A1 );
+not I_40 ( N_2, A2 );
+not I_41 ( N_1, A3 );
+
+endmodule // dec4t10n

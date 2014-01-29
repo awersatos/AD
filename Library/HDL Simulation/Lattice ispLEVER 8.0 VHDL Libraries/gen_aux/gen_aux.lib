@@ -1,0 +1,157 @@
+timestamp=0
+
+[components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*1669
+M=3|0|v63|0|./src/gen_aux.vhd|0*348*0x8bdb9c9c917f8fc7a007a3ad65bc8e0923280bfe|0*1606*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|36
+
+[g_de]
+A/behavioral=21|./src/gen_aux.vhd|179|1*1804
+B/behavioral=3*2368
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*5109
+I/behavioral=0*5579
+M=11|0|v63|0|./src/gen_aux.vhd|0*4871*0x194e1dbde2618a868a0aa7510badc94ff1b2cc26|0*5052*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*5262*0xfe5c147292b2615a2a51eb30820c9d2606def192|0*5508*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|172
+
+[g_depc]
+A/behavioral=21|./src/gen_aux.vhd|200|1*2299
+B/behavioral=3*3518
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*6184
+I/behavioral=0*6708
+M=11|0|v63|0|./src/gen_aux.vhd|0*5930*0x13d7400b9c51299004f6565a9a950d02f5d6062c|0*6125*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*6339*0x8abb9eb7a65c93b903cbf62863b34dccac38f16c|0*6635*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|193
+
+[g_dpc]
+A/behavioral=21|./src/gen_aux.vhd|156|1*1309
+B/behavioral=3*618
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*4036
+I/behavioral=0*4537
+M=11|0|v63|0|./src/gen_aux.vhd|0*3790*0x6b465325cdc8e3d7180c34a4dffc8586da5e4b98|0*3978*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*4190*0x6df51825cdc6c480c41b24223ff4ae5149bee5a0|0*4465*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|149
+
+[g_gnd]
+A/behavioral=21|./src/gen_aux.vhd|141|1*830
+B/behavioral=3*309
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*3076
+I/behavioral=0*3439
+M=11|0|v63|0|./src/gen_aux.vhd|0*2870*0x477a5bd097f620e3089ad41d75a58044ac787de9|0*3018*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*3230*0x3c9cc80564ae66b00cea7e50dea35a0bf8d2cb1c|0*3367*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|137
+
+[g_jkpc]
+A/behavioral=21|./src/gen_aux.vhd|294|1*4295
+B/behavioral=3*7023
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*10517
+I/behavioral=0*11172
+M=11|0|v63|0|./src/gen_aux.vhd|0*10261*0x15f1fe7fdbda47d014cdafb12dd2181471f12c79|0*10458*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*10672*0xb8428266d50a4f3bf2dc0dacfe2fc3783a9c0e5e|0*11099*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|287
+
+[g_latc]
+A/behavioral=21|./src/gen_aux.vhd|247|1*3305
+B/behavioral=3*5997
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*8336
+I/behavioral=0*8804
+M=11|0|v63|0|./src/gen_aux.vhd|0*8092*0xa4f18b281680f0d398b6545c12c3445fad3b00d0|0*8277*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*8491*0xedaab81b5a97d11807b0d1124a9d5c364b8a0194|0*8731*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|240
+
+[g_latp]
+A/behavioral=21|./src/gen_aux.vhd|226|1*2810
+B/behavioral=3*5520
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*7289
+I/behavioral=0*7755
+M=11|0|v63|0|./src/gen_aux.vhd|0*7045*0x9135f2d1fbd9959541c34e8a25eabffd1aabe0b2|0*7230*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*7444*0x972ac51c15ef55fa2a727f24feeb1a112b0688fe|0*7682*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|219
+
+[g_latpc]
+A/behavioral=21|./src/gen_aux.vhd|269|1*3800
+B/behavioral=3*6474
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*9412
+I/behavioral=0*9907
+M=11|0|v63|0|./src/gen_aux.vhd|0*9158*0xd88e363ecc71449b2c4e35f5a5b5c531f294267d|0*9352*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*9568*0xf426439c4b8e45f9321777a931e66cb1a2c87872|0*9833*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|262
+
+[g_rspc]
+A/behavioral=21|./src/gen_aux.vhd|326|1*4838
+B/behavioral=3*7920
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*11781
+I/behavioral=0*12428
+M=11|0|v63|0|./src/gen_aux.vhd|0*11525*0xc51e0d98421abca8bf113cfc97ddf66aa92daab8|0*11722*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*11936*0xb59221e1d90a174e87a5012cae0c9667e5ead96e|0*12355*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|319
+
+[g_tpc]
+A/behavioral=21|./src/gen_aux.vhd|358|1*5365
+B/behavioral=3*8673
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*13028
+I/behavioral=0*13608
+M=11|0|v63|0|./src/gen_aux.vhd|0*12780*0x5ba0d5e50b91ec513748d1203aef1412a44ec805|0*12970*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*13182*0x61d2cbdf635876684a780af65aadfdae3a9f4d93|0*13536*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|351
+
+[g_vcc]
+A/behavioral=21|./src/gen_aux.vhd|129|1*351
+B/behavioral=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*2188
+I/behavioral=0*2551
+M=11|0|v63|0|./src/gen_aux.vhd|0*1982*0x60789e05557887a304e068f929bd30ef5d99532e|0*2130*0xe9e755cba0794a30e9c6f136a45a101c
+M/behavioral=21|0|v63|0|./src/gen_aux.vhd|0*2342*0x0dd624bb4b862b7919a159d184a87f0bae76e048|0*2479*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/gen_aux.vhd|125
+
+[~A]
+Comment=LATTICE ispLEVER Classic 1.3, GEN_AUX VHDL LIBRARY
+ModifyID=70
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+
+[~MFT]
+0=81|0gen_aux.mgf|13608|0
+1=11|1gen_aux.mgf|5365|0
+3=10|3gen_aux.mgf|8673|0
+
+[~U]
+components=COMPONENTS 3|0*0|0*126
+g_de=G_DE 11|0*4702|
+g_depc=G_DEPC 11|0*5743|
+g_dpc=G_DPC 11|0*3604|
+g_gnd=G_GND 11|0*2716|
+g_jkpc=G_JKPC 11|0*10074|
+g_latc=G_LATC 11|0*7921|
+g_latp=G_LATP 11|0*6874|
+g_latpc=G_LATPC 11|0*8970|
+g_rspc=G_RSPC 11|0*11338|
+g_tpc=G_TPC 11|0*12594|
+g_vcc=G_VCC 11|0*1828|
+

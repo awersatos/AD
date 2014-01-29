@@ -1,0 +1,217 @@
+V 000060 56 483 1260919216304 cycloneiv_hssi_tx_pma_sub_reg
+(_unit cycloneiv_hssi_tx_pma_sub_reg
+	(_specify
+		(_tchk setuphold 0 58
+			(_port clk (posedge))
+			(_port d ())
+		)
+		(_modpath parallel positive 0 59
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 60
+			(_port clrn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+		(_modpath parallel positive 0 61
+			(_port prn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+	)
+)
+V 000066 56 530 1260919216309 cycloneiv_hssi_tx_pma_sub_out_block
+(_unit cycloneiv_hssi_tx_pma_sub_out_block
+	(_specify
+		(_modpath parallel unknown 0 127
+			(_code  4 bypass_mode*EQ*1)
+			(_port clk in )
+			(_port dataout out )
+		)
+		(_modpath parallel positive 0 130
+			(_code  5 bypass_mode*EQ*0*AN*falling_clk_out*EQ*1)
+			(_port clk in negedge)
+			(_port dataout out negedge)
+			(_datain dataout_tmp in negedge)
+		)
+		(_modpath parallel positive 0 133
+			(_code  6 bypass_mode*EQ*0*AN*falling_clk_out*EQ*0)
+			(_port datain in )
+			(_port dataout out )
+			(_datain dataout_tmp in )
+		)
+	)
+)
+V 000074 56 275 1260919216314 cycloneiv_hssi_tx_pma_sub_parallel_register
+(_unit cycloneiv_hssi_tx_pma_sub_parallel_register
+	(_specify
+		(_modpath parallel positive 0 206
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+		(_tchk setuphold 0 207
+			(_port clk (posedge))
+			(_port datain ())
+		)
+	)
+)
+V 000060 56 461 1260919216319 cycloneiv_hssi_tx_pma_sub_ser
+(_unit cycloneiv_hssi_tx_pma_sub_ser
+	(_specify
+		(_modpath parallel unknown 0 335
+			(_code  16 serial_din_mode*EQ*1)
+			(_port serialdatain in )
+			(_port dataout out )
+		)
+		(_modpath parallel unknown 0 338
+			(_code  17 postdpa_serial_din_mode*EQ*1)
+			(_port postdpaserialdatain in )
+			(_port dataout out )
+		)
+		(_modpath parallel unknown 0 341
+			(_code  18 enable_dpaclk_to_lvdsout_signal*EQ*1)
+			(_port dpaclkin in )
+			(_port dataout out )
+		)
+	)
+)
+V 000053 56 1377 1260919216442 cycloneiv_hssi_tx_pcs
+(_unit cycloneiv_hssi_tx_pcs
+	(_specify
+		(_tchk setuphold 0 15985
+			(_port coreclk (posedge))
+			(_port ctrlenable ())
+		)
+		(_tchk setuphold 0 15986
+			(_port coreclk (posedge))
+			(_port datain ())
+		)
+		(_tchk setuphold 0 15987
+			(_port coreclk (posedge))
+			(_port detectrxloop ())
+		)
+		(_tchk setuphold 0 15988
+			(_port coreclk (posedge))
+			(_port dispval ())
+		)
+		(_tchk setuphold 0 15989
+			(_port coreclk (posedge))
+			(_port forcedisp ())
+		)
+		(_tchk setuphold 0 15990
+			(_port coreclk (posedge))
+			(_port forcedispcompliance ())
+		)
+		(_tchk setuphold 0 15991
+			(_port coreclk (posedge))
+			(_port phfifowrenable ())
+		)
+		(_tchk setuphold 0 15992
+			(_port coreclk (posedge))
+			(_port forceelecidle ())
+		)
+		(_tchk setuphold 0 15993
+			(_port coreclk (posedge))
+			(_port powerdn ())
+		)
+		(_tchk setuphold 0 15994
+			(_port coreclk (posedge))
+			(_port pipetxdeemph ())
+		)
+		(_tchk setuphold 0 15995
+			(_port coreclk (posedge))
+			(_port pipetxswing ())
+		)
+		(_tchk setuphold 0 15996
+			(_port coreclk (posedge))
+			(_port pipetxmargin ())
+		)
+		(_modpath parallel positive 0 15998
+			(_port coreclk in posedge)
+			(_port phfifooverflow out posedge)
+			(_datain td_out_full_tx in posedge)
+		)
+		(_modpath parallel positive 0 15999
+			(_port coreclk in posedge)
+			(_port phfifounderflow out posedge)
+			(_datain td_out_empty_tx in posedge)
+		)
+	)
+)
+V 000053 56 2100 1260919216800 cycloneiv_hssi_rx_pcs
+(_unit cycloneiv_hssi_rx_pcs
+	(_specify
+		(_modpath parallel positive 0 53093
+			(_port coreclk in posedge)
+			(_port a1a2sizeout out posedge)
+			(_datain a1a2sizeout_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53094
+			(_port coreclk in posedge)
+			(_port ctrldetect out posedge)
+			(_datain ctrldetect_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53095
+			(_port coreclk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53096
+			(_port coreclk in posedge)
+			(_port disperr out posedge)
+			(_datain disperr_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53097
+			(_port coreclk in posedge)
+			(_port errdetect out posedge)
+			(_datain errdetect_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53098
+			(_port coreclk in posedge)
+			(_port patterndetect out posedge)
+			(_datain patterndetect_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53099
+			(_port coreclk in posedge)
+			(_port rmfifodatadeleted out posedge)
+			(_datain rmfifodatadeleted_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53100
+			(_port coreclk in posedge)
+			(_port rmfifodatainserted out posedge)
+			(_datain rmfifodatainserted_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53101
+			(_port coreclk in posedge)
+			(_port runningdisp out posedge)
+			(_datain runningdisp_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53102
+			(_port coreclk in posedge)
+			(_port syncstatus out posedge)
+			(_datain syncstatus_reg_sr in posedge)
+		)
+		(_modpath parallel positive 0 53108
+			(_port coreclk in posedge)
+			(_port byteorderalignstatus out posedge)
+			(_datain rd_out_byteord_flag in posedge)
+		)
+		(_modpath parallel positive 0 53109
+			(_port coreclk in posedge)
+			(_port phfifooverflow out posedge)
+			(_datain rd_out_full_rx in posedge)
+		)
+		(_modpath parallel positive 0 53110
+			(_port coreclk in posedge)
+			(_port phfifounderflow out posedge)
+			(_datain rd_out_empty_rx in posedge)
+		)
+		(_tchk setuphold 0 53115
+			(_port coreclk (posedge))
+			(_port phfifordenable ())
+		)
+	)
+)

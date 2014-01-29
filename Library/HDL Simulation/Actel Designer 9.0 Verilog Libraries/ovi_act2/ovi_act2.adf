@@ -1,0 +1,43 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_act2
+
+[Library]
+ovi_act2=.\OVI_act2.lib
+
+[$LibMap$]
+ovi_act2=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/update_ovi_act2.do=-1
+/act2.v=-1
+
+[Files.Data]
+.\src\update_ovi_act2.do=Macro
+.\src\act2.v=Verilog Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVerilogSets]
+Strict=0
+Strict2001=1
+SystemVerilog3=0
+ErrorOutputLimit=0
+WarningPrnLevel=1
+OptimizationLevel=2
+EnableDebug=1
+StrictLRMMode=0
+ProtectLevel=0
+AdditionalOptions=

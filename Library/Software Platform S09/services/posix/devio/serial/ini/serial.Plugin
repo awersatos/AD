@@ -1,0 +1,18 @@
+[Plugin]
+Name=serial
+Caption=Serial Device I/O Services
+Description=POSIX compatible interface for serial devices.
+SourceDir=services\posix\devio\serial\src
+CompileOption0=-I"$(SERROOT)\posix\internal"
+Implement=serial
+Require0=posix_devio
+Bitmap=serial.bmp
+
+[Instance]
+Caption=Serial Device I/O Context
+Description=POSIX compatible interface for serial devices.
+Require0=serial_adaptor
+MultipleLinks=True
+GenerateName=True
+
+

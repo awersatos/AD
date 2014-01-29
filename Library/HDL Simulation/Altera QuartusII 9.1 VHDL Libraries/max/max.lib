@@ -1,0 +1,120 @@
+timestamp=0
+
+[max_asynch_io]
+A/behave=21|./src/max_atoms.vhd|132|1*946
+B/behave=3*964
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*4455
+I/behave=0*8403
+M=11|0|v63|0|./src/max_atoms.vhd|0*3360*0xbb5379c92c4eca983289076c1ec12cbdef2b3a18|0*4387*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/max_atoms.vhd|0*4761*0xa83e48072e9ad647ebf275854d3e5a6c3764067f|0*8325*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_atoms.vhd|107
+
+[max_asynch_mcell]
+A/vital_mcell=21|./src/max_atoms.vhd|452|1*3387
+B/vital_mcell=3*9243
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_mcell=8.2.1986.SP1.35.3497  (Windows)
+I=0*15560
+I/vital_mcell=0*45999
+M=11|0|v63|0|./src/max_atoms.vhd|0*11584*0x2f0f0d8e779918becaf48f762afab5ac928ade20|0*15489*0xf2538cdc6f7b23a146389216c886e772
+M/vital_mcell=21|0|v63|0|./src/max_atoms.vhd|0*15837*0xe6b44f265ec21bba51bb96175bba8c58cc7d9e0d|0*45913*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_atoms.vhd|387
+
+[max_asynch_sexp]
+A/behave=21|./src/max_atoms.vhd|1633|1*22986
+B/behave=3*215976
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*79749
+I/behave=0*84354
+M=11|0|v63|0|./src/max_atoms.vhd|0*78862*0x6b18eb2f098ae58013a9b2eb0e5d5708935eda71|0*79679*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/max_atoms.vhd|0*80057*0x24bf1c0740158338c3a09885f379512b2ac650bd|0*84274*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_atoms.vhd|1619
+
+[max_atom_pack]
+B/max_atom_pack=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*1853
+I/max_atom_pack=0*2702
+M=3|0|v63|0|./src/max_atoms.vhd|0*546*0xc92dea1073eeea9ce099623c5f9b48ffa884c23f|0*1785*0xf2538cdc6f7b23a146389216c886e772
+M/max_atom_pack=4|0|v63|0|./src/max_atoms.vhd|0*2095*0xd3a7352ed37ded55aa5e94a8816ec65893c203e8|0*2618*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_atoms.vhd|21
+
+[max_components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*26003
+I=0*88203
+M=3|0|v63|0|./src/max_components.vhd|0*86690*0x5f293fdb13bd5b333a542d5ca2b78a2eaaea0b92|0*88129*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_components.vhd|21
+
+[max_io]
+A/structure=21|./src/max_atoms.vhd|347|1*2365
+B/structure=3*6178
+C=8.2.1986.SP1.35.3497  (Windows)
+C/structure=8.2.1986.SP1.35.3497  (Windows)
+I=0*9589
+I/structure=0*10630
+M=11|0|v63|0|./src/max_atoms.vhd|0*8999*0x0dadaea69931a5b0965d5f2ce5c6d97f72d19f96|0*9528*0xf2538cdc6f7b23a146389216c886e772
+M/structure=21|0|v63|0|./src/max_atoms.vhd|0*9856*0x1c4fc12e99d62058c8147e33971088b29f5b19c9|0*10556*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_atoms.vhd|334
+
+[max_mcell]
+A/vital_mcell_atom=21|./src/max_atoms.vhd|1466|1*19571
+B/vital_mcell_atom=3*211544
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_mcell_atom=8.2.1986.SP1.35.3497  (Windows)
+I=0*71195
+I/vital_mcell_atom=0*78123
+M=11|0|v63|0|./src/max_atoms.vhd|0*69431*0x48d7bb6e74ee70fc1df5f458a11e02414b4ad4cc|0*71131*0xf2538cdc6f7b23a146389216c886e772
+M/vital_mcell_atom=21|0|v63|0|./src/max_atoms.vhd|0*71465*0xa52b5729f77c13b341ee3310a517463adfb3261f|0*78039*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_atoms.vhd|1438
+
+[max_mcell_register]
+A/vital_mcell_reg=21|./src/max_atoms.vhd|1028|1*12813
+B/vital_mcell_reg=3*137608
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_mcell_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*49871
+I/vital_mcell_reg=0*68770
+M=11|0|v63|0|./src/max_atoms.vhd|0*46903*0x664c07692b27157c4f4cb85eb7fee6d9b4066cde|0*49798*0xf2538cdc6f7b23a146389216c886e772
+M/vital_mcell_reg=21|0|v63|0|./src/max_atoms.vhd|0*50150*0x667c65f81ca68fca8501f522f65efc5eae22c66a|0*68678*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_atoms.vhd|981
+
+[max_sexp]
+A/structure=21|./src/max_atoms.vhd|1735|1*25285
+B/structure=3*232979
+C=8.2.1986.SP1.35.3497  (Windows)
+C/structure=8.2.1986.SP1.35.3497  (Windows)
+I=0*85320
+I/structure=0*86071
+M=11|0|v63|0|./src/max_atoms.vhd|0*84874*0x6b1617eb5fd263a40627030fe170dba50bdc43e8|0*85257*0xf2538cdc6f7b23a146389216c886e772
+M/structure=21|0|v63|0|./src/max_atoms.vhd|0*85589*0xf105695366929723d85d8053dae328fa3b76ecc4|0*85995*0xf2538cdc6f7b23a146389216c886e772
+R=./src/max_atoms.vhd|1730
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, MAX VHDL LIBRARY
+ModifyID=52
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=61|0max.mgf|88203|0
+1=8|1max.mgf|26003|0
+3=7|3max.mgf|232979|0
+
+[~U]
+max_asynch_io=11|0*2958|
+max_asynch_mcell=11|0*10955|
+max_asynch_sexp=11|0*78490|
+max_atom_pack=3|0*0|0*129
+max_components=MAX_COMPONENTS 3|0*86398|0*86528
+max_io=11|0*8716|
+max_mcell=11|0*69065|
+max_mcell_register=11|0*46288|
+max_sexp=11|0*84669|
+

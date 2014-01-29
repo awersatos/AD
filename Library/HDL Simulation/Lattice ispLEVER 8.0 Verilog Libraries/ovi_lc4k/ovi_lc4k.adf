@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_lc4k
+
+[Library]
+ovi_lc4k=.\ovi_lc4k.lib
+
+[$LibMap$]
+ovi_lc4k=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\ovi_lc4k\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\ovi_lc4k\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\ovi_lc4k\
+Extension5=dll
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/mach.v=-1
+/update_ovi_lc4k.do=-1
+
+[Files.Data]
+.\src\mach.v=Verilog Source Code
+.\src\update_ovi_lc4k.do=Macro
+

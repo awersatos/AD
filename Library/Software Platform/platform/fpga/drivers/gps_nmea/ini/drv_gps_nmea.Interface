@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_gps_nmea
+Category=DRIVER
+System=False
+Description=GPS_NMEA serial port driver
+PublicDir=platform\fpga\drivers\gps_nmea\include
+
+

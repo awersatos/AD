@@ -1,0 +1,209 @@
+[Plugin]
+Name=posix_threads
+Description=Basic support for POSIX multi-threading
+Caption=Multithreading Support
+SourceDir=services\posix\kernel\threads\src
+GlobalCompileOption0=-D__POSIX_KERNEL__=1
+GlobalCompileOption1=-D_POSIX_AEP_RT_MINIMAL_C_SOURCE=200312L
+GlobalCompileOption2=-D_POSIX_26_C_SOURCE=200312L
+GlobalCompileOption3=-D__XSI_THREAD_EXIT=1
+GlobalCompileOption4=-D__XSI_THREAD_MUTEX_EXT=1
+GlobalCompileOption5=-D__POSIX_THREAD_ATTR_STACKADDR=1
+GlobalCompileOption6=-D__POSIX_THREAD_ATTR_STACKSIZE=1
+GlobalCompileOption7=-D__POSIX_THREAD_PRIO_INHERIT=1
+GlobalCompileOption8=-D__POSIX_THREAD_PRIO_PROTECT=1
+GlobalCompileOption9=-D__POSIX_INTERRUPTS=1
+GlobalCompileOption10=-D__POSIX_TIMERS=1
+GlobalCompileOption11=-D__POSIX_TIMEOUTS=1
+GlobalCompileOption12=-D__POSIX_CLOCK_SELECTION=1
+InitHandler=posix_threads_init
+InitHandlerPriority=2
+Implement=posix_threads
+Require0=posix_kernel
+Require1=posix_shmio
+MinInstances=0
+
+[Require1_If0]
+Kind=OPTION
+Object=Shared Memory
+Condition=EQ
+Value=True
+
+[Option0]
+Name=Shared Memory
+Description=Support for shared memory
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option1]
+Name=DESTRUCTOR_ITERATIONS
+Description=The number of attempts made to destroy a thread's thread-specific data values on thread exit
+Kind=UINT8
+DefaultValue=4
+MinRange=4
+InLimitsCfg=True
+
+[Option2]
+Name=KEYS_MAX
+Description=The number of data keys per process
+Kind=UINT16
+DefaultValue=16
+MinRange=16
+MaxRange=128
+InLimitsCfg=True
+
+[Option3]
+Name=THREADS_MAX
+Description=The maximum number of threads
+Kind=UINT8
+DefaultValue=8
+MinRange=8
+InLimitsCfg=True
+
+[Option4]
+Name=MAIN_STACK_SIZE
+Description=The size of the stack (bytes) for the main thread
+Kind=UINT32
+DefaultValue=1200
+MinRange=384
+InLimitsCfg=True
+
+[Option5]
+Name=MAIN_PRIORITY
+Description=The priority of the main thread
+Kind=UINT8
+DefaultValue=32
+MinRange=1
+MaxRange=62
+InLimitsCfg=True
+
+[Option6]
+Name=IDLE_STACK_SIZE
+Description=The size of the stack (bytes) for the idle thread
+Kind=UINT32
+DefaultValue=1000
+MinRange=384
+InLimitsCfg=True
+
+[Option7]
+Name=DEFAULT_STACK_SIZE
+Description=The default size of a thread stack (bytes)
+Kind=UINT32
+DefaultValue=1500
+MinRange=384
+InLimitsCfg=True
+
+[Option8]
+Name=SPORADIC_SERVER
+Description=Set to True if support for the Option Requirement POSIX_THREAD_SPORADIC_SERVER is needed
+Kind=Boolean
+DefaultValue=False
+InLimitsCfg=True
+
+[Option9]
+Name=CPUTIME
+Description=Set to True if support for the Option Requirement POSIX_THREAD_CPUTIME is needed
+Kind=BOOLEAN
+DefaultValue=False
+InLimitsCfg=True
+
+[Option10]
+Name=INTR_STACKSIZE
+Description=The size of posix interrupts\timers stack
+Kind=UINT32
+DefaultValue=384
+InLimitsCfg=True
+
+[Option11]
+Name=CANCEL_SUPPORT
+Description=Support for cancelation of threads ( pthread_cancel() )
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option12]
+Name=TIMESLICE_MAX
+Description=The number of system ticks before round-robin expiration
+Kind=UINT8
+DefaultValue=20
+InLimitsCfg=True
+
+[Option13]
+Name=OSTICKMICROSCS
+Description=Granularity of the system clock in microseconds
+Kind=UINT32
+DefaultValue=1000
+MinRange=100
+MaxRange=10000
+InLimitsCfg=True
+
+[Option14]
+Name=TIMER_MAX
+Description=Maximum number of posix timers
+Kind=UINT32
+DefaultValue=8
+MinRange=8
+MaxRange=64
+InLimitsCfg=True
+
+[Option15]
+Name=DEBUG
+Description=Support for extra orti debug information
+Kind=BOOLEAN
+DefaultValue=True
+
+[Option16]
+Name=THREAD_NAME
+Description=Support for thread names ( pthread_attr_[set|get]name() )
+Kind=BOOLEAN
+DefaultValue=False
+InLimitsCfg=True
+
+[Option17]
+Name=ERRNO
+Description=Support for errno (errno.h). The value of errno will be saved and restored on thread switch.
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance]
+Require0=
+Caption=Background Thread
+
+[Instance_Option0]
+Name=startroutine
+GUIName=Start Routine
+Description=Name of the start routine of an auto-starting thread
+Kind=CHANDLER
+Return=void*
+Param=void* start
+
+[Instance_Option1]
+Name=stacksize
+GUIName=Stack Size
+Description=Size (in bytes) of the thread's stack
+Kind=UINT32
+DefaultValue=1024
+MinRange=384
+
+[Instance_Option2]
+Name=priority
+GUIName=Priority
+Description=Priority of the autostarting thread
+Kind=UINT8
+DefaultValue=1
+MinRange=1
+MaxRange=62
+
+[Instance_Option3]
+Name=schedpolicy
+GUIName=Scheduling Policy
+Description=Scheduling policy of the autostarting thread
+Kind=ENUM
+Enum0=SCHED_FIFO
+EnumValue0=0
+Enum1=SCHED_RR
+EnumValue1=1
+Enum2=SCHED_SPORADIC
+EnumValue2=2
+DefaultValue=SCHED_FIFO
+Type=UINT8
+

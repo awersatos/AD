@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=cyclone
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+cyclone=.
+
+[Library]
+cyclone=.\cyclone.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_cyclone.do=-1
+/cyclone_components.vhd=-1
+/cyclone_atoms.vhd=-1
+
+[Files.Data]
+.\src\update_cyclone.do=Macro
+.\src\cyclone_components.vhd=VHDL Source Code
+.\src\cyclone_atoms.vhd=VHDL Source Code
+

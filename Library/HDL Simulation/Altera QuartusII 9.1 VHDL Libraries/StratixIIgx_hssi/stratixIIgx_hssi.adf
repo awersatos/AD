@@ -1,0 +1,37 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=stratixiigx_hssi
+
+[Library]
+stratixiigx_hssi=.\stratixiigx_hssi.lib
+
+[$LibMap$]
+stratixiigx_hssi=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[Files]
+/update_stratixiigx_hssi.do=-1
+/stratixiigx_hssi_atoms.vhd=-1
+/stratixiigx_hssi_components.vhd=-1
+
+[Files.Data]
+.\src\update_stratixiigx_hssi.do=Macro
+.\src\stratixiigx_hssi_atoms.vhd=VHDL Source Code
+.\src\stratixiigx_hssi_components.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

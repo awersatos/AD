@@ -1,0 +1,234 @@
+object DualConnector: TOpenBusLibraryComponent
+  Name = 'DUALCONNECTOR'
+  LongName = 'Dual Port Connector'
+  Kind = obckConnector
+  ConfiguratorName = 'OpenBusDualConnector'
+  Description.Strings = (
+    'The dual port connector allows to connect two Wishbone devices a' +
+    'nd expose all or some of connecting signals outside of OpenBus s' +
+    'heet.')
+  PinGroups = <
+    item
+      Designator = 'M'
+      HarnessType = ''
+      Pins = <
+        item
+          Name = 'PORT_M_STB_O'
+          HarnessEntry = 'STB_O'
+          PinType = ptExternal
+          Direction = eElectricOutput
+          IsBus = False
+          LowerBound = 0
+          UpperBound = 0
+        end
+        item
+          Name = 'PORT_M_CYC_O'
+          HarnessEntry = 'CYC_O'
+          PinType = ptExternal
+          Direction = eElectricOutput
+          IsBus = False
+          LowerBound = 0
+          UpperBound = 0
+        end
+        item
+          Name = 'PORT_M_ACK_I'
+          HarnessEntry = 'ACK_I'
+          PinType = ptExternal
+          Direction = eElectricInput
+          IsBus = False
+          LowerBound = 0
+          UpperBound = 0
+        end
+        item
+          Name = 'PORT_M_ADR_O'
+          HarnessEntry = 'ADR_O[31..0]'
+          PinType = ptExternal
+          Direction = eElectricOutput
+          IsBus = True
+          LowerBound = 0
+          UpperBound = 31
+        end
+        item
+          Name = 'PORT_M_DAT_I'
+          HarnessEntry = 'DAT_A[31..0]'
+          PinType = ptExternal
+          Direction = eElectricInput
+          IsBus = True
+          LowerBound = 0
+          UpperBound = 31
+        end
+        item
+          Name = 'PORT_M_DAT_O'
+          HarnessEntry = 'DAT_B[31..0]'
+          PinType = ptExternal
+          Direction = eElectricOutput
+          IsBus = True
+          LowerBound = 0
+          UpperBound = 31
+        end
+        item
+          Name = 'PORT_M_SEL_O'
+          HarnessEntry = 'SEL_O[3..0]'
+          PinType = ptExternal
+          Direction = eElectricOutput
+          IsBus = True
+          LowerBound = 0
+          UpperBound = 3
+        end
+        item
+          Name = 'PORT_M_WE_O'
+          HarnessEntry = 'WE_O'
+          PinType = ptExternal
+          Direction = eElectricOutput
+          IsBus = False
+          LowerBound = 0
+          UpperBound = 0
+        end>
+    end
+    item
+      Designator = 'S'
+      HarnessType = ''
+      Pins = <
+        item
+          Name = 'PORT_S_STB_I'
+          HarnessEntry = 'STB_I'
+          PinType = ptExternal
+          Direction = eElectricInput
+          IsBus = False
+          LowerBound = 0
+          UpperBound = 0
+        end
+        item
+          Name = 'PORT_S_CYC_I'
+          HarnessEntry = 'CYC_I'
+          PinType = ptExternal
+          Direction = eElectricInput
+          IsBus = False
+          LowerBound = 0
+          UpperBound = 0
+        end
+        item
+          Name = 'PORT_S_ACK_O'
+          HarnessEntry = 'ACK_O'
+          PinType = ptExternal
+          Direction = eElectricOutput
+          IsBus = False
+          LowerBound = 0
+          UpperBound = 0
+        end
+        item
+          Name = 'PORT_S_ADR_I'
+          HarnessEntry = 'ADR_I[31..0]'
+          PinType = ptExternal
+          Direction = eElectricInput
+          IsBus = True
+          LowerBound = 0
+          UpperBound = 31
+        end
+        item
+          Name = 'PORT_S_DAT_O'
+          HarnessEntry = 'DAT_A[31..0]'
+          PinType = ptExternal
+          Direction = eElectricOutput
+          IsBus = True
+          LowerBound = 0
+          UpperBound = 31
+        end
+        item
+          Name = 'PORT_S_DAT_I'
+          HarnessEntry = 'DAT_B[31..0]'
+          PinType = ptExternal
+          Direction = eElectricInput
+          IsBus = True
+          LowerBound = 0
+          UpperBound = 31
+        end
+        item
+          Name = 'PORT_S_SEL_I'
+          HarnessEntry = 'SEL_I[3..0]'
+          PinType = ptExternal
+          Direction = eElectricInput
+          IsBus = True
+          LowerBound = 0
+          UpperBound = 3
+        end
+        item
+          Name = 'PORT_S_WE_I'
+          HarnessEntry = 'WE_I'
+          PinType = ptExternal
+          Direction = eElectricInput
+          IsBus = False
+          LowerBound = 0
+          UpperBound = 0
+        end>
+    end>
+  Ports = <
+    item
+      Number = 0
+      IsMaster = False
+      AddrWidth = 32
+      DataWidth = 0
+      AddrMode = 1
+      Prefix = 'S_'
+    end
+    item
+      Number = 1
+      IsMaster = True
+      AddrWidth = 32
+      DataWidth = 0
+      AddrMode = 1
+      Prefix = 'M_'
+    end>
+  Parameters = <>
+  Icon.Data = {04000000}
+  PalettePicture.Data = {
+    1154436F6D707265737365644269746D617078DAED585B531A67184EAF7BD7AB
+    CEF40FF4B257F901BDEFBFE945D3248D4DD2A435279B1885881895881C144404
+    454ECA7197DD6577391F7659585896939C54A206D357B1994C928951707A51DF
+    79BE1D985DDE7DBEF7FC71F5BB2B577EFCE92A5C8FE42AACEF61FD70B2BEBAF2
+    6DEF06DCFFE6EBDEFA57DE5ECAA55CCAA5FCD7D268342A954AED5CB2D53740AA
+    D56AB3D97CC767B7B51D26E9C85941D138812318DA27300CC3310C281983AEA7
+    16F5E8BAE69945FDC8A838071E2CCF0E2FCFF481D907C6D9C7460511A1C12CF6
+    08765D33FE646D5EEA5C9238F570956E9C86E367E610EB7CC03E8FDA8FAEE782
+    12B52951FBAC7FFDBE71E6A151516B3480CFCEEBCEC8EAFC73DB62B8920F1639
+    77366167A3AE6CE2546C72F18DF3C29989599930924F9162D614416F2C489D14
+    F22E72026C6C6861C210F2610506CB67109E994037260317055960639A70A52A
+    A2874B04F2E9BF56142346C5E19BEEFBC9356E5B7C6456BA3251A6268AADA627
+    9BB0A64336267C1100CD890ABCA54115B3CA80FD96564AB3890F929DAB083FCF
+    FDADC19D41818327F946D59B4DA07C6AE040F8245DE4CAED66B22A3AD3A17BCB
+    2FE58EA5FDFDFD8FEB8F16B5DF5C90B8B978B45C286FB781BC2F97F01F691818
+    FCB924924B65EB9552ABE9CB25E5EE95A10559BE54FC643D14B62AF70C53131B
+    CB10D57CBDCA376A684FC3E0F8C006C362AEDC6E454A057334704B27D37A2C9F
+    29D1ABB4EFB67E723D4184C45C65BB1D29F1BE6CD2CF2707651C80D0AC67EB55
+    BA947BBAAEB9B338516BD63FDF35EE2F4F3FB76A3DD938FC4A6C36B03C331013
+    81127050AA522CB59B2191D7539E5FD563BE28796A17C333B1EB1AC912E5A1C5
+    1C245ABA260237FF20F86005168C93D9AA40163F5E538EAEAA7676774FE573F0
+    E6E085437777690A179854552CB55B788185ADF9FB354E225D2B55DAADA0C0AA
+    B18D6B9A319A897F61A34F8BFCEF3A99326023844CA159E7B62AC8B1EBFB08E3
+    64B0900132F14AD1C1D0B7F572C99AE64CB3C7FC714FB1A74271C8FD76AB97FB
+    FD182757AFE69B5BB4C8CB5CC6DB3A990747CEC4A773B0F7AB7A7CCA63028560
+    22086CFFB94CD40BE388C8431847CB794B8280FC9D779A28220803CF99288D59
+    35C32B0A77268AE5D954B5E4E662E72C807C92AB57F2CD3ACAA76118B8AB97DB
+    105798A2C3E1F0C1C1C117922937EBBFA84695A8152F3073A4F715E9F59D2B7E
+    7A260DF08C314EAE25696F3676472F9FB61B288A0A068382207C0999C3EEE198
+    55FBD0AC046DAB494AE27758921434E27EF26B0677CF126E34CFA830E84A528B
+    6F134C4410C4DEDEDEA97C30360A131AD473349F9EC25D4AD2E7CFF5557C408F
+    9D894810FB729C00AF3D5A55C240180B45C044A954EA14E3BC3D84F1ECA1E915
+    9474438C90FA1D0E36DC8F714E28F12925E593059C813CA327DD37175E98BC8E
+    081D064ADBDBDB9FE16322BD37B552479A7271F109D4A90DA11042FDF70BE0B3
+    C9C5E4810D750881B236EED0FD699846088C22C9582CD6ED763F7DE4D96D0F2D
+    4E4CBA56824246452130C8415AA1036AEEE0295D04833D0231171BBEA195A89C
+    E610458389E058F1493E3002DD5992BBD8081867DCEF304471B46F4F7D80C9C0
+    A68AF2C348F362D30085D18F633449D134FD3199B890034F4189208A9919C203
+    E9E0CD26074B06E2F03861ED9674C8C3C5EE1BA7A5166D2C14C6719CE7F90FF8
+    48EC8BC3660521700E26FA9270ADA7E8C0A08D73845C4A417AA6B0CD60313387
+    D86EE9266CFEA3F208D2E974DE9121B3C96BAA315318CDB7B6A01193428E1432
+    D0777CC7057F80004A96140DB9AF8FE2B0DF619362D4AC0A9224190CB22C7BD2
+    ADF6F6865766C7EC3AB29869BFEE74BB879DFD7DE8A410D594C00D1C74316B8E
+    9396540812CD184620B097DC568822F05AABD5023ED648E037AD149A1D2D66DF
+    1C9F830EBB6F6B3B6D187ECA1703D05CEFECC6CB02E4CB33ABF60FBD3CC7712C
+    C38AA2586D35EE195EC21118E63728ECCC9658DD6D66EB65220F67C3347E5160
+    303EDD9B615663F8904E668DA03D672D04ECD7D4CFA1868F58D44F2C2AF0DA94
+    7B65DCA17FBC36FFE4C2A11AB11C019A2C00AA1FF009F1E915D263A6BC26D273
+    82A3CFEF7DBD7078E18DEB2164676FF7F25FB84BB994FF95FC0357CAEC85}
+end

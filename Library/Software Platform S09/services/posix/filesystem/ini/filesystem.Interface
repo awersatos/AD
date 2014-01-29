@@ -1,0 +1,5 @@
+[Interface]
+Name=posix_filesystem
+Category=SERVICE
+Description=POSIX file system unit of functionality
+Publicdir=services\posix\filesystem\include

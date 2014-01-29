@@ -1,0 +1,80 @@
+[Plugin]
+Name=audio
+Description=Device independant audio I/O
+Caption=Audio Service
+SourceDir=services\platform\audio\src
+Implement=audio
+MinInstances=1
+Bitmap=audio.bmp
+
+[Instance]
+Caption=Audio Context
+Description=Device independant audio I/O context
+MultipleLinks=True
+Require0=drv_i2s
+Require1=drv_cs4270
+
+[Instance_Option0]
+Name=def_samplefreq
+GUIName=Default sample frequency
+Description=Sample frequency as set at initialization, in Hz.
+Kind=UINT32
+MinRange=1
+MaxRange=96000
+DefaultValue=22050
+
+[Instance_Option0_AutoSet0]
+Interface=drv_i2s
+Option=SAMPLERATE
+
+
+[Instance_Option1]
+Name=def_channels
+GUIName=Default mode
+Description=Mode to be set at initialization
+Kind=ENUM
+Enum0=Mono
+EnumValue0=1
+EnumDescription0=Initialize audio to mono
+Enum1=Stereo
+EnumValue1=2
+EnumDescription1=Initialize audio to stereo
+DefaultValue=Mono
+
+[Instance_Option1_AutoSet0]
+Interface=drv_i2s
+Option=TX_MODE
+AutoValueEnum0=Mono
+AutoValueEnum1=Stereo
+
+[Instance_Option1_AutoSet1]
+Interface=drv_i2s
+Option=RX_MODE
+AutoValueEnum0=Mono_Left
+AutoValueEnum1=Stereo
+
+
+[Instance_Option2]
+Name=def_samplesize
+GUIName=Default sample size
+Description=Number of bits per sample as set at initialization
+Kind=ENUM
+Enum0=8
+EnumValue0=8
+Enum1=16
+EnumValue1=16
+Enum2=20
+EnumValue2=20
+Enum3=24
+EnumValue3=24
+DefaultValue=8
+
+[Instance_Option2_AutoSet0]
+Option=QUANTIZATION
+Interface=drv_i2s
+AutoValueEnum0=16bit
+AutoValueEnum1=16bit
+AutoValueEnum2=20bit
+AutoValueEnum3=24bit
+
+

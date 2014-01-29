@@ -1,0 +1,2992 @@
+//
+// Copyright (C) 1988-2000 Altera Corporation
+// Any megafunction design, and related net list (encrypted or decrypted),
+// support information, device programming or simulation file, and any other
+// associated documentation or information provided by Altera or a partner
+// under Altera's Megafunction Partnership Program may be used only to
+// program PLD devices (but not masked PLD devices) from Altera.  Any other
+// use of such megafunction design, net list, support information, device
+// programming or simulation file, or any other related documentation or
+// information is prohibited for any other purpose, including, but not
+// limited to modification, reverse engineering, de-compiling, or use with
+// any other silicon devices, unless such use is explicitly licensed under
+// a separate agreement with Altera or a megafunction partner.  Title to
+// the intellectual property, including patents, copyrights, trademarks,
+// trade secrets, or maskworks, embodied in any such megafunction design,
+// net list, support information, device programming or simulation file, or
+// any other related documentation or information provided by Altera or a
+// megafunction partner, remains with Altera, the megafunction partner, or
+// their respective licensors.  No other licenses, including any licenses
+// needed under any third party's intellectual property, are provided herein.
+//
+// MAX+plus II Version 10.0 RC2 9/14/2000
+// Wed Sep 27 18:03:06 2000
+
+//
+
+`define SDF_IOPATH
+`timescale 100 ps / 100 ps
+
+primitive PRIM_DFF  (Q, D, CP, RB, SB);
+
+    output Q;
+    input  D, CP, RB, SB;
+    reg    Q; 
+
+    initial Q = 1'b0;
+
+    // FUNCTION : POSITIVE EDGE TRIGGERED D FLIP-FLOP WITH ACTIVE LOW
+    //            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+
+    table
+ 
+    //  D   CP      RB  SB  :   Qt  :   Qt+1
+
+        1   (01)    1   1   :   ?   :   1;  // clocked data
+        1   (01)    1   x   :   ?   :   1;  // pessimism
+
+        1    ?      1   x   :   1   :   1;  // pessimism
+
+        0    0      1   x   :   1   :   1;  // pessimism
+        0    x      1 (?x)  :   1   :   1;  // pessimism
+        0    1      1 (?x)  :   1   :   1;  // pessimism
+
+        x    0      1   x   :   1   :   1;  // pessimism
+        x    x      1 (?x)  :   1   :   1;  // pessimism
+        x    1      1 (?x)  :   1   :   1;  // pessimism
+
+        0   (01)    1   1   :   ?   :   0;  // clocked data
+        0   (01)    x   1   :   ?   :   0;  // pessimism
+ 
+        0    ?      x   1   :   0   :   0;  // pessimism
+
+        1    0      x   1   :   0   :   0;  // pessimism
+        1    x    (?x)  1   :   0   :   0;  // pessimism
+        1    1    (?x)  1   :   0   :   0;  // pessimism
+
+        x    0      x   1   :   0   :   0;  // pessimism
+        x    x    (?x)  1   :   0   :   0;  // pessimism
+        x    1    (?x)  1   :   0   :   0;  // pessimism
+
+        1   (x1)    1   1   :   1   :   1;  // reducing pessimism
+        0   (x1)    1   1   :   0   :   0;
+        1   (0x)    1   1   :   1   :   1;
+        0   (0x)    1   1   :   0   :   0;
+
+        ?   ?       0   1   :   ?   :   0;  // asynchronous clear
+
+        ?   ?       1   0   :   ?   :   1;  // asynchronous set
+
+        ?   (?0)    1   1   :   ?   :   -;  // ignore falling clock
+        ?   (1x)    1   1   :   ?   :   -;  // ignore falling clock
+        *    ?      ?   ?   :   ?   :   -;  // ignore data edges 
+
+        ?   ?     (?1)  ?   :   ?   :   -;  // ignore the edges on 
+        ?   ?       ?  (?1) :   ?   :   -;  //       set and clear 
+
+    endtable
+
+endprimitive
+
+primitive PRIM_DFF1  (Q, D, CP, RB, SB);
+
+    output Q;
+    input  D, CP, RB, SB;
+    reg    Q; 
+
+    initial Q = 1'b1;
+
+    // FUNCTION : POSITIVE EDGE TRIGGERED D FLIP-FLOP WITH ACTIVE LOW
+    //            ASYNCHRONOUS SET AND CLEAR. ( Q OUTPUT UDP ).
+
+    table
+ 
+    //  D   CP      RB  SB  :   Qt  :   Qt+1
+
+        1   (01)    1   1   :   ?   :   1;  // clocked data
+        1   (01)    1   x   :   ?   :   1;  // pessimism
+
+        1    ?      1   x   :   1   :   1;  // pessimism
+
+        0    0      1   x   :   1   :   1;  // pessimism
+        0    x      1 (?x)  :   1   :   1;  // pessimism
+        0    1      1 (?x)  :   1   :   1;  // pessimism
+
+        x    0      1   x   :   1   :   1;  // pessimism
+        x    x      1 (?x)  :   1   :   1;  // pessimism
+        x    1      1 (?x)  :   1   :   1;  // pessimism
+
+        0   (01)    1   1   :   ?   :   0;  // clocked data
+        0   (01)    x   1   :   ?   :   0;  // pessimism
+ 
+        0    ?      x   1   :   0   :   0;  // pessimism
+
+        1    0      x   1   :   0   :   0;  // pessimism
+        1    x    (?x)  1   :   0   :   0;  // pessimism
+        1    1    (?x)  1   :   0   :   0;  // pessimism
+
+        x    0      x   1   :   0   :   0;  // pessimism
+        x    x    (?x)  1   :   0   :   0;  // pessimism
+        x    1    (?x)  1   :   0   :   0;  // pessimism
+
+        1   (x1)    1   1   :   1   :   1;  // reducing pessimism
+        0   (x1)    1   1   :   0   :   0;
+        1   (0x)    1   1   :   1   :   1;
+        0   (0x)    1   1   :   0   :   0;
+
+        ?   ?       0   1   :   ?   :   0;  // asynchronous clear
+
+        ?   ?       1   0   :   ?   :   1;  // asynchronous set
+
+        ?   (?0)    1   1   :   ?   :   -;  // ignore falling clock
+        ?   (1x)    1   1   :   ?   :   -;  // ignore falling clock
+        *    ?      ?   ?   :   ?   :   -;  // ignore data edges 
+
+        ?   ?     (?1)  ?   :   ?   :   -;  // ignore the edges on 
+        ?   ?       ?  (?1) :   ?   :   -;  //       set and clear 
+
+    endtable
+
+endprimitive
+
+primitive PRIM_DFFE (Q, ENA, D, CLK, CLRN, PRN);
+    input D;
+    input CLRN;
+    input PRN;
+    input CLK;
+    input ENA;
+    output Q; reg Q;
+
+    initial Q = 1'b0;
+
+    table
+ 
+    //  ENA  D   CLK   CLRN PRN  :   Qt  :   Qt+1
+
+        (??) ?    ?     1     1  :   ?   :   -;  // pessimism
+         x   ?    ?     1     1  :   ?   :   -;  // pessimism
+         1   1   (01)    1   1   :   ?   :   1;  // clocked data
+         1   1   (01)    1   x   :   ?   :   1;  // pessimism
+
+         1   1    ?      1   x   :   1   :   1;  // pessimism
+
+         1   0    0      1   x   :   1   :   1;  // pessimism
+         1   0    x      1 (?x)  :   1   :   1;  // pessimism
+         1   0    1      1 (?x)  :   1   :   1;  // pessimism
+
+         1   x    0      1   x   :   1   :   1;  // pessimism
+         1   x    x      1 (?x)  :   1   :   1;  // pessimism
+         1   x    1      1 (?x)  :   1   :   1;  // pessimism
+
+         1   0   (01)    1   1   :   ?   :   0;  // clocked data
+         1   0   (01)    x   1   :   ?   :   0;  // pessimism
+ 
+         1   0    ?      x   1   :   0   :   0;  // pessimism
+
+         1   1    0      x   1   :   0   :   0;  // pessimism
+         1   1    x    (?x)  1   :   0   :   0;  // pessimism
+         1   1    1    (?x)  1   :   0   :   0;  // pessimism
+
+         1   x    0      x   1   :   0   :   0;  // pessimism
+         1   x    x    (?x)  1   :   0   :   0;  // pessimism
+         1   x    1    (?x)  1   :   0   :   0;  // pessimism
+
+         1   1   (x1)    1   1   :   1   :   1;  // reducing pessimism
+         1   0   (x1)    1   1   :   0   :   0;
+         1   1   (0x)    1   1   :   1   :   1;
+         1   0   (0x)    1   1   :   0   :   0;
+
+         ?   ?   ?       0   1   :   ?   :   0;  // asynchronous clear
+
+         ?   ?   ?       1   0   :   ?   :   1;  // asynchronous set
+
+         1   ?   (?0)    1   1   :   ?   :   -;  // ignore falling clock
+         1   ?   (1x)    1   1   :   ?   :   -;  // ignore falling clock
+         1   *    ?      ?   ?   :   ?   :   -;  // ignore data edges 
+
+         1   ?   ?     (?1)  ?   :   ?   :   -;  // ignore the edges on 
+         1   ?   ?       ?  (?1) :   ?   :   -;  //       set and clear 
+
+         0   ?   ?       1   1   :   ?   :   -;  //       set and clear 
+
+    endtable
+
+endprimitive
+
+primitive PRIM_DFFE1 (Q, ENA, D, CLK, CLRN, PRN);
+    input D;
+    input CLRN;
+    input PRN;
+    input CLK;
+    input ENA;
+    output Q; reg Q;
+
+    initial Q = 1'b1;
+
+    table
+ 
+    //  ENA  D   CLK   CLRN PRN  :   Qt  :   Qt+1
+
+        (??) ?    ?     1     1  :   ?   :   -;  // pessimism
+         x   ?    ?     1     1  :   ?   :   -;  // pessimism
+         1   1   (01)    1   1   :   ?   :   1;  // clocked data
+         1   1   (01)    1   x   :   ?   :   1;  // pessimism
+
+         1   1    ?      1   x   :   1   :   1;  // pessimism
+
+         1   0    0      1   x   :   1   :   1;  // pessimism
+         1   0    x      1 (?x)  :   1   :   1;  // pessimism
+         1   0    1      1 (?x)  :   1   :   1;  // pessimism
+
+         1   x    0      1   x   :   1   :   1;  // pessimism
+         1   x    x      1 (?x)  :   1   :   1;  // pessimism
+         1   x    1      1 (?x)  :   1   :   1;  // pessimism
+
+         1   0   (01)    1   1   :   ?   :   0;  // clocked data
+         1   0   (01)    x   1   :   ?   :   0;  // pessimism
+ 
+         1   0    ?      x   1   :   0   :   0;  // pessimism
+
+         1   1    0      x   1   :   0   :   0;  // pessimism
+         1   1    x    (?x)  1   :   0   :   0;  // pessimism
+         1   1    1    (?x)  1   :   0   :   0;  // pessimism
+
+         1   x    0      x   1   :   0   :   0;  // pessimism
+         1   x    x    (?x)  1   :   0   :   0;  // pessimism
+         1   x    1    (?x)  1   :   0   :   0;  // pessimism
+
+         1   1   (x1)    1   1   :   1   :   1;  // reducing pessimism
+         1   0   (x1)    1   1   :   0   :   0;
+         1   1   (0x)    1   1   :   1   :   1;
+         1   0   (0x)    1   1   :   0   :   0;
+
+         ?   ?   ?       0   1   :   ?   :   0;  // asynchronous clear
+
+         ?   ?   ?       1   0   :   ?   :   1;  // asynchronous set
+
+         1   ?   (?0)    1   1   :   ?   :   -;  // ignore falling clock
+         1   ?   (1x)    1   1   :   ?   :   -;  // ignore falling clock
+         1   *    ?      ?   ?   :   ?   :   -;  // ignore data edges 
+
+         1   ?   ?     (?1)  ?   :   ?   :   -;  // ignore the edges on 
+         1   ?   ?       ?  (?1) :   ?   :   -;  //       set and clear 
+
+         0   ?   ?       1   1   :   ?   :   -;  //       set and clear 
+
+    endtable
+
+endprimitive
+
+primitive PRIM_LATCH  (Q, ENA, D);
+    input  D;
+    input  ENA;
+    output Q; reg Q;
+
+    table
+ 
+    // ENA    D    Q   Q+
+         0    ?  : ? : -;
+         1    0  : ? : 0;
+         1    1  : ? : 1;  //
+
+    endtable
+
+endprimitive
+
+`celldefine
+module AND1 ( Y, IN1 );
+    parameter TPD = 0;
+    input IN1;
+    output Y;
+
+    and #TPD (Y, IN1);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND2 ( Y, IN1, IN2 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    output Y;
+
+    and #TPD (Y, IN1, IN2);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND3 ( Y, IN1, IN2, IN3 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND4 ( Y, IN1, IN2, IN3, IN4 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND5 ( Y, IN1, IN2, IN3, IN4, IN5 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND6 ( Y, IN1, IN2, IN3, IN4, IN5, IN6 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND7 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND8 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND9 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND10 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND11 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND12 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND13 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND14 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND15 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    input IN15;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+        (IN15 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module AND16 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    input IN15;
+    input IN16;
+    output Y;
+
+    and #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+        (IN15 => Y) = (0,0);
+        (IN16 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND1 ( Y, IN1 );
+    parameter TPD = 0;
+    input IN1;
+    output Y;
+
+    nand #TPD (Y, IN1);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND2 ( Y, IN1, IN2 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND3 ( Y, IN1, IN2, IN3 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND4 ( Y, IN1, IN2, IN3, IN4 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND5 ( Y, IN1, IN2, IN3, IN4, IN5 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND6 ( Y, IN1, IN2, IN3, IN4, IN5, IN6 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND7 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND8 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND9 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND10 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND11 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND12 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND13 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND14 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND15 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    input IN15;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+        (IN15 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NAND16 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    input IN15;
+    input IN16;
+    output Y;
+
+    nand #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+        (IN15 => Y) = (0,0);
+        (IN16 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR1 ( Y, IN1 );
+    parameter TPD = 0;
+    input IN1;
+    output Y;
+
+    or #TPD (Y, IN1);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR2 ( Y, IN1, IN2 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    output Y;
+
+    or #TPD (Y, IN1, IN2);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR3 ( Y, IN1, IN2, IN3 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR4 ( Y, IN1, IN2, IN3, IN4 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR5 ( Y, IN1, IN2, IN3, IN4, IN5 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR6 ( Y, IN1, IN2, IN3, IN4, IN5, IN6 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR7 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR8 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR9 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR10 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR11 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR12 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR13 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR14 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR15 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    input IN15;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+        (IN15 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module OR16 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    input IN15;
+    input IN16;
+    output Y;
+
+    or #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+        (IN15 => Y) = (0,0);
+        (IN16 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR1 ( Y, IN1 );
+    parameter TPD = 0;
+    input IN1;
+    output Y;
+
+    nor #TPD (Y, IN1);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR2 ( Y, IN1, IN2 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR3 ( Y, IN1, IN2, IN3 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR4 ( Y, IN1, IN2, IN3, IN4 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR5 ( Y, IN1, IN2, IN3, IN4, IN5 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR6 ( Y, IN1, IN2, IN3, IN4, IN5, IN6 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR7 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR8 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR9 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR10 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR11 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR12 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR13 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR14 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR15 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    input IN15;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+        (IN15 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module NOR16 ( Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    input IN3;
+    input IN4;
+    input IN5;
+    input IN6;
+    input IN7;
+    input IN8;
+    input IN9;
+    input IN10;
+    input IN11;
+    input IN12;
+    input IN13;
+    input IN14;
+    input IN15;
+    input IN16;
+    output Y;
+
+    nor #TPD (Y, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+        (IN3 => Y) = (0,0);
+        (IN4 => Y) = (0,0);
+        (IN5 => Y) = (0,0);
+        (IN6 => Y) = (0,0);
+        (IN7 => Y) = (0,0);
+        (IN8 => Y) = (0,0);
+        (IN9 => Y) = (0,0);
+        (IN10 => Y) = (0,0);
+        (IN11 => Y) = (0,0);
+        (IN12 => Y) = (0,0);
+        (IN13 => Y) = (0,0);
+        (IN14 => Y) = (0,0);
+        (IN15 => Y) = (0,0);
+        (IN16 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module XOR2 ( Y, IN1, IN2 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    output Y;
+
+    xor #TPD (Y, IN1, IN2);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module XNOR2 ( Y, IN1, IN2 );
+    parameter TPD = 0;
+    input IN1;
+    input IN2;
+    output Y;
+
+    xnor #TPD (Y, IN1, IN2);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+        (IN2 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module DELAY ( Y, IN1 );
+    parameter TPD = 0;
+    input IN1;
+    output Y;
+
+    buf #TPD (Y, IN1);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+`celldefine
+module INV ( Y, IN1 );
+    parameter TPD = 0;
+    input IN1;
+    output Y;
+
+    not #TPD (Y, IN1);
+
+
+`ifdef SDF_IOPATH
+    specify
+        (IN1 => Y) = (0,0);
+    endspecify
+`endif
+
+endmodule
+`endcelldefine
+
+
+module DFF ( Q, D, CLK, CLRN, PRN );
+    input D;
+    input CLK;
+    input CLRN;
+    input PRN;
+    output Q;
+    PRIM_DFF (Q, D, CLK, CLRN, PRN);
+
+    wire legal;
+    and(legal, CLRN, PRN);
+    specify
+
+  specparam TREG = 0;
+  specparam TRSU = 0;
+  specparam TRH  = 0;
+  specparam TRPR = 0;
+  specparam TRCL = 0;
+
+        $setup  (  D, posedge CLK &&& legal, TRSU  ) ;
+        $hold   (  posedge CLK &&& legal, D, TRH   ) ;
+
+        ( negedge CLRN => (Q  +: 1'b0)) = ( TRCL, TRCL ) ;
+        ( negedge PRN  => (Q  +: 1'b1)) = ( TRPR, TRPR ) ;
+        ( posedge CLK  => (Q  +: D)) = ( TREG, TREG ) ;
+
+    endspecify
+endmodule
+
+module DFF1 ( Q, D, CLK, CLRN, PRN );
+    input D;
+    input CLK;
+    input CLRN;
+    input PRN;
+    output Q;
+    PRIM_DFF1 (Q, D, CLK, CLRN, PRN);
+
+    wire legal;
+    and(legal, CLRN, PRN);
+    specify
+
+  specparam TREG = 0;
+  specparam TRSU = 0;
+  specparam TRH  = 0;
+  specparam TRPR = 0;
+  specparam TRCL = 0;
+
+        $setup  (  D, posedge CLK &&& legal, TRSU  ) ;
+        $hold   (  posedge CLK &&& legal, D, TRH   ) ;
+
+        ( negedge CLRN => (Q  +: 1'b0)) = ( TRCL, TRCL ) ;
+        ( negedge PRN  => (Q  +: 1'b1)) = ( TRPR, TRPR ) ;
+        ( posedge CLK  => (Q  +: D)) = ( TREG, TREG ) ;
+
+    endspecify
+endmodule
+
+module DFFE ( Q, CLK, ENA, D, CLRN, PRN );
+    input D;
+    input CLK;
+    input CLRN;
+    input PRN;
+    input ENA;
+    output Q;
+    PRIM_DFFE ( Q, ENA, D, CLK, CLRN, PRN );
+
+    wire legal;
+    and(legal, ENA, CLRN, PRN);
+    specify
+
+  specparam TREG = 0;
+  specparam TREN = 0;
+  specparam TRSU = 0;
+  specparam TRH  = 0;
+  specparam TRPR = 0;
+  specparam TRCL = 0;
+
+        $setup  (  D, posedge CLK &&& legal, TRSU  ) ;
+        $hold   (  posedge CLK &&& legal, D, TRH   ) ;
+        $setup  (  ENA, posedge CLK &&& legal, TREN  ) ;
+        $hold   (  posedge CLK &&& legal, ENA, 0   ) ;
+
+        ( negedge CLRN => (Q  +: 1'b0)) = ( TRCL, TRCL) ;
+        ( negedge PRN  => (Q  +: 1'b1)) = ( TRPR, TRPR) ;
+        ( posedge CLK  => (Q  +: D)) = ( TREG, TREG) ;
+
+    endspecify
+endmodule
+
+module DFFE1 ( Q, CLK, ENA, D, CLRN, PRN );
+    input D;
+    input CLK;
+    input CLRN;
+    input PRN;
+    input ENA;
+    output Q;
+    PRIM_DFFE1 ( Q, ENA, D, CLK, CLRN, PRN );
+
+    wire legal;
+    and(legal, ENA, CLRN, PRN);
+    specify
+
+  specparam TREG = 0;
+  specparam TREN = 0;
+  specparam TRSU = 0;
+  specparam TRH  = 0;
+  specparam TRPR = 0;
+  specparam TRCL = 0;
+
+        $setup  (  D, posedge CLK &&& legal, TRSU  ) ;
+        $hold   (  posedge CLK &&& legal, D, TRH   ) ;
+        $setup  (  ENA, posedge CLK &&& legal, TREN  ) ;
+        $hold   (  posedge CLK &&& legal, ENA, 0   ) ;
+
+        ( negedge CLRN => (Q  +: 1'b0)) = ( TRCL, TRCL) ;
+        ( negedge PRN  => (Q  +: 1'b1)) = ( TRPR, TRPR) ;
+        ( posedge CLK  => (Q  +: D)) = ( TREG, TREG) ;
+
+    endspecify
+endmodule
+
+module FILTER ( Y, IN1 );
+    input IN1;
+    output Y;
+    buf (Y, IN1);
+
+    specify
+
+  specparam TLOW  = 0;
+  specparam THIGH = 0;
+
+        $width  ( negedge IN1, TLOW  ) ;
+        $width  ( posedge IN1, THIGH ) ;
+
+    endspecify
+endmodule
+
+module TRIBUF ( Y, IN1, OE );
+    input IN1;
+    input OE;
+    output Y;
+    bufif1 ( Y, IN1, OE );
+    specify
+  specparam TTRI = 0;
+  specparam TTXZ = 0; 
+  specparam TTZX = 0;
+        (IN1 => Y) = (TTRI,TTRI);
+        (OE => Y) = (0,0, TTXZ, TTZX, TTXZ, TTZX);
+    endspecify
+endmodule
+
+module LATCH ( Q, D, ENA );
+    input D;
+    input ENA;
+    output Q;
+    PRIM_LATCH ( Q, ENA, D );
+    specify
+
+  specparam TREG = 0;
+  specparam TRSU = 0;
+  specparam TRH  = 0;
+
+        $setup  (  D, negedge ENA, TRSU  ) ;
+        $hold   (  negedge ENA, D, TRH   ) ;
+
+        if ( ENA )
+            ( D +=> Q ) = ( TREG, TREG ) ;
+
+        ( posedge ENA => (Q:D) ) = ( TREG, TREG ) ;
+
+    endspecify
+endmodule
+
+module RISEFALL ( Y, IN1 );
+    input IN1;
+    output Y;
+
+	 buf ( Y, IN1 );
+    specify
+
+  specparam TRISE  = 0;
+  specparam TFALL  = 1;
+
+        (IN1 => Y) = (TRISE,TFALL);
+
+    endspecify
+
+endmodule
+module ram_segment ( A, D, WE, Q, INIT_DATA);
+    parameter rd_d_wr = 0;
+    parameter Tout = 0;
+    parameter Twr = 0;
+    parameter Taa = 0;
+    parameter Tdd = 0;
+    parameter Trc = 0;
+    input [10:0] A;
+    input D;
+    input WE;
+    input [2047:0] INIT_DATA;
+    output Q;
+
+    reg [2047:0] ram_data;
+    reg Q;
+    reg read_after_write;
+
+
+	initial
+	begin
+	 	read_after_write = 1'b0;
+		Q = 0;
+	 	#1 ram_data = INIT_DATA;
+	end
+
+	always @(WE or A or D)
+	  begin
+	 	if(WE === 1'b1)
+		  begin
+ 			ram_data[A] = D;
+	 		if(rd_d_wr)
+			  begin
+				Q <= #(Tdd + Tout) ram_data[A];
+			  end
+			else
+			  begin
+				read_after_write = 1'b1;
+			  end
+ 	 	  end
+	 	else if(WE === 1'b0)
+	 	  begin
+	 		if(rd_d_wr)
+				Q <= #(Taa + Tout) ram_data[A];
+			else
+			  begin
+				if(read_after_write)
+					Q <= #(Twr + Tout) ram_data[A];
+				else
+					Q <= #(Taa + Tout) ram_data[A];
+				read_after_write = 1'b0;
+			  end
+		  end
+ 	  end
+endmodule
+
+module dpram_segment ( WADDR, RADDR, D, WE, RE, Q, INIT_DATA);
+    parameter Tout = 0;
+    parameter Taa = 0;
+    parameter Tdd = 0;
+    parameter Trc = 0;
+    parameter Tra = 0;
+    input [10:0] WADDR;
+    input [10:0] RADDR;
+    input D;
+    input WE;
+    input RE;
+    input [2047:0] INIT_DATA;
+    output Q;
+
+    reg [2047:0] ram_data;
+    reg Q;
+
+
+	initial
+	begin
+		Q = 0;
+	 	#1 ram_data = INIT_DATA;
+	end
+
+	always @(WE or WADDR or D)
+	  begin
+	 	if(WE === 1'b1)
+		  begin
+ 			ram_data[WADDR] = D;
+			if((WADDR == RADDR) && RE)
+				Q <= #(Tdd + Tout) ram_data[RADDR];
+ 	 	  end
+ 	  end
+ 
+	always @(RE)
+	  begin
+	 	if(RE === 1'b1)
+		  begin
+			Q <= #(Tra + Tout) ram_data[RADDR];
+ 	 	  end
+ 	  end
+ 
+	always @(RADDR)
+	  begin
+	 	if(RE === 1'b1)
+		  begin
+			Q <= #(Taa + Tout) ram_data[RADDR];
+ 	 	  end
+ 	  end
+endmodule
+
+module rom_segment ( A, D, WE, Q, INIT_DATA);
+    parameter Tout = 0;
+    parameter Taa = 0;
+    parameter Trc = 0;
+    input [10:0] A;
+    input D;
+    input WE;
+    input [2047:0] INIT_DATA;
+    output Q;
+
+    reg [2047:0] rom_data;
+
+
+	initial
+	begin
+	 	#1 rom_data = INIT_DATA;
+	end
+
+  assign #(Taa + Tout) Q = rom_data[A];
+endmodule
+
+`timescale 100 ps / 100 ps
+
+module CLKLOCK ( OUTCLK, INCLK );
+	parameter CLOCKBOOST = 1;
+	parameter INPUT_FREQUENCY = 50.00;
+	parameter TPD = 0;
+
+    input INCLK;
+    output OUTCLK;
+
+	 reg start_inclk;
+	 reg new_inclk;
+	 reg clklock_lock;
+	 reg outclk_int;
+	 real clklock_half_period;
+	 real clklock_cycle;
+	 real clklock_duty_cycle;
+	 real clklock_last_rising_edge;
+	 real clklock_last_falling_edge;
+
+	 integer clock_count;
+	 integer clklock_rising_edge_count;
+	 integer i;
+	 real real_freq;
+	 real tolerance_freq;
+
+	  initial
+	     begin
+			clock_count = -1;
+			clklock_rising_edge_count = 0;
+			clklock_lock = 1;
+			clklock_last_rising_edge = 0;
+			outclk_int = 1'b0;
+			if (CLOCKBOOST == 1)
+				tolerance_freq	= 1.0;
+			else
+				tolerance_freq	= 0.5;
+	  end
+
+   always @( posedge INCLK )
+     begin
+		if ( clklock_rising_edge_count == 0 )
+			start_inclk = INCLK;
+		else
+	 	 if ( clklock_rising_edge_count == 1 )
+            begin
+				clklock_cycle = $realtime - clklock_last_rising_edge;
+				real_freq = 10000.0/($realtime - clklock_last_rising_edge) ;
+				if ( real_freq < (INPUT_FREQUENCY - tolerance_freq) ||
+				     real_freq > (INPUT_FREQUENCY + tolerance_freq) )
+				begin
+					$display($realtime, " Warning: Input_Frequency Violation");
+					clklock_lock = 0;
+				end
+				if ( ($realtime - clklock_last_falling_edge) < (clklock_duty_cycle  - 1.0) ||
+				     ($realtime - clklock_last_falling_edge) > (clklock_duty_cycle + 1.0) )
+				begin
+					$display ($realtime, " Warning: Duty Cycle Violation");
+					clklock_lock = 0;
+				end
+			 end
+		 else
+			if ( ($realtime - clklock_last_rising_edge) < (clklock_cycle  - 1.0) ||
+		     ($realtime - clklock_last_rising_edge) > (clklock_cycle + 1.0) )
+			begin
+				$display ($realtime, " Warning: Cycle Violation");
+				clklock_lock = 0;
+			end
+		 clklock_rising_edge_count = clklock_rising_edge_count + 1;
+        clklock_last_rising_edge = $realtime;
+     end
+
+   always @( negedge INCLK )
+     begin
+         if ( clklock_rising_edge_count == 1 )
+            begin
+               clklock_half_period = ($realtime - clklock_last_rising_edge)/CLOCKBOOST;
+				clklock_duty_cycle = $realtime - clklock_last_rising_edge;
+	 			clklock_last_falling_edge = $realtime; 
+            end
+         else
+         if ( clklock_rising_edge_count >= 1 )
+			begin
+				if ( ($realtime - clklock_last_rising_edge) < (clklock_duty_cycle  - 1.0) ||
+		     		($realtime - clklock_last_rising_edge) > (clklock_duty_cycle + 1.0) )
+	    		begin
+					$display ($realtime, " Warning: Duty Cycle Violation");
+					clklock_lock = 0;
+	    		end
+			end
+     end
+
+   always @(clklock_rising_edge_count)	
+     begin
+		if (clklock_rising_edge_count > 2)
+		begin
+			for (i=1; i<= 2*CLOCKBOOST - 1; i=i+1)
+			begin
+				clock_count =  clock_count + 1;
+				#clklock_half_period ;
+			end
+			clock_count =  clock_count + 1;
+		end
+		else
+			clock_count = 0;
+	  end
+
+	always @(clock_count or clklock_lock)
+	   begin
+		if (clock_count <= 0 || clklock_lock == 0)
+			outclk_int = 1'b0;
+		else
+		if (clock_count == 1)
+		begin
+			outclk_int = start_inclk;
+			new_inclk = ~ start_inclk;
+		end
+		else
+		begin
+			outclk_int = new_inclk;
+			new_inclk = ~ new_inclk;
+		end
+	end
+
+  assign #TPD OUTCLK =  outclk_int;
+
+endmodule // clklock

@@ -1,0 +1,16 @@
+[Plugin]
+Name=blockio
+Caption=Block Device I/O Services
+Description=POSIX compatible interface for block devices.
+Bitmap=blockio.bmp
+Implement=blockio
+Require0=posix_devio
+SourceDir=services\posix\devio\blockio\src
+GlobalCompileOption0=-D__BLOCKIO__
+
+[Instance]
+Caption=Block Device I/O Context
+Description=POSIX compatible interface for block devices.
+Require0=blockio_adaptor
+GenerateName=True
+;MultipleLinks=True

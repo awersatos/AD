@@ -1,0 +1,24 @@
+[Plugin]
+Name=drv_led
+Description=LED Controller Driver
+Caption=LED Controller Driver
+SourceDir=platform\fpga\drivers\led\src
+Implement=drv_led
+Bitmap=drv_led.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_led
+Condition=EQ
+
+[Instance]
+Require0=per_led
+
+[Instance_Option0]
+Name=default_on_intensity
+GUIName=Default On Intensity
+Description=Default intensity when an LED is switched on.
+Kind=UINT8
+DefaultValue=10
+MinRange=0
+MaxRange=255

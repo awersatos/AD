@@ -1,0 +1,592 @@
+timestamp=1260919217048
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[cycloneiv_hssi_calibration_block]
+A/cycloneiv_hssi_calibration_block=22|./src/cycloneiv_hssi_atoms.v|64546|1*680878
+B/cycloneiv_hssi_calibration_block=3*8655904
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=609,946,1165,1277
+R=./src/cycloneiv_hssi_atoms.v|64546
+
+[cycloneiv_hssi_cmu]
+A/cycloneiv_hssi_cmu=22|./src/cycloneiv_hssi_atoms.v|62658|1*664345
+B/cycloneiv_hssi_cmu=3*8536440
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=5296,12192,19556,24316
+R=./src/cycloneiv_hssi_atoms.v|62658
+
+[cycloneiv_hssi_cmu_auto_speed_neg]
+A/cycloneiv_hssi_cmu_auto_speed_neg=22|./src/cycloneiv_hssi_atoms.v|61194|1*652254
+B/cycloneiv_hssi_cmu_auto_speed_neg=3*8441458
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1686,2537,3415,3870
+R=./src/cycloneiv_hssi_atoms.v|61194
+
+[cycloneiv_hssi_cmu_chnl_reset]
+A/cycloneiv_hssi_cmu_chnl_reset=22|./src/cycloneiv_hssi_atoms.v|60846|1*648562
+B/cycloneiv_hssi_cmu_chnl_reset=3*8415843
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1641,2154,3032,3333
+R=./src/cycloneiv_hssi_atoms.v|60846
+
+[cycloneiv_hssi_cmu_clk_ctl]
+A/cycloneiv_hssi_cmu_clk_ctl=22|./src/cycloneiv_hssi_atoms.v|61622|1*654798
+B/cycloneiv_hssi_cmu_clk_ctl=3*8478108
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=881,1385,2023,2331
+R=./src/cycloneiv_hssi_atoms.v|61622
+
+[cycloneiv_hssi_cmu_clk_gating]
+A/cycloneiv_hssi_cmu_clk_gating=22|./src/cycloneiv_hssi_atoms.v|61601|1*654128
+B/cycloneiv_hssi_cmu_clk_gating=3*8477112
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=289,489,677,789
+R=./src/cycloneiv_hssi_atoms.v|61601
+
+[cycloneiv_hssi_cmu_quad_reset]
+A/cycloneiv_hssi_cmu_quad_reset=22|./src/cycloneiv_hssi_atoms.v|60988|1*650176
+B/cycloneiv_hssi_cmu_quad_reset=3*8425532
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2108,2693,3884,4218
+R=./src/cycloneiv_hssi_atoms.v|60988
+
+[cycloneiv_hssi_cmu_rx_ctrl]
+A/cycloneiv_hssi_cmu_rx_ctrl=22|./src/cycloneiv_hssi_atoms.v|61733|1*656137
+B/cycloneiv_hssi_cmu_rx_ctrl=3*8485818
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=771,1245,1813,2089
+R=./src/cycloneiv_hssi_atoms.v|61733
+
+[cycloneiv_hssi_cmu_rxclk_ctl]
+A/cycloneiv_hssi_cmu_rxclk_ctl=22|./src/cycloneiv_hssi_atoms.v|61951|1*658132
+B/cycloneiv_hssi_cmu_rxclk_ctl=3*8495606
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1950,2751,4095,4538
+R=./src/cycloneiv_hssi_atoms.v|61951
+
+[cycloneiv_hssi_cmu_rxclk_gating]
+A/cycloneiv_hssi_cmu_rxclk_gating=22|./src/cycloneiv_hssi_atoms.v|61931|1*657460
+B/cycloneiv_hssi_cmu_rxclk_gating=3*8494608
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=293,495,683,795
+R=./src/cycloneiv_hssi_atoms.v|61931
+
+[cycloneiv_hssi_cmu_tx_ctrl]
+A/cycloneiv_hssi_cmu_tx_ctrl=22|./src/cycloneiv_hssi_atoms.v|62215|1*660369
+B/cycloneiv_hssi_cmu_tx_ctrl=3*8514655
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=803,1300,1861,2137
+R=./src/cycloneiv_hssi_atoms.v|62215
+
+[cycloneiv_hssi_cmu_txclk_ctl]
+A/cycloneiv_hssi_cmu_txclk_ctl=22|./src/cycloneiv_hssi_atoms.v|62427|1*662364
+B/cycloneiv_hssi_cmu_txclk_ctl=3*8524419
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1489,2191,3153,3530
+R=./src/cycloneiv_hssi_atoms.v|62427
+
+[cycloneiv_hssi_cmu_txclk_gating]
+A/cycloneiv_hssi_cmu_txclk_gating=22|./src/cycloneiv_hssi_atoms.v|62406|1*661692
+B/cycloneiv_hssi_cmu_txclk_gating=3*8523421
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=293,495,683,795
+R=./src/cycloneiv_hssi_atoms.v|62406
+
+[cycloneiv_hssi_digi_chnl_hip_spt]
+A/cycloneiv_hssi_digi_chnl_hip_spt=22|./src/cycloneiv_hssi_atoms.v|1641|1*19854
+B/cycloneiv_hssi_digi_chnl_hip_spt=3*124200
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2280,2850,3927,4270
+R=./src/cycloneiv_hssi_atoms.v|1641
+
+[cycloneiv_hssi_dskw_sm]
+A/cycloneiv_hssi_dskw_sm=22|./src/cycloneiv_hssi_atoms.v|55392|1*583546
+B/cycloneiv_hssi_dskw_sm=3*7612115
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=556,1505,4209,5257
+R=./src/cycloneiv_hssi_atoms.v|55392
+
+[cycloneiv_hssi_pcs_reset]
+A/cycloneiv_hssi_pcs_reset=22|./src/cycloneiv_hssi_atoms.v|1580|1*18997
+B/cycloneiv_hssi_pcs_reset=3*120976
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=426,683,969,1135
+R=./src/cycloneiv_hssi_atoms.v|1580
+
+[cycloneiv_hssi_phystatus_generator]
+A/cycloneiv_hssi_phystatus_generator=22|./src/cycloneiv_hssi_atoms.v|2212|1*22998
+B/cycloneiv_hssi_phystatus_generator=3*150860
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1196,2062,3669,4344
+R=./src/cycloneiv_hssi_atoms.v|2212
+
+[cycloneiv_hssi_phystatus_generator_fsm]
+A/cycloneiv_hssi_phystatus_generator_fsm=22|./src/cycloneiv_hssi_atoms.v|1817|1*21423
+B/cycloneiv_hssi_phystatus_generator_fsm=3*136669
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1046,1642,2430,2804
+R=./src/cycloneiv_hssi_atoms.v|1817
+
+[cycloneiv_hssi_q_pipe_interface_top]
+A/cycloneiv_hssi_q_pipe_interface_top=22|./src/cycloneiv_hssi_atoms.v|3913|1*41169
+B/cycloneiv_hssi_q_pipe_interface_top=3*346310
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2996,4034,5431,6850
+R=./src/cycloneiv_hssi_atoms.v|3913
+
+[cycloneiv_hssi_rcv_sm]
+A/cycloneiv_hssi_rcv_sm=22|./src/cycloneiv_hssi_atoms.v|58111|1*614234
+B/cycloneiv_hssi_rcv_sm=3*7982712
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=866,6177,21377,29248
+R=./src/cycloneiv_hssi_atoms.v|58111
+
+[cycloneiv_hssi_rx_digi]
+A/cycloneiv_hssi_rx_digi=22|./src/cycloneiv_hssi_atoms.v|49092|1*521977
+B/cycloneiv_hssi_rx_digi=3*6989242
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=15128,19825,24216,31860
+R=./src/cycloneiv_hssi_atoms.v|49092
+
+[cycloneiv_hssi_rx_digi_auto_speed_neg]
+A/cycloneiv_hssi_rx_digi_auto_speed_neg=22|./src/cycloneiv_hssi_atoms.v|18213|1*179249
+B/cycloneiv_hssi_rx_digi_auto_speed_neg=3*1935513
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1279,2784,7032,8384
+R=./src/cycloneiv_hssi_atoms.v|18213
+
+[cycloneiv_hssi_rx_digi_bist_ver]
+A/cycloneiv_hssi_rx_digi_bist_ver=22|./src/cycloneiv_hssi_atoms.v|18959|1*187513
+B/cycloneiv_hssi_rx_digi_bist_ver=3*2033571
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1037,6419,24475,35809
+R=./src/cycloneiv_hssi_atoms.v|18959
+
+[cycloneiv_hssi_rx_digi_cdr_ctrl]
+A/cycloneiv_hssi_rx_digi_cdr_ctrl=22|./src/cycloneiv_hssi_atoms.v|21916|1*226475
+B/cycloneiv_hssi_rx_digi_cdr_ctrl=3*2522076
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=994,2639,7106,9021
+R=./src/cycloneiv_hssi_atoms.v|21916
+
+[cycloneiv_hssi_rx_digi_comp_chnl_top]
+A/cycloneiv_hssi_rx_digi_comp_chnl_top=22|./src/cycloneiv_hssi_atoms.v|22850|1*236013
+B/cycloneiv_hssi_rx_digi_comp_chnl_top=3*2639377
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3725,14507,51149,62990
+R=./src/cycloneiv_hssi_atoms.v|22850
+
+[cycloneiv_hssi_rx_digi_dec_chnl_top]
+A/cycloneiv_hssi_rx_digi_dec_chnl_top=22|./src/cycloneiv_hssi_atoms.v|30768|1*312229
+B/cycloneiv_hssi_rx_digi_dec_chnl_top=3*3760251
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1107,3507,15666,16541
+R=./src/cycloneiv_hssi_atoms.v|30768
+
+[cycloneiv_hssi_rx_digi_dskw_fifo]
+A/cycloneiv_hssi_rx_digi_dskw_fifo=22|./src/cycloneiv_hssi_atoms.v|32002|1*326075
+B/cycloneiv_hssi_rx_digi_dskw_fifo=3*3977128
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=756,2816,8269,10309
+R=./src/cycloneiv_hssi_atoms.v|32002
+
+[cycloneiv_hssi_rx_digi_eii_module]
+A/cycloneiv_hssi_rx_digi_eii_module=22|./src/cycloneiv_hssi_atoms.v|34971|1*354767
+B/cycloneiv_hssi_rx_digi_eii_module=3*4336318
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1118,4027,13968,16723
+R=./src/cycloneiv_hssi_atoms.v|34971
+
+[cycloneiv_hssi_rx_digi_freqdet]
+A/cycloneiv_hssi_rx_digi_freqdet=22|./src/cycloneiv_hssi_atoms.v|33176|1*337998
+B/cycloneiv_hssi_rx_digi_freqdet=3*4140898
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=916,3651,11020,15485
+R=./src/cycloneiv_hssi_atoms.v|33176
+
+[cycloneiv_hssi_rx_digi_iq_pipe_rx]
+A/cycloneiv_hssi_rx_digi_iq_pipe_rx=22|./src/cycloneiv_hssi_atoms.v|37100|1*376192
+B/cycloneiv_hssi_rx_digi_iq_pipe_rx=3*4658824
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2270,3117,4974,5452
+R=./src/cycloneiv_hssi_atoms.v|37100
+
+[cycloneiv_hssi_rx_digi_pcs_channel_testbus]
+A/cycloneiv_hssi_rx_digi_pcs_channel_testbus=22|./src/cycloneiv_hssi_atoms.v|36663|1*370627
+B/cycloneiv_hssi_rx_digi_pcs_channel_testbus=3*4573537
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=879,1904,5908,6072
+R=./src/cycloneiv_hssi_atoms.v|36663
+
+[cycloneiv_hssi_rx_digi_prbs_ver]
+A/cycloneiv_hssi_rx_digi_prbs_ver=22|./src/cycloneiv_hssi_atoms.v|37471|1*379396
+B/cycloneiv_hssi_rx_digi_prbs_ver=3*4690290
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=978,4730,18435,24616
+R=./src/cycloneiv_hssi_atoms.v|37471
+
+[cycloneiv_hssi_rx_digi_rx_ctrl]
+A/cycloneiv_hssi_rx_digi_rx_ctrl=22|./src/cycloneiv_hssi_atoms.v|29138|1*305092
+B/cycloneiv_hssi_rx_digi_rx_ctrl=3*3617311
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=5089,7631,11704,13203
+R=./src/cycloneiv_hssi_atoms.v|29138
+
+[cycloneiv_hssi_rx_digi_rxclk_ctl]
+A/cycloneiv_hssi_rx_digi_rxclk_ctl=22|./src/cycloneiv_hssi_atoms.v|17922|1*177008
+B/cycloneiv_hssi_rx_digi_rxclk_ctl=3*1916496
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1958,2772,4126,4568
+R=./src/cycloneiv_hssi_atoms.v|17922
+
+[cycloneiv_hssi_rx_digi_wordalign]
+A/cycloneiv_hssi_rx_digi_wordalign=22|./src/cycloneiv_hssi_atoms.v|39580|1*406694
+B/cycloneiv_hssi_rx_digi_wordalign=3*5022411
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2867,18954,117208,138864
+R=./src/cycloneiv_hssi_atoms.v|39580
+
+[cycloneiv_hssi_rx_digis_ph_fifo]
+A/cycloneiv_hssi_rx_digis_ph_fifo=22|./src/cycloneiv_hssi_atoms.v|16794|1*169373
+B/cycloneiv_hssi_rx_digis_ph_fifo=3*1665867
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1295,2079,3111,3619
+R=./src/cycloneiv_hssi_atoms.v|16794
+
+[cycloneiv_hssi_rx_digis_ram16x14_syn]
+A/cycloneiv_hssi_rx_digis_ram16x14_syn=22|./src/cycloneiv_hssi_atoms.v|17189|1*172641
+B/cycloneiv_hssi_rx_digis_ram16x14_syn=3*1730403
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=598,1268,2131,2335
+R=./src/cycloneiv_hssi_atoms.v|17189
+
+[cycloneiv_hssi_rx_digis_ram20x16_syn]
+A/cycloneiv_hssi_rx_digis_ram20x16_syn=22|./src/cycloneiv_hssi_atoms.v|17442|1*174406
+B/cycloneiv_hssi_rx_digis_ram20x16_syn=3*1826292
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=540,1302,2281,2472
+R=./src/cycloneiv_hssi_atoms.v|17442
+
+[cycloneiv_hssi_rx_digis_ram8x70_syn]
+A/cycloneiv_hssi_rx_digis_ram8x70_syn=22|./src/cycloneiv_hssi_atoms.v|17751|1*171245
+B/cycloneiv_hssi_rx_digis_ram8x70_syn=3*1693215
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=439,935,1552,1729
+R=./src/cycloneiv_hssi_atoms.v|17751
+
+[cycloneiv_hssi_rx_digis_rxclk_gating]
+A/cycloneiv_hssi_rx_digis_rxclk_gating=22|./src/cycloneiv_hssi_atoms.v|17900|1*176315
+B/cycloneiv_hssi_rx_digis_rxclk_gating=3*1915493
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=303,511,699,811
+R=./src/cycloneiv_hssi_atoms.v|17900
+
+[cycloneiv_hssi_rx_pcs]
+A/cycloneiv_hssi_rx_pcs=22|./src/cycloneiv_hssi_atoms.v|50878|1*531618
+B/cycloneiv_hssi_rx_pcs=3*6991912
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_hssi_rx_pcs=4*3439
+P/~emb=9959,26787,51601,56625
+R=./src/cycloneiv_hssi_atoms.v|50878
+
+[cycloneiv_hssi_rx_pipe_interface]
+A/cycloneiv_hssi_rx_pipe_interface=22|./src/cycloneiv_hssi_atoms.v|2681|1*26539
+B/cycloneiv_hssi_rx_pipe_interface=3*187919
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1114,3069,8141,10503
+R=./src/cycloneiv_hssi_atoms.v|2681
+
+[cycloneiv_hssi_rx_pma]
+A/cycloneiv_hssi_rx_pma=22|./src/cycloneiv_hssi_atoms.v|1257|1*16143
+B/cycloneiv_hssi_rx_pma=3*98534
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2027,3254,4562,5059
+R=./src/cycloneiv_hssi_atoms.v|1257
+
+[cycloneiv_hssi_rx_pma_sub_clkdiv]
+A/cycloneiv_hssi_rx_pma_sub_clkdiv=22|./src/cycloneiv_hssi_atoms.v|1145|1*15198
+B/cycloneiv_hssi_rx_pma_sub_clkdiv=3*92338
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=276,535,826,1052
+R=./src/cycloneiv_hssi_atoms.v|1145
+
+[cycloneiv_hssi_rx_pma_sub_deser]
+A/cycloneiv_hssi_rx_pma_sub_deser=22|./src/cycloneiv_hssi_atoms.v|1068|1*14254
+B/cycloneiv_hssi_rx_pma_sub_deser=3*89003
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=333,623,902,1114
+R=./src/cycloneiv_hssi_atoms.v|1068
+
+[cycloneiv_hssi_tx_digi]
+A/cycloneiv_hssi_tx_digi=22|./src/cycloneiv_hssi_atoms.v|14331|1*143644
+B/cycloneiv_hssi_tx_digi=3*1408898
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6883,9264,11192,14651
+R=./src/cycloneiv_hssi_atoms.v|14331
+
+[cycloneiv_hssi_tx_digi_bist_gen]
+A/cycloneiv_hssi_tx_digi_bist_gen=22|./src/cycloneiv_hssi_atoms.v|5991|1*54592
+B/cycloneiv_hssi_tx_digi_bist_gen=3*487313
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=591,5690,22020,32997
+R=./src/cycloneiv_hssi_atoms.v|5991
+
+[cycloneiv_hssi_tx_digi_enc_chnl_top]
+A/cycloneiv_hssi_tx_digi_enc_chnl_top=22|./src/cycloneiv_hssi_atoms.v|10941|1*110868
+B/cycloneiv_hssi_tx_digi_enc_chnl_top=3*1114311
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1847,6100,20070,32961
+R=./src/cycloneiv_hssi_atoms.v|10941
+
+[cycloneiv_hssi_tx_digi_iq_pipe_tx]
+A/cycloneiv_hssi_tx_digi_iq_pipe_tx=22|./src/cycloneiv_hssi_atoms.v|14078|1*141226
+B/cycloneiv_hssi_tx_digi_iq_pipe_tx=3*1386884
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1728,2417,3769,4163
+R=./src/cycloneiv_hssi_atoms.v|14078
+
+[cycloneiv_hssi_tx_digi_prbs_gen]
+A/cycloneiv_hssi_tx_digi_prbs_gen=22|./src/cycloneiv_hssi_atoms.v|9294|1*90946
+B/cycloneiv_hssi_tx_digi_prbs_gen=3*910134
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=559,3238,11675,17209
+R=./src/cycloneiv_hssi_atoms.v|9294
+
+[cycloneiv_hssi_tx_digi_tx_ctrl]
+A/cycloneiv_hssi_tx_digi_tx_ctrl=22|./src/cycloneiv_hssi_atoms.v|5240|1*49727
+B/cycloneiv_hssi_tx_digi_tx_ctrl=3*440602
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4486,6241,9571,10618
+R=./src/cycloneiv_hssi_atoms.v|5240
+
+[cycloneiv_hssi_tx_digi_txclk_ctl]
+A/cycloneiv_hssi_tx_digi_txclk_ctl=22|./src/cycloneiv_hssi_atoms.v|4506|1*44538
+B/cycloneiv_hssi_tx_digi_txclk_ctl=3*363813
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1497,2210,3177,3559
+R=./src/cycloneiv_hssi_atoms.v|4506
+
+[cycloneiv_hssi_tx_digis_ph_fifo]
+A/cycloneiv_hssi_tx_digis_ph_fifo=22|./src/cycloneiv_hssi_atoms.v|4859|1*47903
+B/cycloneiv_hssi_tx_digis_ph_fifo=3*413050
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1154,1912,2908,3396
+R=./src/cycloneiv_hssi_atoms.v|4859
+
+[cycloneiv_hssi_tx_digis_ram8x49_syn]
+A/cycloneiv_hssi_tx_digis_ram8x49_syn=22|./src/cycloneiv_hssi_atoms.v|4712|1*46507
+B/cycloneiv_hssi_tx_digis_ram8x49_syn=3*375862
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=439,919,1532,1709
+R=./src/cycloneiv_hssi_atoms.v|4712
+
+[cycloneiv_hssi_tx_digis_txclk_gating]
+A/cycloneiv_hssi_tx_digis_txclk_gating=22|./src/cycloneiv_hssi_atoms.v|4479|1*43845
+B/cycloneiv_hssi_tx_digis_txclk_gating=3*362810
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=303,511,699,811
+R=./src/cycloneiv_hssi_atoms.v|4479
+
+[cycloneiv_hssi_tx_pcs]
+A/cycloneiv_hssi_tx_pcs=22|./src/cycloneiv_hssi_atoms.v|15021|1*148325
+B/cycloneiv_hssi_tx_pcs=3*1411880
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_hssi_tx_pcs=4*2009
+P/~emb=5024,12340,22786,25359
+R=./src/cycloneiv_hssi_atoms.v|15021
+
+[cycloneiv_hssi_tx_pipe_interface]
+A/cycloneiv_hssi_tx_pipe_interface=22|./src/cycloneiv_hssi_atoms.v|3504|1*36926
+B/cycloneiv_hssi_tx_pipe_interface=3*300921
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1223,2101,4165,4855
+R=./src/cycloneiv_hssi_atoms.v|3504
+
+[cycloneiv_hssi_tx_pma]
+A/cycloneiv_hssi_tx_pma=22|./src/cycloneiv_hssi_atoms.v|797|1*11880
+B/cycloneiv_hssi_tx_pma=3*57933
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1537,2849,3986,4459
+R=./src/cycloneiv_hssi_atoms.v|797
+
+[cycloneiv_hssi_tx_pma_sub_out_block]
+A/cycloneiv_hssi_tx_pma_sub_out_block=22|./src/cycloneiv_hssi_atoms.v|92|1*1444
+B/cycloneiv_hssi_tx_pma_sub_out_block=3*2013
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_hssi_tx_pma_sub_out_block=4*543
+P/~emb=401,732,1005,1222
+R=./src/cycloneiv_hssi_atoms.v|92
+
+[cycloneiv_hssi_tx_pma_sub_parallel_register]
+A/cycloneiv_hssi_tx_pma_sub_parallel_register=22|./src/cycloneiv_hssi_atoms.v|187|1*2584
+B/cycloneiv_hssi_tx_pma_sub_parallel_register=3*8436
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_hssi_tx_pma_sub_parallel_register=4*1139
+P/~emb=407,680,953,1165
+R=./src/cycloneiv_hssi_atoms.v|187
+
+[cycloneiv_hssi_tx_pma_sub_reg]
+A/cycloneiv_hssi_tx_pma_sub_reg=22|./src/cycloneiv_hssi_atoms.v|41|1*438
+B/cycloneiv_hssi_tx_pma_sub_reg=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_hssi_tx_pma_sub_reg=4*0
+P/~emb=273,478,689,872
+R=./src/cycloneiv_hssi_atoms.v|41
+
+[cycloneiv_hssi_tx_pma_sub_ser]
+A/cycloneiv_hssi_tx_pma_sub_ser=22|./src/cycloneiv_hssi_atoms.v|253|1*3636
+B/cycloneiv_hssi_tx_pma_sub_ser=3*11899
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneiv_hssi_tx_pma_sub_ser=4*1488
+P/~emb=1062,1993,3065,3734
+R=./src/cycloneiv_hssi_atoms.v|253
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det]
+A/cycloneiv_hssi_tx_pma_sub_tx_rx_det=22|./src/cycloneiv_hssi_atoms.v|747|1*10964
+B/cycloneiv_hssi_tx_pma_sub_tx_rx_det=3*56242
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=349,688,912,1154
+R=./src/cycloneiv_hssi_atoms.v|747
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen]
+A/cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen=22|./src/cycloneiv_hssi_atoms.v|506|1*6911
+B/cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen=3*42517
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=234,479,651,867
+R=./src/cycloneiv_hssi_atoms.v|506
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2]
+A/cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2=22|./src/cycloneiv_hssi_atoms.v|476|1*6130
+B/cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2=3*40809
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=235,442,611,739
+R=./src/cycloneiv_hssi_atoms.v|476
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control]
+A/cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control=22|./src/cycloneiv_hssi_atoms.v|663|1*9452
+B/cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control=3*55854
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=473,776,966,1220
+R=./src/cycloneiv_hssi_atoms.v|663
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital]
+A/cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital=22|./src/cycloneiv_hssi_atoms.v|703|1*10208
+B/cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital=3*56048
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=479,791,981,1231
+R=./src/cycloneiv_hssi_atoms.v|703
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm]
+A/cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm=22|./src/cycloneiv_hssi_atoms.v|563|1*8332
+B/cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm=3*43606
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=538,894,1211,1415
+R=./src/cycloneiv_hssi_atoms.v|563
+
+[cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync]
+A/cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync=22|./src/cycloneiv_hssi_atoms.v|529|1*7611
+B/cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync=3*42703
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=290,500,670,823
+R=./src/cycloneiv_hssi_atoms.v|529
+
+[cycloneiv_hssi_tx_sm]
+A/cycloneiv_hssi_tx_sm=22|./src/cycloneiv_hssi_atoms.v|55916|1*589635
+B/cycloneiv_hssi_tx_sm=3*7680494
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=683,4406,16896,23592
+R=./src/cycloneiv_hssi_atoms.v|55916
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, CYCLONEIV_HSSI VERILOG LIBRARY.
+LastVerilogToplevel=cycloneiv_hssi_calibration_block
+ModifyID=511
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/cycloneiv_hssi_atoms.v=0*753595*1323712
+
+[~MFT]
+0=72|0ovi_cycloneiv_hssi.mgf|1323712|0
+1=70|1ovi_cycloneiv_hssi.mgf|680878|0
+3=70|3ovi_cycloneiv_hssi.mgf|8655904|0
+4=5|4ovi_cycloneiv_hssi.mgf|3439|0
+
+[~U]
+$root=12|0*0|
+cycloneiv_hssi_calibration_block=12|0*752810||0x90
+cycloneiv_hssi_cmu=12|0*732165||0x90
+cycloneiv_hssi_cmu_auto_speed_neg=12|0*715770||0x80
+cycloneiv_hssi_cmu_chnl_reset=12|0*711550||0x80
+cycloneiv_hssi_cmu_clk_ctl=12|0*719722||0x80
+cycloneiv_hssi_cmu_clk_gating=12|0*719132||0x80
+cycloneiv_hssi_cmu_quad_reset=12|0*713436||0x80
+cycloneiv_hssi_cmu_rx_ctrl=12|0*721461||0x80
+cycloneiv_hssi_cmu_rxclk_ctl=12|0*723984||0x80
+cycloneiv_hssi_cmu_rxclk_gating=12|0*723392||0x80
+cycloneiv_hssi_cmu_tx_ctrl=12|0*727149||0x80
+cycloneiv_hssi_cmu_txclk_ctl=12|0*729672||0x80
+cycloneiv_hssi_cmu_txclk_gating=12|0*729080||0x80
+cycloneiv_hssi_digi_chnl_hip_spt=12|0*24094||0x80
+cycloneiv_hssi_dskw_sm=12|0*650968||0x80
+cycloneiv_hssi_pcs_reset=12|0*23109||0x80
+cycloneiv_hssi_phystatus_generator=12|0*28950||0x80
+cycloneiv_hssi_phystatus_generator_fsm=12|0*26287||0x80
+cycloneiv_hssi_q_pipe_interface_top=12|0*47483||0x80
+cycloneiv_hssi_rcv_sm=12|0*683062||0x80
+cycloneiv_hssi_rx_digi=12|0*581719||0x80
+cycloneiv_hssi_rx_digi_auto_speed_neg=12|0*199207||0x80
+cycloneiv_hssi_rx_digi_bist_ver=12|0*207741||0x80
+cycloneiv_hssi_rx_digi_cdr_ctrl=12|0*244207||0x80
+cycloneiv_hssi_rx_digi_comp_chnl_top=12|0*253839||0x80
+cycloneiv_hssi_rx_digi_dec_chnl_top=12|0*338567||0x80
+cycloneiv_hssi_rx_digi_dskw_fifo=12|0*360573||0x80
+cycloneiv_hssi_rx_digi_eii_module=12|0*389345||0x80
+cycloneiv_hssi_rx_digi_freqdet=12|0*372240||0x80
+cycloneiv_hssi_rx_digi_iq_pipe_rx=12|0*416240||0x80
+cycloneiv_hssi_rx_digi_pcs_channel_testbus=12|0*410773||0x80
+cycloneiv_hssi_rx_digi_prbs_ver=12|0*420402||0x80
+cycloneiv_hssi_rx_digi_rx_ctrl=12|0*322326||0x80
+cycloneiv_hssi_rx_digi_rxclk_ctl=12|0*196022||0x80
+cycloneiv_hssi_rx_digi_wordalign=12|0*449316||0x80
+cycloneiv_hssi_rx_digis_ph_fifo=12|0*183955||0x80
+cycloneiv_hssi_rx_digis_ram16x14_syn=12|0*189575||0x80
+cycloneiv_hssi_rx_digis_ram20x16_syn=12|0*192332||0x80
+cycloneiv_hssi_rx_digis_ram8x70_syn=12|0*187635||0x80
+cycloneiv_hssi_rx_digis_rxclk_gating=12|0*195425||0x80
+cycloneiv_hssi_rx_pcs=12|0*596640||0x90
+cycloneiv_hssi_rx_pipe_interface=12|0*33321||0x80
+cycloneiv_hssi_rx_pma=12|0*18959||0x90
+cycloneiv_hssi_rx_pma_sub_clkdiv=12|0*17790||0x80
+cycloneiv_hssi_rx_pma_sub_deser=12|0*16702||0x80
+cycloneiv_hssi_tx_digi=12|0*153284||0x80
+cycloneiv_hssi_tx_digi_bist_gen=12|0*68200||0x80
+cycloneiv_hssi_tx_digi_enc_chnl_top=12|0*120780||0x80
+cycloneiv_hssi_tx_digi_iq_pipe_tx=12|0*150066||0x80
+cycloneiv_hssi_tx_digi_prbs_gen=12|0*101930||0x80
+cycloneiv_hssi_tx_digi_tx_ctrl=12|0*60057||0x80
+cycloneiv_hssi_tx_digi_txclk_ctl=12|0*52052||0x80
+cycloneiv_hssi_tx_digis_ph_fifo=12|0*56521||0x80
+cycloneiv_hssi_tx_digis_ram8x49_syn=12|0*54581||0x80
+cycloneiv_hssi_tx_digis_txclk_gating=12|0*51455||0x80
+cycloneiv_hssi_tx_pcs=12|0*160315||0x90
+cycloneiv_hssi_tx_pipe_interface=12|0*42778||0x80
+cycloneiv_hssi_tx_pma=12|0*13048||0x90
+cycloneiv_hssi_tx_pma_sub_out_block=12|0*1556||0x80
+cycloneiv_hssi_tx_pma_sub_parallel_register=12|0*2808||0x80
+cycloneiv_hssi_tx_pma_sub_reg=12|0*726||0x80
+cycloneiv_hssi_tx_pma_sub_ser=12|0*3876||0x80
+cycloneiv_hssi_tx_pma_sub_tx_rx_det=12|0*12180||0x80
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen=12|0*7823||0x80
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2=12|0*7186||0x80
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control=12|0*10540||0x80
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital=12|0*11360||0x80
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm=12|0*9180||0x80
+cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync=12|0*8507||0x80
+cycloneiv_hssi_tx_sm=12|0*656703||0x80
+

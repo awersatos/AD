@@ -1,0 +1,347 @@
+timestamp=1260919158486
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[PRIM_GDFF_HIGH]
+A/PRIM_GDFF_HIGH=22|./src/altera_primitives.v|260|1*11997
+B/PRIM_GDFF_HIGH=3*13118
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=404,633,1062,1096
+R=./src/altera_primitives.v|260
+
+[PRIM_GDFF_LOW]
+A/PRIM_GDFF_LOW=22|./src/altera_primitives.v|217|1*11199
+B/PRIM_GDFF_LOW=3*12550
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=402,630,1059,1093
+R=./src/altera_primitives.v|217
+
+[TRI]
+A/TRI=22|./src/altera_primitives.v|85|1*5168
+B/TRI=3*3894
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=136,291,404,508
+R=./src/altera_primitives.v|85
+
+[alt_bidir_buf]
+A/alt_bidir_buf=22|./src/altera_primitives.v|1172|1*31017
+B/alt_bidir_buf=3*90248
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=538,899,1166,1266
+R=./src/altera_primitives.v|1172
+
+[alt_bidir_diff]
+A/alt_bidir_diff=22|./src/altera_primitives.v|1134|1*30026
+B/alt_bidir_diff=3*86450
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=576,957,1253,1356
+R=./src/altera_primitives.v|1134
+
+[alt_inbuf]
+A/alt_inbuf=22|./src/altera_primitives.v|939|1*22810
+B/alt_inbuf=3*75146
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=308,574,723,801
+R=./src/altera_primitives.v|939
+
+[alt_inbuf_diff]
+A/alt_inbuf_diff=22|./src/altera_primitives.v|1022|1*26296
+B/alt_inbuf_diff=3*78465
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=354,661,855,955
+R=./src/altera_primitives.v|1022
+
+[alt_iobuf]
+A/alt_iobuf=22|./src/altera_primitives.v|993|1*25342
+B/alt_iobuf=3*77016
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=568,924,1178,1281
+R=./src/altera_primitives.v|993
+
+[alt_iobuf_diff]
+A/alt_iobuf_diff=22|./src/altera_primitives.v|1095|1*29019
+B/alt_iobuf_diff=3*82904
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=587,969,1270,1376
+R=./src/altera_primitives.v|1095
+
+[alt_outbuf]
+A/alt_outbuf=22|./src/altera_primitives.v|954|1*23604
+B/alt_outbuf=3*75782
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=442,763,936,1014
+R=./src/altera_primitives.v|954
+
+[alt_outbuf_diff]
+A/alt_outbuf_diff=22|./src/altera_primitives.v|1052|1*27175
+B/alt_outbuf_diff=3*80863
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=456,772,962,1045
+R=./src/altera_primitives.v|1052
+
+[alt_outbuf_tri]
+A/alt_outbuf_tri=22|./src/altera_primitives.v|973|1*24479
+B/alt_outbuf_tri=3*76555
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=481,808,986,1091
+R=./src/altera_primitives.v|973
+
+[alt_outbuf_tri_diff]
+A/alt_outbuf_tri_diff=22|./src/altera_primitives.v|1073|1*28055
+B/alt_outbuf_tri_diff=3*81749
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=495,821,1013,1135
+R=./src/altera_primitives.v|1073
+
+[carry]
+A/carry=22|./src/altera_primitives.v|26|1*1197
+B/carry=3*613
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=113,264,372,450
+R=./src/altera_primitives.v|26
+
+[carry_sum]
+A/carry_sum=22|./src/altera_primitives.v|42|1*2331
+B/carry_sum=3*1543
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=186,356,494,580
+R=./src/altera_primitives.v|42
+
+[cascade]
+A/cascade=22|./src/altera_primitives.v|34|1*1763
+B/cascade=3*1077
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=117,270,378,456
+R=./src/altera_primitives.v|34
+
+[clklock]
+A/clklock=22|./src/altera_primitives.v|544|1*21218
+B/clklock=3*34230
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=253,1118,1756,2136
+R=./src/altera_primitives.v|544
+
+[dff]
+A/dff=22|./src/altera_primitives.v|174|1*8816
+B/dff=3*9040
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=192,375,519,658
+R=./src/altera_primitives.v|174
+
+[dffe]
+A/dffe=22|./src/altera_primitives.v|185|1*9572
+B/dffe=3*9866
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=223,413,563,701
+R=./src/altera_primitives.v|185
+
+[dffea]
+A/dffea=22|./src/altera_primitives.v|196|1*10329
+B/dffea=3*10693
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=291,510,720,889
+R=./src/altera_primitives.v|196
+
+[dffeas]
+A/dffeas=22|./src/altera_primitives.v|304|1*12796
+B/dffeas=3*13687
+C=8.2.1986.SP1.35.3497  (Windows)
+D/dffeas=4*0
+P/~emb=553,1028,1612,1881
+R=./src/altera_primitives.v|304
+
+[dlatch]
+A/dlatch=22|./src/altera_primitives.v|124|1*7471
+B/dlatch=3*5901
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=197,369,514,620
+R=./src/altera_primitives.v|124
+
+[exp]
+A/exp=22|./src/altera_primitives.v|53|1*2933
+B/exp=3*2327
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=109,258,368,446
+R=./src/altera_primitives.v|53
+
+[global]
+A/global=22|./src/altera_primitives.v|18|1*630
+B/global=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=115,267,375,453
+R=./src/altera_primitives.v|18
+
+[jkff]
+A/jkff=22|./src/altera_primitives.v|468|1*17633
+B/jkff=3*29114
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=219,408,559,695
+R=./src/altera_primitives.v|468
+
+[jkffe]
+A/jkffe=22|./src/altera_primitives.v|479|1*18374
+B/jkffe=3*29941
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=250,443,599,734
+R=./src/altera_primitives.v|479
+
+[latch]
+A/latch=22|./src/altera_primitives.v|110|1*6857
+B/latch=3*4977
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=135,291,430,530
+R=./src/altera_primitives.v|110
+
+[lut_input]
+A/lut_input=22|./src/altera_primitives.v|94|1*5716
+B/lut_input=3*4040
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=121,276,384,462
+R=./src/altera_primitives.v|94
+
+[lut_output]
+A/lut_output=22|./src/altera_primitives.v|102|1*6286
+B/lut_output=3*4508
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=123,279,387,465
+R=./src/altera_primitives.v|102
+
+[opndrn]
+A/opndrn=22|./src/altera_primitives.v|69|1*4062
+B/opndrn=3*3276
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=115,267,370,471
+R=./src/altera_primitives.v|69
+
+[prim_gdff]
+A/prim_gdff=22|./src/altera_primitives.v|142|1*8102
+B/prim_gdff=3*7079
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=352,562,741,880
+R=./src/altera_primitives.v|142
+
+[prim_gjkff]
+A/prim_gjkff=22|./src/altera_primitives.v|438|1*16950
+B/prim_gjkff=3*27308
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=257,443,615,745
+R=./src/altera_primitives.v|438
+
+[prim_gsrff]
+A/prim_gsrff=22|./src/altera_primitives.v|490|1*19084
+B/prim_gsrff=3*30769
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=257,445,621,755
+R=./src/altera_primitives.v|490
+
+[prim_gtff]
+A/prim_gtff=22|./src/altera_primitives.v|390|1*14819
+B/prim_gtff=3*24030
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=230,415,585,712
+R=./src/altera_primitives.v|390
+
+[row_global]
+A/row_global=22|./src/altera_primitives.v|77|1*4597
+B/row_global=3*3425
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=123,279,387,465
+R=./src/altera_primitives.v|77
+
+[soft]
+A/soft=22|./src/altera_primitives.v|61|1*3497
+B/soft=3*2813
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=111,261,369,447
+R=./src/altera_primitives.v|61
+
+[srff]
+A/srff=22|./src/altera_primitives.v|520|1*19767
+B/srff=3*32575
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=219,406,559,696
+R=./src/altera_primitives.v|520
+
+[srffe]
+A/srffe=22|./src/altera_primitives.v|531|1*20508
+B/srffe=3*33402
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=250,442,600,736
+R=./src/altera_primitives.v|531
+
+[tff]
+A/tff=22|./src/altera_primitives.v|416|1*15501
+B/tff=3*25655
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=192,375,522,655
+R=./src/altera_primitives.v|416
+
+[tffe]
+A/tffe=22|./src/altera_primitives.v|427|1*16241
+B/tffe=3*26481
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=223,413,566,698
+R=./src/altera_primitives.v|427
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, VERILOG LIBRARY FOR TIMING DESIGNS
+LastVerilogToplevel=alt_bidir_buf
+ModifyID=324
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/altera_primitives.v=0*28375*35783
+
+[~MFT]
+0=42|0ovi_altera.mgf|35783|0
+1=40|1ovi_altera.mgf|31017|0
+3=40|3ovi_altera.mgf|90248|0
+4=0|4ovi_altera.mgf|0|0
+
+[~U]
+$root=12|0*0|
+PRIM_GDFF_HIGH=12|0*9165||0xa0
+PRIM_GDFF_LOW=12|0*8351||0xa0
+TRI=12|0*3584||0x90
+alt_bidir_buf=12|0*27481||0x90
+alt_bidir_diff=12|0*26474||0x90
+alt_inbuf=12|0*20570||0x90
+alt_inbuf_diff=12|0*23304||0x90
+alt_iobuf=12|0*22494||0x90
+alt_iobuf_diff=12|0*25467||0x90
+alt_outbuf=12|0*21140||0x90
+alt_outbuf_diff=12|0*24055||0x90
+alt_outbuf_tri=12|0*21807||0x90
+alt_outbuf_tri_diff=12|0*24759||0x90
+carry=12|0*813||0x90
+carry_sum=12|0*1579||0x90
+cascade=12|0*1187||0x90
+clklock=12|0*16978||0x90
+dff=12|0*6560||0x90
+dffe=12|0*7092||0x90
+dffea=12|0*7641||0x90
+dffeas=12|0*9980||0x90
+dlatch=12|0*5247||0x90
+exp=12|0*2037||0x90
+global=12|0*422||0x90
+jkff=12|0*14097||0x90
+jkffe=12|0*14630||0x90
+latch=12|0*4777||0x90
+lut_input=12|0*3988||0x90
+lut_output=12|0*4382||0x90
+opndrn=12|0*2798||0x90
+prim_gdff=12|0*5798||0x80
+prim_gjkff=12|0*13398||0x80
+prim_gsrff=12|0*15180||0x80
+prim_gtff=12|0*11699||0x80
+row_global=12|0*3189||0x90
+soft=12|0*2425||0x90
+srff=12|0*15879||0x90
+srffe=12|0*16412||0x90
+tff=12|0*12349||0x90
+tffe=12|0*12865||0x90
+

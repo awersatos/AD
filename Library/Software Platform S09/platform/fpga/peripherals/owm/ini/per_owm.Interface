@@ -1,0 +1,6 @@
+[Interface]
+Name=per_owm
+Category=PERIPHERAL
+System=False
+Description=One Wire Bus controller peripheral
+PublicDir=platform\fpga\peripherals\owm\include

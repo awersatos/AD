@@ -1,0 +1,11 @@
+[Plugin]
+Name=graphics_to_textdisplay
+Description=Posix interface to display text on graphics peripherals
+SourceDir=services\posix\devio\textdisplay\adaptors\graphics\src
+CompileOption0=-I"$(SSASROOT)\services\posix\devio\textdisplay\include"
+InitHandler=graphics_to_textdisplay_init
+InitHandlerPriority=8
+Implement=textdisplay_adaptor
+
+[Instance]
+Require0=graphics

@@ -1,0 +1,20 @@
+[Plugin]
+Name=per_sdhc
+Description=SD Card host controller for communication with SD Cards in 4-bit mode
+Caption=SD Host Controller
+Implement=per_sdhc
+HardwareID=WB_SDHC
+Bitmap=per_sdhc.bmp
+LargeBitmap=per_sdhc_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=Hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+

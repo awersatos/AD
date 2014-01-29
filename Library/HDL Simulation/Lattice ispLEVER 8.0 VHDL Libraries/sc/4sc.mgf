@@ -1,0 +1,11 @@
+V 000031 56 170 0 sbnx4v1mce_1
+(_unit sbnx4v1mce_1
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)

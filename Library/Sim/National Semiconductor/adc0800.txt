@@ -1,0 +1,148 @@
+//============================================================
+# adc0800 source
+//4000B: 8-bit Analog to digital converter
+//Spec. from National data sheet - Feb. 1995:
+//Clock rate: 50-800kHz
+//VSS= +5V to +10V and VGG= -12V to -7V
+//Start conversion (SC) H->L transition: begin conversion
+//Start conversion max twh: 3.5 clock cycles
+//Conversion time: 40 clock cycles
+//Prop-delay SC->Dx, OE->Dx, CLK->Dx: 200ns
+//End conversion (EC): L=converting, H=done
+//dm 5-14-98: written
+// jjt 10/1/2002: changed the output to 1's complement as per Feb 95 datasheet
+//============================================================
+INPUTS VSS, VDD, VGG, VRP, VRM, VIN, CLK, SC, OE;
+OUTPUTS VSS_LD, CLK_LD, SC_LD, OE_LD, D0, D1, D2, D3, D4, D5, D6, D7, OC;
+INTEGERS internal_reg, clk_count, oc_bit, ck_vgg;
+REALS tt_val, tp_val, rin_val, vin_val, ridd_val, tmp_val;
+
+PWR_GND_PINS(VSS,VDD);	//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.75,10.25);	//check for min supply=4.75 and max supply=10.25
+VOL_VOH_MIN(0,0,0.1);	//set min vol_param=gnd_param+0, max voh_param=pwr_param-0
+VIL_VIH_PERCENT(33,66);	//PMOS vil=33% of supply, vih=66% of supply
+IO_PAIRS(CLK:CLK_LD, SC:SC_LD, OE:OE_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tVin\treg\tD7\tD6\tD5\tD4\tD3\tD2\tD1\tD0\tSC\tOC");
+    //Note: ttlh and tthl values are the same
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 60n, 120n));
+
+    //Note: tplh and tphl values are the same
+    tp_val= (MIN_TYP_MAX(tp_param: NULL, 200n, NULL));
+
+    //output drive IOL max=2mA @ vol=0.4V: rol_param=(0.4-vol_param)/2mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 100,  NULL));
+
+    //output drive IOH max=-200uA @ voh=4.5V: roh_param=(voh_param-4.5)/200uA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 500, NULL));
+
+    //input leakage @ 25'C: IIN=1uA @ VDD=5v rin= (5/1uA);
+    rin_val= (MIN_TYP_MAX(ld_param: NULL, 5E6, NULL));
+
+    //Idd @ 5V: 250= 5/20mA max
+    ridd_val= (MIN_TYP_MAX(i_param: NULL, NULL, 250));
+    
+    oc_bit= (1);
+	ck_vgg= (1);
+    clk_count= (0);
+    internal_reg = (0);
+
+    STATE OC = ONE;				//initialize output
+    STATE D0 D1 D2 D3 D4 D5 D6 D7 = ZERO;	//initialize output
+    EXIT;
+  END;
+
+DRIVE D0 D1 D2 D3 D4 D5 D6 D7 OC =
+  (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD CLK_LD SC_LD OE_LD =
+  (v0=vol_param,r0=rin_val,v1=voh_param,r1=rin_val,io=1e12,t=1p);
+
+IF (CHANGED_LH(SC)) THEN
+  BEGIN
+    oc_bit= (0);
+    clk_count= (0);
+  END;
+
+IF (CHANGED_LH(CLK)) THEN
+  BEGIN
+    clk_count= (clk_count + 1);
+  END;
+
+IF (clk_count = 40) THEN
+  BEGIN
+    oc_bit= (1);
+	tmp_val= (VALUE(VRP) - VALUE(VRM));
+	IF (tmp_val <= 0) THEN
+	  BEGIN
+	    MESSAGE("WARNING: Vref+ <= Vref-");
+	  ELSE
+        internal_reg = ((VALUE(VIN) * 256)/tmp_val);
+	  END;
+  END;
+
+IF (oc_bit) THEN
+  BEGIN
+    STATE OC = ONE;
+  ELSE
+    STATE OC = ZERO;
+  END;
+
+IF (OE) THEN
+  BEGIN
+    STATE_BIT D0 D1 D2 D3 D4 D5 D6 D7 = (internal_reg);
+    STATE_BIT D0 = (!(D0));
+    STATE_BIT D1 = (!(D1));
+    STATE_BIT D2 = (!(D2));
+    STATE_BIT D3 = (!(D3));
+    STATE_BIT D4 = (!(D4));
+    STATE_BIT D5 = (!(D5));
+    STATE_BIT D6 = (!(D6));
+    STATE_BIT D7 = (!(D7));
+  ELSE
+    STATE D0 D1 D2 D3 D4 D5 D6 D7 = UNKNOWN;
+  END;
+
+//vin_val = (VALUE(VIN));
+//MESSAGE("%fs\t%fv\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//        present_time,vin_val,internal_reg,D7,D6,D5,D4,D3,D2,D1,D0,SC,OC);
+
+IF (warn_param && (present_time > 0)) THEN
+  BEGIN
+    IF (SC && (clk_count = 4)) THEN
+      BEGIN
+        MESSAGE("WARNING: Possible conversion problem - SC was high for more than 3 CLK cycles");
+      END;
+
+    IF (ck_vgg) THEN
+	  BEGIN
+	    ck_vgg= (0);
+        vin_val = (VALUE(VIN));
+        IF (vin_val > pwr_param) THEN
+          BEGIN
+            MESSAGE("WARNING: VIN(%fV) > VSS(%fV)",vin_val,pwr_param);
+          ELSE
+            tmp_val= (VALUE(VGG)+7);
+            IF (vin_val < tmp_val) THEN
+	          BEGIN
+	            MESSAGE("WARNING: Inadequate voltage to analog switches\n\tVIN(%fV) < VGG+7(%fV)",vin_val,tmp_val);
+		      ELSE
+		        vin_val= (VALUE(VRM));
+                IF (vin_val < tmp_val) THEN
+			      BEGIN
+	                MESSAGE("WARNING: Inadequate voltage to analog switches\n\tVref-(%fV) < VGG+7(%fV)",vin_val,tmp_val);
+				  ELSE
+				    ck_vgg= (1);	//no errors - continue checking VGG
+			      END;
+			  END;
+	      END;
+	  END;
+
+    FREQUENCY(CLK MIN=50k MAX=800k "CLK");
+  END;
+
+LOAD VSS_LD = (v0=gnd_param,r0=ridd_val,t=1p);
+DELAY D0 D1 D2 D3 D4 D5 D6 D7 OC = (tp_val);
+EXIT;
+

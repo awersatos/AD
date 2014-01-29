@@ -1,0 +1,290 @@
+V 000058 56 2388 1260919479866 stratixgx_hssi_transmitter
+(_unit stratixgx_hssi_transmitter
+	(_specify
+		(_tchk setuphold 0 6473
+			(_port coreclk (posedge))
+			(_port datain (_constant \0\) ())
+		)
+		(_tchk setuphold 0 6474
+			(_port coreclk (posedge))
+			(_port datain (_constant \1\) ())
+		)
+		(_tchk setuphold 0 6475
+			(_port coreclk (posedge))
+			(_port datain (_constant \2\) ())
+		)
+		(_tchk setuphold 0 6476
+			(_port coreclk (posedge))
+			(_port datain (_constant \3\) ())
+		)
+		(_tchk setuphold 0 6477
+			(_port coreclk (posedge))
+			(_port datain (_constant \4\) ())
+		)
+		(_tchk setuphold 0 6478
+			(_port coreclk (posedge))
+			(_port datain (_constant \5\) ())
+		)
+		(_tchk setuphold 0 6479
+			(_port coreclk (posedge))
+			(_port datain (_constant \6\) ())
+		)
+		(_tchk setuphold 0 6480
+			(_port coreclk (posedge))
+			(_port datain (_constant \7\) ())
+		)
+		(_tchk setuphold 0 6481
+			(_port coreclk (posedge))
+			(_port datain (_constant \8\) ())
+		)
+		(_tchk setuphold 0 6482
+			(_port coreclk (posedge))
+			(_port datain (_constant \9\) ())
+		)
+		(_tchk setuphold 0 6483
+			(_port coreclk (posedge))
+			(_port datain (_constant \10\) ())
+		)
+		(_tchk setuphold 0 6484
+			(_port coreclk (posedge))
+			(_port datain (_constant \11\) ())
+		)
+		(_tchk setuphold 0 6485
+			(_port coreclk (posedge))
+			(_port datain (_constant \12\) ())
+		)
+		(_tchk setuphold 0 6486
+			(_port coreclk (posedge))
+			(_port datain (_constant \13\) ())
+		)
+		(_tchk setuphold 0 6487
+			(_port coreclk (posedge))
+			(_port datain (_constant \14\) ())
+		)
+		(_tchk setuphold 0 6488
+			(_port coreclk (posedge))
+			(_port datain (_constant \15\) ())
+		)
+		(_tchk setuphold 0 6489
+			(_port coreclk (posedge))
+			(_port datain (_constant \16\) ())
+		)
+		(_tchk setuphold 0 6490
+			(_port coreclk (posedge))
+			(_port datain (_constant \17\) ())
+		)
+		(_tchk setuphold 0 6491
+			(_port coreclk (posedge))
+			(_port datain (_constant \18\) ())
+		)
+		(_tchk setuphold 0 6492
+			(_port coreclk (posedge))
+			(_port datain (_constant \19\) ())
+		)
+		(_tchk setuphold 0 6494
+			(_port coreclk (posedge))
+			(_port ctrlenable (_constant \0\) ())
+		)
+		(_tchk setuphold 0 6495
+			(_port coreclk (posedge))
+			(_port ctrlenable (_constant \1\) ())
+		)
+		(_tchk setuphold 0 6497
+			(_port coreclk (posedge))
+			(_port forcedisparity (_constant \0\) ())
+		)
+		(_tchk setuphold 0 6498
+			(_port coreclk (posedge))
+			(_port forcedisparity (_constant \1\) ())
+		)
+	)
+)
+V 000055 56 6314 1260919479941 stratixgx_hssi_receiver
+(_unit stratixgx_hssi_receiver
+	(_specify
+		(_modpath parallel positive 0 14742
+			(_port coreclk in posedge)
+			(_port dataout (_constant \0\) out posedge)
+			(_datain dataout_tmp (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 14743
+			(_port coreclk in posedge)
+			(_port dataout (_constant \1\) out posedge)
+			(_datain dataout_tmp (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 14744
+			(_port coreclk in posedge)
+			(_port dataout (_constant \2\) out posedge)
+			(_datain dataout_tmp (_constant \2\) in posedge)
+		)
+		(_modpath parallel positive 0 14745
+			(_port coreclk in posedge)
+			(_port dataout (_constant \3\) out posedge)
+			(_datain dataout_tmp (_constant \3\) in posedge)
+		)
+		(_modpath parallel positive 0 14746
+			(_port coreclk in posedge)
+			(_port dataout (_constant \4\) out posedge)
+			(_datain dataout_tmp (_constant \4\) in posedge)
+		)
+		(_modpath parallel positive 0 14747
+			(_port coreclk in posedge)
+			(_port dataout (_constant \5\) out posedge)
+			(_datain dataout_tmp (_constant \5\) in posedge)
+		)
+		(_modpath parallel positive 0 14748
+			(_port coreclk in posedge)
+			(_port dataout (_constant \6\) out posedge)
+			(_datain dataout_tmp (_constant \6\) in posedge)
+		)
+		(_modpath parallel positive 0 14749
+			(_port coreclk in posedge)
+			(_port dataout (_constant \7\) out posedge)
+			(_datain dataout_tmp (_constant \7\) in posedge)
+		)
+		(_modpath parallel positive 0 14750
+			(_port coreclk in posedge)
+			(_port dataout (_constant \8\) out posedge)
+			(_datain dataout_tmp (_constant \8\) in posedge)
+		)
+		(_modpath parallel positive 0 14751
+			(_port coreclk in posedge)
+			(_port dataout (_constant \9\) out posedge)
+			(_datain dataout_tmp (_constant \9\) in posedge)
+		)
+		(_modpath parallel positive 0 14752
+			(_port coreclk in posedge)
+			(_port dataout (_constant \10\) out posedge)
+			(_datain dataout_tmp (_constant \10\) in posedge)
+		)
+		(_modpath parallel positive 0 14753
+			(_port coreclk in posedge)
+			(_port dataout (_constant \11\) out posedge)
+			(_datain dataout_tmp (_constant \11\) in posedge)
+		)
+		(_modpath parallel positive 0 14754
+			(_port coreclk in posedge)
+			(_port dataout (_constant \12\) out posedge)
+			(_datain dataout_tmp (_constant \12\) in posedge)
+		)
+		(_modpath parallel positive 0 14755
+			(_port coreclk in posedge)
+			(_port dataout (_constant \13\) out posedge)
+			(_datain dataout_tmp (_constant \13\) in posedge)
+		)
+		(_modpath parallel positive 0 14756
+			(_port coreclk in posedge)
+			(_port dataout (_constant \14\) out posedge)
+			(_datain dataout_tmp (_constant \14\) in posedge)
+		)
+		(_modpath parallel positive 0 14757
+			(_port coreclk in posedge)
+			(_port dataout (_constant \15\) out posedge)
+			(_datain dataout_tmp (_constant \15\) in posedge)
+		)
+		(_modpath parallel positive 0 14758
+			(_port coreclk in posedge)
+			(_port dataout (_constant \16\) out posedge)
+			(_datain dataout_tmp (_constant \16\) in posedge)
+		)
+		(_modpath parallel positive 0 14759
+			(_port coreclk in posedge)
+			(_port dataout (_constant \17\) out posedge)
+			(_datain dataout_tmp (_constant \17\) in posedge)
+		)
+		(_modpath parallel positive 0 14760
+			(_port coreclk in posedge)
+			(_port dataout (_constant \18\) out posedge)
+			(_datain dataout_tmp (_constant \18\) in posedge)
+		)
+		(_modpath parallel positive 0 14761
+			(_port coreclk in posedge)
+			(_port dataout (_constant \19\) out posedge)
+			(_datain dataout_tmp (_constant \19\) in posedge)
+		)
+		(_modpath parallel positive 0 14763
+			(_port coreclk in posedge)
+			(_port syncstatus (_constant \0\) out posedge)
+			(_datain core_syncstatus (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 14764
+			(_port coreclk in posedge)
+			(_port syncstatus (_constant \1\) out posedge)
+			(_datain core_syncstatus (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 14766
+			(_port coreclk in posedge)
+			(_port patterndetect (_constant \0\) out posedge)
+			(_datain core_patterndetect (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 14767
+			(_port coreclk in posedge)
+			(_port patterndetect (_constant \1\) out posedge)
+			(_datain core_patterndetect (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 14769
+			(_port coreclk in posedge)
+			(_port ctrldetect (_constant \0\) out posedge)
+			(_datain core_ctrldetect (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 14770
+			(_port coreclk in posedge)
+			(_port ctrldetect (_constant \1\) out posedge)
+			(_datain core_ctrldetect (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 14772
+			(_port coreclk in posedge)
+			(_port errdetect (_constant \0\) out posedge)
+			(_datain core_errdetect (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 14773
+			(_port coreclk in posedge)
+			(_port errdetect (_constant \1\) out posedge)
+			(_datain core_errdetect (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 14775
+			(_port coreclk in posedge)
+			(_port disperr (_constant \0\) out posedge)
+			(_datain core_disparityerr (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 14776
+			(_port coreclk in posedge)
+			(_port disperr (_constant \1\) out posedge)
+			(_datain core_disparityerr (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 14778
+			(_port coreclk in posedge)
+			(_port a1a2sizeout (_constant \0\) out posedge)
+			(_datain core_a1a2sizeout (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 14779
+			(_port coreclk in posedge)
+			(_port a1a2sizeout (_constant \1\) out posedge)
+			(_datain core_a1a2sizeout (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 14781
+			(_port coreclk in posedge)
+			(_port fifofull out posedge)
+			(_datain cmfifo_fifofull in posedge)
+		)
+		(_modpath parallel positive 0 14782
+			(_port coreclk in posedge)
+			(_port fifoempty out posedge)
+			(_datain cmfifo_fifoempty in posedge)
+		)
+		(_modpath parallel positive 0 14783
+			(_port coreclk in posedge)
+			(_port fifoalmostfull out posedge)
+			(_datain cmfifo_fifoalmostfull in posedge)
+		)
+		(_modpath parallel positive 0 14784
+			(_port coreclk in posedge)
+			(_port fifoalmostempty out posedge)
+			(_datain cmfifo_fifoalmostempty in posedge)
+		)
+		(_tchk setuphold 0 14785
+			(_port coreclk (posedge))
+			(_port re ())
+		)
+	)
+)

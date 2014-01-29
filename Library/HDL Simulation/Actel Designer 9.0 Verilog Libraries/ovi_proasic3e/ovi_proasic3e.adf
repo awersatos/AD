@@ -1,0 +1,43 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_proasic3e
+
+[Library]
+ovi_proasic3e=.\OVI_proasic3e.LIB
+
+[$LibMap$]
+ovi_proasic3e=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/update_ovi_proasic3e.do=-1
+/proasic3e.v=-1
+
+[Files.Data]
+.\src\update_ovi_proasic3e.do=Macro
+.\src\proasic3e.v=Verilog Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVerilogSets]
+Strict=0
+Strict2001=1
+SystemVerilog3=0
+ErrorOutputLimit=0
+WarningPrnLevel=1
+OptimizationLevel=2
+EnableDebug=1
+StrictLRMMode=0
+ProtectLevel=0
+AdditionalOptions=

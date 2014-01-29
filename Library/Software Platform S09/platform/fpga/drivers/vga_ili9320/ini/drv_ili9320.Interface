@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_vga_ili9320
+Category=DRIVER
+System=False
+Description=VGA TFT_Module 320x240 graphics driver (NB3000)
+PublicDir=platform\fpga\drivers\vga_ili9320\include
+

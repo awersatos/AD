@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_gdx2
+
+[Library]
+ovi_gdx2=.\ovi_gdx2.LIB
+
+[$LibMap$]
+ovi_gdx2=.
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/gdx2.v=-1
+/update_ovi_gdx2.do=-1
+
+[Files.Data]
+.\src\gdx2.v=Verilog Source Code
+.\src\update_ovi_gdx2.do=Macro
+

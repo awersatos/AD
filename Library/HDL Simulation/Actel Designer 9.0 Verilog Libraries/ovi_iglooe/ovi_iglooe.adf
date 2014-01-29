@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_iglooe
+
+[Library]
+ovi_iglooe=.\ovi_iglooe.LIB
+
+[$LibMap$]
+ovi_iglooe=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_ovi_iglooe.do=-1
+/iglooe.v=-1
+
+[Files.Data]
+.\src\update_ovi_iglooe.do=Macro
+.\src\iglooe.v=Verilog Source Code
+

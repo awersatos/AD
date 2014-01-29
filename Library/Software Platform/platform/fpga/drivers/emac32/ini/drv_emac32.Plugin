@@ -1,0 +1,192 @@
+[Plugin]
+Name=drv_emac32
+Caption=EMAC32 Driver
+Description=Driver for the EMAC32 ethernet core
+CompileOption0=-I"$(SWPLATFORM)\platform\fpga\drivers\emac32\internal"
+SourceFile0=platform\fpga\drivers\emac32\src\drv_emac32.c
+SourceFile1=platform\fpga\drivers\emac32\src\drv_emac32_internal.c
+SourceFile2=platform\fpga\drivers\emac32\src\drv_emac32_rtl8210_linkstatus.c
+Implement=drv_emac32
+Bitmap=drv_emac32.bmp
+GenerateInclude0=drv_emac32.h
+
+
+[Instance]
+Require0=per_emac32
+
+[Instance_Option0]
+Name=mac
+Description=MAC address
+Kind=ARRAY
+Type=UINT8
+Size=6
+DefaultValue=2,3,4,5,6,7
+MinRange=0
+MaxRange=255
+
+;; TX options
+
+[Instance_Option1]
+Name=tx_cmd
+GUIName=TX cmd
+Description=Transmitter options
+Kind=BITMASK32
+DefaultValue=0x00000001
+BitName0=Enabled_tx
+BitDescription0=Enabled
+
+[Instance_Option2]
+Name=tx_buffer
+GUIName=TX Buffer
+Description=Transmitter buffer size (words). It is recommended to use a buffer size of at least 768.
+Kind=BUFFER
+Type=UINT32
+DefaultValue=20480
+AllocMemory=True
+
+[Instance_Option3]
+Name=tx_blocking
+GUIName=TX Blocking Mode
+Description=Transmitter blocking mode
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option3_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=NE
+
+[Instance_Option4]
+Name=tx_wait_mode
+GUIName=TX Wait Mode
+Description=What to do while waiting for a transmit buffer to become available
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+;; NOTE: Thread notification needs multiple handlers for one hardware interrupt line;
+Enum3=NOTIFY
+EnumDescription3=Wait for interrupt notification. This option requires support for multiple handlers for one interrupt line, see configuration of the 'Interrupt Management' service.
+DefaultValue=YIELD
+
+[Instance_Option4_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option5]
+Name=tx_wait_sleepms
+GUIName=TX Wait Time
+Kind=INT
+Description=Sleep duration if TX thread has to wait and TX Wait Mode is SLEEP
+DefaultValue=100
+
+[Instance_Option5_Available_If0]
+Kind=OPTION
+Object=tx_wait_mode
+Condition=EQ
+Value=SLEEP
+
+;; RX options
+
+[Instance_Option6]
+Name=rx_cmd
+GUIName=RX cmd
+Description=Receiver options
+Kind=BITMASK32
+DefaultValue=0x00000007
+BitName0=Enabled_rx
+BitDescription0=Enabled - if Unicast=1 and Enabled=1 then rx_mac must be filled in
+BitName1=Unicast
+BitDescription1=Unicast - if Unicast=1 and Enabled=1 then rx_mac must be filled in
+BitName2=Broadcast
+BitDescription2=Broadcast
+BitName3=Multicast
+BitDescription3=Multicast
+BitName4=Promiscuous
+BitDescription4=Promiscuous
+
+[Instance_Option7]
+Name=rx_buffer
+GUIName=RX Buffer
+Description=Receiver buffer size (words). Minimal value = 768.
+Kind=BUFFER
+Type=UINT32
+DefaultValue=20480
+MinRange=768
+AllocMemory=True
+
+[Instance_Option8]
+Name=rx_blocking
+GUIName=RX Blocking Mode
+Description=Receiver blocking mode
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option8_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=NE
+
+[Instance_Option9]
+Name=rx_wait_mode
+GUIName=RX Wait Mode
+Description=Activity while waiting for reception of a new frame
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+;; NOTE: Thread notification needs multiple handlers for one hardware interrupt line;
+Enum3=NOTIFY
+EnumDescription3=Wait for interrupt notification. This option requires support for multiple handlers for one interrupt line, see configuration of the 'Interrupt Management' service.
+DefaultValue=YIELD
+
+[Instance_Option9_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option10]
+Name=rx_wait_sleepms
+GUIName=RX Wait Time
+Kind=INT
+Description=Sleep duration if RX thread has to wait and RX wait mode is SLEEP
+DefaultValue=100
+
+[Instance_Option10_Available_If0]
+Kind=OPTION
+Object=rx_wait_mode
+Condition=EQ
+Value=SLEEP
+
+;; Currently hidden and disabled
+[Instance_Option11]
+GUIName=Threadsafe Operation
+Name=use_mutex
+Description=Use a mutex to protect access to EMAC32 resources.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Instance_Option11_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option11_Available_If1]
+Kind=False
+
+[Instance_Option12]
+Name=linkstatus
+GUIName=Link Status
+Description=Give the name of a function that tests the current link status. This function will be regularly called by the driver. This function shall support at least the following flags: PHY_VALID_LINK and PHY_FULL_DUPLEX. Support for PHY_LINK_100MB, PHY_AUTO_NEG_COMPLETE and PHY_JABBER is optional. Default value for Nanoboard: rtl8201_linkstatus.
+Kind=CHANDLER
+Return=uint8_t
+Param=emac32_t * drv
+DefaultValue=rtl8201_linkstatus
+

@@ -1,0 +1,84 @@
+//=======================================================
+# hc11 source
+//74HC11: Triple 3-Input AND Gate
+//typical propagation delay values from Fairchild datasheet, January 1998
+//=======================================================
+INPUTS VCC, GND, INA, INB, INC;
+OUTPUTS VCC_LD, INA_LD, INB_LD, INC_LD, OUT;
+INTEGERS tblIndex;
+REALS tt_2, tt_4_5, tt_6, tt_val,
+      tp_2, tp_4_5, tp_6,
+      roh_4_5, rol_4_5, roh_6, rol_6,
+      rin_val, ricc_val,
+      vcc_val;
+
+PWR_GND_PINS(VCC, GND);    //set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(2, 6);      //check for min supply=2 and max supply=6
+VOL_VOH_MIN(0.1,-0.1,0.1); //set min vol_param=gnd_param+0.1, max voh_param=pwr_param-0.1;
+VIL_VIH_PERCENT(33,66);    //VIL=33% of supply voltage, VIH=66% of supply voltage
+
+IO_PAIRS(INA:INA_LD, INB:INB_LD, INC:INC_LD);    //input output pairs
+
+
+IF (init_sim) THEN
+  BEGIN
+    //MESSAGE("time\tINA\tINB\tOUT");
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_2   = (MIN_TYP_MAX(tt_param: NULL, 30n, 75n)); //datasheet values for 2V operation
+    tt_4_5 = (MIN_TYP_MAX(tt_param: NULL, 8n, 15n));  //datasheet values for 4.5V operation
+    tt_6   = (MIN_TYP_MAX(tt_param: NULL, 7n, 13n));  //datasheet values for 6V operation
+
+    //NOTE: both tplh and tphl are the same value
+    tp_2   = (MIN_TYP_MAX(tp_param: NULL, 48n, 125n)); //datasheet values for 2V operation
+    tp_4_5 = (MIN_TYP_MAX(tp_param: NULL, 18n, 25n));  //datasheet values for 4.5V operation
+    tp_6   = (MIN_TYP_MAX(tp_param: NULL, 15n, 21n));  //datasheet values for 6V operation
+
+    //IOHmax = 4mA @ Vcc=4.5v and VOHtyp=4.2:  routtyp=(Vcc-VOH)/IOH=0.3/4m=75
+    //IOHmax = 4mA @ Vcc=4.5v and VOHmax=3.98: routmax=(Vcc-VOH)/IOH=0.52/4m=130
+    roh_4_5 = (MIN_TYP_MAX(tp_param: NULL, 75, 130));
+
+    //IOLmax = 4mA @ Vcc=4.5v and VOLtyp=0.2: routtyp=Voltyp/IOLmax=0.2/4m=50 
+    //IOLmax = 4mA @ Vcc=4.5v and VOLmax=0.26: routmin=Volmax/IOLmax=0.26/4m=65     
+    rol_4_5 = (MIN_TYP_MAX(tp_param: 65, 50, NULL));
+
+    //IOHmax = 5.2mA @ Vcc=6v and VOHtyp=5.7:  routtyp=(Vcc-VOH)/IOH=0.3/5.2m=57.7
+    //IOHmax = 5.2mA @ Vcc=6v and VOHmax=5.48: routmax=(Vcc-VOH)/IOH=0.52/5.2m=100
+    roh_6 = (MIN_TYP_MAX(tp_param: NULL, 57.7, 100));
+
+    //IOLmax = 5.2mA @ Vcc=6v and VOLtyp=0.2: routtyp=Voltyp/IOLmax=0.2/5.2m=38.46 
+    //IOLmax = 5.2mA @ Vcc=6v and VOLmax=0.26: routmin=Volmax/IOLmax=0.26/5.2m=50     
+    rol_6 = (MIN_TYP_MAX(tp_param: 50, 38.46, NULL));
+
+
+    //Iin(max) = 0.1uA @ 6V.   ril=(Vin-vol_param)/IIHmax = 5.9/0.1u = 59e6
+    //Iin(max) = -0.1uA @ 0V.  rih=(voh_param-Vin)/IILmax = 5.9/0.1u = 59e6
+    rin_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 59e6));
+
+    //Icc(max) = 2uA @ 6V.  ricc(max)= 6/2u = 3e6
+    ricc_val=(MIN_TYP_MAX(i_param: NULL, NULL, 3e6));
+
+    STATE OUT = ZERO;  //initialise output
+    EXIT;
+  END;
+
+vcc_val   = (pwr_param - gnd_param);
+rol_param = (PWL_TABLE(vcc_val: 4.5, rol_4_5, 6, rol_6));
+roh_param = (PWL_TABLE(vcc_val: 4.5, roh_4_5, 6, roh_6));
+tt_val    = (PWL_TABLE(vcc_val: 2, tt_2, 4.5, tt_4_5, 6, tt_6));
+
+DRIVE OUT = (v0=vol_param, v1=voh_param, ttlh=tt_val, tthl=tt_val);
+LOAD INA_LD, INB_LD, INC_LD = (v0=vol_param, r0=rin_val, v1=voh_param, r1=rin_val, io=1e12, t=1p);
+
+TABLE tblIndex
+INA  INB  INC  OUT
+1    1    1    H
+X    X    X    L;
+
+//MESSAGE("%fs\t%d\t%d\t%d",present_time,INA,INB,OUT);
+
+LOAD VCC_LD = (v0=gnd_param, r0=ricc_val, t=1p);
+
+DELAY OUT = (PWL_TABLE(vcc_val: 2, tp_2, 4.5, tp_4_5, 6, tp_6));
+
+EXIT;

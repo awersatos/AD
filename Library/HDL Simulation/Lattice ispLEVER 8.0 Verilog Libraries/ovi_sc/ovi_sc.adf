@@ -1,0 +1,47 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_sc
+
+[Library]
+ovi_sc=.\ovi_sc.LIB
+
+[$LibMap$]
+ovi_sc=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\ovi_lc4k\ovi_sc\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\ovi_lc4k\ovi_sc\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\ovi_lc4k\ovi_sc\
+Extension5=dll
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[Files]
+/update_ovi_sc.do=-1
+
+[Files.Data]
+.\src\update_ovi_sc.do=Macro
+

@@ -1,0 +1,50 @@
+*  
+* Diode Model Produced by Altium Ltd  
+* Date:  3-May-2004 
+*  
+* Manufacturer: Renesas  
+* Component Name: HDSP-7403  
+*  
+* Parameters derived from information available in data sheet.  
+* 
+*                 common-cathode
+*                 |  anode-f
+*                 |  |  anode-g
+*                 |  |  |  anode-e
+*                 |  |  |  |  anode-d
+*                 |  |  |  |  |  common-cathode
+*                 |  |  |  |  |  |  anode-DP
+*                 |  |  |  |  |  |  |  anode-c
+*                 |  |  |  |  |  |  |  |  anode-b
+*                 |  |  |  |  |  |  |  |  |  anode-a
+*                 |  |  |  |  |  |  |  |  |  |
+.SUBCKT HDSP_7403 1  2  3  4  5  6  7  8  9  10
+
+DA1  10  1  dHDSP_7403
+DB1   9  1  dHDSP_7403
+DC1   8  1  dHDSP_7403
+DD1   5  1  dHDSP_7403
+DE1   4  1  dHDSP_7403
+DF1   2  1  dHDSP_7403
+DG1   3  1  dHDSP_7403
+DDP1  7  1  dHDSP_7403
+
+DA2  10  6  dHDSP_7403
+DB2   9  6  dHDSP_7403
+DC2   8  6  dHDSP_7403
+DD2   5  6  dHDSP_7403
+DE2   4  6  dHDSP_7403
+DF2   2  6  dHDSP_7403
+DG2   3  6  dHDSP_7403
+DDP2  7  6  dHDSP_7403
+
+.MODEL dHDSP_7403 D
++ (  
++    IS = 2.77296438E-23 
++    N  = 1.39205436 
++    RS = 25.13253104 
++    BV = 45.00000000 
++    IBV = 100u 
++ )  
+
+.ENDS HDSP_7403

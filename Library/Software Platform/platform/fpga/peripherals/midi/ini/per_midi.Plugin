@@ -1,0 +1,13 @@
+[Plugin]
+Name=per_midi
+Implement=per_midi
+HardwareID=WB_MIDI
+Caption=MIDI Port
+Description=UART interface on MIDI port
+Bitmap=per_midi.bmp
+LargeBitmap=per_midi_large.bmp
+Extend=per_uart8
+
+[Instance]
+Require0=
+

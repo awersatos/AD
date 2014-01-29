@@ -1,0 +1,15 @@
+[Plugin]
+Name=pal_variant_405A
+Description=Implements the CPPC-405A variant
+Caption=405A derivative
+GenerateFile=pal_variant_cfg
+SourceFile0=platform\fpga\processors\cppc\ppc405a\src\pal_ppc405a.c
+GlobalCompileOption0=-I"$(SSASROOT)\platform\fpga\processors\cppc\ppc405a\include"
+Implement=pal_arch_405
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=DEVICE
+Condition=EQ
+Value=PPC405A
+

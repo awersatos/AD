@@ -1,0 +1,13 @@
+[Plugin]
+Name=ad_vga_tft
+Description=Adapts VGA TFT graphics driver to graphics services
+SourceDir=services\platform\graphics\adaptors\vga_tft\src
+Implement=ad_graphics
+InitHandler=ad_vga_tft_init
+InitHandlerPriority=16
+CompileOption0=-I"$(SSASROOT)\services\platform\graphics\internal"
+CompileOption1=-I"$(SSASROOT)\services\platform\graphics\include"
+
+[Instance]
+Require0=drv_vga_tft
+

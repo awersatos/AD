@@ -1,0 +1,40 @@
+* DIP switch 9
+* jjt 20/6/2002: created
+*
+*             Switch connections:
+*             sw1
+*             |  |  sw2
+*             |  |  |  |  sw3
+*             |  |  |  |  |  |   sw4
+*             |  |  |  |  |  |  |   |    sw5
+*             |  |  |  |  |  |  |   |   |   |    sw6
+*             |  |  |  |  |  |  |   |   |   |   |   |    sw7
+*             |  |  |  |  |  |  |   |   |   |   |   |   |   |    sw8
+*             |  |  |  |  |  |  |   |   |   |   |   |   |   |   |   |    sw9
+*             |  |  |  |  |  |  |   |   |   |   |   |   |   |   |   |   |   |
+*             |  |  |  |  |  |  |   |   |   |   |   |   |   |   |   |   |   |
+.subckt dpsw9 1  2  4  5  7  8  10  11  13  14  16  17  19  20  22  23  25  26
++PARAMS: STATE1=0 STATE2=0 STATE3=0 STATE4=0 STATE5=0 STATE6=0 STATE7=0 STATE8=0 STATE9=0 RON=1m ROFF=100E6
+*
+V1 3  0 {STATE1}
+V2 6  0 {STATE2}
+V3 9  0 {STATE3}
+V4 12 0 {STATE4}
+V5 15 0 {STATE5}
+V6 18 0 {STATE6}
+V7 21 0 {STATE7}
+V8 24 0 {STATE8}
+V9 27 0 {STATE9}
+*
+SDIP1 1  2  3  0 DIPMOD
+SDIP2 4  5  6  0 DIPMOD
+SDIP3 7  8  9  0 DIPMOD
+SDIP4 10 11 12 0 DIPMOD
+SDIP5 13 14 15 0 DIPMOD
+SDIP6 16 17 18 0 DIPMOD
+SDIP7 19 20 21 0 DIPMOD
+SDIP8 22 23 24 0 DIPMOD
+SDIP9 25 26 27 0 DIPMOD
+*
+.MODEL DIPMOD SW(VT=0.5 RON={RON} ROFF={ROFF})
+.ends dpsw9

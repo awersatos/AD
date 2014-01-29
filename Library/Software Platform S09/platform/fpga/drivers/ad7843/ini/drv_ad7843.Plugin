@@ -1,0 +1,98 @@
+[Plugin]
+Name=drv_ad7843
+Description=AD7843 Touchscreen Digitizer Driver
+Caption=AD7843 Touchscreen Digitizer Driver
+SourceDir=platform\fpga\drivers\ad7843\src
+Implement=drv_ad7843
+Bitmap=drv_ad7843.bmp
+
+[Available_If0]
+Kind=PLUGIN
+Object=drv_spi
+Condition=EQ
+
+[Option0]
+Name=pendown_delay
+GUIName=Pen-down delay (ms)
+Description=Pen-down delay specifies the time between pen-down detection and first valid sample. If set too low, some incorrect readings will occur after placing the pen on the screen.
+Kind=UINT8
+DefaultValue=50
+
+[Option1]
+Name=penup_delay
+GUIName=Pen-up delay (ms)
+Description=Pen-up delay specifies the time between last valid sample and the end of pen-down detection. If set too low, incorrect readings will occur after raising the pen. If set too high, a noticable delay occurs while moving the pen on the screen.
+Kind=UINT8
+DefaultValue=5
+
+[Instance]
+Require0=drv_spi
+Require1=per_tspen
+
+[Instance_Option0_AutoSet0]
+Interface=drv_spi
+Option=spi_frequency
+AutoValueEnum0=1000000
+AutoValueEnum1=1000000
+
+[Instance_Option0]
+Name=bus_sharing
+GUIName=SPI bus sharing
+Description=Handle multidrop SPI bus sharing at driver level
+Kind=BOOLEAN
+DefaultValue=True
+Auto=False
+
+[Instance_Option1]
+Name=channel
+GUIName=SPI channel
+Description=SPI channel number for this device. This should be 5 when using NanoBoard SPI multiplexer.
+Kind=UINT8
+MinRange=1
+DefaultValue=5
+Auto=False
+
+[Instance_Option1_Available_If0]
+Kind=OPTION
+Object=bus_sharing
+Condition=EQ
+Value=True
+
+[Instance_Option2]
+Name=swap
+GUIName= Swap X-Y
+Description=Swap X and Y. Use this if the touchscreen is mounted under 90 or 270 degrees. Uncheck this for NB2DSK, check this for NB3000.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Instance_Option3]
+Name=USE_MUTEX
+GUIName=Mutltithread safe
+Description=Use locking to make driver multithread safe
+Kind=BOOLEAN
+DefaultValue=False
+
+[Instance_Option3_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option4]
+Name=blocking_mode
+GUIName=Blocking mode
+Description=Method to be used when waiting on peripheral.
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Burn CPU cycles
+Enum1=nanosleep
+EnumDescription1=Wait for a while, than reschedule
+Enum2=Yield
+EnumDescription2=Yield and wait for reschedule
+DefaultValue=NOP
+Auto=False
+
+[Instance_Option4_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+

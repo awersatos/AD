@@ -1,0 +1,26 @@
+[Plugin]
+Name=bsd_framework
+Description=BSD Framework Components
+Caption=BSD Support
+Implement=bsd_framework
+Require0=bsd_system
+Require1=bsd_usb
+
+[PluginApplicationCode]
+NoGenerate=True
+
+[Option0]
+Name=ENABLE_BSD_SYSTEM
+GUIName=BSD System Support
+Description=Enable BSD system compatibility layer
+Kind=BOOLEAN
+AutoValue=True
+
+[Option1]
+Name=ENABLE_BSD_USB
+GUIName=USB Driver Support
+Description=Enable BSD USB compatibility layer
+Kind=BOOLEAN
+AutoValue=True
+
+

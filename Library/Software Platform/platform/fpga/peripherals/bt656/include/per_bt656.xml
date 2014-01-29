@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV
+
+	</header>
+	<group name="per_bt656" description="BT656 Video Capture Controller Peripheral">
+		<sfr name="MODE"	 offset="0"  size="32" description="Mode Register">
+             <bitfield name="LITTLEENDIAN"	start="31" end="31" access="rw" description="Little Endian Mode Bit">
+                     <value value="0" description="Bit Endian Mode"/>
+                     <value value="1" description="Little Endian Mode"/>
+             </bitfield>
+             <bitfield name="CM"	start="4" end="2" access="rw" description="Color mode">
+                <value value="1" description="Grey, 8 bits per pixel" />
+                <value value="2" description="Grey, 16 bits per pixel" />
+                <value value="3" description="Grey, 32 bits per pixel" />
+                <value value="4" description="Color, 8 bits per pixel" />
+                <value value="5" description="Color, 16 bits per pixel" />
+                <value value="6" description="Color, 32 bits per pixel" />
+            </bitfield>
+           <bitfield name="SFC_RUN" start="1" end="0" access="rw" description="Operating mode">
+                <value value="0" description="Disabled" />
+                <value value="1" description="Run" />
+                <value value="2" description="Capture single frame" />
+                <value value="3" description="Run" />
+            </bitfield>
+        </sfr>
+		<sfr name="STATUS"	 offset="4"  size="32" access="r" description="Status Register">
+            <bitfield name="CM"	start="4" end="2" access="r" description="Color mode">
+                <value value="1" description="Grey, 8 bits per pixel" />
+                <value value="2" description="Grey, 16 bits per pixel" />
+                <value value="3" description="Grey, 32 bits per pixel" />
+                <value value="4" description="Color, 8 bits per pixel" />
+                <value value="5" description="Color, 16 bits per pixel" />
+                <value value="6" description="Color, 32 bits per pixel" />
+            </bitfield>
+            <bitfield name="SFT" start="1" end="1" access="r" description="Single frame triggered" />
+            <bitfield name="RUN" start="0" end="0" access="r" description="Controller running" />
+
+        </sfr>
+		<sfr name="START"	 offset="8"  size="32" description="Video Buffer Start Address Register" />
+		<sfr name="SIZE"	 offset="12" size="32" description="Video Buffer Size Register" />
+		<sfr name="BPL"		 offset="16" size="32" description="Bytes Per Line Register" />
+		<sfr name="VBPL"	 offset="20" size="32" description="Visible Bytes Per Line Register" />
+		<sfr name="SCALE"	 offset="24" size="32" description="Scaling Register">
+            <bitfield name="FRAME_RATE" start="11" end="8" description="Number of frames sckipped">
+                <value value="0" description="Each frame captured" />
+                <value value="1" description="Capture each 2nd frame" />
+                <value value="2" description="Capture each 3rd frame" />
+                <value value="3" description="Capture each 4th frame" />
+                <value value="4" description="Capture each 5th frame" />
+                <value value="5" description="Capture each 6th frame" />
+                <value value="6" description="Capture each 7th frame" />
+                <value value="7" description="Capture each 8th frame" />
+                <value value="8" description="Capture each 9th frame" />
+                <value value="9" description="Capture each 10th frame" />
+                <value value="10" description="Capture each 11th frame" />
+                <value value="11" description="Capture each 12th frame" />
+                <value value="12" description="Capture each 13th frame" />
+                <value value="13" description="Capture each 14th frame" />
+                <value value="14" description="Capture each 15th frame" />
+                <value value="15" description="Capture each 16th frame" />
+            </bitfield>
+            <bitfield name="Y_ZOOM" start="7" end="4" description="Y-Zoom factor">
+                <value value="0" description="No zoom" />
+                <value value="1" description="Zoom 1/2" />
+                <value value="2" description="Zoom 1/3" />
+                <value value="3" description="Zoom 1/4" />
+                <value value="4" description="Zoom 1/5" />
+                <value value="5" description="Zoom 1/6" />
+                <value value="6" description="Zoom 1/7" />
+                <value value="7" description="Zoom 1/8" />
+                <value value="8" description="Zoom 1/9" />
+                <value value="9" description="Zoom 1/10" />
+                <value value="10" description="Zoom 1/11" />
+                <value value="11" description="Zoom 1/12" />
+                <value value="12" description="Zoom 1/13" />
+                <value value="13" description="Zoom 1/14" />
+                <value value="14" description="Zoom 1/15" />
+                <value value="15" description="Zoom 1/16" />
+            </bitfield>
+            <bitfield name="X_ZOOM" start="3" end="0" description="X-Zoom factor">
+                <value value="0" description="No zoom" />
+                <value value="1" description="Zoom 1/2" />
+                <value value="2" description="Zoom 1/3" />
+                <value value="3" description="Zoom 1/4" />
+                <value value="4" description="Zoom 1/5" />
+                <value value="5" description="Zoom 1/6" />
+                <value value="6" description="Zoom 1/7" />
+                <value value="7" description="Zoom 1/8" />
+                <value value="8" description="Zoom 1/9" />
+                <value value="9" description="Zoom 1/10" />
+                <value value="10" description="Zoom 1/11" />
+                <value value="11" description="Zoom 1/12" />
+                <value value="12" description="Zoom 1/13" />
+                <value value="13" description="Zoom 1/14" />
+                <value value="14" description="Zoom 1/15" />
+                <value value="15" description="Zoom 1/16" />
+            </bitfield>
+        </sfr>
+	</group>
+</sfrfile>

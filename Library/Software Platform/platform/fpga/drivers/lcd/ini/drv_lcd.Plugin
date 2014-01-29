@@ -1,0 +1,20 @@
+[Plugin]
+Name=drv_lcd
+Description=NanoBoard-1 16x2 LCD Driver
+Caption=NB-1 LCD Driver
+SourceDir=platform\fpga\drivers\lcd\src
+Implement=drv_lcd
+MinInstances=1
+Bitmap=drv_lcd.bmp
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\lcd\internal"
+Require0=per_lcd_common
+
+[PluginApplicationCode]
+OpenType=drv_lcd_t *
+OpenFunction=lcd_open
+
+
+[Instance]
+Require0=lcd_adaptor
+
+

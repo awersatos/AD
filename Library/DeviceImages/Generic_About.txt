@@ -1,0 +1,3 @@
+No specific Nexus driver is available for this device.
+
+In order for the system to drive a chain containing this device, a BSDL file must be added to Library\BSDL\Generic folder and a reference added to the BSDL_FileMap.Txt in the same folder.

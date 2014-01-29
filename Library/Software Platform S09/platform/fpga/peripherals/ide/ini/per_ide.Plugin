@@ -1,0 +1,28 @@
+[Plugin]
+Name=per_ide
+Description=Interface controller for IDE-compatible storage devices,  including 1.8", 2.5" and 3.5" ATA as well as Compact Flash.
+Caption=IDE/ATA Interface Controller
+HardwareID=WB_IDE
+Bitmap=per_ide.bmp
+LargeBitmap=per_ide_large.bmp
+Implement=per_ide
+MultipleLinks=True
+MultipleLinksMax=2
+SourceDir=platform\fpga\peripherals\ide\src
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=Hardware base address
+Kind=POINTER
+DefaultValue=0
+Auto=True

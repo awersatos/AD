@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_spi" description="SPI Master Controller">
+		<sfr name="DATA8"   offset="0"   size="32"  description="8-bit Data Transfer Register"/>
+		<sfr name="DATA16"  offset="4"   size="32" description="16-bit Data Transfer Register"/>
+		<sfr name="DATA32"  offset="8"   size="32" description="32-bit Data Transfer Register"/>
+		<sfr name="CTRL"    offset="12"  size="32" description="Control Register">
+			<bitfield name="ENDIAN"	start="5" end="5" access="rw" description="Endiannes">
+				<value value="0" description="Little Endian"/>
+				<value value="1" description="Big Endian"/>
+			</bitfield>
+			<bitfield name="CPHA"	start="4" end="4" access="rw" description="Clock Phase Control Bit">
+				<value value="0" description="Latch on leading edge, change on trailing edge"/>
+				<value value="1" description="Change on leading edge, latch on trailing edge"/>
+			</bitfield>
+			<bitfield name="CPOL"	start="3" end="3" access="rw" description="Clock Polarity Control Bit">
+				<value value="0" description="Idle clock line is low"/>
+				<value value="1" description="Idle clock line is high"/>
+			</bitfield>
+			<bitfield name="MODE"	start="2" end="2" access="rw" description="Mode Pin Control Bit">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="CS"	start="1" end="1" access="rw" description="Chip Select Pin Control Bit">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+		</sfr>
+		<sfr name="STAT"    offset="16"  size="32" description="Status Register">
+			<bitfield name="BUSY"	start="0" end="0" access="rw" description="Busy Flag">
+				<value value="0" description="Idle"/>
+				<value value="1" description="Busy"/>
+			</bitfield>
+		</sfr>
+		<sfr name="CDIV"    offset="20"  size="32" description="Clock Divisor Register"/>
+		<sfr name="GPIN"    offset="24"  size="32" description="General Purpose Input Pins"/>
+		<sfr name="CS"	    offset="28"  size="32" description="Chip Select Output Pins"/>
+	</group>
+</sfrfile>

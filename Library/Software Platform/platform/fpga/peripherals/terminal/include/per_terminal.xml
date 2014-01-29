@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_terminal" description="Terminal Controller">
+		<sfr name="STATUS"	 offset="4"	size="8" description="Status Register">
+			<bitfield name="RXFULL"		start="7" end="7" access="rw" description="Receiver FIFO Full Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXNEMPTY"	start="5" end="5" access="rw" description="Receiver FIFO Not Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXSHEMPTY"	start="3" end="3" access="rw" description="Transmitter Shift Register Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXEMPTY"	start="1" end="1" access="rw" description="Transmitter FIFO Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXFULL"		start="0" end="0" access="rw" description="Transmitter FIFO Full Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="INTCTRL"	 offset="5"	size="8" description="Interrupt Control Register">
+            <bitfield name="RXNEMPTY" start="5" end="5" description="Interrupts on Receiver Not Empty flag">
+				<value value="0" description="Disable"/>
+				<value value="1" description="Enable"/>
+            </bitfield>
+            <bitfield name="TXEMPTY" start="1" end="1" description="Interrupts on Transmitter Empty flag">
+				<value value="0" description="Disable"/>
+				<value value="1" description="Enable"/>
+            </bitfield>
+        </sfr>
+		<sfr name="INTSTATUS"	 offset="6"	size="8" description="Interrupt Status Register"/>
+		<sfr name="SBUF"	 offset="7"	size="8" description="Serial Transmit/Receive Buffer"	noaccess="true"/>
+	</group>
+</sfrfile>

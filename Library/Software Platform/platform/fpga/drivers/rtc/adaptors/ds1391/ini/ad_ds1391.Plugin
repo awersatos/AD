@@ -1,0 +1,13 @@
+[Plugin]
+Name=ad_rtc_ds1391
+Description=Adapts ds1391 RTC driver to RTC generic driver
+SourceDir=platform\fpga\drivers\rtc\adaptors\ds1391\src
+Implement=ad_rtc
+InitHandler=ad_ds1391_init
+InitHandlerPriority=16
+compileOption0=-I"$(SSASROOT)\platform\fpga\drivers\rtc\internal"
+compileOption1=-I"$(SSASROOT)\platform\fpga\drivers\rtc\include"
+
+[Instance]
+Require0=drv_ds1391
+

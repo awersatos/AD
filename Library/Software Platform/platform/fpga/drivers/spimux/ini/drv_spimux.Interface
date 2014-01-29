@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_spimux
+Category=DRIVER
+System=False
+Description=SPI bus arbiter
+PublicDir=platform\fpga\drivers\spimux\include
+
+

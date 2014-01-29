@@ -1,0 +1,234 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Copyright (c) 2005 by Lattice Semiconductor Corporation
+// --------------------------------------------------------------------
+//
+//
+//                     Lattice Semiconductor Corporation
+//                     5555 NE Moore Court
+//                     Hillsboro, OR 97214
+//                     U.S.A.
+//
+//                     TEL: 1-800-Lattice  (USA and Canada)
+//                          1-408-826-6000 (other locations)
+//
+//                     web: http://www.latticesemi.com/
+//                     email: techsupport@latticesemi.com
+//
+// --------------------------------------------------------------------
+//
+// Simulation Library File for NEOPRIMS
+//
+// $Header: /home/dmsys/pvcs/RCSMigTest/rcs/verilog/pkg/versclibs/data/neoprims/RCS/NEOSR16.vmd,v 1.9 2005/05/19 18:23:56 pradeep Exp $ 
+//
+`timescale 1 ns / 100 ps
+`celldefine
+
+   module NEOSR16 (DOUT, DIN, RAD0, RAD1, RAD2, RAD3, RCLK, WAD0, WAD1, WAD2, WAD3, WCLK, WREN, WPE, SET, RST);
+
+
+      output DOUT;
+      input  DIN, WPE, WREN, WAD0, WAD1, WAD2, WAD3, RAD0, RAD1, RAD2, RAD3, RCLK, WCLK, SET, RST;  
+
+/*
+  Pins
+  ----
+        "DIN"  : input
+        "RADm": input (m=0,...,(log2(n)-1))
+        "RCLK"  : input
+        "WADm": input (m=0,...,(log2(n)-1))
+        "WCLK"  : input
+        "WREN" :  input
+        "WPE" :  input
+        "SET"  : input
+        "RST"  : input
+        "DOUT" : output
+
+		NEOSR16: INST1  (DIN, RAD0, RAD1, RAD2, RAD3, RCLK,
+				         WAD0, WAD1, WAD2, WAD3, WCLK, WREN, WPE,
+				         SET, RST), (DOUT);
+
+*/
+
+reg mem [0:15], dout;
+wire vectored [3:0] rad;
+wire vectored [3:0] wad;
+wire din, wpe, wren, set, rst, wclk, rclk;
+wire rad0, rad1, rad2, rad3, wad0, wad1, wad2, wad3;
+reg rwpe, rwren, rdin; 
+reg [3:0] rrad;
+reg [3:0] rwad;
+parameter [15:0] datain = 16'h0000;
+reg [15:0] pick_data;
+integer i;
+
+// buffered inputs and outputs for Cadence SDF annotation layer
+	buf(din, DIN);
+	buf(wpe, WPE);
+	buf(wren, WREN);
+	buf(rad0, RAD0);
+	buf(rad1, RAD1);
+	buf(rad2, RAD2);
+	buf(rad3, RAD3);
+	buf(wad0, WAD0);
+	buf(wad1, WAD1);
+	buf(wad2, WAD2);
+	buf(wad3, WAD3);
+	buf(rclk, RCLK);
+	buf(wclk, WCLK);
+	buf(set, SET);
+	buf(rst, RST);
+	buf(DOUT, dout);
+
+assign rad = {rad3, rad2, rad1, rad0};
+assign wad = {wad3, wad2, wad1, wad0};
+
+//added for setup and hold check
+and u1 (wren_and_wpe, wren, wpe);
+
+      initial begin
+       pick_data = datain;
+       for (i=0; i<16; i= i+1) begin
+         mem[i]=pick_data[i];
+       end
+       end
+
+pullup (wpe);
+
+ always @ (wclk or wad or din or wpe or wren or set or rst) begin
+   if (rst === 1'b1) begin
+    rwad = 4'b0000;
+    rwpe = 1'b0;
+    rwren = 1'b0;
+    rdin = 1'b0;
+   end
+   else if (set === 1'b1) begin
+    rwad = 4'b1111;
+    rwpe = 1'b1;
+    rwren = 1'b1;
+    rdin = 1'b1;
+   end
+   else if ((wclk === 1'b0) && (rst === 1'b0) && (set === 1'b0)) begin
+    rwad = wad;
+    rwpe = wpe;
+    rwren = wren;
+    rdin = din;
+   end
+ end
+ 
+ always @ (wclk) begin
+   if ((wclk === 1'b1) && (rwpe === 1'b1) && (rwren === 1'b1) && (rst === 1'b0) && (set === 1'b0))  
+    begin
+    mem[rwad] = rdin;
+    dout = mem[rrad];
+    end
+ end
+ 
+ always @ (rclk or rad or set or rst) begin
+   if (rst === 1'b1) 
+    rrad = 4'b0000; 
+   else if (set === 1'b1)  
+    rrad = 4'b1111; 
+   else if ((rclk === 1'b1) && (rst === 1'b0) && (set === 1'b0)) 
+    begin
+    rrad = rad;
+    end
+   end
+
+ always @ (rrad or rclk or wclk or rwad or rst or set)  begin
+// if ((rst === 1'b0) && (set === 1'b0)) begin
+dout = mem[rrad];
+end
+ 
+specify
+
+//	Setup/Hold Checks
+//	-----------------
+specparam SUDINWCLK    = 0:0:0;   //  (DIN setup to rising WCLK)
+specparam SURAD0RCLK   = 0:0:0;   //  (RAD0 setup to rising RCLK)
+specparam SURAD1RCLK   = 0:0:0;   //  (RAD1 setup to rising RCLK)
+specparam SURAD2RCLK   = 0:0:0;   //  (RAD2 setup to rising RCLK)
+specparam SURAD3RCLK   = 0:0:0;   //  (RAD3 setup to rising RCLK)
+specparam SUWAD0WCLK   = 0:0:0; //  (WAD0 setup to rising WCLK)
+specparam SUWAD1WCLK   = 0:0:0; //  (WAD1 setup to rising WCLK)
+specparam SUWAD2WCLK   = 0:0:0; //  (WAD2 setup to rising WCLK)
+specparam SUWAD3WCLK   = 0:0:0; //  (WAD3 setup to rising WCLK)
+specparam SUWRENWCLK   = 0:0:0; //  (WREN setup to rising WCLK)
+specparam SUWPEWCLK    = 0:0:0; //  (WPE setup to rising WCLK)
+ 
+specparam HOLDDINWCLK   = 0:0:0; //  (rising DIN hold to rising WCLK)
+specparam HOLDWAD0WCLK  = 0:0:0; //   (rising WADm hold to rising WCLK)
+specparam HOLDWAD1WCLK  = 0:0:0; //   (rising WADm hold to rising WCLK)
+specparam HOLDWAD2WCLK  = 0:0:0; //   (rising WADm hold to rising WCLK)
+specparam HOLDWAD3WCLK  = 0:0:0; //   (rising WADm hold to rising WCLK)
+specparam HOLDWRENWCLK  = 0:0:0; //   (rising WREN hold to rising WCLK)
+specparam HOLDWPEWCLK   = 0:0:0; //  (rising WPE hold to rising WCLK)
+specparam HOLDRAD0RCLK  = 0:0:0; //   (rising RADm setup to falling RCLK)
+specparam HOLDRAD1RCLK  = 0:0:0; //   (rising RADm setup to falling RCLK)
+specparam HOLDRAD2RCLK  = 0:0:0; //   (rising RADm setup to falling RCLK)
+specparam HOLDRAD3RCLK  = 0:0:0; //   (rising RADm setup to falling RCLK)
+            
+//	Pulse Width Checks
+//	------------------
+specparam PWWCLKHI    = 0:0:0; //     (pulse width check on WCLK)
+specparam PWRCLKHI    = 0:0:0; //     (pulse width check on RCLK)
+specparam PWWCLKLO    = 0:0:0; //     (pulse width check on WCLK)
+specparam PWRCLKLO    = 0:0:0; //     (pulse width check on RCLK)
+              
+specparam PWRSTHI     = 0:0:0; //  (pulse width check on RST)
+specparam PWSETHI     = 0:0:0; //  (pulse width check on SET)
+specparam PWRSTLO     = 0:0:0; //  (pulse width check on RST)
+specparam PWSETLO     = 0:0:0; //  (pulse width check on SET)
+              
+//	Recovery Checks
+//	---------------
+specparam RECSETWCLK   = 0:0:0; //  (rising WCLK recovery from falling SET)
+specparam RECRSTWCLK   = 0:0:0; //  (rising WCLK recovery from falling RST)
+specparam RECSETRCLK   = 0:0:0; //  (rising RCLK recovery from falling SET)
+specparam RECRSTRCLK   = 0:0:0; //  (rising RCLK recovery from falling RST)
+
+$setup (DIN, posedge WCLK &&& wren_and_wpe, SUDINWCLK);
+$setup (RAD0, posedge RCLK, SURAD0RCLK); 
+$setup (RAD1, posedge RCLK, SURAD1RCLK);
+$setup (RAD2, posedge RCLK, SURAD2RCLK);
+$setup (RAD3, posedge RCLK, SURAD3RCLK);
+$setup (WAD0, posedge WCLK &&& wren_and_wpe, SUWAD0WCLK);
+$setup (WAD1, posedge WCLK &&& wren_and_wpe, SUWAD1WCLK);
+$setup (WAD2, posedge WCLK &&& wren_and_wpe, SUWAD2WCLK);
+$setup (WAD3, posedge WCLK &&& wren_and_wpe, SUWAD3WCLK);
+$setup (WREN, posedge WCLK, SUWRENWCLK);
+$setup (WPE, posedge WCLK, SUWPEWCLK);
+
+$hold (posedge WCLK &&& wren_and_wpe, DIN,  HOLDDINWCLK); 
+$hold (posedge WCLK &&& wren_and_wpe, WAD0, HOLDWAD0WCLK); 
+$hold (posedge WCLK &&& wren_and_wpe, WAD1, HOLDWAD1WCLK); 
+$hold (posedge WCLK &&& wren_and_wpe, WAD2, HOLDWAD2WCLK); 
+$hold (posedge WCLK &&& wren_and_wpe, WAD3, HOLDWAD3WCLK); 
+$hold (posedge WCLK, WREN, HOLDWRENWCLK); 
+$hold (posedge WCLK, WPE,  HOLDWPEWCLK); 
+$hold (negedge RCLK, RAD0, HOLDRAD0RCLK); 
+$hold (negedge RCLK, RAD1, HOLDRAD1RCLK); 
+$hold (negedge RCLK, RAD2, HOLDRAD2RCLK); 
+$hold (negedge RCLK, RAD3, HOLDRAD3RCLK); 
+
+$width (posedge RST, PWRSTHI);
+$width (posedge SET, PWSETHI);
+$width (posedge WCLK, PWWCLKHI);
+$width (posedge RCLK, PWRCLKHI);
+$width (negedge RST, PWRSTLO);
+$width (negedge SET, PWSETLO);
+$width (negedge WCLK, PWWCLKLO);
+$width (negedge RCLK, PWRCLKLO);
+
+$recovery(negedge SET, posedge WCLK, RECSETWCLK) ;
+$recovery(negedge SET, posedge RCLK, RECSETRCLK) ;
+$recovery(negedge RST, posedge WCLK, RECRSTWCLK) ;
+$recovery(negedge RST, posedge RCLK, RECRSTRCLK) ;
+
+ 
+  endspecify
+   endmodule
+`endcelldefine
+ 
+

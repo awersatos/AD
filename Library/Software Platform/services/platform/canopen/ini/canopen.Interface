@@ -1,0 +1,14 @@
+[Interface]
+Name=canopen
+Category=SERVICE
+System=False
+Description=CANopen services
+PublicDir=services\platform\canopen\include
+
+[Available_If0]
+kind=PLUGIN
+Object=drv_can
+Condition=EQ
+
+[Instance]
+Require0=drv_can

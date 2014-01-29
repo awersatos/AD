@@ -1,0 +1,7 @@
+[Plugin]
+Name=sysutils
+Description=system utilities
+SourceDir=system\sysutils\src
+GlobalCompileOption0=-I"$(SSASROOT)\system\sysutils\include"
+Implement=sysutils
+

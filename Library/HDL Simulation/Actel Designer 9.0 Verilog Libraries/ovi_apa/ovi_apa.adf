@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_apa
+
+[Library]
+ovi_apa=.\ovi_apa.LIB
+
+[$LibMap$]
+ovi_apa=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/apa.v=-1
+/update_ovi_apa.do=-1
+
+[Files.Data]
+.\src\apa.v=Verilog Source Code
+.\src\update_ovi_apa.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVerilogSets]
+Strict=0
+Strict2001=1
+SystemVerilog3=0
+ErrorOutputLimit=0
+WarningPrnLevel=1
+OptimizationLevel=2
+EnableDebug=1
+StrictLRMMode=0
+ProtectLevel=0
+AdditionalOptions=

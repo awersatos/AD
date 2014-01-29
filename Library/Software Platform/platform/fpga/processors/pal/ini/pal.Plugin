@@ -1,0 +1,26 @@
+[Plugin]
+Name=pal
+Description=Pal implements the Processor Abstraction Layer
+Caption=PAL services
+SourceDir=platform\fpga\processors\pal\src
+FrameworkCompileOption0=-I"$(SSASROOT)\platform\fpga\processors\pal\include"
+InitHandler=pal_init
+InitHandlerPriority=128
+Implement=pal
+Require0=pal_arch
+Bitmap=pal.bmp
+
+[Option0]
+Name=INTERRUPT_CONTROL_CFG
+Description=Interrupt enable\disable mask
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+
+
+
+
+
+
+

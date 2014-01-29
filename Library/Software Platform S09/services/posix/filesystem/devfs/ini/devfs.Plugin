@@ -1,0 +1,11 @@
+[Plugin]
+Name=devfs
+Caption=Device File System
+Description=Implementation of posix file system interface for accessing devices.
+Implement=devfs
+Require0=posix_devio
+SourceDir=services\posix\filesystem\devfs\src
+; Make sure this is not run first
+InitHandler=devfs_plugin_init
+InitHandlerPriority=4
+

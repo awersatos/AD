@@ -1,0 +1,17 @@
+[Plugin]
+Name=posix_signals
+Description=Basic support for POSIX signals
+Caption=Signalling Support
+SourceDir=services\posix\kernel\signals\src
+GlobalCompileOption0=-D__POSIX_SIGNALS=1
+GlobalCompileOption1=-D__POSIX_REALTIME_SIGNALS=1
+Implement=posix_signals
+Require0=posix_threads
+
+[Option0]
+Name=SIGQUEUE_MAX
+Description=The number of queued signals that a process may send and have pending at the receiver(s) at any time
+Kind=UINT8
+DefaultValue=32
+InLimitsCfg=True
+

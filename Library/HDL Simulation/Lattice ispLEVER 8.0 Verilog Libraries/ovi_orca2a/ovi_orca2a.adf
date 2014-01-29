@@ -1,0 +1,74 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_orca2a
+
+[Library]
+ovi_orca2a=.\OVI_orca2a.LIB
+
+[$LibMap$]
+ovi_orca2a=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/DCE16X2Z.v=-1
+/ANEB4.v=-1
+/DCE16X2.v=-1
+/AGEB4.v=-1
+/DCF16X2.v=-1
+/DCF16X2Z.v=-1
+/FD1P3IX.v=-1
+/FD1P3IX_GSR.v=-1
+/FD1P3JX.v=-1
+/FD1P3JX_GSR.v=-1
+/FMULT41.v=-1
+/RCE16X4.v=-1
+/RCE16X4Z.v=-1
+/RCF16X4.v=-1
+/RCF16X4Z.v=-1
+/ROM16X1.v=-1
+/ROM32X1.v=-1
+/RPE16X2.v=-1
+/RPE16X2Z.v=-1
+/RPE16X4.v=-1
+/RPE16X4Z.v=-1
+/SYN1RAM.v=-1
+/SYN2RAM.v=-1
+/SYN6RAM.v=-1
+/SYN7RAM.v=-1
+/update_ovi_orca2a.do=-1
+
+[Files.Data]
+.\src\DCE16X2Z.v=Verilog Source Code
+.\src\ANEB4.v=Verilog Source Code
+.\src\DCE16X2.v=Verilog Source Code
+.\src\AGEB4.v=Verilog Source Code
+.\src\DCF16X2.v=Verilog Source Code
+.\src\DCF16X2Z.v=Verilog Source Code
+.\src\FD1P3IX.v=Verilog Source Code
+.\src\FD1P3IX_GSR.v=Verilog Source Code
+.\src\FD1P3JX.v=Verilog Source Code
+.\src\FD1P3JX_GSR.v=Verilog Source Code
+.\src\FMULT41.v=Verilog Source Code
+.\src\RCE16X4.v=Verilog Source Code
+.\src\RCE16X4Z.v=Verilog Source Code
+.\src\RCF16X4.v=Verilog Source Code
+.\src\RCF16X4Z.v=Verilog Source Code
+.\src\ROM16X1.v=Verilog Source Code
+.\src\ROM32X1.v=Verilog Source Code
+.\src\RPE16X2.v=Verilog Source Code
+.\src\RPE16X2Z.v=Verilog Source Code
+.\src\RPE16X4.v=Verilog Source Code
+.\src\RPE16X4Z.v=Verilog Source Code
+.\src\SYN1RAM.v=Verilog Source Code
+.\src\SYN2RAM.v=Verilog Source Code
+.\src\SYN6RAM.v=Verilog Source Code
+.\src\SYN7RAM.v=Verilog Source Code
+.\src\update_ovi_orca2a.do=Macro
+

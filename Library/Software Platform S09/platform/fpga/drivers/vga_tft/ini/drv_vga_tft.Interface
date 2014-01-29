@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_vga_tft
+Category=DRIVER
+System=False
+Description=VGA TFT 240x320 graphics driver
+PublicDir=platform\fpga\drivers\vga_tft\include
+

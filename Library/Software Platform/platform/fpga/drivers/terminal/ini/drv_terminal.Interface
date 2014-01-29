@@ -1,0 +1,7 @@
+[Interface]
+Name=drv_terminal
+Category=DRIVER
+System=False
+Description=TERMINAL serial port driver
+PublicDir=platform\fpga\drivers\terminal\include
+

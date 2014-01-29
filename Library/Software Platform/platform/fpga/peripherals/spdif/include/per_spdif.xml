@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_spdif" description="SPDIF Controller">
+		<sfr name="VERSION"		offset="0"  size="32" description="Version Register">
+            <bitfield name="RX_CORE_VER" start="31" end="16" description="Receiver core version"/>
+            <bitfield name="TX_CORE_VER" start="15" end="0" description="Transmitter core version"/>
+        </sfr>
+		<sfr name="RX_CONFIG"		offset="4"  size="32" description="Receiver Configuration Register">
+			<bitfield name="ENABLE"		start="31" end="31" access="rw" description="Receiver Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE"		start="30" end="30" access="rw" description="Receiver Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="RST"		start="29" end="29" access="rw" description="Receiver Reset Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="FIFO_RST"	start="28" end="28" access="rw" description="Receiver FIFO Reset Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE_BLOCK_START"	start="7" end="7" access="rw" description="Receiver Block Start Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE_PARITY_ERROR" start="6" end="6" access="rw" description="Receiver Parity Error Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE_SYNC_ERROR"	start="4" end="4" access="rw" description="Receiver Sychronization Error Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE_FIFO_F"	start="1" end="1" access="rw" description="Receiver FIFO Full Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE_FIFO_F"	start="0" end="0" access="rw" description="Receiver FIFO Almost Full Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="RX_STATUS"		offset="8"  size="32" description="Receiver Status Register">
+			<bitfield name="FIFO_SIZE"	start="31" end="16" access="r" description="Receiver FIFO Size"/>
+			<bitfield name="FIFO_FULL"	start="9" end="9" access="rw" description="Receiver FIFO Full Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="FIFO_AFULL"	start="8" end="8" access="rw" description="Receiver FIFO Almost Full Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="INT_BLOCK_START" start="7" end="7" access="rw" description="Receiver Parity Error Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="INT_PARITY_ERROR"  start="6" end="6" access="rw" description="Receiver Parity Error Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="FIFO_EMPTY"	start="5" end="5" access="rw" description="Receiver FIFO Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="SYNC_ERROR"	start="4" end="4" access="rw" description="Receiver Sychronization Error Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="INT_FIFO_FULL"	start="1" end="1" access="rw" description="Receiver FIFO Full Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="INT_FIFO_AFULL"	start="0" end="0" access="rw" description="Receiver FIFO Almost Full Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="RX_DATA"		offset="12" size="32" description="Receiver Data Register" noaccess="True">
+			<bitfield name="FLAG_BS"		start="31" end="31" access="rw" description="Block Start Bit">
+				<value value="0" description="Subframe"/>
+				<value value="1" description="Block start"/>
+			</bitfield>
+			<bitfield name="FLAG_CC"		start="30" end="30" access="rw" description="Channel Bit">
+				<value value="0" description="Left channel (A)"/>
+				<value value="1" description="Right channel (B)"/>
+			</bitfield>
+			<bitfield name="FLAG_PE"		start="29" end="29" access="rw" description="Parity Error Bit">
+				<value value="0" description="No error"/>
+				<value value="1" description="Error"/>
+			</bitfield>
+			<bitfield name="DV"	start="27" end="27" access="rw" description="Data Valid Bit">
+				<value value="0" description="Valid"/>
+				<value value="1" description="Invalid"/>
+			</bitfield>
+			<bitfield name="UD"	start="26" end="26" access="rw" description="User Data Bit"/>
+			<bitfield name="CS"	start="25" end="25" access="rw" description="Channel Status Bit"/>
+			<bitfield name="P"	start="24" end="24" access="rw" description="Parity Bit"/>
+			<bitfield name="DATA"	start="23" end="0" access="rw" description="Audio Data"/>
+		</sfr>
+		<sfr name="RX_DATA_COUNT"	offset="16" size="32" description="Receiver FIFO Data Count Register"/>
+		<sfr name="RX_FIFO_WATERMARK"	offset="20" size="32" description="Receiver Almost Full Watermark Register"/>
+		<sfr name="RX_CHANNEL_STATUS"	offset="24" size="32" description="Receiver Channel Status Register">
+            <bitfield name="CHANNEL_A" start="31" end="16" description="Channel A status data"/>
+            <bitfield name="CHANNEL_B" start="15" end="0"  description="Channel B status data"/>
+        </sfr>
+		<sfr name="RX_USER_DATA"	offset="28" size="32" description="Receiver User Data Register">
+            <bitfield name="CHANNEL_A" start="31" end="16" description="Channel A user data"/>
+            <bitfield name="CHANNEL_B" start="15" end="0"  description="Channel B user data"/>
+        </sfr>
+        
+		<sfr name="TX_CONFIG"		offset="32" size="32" description="Transmitter Configuration Register">
+			<bitfield name="ENABLE"		start="31" end="31" access="rw" description="Transmitter Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE"		start="30" end="30" access="rw" description="Transmitter Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="RST"		start="29" end="29" access="rw" description="Transmitter Reset Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="FIFO_RST"	start="28" end="28" access="rw" description="Transmitter FIFO Reset Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="PRESCALER_EN"	start="27" end="27" access="rw" description="Transmitter Prescaler Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="FRAME_ENABLE"	start="26" end="26" access="rw" description="Transmitter Hardware Framing Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="PARITY_ENABLE"	start="25" end="25" access="rw" description="Transmitter Hardware Parity Generation Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="USE_USER_DATA"	start="24" end="24" access="rw" description="Transmitter User Data Usage Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE_FIFO_E"	start="1" end="1" access="rw" description="Transmitter FIFO Empty Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="IE_FIFO_AE"	start="0" end="0" access="rw" description="Transmitter FIFO Almost Empty Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="TX_STATUS"		offset="36" size="32" description="Transmitter Status Register">
+			<bitfield name="FIFO_SIZE"	start="31" end="16" access="r" description="Transmitter FIFO Size"/>
+			<bitfield name="FIFO_EMPTY"	start="4" end="4" access="rw" description="Transmitter FIFO Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="FIFO_AEMPTY"	start="3" end="3" access="rw" description="Transmitter FIFO Almost Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+
+			<bitfield name="FIFO_FULL"	start="2" end="2" access="rw" description="Transmitter FIFO Full Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="FIFO_EMPTY"	start="1" end="1" access="rw" description="Transmitter FIFO Empty Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="FIFO_AEMPTY"	start="0" end="0" access="rw" description="Transmitter FIFO Almost Empty Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="TX_DATA"		offset="40" size="32" description="Transmitter Data Register">
+			<bitfield name="FLAG_BS"		start="31" end="31" access="rw" description="Block Start Bit">
+				<value value="0" description="Subframe"/>
+				<value value="1" description="Block start"/>
+			</bitfield>
+			<bitfield name="FLAG_CC"		start="30" end="30" access="rw" description="Channel Bit">
+				<value value="0" description="Left channel (A)"/>
+				<value value="1" description="Right channel (B)"/>
+			</bitfield>
+			<bitfield name="FLAG_PE"		start="29" end="29" access="rw" description="Parity Error Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DV"	start="27" end="27" access="rw" description="Data Valid Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="UD"	start="26" end="26" access="rw" description="User Data Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="CS"	start="25" end="25" access="rw" description="Channel Status Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="P"	start="24" end="24" access="rw" description="Parity Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="MASK"	start="23" end="0" access="rw" description="Data Mask"/>
+		</sfr>
+		<sfr name="TX_FIFO_FREE_SLOTS"	offset="44" size="32" description="Transmitter FIFO Data Count Register"/>
+		<sfr name="TX_PRESCALER"	offset="48" size="32" description="Transmitter Prescaler Register"/>
+		<sfr name="TX_FIFO_WATERMARK"	offset="52" size="32" description="Transmitter Almost Full Watermark Register"/>
+		<sfr name="TX_CHANNEL_STATUS"	offset="56" size="32" description="Transmitter Channel Status Register">
+            <bitfield name="CHANNEL_A" start="31" end="16" description="Channel A status data"/>
+            <bitfield name="CHANNEL_B" start="15" end="0"  description="Channel B status data"/>
+        </sfr>
+		<sfr name="TX_USER_DATA"	offset="60" size="32" description="Transmitter User Data Register">
+            <bitfield name="CHANNEL_A" start="31" end="16" description="Channel A user data"/>
+            <bitfield name="CHANNEL_B" start="15" end="0"  description="Channel B user data"/>
+        </sfr>
+	</group>
+</sfrfile>
+

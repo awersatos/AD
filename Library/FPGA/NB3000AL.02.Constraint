@@ -1,0 +1,538 @@
+;-------------------------------------------------------------------------------
+;Constraints File
+;   Device  : Altera Cyclone-3 - EP3C40F780C8N
+;   Board   : NanoBoard 3000 Series - Altera Version Rev.2 - NB3000AL.02
+;   Project : Any
+;
+;   Created 27-July-2009
+;   Altium Limited
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+Record=FileHeader | Id=DXP Constraints v1.0
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Part       | TargetId=EP3C40F780C8N
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=PCB        | TargetId=NB3000AL.02        | Image=NB3000AL.02
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Declare PlugIn Boards
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=PlugIn     | TargetId=EXT_A              | IdIndex=2      | ImageOffsetX=114  | ImageOffsetY=269 | ImageRotation=0
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Declare Connectors
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Connector  | TargetId=EXT_A              | PlugIn=EXT_A
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Peripheral Board Connector - General I/O
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-100          | FPGA_PINNUM=V6
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-98           | FPGA_PINNUM=U3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-96           | FPGA_PINNUM=T8
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-94           | FPGA_PINNUM=U7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-92           | FPGA_PINNUM=AA5
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-90           | FPGA_PINNUM=V2
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-88           | FPGA_PINNUM=U8
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-86           | FPGA_PINNUM=W2
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-84           | FPGA_PINNUM=AB7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-82           | FPGA_PINNUM=AA6
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-80           | FPGA_PINNUM=AB4
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-78           | FPGA_PINNUM=AD5
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-76           | FPGA_PINNUM=V3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-74           | FPGA_PINNUM=W3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-72           | FPGA_PINNUM=Y3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-70           | FPGA_PINNUM=W10
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-68           | FPGA_PINNUM=V8
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-66           | FPGA_PINNUM=W8
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-64           | FPGA_PINNUM=AD3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-62           | FPGA_PINNUM=AC3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-60           | FPGA_PINNUM=AB2
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-58           | FPGA_PINNUM=AB3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-56           | FPGA_PINNUM=AC1
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-54           | FPGA_PINNUM=AD1
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-52           | FPGA_PINNUM=Y7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-50           | FPGA_PINNUM=AE2
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-48           | FPGA_PINNUM=AE3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-46           | FPGA_PINNUM=AC2
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-44           | FPGA_PINNUM=AE4
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-42           | FPGA_PINNUM=AF3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-40           | FPGA_PINNUM=AG3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-38           | FPGA_PINNUM=AH3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-36           | FPGA_PINNUM=AF5
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-34           | FPGA_PINNUM=AB5
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-32           | FPGA_PINNUM=AD7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-30           | FPGA_PINNUM=AE1
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-28           | FPGA_PINNUM=AH4
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-26           | FPGA_PINNUM=AG6
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-24           | FPGA_PINNUM=AF6
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-22           | FPGA_PINNUM=AF2
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-20           | FPGA_PINNUM=AF7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-18           | FPGA_PINNUM=AB12
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-16           | FPGA_PINNUM=AF8
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-14           | FPGA_PINNUM=AG7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-12           | FPGA_PINNUM=AH7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-10           | FPGA_PINNUM=AH8
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-8            | FPGA_PINNUM=AG10
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-6            | FPGA_PINNUM=AF9
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-4            | FPGA_PINNUM=AH10
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-2            | FPGA_PINNUM=AA13
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Clocks
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=CLK_BRD            | FPGA_PINNUM=A14
+Record=Constraint | TargetKind=Port       | TargetId=CLK_BRD_BANK8      | FPGA_PINNUM=A14
+Record=Constraint | TargetKind=Port       | TargetId=CLK_BRD_BANK7      | FPGA_PINNUM=A15
+Record=Constraint | TargetKind=Port       | TargetId=CLK_BRD_BANK6      | FPGA_PINNUM=J27
+Record=Constraint | TargetKind=Port       | TargetId=CLK_REF            | FPGA_PINNUM=AH14
+Record=Constraint | TargetKind=Port       | TargetId=CLK_REF_BANK8      | FPGA_PINNUM=B14
+Record=Constraint | TargetKind=Port       | TargetId=CLK_REF_BANK6      | FPGA_PINNUM=J28
+Record=Constraint | TargetKind=Port       | TargetId=CLK_REF_BANK3      | FPGA_PINNUM=AH14
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Ethernet
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=ETH_COL            | FPGA_PINNUM=J3
+Record=Constraint | TargetKind=Port       | TargetId=ETH_CRS            | FPGA_PINNUM=A6
+Record=Constraint | TargetKind=Port       | TargetId=ETH_MDC            | FPGA_PINNUM=C2
+Record=Constraint | TargetKind=Port       | TargetId=ETH_MDIO           | FPGA_PINNUM=G6
+Record=Constraint | TargetKind=Port       | TargetId=ETH_RESETB_E       | FPGA_PINNUM=F5
+Record=Constraint | TargetKind=Port       | TargetId=ETH_RXC            | FPGA_PINNUM=G15 | FPGA_CLOCK_ALLOW_ON_NON_CLOCK_PIN=True | FPGA_CLOCK=TRUE | FPGA_CLOCK_FREQUENCY= 25 MHz
+Record=Constraint | TargetKind=Port       | TargetId=ETH_RXD[3..0]      | FPGA_PINNUM=H5,E3,D1,D2
+Record=Constraint | TargetKind=Port       | TargetId=ETH_RXDV           | FPGA_PINNUM=E4
+Record=Constraint | TargetKind=Port       | TargetId=ETH_RXER           | FPGA_PINNUM=B8
+Record=Constraint | TargetKind=Port       | TargetId=ETH_TXC            | FPGA_PINNUM=J5 | FPGA_CLOCK_ALLOW_ON_NON_CLOCK_PIN=True | FPGA_CLOCK=TRUE | FPGA_CLOCK_FREQUENCY= 25 MHz
+Record=Constraint | TargetKind=Port       | TargetId=ETH_TXD[3..0]      | FPGA_PINNUM=G5,H6,F1,G4
+Record=Constraint | TargetKind=Port       | TargetId=ETH_TXEN           | FPGA_PINNUM=G3
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Soft JTAG Chain
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=JTAG_NEXUS_TCK     | FPGA_PINNUM=Y27
+Record=Constraint | TargetKind=Port       | TargetId=JTAG_NEXUS_TDI     | FPGA_PINNUM=AD21
+Record=Constraint | TargetKind=Port       | TargetId=JTAG_NEXUS_TDO     | FPGA_PINNUM=AC21
+Record=Constraint | TargetKind=Port       | TargetId=JTAG_NEXUS_TMS     | FPGA_PINNUM=AE22
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; SRAM
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SRAM0_A[18..0]     | FPGA_PINNUM=G27,E12,H14,C16,J22,J25,H22,L20,R22,V1,M26,H7,L25,K25,A21,G19,D17,F15,G13
+Record=Constraint | TargetKind=Port       | TargetId=SRAM0_D[15..0]     | FPGA_PINNUM=D19,D21,B19,G10,D28,D26,E28,G25,H23,G24,G22,C26,F17,C23,E22,D20
+Record=Constraint | TargetKind=Port       | TargetId=SRAM0_UB           | FPGA_PINNUM=G16
+Record=Constraint | TargetKind=Port       | TargetId=SRAM0_LB           | FPGA_PINNUM=D18
+Record=Constraint | TargetKind=Port       | TargetId=SRAM0_E            | FPGA_PINNUM=G20
+Record=Constraint | TargetKind=Port       | TargetId=SRAM0_OE           | FPGA_PINNUM=E15
+Record=Constraint | TargetKind=Port       | TargetId=SRAM0_W            | FPGA_PINNUM=K22
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; SRAM
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SRAM1_A[18..0]     | FPGA_PINNUM=L22,D16,H16,E18,L23,N21,M24,N25,M28,U20,L27,R21,M25,J23,F19,E19,B21,F18,E17
+Record=Constraint | TargetKind=Port       | TargetId=SRAM1_D[15..0]     | FPGA_PINNUM=E21,A26,B25,A19,E25,D27,F26,F27,E1,E27,E26,J19,H19,C25,G21,J17
+Record=Constraint | TargetKind=Port       | TargetId=SRAM1_UB           | FPGA_PINNUM=C21
+Record=Constraint | TargetKind=Port       | TargetId=SRAM1_LB           | FPGA_PINNUM=B23
+Record=Constraint | TargetKind=Port       | TargetId=SRAM1_E            | FPGA_PINNUM=J10
+Record=Constraint | TargetKind=Port       | TargetId=SRAM1_OE           | FPGA_PINNUM=C20
+Record=Constraint | TargetKind=Port       | TargetId=SRAM1_W            | FPGA_PINNUM=M21
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Test Button - Reset
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=TEST_BUTTON        | FPGA_PINNUM=AG12
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Shared Memory Bus
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=BUS_A[24..1]       | FPGA_PINNUM=M27,T22,M23,H25,J26,B18,C18,AD12,AH25,AE27,K28,L28,AE26,L26,P2,K26,H26,K21,C19,C17,A17,C15,C13,AF17 | FPGA_SLEW=FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_D[31..0]       | FPGA_PINNUM=P25,R25,U22,V22,V21,V24,W22,F28,AB26,AB28,AA26,W27,V27,U26,T26,R28,P26,P27,T21,R24,R23,U27,V28,K27,G26,Y26,V25,U25,U28,P28,R26,N26 | FPGA_SLEW=FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_FLASH_NBUSY    | FPGA_PINNUM=D25                | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_FLASH_NCS      | FPGA_PINNUM=C27                | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_FLASH_NRESET   | FPGA_PINNUM=P21                | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_USB_DACK       | FPGA_PINNUM=AF13               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_USB_DREQ       | FPGA_PINNUM=AH19               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_USB_NCS        | FPGA_PINNUM=AB14               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_USB_NIRQ       | FPGA_PINNUM=AF16               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_USB_NRESET     | FPGA_PINNUM=AH11               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_NBE[3..0]      | FPGA_PINNUM=V26,AC27,A25,W21   | FPGA_SLEW=FAST,FAST,FAST,FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_NOE            | FPGA_PINNUM=AF12               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_NWE            | FPGA_PINNUM=G7                 | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_SDRAM_CKE      | FPGA_PINNUM=Y23                | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_SDRAM_CLK      | FPGA_PINNUM=AE5                | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_SDRAM_FEEDBACK | FPGA_PINNUM=J1                 | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_SDRAM_NCAS     | FPGA_PINNUM=AC26               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_SDRAM_NCS      | FPGA_PINNUM=AA21               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_SDRAM_NRAS     | FPGA_PINNUM=AC24               | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_RAM_NCS        | FPGA_PINNUM=D13                | FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=BUS_SDRAM_CLK_IN   | FPGA_PINNUM=J2                 | FPGA_SLEW=FAST
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; RS232
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=RS_CTS             | FPGA_PINNUM=K1
+Record=Constraint | TargetKind=Port       | TargetId=RS_RTS             | FPGA_PINNUM=F2
+Record=Constraint | TargetKind=Port       | TargetId=RS_RX              | FPGA_PINNUM=H3
+Record=Constraint | TargetKind=Port       | TargetId=RS_TX              | FPGA_PINNUM=D3 
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; User Switches
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SW[7..0]           | FPGA_PINNUM=AF11,AC11,AE10,AF10,AG8,AE8,AC8,AC7
+;Record=Constraint | TargetKind=Port       | TargetId=SW_USER[4..0]      | FPGA_PINNUM=AA3,AB6,AB1,W1,M3
+Record=Constraint | TargetKind=Port       | TargetId=SW_USER0           | FPGA_PINNUM=M3
+Record=Constraint | TargetKind=Port       | TargetId=SW_USER1           | FPGA_PINNUM=W1
+Record=Constraint | TargetKind=Port       | TargetId=SW_USER2           | FPGA_PINNUM=AB1
+Record=Constraint | TargetKind=Port       | TargetId=SW_USER3           | FPGA_PINNUM=AB6
+Record=Constraint | TargetKind=Port       | TargetId=SW_USER4           | FPGA_PINNUM=AA3
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; User Headers I/O
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=HA2                | FPGA_PINNUM=N4
+Record=Constraint | TargetKind=Port       | TargetId=HA3                | FPGA_PINNUM=R6
+Record=Constraint | TargetKind=Port       | TargetId=HA4                | FPGA_PINNUM=M8
+Record=Constraint | TargetKind=Port       | TargetId=HA5                | FPGA_PINNUM=R4
+Record=Constraint | TargetKind=Port       | TargetId=HA6                | FPGA_PINNUM=M4
+Record=Constraint | TargetKind=Port       | TargetId=HA7                | FPGA_PINNUM=N3
+Record=Constraint | TargetKind=Port       | TargetId=HA8                | FPGA_PINNUM=L7
+Record=Constraint | TargetKind=Port       | TargetId=HA9                | FPGA_PINNUM=R5
+Record=Constraint | TargetKind=Port       | TargetId=HA10               | FPGA_PINNUM=M5
+Record=Constraint | TargetKind=Port       | TargetId=HA11               | FPGA_PINNUM=T9
+Record=Constraint | TargetKind=Port       | TargetId=HA12               | FPGA_PINNUM=L8
+Record=Constraint | TargetKind=Port       | TargetId=HA13               | FPGA_PINNUM=M7
+Record=Constraint | TargetKind=Port       | TargetId=HA14               | FPGA_PINNUM=L1
+Record=Constraint | TargetKind=Port       | TargetId=HA15               | FPGA_PINNUM=M1
+Record=Constraint | TargetKind=Port       | TargetId=HA16               | FPGA_PINNUM=L4
+Record=Constraint | TargetKind=Port       | TargetId=HA17               | FPGA_PINNUM=M9
+Record=Constraint | TargetKind=Port       | TargetId=HA18               | FPGA_PINNUM=L5
+Record=Constraint | TargetKind=Port       | TargetId=HA19               | FPGA_PINNUM=M2
+
+Record=Constraint | TargetKind=Port       | TargetId=HB2                | FPGA_PINNUM=J4
+Record=Constraint | TargetKind=Port       | TargetId=HB3                | FPGA_PINNUM=L2
+Record=Constraint | TargetKind=Port       | TargetId=HB4                | FPGA_PINNUM=J7
+Record=Constraint | TargetKind=Port       | TargetId=HB5                | FPGA_PINNUM=K7
+Record=Constraint | TargetKind=Port       | TargetId=HB6                | FPGA_PINNUM=J6
+Record=Constraint | TargetKind=Port       | TargetId=HB7                | FPGA_PINNUM=L6
+Record=Constraint | TargetKind=Port       | TargetId=HB8                | FPGA_PINNUM=H4
+Record=Constraint | TargetKind=Port       | TargetId=HB9                | FPGA_PINNUM=K4
+Record=Constraint | TargetKind=Port       | TargetId=HB10               | FPGA_PINNUM=R7
+Record=Constraint | TargetKind=Port       | TargetId=HB11               | FPGA_PINNUM=K2
+Record=Constraint | TargetKind=Port       | TargetId=HB12               | FPGA_PINNUM=U6
+Record=Constraint | TargetKind=Port       | TargetId=HB13               | FPGA_PINNUM=P1
+Record=Constraint | TargetKind=Port       | TargetId=HB14               | FPGA_PINNUM=U4
+Record=Constraint | TargetKind=Port       | TargetId=HB15               | FPGA_PINNUM=R1
+Record=Constraint | TargetKind=Port       | TargetId=HB16               | FPGA_PINNUM=V9
+Record=Constraint | TargetKind=Port       | TargetId=HB17               | FPGA_PINNUM=U5
+Record=Constraint | TargetKind=Port       | TargetId=HB18               | FPGA_PINNUM=V5
+Record=Constraint | TargetKind=Port       | TargetId=HB19               | FPGA_PINNUM=AA8
+
+Record=Constraint | TargetKind=Port       | TargetId=IO[35..0]          | FPGA_PINNUM=AA8,V5,U5,V9,R1,U4,P1,U6,K2,R7,K4,H4,L6,J6,K7,J7,L2,J4,M2,L5,M9,L4,M1,L1,M7,L8,T9,M5,R5,L7,N3,M4,R4,M8,R6,N4
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; VGA
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=VGA_BLUE[7..0]     | FPGA_PINNUM=E10,G11,D10,B11,G12,J12,F11,H12 |FPGA_SLEW=FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST
+Record=Constraint | TargetKind=Port       | TargetId=VGA_CLK            | FPGA_PINNUM=B6                              |FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=VGA_GREEN[7..0]    | FPGA_PINNUM=E5,F7,E7,D7,C8,D8,A8,D9         |FPGA_SLEW=FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST
+Record=Constraint | TargetKind=Port       | TargetId=VGA_HSYNC          | FPGA_PINNUM=C12                             |FPGA_SLEW=FAST
+Record=Constraint | TargetKind=Port       | TargetId=VGA_RED[7..0]      | FPGA_PINNUM=C9,G9,G8,C10,H10,F10,B10,A10    |FPGA_SLEW=FAST,FAST,FAST,FAST,FAST,FAST,FAST,FAST
+Record=Constraint | TargetKind=Port       | TargetId=VGA_VSYNC          | FPGA_PINNUM=H13                             |FPGA_SLEW=FAST 
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; PS2
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=PS2B_CLK           | FPGA_PINNUM=AE9
+Record=Constraint | TargetKind=Port       | TargetId=PS2B_DATA          | FPGA_PINNUM=Y10
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; PS2
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=PS2A_CLK           | FPGA_PINNUM=AE7
+Record=Constraint | TargetKind=Port       | TargetId=PS2A_DATA          | FPGA_PINNUM=AD8
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; I2S Audio
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=AUDIO_I2S_BCLK     | FPGA_PINNUM=K13
+Record=Constraint | TargetKind=Port       | TargetId=AUDIO_I2S_DOUT     | FPGA_PINNUM=AB8
+Record=Constraint | TargetKind=Port       | TargetId=AUDIO_I2S_DIN      | FPGA_PINNUM=AE6
+Record=Constraint | TargetKind=Port       | TargetId=AUDIO_I2S_MCLK     | FPGA_PINNUM=G14
+Record=Constraint | TargetKind=Port       | TargetId=AUDIO_I2S_WCLK     | FPGA_PINNUM=AF14
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Audio Codec
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=CODECSPI_CLK       | FPGA_PINNUM=D15
+Record=Constraint | TargetKind=Port       | TargetId=CODECSPI_CS        | FPGA_PINNUM=W4
+Record=Constraint | TargetKind=Port       | TargetId=CODECSPI_DOUT      | FPGA_PINNUM=Y4
+Record=Constraint | TargetKind=Port       | TargetId=CODECSPI_DIN       | FPGA_PINNUM=AG4
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; SD-Card
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SD_CLK             | FPGA_PINNUM=AE13
+Record=Constraint | TargetKind=Port       | TargetId=SD_CMD             | FPGA_PINNUM=Y14
+Record=Constraint | TargetKind=Port       | TargetId=SD_DAT[3..0]       | FPGA_PINNUM=Y12,W16,AF25,AD24
+Record=Constraint | TargetKind=Port       | TargetId=SD_COMMAND         | FPGA_PINNUM=Y14               | FPGA_PULLUP=True
+Record=Constraint | TargetKind=Port       | TargetId=SD_DATA[3..0]      | FPGA_PINNUM=Y12,W16,AF25,AD24 | FPGA_PULLUP=True,True,True,True  
+Record=Constraint | TargetKind=Port       | TargetId=SD_DETECT          | FPGA_PINNUM=AD14
+Record=Constraint | TargetKind=Port       | TargetId=SD_PROTECT         | FPGA_PINNUM=AC14
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; One Wire
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=ONE_WIRE           | FPGA_PINNUM=U2
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; SPI Bus
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SPI_CLK            | FPGA_PINNUM=AE14
+Record=Constraint | TargetKind=Port       | TargetId=SPI_DOUT           | FPGA_PINNUM=AB27  ;AG23
+Record=Constraint | TargetKind=Port       | TargetId=SPI_DIN            | FPGA_PINNUM=AG23  ;AB27
+Record=Constraint | TargetKind=Port       | TargetId=SPI_MODE           | FPGA_PINNUM=AF27
+Record=Constraint | TargetKind=Port       | TargetId=SPI_SEL            | FPGA_PINNUM=AE25
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Peripheral Board - General I/O
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=PBA[49..0]         | FPGA_PINNUM=V6,U3,T8,U7,AA5,V2,U8,W2,AB7,AA6,AB4,AD5,V3,W3,Y3,W10,V8,W8,AD3,AC3,AB2,AB3,AC1,AD1,Y7,AE2,AE3,AC2,AE4,AF3,AG3,AH3,AF5,AB5,AD7,AE1,AH4,AG6,AF6,AF2,AF7,AB12,AF8,AG7,AH7,AH8,AG10,AF9,AH10,AA13
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; I2C
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SCL                | FPGA_PINNUM=AD2
+Record=Constraint | TargetKind=Port       | TargetId=SDA                | FPGA_PINNUM=V7
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; USB
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=USB_D[7..0]        | FPGA_PINNUM=AH22,AG21,AH21,AE28,AA16,AG19,Y19,AF19
+Record=Constraint | TargetKind=Port       | TargetId=USB_FIFOADR0       | FPGA_PINNUM=AC18
+Record=Constraint | TargetKind=Port       | TargetId=USB_FIFOADR1       | FPGA_PINNUM=AC25
+Record=Constraint | TargetKind=Port       | TargetId=USB_FIFOADR2       | FPGA_PINNUM=AC19
+Record=Constraint | TargetKind=Port       | TargetId=USB_FLAGA          | FPGA_PINNUM=AE18
+Record=Constraint | TargetKind=Port       | TargetId=USB_FLAGB          | FPGA_PINNUM=AD18
+Record=Constraint | TargetKind=Port       | TargetId=USB_FLAGC          | FPGA_PINNUM=AD22
+Record=Constraint | TargetKind=Port       | TargetId=USB_FLAGD_CS_N     | FPGA_PINNUM=AG22
+Record=Constraint | TargetKind=Port       | TargetId=USB_IFCLK          | FPGA_PINNUM=AE15
+Record=Constraint | TargetKind=Port       | TargetId=USB_INT_N          | FPGA_PINNUM=AF24
+Record=Constraint | TargetKind=Port       | TargetId=USB_PKTEND         | FPGA_PINNUM=AH23
+Record=Constraint | TargetKind=Port       | TargetId=USB_RD_N           | FPGA_PINNUM=AB22
+Record=Constraint | TargetKind=Port       | TargetId=USB_READY          | FPGA_PINNUM=R27
+Record=Constraint | TargetKind=Port       | TargetId=USB_RESET_N        | FPGA_PINNUM=AG25
+Record=Constraint | TargetKind=Port       | TargetId=USB_SLOE           | FPGA_PINNUM=AD19
+Record=Constraint | TargetKind=Port       | TargetId=USB_VBUS           | FPGA_PINNUM=AE19
+Record=Constraint | TargetKind=Port       | TargetId=USB_WR_N           | FPGA_PINNUM=W20
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; RS485
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=RS485_RX_EN        | FPGA_PINNUM=B3
+Record=Constraint | TargetKind=Port       | TargetId=RS485_RXD          | FPGA_PINNUM=E8
+Record=Constraint | TargetKind=Port       | TargetId=RS485_TX_EN        | FPGA_PINNUM=H8
+Record=Constraint | TargetKind=Port       | TargetId=RS485_TXD          | FPGA_PINNUM=C3
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; ADC
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=ADC_CLK            | FPGA_PINNUM=F14
+Record=Constraint | TargetKind=Port       | TargetId=ADC_CS             | FPGA_PINNUM=G1
+Record=Constraint | TargetKind=Port       | TargetId=ADC_DOUT           | FPGA_PINNUM=G2
+Record=Constraint | TargetKind=Port       | TargetId=ADC_DIN            | FPGA_PINNUM=L3   
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; DAC
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=DAC_CLK            | FPGA_PINNUM=C14
+Record=Constraint | TargetKind=Port       | TargetId=DAC_CS             | FPGA_PINNUM=F3
+Record=Constraint | TargetKind=Port       | TargetId=DAC_DOUT           | FPGA_PINNUM=K3
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; RGB LEDs
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=LED_R0             | FPGA_PINNUM=Y22
+Record=Constraint | TargetKind=Port       | TargetId=LED_R1             | FPGA_PINNUM=W26
+Record=Constraint | TargetKind=Port       | TargetId=LED_R2             | FPGA_PINNUM=AB25
+Record=Constraint | TargetKind=Port       | TargetId=LED_R3             | FPGA_PINNUM=AB24
+Record=Constraint | TargetKind=Port       | TargetId=LED_R4             | FPGA_PINNUM=Y13
+Record=Constraint | TargetKind=Port       | TargetId=LED_R5             | FPGA_PINNUM=AC10
+Record=Constraint | TargetKind=Port       | TargetId=LED_R6             | FPGA_PINNUM=W9
+Record=Constraint | TargetKind=Port       | TargetId=LED_R7             | FPGA_PINNUM=R2
+Record=Constraint | TargetKind=Port       | TargetId=LED_R[7..0]        | FPGA_PINNUM=R2,W9,AC10,Y13,AB24,AB25,W26,Y22
+
+Record=Constraint | TargetKind=Port       | TargetId=LED_G0             | FPGA_PINNUM=AC28
+Record=Constraint | TargetKind=Port       | TargetId=LED_G1             | FPGA_PINNUM=AA23
+Record=Constraint | TargetKind=Port       | TargetId=LED_G2             | FPGA_PINNUM=AA24
+Record=Constraint | TargetKind=Port       | TargetId=LED_G3             | FPGA_PINNUM=AD26
+Record=Constraint | TargetKind=Port       | TargetId=LED_G4             | FPGA_PINNUM=AC12
+Record=Constraint | TargetKind=Port       | TargetId=LED_G5             | FPGA_PINNUM=AG11
+Record=Constraint | TargetKind=Port       | TargetId=LED_G6             | FPGA_PINNUM=T3
+Record=Constraint | TargetKind=Port       | TargetId=LED_G7             | FPGA_PINNUM=U1
+Record=Constraint | TargetKind=Port       | TargetId=LED_G[7..0]        | FPGA_PINNUM=U1,T3,AG11,AC12,AD26,AA24,AA23,AC28
+
+Record=Constraint | TargetKind=Port       | TargetId=LED_B0             | FPGA_PINNUM=AD27
+Record=Constraint | TargetKind=Port       | TargetId=LED_B1             | FPGA_PINNUM=AA25
+Record=Constraint | TargetKind=Port       | TargetId=LED_B2             | FPGA_PINNUM=AB20
+Record=Constraint | TargetKind=Port       | TargetId=LED_B3             | FPGA_PINNUM=AB23
+Record=Constraint | TargetKind=Port       | TargetId=LED_B4             | FPGA_PINNUM=AD11
+Record=Constraint | TargetKind=Port       | TargetId=LED_B5             | FPGA_PINNUM=AD10
+Record=Constraint | TargetKind=Port       | TargetId=LED_B6             | FPGA_PINNUM=V4
+Record=Constraint | TargetKind=Port       | TargetId=LED_B7             | FPGA_PINNUM=R3
+Record=Constraint | TargetKind=Port       | TargetId=LED_B[7..0]        | FPGA_PINNUM=R3,V4,AD10,AD11,AB23,AB20,AA25,AD27
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; MIDI
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=MIDI_RX            | FPGA_PINNUM=C4
+Record=Constraint | TargetKind=Port       | TargetId=MIDI_TX            | FPGA_PINNUM=D6
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; SPDIF
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SPDIF_IN           | FPGA_PINNUM=AF4
+Record=Constraint | TargetKind=Port       | TargetId=SPDIF_OUT          | FPGA_PINNUM=AH6
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; PWM
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=P0_PWM             | FPGA_PINNUM=F8
+Record=Constraint | TargetKind=Port       | TargetId=P1_PWM             | FPGA_PINNUM=B7
+Record=Constraint | TargetKind=Port       | TargetId=P2_PWM             | FPGA_PINNUM=C6
+Record=Constraint | TargetKind=Port       | TargetId=P3_PWM             | FPGA_PINNUM=B4
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Relays
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=RELAY[3..0]        | FPGA_PINNUM=A12,B12,C11,C7
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; TFT
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=TFT_BLIGHT         | FPGA_PINNUM=AF26
+Record=Constraint | TargetKind=Port       | TargetId=TFT_CS             | FPGA_PINNUM=AG18
+Record=Constraint | TargetKind=Port       | TargetId=TFT_RD             | FPGA_PINNUM=AF22
+Record=Constraint | TargetKind=Port       | TargetId=TFT_RS             | FPGA_PINNUM=AF20
+Record=Constraint | TargetKind=Port       | TargetId=TFT_WR             | FPGA_PINNUM=AF23
+Record=Constraint | TargetKind=Port       | TargetId=TFT_RESET          | FPGA_PINNUM=Y17
+Record=Constraint | TargetKind=Port       | TargetId=TFT_DB[15..0]      | FPGA_PINNUM=AB17,AF18,AB18,AF21,AA17,AE20,AH26,AE23,AE12,AH17,AH18,AG26,AG17,AH12,AD17,AF15
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; TS
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_BUSY       | FPGA_PINNUM=W28
+Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_CLK        | FPGA_PINNUM=AB16
+Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_CS_N       | FPGA_PINNUM=AD28
+Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_DOUT       | FPGA_PINNUM=AD25
+Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_DIN        | FPGA_PINNUM=AA22
+Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_IRQ_N      | FPGA_PINNUM=AB19
+;Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_BUSY       | FPGA_PINNUM=W28
+;Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_CLK        | FPGA_PINNUM=AB16
+;Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_CS_N       | FPGA_PINNUM=AD28
+;Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_DIN        | FPGA_PINNUM=AD25
+;Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_DOUT       | FPGA_PINNUM=AA22
+;Record=Constraint | TargetKind=Port       | TargetId=TFT_TSC_IRQ_N      | FPGA_PINNUM=AB19
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Buzzer
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SPEAKER            | FPGA_PINNUM=AA7
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Infrared Receiver
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=IR_RXD             | FPGA_PINNUM=AA15
+Record=Constraint | TargetKind=Port       | TargetId=IR_TXD             | FPGA_PINNUM=AB15
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Digital Microphone
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=DIG_MIC_CLK        | FPGA_PINNUM=AB11        ; SPAREIO3
+Record=Constraint | TargetKind=Port       | TargetId=DIG_MIC_DATA       | FPGA_PINNUM=AB13        ; SPAREIO4
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; Spare IOs
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port       | TargetId=SPAREIO1           | FPGA_PINNUM=AA10
+Record=Constraint | TargetKind=Port       | TargetId=SPAREIO2           | FPGA_PINNUM=AA12
+Record=Constraint | TargetKind=Port       | TargetId=HOST_SPARE1        | FPGA_PINNUM=AC22
+Record=Constraint | TargetKind=Port       | TargetId=NC1                | FPGA_PINNUM=Y2          ; clock input pin
+Record=Constraint | TargetKind=Port       | TargetId=NC2                | FPGA_PINNUM=Y1          ; clock input pin
+Record=Constraint | TargetKind=Port       | TargetId=NC3                | FPGA_PINNUM=Y28         ; clock input pin
+Record=Constraint | TargetKind=Port       | TargetId=NC4                | FPGA_PINNUM=AH15        ; clock input pin
+Record=Constraint | TargetKind=Port       | TargetId=NC5                | FPGA_PINNUM=AG14        ; clock input pin
+Record=Constraint | TargetKind=Port       | TargetId=NC6                | FPGA_PINNUM=F4          ; clock input pin
+Record=Constraint | TargetKind=Port       | TargetId=NC7                | FPGA_PINNUM=E2          ; clock input pin
+;-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

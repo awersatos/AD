@@ -1,0 +1,43 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_xpga
+
+[Library]
+ovi_xpga=.\ovi_xpga.lib
+
+[$LibMap$]
+ovi_xpga=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\ovi_lc4k\ovi_xpga\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\ovi_lc4k\ovi_xpga\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\ovi_lc4k\ovi_xpga\
+Extension5=dll
+
+[Files]
+/xpga.v=-1
+/update_ovi_xpga.do=-1
+
+[Files.Data]
+.\src\xpga.v=Verilog Source Code
+.\src\update_ovi_xpga.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

@@ -1,0 +1,10 @@
+[Interface]
+Name=ppp
+Alias=network_interface
+Category=SERVICE
+Visible=True
+System=False
+Description=Point to Point Protocol services
+PublicDir=services\ppp\include
+
+

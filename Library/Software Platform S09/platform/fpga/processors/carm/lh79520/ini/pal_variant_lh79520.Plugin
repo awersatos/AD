@@ -1,0 +1,14 @@
+[Plugin]
+Name=pal_variant_lh79520
+Description=Implements the LH79520xx variants
+Caption= LH79520xx derivatives
+GenerateFile=pal_variant_cfg
+SourceFile0=platform\fpga\processors\carm\lh79520\src\pal_lh79520.c
+GlobalCompileOption0=-I"$(SSASROOT)\platform\fpga\processors\carm\lh79520\include"
+Implement=pal_arch_arm
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=DEVICE
+Condition=REQ
+Value=LH79520.

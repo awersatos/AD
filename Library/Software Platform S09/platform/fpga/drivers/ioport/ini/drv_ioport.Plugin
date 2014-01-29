@@ -1,0 +1,16 @@
+[Plugin]
+Name=drv_ioport
+Description=General Purpose I/O Port Driver
+Caption=GPIO Port Driver
+SourceDir=platform\fpga\drivers\ioport\src
+Implement=drv_ioport
+MinInstances=1
+Bitmap=drv_ioport.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_ioport
+Condition=EQ
+
+[Instance]
+Require0=per_ioport

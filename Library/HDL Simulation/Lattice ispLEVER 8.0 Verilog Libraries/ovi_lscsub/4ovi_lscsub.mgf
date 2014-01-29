@@ -1,0 +1,8770 @@
+V 000037 56 106 1265381370903 PGAND1
+(_unit PGAND1
+	(_specify
+		(_modpath parallel unknown 0 286
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 791 1265381370915 PGAND10
+(_unit PGAND10
+	(_specify
+		(_modpath parallel unknown 0 321
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 322
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 323
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 324
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 325
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 326
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 327
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 328
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 329
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 330
+			(_port A9 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 868 1265381370920 PGAND11
+(_unit PGAND11
+	(_specify
+		(_modpath parallel unknown 0 369
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 370
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 371
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 372
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 373
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 374
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 375
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 376
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 377
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 378
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 379
+			(_port A10 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 945 1265381370925 PGAND12
+(_unit PGAND12
+	(_specify
+		(_modpath parallel unknown 0 419
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 420
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 421
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 422
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 423
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 424
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 425
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 426
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 427
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 428
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 429
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 430
+			(_port A11 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1022 1265381370930 PGAND13
+(_unit PGAND13
+	(_specify
+		(_modpath parallel unknown 0 470
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 471
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 472
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 473
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 474
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 475
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 476
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 477
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 478
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 479
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 480
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 481
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 482
+			(_port A12 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1099 1265381370935 PGAND14
+(_unit PGAND14
+	(_specify
+		(_modpath parallel unknown 0 523
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 524
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 525
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 526
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 527
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 528
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 529
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 530
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 531
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 532
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 533
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 534
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 535
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 536
+			(_port A13 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1176 1265381370940 PGAND15
+(_unit PGAND15
+	(_specify
+		(_modpath parallel unknown 0 577
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 578
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 579
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 580
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 581
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 582
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 583
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 584
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 585
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 586
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 587
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 588
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 589
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 590
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 591
+			(_port A14 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1253 1265381370945 PGAND16
+(_unit PGAND16
+	(_specify
+		(_modpath parallel unknown 0 633
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 634
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 635
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 636
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 637
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 638
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 639
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 640
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 641
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 642
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 643
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 644
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 645
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 646
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 647
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 648
+			(_port A15 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1330 1265381370950 PGAND17
+(_unit PGAND17
+	(_specify
+		(_modpath parallel unknown 0 692
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 693
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 694
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 695
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 696
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 697
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 698
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 699
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 700
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 701
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 702
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 703
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 704
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 705
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 706
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 707
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 708
+			(_port A16 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1407 1265381370955 PGAND18
+(_unit PGAND18
+	(_specify
+		(_modpath parallel unknown 0 753
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 754
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 755
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 756
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 757
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 758
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 759
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 760
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 761
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 762
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 763
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 764
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 765
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 766
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 767
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 768
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 769
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 770
+			(_port A17 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1484 1265381370960 PGAND19
+(_unit PGAND19
+	(_specify
+		(_modpath parallel unknown 0 816
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 817
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 818
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 819
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 820
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 821
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 822
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 823
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 824
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 825
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 826
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 827
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 828
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 829
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 830
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 831
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 832
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 833
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 834
+			(_port A18 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 182 1265381370965 PGAND2
+(_unit PGAND2
+	(_specify
+		(_modpath parallel unknown 0 857
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 858
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1561 1265381370977 PGAND20
+(_unit PGAND20
+	(_specify
+		(_modpath parallel unknown 0 905
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 906
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 907
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 908
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 909
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 910
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 911
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 912
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 913
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 914
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 915
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 916
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 917
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 918
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 919
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 920
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 921
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 922
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 923
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 924
+			(_port A19 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1638 1265381370993 PGAND21
+(_unit PGAND21
+	(_specify
+		(_modpath parallel unknown 0 972
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 973
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 974
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 975
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 976
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 977
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 978
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 979
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 980
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 981
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 982
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 983
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 984
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 985
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 986
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 987
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 988
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 989
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 990
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 991
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 992
+			(_port A20 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1737 1265381370998 PGAND22
+(_unit PGAND22
+	(_specify
+		(_modpath parallel unknown 0 1040
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1041
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1042
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1043
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1044
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1045
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1046
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1047
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1048
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1049
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1050
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1051
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1052
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1053
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1054
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1055
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1056
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1057
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1058
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1059
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1060
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1061
+			(_port A21 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1815 1265381371008 PGAND23
+(_unit PGAND23
+	(_specify
+		(_modpath parallel unknown 0 1110
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1111
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1112
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1113
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1114
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1115
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1116
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1117
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1118
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1119
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1120
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1121
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1122
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1123
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1124
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1125
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1126
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1127
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1128
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1129
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1130
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1131
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1132
+			(_port A22 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1893 1265381371013 PGAND24
+(_unit PGAND24
+	(_specify
+		(_modpath parallel unknown 0 1182
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1183
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1184
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1185
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1186
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1187
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1188
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1189
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1190
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1191
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1192
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1193
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1194
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1195
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1196
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1197
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1198
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1199
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1200
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1201
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1202
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1203
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1204
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1205
+			(_port A23 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 1971 1265381371018 PGAND25
+(_unit PGAND25
+	(_specify
+		(_modpath parallel unknown 0 1259
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1260
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1261
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1262
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1263
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1264
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1265
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1266
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1267
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1268
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1269
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1270
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1271
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1272
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1273
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1274
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1275
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1276
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1277
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1278
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1279
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1280
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1281
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1282
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1283
+			(_port A24 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2049 1265381371023 PGAND26
+(_unit PGAND26
+	(_specify
+		(_modpath parallel unknown 0 1335
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1336
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1337
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1338
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1339
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1340
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1341
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1342
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1343
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1344
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1345
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1346
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1347
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1348
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1349
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1350
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1351
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1352
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1353
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1354
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1355
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1356
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1357
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1358
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1359
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1360
+			(_port A25 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2127 1265381371028 PGAND27
+(_unit PGAND27
+	(_specify
+		(_modpath parallel unknown 0 1412
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1413
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1414
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1415
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1416
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1417
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1418
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1419
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1420
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1421
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1422
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1423
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1424
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1425
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1426
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1427
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1428
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1429
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1430
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1431
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1432
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1433
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1434
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1435
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1436
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1437
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1438
+			(_port A26 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2205 1265381371033 PGAND28
+(_unit PGAND28
+	(_specify
+		(_modpath parallel unknown 0 1491
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1492
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1493
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1494
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1495
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1496
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1497
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1498
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1499
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1500
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1501
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1502
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1503
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1504
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1505
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1506
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1507
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1508
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1509
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1510
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1511
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1512
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1513
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1514
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1515
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1516
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1517
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1518
+			(_port A27 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2283 1265381371038 PGAND29
+(_unit PGAND29
+	(_specify
+		(_modpath parallel unknown 0 1572
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1573
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1574
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1575
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1576
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1577
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1578
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1579
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1580
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1581
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1582
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1583
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1584
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1585
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1586
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1587
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1588
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1589
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1590
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1591
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1592
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1593
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1594
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1595
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1596
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1597
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1598
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1599
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1600
+			(_port A28 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 261 1265381371043 PGAND3
+(_unit PGAND3
+	(_specify
+		(_modpath parallel unknown 0 1621
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1622
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1623
+			(_port A2 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2361 1265381371048 PGAND30
+(_unit PGAND30
+	(_specify
+		(_modpath parallel unknown 0 1676
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1677
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1678
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1679
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1680
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1681
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1682
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1683
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1684
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1685
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1686
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1687
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1688
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1689
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1690
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1691
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1692
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1693
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1694
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1695
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1696
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1697
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1698
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1699
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1700
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1701
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1702
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1703
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1704
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1705
+			(_port A29 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2439 1265381371053 PGAND31
+(_unit PGAND31
+	(_specify
+		(_modpath parallel unknown 0 1761
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1762
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1763
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1764
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1765
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1766
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1767
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1768
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1769
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1770
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1771
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1772
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1773
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1774
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1775
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1776
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1777
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1778
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1779
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1780
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1781
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1782
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1783
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1784
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1785
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1786
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1787
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1788
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1789
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1790
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1791
+			(_port A30 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2517 1265381371058 PGAND32
+(_unit PGAND32
+	(_specify
+		(_modpath parallel unknown 0 1848
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1849
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1850
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1851
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1852
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1853
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1854
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1855
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1856
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1857
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1858
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1859
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1860
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1861
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1862
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1863
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1864
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1865
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1866
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1867
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1868
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1869
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1870
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1871
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1872
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1873
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1874
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1875
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1876
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1877
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1878
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1879
+			(_port A31 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2595 1265381371063 PGAND33
+(_unit PGAND33
+	(_specify
+		(_modpath parallel unknown 0 1937
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1938
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1939
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1940
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1941
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1942
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1943
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1944
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1945
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1946
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1947
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1948
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1949
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1950
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1951
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1952
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1953
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1954
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1955
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1956
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1957
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1958
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1959
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1960
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1961
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1962
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1963
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1964
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1965
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1966
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1967
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1968
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 1969
+			(_port A32 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2673 1265381371071 PGAND34
+(_unit PGAND34
+	(_specify
+		(_modpath parallel unknown 0 2028
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2029
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2030
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2031
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2032
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2033
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2034
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2035
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2036
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2037
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2038
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2039
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2040
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2041
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2042
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2043
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2044
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2045
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2046
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2047
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2048
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2049
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2050
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2051
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2052
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2053
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2054
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2055
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2056
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2057
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2058
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2059
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2060
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2061
+			(_port A33 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2751 1265381371118 PGAND35
+(_unit PGAND35
+	(_specify
+		(_modpath parallel unknown 0 2121
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2122
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2123
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2124
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2125
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2126
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2127
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2128
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2129
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2130
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2131
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2132
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2133
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2134
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2135
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2136
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2137
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2138
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2139
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2140
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2141
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2142
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2143
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2144
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2145
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2146
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2147
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2148
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2149
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2150
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2151
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2152
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2153
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2154
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2155
+			(_port A34 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2829 1265381371123 PGAND36
+(_unit PGAND36
+	(_specify
+		(_modpath parallel unknown 0 2216
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2217
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2218
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2219
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2220
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2221
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2222
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2223
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2224
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2225
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2226
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2227
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2228
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2229
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2230
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2231
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2232
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2233
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2234
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2235
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2236
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2237
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2238
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2239
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2240
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2241
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2242
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2243
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2244
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2245
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2246
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2247
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2248
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2249
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2250
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2251
+			(_port A35 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2907 1265381371128 PGAND37
+(_unit PGAND37
+	(_specify
+		(_modpath parallel unknown 0 2313
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2314
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2315
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2316
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2317
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2318
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2319
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2320
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2321
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2322
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2323
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2324
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2325
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2326
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2327
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2328
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2329
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2330
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2331
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2332
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2333
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2334
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2335
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2336
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2337
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2338
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2339
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2340
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2341
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2342
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2343
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2344
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2345
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2346
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2347
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2348
+			(_port A35 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2349
+			(_port A36 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 2985 1265381371133 PGAND38
+(_unit PGAND38
+	(_specify
+		(_modpath parallel unknown 0 2412
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2413
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2414
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2415
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2416
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2417
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2418
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2419
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2420
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2421
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2422
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2423
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2424
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2425
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2426
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2427
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2428
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2429
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2430
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2431
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2432
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2433
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2434
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2435
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2436
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2437
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2438
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2439
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2440
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2441
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2442
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2443
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2444
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2445
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2446
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2447
+			(_port A35 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2448
+			(_port A36 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2449
+			(_port A37 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 3063 1265381371138 PGAND39
+(_unit PGAND39
+	(_specify
+		(_modpath parallel unknown 0 2513
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2514
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2515
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2516
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2517
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2518
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2519
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2520
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2521
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2522
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2523
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2524
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2525
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2526
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2527
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2528
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2529
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2530
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2531
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2532
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2533
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2534
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2535
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2536
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2537
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2538
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2539
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2540
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2541
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2542
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2543
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2544
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2545
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2546
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2547
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2548
+			(_port A35 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2549
+			(_port A36 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2550
+			(_port A37 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2551
+			(_port A38 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 338 1265381371148 PGAND4
+(_unit PGAND4
+	(_specify
+		(_modpath parallel unknown 0 2575
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2576
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2577
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2578
+			(_port A3 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 3141 1265381371153 PGAND40
+(_unit PGAND40
+	(_specify
+		(_modpath parallel unknown 0 2643
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2644
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2645
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2646
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2647
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2648
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2649
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2650
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2651
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2652
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2653
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2654
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2655
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2656
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2657
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2658
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2659
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2660
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2661
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2662
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2663
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2664
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2665
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2666
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2667
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2668
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2669
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2670
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2671
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2672
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2673
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2674
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2675
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2676
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2677
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2678
+			(_port A35 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2679
+			(_port A36 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2680
+			(_port A37 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2681
+			(_port A38 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2682
+			(_port A39 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 3219 1265381371165 PGAND41
+(_unit PGAND41
+	(_specify
+		(_modpath parallel unknown 0 2748
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2749
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2750
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2751
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2752
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2753
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2754
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2755
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2756
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2757
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2758
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2759
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2760
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2761
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2762
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2763
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2764
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2765
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2766
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2767
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2768
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2769
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2770
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2771
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2772
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2773
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2774
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2775
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2776
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2777
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2778
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2779
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2780
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2781
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2782
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2783
+			(_port A35 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2784
+			(_port A36 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2785
+			(_port A37 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2786
+			(_port A38 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2787
+			(_port A39 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2788
+			(_port A40 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 3297 1265381371170 PGAND42
+(_unit PGAND42
+	(_specify
+		(_modpath parallel unknown 0 2855
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2856
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2857
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2858
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2859
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2860
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2861
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2862
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2863
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2864
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2865
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2866
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2867
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2868
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2869
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2870
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2871
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2872
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2873
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2874
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2875
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2876
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2877
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2878
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2879
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2880
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2881
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2882
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2883
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2884
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2885
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2886
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2887
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2888
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2889
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2890
+			(_port A35 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2891
+			(_port A36 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2892
+			(_port A37 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2893
+			(_port A38 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2894
+			(_port A39 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2895
+			(_port A40 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2896
+			(_port A41 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 3375 1265381371179 PGAND43
+(_unit PGAND43
+	(_specify
+		(_modpath parallel unknown 0 2964
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2965
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2966
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2967
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2968
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2969
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2970
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2971
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2972
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2973
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2974
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2975
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2976
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2977
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2978
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2979
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2980
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2981
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2982
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2983
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2984
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2985
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2986
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2987
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2988
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2989
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2990
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2991
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2992
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2993
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2994
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2995
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2996
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2997
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2998
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 2999
+			(_port A35 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3000
+			(_port A36 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3001
+			(_port A37 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3002
+			(_port A38 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3003
+			(_port A39 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3004
+			(_port A40 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3005
+			(_port A41 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3006
+			(_port A42 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 3453 1265381371184 PGAND44
+(_unit PGAND44
+	(_specify
+		(_modpath parallel unknown 0 3075
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3076
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3077
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3078
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3079
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3080
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3081
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3082
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3083
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3084
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3085
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3086
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3087
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3088
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3089
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3090
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3091
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3092
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3093
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3094
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3095
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3096
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3097
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3098
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3099
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3100
+			(_port A25 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3101
+			(_port A26 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3102
+			(_port A27 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3103
+			(_port A28 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3104
+			(_port A29 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3105
+			(_port A30 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3106
+			(_port A31 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3107
+			(_port A32 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3108
+			(_port A33 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3109
+			(_port A34 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3110
+			(_port A35 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3111
+			(_port A36 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3112
+			(_port A37 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3113
+			(_port A38 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3114
+			(_port A39 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3115
+			(_port A40 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3116
+			(_port A41 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3117
+			(_port A42 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3118
+			(_port A43 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 415 1265381371196 PGAND5
+(_unit PGAND5
+	(_specify
+		(_modpath parallel unknown 0 3147
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3148
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3149
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3150
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3151
+			(_port A4 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 492 1265381371201 PGAND6
+(_unit PGAND6
+	(_specify
+		(_modpath parallel unknown 0 3182
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3183
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3184
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3185
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3186
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3187
+			(_port A5 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 569 1265381371210 PGAND7
+(_unit PGAND7
+	(_specify
+		(_modpath parallel unknown 0 3217
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3218
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3219
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3220
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3221
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3222
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3223
+			(_port A6 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 646 1265381371226 PGAND8
+(_unit PGAND8
+	(_specify
+		(_modpath parallel unknown 0 3259
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3260
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3261
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3262
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3263
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3264
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3265
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3266
+			(_port A7 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 723 1265381371231 PGAND9
+(_unit PGAND9
+	(_specify
+		(_modpath parallel unknown 0 3301
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3302
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3303
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3304
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3305
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3306
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3307
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3308
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3309
+			(_port A8 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371243 PGANDD1
+(_unit PGANDD1
+	(_specify
+		(_modpath parallel unknown 0 3332
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 802 1265381371248 PGANDD10
+(_unit PGANDD10
+	(_specify
+		(_modpath parallel unknown 0 3368
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3369
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3370
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3371
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3372
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3373
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3374
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3375
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3376
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3377
+			(_port A9 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 880 1265381371274 PGANDD11
+(_unit PGANDD11
+	(_specify
+		(_modpath parallel unknown 0 3416
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3417
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3418
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3419
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3420
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3421
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3422
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3423
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3424
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3425
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3426
+			(_port A10 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 958 1265381371290 PGANDD12
+(_unit PGANDD12
+	(_specify
+		(_modpath parallel unknown 0 3466
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3467
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3468
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3469
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3470
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3471
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3472
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3473
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3474
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3475
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3476
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3477
+			(_port A11 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1036 1265381371295 PGANDD13
+(_unit PGANDD13
+	(_specify
+		(_modpath parallel unknown 0 3517
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3518
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3519
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3520
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3521
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3522
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3523
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3524
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3525
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3526
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3527
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3528
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3529
+			(_port A12 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1114 1265381371300 PGANDD14
+(_unit PGANDD14
+	(_specify
+		(_modpath parallel unknown 0 3570
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3571
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3572
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3573
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3574
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3575
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3576
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3577
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3578
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3579
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3580
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3581
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3582
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3583
+			(_port A13 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1192 1265381371305 PGANDD15
+(_unit PGANDD15
+	(_specify
+		(_modpath parallel unknown 0 3624
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3625
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3626
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3627
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3628
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3629
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3630
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3631
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3632
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3633
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3634
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3635
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3636
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3637
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3638
+			(_port A14 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1270 1265381371310 PGANDD16
+(_unit PGANDD16
+	(_specify
+		(_modpath parallel unknown 0 3680
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3681
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3682
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3683
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3684
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3685
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3686
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3687
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3688
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3689
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3690
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3691
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3692
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3693
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3694
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3695
+			(_port A15 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1348 1265381371321 PGANDD17
+(_unit PGANDD17
+	(_specify
+		(_modpath parallel unknown 0 3739
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3740
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3741
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3742
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3743
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3744
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3745
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3746
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3747
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3748
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3749
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3750
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3751
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3752
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3753
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3754
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3755
+			(_port A16 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1426 1265381371326 PGANDD18
+(_unit PGANDD18
+	(_specify
+		(_modpath parallel unknown 0 3800
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3801
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3802
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3803
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3804
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3805
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3806
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3807
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3808
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3809
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3810
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3811
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3812
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3813
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3814
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3815
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3816
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3817
+			(_port A17 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1504 1265381371331 PGANDD19
+(_unit PGANDD19
+	(_specify
+		(_modpath parallel unknown 0 3863
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3864
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3865
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3866
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3867
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3868
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3869
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3870
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3871
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3872
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3873
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3874
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3875
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3876
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3877
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3878
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3879
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3880
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3881
+			(_port A18 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 185 1265381371336 PGANDD2
+(_unit PGANDD2
+	(_specify
+		(_modpath parallel unknown 0 3904
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3905
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1582 1265381371341 PGANDD20
+(_unit PGANDD20
+	(_specify
+		(_modpath parallel unknown 0 3952
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3953
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3954
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3955
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3956
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3957
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3958
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3959
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3960
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3961
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3962
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3963
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3964
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3965
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3966
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3967
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3968
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3969
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3970
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 3971
+			(_port A19 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1660 1265381371346 PGANDD21
+(_unit PGANDD21
+	(_specify
+		(_modpath parallel unknown 0 4019
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4020
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4021
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4022
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4023
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4024
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4025
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4026
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4027
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4028
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4029
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4030
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4031
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4032
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4033
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4034
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4035
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4036
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4037
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4038
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4039
+			(_port A20 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1738 1265381371367 PGANDD22
+(_unit PGANDD22
+	(_specify
+		(_modpath parallel unknown 0 4087
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4088
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4089
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4090
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4091
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4092
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4093
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4094
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4095
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4096
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4097
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4098
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4099
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4100
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4101
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4102
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4103
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4104
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4105
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4106
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4107
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4108
+			(_port A21 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1816 1265381371372 PGANDD23
+(_unit PGANDD23
+	(_specify
+		(_modpath parallel unknown 0 4157
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4158
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4159
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4160
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4161
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4162
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4163
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4164
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4165
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4166
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4167
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4168
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4169
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4170
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4171
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4172
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4173
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4174
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4175
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4176
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4177
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4178
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4179
+			(_port A22 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1894 1265381371377 PGANDD24
+(_unit PGANDD24
+	(_specify
+		(_modpath parallel unknown 0 4229
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4230
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4231
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4232
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4233
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4234
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4235
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4236
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4237
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4238
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4239
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4240
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4241
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4242
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4243
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4244
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4245
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4246
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4247
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4248
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4249
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4250
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4251
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4252
+			(_port A23 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 1972 1265381371382 PGANDD25
+(_unit PGANDD25
+	(_specify
+		(_modpath parallel unknown 0 4306
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4307
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4308
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4309
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4310
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4311
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4312
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4313
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4314
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4315
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4316
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4317
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4318
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4319
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4320
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4321
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4322
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4323
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4324
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4325
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4326
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4327
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4328
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4329
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4330
+			(_port A24 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000040 56 2050 1265381371387 PGANDD26
+(_unit PGANDD26
+	(_specify
+		(_modpath parallel unknown 0 4382
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4383
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4384
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4385
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4386
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4387
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4388
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4389
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4390
+			(_port A8 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4391
+			(_port A9 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4392
+			(_port A10 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4393
+			(_port A11 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4394
+			(_port A12 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4395
+			(_port A13 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4396
+			(_port A14 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4397
+			(_port A15 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4398
+			(_port A16 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4399
+			(_port A17 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4400
+			(_port A18 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4401
+			(_port A19 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4402
+			(_port A20 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4403
+			(_port A21 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4404
+			(_port A22 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4405
+			(_port A23 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4406
+			(_port A24 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4407
+			(_port A25 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 262 1265381371415 PGANDD3
+(_unit PGANDD3
+	(_specify
+		(_modpath parallel unknown 0 4428
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4429
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4430
+			(_port A2 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 339 1265381371420 PGANDD4
+(_unit PGANDD4
+	(_specify
+		(_modpath parallel unknown 0 4452
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4453
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4454
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4455
+			(_port A3 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 416 1265381371425 PGANDD5
+(_unit PGANDD5
+	(_specify
+		(_modpath parallel unknown 0 4484
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4485
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4486
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4487
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4488
+			(_port A4 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 493 1265381371430 PGANDD6
+(_unit PGANDD6
+	(_specify
+		(_modpath parallel unknown 0 4519
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4520
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4521
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4522
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4523
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4524
+			(_port A5 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 570 1265381371435 PGANDD7
+(_unit PGANDD7
+	(_specify
+		(_modpath parallel unknown 0 4554
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4555
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4556
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4557
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4558
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4559
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4560
+			(_port A6 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 647 1265381371446 PGANDD8
+(_unit PGANDD8
+	(_specify
+		(_modpath parallel unknown 0 4596
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4597
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4598
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4599
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4600
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4601
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4602
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4603
+			(_port A7 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 724 1265381371451 PGANDD9
+(_unit PGANDD9
+	(_specify
+		(_modpath parallel unknown 0 4638
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4639
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4640
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4641
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4642
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4643
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4644
+			(_port A6 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4645
+			(_port A7 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 4646
+			(_port A8 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381371461 PGBUFE
+(_unit PGBUFE
+	(_specify
+		(_modpath parallel unknown 0 4669
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381371466 PGBUFF
+(_unit PGBUFF
+	(_specify
+		(_modpath parallel unknown 0 4690
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381371471 PGBUFI
+(_unit PGBUFI
+	(_specify
+		(_modpath parallel unknown 0 4711
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381371476 PGBUFK
+(_unit PGBUFK
+	(_specify
+		(_modpath parallel unknown 0 4732
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371481 PGBUFKI
+(_unit PGBUFKI
+	(_specify
+		(_modpath parallel unknown 0 4753
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381371486 PGBUFR
+(_unit PGBUFR
+	(_specify
+		(_modpath parallel unknown 0 4774
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371491 PGBUFXA
+(_unit PGBUFXA
+	(_specify
+		(_modpath parallel unknown 0 4795
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371496 PGBUFXI
+(_unit PGBUFXI
+	(_specify
+		(_modpath parallel unknown 0 4816
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371507 PGBUFXO
+(_unit PGBUFXO
+	(_specify
+		(_modpath parallel unknown 0 4837
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 1648 1265381371524 PGDFF
+(_unit PGDFF
+	(_specify
+		(_specparam ck0_to_q_param integer 1)
+		(_specparam ck1_to_q_param integer 1)
+		(_specparam d_to_q_param0 integer 0)
+		(_specparam d_to_q_param1 integer 0)
+		(_specparam reset_to_q_param integer 1)
+		(_specparam cd_to_q_param integer 0)
+		(_specparam D_hold0_limit_param integer 1)
+		(_specparam D_hold1_limit_param integer 1)
+		(_specparam R_hold_limit_param integer 0)
+		(_specparam CLR_hold_limit_param integer 0)
+		(_specparam pose0_pulse_width_param integer 1)
+		(_specparam pose1_pulse_width_param integer 1)
+		(_specparam nege0_pulse_width_param integer 1)
+		(_specparam nege1_pulse_width_param integer 1)
+		(_specparam PE_pulse_width_param integer 0)
+		(_specparam recovery_limit_param integer 0)
+		(_specparam PE_recovery_limit_param integer 0)
+		(_specparam D_setup0_limit_param integer 1)
+		(_specparam D_setup1_limit_param integer 1)
+		(_modpath parallel positive 0 4933
+			(_port CLK in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_modpath parallel positive 0 4937
+			(_port CD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_tchk setup 0 4944
+			(_port D0 ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 4945
+			(_port CLK (posedge))
+			(_port D0 ())
+		)
+		(_tchk width 0 4947
+			(_port CLK (posedge) (_code  1 D0))
+		)
+		(_tchk width 0 4948
+			(_port CLK (negedge) (_code  2 D0))
+		)
+		(_tchk width 0 4950
+			(_port CLK (posedge) (_code  3 NTB*D0))
+		)
+		(_tchk width 0 4951
+			(_port CLK (negedge) (_code  4 NTB*D0))
+		)
+		(_tchk recovery 0 4955
+			(_port CLK (posedge))
+			(_port CD (negedge))
+		)
+		(_tchk recovery 0 4956
+			(_port CD (negedge))
+			(_port CLK (posedge))
+		)
+	)
+)
+V 000038 56 1909 1265381371529 PGDFFR
+(_unit PGDFFR
+	(_specify
+		(_specparam ck0_to_q_param integer 1)
+		(_specparam ck1_to_q_param integer 1)
+		(_specparam d_to_q_param0 integer 0)
+		(_specparam d_to_q_param1 integer 0)
+		(_specparam reset_to_q_param integer 1)
+		(_specparam cd_to_q_param integer 0)
+		(_specparam D_hold0_limit_param integer 1)
+		(_specparam D_hold1_limit_param integer 1)
+		(_specparam R_hold_limit_param integer 0)
+		(_specparam CLR_hold_limit_param integer 0)
+		(_specparam pose0_pulse_width_param integer 1)
+		(_specparam pose1_pulse_width_param integer 1)
+		(_specparam nege0_pulse_width_param integer 1)
+		(_specparam nege1_pulse_width_param integer 1)
+		(_specparam PE_pulse_width_param integer 0)
+		(_specparam recovery_limit_param integer 0)
+		(_specparam PE_recovery_limit_param integer 0)
+		(_specparam D_setup0_limit_param integer 1)
+		(_specparam D_setup1_limit_param integer 1)
+		(_modpath parallel positive 0 5052
+			(_port CLK in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_modpath parallel positive 0 5056
+			(_port CD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_modpath parallel positive 0 5059
+			(_port RNESET in negedge)
+			(_port Q0 out negedge)
+		)
+		(_tchk setup 0 5064
+			(_port D0 ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 5065
+			(_port CLK (posedge))
+			(_port D0 ())
+		)
+		(_tchk width 0 5068
+			(_port CLK (posedge) (_code  1 D0))
+		)
+		(_tchk width 0 5069
+			(_port CLK (negedge) (_code  2 D0))
+		)
+		(_tchk width 0 5071
+			(_port CLK (posedge) (_code  3 NTB*D0))
+		)
+		(_tchk width 0 5072
+			(_port CLK (negedge) (_code  4 NTB*D0))
+		)
+		(_tchk recovery 0 5076
+			(_port CLK (posedge))
+			(_port CD (negedge))
+		)
+		(_tchk recovery 0 5077
+			(_port CLK (posedge))
+			(_port RNESET (posedge))
+		)
+		(_tchk recovery 0 5078
+			(_port CD (negedge))
+			(_port CLK (posedge))
+		)
+		(_tchk recovery 0 5079
+			(_port RNESET (posedge))
+			(_port CLK (posedge))
+		)
+	)
+)
+V 000039 56 2091 1265381371534 PGDFFRS
+(_unit PGDFFRS
+	(_specify
+		(_specparam ck0_to_q_param integer 1)
+		(_specparam ck1_to_q_param integer 1)
+		(_specparam r_to_q_param integer 1)
+		(_specparam s_to_q_param integer 1)
+		(_specparam d_setup_limit_param integer 1)
+		(_specparam d_hold_limit_param integer 1)
+		(_specparam r_hold_limit_param integer 0)
+		(_specparam s_hold_limit_param integer 0)
+		(_specparam pose0_pulse_width_param integer 1)
+		(_specparam pose1_pulse_width_param integer 1)
+		(_specparam nege0_pulse_width_param integer 1)
+		(_specparam nege1_pulse_width_param integer 1)
+		(_specparam r_recovery_limit_param integer 0)
+		(_specparam s_recovery_limit_param integer 0)
+		(_specparam en_setup_limit_param integer 1)
+		(_specparam en_hold_limit_param integer 1)
+		(_specparam r_pulse_width_param integer 1)
+		(_specparam s_pulse_width_param integer 1)
+		(_modpath parallel positive 0 5155
+			(_port CLK in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_modpath parallel positive 0 5156
+			(_port CD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_modpath parallel positive 0 5157
+			(_port SD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_tchk setup 0 5162
+			(_port D0 ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 5163
+			(_port CLK (posedge))
+			(_port D0 ())
+		)
+		(_tchk setup 0 5165
+			(_port EN ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 5166
+			(_port CLK (posedge))
+			(_port EN ())
+		)
+		(_tchk width 0 5168
+			(_port CLK (posedge) (_code  1 NTB*D0))
+		)
+		(_tchk width 0 5169
+			(_port CLK (negedge) (_code  2 NTB*D0))
+		)
+		(_tchk width 0 5171
+			(_port CLK (posedge) (_code  3 D0))
+		)
+		(_tchk width 0 5172
+			(_port CLK (negedge) (_code  4 D0))
+		)
+		(_tchk recovery 0 5175
+			(_port CD (negedge))
+			(_port CLK (posedge))
+		)
+		(_tchk recovery 0 5176
+			(_port CLK (posedge))
+			(_port CD (negedge))
+		)
+		(_tchk recovery 0 5177
+			(_port SD (negedge))
+			(_port CLK (posedge))
+		)
+		(_tchk recovery 0 5178
+			(_port CLK (posedge))
+			(_port SD (negedge))
+		)
+		(_tchk width 0 5181
+			(_port CD (posedge))
+		)
+		(_tchk width 0 5182
+			(_port SD (posedge))
+		)
+	)
+)
+V 000038 56 1886 1265381371539 PGDLRS
+(_unit PGDLRS
+	(_specify
+		(_specparam pd_hold0_limit_param integer 1)
+		(_specparam pd_hold1_limit_param integer 1)
+		(_specparam pd_setup0_limit_param integer 1)
+		(_specparam pd_setup1_limit_param integer 1)
+		(_specparam pd0_to_q_param integer 1)
+		(_specparam pd1_to_q_param integer 1)
+		(_specparam pe0_to_q_param integer 1)
+		(_specparam pe1_to_q_param integer 1)
+		(_specparam pe_pulse0_width_param integer 1)
+		(_specparam pe_pulse1_width_param integer 1)
+		(_specparam hl_clr_to_q_param integer 1)
+		(_specparam lh_pre_to_q_param integer 1)
+		(_specparam clr_pulse_width_param integer 1)
+		(_specparam pre_pulse_width_param integer 1)
+		(_specparam clr_recovery_limit_param integer 0)
+		(_specparam pre_recovery_limit_param integer 0)
+		(_specparam clr_hold_limit_param integer 0)
+		(_specparam pre_hold_limit_param integer 0)
+		(_modpath parallel unknown 0 5255
+			(_port D0 in )
+			(_port Q0 out )
+		)
+		(_modpath parallel positive 0 5257
+			(_port G in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_modpath parallel positive 0 5258
+			(_port CD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_modpath parallel positive 0 5259
+			(_port SD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_tchk setup 0 5263
+			(_port D0 ())
+			(_port G (negedge))
+		)
+		(_tchk hold 0 5264
+			(_port G (negedge))
+			(_port D0 ())
+		)
+		(_tchk width 0 5267
+			(_port G (posedge) (_code  1 NTB*D0))
+		)
+		(_tchk width 0 5268
+			(_port G (posedge) (_code  2 D0))
+		)
+		(_tchk width 0 5271
+			(_port CD (posedge))
+		)
+		(_tchk width 0 5272
+			(_port SD (posedge))
+		)
+		(_tchk recovery 0 5275
+			(_port CD (negedge))
+			(_port G (negedge))
+		)
+		(_tchk recovery 0 5276
+			(_port G (negedge))
+			(_port CD (negedge))
+		)
+		(_tchk recovery 0 5277
+			(_port SD (negedge))
+			(_port G (negedge))
+		)
+		(_tchk recovery 0 5278
+			(_port G (negedge))
+			(_port SD (negedge))
+		)
+	)
+)
+V 000037 56 108 1265381371544 PGINVI
+(_unit PGINVI
+	(_specify
+		(_modpath parallel unknown 0 5302
+			(_port A0 in )
+			(_port ZN0 out )
+		)
+	)
+)
+V 000037 56 108 1265381371549 PGINVK
+(_unit PGINVK
+	(_specify
+		(_modpath parallel unknown 0 5325
+			(_port A0 in )
+			(_port ZN0 out )
+		)
+	)
+)
+V 000038 56 109 1265381371555 PGINVKI
+(_unit PGINVKI
+	(_specify
+		(_modpath parallel unknown 0 5348
+			(_port A0 in )
+			(_port ZN0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371560 PGORF41
+(_unit PGORF41
+	(_specify
+		(_modpath parallel unknown 0 5370
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 185 1265381371565 PGORF42
+(_unit PGORF42
+	(_specify
+		(_modpath parallel unknown 0 5395
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5396
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 262 1265381371570 PGORF43
+(_unit PGORF43
+	(_specify
+		(_modpath parallel unknown 0 5420
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5421
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5422
+			(_port A2 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 339 1265381371601 PGORF44
+(_unit PGORF44
+	(_specify
+		(_modpath parallel unknown 0 5448
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5449
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5450
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5451
+			(_port A3 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371606 PGORF51
+(_unit PGORF51
+	(_specify
+		(_modpath parallel unknown 0 5473
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 185 1265381371611 PGORF52
+(_unit PGORF52
+	(_specify
+		(_modpath parallel unknown 0 5498
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5499
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 262 1265381371616 PGORF53
+(_unit PGORF53
+	(_specify
+		(_modpath parallel unknown 0 5523
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5524
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5525
+			(_port A2 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 339 1265381371621 PGORF54
+(_unit PGORF54
+	(_specify
+		(_modpath parallel unknown 0 5551
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5552
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5553
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5554
+			(_port A3 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 416 1265381371626 PGORF55
+(_unit PGORF55
+	(_specify
+		(_modpath parallel unknown 0 5581
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5582
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5583
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5584
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5585
+			(_port A4 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371632 PGORF71
+(_unit PGORF71
+	(_specify
+		(_modpath parallel unknown 0 5607
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 185 1265381371648 PGORF72
+(_unit PGORF72
+	(_specify
+		(_modpath parallel unknown 0 5632
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5633
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 262 1265381371653 PGORF73
+(_unit PGORF73
+	(_specify
+		(_modpath parallel unknown 0 5657
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5658
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5659
+			(_port A2 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 339 1265381371680 PGORF74
+(_unit PGORF74
+	(_specify
+		(_modpath parallel unknown 0 5685
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5686
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5687
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5688
+			(_port A3 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 416 1265381371696 PGORF75
+(_unit PGORF75
+	(_specify
+		(_modpath parallel unknown 0 5715
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5716
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5717
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5718
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5719
+			(_port A4 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 493 1265381371727 PGORF76
+(_unit PGORF76
+	(_specify
+		(_modpath parallel unknown 0 5749
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5750
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5751
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5752
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5753
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5754
+			(_port A5 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 570 1265381371742 PGORF77
+(_unit PGORF77
+	(_specify
+		(_modpath parallel unknown 0 5786
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5787
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5788
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5789
+			(_port A3 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5790
+			(_port A4 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5791
+			(_port A5 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5792
+			(_port A6 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371773 PGORFB1
+(_unit PGORFB1
+	(_specify
+		(_modpath parallel unknown 0 5816
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 185 1265381371789 PGORFB2
+(_unit PGORFB2
+	(_specify
+		(_modpath parallel unknown 0 5841
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5842
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 262 1265381371804 PGORFB3
+(_unit PGORFB3
+	(_specify
+		(_modpath parallel unknown 0 5866
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5867
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5868
+			(_port A2 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 339 1265381371809 PGORFB4
+(_unit PGORFB4
+	(_specify
+		(_modpath parallel unknown 0 5894
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5895
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5896
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5897
+			(_port A3 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381371814 PGORFBO1
+(_unit PGORFBO1
+	(_specify
+		(_modpath parallel unknown 0 5919
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 186 1265381371819 PGORFBO2
+(_unit PGORFBO2
+	(_specify
+		(_modpath parallel unknown 0 5943
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5944
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 263 1265381371824 PGORFBO3
+(_unit PGORFBO3
+	(_specify
+		(_modpath parallel unknown 0 5972
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5973
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 5974
+			(_port A2 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 340 1265381371835 PGORFBO4
+(_unit PGORFBO4
+	(_specify
+		(_modpath parallel unknown 0 6003
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6004
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6005
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6006
+			(_port A3 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381371840 PGORG1
+(_unit PGORG1
+	(_specify
+		(_modpath parallel unknown 0 6030
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 184 1265381371845 PGORG2
+(_unit PGORG2
+	(_specify
+		(_modpath parallel unknown 0 6057
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6058
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 261 1265381371850 PGORG3
+(_unit PGORG3
+	(_specify
+		(_modpath parallel unknown 0 6081
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6082
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6083
+			(_port A2 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 338 1265381371855 PGORG4
+(_unit PGORG4
+	(_specify
+		(_modpath parallel unknown 0 6105
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6106
+			(_port A1 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6107
+			(_port A2 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6108
+			(_port A3 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 185 1265381371860 PGTRI
+(_unit PGTRI
+	(_specify
+		(_modpath parallel unknown 0 6130
+			(_port A0 in )
+			(_port XO0 out )
+		)
+		(_modpath parallel unknown 0 6131
+			(_port OE in )
+			(_port XO0 out )
+		)
+	)
+)
+V 000037 56 184 1265381371865 PGXOR2
+(_unit PGXOR2
+	(_specify
+		(_modpath parallel unknown 0 6155
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 6156
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371870 PKBUFG1
+(_unit PKBUFG1
+	(_specify
+		(_modpath parallel unknown 0 6180
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371875 PKBUFG2
+(_unit PKBUFG2
+	(_specify
+		(_modpath parallel unknown 0 6201
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371880 PKBUFX0
+(_unit PKBUFX0
+	(_specify
+		(_modpath parallel unknown 0 6222
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371885 PKBUFX1
+(_unit PKBUFX1
+	(_specify
+		(_modpath parallel unknown 0 6243
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 107 1265381371890 PKIN0
+(_unit PKIN0
+	(_specify
+		(_modpath parallel unknown 0 6264
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 107 1265381371895 PKIN1
+(_unit PKIN1
+	(_specify
+		(_modpath parallel unknown 0 6286
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 107 1265381371900 PKIN2
+(_unit PKIN2
+	(_specify
+		(_modpath parallel unknown 0 6309
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 107 1265381371905 PKIN3
+(_unit PKIN3
+	(_specify
+		(_modpath parallel unknown 0 6332
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 107 1265381371910 PKIN4
+(_unit PKIN4
+	(_specify
+		(_modpath parallel unknown 0 6355
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 107 1265381371915 PKIN5
+(_unit PKIN5
+	(_specify
+		(_modpath parallel unknown 0 6378
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 107 1265381371920 PKIN6
+(_unit PKIN6
+	(_specify
+		(_modpath parallel unknown 0 6401
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 107 1265381371925 PKIN7
+(_unit PKIN7
+	(_specify
+		(_modpath parallel unknown 0 6424
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381371930 PRBUFB
+(_unit PRBUFB
+	(_specify
+		(_modpath parallel unknown 0 6447
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371935 PRBUFD1
+(_unit PRBUFD1
+	(_specify
+		(_modpath parallel unknown 0 6468
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371940 PRBUFD2
+(_unit PRBUFD2
+	(_specify
+		(_modpath parallel unknown 0 6489
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371945 PRBUFD3
+(_unit PRBUFD3
+	(_specify
+		(_modpath parallel unknown 0 6510
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371950 PRBUFD4
+(_unit PRBUFD4
+	(_specify
+		(_modpath parallel unknown 0 6531
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371955 PRBUFD5
+(_unit PRBUFD5
+	(_specify
+		(_modpath parallel unknown 0 6552
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371960 PRBUFD6
+(_unit PRBUFD6
+	(_specify
+		(_modpath parallel unknown 0 6573
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371965 PRBUFD7
+(_unit PRBUFD7
+	(_specify
+		(_modpath parallel unknown 0 6594
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371970 PRBUFD8
+(_unit PRBUFD8
+	(_specify
+		(_modpath parallel unknown 0 6615
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381371975 PRBUFE1
+(_unit PRBUFE1
+	(_specify
+		(_modpath parallel unknown 0 6636
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381371980 PRBUFE10
+(_unit PRBUFE10
+	(_specify
+		(_modpath parallel unknown 0 6657
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381371985 PRBUFE11
+(_unit PRBUFE11
+	(_specify
+		(_modpath parallel unknown 0 6678
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381371990 PRBUFE12
+(_unit PRBUFE12
+	(_specify
+		(_modpath parallel unknown 0 6699
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381371995 PRBUFE13
+(_unit PRBUFE13
+	(_specify
+		(_modpath parallel unknown 0 6720
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372000 PRBUFE14
+(_unit PRBUFE14
+	(_specify
+		(_modpath parallel unknown 0 6741
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372005 PRBUFE15
+(_unit PRBUFE15
+	(_specify
+		(_modpath parallel unknown 0 6762
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372010 PRBUFE16
+(_unit PRBUFE16
+	(_specify
+		(_modpath parallel unknown 0 6783
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372015 PRBUFE17
+(_unit PRBUFE17
+	(_specify
+		(_modpath parallel unknown 0 6804
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372020 PRBUFE18
+(_unit PRBUFE18
+	(_specify
+		(_modpath parallel unknown 0 6825
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372025 PRBUFE19
+(_unit PRBUFE19
+	(_specify
+		(_modpath parallel unknown 0 6846
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372030 PRBUFE2
+(_unit PRBUFE2
+	(_specify
+		(_modpath parallel unknown 0 6867
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372035 PRBUFE20
+(_unit PRBUFE20
+	(_specify
+		(_modpath parallel unknown 0 6888
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372040 PRBUFE21
+(_unit PRBUFE21
+	(_specify
+		(_modpath parallel unknown 0 6909
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372045 PRBUFE22
+(_unit PRBUFE22
+	(_specify
+		(_modpath parallel unknown 0 6930
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372050 PRBUFE23
+(_unit PRBUFE23
+	(_specify
+		(_modpath parallel unknown 0 6951
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372055 PRBUFE24
+(_unit PRBUFE24
+	(_specify
+		(_modpath parallel unknown 0 6972
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372060 PRBUFE25
+(_unit PRBUFE25
+	(_specify
+		(_modpath parallel unknown 0 6993
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372065 PRBUFE26
+(_unit PRBUFE26
+	(_specify
+		(_modpath parallel unknown 0 7014
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372070 PRBUFE27
+(_unit PRBUFE27
+	(_specify
+		(_modpath parallel unknown 0 7035
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372075 PRBUFE28
+(_unit PRBUFE28
+	(_specify
+		(_modpath parallel unknown 0 7056
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372080 PRBUFE29
+(_unit PRBUFE29
+	(_specify
+		(_modpath parallel unknown 0 7077
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372085 PRBUFE3
+(_unit PRBUFE3
+	(_specify
+		(_modpath parallel unknown 0 7098
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372090 PRBUFE30
+(_unit PRBUFE30
+	(_specify
+		(_modpath parallel unknown 0 7119
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372095 PRBUFE31
+(_unit PRBUFE31
+	(_specify
+		(_modpath parallel unknown 0 7140
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372100 PRBUFE32
+(_unit PRBUFE32
+	(_specify
+		(_modpath parallel unknown 0 7161
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372105 PRBUFE4
+(_unit PRBUFE4
+	(_specify
+		(_modpath parallel unknown 0 7182
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372110 PRBUFE5
+(_unit PRBUFE5
+	(_specify
+		(_modpath parallel unknown 0 7203
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372115 PRBUFE6
+(_unit PRBUFE6
+	(_specify
+		(_modpath parallel unknown 0 7224
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372120 PRBUFE7
+(_unit PRBUFE7
+	(_specify
+		(_modpath parallel unknown 0 7245
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372125 PRBUFE8
+(_unit PRBUFE8
+	(_specify
+		(_modpath parallel unknown 0 7266
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372130 PRBUFE9
+(_unit PRBUFE9
+	(_specify
+		(_modpath parallel unknown 0 7287
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372135 PRBUFG1
+(_unit PRBUFG1
+	(_specify
+		(_modpath parallel unknown 0 7308
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372140 PRBUFG2
+(_unit PRBUFG2
+	(_specify
+		(_modpath parallel unknown 0 7329
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372145 PRBUFG3
+(_unit PRBUFG3
+	(_specify
+		(_modpath parallel unknown 0 7350
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372150 PRBUFG4
+(_unit PRBUFG4
+	(_specify
+		(_modpath parallel unknown 0 7371
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372155 PRBUFGE
+(_unit PRBUFGE
+	(_specify
+		(_modpath parallel unknown 0 7392
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372160 PRBUFK1
+(_unit PRBUFK1
+	(_specify
+		(_modpath parallel unknown 0 7413
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372165 PRBUFK10
+(_unit PRBUFK10
+	(_specify
+		(_modpath parallel unknown 0 7434
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372170 PRBUFK11
+(_unit PRBUFK11
+	(_specify
+		(_modpath parallel unknown 0 7455
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372175 PRBUFK12
+(_unit PRBUFK12
+	(_specify
+		(_modpath parallel unknown 0 7476
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372180 PRBUFK13
+(_unit PRBUFK13
+	(_specify
+		(_modpath parallel unknown 0 7497
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372185 PRBUFK14
+(_unit PRBUFK14
+	(_specify
+		(_modpath parallel unknown 0 7518
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372190 PRBUFK15
+(_unit PRBUFK15
+	(_specify
+		(_modpath parallel unknown 0 7539
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372195 PRBUFK16
+(_unit PRBUFK16
+	(_specify
+		(_modpath parallel unknown 0 7560
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372200 PRBUFK17
+(_unit PRBUFK17
+	(_specify
+		(_modpath parallel unknown 0 7581
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372205 PRBUFK18
+(_unit PRBUFK18
+	(_specify
+		(_modpath parallel unknown 0 7602
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372210 PRBUFK19
+(_unit PRBUFK19
+	(_specify
+		(_modpath parallel unknown 0 7623
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372215 PRBUFK2
+(_unit PRBUFK2
+	(_specify
+		(_modpath parallel unknown 0 7644
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372220 PRBUFK20
+(_unit PRBUFK20
+	(_specify
+		(_modpath parallel unknown 0 7665
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372225 PRBUFK21
+(_unit PRBUFK21
+	(_specify
+		(_modpath parallel unknown 0 7686
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372230 PRBUFK22
+(_unit PRBUFK22
+	(_specify
+		(_modpath parallel unknown 0 7707
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372235 PRBUFK23
+(_unit PRBUFK23
+	(_specify
+		(_modpath parallel unknown 0 7728
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372240 PRBUFK24
+(_unit PRBUFK24
+	(_specify
+		(_modpath parallel unknown 0 7749
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372245 PRBUFK25
+(_unit PRBUFK25
+	(_specify
+		(_modpath parallel unknown 0 7770
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372250 PRBUFK26
+(_unit PRBUFK26
+	(_specify
+		(_modpath parallel unknown 0 7791
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372255 PRBUFK27
+(_unit PRBUFK27
+	(_specify
+		(_modpath parallel unknown 0 7812
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372260 PRBUFK28
+(_unit PRBUFK28
+	(_specify
+		(_modpath parallel unknown 0 7833
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372265 PRBUFK29
+(_unit PRBUFK29
+	(_specify
+		(_modpath parallel unknown 0 7854
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372270 PRBUFK3
+(_unit PRBUFK3
+	(_specify
+		(_modpath parallel unknown 0 7875
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372275 PRBUFK30
+(_unit PRBUFK30
+	(_specify
+		(_modpath parallel unknown 0 7896
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372280 PRBUFK31
+(_unit PRBUFK31
+	(_specify
+		(_modpath parallel unknown 0 7917
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372285 PRBUFK32
+(_unit PRBUFK32
+	(_specify
+		(_modpath parallel unknown 0 7938
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372290 PRBUFK33
+(_unit PRBUFK33
+	(_specify
+		(_modpath parallel unknown 0 7959
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372295 PRBUFK34
+(_unit PRBUFK34
+	(_specify
+		(_modpath parallel unknown 0 7980
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372300 PRBUFK35
+(_unit PRBUFK35
+	(_specify
+		(_modpath parallel unknown 0 8001
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372305 PRBUFK36
+(_unit PRBUFK36
+	(_specify
+		(_modpath parallel unknown 0 8022
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372310 PRBUFK37
+(_unit PRBUFK37
+	(_specify
+		(_modpath parallel unknown 0 8043
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372315 PRBUFK38
+(_unit PRBUFK38
+	(_specify
+		(_modpath parallel unknown 0 8064
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372320 PRBUFK39
+(_unit PRBUFK39
+	(_specify
+		(_modpath parallel unknown 0 8085
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372325 PRBUFK4
+(_unit PRBUFK4
+	(_specify
+		(_modpath parallel unknown 0 8106
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372330 PRBUFK40
+(_unit PRBUFK40
+	(_specify
+		(_modpath parallel unknown 0 8127
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372335 PRBUFK41
+(_unit PRBUFK41
+	(_specify
+		(_modpath parallel unknown 0 8148
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372340 PRBUFK42
+(_unit PRBUFK42
+	(_specify
+		(_modpath parallel unknown 0 8169
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372345 PRBUFK43
+(_unit PRBUFK43
+	(_specify
+		(_modpath parallel unknown 0 8190
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372350 PRBUFK44
+(_unit PRBUFK44
+	(_specify
+		(_modpath parallel unknown 0 8211
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372355 PRBUFK45
+(_unit PRBUFK45
+	(_specify
+		(_modpath parallel unknown 0 8232
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372360 PRBUFK46
+(_unit PRBUFK46
+	(_specify
+		(_modpath parallel unknown 0 8253
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372365 PRBUFK47
+(_unit PRBUFK47
+	(_specify
+		(_modpath parallel unknown 0 8274
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372370 PRBUFK48
+(_unit PRBUFK48
+	(_specify
+		(_modpath parallel unknown 0 8295
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372375 PRBUFK5
+(_unit PRBUFK5
+	(_specify
+		(_modpath parallel unknown 0 8316
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372380 PRBUFK6
+(_unit PRBUFK6
+	(_specify
+		(_modpath parallel unknown 0 8337
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372385 PRBUFK7
+(_unit PRBUFK7
+	(_specify
+		(_modpath parallel unknown 0 8358
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372390 PRBUFK8
+(_unit PRBUFK8
+	(_specify
+		(_modpath parallel unknown 0 8379
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372395 PRBUFK9
+(_unit PRBUFK9
+	(_specify
+		(_modpath parallel unknown 0 8400
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372400 PRBUFL1
+(_unit PRBUFL1
+	(_specify
+		(_modpath parallel unknown 0 8421
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372405 PRBUFL2
+(_unit PRBUFL2
+	(_specify
+		(_modpath parallel unknown 0 8442
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372410 PRBUFL3
+(_unit PRBUFL3
+	(_specify
+		(_modpath parallel unknown 0 8463
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372415 PRBUFL4
+(_unit PRBUFL4
+	(_specify
+		(_modpath parallel unknown 0 8484
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372420 PRBUFL5
+(_unit PRBUFL5
+	(_specify
+		(_modpath parallel unknown 0 8505
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372425 PRBUFL6
+(_unit PRBUFL6
+	(_specify
+		(_modpath parallel unknown 0 8526
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372430 PRBUFL7
+(_unit PRBUFL7
+	(_specify
+		(_modpath parallel unknown 0 8547
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372435 PRBUFL8
+(_unit PRBUFL8
+	(_specify
+		(_modpath parallel unknown 0 8568
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372440 PRBUFO1
+(_unit PRBUFO1
+	(_specify
+		(_modpath parallel unknown 0 8589
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372445 PRBUFO10
+(_unit PRBUFO10
+	(_specify
+		(_modpath parallel unknown 0 8610
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372450 PRBUFO11
+(_unit PRBUFO11
+	(_specify
+		(_modpath parallel unknown 0 8631
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372455 PRBUFO12
+(_unit PRBUFO12
+	(_specify
+		(_modpath parallel unknown 0 8652
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372460 PRBUFO13
+(_unit PRBUFO13
+	(_specify
+		(_modpath parallel unknown 0 8673
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372465 PRBUFO14
+(_unit PRBUFO14
+	(_specify
+		(_modpath parallel unknown 0 8694
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372470 PRBUFO15
+(_unit PRBUFO15
+	(_specify
+		(_modpath parallel unknown 0 8715
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372475 PRBUFO16
+(_unit PRBUFO16
+	(_specify
+		(_modpath parallel unknown 0 8736
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372480 PRBUFO17
+(_unit PRBUFO17
+	(_specify
+		(_modpath parallel unknown 0 8757
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372485 PRBUFO18
+(_unit PRBUFO18
+	(_specify
+		(_modpath parallel unknown 0 8778
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372490 PRBUFO19
+(_unit PRBUFO19
+	(_specify
+		(_modpath parallel unknown 0 8799
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372495 PRBUFO2
+(_unit PRBUFO2
+	(_specify
+		(_modpath parallel unknown 0 8820
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372500 PRBUFO20
+(_unit PRBUFO20
+	(_specify
+		(_modpath parallel unknown 0 8841
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372505 PRBUFO21
+(_unit PRBUFO21
+	(_specify
+		(_modpath parallel unknown 0 8862
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372510 PRBUFO22
+(_unit PRBUFO22
+	(_specify
+		(_modpath parallel unknown 0 8883
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372515 PRBUFO23
+(_unit PRBUFO23
+	(_specify
+		(_modpath parallel unknown 0 8904
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372520 PRBUFO24
+(_unit PRBUFO24
+	(_specify
+		(_modpath parallel unknown 0 8925
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372525 PRBUFO25
+(_unit PRBUFO25
+	(_specify
+		(_modpath parallel unknown 0 8946
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372530 PRBUFO26
+(_unit PRBUFO26
+	(_specify
+		(_modpath parallel unknown 0 8967
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372535 PRBUFO27
+(_unit PRBUFO27
+	(_specify
+		(_modpath parallel unknown 0 8988
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372540 PRBUFO28
+(_unit PRBUFO28
+	(_specify
+		(_modpath parallel unknown 0 9009
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372545 PRBUFO29
+(_unit PRBUFO29
+	(_specify
+		(_modpath parallel unknown 0 9030
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372550 PRBUFO3
+(_unit PRBUFO3
+	(_specify
+		(_modpath parallel unknown 0 9051
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372555 PRBUFO30
+(_unit PRBUFO30
+	(_specify
+		(_modpath parallel unknown 0 9072
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372560 PRBUFO31
+(_unit PRBUFO31
+	(_specify
+		(_modpath parallel unknown 0 9093
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372565 PRBUFO32
+(_unit PRBUFO32
+	(_specify
+		(_modpath parallel unknown 0 9114
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372570 PRBUFO33
+(_unit PRBUFO33
+	(_specify
+		(_modpath parallel unknown 0 9135
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372575 PRBUFO34
+(_unit PRBUFO34
+	(_specify
+		(_modpath parallel unknown 0 9156
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372580 PRBUFO35
+(_unit PRBUFO35
+	(_specify
+		(_modpath parallel unknown 0 9177
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372585 PRBUFO36
+(_unit PRBUFO36
+	(_specify
+		(_modpath parallel unknown 0 9198
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372590 PRBUFO37
+(_unit PRBUFO37
+	(_specify
+		(_modpath parallel unknown 0 9219
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372595 PRBUFO38
+(_unit PRBUFO38
+	(_specify
+		(_modpath parallel unknown 0 9240
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372600 PRBUFO39
+(_unit PRBUFO39
+	(_specify
+		(_modpath parallel unknown 0 9261
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372605 PRBUFO4
+(_unit PRBUFO4
+	(_specify
+		(_modpath parallel unknown 0 9282
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372610 PRBUFO40
+(_unit PRBUFO40
+	(_specify
+		(_modpath parallel unknown 0 9303
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372615 PRBUFO41
+(_unit PRBUFO41
+	(_specify
+		(_modpath parallel unknown 0 9324
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372620 PRBUFO42
+(_unit PRBUFO42
+	(_specify
+		(_modpath parallel unknown 0 9345
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372625 PRBUFO43
+(_unit PRBUFO43
+	(_specify
+		(_modpath parallel unknown 0 9366
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372630 PRBUFO44
+(_unit PRBUFO44
+	(_specify
+		(_modpath parallel unknown 0 9387
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372635 PRBUFO45
+(_unit PRBUFO45
+	(_specify
+		(_modpath parallel unknown 0 9408
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372640 PRBUFO46
+(_unit PRBUFO46
+	(_specify
+		(_modpath parallel unknown 0 9429
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372645 PRBUFO47
+(_unit PRBUFO47
+	(_specify
+		(_modpath parallel unknown 0 9450
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372650 PRBUFO48
+(_unit PRBUFO48
+	(_specify
+		(_modpath parallel unknown 0 9471
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372655 PRBUFO5
+(_unit PRBUFO5
+	(_specify
+		(_modpath parallel unknown 0 9492
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372660 PRBUFO6
+(_unit PRBUFO6
+	(_specify
+		(_modpath parallel unknown 0 9513
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372665 PRBUFO7
+(_unit PRBUFO7
+	(_specify
+		(_modpath parallel unknown 0 9534
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372670 PRBUFO8
+(_unit PRBUFO8
+	(_specify
+		(_modpath parallel unknown 0 9555
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372675 PRBUFO9
+(_unit PRBUFO9
+	(_specify
+		(_modpath parallel unknown 0 9576
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381372680 PRBUFQ
+(_unit PRBUFQ
+	(_specify
+		(_modpath parallel unknown 0 9597
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381372685 PRBUFT
+(_unit PRBUFT
+	(_specify
+		(_modpath parallel unknown 0 9618
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372690 PRBUFX1
+(_unit PRBUFX1
+	(_specify
+		(_modpath parallel unknown 0 9639
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372695 PRBUFX2
+(_unit PRBUFX2
+	(_specify
+		(_modpath parallel unknown 0 9660
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372700 PRBUFX3
+(_unit PRBUFX3
+	(_specify
+		(_modpath parallel unknown 0 9681
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372705 PRBUFX4
+(_unit PRBUFX4
+	(_specify
+		(_modpath parallel unknown 0 9702
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 184 1265381372726 PXAND2
+(_unit PXAND2
+	(_specify
+		(_modpath parallel unknown 0 9724
+			(_port A0 in )
+			(_port Z0 out )
+		)
+		(_modpath parallel unknown 0 9725
+			(_port A1 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000039 56 109 1265381372731 PXBUFACO
+(_unit PXBUFACO
+	(_specify
+		(_modpath parallel unknown 0 9747
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381372736 PXBUFE
+(_unit PXBUFE
+	(_specify
+		(_modpath parallel unknown 0 9768
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381372741 PXBUFI
+(_unit PXBUFI
+	(_specify
+		(_modpath parallel unknown 0 9789
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381372746 PXBUFK
+(_unit PXBUFK
+	(_specify
+		(_modpath parallel unknown 0 9810
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381372751 PXBUFO
+(_unit PXBUFO
+	(_specify
+		(_modpath parallel unknown 0 9831
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000038 56 108 1265381372757 PXBUFQI
+(_unit PXBUFQI
+	(_specify
+		(_modpath parallel unknown 0 9852
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 107 1265381372762 PXBUFT
+(_unit PXBUFT
+	(_specify
+		(_modpath parallel unknown 0 9873
+			(_port A0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 1322 1265381372767 PXDFF
+(_unit PXDFF
+	(_specify
+		(_specparam ck0_to_q_param integer 1)
+		(_specparam ck1_to_q_param integer 1)
+		(_specparam reset_to_q_param integer 1)
+		(_specparam cd_to_q_param integer 0)
+		(_specparam D_hold0_limit_param integer 1)
+		(_specparam D_hold1_limit_param integer 1)
+		(_specparam R_hold_limit_param integer 0)
+		(_specparam CLR_hold_limit_param integer 0)
+		(_specparam pose0_pulse_width_param integer 1)
+		(_specparam pose1_pulse_width_param integer 1)
+		(_specparam nege0_pulse_width_param integer 1)
+		(_specparam nege1_pulse_width_param integer 1)
+		(_specparam PE_pulse_width_param integer 0)
+		(_specparam recovery_limit_param integer 0)
+		(_specparam PE_recovery_limit_param integer 0)
+		(_specparam D_setup0_limit_param integer 1)
+		(_specparam D_setup1_limit_param integer 1)
+		(_modpath parallel positive 0 9958
+			(_port CLK in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_tchk setup 0 9963
+			(_port D0 ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 9964
+			(_port CLK (posedge))
+			(_port D0 ())
+		)
+		(_tchk width 0 9966
+			(_port CLK (posedge) (_code  1 D0))
+		)
+		(_tchk width 0 9967
+			(_port CLK (negedge) (_code  2 D0))
+		)
+		(_tchk width 0 9969
+			(_port CLK (posedge) (_code  3 NTB*D0))
+		)
+		(_tchk width 0 9970
+			(_port CLK (negedge) (_code  4 NTB*D0))
+		)
+	)
+)
+V 000038 56 1593 1265381372772 PXDFFR
+(_unit PXDFFR
+	(_specify
+		(_specparam ck0_to_q_param integer 1)
+		(_specparam ck1_to_q_param integer 1)
+		(_specparam reset_to_q_param integer 1)
+		(_specparam cd_to_q_param integer 0)
+		(_specparam D_hold0_limit_param integer 1)
+		(_specparam D_hold1_limit_param integer 1)
+		(_specparam R_hold_limit_param integer 0)
+		(_specparam CLR_hold_limit_param integer 0)
+		(_specparam pose0_pulse_width_param integer 1)
+		(_specparam pose1_pulse_width_param integer 1)
+		(_specparam nege0_pulse_width_param integer 1)
+		(_specparam nege1_pulse_width_param integer 1)
+		(_specparam PE_pulse_width_param integer 0)
+		(_specparam recovery_limit_param integer 0)
+		(_specparam PE_recovery_limit_param integer 0)
+		(_specparam D_setup0_limit_param integer 1)
+		(_specparam D_setup1_limit_param integer 1)
+		(_modpath parallel positive 0 10056
+			(_port CLK in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_modpath parallel positive 0 10058
+			(_port RNESET in negedge)
+			(_port Q0 out negedge)
+		)
+		(_tchk setup 0 10065
+			(_port D0 ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 10066
+			(_port CLK (posedge))
+			(_port D0 ())
+		)
+		(_tchk width 0 10068
+			(_port CLK (posedge) (_code  1 D0))
+		)
+		(_tchk width 0 10069
+			(_port CLK (negedge) (_code  2 D0))
+		)
+		(_tchk width 0 10071
+			(_port CLK (posedge) (_code  3 NTB*D0))
+		)
+		(_tchk width 0 10072
+			(_port CLK (negedge) (_code  4 NTB*D0))
+		)
+		(_tchk recovery 0 10074
+			(_port CLK (posedge))
+			(_port RNESET (posedge))
+		)
+		(_tchk recovery 0 10075
+			(_port RNESET (posedge))
+			(_port CLK (posedge))
+		)
+	)
+)
+V 000039 56 2108 1265381372777 PXDFFRS
+(_unit PXDFFRS
+	(_specify
+		(_specparam ck0_to_q_param integer 1)
+		(_specparam ck1_to_q_param integer 1)
+		(_specparam r_to_q_param integer 1)
+		(_specparam s_to_q_param integer 1)
+		(_specparam d_setup_limit_param integer 1)
+		(_specparam d_hold_limit_param integer 1)
+		(_specparam r_hold_limit_param integer 0)
+		(_specparam s_hold_limit_param integer 0)
+		(_specparam pose0_pulse_width_param integer 1)
+		(_specparam pose1_pulse_width_param integer 1)
+		(_specparam nege0_pulse_width_param integer 1)
+		(_specparam nege1_pulse_width_param integer 1)
+		(_specparam r_recovery_limit_param integer 0)
+		(_specparam s_recovery_limit_param integer 0)
+		(_specparam en_setup_limit_param integer 1)
+		(_specparam en_hold_limit_param integer 1)
+		(_specparam r_pulse_width_param integer 1)
+		(_specparam s_pulse_width_param integer 1)
+		(_modpath parallel positive 0 10153
+			(_port CLK in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_modpath parallel positive 0 10154
+			(_port CD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_modpath parallel positive 0 10155
+			(_port SD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_tchk setup 0 10160
+			(_port D0 ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 10161
+			(_port CLK (posedge))
+			(_port D0 ())
+		)
+		(_tchk setup 0 10163
+			(_port EN ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 10164
+			(_port CLK (posedge))
+			(_port EN ())
+		)
+		(_tchk width 0 10166
+			(_port CLK (posedge) (_code  1 NTB*D0))
+		)
+		(_tchk width 0 10167
+			(_port CLK (negedge) (_code  2 NTB*D0))
+		)
+		(_tchk width 0 10169
+			(_port CLK (posedge) (_code  3 D0))
+		)
+		(_tchk width 0 10170
+			(_port CLK (negedge) (_code  4 D0))
+		)
+		(_tchk recovery 0 10173
+			(_port CD (negedge))
+			(_port CLK (posedge))
+		)
+		(_tchk recovery 0 10174
+			(_port CLK (posedge))
+			(_port CD (negedge))
+		)
+		(_tchk recovery 0 10175
+			(_port SD (negedge))
+			(_port CLK (posedge))
+		)
+		(_tchk recovery 0 10176
+			(_port CLK (posedge))
+			(_port SD (negedge))
+		)
+		(_tchk width 0 10179
+			(_port CD (posedge))
+		)
+		(_tchk width 0 10180
+			(_port SD (posedge))
+		)
+	)
+)
+V 000036 56 1068 1265381372782 PXDL
+(_unit PXDL
+	(_specify
+		(_specparam lh_clr_to_q integer 1)
+		(_specparam hl_clr_to_q integer 1)
+		(_specparam pd0_to_q integer 1)
+		(_specparam pd1_to_q integer 1)
+		(_specparam pe0_to_q integer 1)
+		(_specparam pe1_to_q integer 1)
+		(_specparam PD_hold0_limit integer 1)
+		(_specparam PD_hold1_limit integer 1)
+		(_specparam CLR_hold_limit integer 0)
+		(_specparam PE_pulse0_width integer 1)
+		(_specparam PE_pulse1_width integer 1)
+		(_specparam recovery_limit integer 0)
+		(_specparam PE_recovery_limit integer 0)
+		(_specparam PE_setup0_limit integer 1)
+		(_specparam PE_setup1_limit integer 1)
+		(_modpath parallel positive 0 10266
+			(_port D0 in )
+			(_port Q0 out )
+		)
+		(_modpath parallel positive 0 10268
+			(_port G in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_tchk setup 0 10275
+			(_port D0 ())
+			(_port G (negedge))
+		)
+		(_tchk hold 0 10276
+			(_port G (negedge))
+			(_port D0 ())
+		)
+		(_tchk width 0 10278
+			(_port G (posedge) (_code  1 D0))
+		)
+		(_tchk width 0 10279
+			(_port G (posedge) (_code  2 NTB*D0))
+		)
+	)
+)
+V 000037 56 1325 1265381372790 PXDLR
+(_unit PXDLR
+	(_specify
+		(_specparam lh_clr_to_q integer 1)
+		(_specparam hl_clr_to_q integer 1)
+		(_specparam pd0_to_q integer 1)
+		(_specparam pd1_to_q integer 1)
+		(_specparam pe0_to_q integer 1)
+		(_specparam pe1_to_q integer 1)
+		(_specparam PD_hold0_limit integer 1)
+		(_specparam PD_hold1_limit integer 1)
+		(_specparam CLR_hold_limit integer 0)
+		(_specparam PE_pulse0_width integer 1)
+		(_specparam PE_pulse1_width integer 1)
+		(_specparam recovery_limit integer 0)
+		(_specparam PE_recovery_limit integer 0)
+		(_specparam PE_setup0_limit integer 1)
+		(_specparam PE_setup1_limit integer 1)
+		(_modpath parallel unknown 0 10365
+			(_port D0 in )
+			(_port Q0 out )
+		)
+		(_modpath parallel unknown 0 10366
+			(_port G in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_modpath parallel unknown 0 10367
+			(_port RNESET in negedge)
+			(_port Q0 out negedge)
+		)
+		(_tchk setup 0 10372
+			(_port D0 ())
+			(_port G (negedge))
+		)
+		(_tchk hold 0 10373
+			(_port G (negedge))
+			(_port D0 ())
+		)
+		(_tchk width 0 10375
+			(_port G (posedge) (_code  1 D0))
+		)
+		(_tchk width 0 10376
+			(_port G (posedge) (_code  2 NTB*D0))
+		)
+		(_tchk recovery 0 10378
+			(_port RNESET (posedge))
+			(_port G (negedge))
+		)
+		(_tchk recovery 0 10379
+			(_port G (negedge))
+			(_port RNESET (posedge))
+		)
+	)
+)
+V 000038 56 1900 1265381372804 PXDLRS
+(_unit PXDLRS
+	(_specify
+		(_specparam pd_hold0_limit_param integer 1)
+		(_specparam pd_hold1_limit_param integer 1)
+		(_specparam pd_setup0_limit_param integer 1)
+		(_specparam pd_setup1_limit_param integer 1)
+		(_specparam pd0_to_q_param integer 1)
+		(_specparam pd1_to_q_param integer 1)
+		(_specparam pe0_to_q_param integer 1)
+		(_specparam pe1_to_q_param integer 1)
+		(_specparam pe_pulse0_width_param integer 1)
+		(_specparam pe_pulse1_width_param integer 1)
+		(_specparam hl_clr_to_q_param integer 1)
+		(_specparam lh_pre_to_q_param integer 1)
+		(_specparam clr_pulse_width_param integer 1)
+		(_specparam pre_pulse_width_param integer 1)
+		(_specparam clr_recovery_limit_param integer 0)
+		(_specparam pre_recovery_limit_param integer 0)
+		(_specparam clr_hold_limit_param integer 0)
+		(_specparam pre_hold_limit_param integer 0)
+		(_modpath parallel unknown 0 10451
+			(_port D0 in )
+			(_port Q0 out )
+		)
+		(_modpath parallel positive 0 10453
+			(_port G in posedge)
+			(_port Q0 out posedge)
+			(_datain D0 in posedge)
+		)
+		(_modpath parallel positive 0 10454
+			(_port CD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_modpath parallel positive 0 10455
+			(_port SD in posedge)
+			(_port Q0 out posedge)
+		)
+		(_tchk setup 0 10459
+			(_port D0 ())
+			(_port G (negedge))
+		)
+		(_tchk hold 0 10460
+			(_port G (negedge))
+			(_port D0 ())
+		)
+		(_tchk width 0 10463
+			(_port G (posedge) (_code  1 NTB*D0))
+		)
+		(_tchk width 0 10464
+			(_port G (posedge) (_code  2 D0))
+		)
+		(_tchk width 0 10467
+			(_port CD (posedge))
+		)
+		(_tchk width 0 10468
+			(_port SD (posedge))
+		)
+		(_tchk recovery 0 10471
+			(_port CD (negedge))
+			(_port G (negedge))
+		)
+		(_tchk recovery 0 10472
+			(_port G (negedge))
+			(_port CD (negedge))
+		)
+		(_tchk recovery 0 10473
+			(_port SD (negedge))
+			(_port G (negedge))
+		)
+		(_tchk recovery 0 10474
+			(_port G (negedge))
+			(_port SD (negedge))
+		)
+	)
+)
+V 000035 56 107 1265381372809 PXIN
+(_unit PXIN
+	(_specify
+		(_modpath parallel unknown 0 10498
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 108 1265381372821 PXIND
+(_unit PXIND
+	(_specify
+		(_modpath parallel unknown 0 10521
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 108 1265381372826 PXINE
+(_unit PXINE
+	(_specify
+		(_modpath parallel unknown 0 10543
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 108 1265381372831 PXINK
+(_unit PXINK
+	(_specify
+		(_modpath parallel unknown 0 10565
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 108 1265381372836 PXINR
+(_unit PXINR
+	(_specify
+		(_modpath parallel unknown 0 10588
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 109 1265381372841 PXINRG
+(_unit PXINRG
+	(_specify
+		(_modpath parallel unknown 0 10611
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 109 1265381372852 PXINRX
+(_unit PXINRX
+	(_specify
+		(_modpath parallel unknown 0 10634
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000036 56 108 1265381372857 PXINT
+(_unit PXINT
+	(_specify
+		(_modpath parallel unknown 0 10656
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 109 1265381372862 PXINVE
+(_unit PXINVE
+	(_specify
+		(_modpath parallel unknown 0 10677
+			(_port A0 in )
+			(_port ZN0 out )
+		)
+	)
+)
+V 000037 56 109 1265381372867 PXINVK
+(_unit PXINVK
+	(_specify
+		(_modpath parallel unknown 0 10701
+			(_port A0 in )
+			(_port ZN0 out )
+		)
+	)
+)
+V 000037 56 109 1265381372872 PXINVO
+(_unit PXINVO
+	(_specify
+		(_modpath parallel unknown 0 10725
+			(_port A0 in )
+			(_port ZN0 out )
+		)
+	)
+)
+V 000036 56 108 1265381372877 PXOUT
+(_unit PXOUT
+	(_specify
+		(_modpath parallel unknown 0 10749
+			(_port A0 in )
+			(_port XO0 out )
+		)
+	)
+)
+V 000037 56 109 1265381372883 PXOUTS
+(_unit PXOUTS
+	(_specify
+		(_modpath parallel unknown 0 10770
+			(_port A0 in )
+			(_port XO0 out )
+		)
+	)
+)
+V 000036 56 187 1265381372888 PXTRI
+(_unit PXTRI
+	(_specify
+		(_modpath parallel unknown 0 10795
+			(_port A0 in )
+			(_port XO0 out )
+		)
+		(_modpath parallel unknown 0 10796
+			(_port OE in )
+			(_port XO0 out )
+		)
+	)
+)
+V 000037 56 188 1265381372893 PXTRIS
+(_unit PXTRIS
+	(_specify
+		(_modpath parallel unknown 0 10819
+			(_port A0 in )
+			(_port XO0 out )
+		)
+		(_modpath parallel unknown 0 10820
+			(_port OE in )
+			(_port XO0 out )
+		)
+	)
+)
+V 000037 56 267 1265381372899 XBIDI1
+(_unit XBIDI1
+	(_specify
+		(_modpath parallel unknown 0 10847
+			(_port A0 in )
+			(_port XB0 out )
+		)
+		(_modpath parallel unknown 0 10848
+			(_port OE in )
+			(_port XB0 out )
+		)
+		(_modpath parallel unknown 0 10849
+			(_port XB0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000037 56 109 1265381372904 XINPUT
+(_unit XINPUT
+	(_specify
+		(_modpath parallel unknown 0 10872
+			(_port XI0 in )
+			(_port Z0 out )
+		)
+	)
+)
+V 000035 56 107 1265381372914 XINV
+(_unit XINV
+	(_specify
+		(_modpath parallel unknown 0 10897
+			(_port A0 in )
+			(_port ZN0 out )
+		)
+	)
+)
+V 000038 56 110 1265381372929 XOUTPUT
+(_unit XOUTPUT
+	(_specify
+		(_modpath parallel unknown 0 10922
+			(_port A0 in )
+			(_port XO0 out )
+		)
+	)
+)
+V 000036 56 187 1265381372945 XTRI1
+(_unit XTRI1
+	(_specify
+		(_modpath parallel unknown 0 10948
+			(_port A0 in )
+			(_port XO0 out )
+		)
+		(_modpath parallel unknown 0 10949
+			(_port OE in )
+			(_port XO0 out )
+		)
+	)
+)

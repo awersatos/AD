@@ -1,0 +1,12 @@
+[Plugin]
+Name=ad_vga_16bpp
+Description=Adapts VGA 16bpp graphics driver to graphics routines
+SourceDir=services\platform\graphics\adaptors\vga_16bpp\src
+Implement=ad_graphics
+InitHandler=ad_vga_16bpp_init
+InitHandlerPriority=16
+CompileOption0=-I"$(SSASROOT)\services\platform\graphics\internal"
+
+[Instance]
+Require0=drv_vga_16bpp
+

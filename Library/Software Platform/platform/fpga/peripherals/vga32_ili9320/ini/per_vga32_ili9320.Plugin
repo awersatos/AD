@@ -1,0 +1,28 @@
+[Plugin]
+Name=per_vga32_ili9320
+Description=VGA interface for TFT LCD, fixed 16bpp color quality, screen resolution of 320 x 240, and refresh rate of 50Hz.
+Caption=VGA TFT Interface ILI9320
+Implement=per_vga32_ili9320
+HardwareID=WB_ILI9320
+Bitmap=per_vga32_ili9320.bmp
+LargeBitmap=per_vga32_ili9320_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=POINTER
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=SYNC Interrupt
+CodeName=sync_interrupt
+Description=sync interrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

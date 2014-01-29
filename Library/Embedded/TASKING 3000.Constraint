@@ -1,0 +1,22 @@
+;...............................................................................
+;Constraints File
+;   Device  :
+;   Board   :
+;   Project :
+;
+;   Created 21/10/2004
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+; Defines the processor's bus layout
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Internal-Memory             | Memory_BusName=Main |  Memory_Width=32 | Memory_Depth=0x1000000   | ProgramDownloadAddress=0x0        | Memory_BusType=TSK3000:addr_bus | Memory_Description=Where the{n}boot code resides
+Record=BUS_LAYOUT_INFO | ComponentDesignator=External-Memory Space       | Memory_BusName=Main |  Memory_Width=32 | Memory_Depth=0xFE000000  | ProgramDownloadAddress=0x1000000  | Memory_BusType=TSK3000:addr_bus | Memory_Description=
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Processor I/O Space         | Memory_BusName=Main |  Memory_Width=32 | Memory_Depth=0x1000000   | ProgramDownloadAddress=0xFF000000 | Memory_BusType=TSK3000:addr_bus | Memory_Description=IO Port{n}of the processor | Memory_MappedIO=True
+                                                                  
+; Defines the processor's memory layout on the buses
+Record=NEXUS_CORE | ComponentDesignator=xrom | Memory_Width=32 | Memory_Depth=64k  | Memory_PhysicalType=nvram | Memory_UsageType=nvram | ProgramDownloadAddress=0         | Memory_BusType=TSK3000:addr_bus | Default=True
+Record=NEXUS_CORE | ComponentDesignator=xram | Memory_Width=32 | Memory_Depth=512k | Memory_PhysicalType=ram | Memory_UsageType=ram | ProgramDownloadAddress=0x1000000 | Memory_BusType=TSK3000:addr_bus | Default=True
+

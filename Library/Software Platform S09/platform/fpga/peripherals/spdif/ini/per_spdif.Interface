@@ -1,0 +1,7 @@
+[Interface]
+Name=per_spdif
+Category=PERIPHERAL
+System=False
+Description=SPDIF master controller
+PublicDir=platform\fpga\peripherals\spdif\include
+

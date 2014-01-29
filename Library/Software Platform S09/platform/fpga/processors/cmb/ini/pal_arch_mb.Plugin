@@ -1,0 +1,38 @@
+[Plugin]
+Name=pal_arch_mb
+Description=Pal implements the MICROBLAZE architecture
+Caption=TSKmb architecture
+GenerateFile=pal_arch_cfg
+SourceDir=platform\fpga\processors\cmb\src
+GlobalCompileOption0=-I"$(SSASROOT)\platform\fpga\processors\cmb\include"
+CompileOption0=-I"$(SERROOT)\platform\pal\internal"
+Implement=pal_arch
+Bitmap=pal_arch_mb.bmp
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=TOOLCHAIN
+Condition=EQ
+Value=TASKING MICROBLAZE
+
+[Option0]
+Name=TIMER_INTERRUPT_NUMBER
+Description=Interrupt number for pal.timers/system.clock
+Define=PAL_TIMER_INTERRUPT_ID
+Kind=UINT8
+DefaultValue=0
+Auto=True
+
+[Option1]
+Name=MAXINTRS
+Description=Number of interrupts
+Kind=UINT8
+DefaultValue=32
+Auto=True
+
+[Option2]
+Name=LSLSECTION
+Description=Name of main lsl section
+Kind=STRING
+DefaultValue=main
+Auto=True

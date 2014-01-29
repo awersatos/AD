@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV
+
+	</header>
+	<group name="per_mp3dec" description="MP3 Decoder Controller">
+		<sfr name="STATUS"		offset="0"	size="32" description="Status Register">
+			<bitfield name="HEADERREADY"		start="4" end="4" access="rw" description="Header Ready Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="WRITEREADY"		start="3" end="3" access="rw" description="Decoded Frame Ready Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="READEMPTY"		start="2" end="2" access="rw" description="Ready Buffer Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RESET"			start="1" end="1" access="rw" description="Reset Decoder Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="START"			start="0" end="0" access="rw" description="Start Decoding Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="INTMASK"		offset="4"	size="32" description="Interrupt Mask Register"/>
+		<sfr name="READADDRESS"		offset="8"	size="32" description="Read Address Register"/>
+		<sfr name="READENDADDRESS"	offset="12"	size="32" description="Read Area End Register"/>
+		<sfr name="WRITEADDRESS"	offset="16"	size="32" description="Write Area Start Register"/>
+		<sfr name="SCRATCHADDRESS"	offset="20"	size="32" description="Scratch Area Start Register"/>
+		<sfr name="HEADER"	        offset="24"	size="32" description="MP3 Header Register">
+			<bitfield name="SYNC"		start="31" end="20" access="r" description="MP3 Sync Word" />
+			<bitfield name="VERSION"	start="19" end="19" access="r" description="Version" />
+			<bitfield name="LAYER"		start="18" end="17" access="r" description="Layer" />
+			<bitfield name="ERRORPROT"	start="16" end="16" access="r" description="Error Protection" />
+			<bitfield name="BITRATE"	start="15" end="12" access="r" description="Bit Rate" />
+			<bitfield name="FREQUENCY"	start="11" end="10" access="r" description="Frequency" />
+			<bitfield name="PADBIT"		start="9" end="9" access="r" description="Pad Bit" />
+			<bitfield name="PRIVATE"	start="8" end="8" access="r" description="Private Bit" />
+			<bitfield name="MODE"		start="7" end="6" access="r" description="Mode" />
+			<bitfield name="MODE_EXTEND"	start="5" end="4" access="r" description="Mode Extension" />
+			<bitfield name="COPYRIGHT"	start="3" end="3" access="r" description="Copyrighted" />
+			<bitfield name="ORIGINAL"	start="2" end="2" access="r" description="Original" />
+			<bitfield name="EMPHASIS"	start="1" end="0" access="r" description="Emphasis" />
+		</sfr>
+		<sfr name="VERSION"	        offset="60"	size="32" description="Version and Configuration Register">
+			<bitfield name="LITTLEENDIAN"	start="8"  end="8" access="rw" description="Little Endian Mode" />
+			<bitfield name="VERSION"	start="7"  end="0" access="r" description="Core Version" />
+		</sfr>
+	</group>
+</sfrfile>

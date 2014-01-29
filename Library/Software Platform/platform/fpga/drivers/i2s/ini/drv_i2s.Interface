@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_i2s
+Category=DRIVER
+System=False
+Description=I2S master controller driver
+PublicDir=platform\fpga\drivers\i2s\include

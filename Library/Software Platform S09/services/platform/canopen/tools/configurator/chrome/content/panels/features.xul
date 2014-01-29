@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+				xmlns:html="http://www.w3.org/1999/xhtml">
+
+
+<vbox flex="1" style="overflow: auto">
+
+	<html xmlns="http://www.w3.org/1999/xhtml" style="background-color: white; font-family: serif; font-size: medium">
+		<h3>Introduction to Features</h3>
+		<p>Features in CANopenNode device configurator are very helpful in both: 'Access Device' mode and Object Dictionary Editor.</p>
+		<p>They are used for definition of some 'features of the device'. For example: CANopen device usually has <b>specific number</b> of Receive PDOs. With each RPDO are associated <b>two objects</b> in Object Dictionary: <b>Communication parameter (index 1400+)</b> and <b>Mapping parameter (index 1600+)</b>. Each of those parameters contains some variables. If we need to access all variables associated with one RPDO, we can access separate variables from both objects. This is true in mode 'Access Object Dictionary on Device'. In mode 'Access Device' accessing to one RPDO is easier. In the tree is instead of Objects 1400 and 1600 shown only 'PDO1'. After it is selected, special panel is loaded, which shows all the variables for that PDO on one page. This way manipulation with the PDO is easier.</p>
+		<p>Features are most helpful in Object Dictionary Editor. When value of feature is changed, then number of associated objects in Object Dictionary is changed also. For example, if value for Receive PDO is changed from 4 to 2, then objects 1402, 1403, 1602 and 1603 are disabled. (If value is increased, corresponding objects are enabled, or added if they doesn't exist.)</p>
+		<p>Features are also necessary for generation of source code for stack. Objects, which are multiplied by feature are joined in array. Also macro is generated, which stores feature value. Some features has no associated objects. They are used only for definition of macro.</p>
+		<p>New feature can also be added to Features list. Actually there is only need to define name, value and optionally associated objects.</p>
+	</html>
+
+</vbox>
+</window>

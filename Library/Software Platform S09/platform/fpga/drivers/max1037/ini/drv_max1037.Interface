@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_max1037
+Category=DRIVER
+System=False
+Description=MAX1037 A/D converter
+PublicDir=platform\fpga\drivers\max1037\include

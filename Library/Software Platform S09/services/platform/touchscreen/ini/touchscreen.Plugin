@@ -1,0 +1,144 @@
+[Plugin]
+Name=touchscreen
+Caption=Touchscreen Services
+Description=Generic touchscreen routines, inluding calibration and conversion
+SourceDir=services\platform\touchscreen\src
+InitHandler=
+InitHandlerPriority=16
+Implement=touchscreen
+MinInstances=1
+Bitmap=touchscreen.bmp
+
+[Instance]
+Caption=Touchscreen Context
+Description=Context for generic touchscreen routines
+Require0=drv_ad7843
+MultipleLinks=True
+
+
+[Instance_Option0]
+Name=rotation
+Description=Default rotation of the touchscreen, 0 = no rotation, 90 = 90 degrees clockwise rotation of the screen-contents, etc.
+Kind=ENUM
+DefaultValue=0
+Enum0=0
+Enum1=90
+Enum2=180
+Enum3=270
+EnumValue0=0
+EnumValue1=90
+EnumValue2=180
+EnumValue3=270
+
+
+[Instance_Option1]
+Name=settings
+Description=Use default settings for dimensions and offsets or set your own.
+Kind=ENUM
+DefaultValue=NB2DSK01
+Enum0=NB2DSK01
+Enum1=NB3000
+Enum2=CUSTOM
+EnumDescription0=Default NB2DSK01 settings
+EnumDescription1=Default NB3000 settings
+EnumDescription2=Set your own dimensions and calibration offsets
+NoGenerate=True
+
+[Instance_Option1_AutoSet0]
+Option=x_size
+AutoValueEnum0=240
+AutoValueEnum1=320
+AutoValueEnum2=x_size
+
+[Instance_Option1_AutoSet1]
+Option=y_size
+AutoValueEnum0=320
+AutoValueEnum1=240
+AutoValueEnum2=y_size
+
+[Instance_Option1_AutoSet2]
+Option=x0_offset
+AutoValueEnum0=230
+AutoValueEnum1=3884
+AutoValueEnum2=x0_offset
+
+[Instance_Option1_AutoSet3]
+Option=xfs_offset
+AutoValueEnum0=3884
+AutoValueEnum1=230
+AutoValueEnum2=xfs_offset
+
+[Instance_Option1_AutoSet4]
+Option=y0_offset
+AutoValueEnum0=3831
+AutoValueEnum1=250
+AutoValueEnum2=y0_offset
+
+[Instance_Option1_AutoSet5]
+Option=yfs_offset
+AutoValueEnum0=250
+AutoValueEnum1=3831
+AutoValueEnum2=yfs_offset
+
+[Instance_Option1_AutoSet6]
+Interface=drv_ad7843
+Option=swap
+AutoValueEnum0=False
+AutoValueEnum1=True
+AutoValueEnum2=swap
+
+
+[Instance_Option2]
+Name=x_size
+GUIName=x Size
+Description=Size of Touchscreen in x direction (= horizontal).
+Kind=UINT32
+DefaultValue=240  
+
+
+[Instance_Option3]
+Name=y_size
+GUIName=y Size
+Description=Size of Touchscreen in y direction (= vertical).
+Kind=UINT32
+DefaultValue=320  
+
+
+[Instance_Option4]
+Name=x0_offset
+GUIName=x0 Offset
+Description=Default return value from Touchscreen at position x0 (normally most left position). This value will be overruled by runtime calibration.
+Kind=INT32
+DefaultValue=230
+
+
+[Instance_Option5]
+Name=xfs_offset
+GUIName=xfs Offset
+Description=Default return value from Touchscreen at position x-Full-Scale (normally most right position). This value will be overruled by runtime calibration.
+Kind=INT32
+DefaultValue=3884
+
+
+[Instance_Option6]
+Name=y0_offset
+GUIName=y0 Offset
+Description=Default return value from Touchscreen at position y0 (normally most top position). This value will be overruled by runtime calibration.
+Kind=INT32
+DefaultValue=3831
+
+
+[Instance_Option7]
+Name=yfs_offset
+GUIName=yfs Offset
+Description=Default return value from Touchscreen at position y-Full-Scale (normally most bottom position). This value will be overruled by runtime calibration.
+Kind=INT32
+DefaultValue=250
+
+
+[Instance_Option8]
+Name=runtime_calibration
+GUIName=Runtime Calibration
+Description=Include runtime calibration routine
+Kind=BOOLEAN
+DefaultValue=True

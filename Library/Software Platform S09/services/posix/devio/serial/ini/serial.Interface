@@ -1,0 +1,8 @@
+[Interface]
+Name=serial
+Alias=posix_devio
+Category=SERVICE
+System=False
+PublicDir=services\posix\devio\serial\include
+Description=POSIX device I/O serial interface
+

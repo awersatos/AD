@@ -1,0 +1,42 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=orca4
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+orca4=.
+
+[Library]
+orca4=.\orca4.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/orca_mem.vhd=-1
+/orca_cnt.vhd=-1
+/orca_io.vhd=-1
+/orca_mis.vhd=-1
+/orca_pcm.vhd=-1
+/orca_seq.vhd=-1
+/orcacomp.vhd=-1
+/orca_cmb.vhd=-1
+/update_orca4.do=-1
+
+[Files.Data]
+.\src\orca_mem.vhd=VHDL Source Code
+.\src\orca_cnt.vhd=VHDL Source Code
+.\src\orca_io.vhd=VHDL Source Code
+.\src\orca_mis.vhd=VHDL Source Code
+.\src\orca_pcm.vhd=VHDL Source Code
+.\src\orca_seq.vhd=VHDL Source Code
+.\src\orcacomp.vhd=VHDL Source Code
+.\src\orca_cmb.vhd=VHDL Source Code
+.\src\update_orca4.do=Macro
+

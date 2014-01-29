@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_vga_1to8bpp
+Category=DRIVER
+Visible=True
+System=False
+Description=VGA 1 to 8 BPP (palette) graphics mini-driver
+PublicDir=platform\fpga\drivers\vga_1to8bpp\include
+

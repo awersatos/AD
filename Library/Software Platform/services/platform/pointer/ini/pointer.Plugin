@@ -1,0 +1,46 @@
+[Plugin]
+Name=pointer
+Caption=Pointer Services
+Description=Generic pointer routines
+SourceDir=services\platform\pointer\src
+FrameworkCompileOption0=-I"$(SSASROOT)\services\platform\pointer\internal"
+Implement=pointer
+Bitmap=pointer.bmp
+
+
+[Instance]
+Caption=Pointer Context
+Description=Context for generic pointer routines
+Require0=ad_pointer
+Require0_MultipleLinks=True
+Require0_MultipleLinksMax=3
+
+
+[Instance_Option0]
+Name=left
+GUIName=Left boundary
+Description=The most left position on the screen the pointer can reach.
+Kind=UINT32
+DefaultValue=0
+
+[Instance_Option1]
+Name=right
+GUIName=Right boundary
+Description=The most right position on the screen the pointer can reach.
+Kind=UINT32
+DefaultValue=240
+
+[Instance_Option2]
+Name=top
+GUIName=Top boundary
+Description=The highest position on the screen the pointer can reach.
+Kind=UINT32
+DefaultValue=0
+
+[Instance_Option3]
+Name=bottom
+GUIName=Bottom boundary
+Description=The lowest position on the screen the pointer can reach.
+Kind=UINT32
+DefaultValue=320
+

@@ -1,0 +1,54 @@
+[Plugin]
+Name=posix_ipc
+Description=Support for POSIX message communications
+Caption=Message Queues Support
+SourceDir=services\posix\kernel\ipc\src
+GlobalCompileOption0=-D__POSIX_MQUEUE=1
+GlobalCompileOption1=-D__POSIX_MESSAGE_PASSING=1
+CompileOption0=-I"$(SERROOT)\posix\kernel\internal"
+Implement=posix_ipc
+Require0=posix_threads
+
+[Option0]
+Name=MQ_OPEN_MAX
+Description=The maximum number of open message queue descriptors
+Kind=UINT8
+DefaultValue=8
+InLimitsCfg=True
+
+[Option1]
+Name=MQ_PRIO_MAX
+Description=The maximum number of message priorities
+Kind=UINT8
+DefaultValue=32
+InLimitsCfg=True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

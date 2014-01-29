@@ -1,0 +1,145 @@
+[Plugin]
+Name=usbhost_network
+Caption=USB Host Network Service
+Description=USB Host Network Service
+SourceDir=services\usbhost\usbhost_network\src
+GlobalCompileOption0=-I"$(SSASROOT)\services\usbhost\usbhost_network\include"
+InitHandler=usbhost_network_plugin_init
+InitHandlerPriority=1
+Implement=usbhost_network
+Require0=bsd_usb_wifi
+MinInstances=1
+Bitmap=usbhost_network.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=usbhost
+Condition=EQ
+
+[Instance]
+Require0=usbhost
+Caption=USB Host Wireless Networking Context
+Description=USB Host Wireless Networking Context
+
+[Instance_Option0]
+Name=if_mac_type
+GUIName=Interface MAC
+Description=Media Access Control address (MAC address) is a unique identifier assigned to most network adapters or network interface cards.
+Kind=ENUM
+DefaultValue=AUTO
+Enum0=AUTO
+EnumDescription0=Use manufacturer-assigned address
+Enum1=CUSTOM
+EnumDescription1=Specify a custom address for the device
+
+[Instance_Option1]
+Name=if_mac
+GUIName=Custom MAC
+Description=MAC Address
+Kind=ARRAY
+Type=UINT8
+Size=6
+DefaultValue=0x0,0x0,0x0,0x0,0x0,0x0
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option1_Hide_If0]
+Kind=OPTION
+Object=if_mac_type
+Condition=EQ
+Value=AUTO
+
+[Instance_Option2]
+Name=nw_ssid_type
+GUIName=Network SSID
+Description=SSID is the name of a wireless local area network (WLAN) with which this interface is to connect too.
+Kind=ENUM
+DefaultValue=AUTO
+Enum0=AUTO
+EnumDescription0=Attempt to connect to any compatible network
+Enum1=CUSTOM
+EnumDescription1=Attempt to connect to the specified network
+
+[Instance_Option2_AutoSet0]
+Option=nw_auth_type
+AutoValueEnum0=OPEN
+AutoValueEnum1=nw_auth_type
+
+[Instance_Option3]
+Name=nw_ssid
+GUIName=SSID
+Description=
+Kind=STRING
+Type=STRING
+DefaultValue=mywlan
+Auto=False
+
+[Instance_Option3_Hide_If0]
+Kind=OPTION
+Object=nw_ssid_type
+Condition=EQ
+Value=AUTO
+
+[Instance_Option4]
+Name=nw_auth_type
+GUIName=Security
+Description=Access point authentication/encryption method. You must supply a network SSID to enable further security options. 
+Kind=ENUM
+DefaultValue=OPEN	
+Enum0=OPEN
+EnumDescription0=Open network
+Enum1=WEP
+EnumDescription1=Wired Equivalent Privacy
+Enum2=WPA_PSK
+EnumDescription2=Wi-Fi Protected Access shared key
+
+[Instance_Option5]
+Name=nw_passphrase
+GUIName=Passphrase
+Description=Access point passphrase used to generate network key.
+Kind=STRING
+Type=STRING
+DefaultValue=mypassword
+Auto=False
+
+[Instance_Option5_Hide_If0]
+Kind=OPTION
+Object=nw_auth_type
+Condition=EQ
+Value=OPEN
+
+[Instance_Option6]
+Name=nw_default_key
+GUIName=Default Key
+Description=Set the default transmission key.
+Kind=UINT32
+DefaultValue=1
+MinRange=1
+MaxRange=4
+Auto=False
+
+[Instance_Option6_Hide_If0]
+Kind=OPTION
+Object=nw_auth_type
+Condition=NOTEQ
+Value=WEP
+
+[Instance_Option7]
+Name=autostart
+GUIName=Autostart Device
+Description=Start the device as soon as detected on the USB Bus.
+Kind=BOOLEAN
+DefaultValue=True
+
+
+
+
+
+
+
+
+
+
+
+

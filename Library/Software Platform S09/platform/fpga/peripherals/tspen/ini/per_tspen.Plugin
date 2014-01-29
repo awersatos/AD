@@ -1,0 +1,31 @@
+[Plugin]
+Name=per_tspen
+Description=Touchscreen pen-down-on-screen status indicator
+Caption=Touchscreen Pen Detector
+SourceDir=platform\fpga\peripherals\tspen\src
+HardwareID=WB_TSPENDOWN
+Implement=per_tspen
+Bitmap=per_tspen.bmp
+LargeBitmap=per_tspen_large.bmp
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=Hardware base address
+Kind=UINT32
+Auto=True
+
+[Instance_Option0_Hide_If0]
+Kind=OPTION
+Object=baseaddress
+Condition=EQ
+Value=0

@@ -1,0 +1,99 @@
+[Plugin]
+Name=posix_filesystem
+Caption=Storage System
+Description=File systems
+Implement=posix_filesystem
+Bitmap=storage.bmp
+Require0=filesystem_require
+Require1=fatfs
+
+[Require1_If0]
+Kind=OPTION
+Object=FATFS
+Condition=EQ
+Value=True
+
+[PluginApplicationCode]
+NoGenerate=True
+
+; readonly as long as we have no choice of filesystems
+[Option0]
+Name=FATFS
+GUIName=fatfs support
+Description=Microsoft FAT filesystem.
+Kind=BOOLEAN
+DefaultValue=True
+;AutoValue=True
+
+[Instance]
+Require0=blockio
+Caption=Storage System Context
+Description=File system context
+
+[Instance_Option0]
+Name=usermount
+GUIName=Dynamic Mount
+Description=Application will mount the device at runtime with mount() (see "fs.h").
+Kind=BOOLEAN
+DefaultValue=True
+Auto=True
+
+; TODO: implement static mount points
+
+[Instance_Option1]
+Name=fsname
+GUIName=Filesystem Name
+Description=Name of filesystem to mount, e.g "fatfs".
+Kind=STRING
+DefaultValue=fatfs
+
+[Instance_Option1_Hide_If0]
+Object=usermount
+Kind=OPTION
+Condition=EQ
+Value=True
+
+[Instance_Option2]
+Name=partition
+GUIName=Partition Number
+Description=Number of the partition to mount (use 0 to use entire disk).
+Kind=UINT8
+DefaultValue=1
+MaxRange=4
+
+[Instance_Option2_Hide_If0]
+Object=usermount
+Kind=OPTION
+Condition=EQ
+Value=True
+
+[Instance_Option3]
+Name=mountpoint
+GUIName=Mount Point
+Description=Mount point for the device. NOTE: must be in the root directory.
+Kind=STRING
+DefaultValue=mount
+
+[Instance_Option3_Hide_If0]
+Object=usermount
+Kind=OPTION
+Condition=EQ
+Value=True
+
+; hidden cache size option
+; automatically obtained from block device adaptor
+; the maximum value of all instances is used in fatfs implementation
+; values can be 512, 1024, 2048 or 4096
+[Instance_Option4]
+Name=cache_blocksize
+GUIName=Cache Sector Size
+Description=Maximum size of a cached sector (i.e. maximum supported sector size on underlying block device)
+Kind=UINT32
+DefaultValue=512
+; autovalue expression linked down over blockio interface
+; actual option is in the driver instance (only required if different from default, e.g. for USB)
+AutoValue=blockio.cache_blocksize
+NoGenerate=True
+
+[Instance_Option4_Hide_If0]
+Kind=True

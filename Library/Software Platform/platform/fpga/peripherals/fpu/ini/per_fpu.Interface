@@ -1,0 +1,6 @@
+[Interface]
+Name=per_fpu
+Category=PERIPHERAL
+System=False
+Description=Single precision floating point unit peripheral
+PublicDir=platform\fpga\peripherals\fpu\include

@@ -1,0 +1,33 @@
+[Plugin]
+Name=drv_s29_blockio
+Description=Block I/O interface to S29 Parallel Flash memory
+Caption=S29 Flash Memory Block I/O
+Bitmap=drv_s29_blockio.bmp
+Implement=drv_s29_blockio
+MinInstances=1
+SourceDir=platform\fpga\drivers\s29\s29_blockio\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\s29\internal"
+
+[Available_If0]
+Kind=PLUGIN
+Object=drv_s29
+Condition=EQ
+
+[Option0]
+Name=MAXPAGESIZE_KB
+Kind=UINT32
+GUIName=Maximum page size (kB)
+Description=Maximum page size of the flash device in kB.
+DefaultValue=128
+MinRange=1
+
+[Option1]
+Name=CACHEPAGES
+Kind=UINT32
+GUIName=Cached pages
+Description=Number of cached pages.
+DefaultValue=4
+MinRange=1
+
+[Instance]
+Require0=drv_s29

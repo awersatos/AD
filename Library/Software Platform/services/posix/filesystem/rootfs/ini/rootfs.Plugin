@@ -1,0 +1,10 @@
+[Plugin]
+Name=rootfs
+Caption=Root File System
+Description=Posix file system interface for accessing mounted filesystems.
+Implement=rootfs
+SourceDir=services\posix\filesystem\rootfs\src
+; Make sure this is run before any other filesystem
+InitHandler=rootfs_plugin_init
+InitHandlerPriority=5
+

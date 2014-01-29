@@ -1,0 +1,687 @@
+﻿<?xml version="1.0"?>
+<device title="Device Name">
+  <features>
+    <feature name="SYNC" value="1">
+      <label lang="en">Synchronization object (Sync)</label>
+      <description lang="en" URI="http://www.can-cia.org/canopen/protocol/special.html">The Sync Object is broadcast periodically by the Sync Producer.
+
+Permissible value for SYNC is 0 or 1.</description>
+      <associatedObject index="1005"/>
+      <associatedObject index="1006"/>
+      <associatedObject index="1007"/>
+      <associatedObject index="2103"/>
+      <associatedObject index="2104"/>
+    </feature>
+    <feature name="Emergency" value="1">
+      <label lang="en">Emergency object (Emcy)</label>
+      <description lang="en" URI="http://www.can-cia.org/canopen/protocol/special.html">The Emergency message is triggered by the occurrence of a device internal error situation.
+
+Permissible value for Emergency is 0 or 1.</description>
+      <associatedObject index="1014"/>
+      <associatedObject index="1015"/>
+    </feature>
+    <feature name="SDO server" value="1">
+      <label lang="en">Service Data Object (SDO)</label>
+      <description lang="en" URI="http://www.can-cia.org/canopen/protocol/sdo.html">A Service Data Object (SDO) reads from entries or writes to entries of the Object Dictionary.
+SDO server is implemented on all CANopen devices.
+
+Permissible value for SDO sever is 0 or 1.</description>
+      <associatedObject index="1200" indexMax="1201"/>
+    </feature>
+    <feature name="SDO client" value="0">
+      <label lang="en">Service Data Object (SDO)</label>
+      <description lang="en" URI="http://www.can-cia.org/canopen/protocol/sdo.html">A Service Data Object (SDO) reads from entries or writes to entries of the Object Dictionary.
+SDO client is usually a master device in a CANopen network.
+
+Permissible value for SDO client is 0 or 1.</description>
+      <associatedObject index="1280" indexMax="1281"/>
+    </feature>
+    <feature name="RPDO" value="4">
+      <label lang="en">Recive Process Data Object (RPDO)</label>
+      <description lang="en" URI="http://www.can-cia.org/canopen/protocol/pdo.html">Process Data Objects (PDOs) are mapped to a single CAN frame using up to 8 bytes of the data field to transmit application objects. Each PDO has a unique identifier and is transmitted by only one node, but it can be received by more than one (producer/consumer communication).
+
+Permissible value for RPDO is 0 to 16. For larger value Max Index must be changed.</description>
+      <associatedObject index="1400" indexMax="140F"/>
+      <associatedObject index="1600" indexMax="160F"/>
+    </feature>
+    <feature name="TPDO" value="4">
+      <label lang="en">Transmit Process Data Object (TPDO)</label>
+      <description lang="en" URI="http://www.can-cia.org/canopen/protocol/pdo.html">Process Data Objects (PDOs) are mapped to a single CAN frame using up to 8 bytes of the data field to transmit application objects. Each PDO has a unique identifier and is transmitted by only one node, but it can be received by more than one (producer/consumer communication).
+
+Permissible value for TPDO is 0 to 16. For larger value Max Index must be changed.</description>
+      <associatedObject index="1800" indexMax="180F"/>
+      <associatedObject index="1A00" indexMax="1A0F"/>
+    </feature>
+    <feature name="User CANRX" value="0">
+      <label lang="en">User defined CAN receive objects</label>
+      <description lang="en">User defined CAN object can be used for custom functionality of the device.</description>
+    </feature>
+    <feature name="User CANTX" value="0">
+      <description lang="en">User defined CAN object can be used for custom functionality of the device.</description>
+      <label lang="en">User defined CAN transmit objects</label>
+    </feature>
+    <feature name="Max object size" value="20">
+      <label lang="en">Max object size</label>
+      <description lang="en">Max object size is maximum size of object in Object Dictionary in bytes. Value can be in range from 4 to 255. If value is 4, then SDO server will be simplified, because it will only use expedited transfer and not segmented.</description>
+    </feature>
+    <feature name="Retentive usage" value="4">
+      <label lang="en">Retentive Usage</label>
+      <description lang="en" URI="docs/retentiv.png">This feature is CANopenNode specific. It defines the strategy, how retentive variables are managed on specific microcontroller.
+
+Variables in Object Dictionary have different behavior. In general, variable can be one of the three types - RAM, EEPROM or ROM:
+ - RAM variables: general use; on startup they have initial value; can be changed by application or from network side (by SDO communication).
+ - EEPROM variables: retentive (value is retained, if power supply is disconnected); can be changed by application or from network side; access is fast; memory resources are limited; example use: counter of events.
+ - ROM variables: retentive; can NOT be changed by application (directly); can be read normally by application; can be changed from network side; writing to variable takes some time; memory resources are large; example use: for configuration parameters.
+
+On different chips there are different strategies, how to handle retentive variables. PIC and dsPIC flash devices have possibility to use flash (program) memory for variables. Flash can be reprogrammed in run-time, so 'ROM' variables are writeable. And NO RAM is used for them. On the other hand SC1xx chip (similar as PC) loads execution program in RAM memory and also all variables are there. 'ROM' variables are there saved in file system.
+
+Values for macro CO_RETENTIVE_USE:
+  0 - NO retentive variables, EEPROM variables behaves like RAM. ROM variables are hard coded in flash, they are NOT changeable.
+  1 - NO retentive variables, EEPROM and ROM variables are allocated in RAM memory space, variables are changeable.
+  2 - EEPROM = default. ROM variables are hard coded in flash, they are NOT changeable.
+  3 - EEPROM = default. ROM variables are appended to EEPROM variables, they behaves like EEPROM and consumes also RAM on PICs and dsPICs. Take special care, if there is enough EEPROM memory.
+  4 - EEPROM = default. ROM = default. Flash is updated each time when ROM variable is written from network side. In PICs and dsPICs no RAM is used for ROM variables.
+  5 - EEPROM = default. ROM variables are stored in RAM. Flash is updated, when 'Save all Parameters' is performed (Write "save" to OD, index 0x1010, subindex 0x01). Restoring default parameters is also possible.
+  6 - EEPROM variables behaves like RAM, are not retentive. ROM = default. Flash is updated each time when ROM variable is written from network side. In PICs and dsPICs no RAM is used for ROM variables.
+  7 - EEPROM variables behaves like RAM, are not retentive. ROM variables are stored in RAM. Flash is updated, when 'Save all Parameters' is performed (Write "save" to OD, index 0x1010, subindex 0x01). Restoring default parameters is also possible.
+
+Recommendations and possibilities on different chips:
+ - PIC18F: 4=recommended, possible: 0, 1, 2, 3(conditional), 6
+ - dsPIC30F: 4=recommended, possible: 0, 1, 2, 3(conditional), 6
+ - dsPIC33F, PIC24H: 3=recommended (with external serial EEPROM chip), 7=possible, but only 1000 writings is allowed, other possibilities: 0, 1, (2, 5(with external serial EEPROM chip))
+ - Beck SC1x: 5=recommended, possible: 0, 1, 2, 3(not recommended), 7</description>
+    </feature>
+    <feature name="RPDO usage" value="11">
+      <label lang="en">RDPO usage</label>
+      <description lang="en">Process Data Objects (or PDOs) are used for fast communication between CANopen (and also between simple CAN) devices. In general, they are CAN messages with specific CAN identifier, which are sending some specified application data.
+
+CANopen standard offers very flexible usage of Process Data Objects. With PDO Communication Parameters specifies CAN ID and rules, when and how message will be transmitted (or received). PDO mapping parameters specifies, which variables from Object Dictionary will be in the message body.
+
+CANopenNode offers full support for Process Data Objects. Ammount of functionality is configurable.
+
+Transmission types: Synchronous, with Event timer, integrated inhibit time. Reception and transmission of PDOs is automatic. If CO_xPDO_USAGE &gt;= 7, then PDO data are automatically copied to/from OD variables. (Memory type of those OD variables must be RAM.)
+
+Also if CO_TPDO_USAGE &gt;= 7, then special type of OD variable can be used for TPDO send request. This variable contains (besides its own data) also a list of TPDOs, into which this variable is mapped. So application can report Change of State or just request sending of TPDO, into which variable is mapped (if it is). Usage is following: First determine, when variable needs to be sent, and second call a function ODE_VariableName_requestTPDO(), where VariableName is name of the variable. (Variable data are accessed with ODE_VariableName). Some limitations: It works only on the first 16 TPDOs and it does not work on subindexes. (Does not work on objects where Object Type is array or record.)
+
+Values for macro CO_xPDO_USAGE (x is either R or T) (Larger number means more functionality and more memory used.):
+  1 - Communication parameters are read-only.
+  2 - Communication parameters are changeable. PDO behavior is changed after Communication reset.
+  3 - Communication parameters are changeable. PDO behavior is changed immediately after writing to parameter.
+  1, 2, 3 - Mapping parameters does not exist. Length of RPDO data is any, length of TPDO is 8 bytes. Length of TPDO can can be changed directly with writing to variable: CO_TXCAN[i+CO_TXCAN_TPDO].NoOfBytes
+
+  4 - Communication parameters are read-only. 5 - Communication parameters are changeable. PDO behavior is changed after Communication reset.
+  6 - Communication parameters are changeable. PDO behavior is changed immediately after writing to parameter.
+  4, 5, 6 - Mapping parameters are read-only. Length of xPDO is calculated from Mapping. PDO data are NOT automatically copied to/from OD variables.
+
+  7 - Communication parameters are read-only.
+  8 - Communication parameters are changeable. PDO behavior is changed after Communication reset.
+  9 - Communication parameters are changeable. PDO behavior is changed immediately after writing to parameter.
+  7, 8, 9 - Mapping parameters are read-only. Length of xPDO is calculated from Mapping. PDO data are automatically copied to/from OD variables.
+
+  10 - Communication and Mapping parameters are changeable. Mapping is dynamic. PDO behavior is changed after Communication reset.
+  11 - Communication and Mapping parameters are changeable. Mapping is dynamic. PDO behavior is changed immediately after writing to parameter.</description>
+    </feature>
+    <feature name="TPDO usage" value="11">
+      <label lang="en">TPDO usage</label>
+      <description lang="en">See description for RPDO usage.</description>
+    </feature>
+  </features>
+  <CANopenObjectList>
+    <CANopenObject index="1000" name="Device type" objectType="7" memoryType="ROM" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000">
+      <label lang="en">Device type</label>
+      <description lang="en">bit  0-15: Device profile number
+bit 16-31: Additional information</description>
+    </CANopenObject>
+    <CANopenObject index="1001" name="Error register" objectType="7" memoryType="RAM" dataType="05" accessType="ro" PDOmapping="optional" defaultValue="0">
+      <label lang="en">Error register</label>
+      <description lang="en">bit 0: generic error
+bit 1: current
+bit 2: voltage
+bit 3: temperature
+bit 4: communication error (overrun, error state)
+bit 5: device profile specific
+bit 6: Reserved (always 0)
+bit 7: manufacturer specific</description>
+    </CANopenObject>
+    <CANopenObject index="1002" name="Manufacturer status register" objectType="7" memoryType="RAM" dataType="07" accessType="ro" PDOmapping="optional" defaultValue="0">
+      <label lang="en">Manufacturer status register</label>
+      <description lang="en">bit 0-31: Not used by stack (available for user)</description>
+    </CANopenObject>
+    <CANopenObject index="1003" name="Pre-defined error field" objectType="8" subNumber="9" memoryType="RAM" dataType="07" accessType="ro" PDOmapping="no" accessFunctionName="CO_ODF_1003">
+      <label lang="en">Pre-defined error field</label>
+      <description lang="en">Number of Errors
+bit 0-7: Zero can be written to erase error history
+
+Standard Error Field
+bit  0-15: Error code as transmited in the Emergency object
+bit 16-31: Manufacturer specific additional information</description>
+      <CANopenSubObject subIndex="00" name="Number of errors" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="Standard error field" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="02" name="Standard error field" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="03" name="Standard error field" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="04" name="Standard error field" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="05" name="Standard error field" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="06" name="Standard error field" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="07" name="Standard error field" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="08" name="Standard error field" objectType="7" defaultValue="0"/>
+    </CANopenObject>
+    <CANopenObject index="1005" name="COB-ID SYNC message" objectType="7" memoryType="ROM" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000080">
+      <label lang="en">COB-ID SYNC message</label>
+      <description lang="en">bit  0-10: COB-ID for SYNC object
+bit 11-29: set to 0
+bit    30: 1(0) - node generates (does NOT generate) SYNC object
+bit    31: set to 0</description>
+    </CANopenObject>
+    <CANopenObject index="1006" name="Communication cycle period" objectType="7" memoryType="ROM" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0">
+      <label lang="en">Communication cycle period</label>
+      <description lang="en">bit 0-31:  period of SYNC transmission  in µs (0 = no transmission, no checking)</description>
+    </CANopenObject>
+    <CANopenObject index="1007" name="Synchronous window length" objectType="7" memoryType="ROM" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0">
+      <label lang="en">Synchronous window length</label>
+      <description lang="en">bit 0-31:  window leghth after SYNC when PDOS must be transmited in µs, (0 = not used)</description>
+    </CANopenObject>
+    <CANopenObject index="1008" name="Manufacturer device name" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="CANopenNode">
+      <label lang="en">Manufacturer device name</label>
+      <description lang="en">Name of the manufacturer as string</description>
+    </CANopenObject>
+    <CANopenObject index="1009" name="Manufacturer hardware version" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="2.00">
+      <label lang="en">Manufacturer hardware version</label>
+      <description lang="en">Name of the hardware version as string</description>
+    </CANopenObject>
+    <CANopenObject index="100A" name="Manufacturer software version" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="2.00">
+      <label lang="en">Manufacturer software version</label>
+      <description lang="en">Name of the software version as string.</description>
+    </CANopenObject>
+    <CANopenObject index="1014" name="COB-ID EMCY" objectType="7" memoryType="ROM" dataType="07" accessType="ro" PDOmapping="no" defaultValue="$NODEID+0x80">
+      <accessFunctionPreCode>extern UNSIGNED8 CO_NodeID;</accessFunctionPreCode>
+      <accessFunctionPostCode>*((UNSIGNED32 *) dataBuff) += CO_NodeID;</accessFunctionPostCode>
+      <label lang="en">COB-ID emergency message</label>
+      <description lang="en">bit  0-10: COB-ID
+bit 11-30: set to 0 for 11 bit COB-ID
+bit    31: 0(1) - node uses (does NOT use) Emergency object</description>
+    </CANopenObject>
+    <CANopenObject index="1015" name="inhibit time EMCY" objectType="7" memoryType="ROM" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0">
+      <label lang="en">inhibit time emergency message</label>
+      <description lang="en">bit 0-15: Inhibit time of emergency message in 100µs</description>
+    </CANopenObject>
+    <CANopenObject index="1016" name="Consumer heartbeat time" objectType="8" subNumber="5" memoryType="ROM" dataType="07" accessType="rw" PDOmapping="no" accessFunctionName="CO_ODF_1016">
+      <label lang="en">Consumer heartbeat time</label>
+      <description lang="en">max sub-index
+
+Consumer Heartbeat Time
+bit  0-15: Heartbeat consumer time in ms (0 = node is not monitored)
+bit 16-23: Node ID
+bit 24-31: set to 0</description>
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="4"/>
+      <CANopenSubObject subIndex="01" name="Consumer heartbeat time" objectType="7" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="Consumer heartbeat time" objectType="7" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="Consumer heartbeat time" objectType="7" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="Consumer heartbeat time" objectType="7" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1017" name="Producer heartbeat time" objectType="7" memoryType="ROM" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0">
+      <label lang="en">Producer heartbeat time</label>
+      <description lang="en">bit 0-15: Heartbeat producer time in ms (0 = disable transmission)</description>
+    </CANopenObject>
+    <CANopenObject index="1018" name="Identity" objectType="9" subNumber="5" memoryType="ROM">
+      <label lang="en">Identity</label>
+      <description lang="en">max sub-index
+
+Vendor-ID
+bit 0-31: Assigned by CiA
+
+Product code
+bit 0-31: Manufacturer specific
+
+Revision number
+bit 0-15:  Minor revision num. (CANopen behavior has not changed)
+bit 16-31: Major revision number (CANopen behavior has changed)
+
+Serial number
+bit 0-31: Manufacturer specific</description>
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="4"/>
+      <CANopenSubObject subIndex="01" name="Vendor-ID" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="Product code" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="Revision number" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="Serial number" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1029" name="Error behavior" objectType="8" subNumber="2" memoryType="ROM" dataType="05" accessType="rw" PDOmapping="no">
+      <label lang="en">Error behavior</label>
+      <description lang="en">max sub-index
+
+Communication error
+bit 0-7: If Error Register (0x1001) has Communication error bit set and device is in Operational state:
+   0x00-switch to pre-operational
+   0x01-do nothing
+   0x02-switch to stopped</description>
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="1"/>
+      <CANopenSubObject subIndex="01" name="Communication error" objectType="7" defaultValue="0x00"/>
+    </CANopenObject>
+    <CANopenObject index="1200" name="SDO server parameter" objectType="9" subNumber="3" memoryType="ROM">
+      <accessFunctionPreCode>extern UNSIGNED8 CO_NodeID;</accessFunctionPreCode>
+      <accessFunctionPostCode>if(subindex&gt;0) *((UNSIGNED32 *) dataBuff) += CO_NodeID;</accessFunctionPostCode>
+      <label lang="en">SDO server parameter</label>
+      <description lang="en">0x1200 SDO server parameter
+max sub-index
+
+COB-ID client to server (Receive SDO)
+bit 0-31:  0x00000600 + Node ID
+
+COB-ID server to client (Transmit SDO)
+bit 0-31:  0x00000580 + Node ID
+
+
+
+0x1201 - 0x127F SDO server parameter
+max sub-index
+
+COB-ID client to server (Receive SDO)
+bit 0-10:  COB_ID
+bit 11-30: Set to 0
+bit 31*:   0(1) - node uses (does NOT use) SDO
+
+COB-ID server to client (Transmit SDO)
+bit 0-31:  same as previous
+
+Node-ID of the SDO client
+bit 0-7:   Node ID (optional)</description>
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="01" name="COB-ID client to server" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="$NODEID+0x600"/>
+      <CANopenSubObject subIndex="02" name="COB-ID server to client" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="$NODEID+0x580"/>
+    </CANopenObject>
+    <CANopenObject index="1280" name="SDO client parameter" objectType="9" subNumber="4" memoryType="RAM" disabled="true">
+      <label lang="en">SDO client parameter</label>
+      <description lang="en">0x1280 - 0x12FF SDO client parameter
+max sub-index
+
+COB-ID client to server (Transmit SDO)
+bit 0-10:  COB_ID
+bit 11-30: Set to 0
+bit 31:    0(1) - node uses (does NOT use) SDO
+
+COB-ID server to client (Receive SDO)
+bit 0-31:  same as previous
+
+Node-ID of the SDO server
+0-7:   Node ID</description>
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="3"/>
+      <CANopenSubObject subIndex="01" name="COB-ID client to server" objectType="7" dataType="07" accessType="rw" PDOmapping="optional" defaultValue="0"/>
+      <CANopenSubObject subIndex="02" name="COB-ID server to client" objectType="7" dataType="07" accessType="rw" PDOmapping="optional" defaultValue="0"/>
+      <CANopenSubObject subIndex="03" name="Node-ID of the SDO server" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+    </CANopenObject>
+    <CANopenObject index="1400" name="RPDO communication parameter" objectType="9" subNumber="3" memoryType="ROM" accessFunctionName="CO_ODF_RPDOcom">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by RPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="$NODEID+0x200"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <label lang="en">RPDO communication parameter</label>
+      <description lang="en">0x1400 - 0x15FF RPDO communication parameter
+max sub-index
+
+COB-ID
+bit  0-10: COB-ID for PDO, to change it bit 31 must be set
+bit 11-29: set to 0 for 11 bit COB-ID
+bit 30:    0(1) - rtr are allowed (are NOT allowed) for PDO
+bit 31:    0(1) - node uses (does NOT use) PDO
+
+Transmission type
+value = 0-240:   reciving is synchronous, process after next reception of SYNC object
+value = 241-253: not used
+value = 254:     manufacturer specific
+value = 255:     asynchronous</description>
+    </CANopenObject>
+    <CANopenObject index="1401" name="RPDO communication parameter" objectType="9" subNumber="3" memoryType="ROM" accessFunctionName="CO_ODF_RPDOcom">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by RPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="$NODEID+0x300"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <label lang="en">RPDO communication parameter</label>
+      <description lang="en">0x1400 - 0x15FF RPDO communication parameter (see description for 0x1400)</description>
+    </CANopenObject>
+    <CANopenObject index="1402" name="RPDO communication parameter" objectType="9" subNumber="3" memoryType="ROM" accessFunctionName="CO_ODF_RPDOcom">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by RPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="$NODEID+0x400"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <label lang="en">RPDO communication parameter</label>
+      <description lang="en">0x1400 - 0x15FF RPDO communication parameter (see description for 0x1400)</description>
+    </CANopenObject>
+    <CANopenObject index="1403" name="RPDO communication parameter" objectType="9" subNumber="3" memoryType="ROM" accessFunctionName="CO_ODF_RPDOcom">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by RPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="$NODEID+0x500"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <label lang="en">RPDO communication parameter</label>
+      <description lang="en">0x1400 - 0x15FF RPDO communication parameter (see description for 0x1400)</description>
+    </CANopenObject>
+    <CANopenObject index="1404" name="RPDO communication parameter" objectType="9" subNumber="3" memoryType="ROM" accessFunctionName="CO_ODF_RPDOcom" disabled="true">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by RPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="1"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <label lang="en">RPDO communication parameter</label>
+      <description lang="en">0x1400 - 0x15FF RPDO communication parameter (see description for 0x1400)</description>
+    </CANopenObject>
+    <CANopenObject index="1600" name="RPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_RPDOmap">
+      <label lang="en">RPDO mapping parameter</label>
+      <description lang="en">0x1600 - 0x17FF RPDO mapping parameter (To change mapping, max sub-index must be set to 0)
+max sub-index
+
+mapped object  (subindex 1...8)
+bit  0-7:  data length in bits
+bit 8-15:  subindex from OD
+bit 16-31: index from OD</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1601" name="RPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_RPDOmap">
+      <label lang="en">RPDO mapping parameter</label>
+      <description lang="en">0x1600 - 0x17FF RPDO mapping parameter (see description for 0x1600)</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1602" name="RPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_RPDOmap">
+      <label lang="en">RPDO mapping parameter</label>
+      <description lang="en">0x1600 - 0x17FF RPDO mapping parameter (see description for 0x1600)</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1603" name="RPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_RPDOmap">
+      <label lang="en">RPDO mapping parameter</label>
+      <description lang="en">0x1600 - 0x17FF RPDO mapping parameter (see description for 0x1600)</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1604" name="RPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_RPDOmap" disabled="true">
+      <label lang="en">RPDO mapping parameter</label>
+      <description lang="en">0x1600 - 0x17FF RPDO mapping parameter (see description for 0x1600)</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1800" name="TPDO communication parameter" objectType="9" subNumber="6" memoryType="ROM" accessFunctionName="CO_ODF_TPDOcom">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="5"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by TPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="$NODEID+0x180"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <CANopenSubObject subIndex="03" name="inhibit time" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="04" name="compatibility entry" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="05" name="event timer" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <label lang="en">TPDO communication parameter</label>
+      <description lang="en">0x1800 - 0x19FF TPDO communication parameter
+max sub-index
+
+COB-ID
+bit  0-10: COB-ID for PDO, to change it bit 31 must be set
+bit 11-29: set to 0 for 11 bit COB-ID
+bit 30:    0(1) - rtr are allowed (are NOT allowed) for PDO
+bit 31:    0(1) - node uses (does NOT use) PDO
+
+Transmission type
+value = 0:       transmiting is synchronous, specification in device profile
+value = 1-240:   transmiting is synchronous after every N-th SYNC object
+value = 241-251: not used
+value = 252-253: Transmited only on reception of Remote Transmission Request
+value = 254:     manufacturer specific
+value = 255:     asinchronous, specification in device profile
+
+inhibit time
+bit 0-15:  Minimum time between transmissions of the PDO in 100µs. Zero disables functionality.
+
+compatibility entry
+bit 0-7:   Not used.
+
+event timer
+bit 0-15:  Time between periodic transmissions of the PDO in ms. Zero disables functionality.</description>
+    </CANopenObject>
+    <CANopenObject index="1801" name="TPDO communication parameter" objectType="9" subNumber="6" memoryType="ROM" accessFunctionName="CO_ODF_TPDOcom">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="5"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by TPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="$NODEID+0x280"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <CANopenSubObject subIndex="03" name="inhibit time" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="04" name="compatibility entry" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="05" name="event timer" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <label lang="en">TPDO communication parameter</label>
+      <description lang="en">0x1800 - 0x19FF TPDO communication parameter (see description for 0x1800)</description>
+    </CANopenObject>
+    <CANopenObject index="1802" name="TPDO communication parameter" objectType="9" subNumber="6" memoryType="ROM" accessFunctionName="CO_ODF_TPDOcom">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="5"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by TPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="$NODEID+0x380"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <CANopenSubObject subIndex="03" name="inhibit time" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="04" name="compatibility entry" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="05" name="event timer" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <label lang="en">TPDO communication parameter</label>
+      <description lang="en">0x1800 - 0x19FF TPDO communication parameter (see description for 0x1800)</description>
+    </CANopenObject>
+    <CANopenObject index="1803" name="TPDO communication parameter" objectType="9" subNumber="6" memoryType="ROM" accessFunctionName="CO_ODF_TPDOcom">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="5"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by TPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="$NODEID+0x480"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <CANopenSubObject subIndex="03" name="inhibit time" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="04" name="compatibility entry" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="05" name="event timer" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <label lang="en">TPDO communication parameter</label>
+      <description lang="en">0x1800 - 0x19FF TPDO communication parameter (see description for 0x1800)</description>
+    </CANopenObject>
+    <CANopenObject index="1804" name="TPDO communication parameter" objectType="9" subNumber="6" memoryType="ROM" accessFunctionName="CO_ODF_TPDOcom" disabled="true">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="5"/>
+      <CANopenSubObject subIndex="01" name="COB-ID used by TPDO" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="1"/>
+      <CANopenSubObject subIndex="02" name="transmission type" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="254"/>
+      <CANopenSubObject subIndex="03" name="inhibit time" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="04" name="compatibility entry" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="05" name="event timer" objectType="7" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <label lang="en">TPDO communication parameter</label>
+      <description lang="en">0x1800 - 0x19FF TPDO communication parameter (see description for 0x1800)</description>
+    </CANopenObject>
+    <CANopenObject index="1A00" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
+      <label lang="en">TPDO mapping parameter</label>
+      <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (To change mapping, max sub-index must be set to 0)
+max sub-index
+
+mapped object  (subindex 1...8)
+bit   0-7: data length in bits
+bit  8-15: subindex from OD
+bit 16-31: index from OD</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1A01" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
+      <label lang="en">TPDO mapping parameter</label>
+      <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1A02" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
+      <label lang="en">TPDO mapping parameter</label>
+      <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1A03" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
+      <label lang="en">TPDO mapping parameter</label>
+      <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1A04" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap" disabled="true">
+      <label lang="en">TPDO mapping parameter</label>
+      <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+    </CANopenObject>
+    <CANopenObject index="1F80" name="NMT startup" objectType="7" memoryType="ROM" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000">
+      <label lang="en">NMT Startup</label>
+      <description lang="en">Only bit 2 is implemented.
+
+bit 0: 0(1) - device is not (is) NMT master
+bit 1: 0(1) - if bit3=0, start explicitly assigned (all) nodes
+bit 2: 0(1) - automaticaly enter (DO NOT automaticaly enter) the operational state on bootup
+bit 3: 0(1) - NMT master may (may not) start nodes automatically
+bit 4: 0(1) - if monitored node fails heartbeat handle that (all) node(s)
+bit 5: 0(1) - flying master process not (yes) supported
+bit 6: 0(1) - use bit 4 (ignore bit 4, stop all nodes)
+bit 7-31: reserved, set to 0</description>
+    </CANopenObject>
+    <CANopenObject index="2100" name="Error status bits" objectType="7" memoryType="RAM" dataType="0A" accessType="ro" PDOmapping="optional" defaultValue="00 00 00 00 00 00 00 00">
+      <label lang="en">Error Status Bits</label>
+      <description lang="en">Error Status Bits indicates any error occurred in program. Specific bit is set by ErrorReport() function, when error occurs in program. It can be reset by ErrorReset() function, if error is solved. On each change of any Error Status Bit Emergency message is sent. If critical bits are set, node will not be able to enter operational state. For more information see file CO_errors.h.</description>
+    </CANopenObject>
+    <CANopenObject index="2101" name="CAN node ID" objectType="7" memoryType="ROM" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0x05">
+      <accessFunctionPreCode>if(WRITING){
+  unsigned char var = *((unsigned char*)dataBuff);
+  if(var &lt; 1) return 0x06090032L;  //Value of parameter written too low.
+  if(var &gt; 127) return 0x06090031L;  //Value of parameter written too high.
+}</accessFunctionPreCode>
+      <label lang="en">CAN Node ID</label>
+      <description lang="en">CAN Node ID is CANopenNode specific variable. It sets node-ID for device on CANopen network. Node-ID can be set on other ways too, for example with DIP switches. More advanced solution is use of LSS.
+
+Valid values are from 1 to 127:</description>
+    </CANopenObject>
+    <CANopenObject index="2102" name="CAN bit rate" objectType="7" memoryType="ROM" dataType="05" accessType="rw" PDOmapping="no" defaultValue="5">
+      <accessFunctionPreCode>if(WRITING){
+  unsigned char var = *((unsigned char*)dataBuff);
+  if(var &gt; 7) return 0x06090031L;  //Value of parameter written too high.
+}</accessFunctionPreCode>
+      <label lang="en">CAN Bit-Rate</label>
+      <description lang="en">CAN Bit-Rate is CANopenNode specific variable. It sets CAN Bit-Rate for device on CANopen network. Bit-Rate can be set on other ways too, for example with DIP switches. More advanced solution is use of LSS.
+
+Valid values are from 0 to 7:
+0 = 10 kbps
+1 = 20 kbps
+2 = 50 kbps
+3 = 125 kbps
+4 = 250 kbps
+5 = 500 kbps
+6 = 800 kbps
+7 = 1000 kbps</description>
+    </CANopenObject>
+    <CANopenObject index="2103" name="SYNC counter" objectType="7" memoryType="RAM" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0">
+      <label lang="en">SYNC Counter</label>
+      <description lang="en">SYNC Counter is incremented each time, SYNC message is received or transmitted.</description>
+    </CANopenObject>
+    <CANopenObject index="2104" name="SYNC time" objectType="7" memoryType="RAM" dataType="06" accessType="ro" PDOmapping="no" defaultValue="0">
+      <label lang="en">SYNC Time</label>
+      <description lang="en">SYNC Time is incremented each timer period and reset to zero, each time SYNC is received or transmitted.</description>
+    </CANopenObject>
+    <CANopenObject index="2105" name="Performance" objectType="9" subNumber="5" memoryType="RAM">
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="4"/>
+      <CANopenSubObject subIndex="01" name="Timer bandwidth perc" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="02" name="Timer bandwidth perc max" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="03" name="Mainline count per 100 ms" objectType="7" dataType="06" accessType="ro" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="04" name="Mainline count per 100 ms max" objectType="7" dataType="06" accessType="ro" PDOmapping="no" defaultValue="0"/>
+      <label lang="en">Performance</label>
+      <description lang="en">Microcontroller Performance is measured automatically by stack. It gives some information, how much is microcontroller loaded and if it runs smoothly.</description>
+    </CANopenObject>
+    <CANopenObject index="2106" name="Power-on counter" objectType="7" memoryType="EEPROM" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0">
+      <label lang="en">Power on Counter</label>
+      <description lang="en">Power on Counter counts total microcontroller resets in it's lifetime. Variable is an example of EEPROM usage.</description>
+    </CANopenObject>
+  </CANopenObjectList>
+  <other>
+    <codeName name="(new blank project)"/>
+    <supportedLanguages supportedLanguages="en de sl nl"/>
+    <DeviceIdentity>
+      <vendorName>Paternoster</vendorName>
+      <productName>CANopenNode</productName>
+      <productText>
+        <label lang="en">CANopenNode</label>
+        <description lang="en" URI="http://canopennode.sourceforge.net">CANopenNode is an open source software stack used for serial communication of multiple devices over the CAN/CANopen Network. It runs on different microcontrollers, is reliable, simple and powerful and is suitable for industrial or home automation.</description>
+      </productText>
+      <version versionType="FW">2.00</version>
+    </DeviceIdentity>
+    <capabilities>
+      <characteristicsList>
+        <characteristic>
+          <characteristicName>
+            <label lang="en"/>
+          </characteristicName>
+          <characteristicContent>
+            <label lang="en"/>
+          </characteristicContent>
+        </characteristic>
+      </characteristicsList>
+    </capabilities>
+    <baudRate>
+      <supportedBaudRate value="10 Kbps"/>
+      <supportedBaudRate value="20 Kbps"/>
+      <supportedBaudRate value="50 Kbps"/>
+      <supportedBaudRate value="125 Kbps"/>
+      <supportedBaudRate value="250 Kbps"/>
+      <supportedBaudRate value="500 Kbps"/>
+      <supportedBaudRate value="800 Kbps"/>
+      <supportedBaudRate value="1000 Kbps"/>
+    </baudRate>
+    <dummyUsage>
+      <dummy entry="Dummy0001=0"/>
+      <dummy entry="Dummy0002=1"/>
+      <dummy entry="Dummy0003=1"/>
+      <dummy entry="Dummy0004=1"/>
+      <dummy entry="Dummy0005=1"/>
+      <dummy entry="Dummy0006=1"/>
+      <dummy entry="Dummy0007=1"/>
+    </dummyUsage>
+  </other>
+</device>

@@ -1,0 +1,28 @@
+[Plugin]
+Name=per_keypad
+Description=NanoBoard-1 4x4 Keypad Controller
+Caption=Keypad Controller
+Implement=per_keypad
+HardwareID=KEYPADA_W
+Bitmap=per_keypad.bmp
+LargeBitmap=per_keypad_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+CodeName=interrupt
+Description=interrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True

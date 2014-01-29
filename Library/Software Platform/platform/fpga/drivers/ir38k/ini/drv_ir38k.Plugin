@@ -1,0 +1,34 @@
+[Plugin]
+Name=drv_ir38k
+Description=IR Remote Control (38KHz) RX driver
+Caption=IR38K RX Driver
+SourceDir=platform\fpga\drivers\ir38k\src
+Implement=drv_ir38k
+MinInstances=1
+Bitmap=drv_ir38k.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_ir38k
+Condition=EQ
+
+[Instance]
+Require0=per_ir38k
+
+[Instance_Option0]
+Name=rxbuffer
+GUIName=Buffer size
+Description=Software buffer size for received data.
+Kind=BUFFER
+DefaultValue=32
+UserTypeHeaderFile=ir38kbuffer_type.h
+Type=ir38kbuffer_t
+
+[Instance_Option1]
+Name=repsens
+GUIName=Repeat Code Sensitity
+Kind=INT
+Description=Software will throw away the entered number of received repeat codes. On the RC you will now need to hold down a key for more than this value times 108ms to be able to receive it's corresponding repeat code. Effectively an entered value greater than 0 will reduce sensitivity to prolonged key pressing on your RC.
+DefaultValue=0
+MinRange=0
+MaxRange=100

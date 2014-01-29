@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_owd_ds2406
+Category=DRIVER
+System=False
+Description=DS2406 One Wire Device Driver
+PublicDir=platform\fpga\drivers\owd\owd_ds2406\include

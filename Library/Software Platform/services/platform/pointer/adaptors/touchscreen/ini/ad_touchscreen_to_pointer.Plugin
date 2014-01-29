@@ -1,0 +1,11 @@
+[Plugin]
+Name=ad_touchscreen_to_pointer
+Description=Adapts the Touchscreen Services to the Pointer.
+SourceDir=services\platform\pointer\adaptors\touchscreen\src\
+Implement=ad_pointer
+InitHandler=touchscreen_to_pointer_init
+InitHandlerPriority=16
+
+[Instance]
+Require0=touchscreen
+

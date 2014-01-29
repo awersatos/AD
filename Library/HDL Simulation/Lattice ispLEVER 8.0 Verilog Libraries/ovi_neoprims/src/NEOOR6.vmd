@@ -1,0 +1,54 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Copyright (c) 2005 by Lattice Semiconductor Corporation
+// --------------------------------------------------------------------
+//
+//
+//                     Lattice Semiconductor Corporation
+//                     5555 NE Moore Court
+//                     Hillsboro, OR 97214
+//                     U.S.A.
+//
+//                     TEL: 1-800-Lattice  (USA and Canada)
+//                          1-408-826-6000 (other locations)
+//
+//                     web: http://www.latticesemi.com/
+//                     email: techsupport@latticesemi.com
+//
+// --------------------------------------------------------------------
+//
+// Simulation Library File for NEOPRIMS
+//
+// $Header: /home/dmsys/pvcs/RCSMigTest/rcs/verilog/pkg/versclibs/data/neoprims/RCS/NEOOR6.vmd,v 1.3 2005/05/19 18:23:54 pradeep Exp $ 
+//
+`timescale 1 ns / 100 ps
+`celldefine
+
+   module NEOOR6 (OUT, IN0, IN1, IN2, IN3, IN4, IN5) ;
+
+      output OUT ;
+      input IN0, IN1, IN2, IN3, IN4, IN5 ;
+
+      or (OUT, IN0, IN1, IN2, IN3, IN4, IN5) ;
+
+   specify
+
+      specparam INDLYLH0     = 0:0:0,  INDLYLH1     = 0:0:0 ;
+      specparam INDLYLH2     = 0:0:0,  INDLYLH3     = 0:0:0 ;
+      specparam INDLYLH4     = 0:0:0,  INDLYLH5     = 0:0:0 ;
+      specparam INDLYHL0     = 0:0:0,  INDLYHL1     = 0:0:0 ;
+      specparam INDLYHL2     = 0:0:0,  INDLYHL3     = 0:0:0 ;
+      specparam INDLYHL4     = 0:0:0,  INDLYHL5     = 0:0:0 ;
+      specparam OUTDLYLH     = 0:0:0,  OUTDLYHL     = 0:0:0 ;
+
+      (IN0 => OUT) = (INDLYLH0 +OUTDLYLH, INDLYHL0 +OUTDLYHL);
+      (IN1 => OUT) = (INDLYLH1 +OUTDLYLH, INDLYHL1 +OUTDLYHL);
+      (IN2 => OUT) = (INDLYLH2 +OUTDLYLH, INDLYHL2 +OUTDLYHL);
+      (IN3 => OUT) = (INDLYLH3 +OUTDLYLH, INDLYHL3 +OUTDLYHL);
+      (IN4 => OUT) = (INDLYLH4 +OUTDLYLH, INDLYHL4 +OUTDLYHL);
+      (IN5 => OUT) = (INDLYLH5 +OUTDLYLH, INDLYHL5 +OUTDLYHL);
+
+   endspecify
+   endmodule
+`endcelldefine

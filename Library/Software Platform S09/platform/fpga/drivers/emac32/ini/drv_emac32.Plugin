@@ -1,0 +1,145 @@
+[Plugin]
+Name=drv_emac32
+Caption=EMAC32 Driver
+Description=EMAC32 Driver
+SourceDir=platform\fpga\drivers\emac32\src
+InitHandler=
+InitHandlerPriority=16
+Implement=drv_emac32
+MinInstances=1
+Bitmap=drv_emac32.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_emac32
+Condition=EQ
+
+[Instance]
+Require0=per_emac32
+
+[Instance_Option0]
+Name=mac
+Description=MAC address
+Kind=ARRAY
+Type=UINT8
+Size=6
+DefaultValue=2,3,4,5,6,7
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option1]
+Name=tx_cmd
+Description=Transmitter options
+Kind=BITMASK32
+DefaultValue=0x00000001
+BitName0=Enabled_tx
+BitDescription0=Enabled
+BitName1=FullDuplex
+BitDescription1=Fullduplex
+
+[Instance_Option2]
+Name=tx_buffer
+Description=Transmitter buffer size (words)
+Kind=BUFFER
+Type=UINT32
+DefaultValue=20480
+AllocMemory=True
+
+[Instance_Option3]
+Name=tx_blocking
+Description=Transmitter blocking mode
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option4]
+Name=tx_wait_mode
+GUIName=TX wait mode
+Description=Activity while waiting for a transmit buffer to become available
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+Enum2=NOTIFY
+EnumDescription2=Wait for interrupt notification
+DefaultValue=YIELD
+
+[Instance_Option4_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option5]
+Name=tx_wait_sleepms
+GUIName=TX wait sleep duration
+Kind=INT
+Description=Sleep duration if TX thread has to wait and TX Wait mode is SLEEP
+DefaultValue=100
+
+[Instance_Option5_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option6]
+Name=rx_cmd
+Description=Receiver options
+Kind=BITMASK32
+DefaultValue=0x00000007
+BitName0=Enabled_rx
+BitDescription0=Enabled - if Unicast=1 and Enabled=1 then rx_mac must be filled in
+BitName1=Unicast
+BitDescription1=Unicast - if Unicast=1 and Enabled=1 then rx_mac must be filled in
+BitName2=Broadcast
+BitDescription2=Broadcast
+BitName3=Multicast
+BitDescription3=Multicast
+BitName4=Promiscuous
+BitDescription4=Promiscuous
+
+[Instance_Option7]
+Name=rx_buffer
+Description=Receiver buffer size (words)
+Kind=BUFFER
+Type=UINT32
+DefaultValue=20480
+AllocMemory=True
+
+[Instance_Option8]
+Name=rx_blocking
+Description=Receiver blocking mode
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option9]
+Name=rx_wait_mode
+GUIName=RX wait mode
+Description=Activity while waiting for reception of a new frame
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+Enum2=NOTIFY
+EnumDescription2=Wait for interrupt notification
+DefaultValue=YIELD
+
+[Instance_Option9_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option10]
+Name=rx_wait_sleepms
+GUIName=RX wait sleep duration
+Kind=INT
+Description=Sleep duration if RX thread has to wait and RX wait mode is SLEEP
+DefaultValue=100
+
+
+

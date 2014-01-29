@@ -1,0 +1,6 @@
+[Interface]
+Name=per_i2cm
+Category=PERIPHERAL
+System=False
+Description=I2C Master Controller Peripheral
+PublicDir=platform\fpga\peripherals\i2cm\include

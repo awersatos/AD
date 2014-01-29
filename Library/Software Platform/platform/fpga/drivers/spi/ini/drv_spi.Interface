@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_spi
+Category=DRIVER
+System=False
+Description=SPI driver
+PublicDir=platform\fpga\drivers\spi\include
+
+

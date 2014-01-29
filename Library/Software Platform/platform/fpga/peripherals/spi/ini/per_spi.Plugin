@@ -1,0 +1,86 @@
+[Plugin]
+Name=per_spi
+Implement=per_spi
+HardwareID=WB_SPI
+Caption=SPI Master Controller
+Description=SPI bus master for communication with a single SPI slave device, or with multiple slave devices through the NanoBoard SPI multiplexer.
+SourceDir=platform\fpga\peripherals\spi\src
+Bitmap=per_spi.bmp
+LargeBitmap=per_spi_large.bmp
+HardwareID1=WB_SDCARD
+Caption1=SD-Card SPI Controller
+Description1=SPI interface on SD-Card
+Bitmap1=per_sdcard.bmp
+LargeBitmap1=per_sdcard_large.bmp
+HardwareID2=WB_BOOTLOADER_V2
+Description2=SPI bus master for communication with the Serial Flash, and with other slave devices through the NanoBoard SPI multiplexer.
+SourceDir=platform\fpga\peripherals\spi\src
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=Hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+;This option is set by the SPI configurator
+[Instance_Option1]
+Name=TransferSize
+GUIName=Data Transfer Size 
+Description=Maximum transfersize supported (8/32: imported from FPGA project) 
+Kind=UINT32
+DefaultValue=32
+Auto=True
+MaxRange=32
+
+;This option is set by the SPI configurator
+[Instance_Option2]
+Name=SlaveCount
+GUIName=Chip Select pins
+Description=Number of chip(slave) select pins
+Kind=UINT32
+DefaultValue=0
+Auto=True
+MaxRange=8
+
+[Instance_Option2_Hide_If0]
+Kind=True
+
+;This option is set by the SPI configurator
+[Instance_Option3]
+Name=ModePinEnabled
+GUIName=Mode pin
+Description=Mode pin available (imported from FPGA project)
+Kind=BOOLEAN
+DefaultValue=False
+Auto=True
+
+;This option is set by the SPI configurator
+[Instance_Option4]
+Name=SPIController
+Kind=BOOLEAN
+DefaultValue=False
+Auto=True
+
+[Instance_Option4_Hide_If0]
+Kind=True
+
+;This option is set by the SPI configurator
+[Instance_Option4]
+Name=Option_IsNanoboard
+Kind=BOOLEAN
+DefaultValue=False
+Auto=True
+
+[Instance_Option5_Hide_If0]
+Kind=True

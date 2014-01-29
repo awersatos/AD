@@ -1,0 +1,178 @@
+[Plugin]
+Name=posix_devio
+Caption=Generic Device I/O
+Description=Standard POSIX device I/O routines
+SourceDir=services\posix\devio\src
+SourceFile0=services\posix\devio\libc\_fopen.c
+SourceFile1=services\posix\devio\libc\_iob.c
+SourceFile2=services\posix\devio\libc\fdopen.c
+SourceFile3=services\posix\devio\libc\fopen.c
+SourceFile4=services\posix\devio\libc\freopen.c
+SourceFile5=services\posix\devio\libc\fflush.c
+SourceFile6=services\posix\devio\libc\fclose.c
+SourceFile7=services\posix\devio\libc\strerror.c
+SourceFile8=services\posix\devio\libc\perror.c
+FrameworkCompileOption0=-I"$(SSASROOT)\services\posix\devio\internal"
+GlobalCompileOption0=-D__POSIX_DEVIO__
+GlobalCompileOption1=-I"$(SSASROOT)\services\posix\include"
+GlobalCompileOption2=-D__POSIX_SHM=1
+GlobalCompileOption3=-D__POSIX_SHARED_MEMORY_OBJECTS=1
+GlobalCompileOption4=-D__POSIX_MAPPED_FILES=1
+InitHandler=posix_devio_init
+InitHandlerPriority=3
+Implement=posix_devio
+Bitmap=posix_devio.bmp
+
+[Option0]
+Name=STDIN
+GUIName= Standard Input
+Description=Have stdin assigned to a device before main.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option1]
+Name=STDINDEV
+GUIName=stdin device name
+Description=Name of device for 'stdin'.
+Kind=INSTANCE
+Interface=posix_devio
+
+[Option1_Available_If0]
+Kind=OPTION
+Object=STDIN
+Condition=EQ
+Value=True
+
+[Option2]
+Name=STDIN_BUFTYPE
+GUIName=stdin buffering type
+Description=Buffering stdin: no buffer, line buffer, or full buffering.
+Kind=ENUM
+DefaultValue=None
+Enum0=None
+Enum1=Full
+Enum2=Line
+
+[Option2_Available_If0]
+Kind=OPTION
+Object=STDIN
+Condition=EQ
+Value=True
+
+[Option3]
+Name=STDIN_BUFSIZE
+GUIName=stdin buffer size
+Description=Buffer size for stdin
+Kind=UINT16
+DefaultValue=80
+
+[Option3_Available_If0]
+Kind=OPTION
+Object=STDIN
+Condition=EQ
+Value=True
+
+[Option3_Available_If1]
+Kind=OPTION
+Object=STDIN_BUFTYPE
+Condition=NOTEQ
+Value=None
+
+[Option4]
+Name=STDOUT
+GUIName= Standard Output
+Description=Have stdout assigned to a device before main.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option5]
+Name=STDOUTDEV
+GUIName=stdout device name
+Description=Name of device for 'stdout'
+Kind=INSTANCE
+Interface=posix_devio
+
+[Option5_Available_If0]
+Kind=OPTION
+Object=STDOUT
+Condition=EQ
+Value=True
+
+[Option6]
+Name=STDOUT_BUFTYPE
+GUIName=stdout buffering type
+Description=Buffering type for stdout
+Kind=ENUM
+DefaultValue=Line
+Enum0=None
+Enum1=Full
+Enum2=Line
+
+[Option6_Available_If0]
+Kind=OPTION
+Object=STDOUT
+Condition=EQ
+Value=True
+
+[Option7]
+Name=STDOUT_BUFSIZE
+GUIName=stdout bufsize
+Description=Buffer size for stdout
+Kind=UINT16
+DefaultValue=80
+
+[Option7_Available_If0]
+Kind=OPTION
+Object=STDOUT
+Condition=EQ
+Value=True
+
+[Option7_Available_If1]
+Kind=OPTION
+Object=STDOUT_BUFTYPE
+Condition=NOTEQ
+Value=None
+
+[Option8]
+Name=STDERR
+GUIName= Standard Error
+Description=Have stderr assigned to a device before main.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option9]
+Name=STDERRDEV
+GUIName=stderr device name
+Description=Name of device for 'stderr'
+Kind=INSTANCE
+Interface=posix_devio
+
+[Option9_Available_If0]
+Kind=OPTION
+Object=STDERR
+Condition=EQ
+Value=True
+
+[Option10]
+Name=STDERR_BUFTYPE
+GUIName=stderr buffering type
+Description=Buffering type for stderr
+Kind=ENUM
+DefaultValue=Line
+Enum0=None
+Enum1=Full
+Enum2=Line
+
+[Option10_Available_If0]
+Kind=OPTION
+Object=STDERR
+Condition=EQ
+Value=True
+
+[Option11]
+Name=DEV_MAX
+Description=Maximum number of POSIX devices
+Kind=UINT8
+DefaultValue=8
+MinRange=1
+InLimitsCfg=True

@@ -1,0 +1,35 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=igloo
+
+[Library]
+igloo=.\igloo.LIB
+
+[$LibMap$]
+igloo=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[Files]
+/igloo.vhd=-1
+/update_igloo.do=-1
+
+[Files.Data]
+.\src\igloo.vhd=VHDL Source Code
+.\src\update_igloo.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

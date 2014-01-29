@@ -1,0 +1,250 @@
+//============================================================
+# 40193 source
+//40193 U/D Bidirectional counter
+//Values from FSC October 1989, Revised Jan 1999 datasheet
+// jjt 10/4/2002: copied ls193 from LS.txt and converted it to CMOS.
+//============================================================
+INPUTS VDD, GND, CPU, CPD, PL, MR, D3, D2, D1, D0;
+OUTPUTS VDD_LD, CPU_LD, CPD_LD, PL_LD, MR_LD, D3_LD, D2_LD, D1_LD, D0_LD,
+        TCU, TCD, Q3, Q2, Q1, Q0;
+INTEGERS internal_reg, mr_chg, load;
+REALS tt_val, tt_5, tt_10, tt_15 tplh_CP_5_Q, tplh_CP_10_Q, tplh_CP_15_Q, tphl_CP_5_Q,
+      tphl_CP_10_Q,tphl_CP_15_Q, tplh_CPU_5_TCU, tplh_CPU_10_TCU,
+      tplh_CPU_15_TCU, tphl_CPU_5_TCU, tphl_CPU_10_TCU,
+      tphl_CPU_15_TCU, tplh_CPD_5_TCD, tplh_CPD_10_TCD, tplh_CPD_15_TCD,
+      tphl_CPD_5_TCD, tphl_CPD_10_TCD, tphl_CPD_15_TCD, tplh_PL_5_Q,
+      tplh_PL_10_Q, tplh_PL_15_Q, tphl_PL_5_Q, tphl_PL_10_Q, tphl_PL_15_Q,
+      tphl_MR_5_Q, tphl_MR_10_Q, tphl_MR_15_Q, tw_CPU, tw_CPD,
+      tw_CPU_5, tw_CPU_10, tw_CPU_15, tw_CPD_5, tw_CPD_10, tw_CPD_15, 
+      tw_PL_5, tw_PL_10, tw_PL_15, tw_MR_5, tw_MR_10, tw_MR_15, tw_MR,
+      ts_PL_D_5, ts_PL_D_10, ts_PL_D_15, th_PL_D_5, th_PL_D_10, th_PL_D_15,
+      trec_MR_5, trec_MR_10, trec_MR_15, trec_MR, trec_PL_5, trec_PL_10, trec_PL_15,
+      rin_val, ridd_val_5, ridd_val_10, ridd_val_15, ridd_val,
+      rout_5, rout_10, rout_15, vdd_val, tw_PL, ts_PL_D, th_PL_D,
+      trec_PL;
+
+PWR_GND_PINS(VDD,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(3,15);	      //check for min supply=3 and max supply=15
+VOL_VOH_MIN(0,0,0.1);	      //set min vol_param=gnd_param+0, max voh_param=pwr_param-0
+VIL_VIH_PERCENT(33,66);	      //CMOS vil=33% of supply, vih=66% of supply
+IO_PAIRS(CPU:CPU_LD, CPD:CPD_LD, PL:PL_LD, MR:MR_LD, D3:D3_LD, D2:D2_LD, D1:D1_LD, D0:D0_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tMR\tPL\tCPU\tCPD\tD0\tD1\tD2\tD3\tQ0\tQ1\tQ2\tQ3\tTCU\tTCD");
+
+	tt_5 = (MIN_TYP_MAX(tt_param: NULL, 100n, 200n));
+	tt_10 = (MIN_TYP_MAX(tt_param: NULL, 50n, 100n));
+	tt_15 = (MIN_TYP_MAX(tt_param: NULL, 40n, 80n));
+
+	tplh_CPU_5_TCU = (MIN_TYP_MAX(tp_param: NULL, 120n, 200n));
+	tplh_CPU_10_TCU = (MIN_TYP_MAX(tp_param: NULL, 50n, 80n));
+	tplh_CPU_15_TCU = (MIN_TYP_MAX(tp_param: NULL, 40n, 65n));
+
+	tphl_CPU_5_TCU = (MIN_TYP_MAX(tp_param: NULL, 120n, 200n));
+	tphl_CPU_10_TCU = (MIN_TYP_MAX(tp_param: NULL, 50n, 80n));
+	tphl_CPU_15_TCU = (MIN_TYP_MAX(tp_param: NULL, 40n, 65n));
+
+	tplh_CPD_5_TCD = (MIN_TYP_MAX(tp_param: NULL, 120n, 200n));
+	tplh_CPD_10_TCD = (MIN_TYP_MAX(tp_param: NULL, 50n, 80n));
+	tplh_CPD_15_TCD = (MIN_TYP_MAX(tp_param: NULL, 40n, 65n));
+
+	tphl_CPD_5_TCD = (MIN_TYP_MAX(tp_param: NULL, 120n, 200n));
+	tphl_CPD_10_TCD = (MIN_TYP_MAX(tp_param: NULL, 50n, 80n));
+	tphl_CPD_15_TCD = (MIN_TYP_MAX(tp_param: NULL, 40n, 65n));
+
+    	tplh_CP_5_Q = (MIN_TYP_MAX(tp_param: NULL, 250n, 400n));
+	tplh_CP_10_Q = (MIN_TYP_MAX(tp_param: NULL, 100n, 160n));
+	tplh_CP_15_Q = (MIN_TYP_MAX(tp_param: NULL, 80n, 130n));
+
+	tphl_CP_5_Q = (MIN_TYP_MAX(tp_param: NULL, 250n, 400n));
+	tphl_CP_10_Q = (MIN_TYP_MAX(tp_param: NULL, 100n, 160n));
+	tphl_CP_15_Q = (MIN_TYP_MAX(tp_param: NULL, 80n, 130n));
+
+	tplh_PL_5_Q = (MIN_TYP_MAX(tp_param: NULL, 300n, 480n));
+	tplh_PL_10_Q = (MIN_TYP_MAX(tp_param: NULL, 120n, 190n));
+	tplh_PL_15_Q = (MIN_TYP_MAX(tp_param: NULL, 95n, 150n));
+
+	tphl_PL_5_Q = (MIN_TYP_MAX(tp_param: NULL, 29n, 40n));
+	tphl_PL_10_Q = (MIN_TYP_MAX(tp_param: NULL, 29n, 40n));
+	tphl_PL_15_Q = (MIN_TYP_MAX(tp_param: NULL, 29n, 40n));
+
+	tphl_MR_5_Q = (MIN_TYP_MAX(tp_param: NULL, 130n, 220n));
+	tphl_MR_10_Q = (MIN_TYP_MAX(tp_param: NULL, 60n, 100n));
+	tphl_MR_15_Q = (MIN_TYP_MAX(tp_param: NULL, 50n, 80n));
+
+// Typical values from datasheet used.
+	tw_CPU_5 = (120n);
+	tw_CPU_10 = (35n);
+	tw_CPU_15 = (28n);
+
+	tw_CPD_5 = (120n);
+	tw_CPD_10 = (35n);
+	tw_CPD_15 = (28n);
+
+	tw_PL_5 = (100n);
+	tw_PL_10 = (40n);
+	tw_PL_15 = (32n);
+
+	tw_MR_5 = (300n);
+	tw_MR_10 = (120n);
+	tw_MR_15 = (95n);
+
+	ts_PL_D_5 = (100n);
+	ts_PL_D_10 = (30n);
+	ts_PL_D_15 = (25n);
+
+// No data sheet values mentioned for th_PL_D*, trec_PL* and trec_MR* below.
+	th_PL_D_5 = (5n);
+	th_PL_D_10 = (5n);
+	th_PL_D_15 = (5n);
+
+	trec_PL_5 = (40n);
+	trec_PL_10 = (40n);
+	trec_PL_15 = (40n);
+
+	trec_MR_5 = (40n);
+	trec_MR_10 = (40n);
+	trec_MR_15 = (40n);
+
+
+	//CMOS B IOH (min,typ)=(-0.44mA,-0.88mA) @ Vdd=5V and Voh=4.6V: rout=(Vdd-Voh)/IOH = (909,454.55)
+	//CMOS B IOL (min,typ)=(0.44mA,0.88mA) @ Vdd=5V and Vol=0.4V: rout=Vol/IOL= (909,454.55)
+    rout_5= (MIN_TYP_MAX(drv_param: 909,454.55,NULL));
+
+	//CMOS B IOH (min,typ)=(-1.1mA,-2.25mA) @ Vdd=10V and Voh=9.5V: rout=(Vdd-Voh)/IOH = (454.55,222.22)
+	//CMOS B IOL (min,typ)=(1.1mA,2.25mA) @ Vdd=10V and Voh=0.5V: rout=Vol/IOL= (454.55,222.22)
+    rout_10= (MIN_TYP_MAX(drv_param: 454.55,222.22,NULL));
+
+	//CMOS B IOH (min,typ)=(-3mA,-8.8mA) @ Vdd=15V and Voh=13.5V: rout=(Vdd-Voh)/IOH= (500,170.45)
+	//CMOS B IOL (min,typ)=(3mA,8.8mA) @ Vdd=15V and Vol=1.5V: rout=Vol/IOL= (500,170.45)
+    rout_15= (MIN_TYP_MAX(drv_param: 500,170.45,NULL));
+
+
+    //CMOS input current @ 25'C: IIN(typ,max)= (1E-11, 0.3uA) @ VDD=15v rin_max= (15/0.3uA);
+	rin_val= (MIN_TYP_MAX(ld_param: NULL, 1.5E12, 5E7));
+
+     // VDD= 5 V, IDD Max = 20uA @ 25'C. ridd_val = 5/20uA = 250k
+     // VDD= 10 V, IDD Max = 40uA @ 25'C. ridd_val = 10/40uA = 250k
+     // VDD= 15 V, IDD Max = 80uA @ 25'C. ridd_val = 15/80uA = 187.5k
+
+	ridd_val_5 = (MIN_TYP_MAX(i_param: NULL, NULL, 250k));
+	ridd_val_10 = (MIN_TYP_MAX(i_param: NULL, NULL, 250k));
+	ridd_val_15 = (MIN_TYP_MAX(i_param: NULL, NULL, 187.5k));
+
+    internal_reg= (0);					//clear internal register
+	STATE Q0 Q1 Q2 Q3 TCU TCD = ZERO;	//initialize outputs
+	STATE TCU TCD = ONE;				//initialize outputs
+	EXIT;
+  END;
+
+vdd_val= (pwr_param - gnd_param);
+rol_param= (PWL_TABLE(vdd_val:5,rout_5,10,rout_10,15,rout_15));
+roh_param= (rol_param);			// Drive high same as drive low
+tt_val= (PWL_TABLE(vdd_val:5,tt_5,10,tt_10,15,tt_15));
+
+
+DRIVE Q0 Q1 Q2 Q3 TCU TCD = (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD CPU_LD CPD_LD PL_LD MR_LD D3_LD D2_LD D1_LD D0_LD =
+  (v0=vol_param,r0=rin_val,v1=voh_param,r1=rin_val,io=1e9,t=1p);
+
+IF (~(MR)) THEN
+  BEGIN
+	IF (PL) THEN
+	  BEGIN
+	    IF (CPD && CHANGED_LH(CPU)) THEN
+	      BEGIN									//count up	
+	        internal_reg= (internal_reg + 1);
+		    IF (internal_reg > 15) THEN
+	          BEGIN
+		        internal_reg= (0);
+		      END;
+	      ELSE
+	        IF (CPU && CHANGED_LH(CPD)) THEN
+	          BEGIN								//count down
+                internal_reg= (internal_reg - 1);
+	            IF (internal_reg < 0) THEN
+		          BEGIN
+		            internal_reg= (15);
+		          END;
+		      END;
+	      END;
+      ELSE										//parallel load
+	    internal_reg= (NUMBER(D3 D2 D1 D0)); 
+      END;
+  ELSE											//reset
+    internal_reg= (0);
+  END;
+
+STATE_BIT Q0 Q1 Q2 Q3 = (internal_reg);
+IF (Q0 && Q1 && Q2 && Q3 && (~(PL) || CPD)) THEN
+  BEGIN
+    STATE_BIT TCU = (CPU);
+  ELSE
+    STATE TCU = ONE;
+  END;
+
+IF (~(Q0 || Q1 || Q2 || Q3) && (~(MR) || ~(PL) || CPU)) THEN
+  BEGIN
+    STATE_BIT TCD = (CPD);
+  ELSE
+    STATE TCD = ONE;
+  END;
+
+IF (warn_param) THEN
+   BEGIN
+      tw_MR = (PWL_TABLE(vdd_val:5,tw_MR_5,10,tw_MR_10,15,tw_MR_15));
+      WIDTH(MR Twh= tw_MR Twl= tw_MR "MR");
+         IF (~(MR)) THEN
+            BEGIN
+               tw_PL = (PWL_TABLE(vdd_val:5,tw_PL_5,10,tw_PL_10,15,tw_PL_15));
+               WIDTH(PL Twh= tw_PL Twl= tw_PL "PL pulse width too narrow");
+               trec_MR = (PWL_TABLE(vdd_val:5,trec_MR_5,10,trec_MR_10,15,trec_MR_15));
+               RECOVER(CPU=LH MR Trec=trec_MR "MR->CPU recovery warning");
+               RECOVER(CPD=LH MR Trec=trec_MR "MR->CPD recovery warning");
+               ts_PL_D = (PWL_TABLE(vdd_val:5,ts_PL_D_5,10,ts_PL_D_10,15,ts_PL_D_15));
+               th_PL_D = (PWL_TABLE(vdd_val:5,th_PL_D_5,10,th_PL_D_10,15,th_PL_D_15));
+               SETUP_HOLD(PL=LH D0 D1 D2 D3 Ts=ts_PL_D Th=th_PL_D "DATA->PL pulse width too narrow");
+               IF (PL) THEN
+                  BEGIN
+                     trec_PL = (PWL_TABLE(vdd_val:5,trec_PL_5,10,trec_PL_10,15,trec_PL_15));
+                     RECOVER(CPU=LH PL Trec=trec_PL "PL->CPU recovery warning");
+                     RECOVER(CPD=LH PL Trec=trec_PL "PL->CPD recovery warning");
+                     tw_CPU = (PWL_TABLE(vdd_val:5,tw_CPU_5,10,tw_CPU_10,15,tw_CPU_15));
+                     tw_CPD = (PWL_TABLE(vdd_val:5,tw_CPD_5,10,tw_CPD_10,15,tw_CPD_15));
+                     WIDTH(CPU Twh= tw_CPU Twl= tw_CPU "CPU pulse width too narrow");
+                     WIDTH(CPD Twh= tw_CPD Twl= tw_CPD "CPD pulse width too narrow");
+                  END;
+            END;
+
+   END;
+
+//MESSAGE("%f\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//        present_time,MR,PL,CPU,CPD,D0,D1,D2,D3,Q0,Q1,Q2,Q3,TCU,TCD);
+
+ridd_val = (PWL_TABLE(vdd_val:5,ridd_val_5,10,ridd_val_10,15,ridd_val_15));
+LOAD VDD_LD = (v0=gnd_param,r0=ridd_val,t=1p);
+
+load = (CHANGED(PL));
+mr_chg = (CHANGED(MR));
+DELAY Q0 Q1 Q2 Q3 =
+  CASE (TRAN_HL && mr_chg) : (PWL_TABLE(vdd_val:5,tphl_MR_5_Q,10,tphl_MR_10_Q,15,tphl_MR_15_Q))
+ 
+  CASE (TRAN_LH && load) : (PWL_TABLE(vdd_val:5,tplh_PL_5_Q,10,tplh_PL_10_Q,15,tplh_PL_15_Q))
+  CASE (TRAN_HL && load) : (PWL_TABLE(vdd_val:5,tphl_PL_5_Q,10,tphl_PL_10_Q,15,tphl_PL_15_Q))
+  
+  CASE (TRAN_LH) : (PWL_TABLE(vdd_val:5,tplh_CP_5_Q,10,tplh_CP_10_Q,15,tplh_CP_15_Q))
+  CASE (TRAN_HL) : (PWL_TABLE(vdd_val:5,tphl_CP_5_Q,10,tphl_CP_10_Q,15,tphl_CP_15_Q))
+END;
+
+DELAY TCU =
+  CASE (TRAN_LH) : (PWL_TABLE(vdd_val:5,tplh_CPU_5_TCU,10,tplh_CPU_10_TCU,15,tplh_CPU_15_TCU))   
+  CASE (TRAN_HL) : (PWL_TABLE(vdd_val:5,tphl_CPU_5_TCU,10,tphl_CPU_10_TCU,15,tphl_CPU_15_TCU))
+END;
+
+
+DELAY TCD =
+  CASE (TRAN_LH) : (PWL_TABLE(vdd_val:5,tplh_CPD_5_TCD,10,tplh_CPD_10_TCD,15,tplh_CPD_15_TCD))
+  CASE (TRAN_HL) : (PWL_TABLE(vdd_val:5,tphl_CPD_5_TCD,10,tphl_CPD_10_TCD,15,tphl_CPD_15_TCD))
+END;
+EXIT;

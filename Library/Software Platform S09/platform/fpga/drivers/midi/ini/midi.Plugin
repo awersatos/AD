@@ -1,0 +1,58 @@
+[Plugin]
+Name=midi
+Caption=MIDI driver
+Description=MIDI over serial communication
+Bitmap=midi.bmp
+Implement=midi
+MinInstances=1
+SourceDir=platform\fpga\drivers\midi\src
+
+[Available_If0]
+kind=PLUGIN
+Object=per_uart8
+Condition=EQ
+
+[Instance]
+Require0=per_uart8
+
+[Instance_Option0]
+Name=channel
+GUINAME=Channel
+Description=Midi channel you want to listen on (0 for all)
+Kind=UINT8
+DefaultValue=0
+
+[Instance_Option1]
+Name=rxintmode
+GUINAME=RX Interrupt mode
+Description=Do you want to receive midi messages in RX interrupt mode
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option2]
+Name=rx_blocking
+Description=Read behavior when no data in buffer (False = abort, True = keep on trying)
+Kind=BOOLEAN
+DefaultValue=False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

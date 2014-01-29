@@ -1,0 +1,27 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=sysbusa_aldec_work
+
+[Library]
+sysbusa_aldec_work=.\sysbusa_aldec_work.LIB
+
+[$LibMap$]
+sysbusa_aldec_work=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

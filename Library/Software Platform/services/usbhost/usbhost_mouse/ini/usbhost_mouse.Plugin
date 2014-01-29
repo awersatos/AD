@@ -1,0 +1,21 @@
+[Plugin]
+Name=usbhost_mouse
+Description=USB Host mouse service
+Caption=USB Host Mouse Service
+SourceDir=services\usbhost\usbhost_mouse\src
+InitHandler=
+InitHandlerPriority=16
+Implement=usbhost_mouse
+MinInstances=1
+Bitmap=usbhost_mouse.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=usbhost
+Condition=EQ
+
+[Instance]
+Require0=usbhost
+Caption=USB Host Mouse Context
+Description=USB Host Mouse Context
+

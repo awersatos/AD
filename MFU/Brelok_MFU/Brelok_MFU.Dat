@@ -1,0 +1,25 @@
+Field=Designator~String~Designator~230|Field=Comment~String~Comment~147|Field=Footprint~String~Footprint~150|Field=Value~String~Value~71|Field=Quantity~Integer~Quantity~136|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~Brelok_MFU.PrjPcb|ReportField=ProjectFullPath~E:\AD\MFU\Brelok_MFU\Brelok_MFU.PrjPcb|ReportField=Title~Bill of Materials For Project [Brelok_MFU.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~42|ReportField=ReportTime~15:03:45|ReportField=ReportDate~20.06.2013|ReportField=ReportDateTime~20.06.2013 15:03:45|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~|ReportField=Author~Gordeychik Alexandr|ReportField=CheckedBy~|ReportField=CompanyName~NTS|ReportField=CurrentDate~20.06.2013|ReportField=CurrentTime~14:33:57|ReportField=Date~|ReportField=DocumentFullPathAndName~E:\AD\MFU\Brelok_MFU\Brelok_MFU.SchDoc|ReportField=DocumentName~Brelok_MFU.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~20.06.2013|ReportField=Organization~|ReportField=ProjectName~Brelok_MFU.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~Brelok_MFU.PrjPcb|ReportField=DataSourceFullPath~E:\AD\MFU\Brelok_MFU\Brelok_MFU.PrjPcb
+C1, C2, C5, C10, C13|0805|C0603|220pF|5
+C3, C7, C11, C19, C20, C21, C22, C23|0805|C0603|0.1uF|8
+C4, C6|0805|C0603|10nF|2
+C8, C9|0805|C0603|27pF|2
+C12, C17|0805|C0603|3.9pF|2
+C14|0805|C0603|1uF|1
+C15|0805|C0603|8.2pF|1
+C16|0805|C0603|5.6pF|1
+C18|0805|C0805|4.7uF|1
+D1|BAT54C|SOT23_N||1
+GB1|CR2032|BAT_Holder_CR2032||1
+L1, L3, L4|SMD|L0603|27nH|3
+L2|SMD|L0603|22nH|1
+P1|SWD_PORT|HDR1X5||1
+P2|Buzzer|HDR1X2||1
+R1|RES|C0603|10K|1
+R2, R3|RES|C0603|200R|2
+R4|RES|C0603|56K|1
+R5|RES|C0603|300R|1
+S1, S2|KAN0642-0501B|KAN0642-0501B||2
+U1|STM32F100C4T6|LQFP48_M||1
+U2|CC1101|VQFN20||1
+VD1|LIGHTDIODE2|LIGHTDIODE2||1
+Y1|SMD|Quartz_SMD0603||1

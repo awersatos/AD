@@ -1,0 +1,33 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=2
+Current Config=compile
+
+[Configurations]
+compile=a500k
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+a500k=.
+
+[Library]
+a500k=.\a500k.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/a500k.vhd=-1
+/update_a500k.do=-1
+
+[Files.Data]
+.\src\a500k.vhd=VHDL Source Code
+.\src\update_a500k.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

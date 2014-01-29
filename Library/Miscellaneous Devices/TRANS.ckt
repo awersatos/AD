@@ -1,0 +1,24 @@
+*Transformer Subcircuit Parameters
+*RATIO = Turns ratio= Secondary/Primary
+*RP    = Primary DC resistance
+*RS    = Secondary DC resistance
+*LEAK  = Leakage inductance
+*MAG   = Magnetizing inductance
+
+*Generic Transformer
+*dw: 2-8-99 corrected VISRC polarity and FCTRL configuration
+*Connections:
+*             Pri+
+*             | Pri-
+*             | | Sec+
+*             | | | Sec-
+*             | | | |
+.SUBCKT TRANS 1 2 3 4 PARAMS: RATIO=1 RP=0.1 RS=0.1 LEAK=1u MAG=1k
+VISRC   4 9 0V
+FCTRL   5 2 VISRC {RATIO}
+EVCVS   8 9 5 2 {RATIO}
+RPRI    1 7 {RP}
+RSEC    8 3 {RS}
+LLEAK   7 5 {LEAK}
+LMAGNET 2 5 {MAG}
+.ENDS TRANS

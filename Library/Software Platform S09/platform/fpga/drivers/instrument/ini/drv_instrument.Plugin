@@ -1,0 +1,16 @@
+[Plugin]
+Name=drv_instrument
+Description=Custom Instrument Driver
+Caption=Custom Instrument Driver
+SourceDir=platform\fpga\drivers\instrument\src
+Implement=drv_instrument
+MinInstances=1
+Bitmap=drv_instrument.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_instrument
+Condition=EQ
+
+[Instance]
+Require0=per_instrument

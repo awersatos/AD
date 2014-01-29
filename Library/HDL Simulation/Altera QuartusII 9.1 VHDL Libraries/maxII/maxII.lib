@@ -1,0 +1,189 @@
+timestamp=0
+
+[maxii_and1]
+A/altvital=A/AltVITAL 21|./src/maxII_atoms.vhd|1416|1*7291
+B/altvital=3*41076
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*39061
+I/altvital=I/AltVITAL 0*40074
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*38456*0x889d1b56714dd4775eeda4c101e07d2f22607fae|0*38994*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/maxII_atoms.vhd|0*39300*0x0fdbb65d4ef192a93e60dba3bbea001f64cf21b3|0*39995*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|1399
+
+[maxii_asynch_lcell]
+A/vital_le=21|./src/maxII_atoms.vhd|1629|1*9768
+B/vital_le=3*41987
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_le=8.2.1986.SP1.35.3497  (Windows)
+I=0*47300
+I/vital_le=0*53265
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*44028*0x7e74913e93757f05e01ed64e50ee7779844f72bb|0*47225*0xf2538cdc6f7b23a146389216c886e772
+M/vital_le=21|0|v63|0|./src/maxII_atoms.vhd|0*47595*0x639565bcd21452ef8abbec597a5de816509652e9|0*53178*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|1557
+
+[maxii_atom_pack]
+B/maxii_atom_pack=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*2818
+I/maxii_atom_pack=0*7323
+M=3|0|v63|0|./src/maxII_atoms.vhd|0*870*0xba288510d8ec5c39c7ef52c7fab0b4055b4f2085|0*2746*0xf2538cdc6f7b23a146389216c886e772
+M/maxii_atom_pack=4|0|v63|0|./src/maxII_atoms.vhd|0*3062*0x6284e11348832afb3327d23e0323603febca841a|0*7233*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|21
+
+[maxii_components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*24623
+I=0*108631
+M=3|0|v63|0|./src/maxII_components.vhd|0*102252*0x06a6386a7ec6849957625cb8539f647679f66e19|0*108553*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_components.vhd|21
+
+[maxii_crcblock]
+A/architecture_crcblock=21|./src/maxII_atoms.vhd|1530|1*9134
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_crcblock=8.2.1986.SP1.35.3497  (Windows)
+I=0*42719
+I/architecture_crcblock=0*43212
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*42258*0x8f2bc1d50488a24a96a94e4687c4bfcdd7f2e032|0*42648*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_crcblock=21|0|v63|0|./src/maxII_atoms.vhd|0*42930*0xf3423717b412260d38a62aa390076b66e4159948|0*43116*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|1515
+
+[maxii_dffe]
+A/behave=21|./src/maxII_atoms.vhd|1067|1*2566
+B/behave=3*30730
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*27839
+I/behave=0*31648
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*26245*0x5bac98304d24a73b0a51249776426cbb88c1bf20|0*27772*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/maxII_atoms.vhd|0*28126*0x855db0780b50774fe0d635c815781675f9cef30f|0*31571*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|1031
+
+[maxii_io]
+A/behave=21|./src/maxII_atoms.vhd|3135|1*22089
+B/behave=3*104665
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*95427
+I/behave=0*98836
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*94342*0x578f7a29708e820286583d6fc0e4157fe7078116|0*95362*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/maxII_atoms.vhd|0*95744*0x2998a4acd4980fb7102830b0420e0c167b147223|0*98761*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|3106
+
+[maxii_jtag]
+A/architecture_jtag=21|./src/maxII_atoms.vhd|1499|1*8488
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_jtag=8.2.1986.SP1.35.3497  (Windows)
+I=0*41298
+I/architecture_jtag=0*41758
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*40609*0x09a3940e91b5ee896f3d1998c8c68eb005b95cd0|0*41231*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_jtag=21|0|v63|0|./src/maxII_atoms.vhd|0*41505*0x7d6936a29b2199eafe51616095cf47bb171c3bf9|0*41670*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|1476
+
+[maxii_lcell]
+A/vital_le_atom=21|./src/maxII_atoms.vhd|2215|1*14408
+B/vital_le_atom=3*63217
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_le_atom=8.2.1986.SP1.35.3497  (Windows)
+I=0*67023
+I/vital_le_atom=0*73808
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*65647*0xd88c7cf27009f0a9f8619c081454085a02d67109|0*66955*0xf2538cdc6f7b23a146389216c886e772
+M/vital_le_atom=21|0|v63|0|./src/maxII_atoms.vhd|0*67311*0x9477dd1a69301cf0958faeaaccf75e5197dc6c37|0*73723*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|2173
+
+[maxii_lcell_register]
+A/vital_le_reg=21|./src/maxII_atoms.vhd|1908|1*11893
+B/vital_le_reg=3*52468
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_le_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*56882
+I/vital_le_reg=0*64889
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*54122*0x5ad141474ea4b676d70564e91f0fe1fdc917b3ca|0*56805*0xf2538cdc6f7b23a146389216c886e772
+M/vital_le_reg=21|0|v63|0|./src/maxII_atoms.vhd|0*57179*0xec18a45a5999c975b733b27696dd6d87c428914e|0*64796*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|1850
+
+[maxii_mux21]
+A/altvital=A/AltVITAL 21|./src/maxII_atoms.vhd|1230|1*4609
+B/altvital=3*35888
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*33123
+I/altvital=I/AltVITAL 0*34311
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*32278*0x702078fbf10971be4a31ffa8f80dfe748de2aaaf|0*33055*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/maxII_atoms.vhd|0*33363*0x16eaffccc1cc5f1aa7757075a8c1120b5483b89f|0*34231*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|1210
+
+[maxii_mux41]
+A/altvital=A/AltVITAL 21|./src/maxII_atoms.vhd|1323|1*5838
+B/altvital=3*37456
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*36120
+I/altvital=I/AltVITAL 0*37888
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*34960*0x2652f5acfc5d9220ce39265bcfc9209e1afbb47e|0*36052*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/maxII_atoms.vhd|0*36360*0x391cb5ab28742f69fc88a5ae53ff327a401ebaaf|0*37808*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|1295
+
+[maxii_pllpack]
+B/maxii_pllpack=3*11716
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*1412
+I=0*11333
+I/maxii_pllpack=0*25638
+M=3|0|v63|0|./src/maxII_atoms.vhd|0*8481*0xe2bc91874c5565e8d95988a742766479c4698e43|0*11263*0xf2538cdc6f7b23a146389216c886e772
+M/maxii_pllpack=4|0|v63|0|./src/maxII_atoms.vhd|0*11495*0x46f07dfd4ad06e9a8df50d095ecd691e3a494f0f|0*25552*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|325
+
+[maxii_routing_wire]
+A/behave=21|./src/maxII_atoms.vhd|3326|1*23524
+B/behave=3*109279
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*100169
+I/behave=0*101622
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*99471*0xfe6f58cfb0b78916f57a70b0369d5c36394efca7|0*100094*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/maxII_atoms.vhd|0*100464*0x8905055dbc0fa3e3c94cf21d2f8e7323f5bcb249|0*101537*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|3311
+
+[maxii_ufm]
+A/behave=21|./src/maxII_atoms.vhd|2524|1*17484
+B/behave=3*68842
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*78796
+I/behave=0*93556
+M=11|0|v63|0|./src/maxII_atoms.vhd|0*74908*0x29cf559343985198a2c3b217a4b53c0a9b621641|0*78730*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/maxII_atoms.vhd|0*79178*0x79faa6bb1de239172ad8f79631d188ac960456d3|0*93480*0xf2538cdc6f7b23a146389216c886e772
+R=./src/maxII_atoms.vhd|2434
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, MAXII VHDL LIBRARY
+ModifyID=80
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=104|0maxII.mgf|108631|0
+1=14|1maxII.mgf|24623|0
+3=11|3maxII.mgf|109279|0
+
+[~U]
+maxii_and1=11|0*38137|
+maxii_asynch_lcell=11|0*43445|
+maxii_atom_pack=3|0*0|0*211
+maxii_components=3|0*101924|0*102056
+maxii_crcblock=11|0*41983|
+maxii_dffe=11|0*25814|
+maxii_io=11|0*93945|
+maxii_jtag=11|0*40322|
+maxii_lcell=11|0*65199|
+maxii_lcell_register=11|0*53569|
+maxii_mux21=11|0*31942|
+maxii_mux41=11|0*34560|
+maxii_pllpack=3|0*7583|0*7712
+maxii_routing_wire=11|0*99160|
+maxii_ufm=11|0*74174|
+

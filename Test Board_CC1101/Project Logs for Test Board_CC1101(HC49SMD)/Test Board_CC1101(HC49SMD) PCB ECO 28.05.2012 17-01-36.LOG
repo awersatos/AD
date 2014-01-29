@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=U1-21
+Removed Pin From Net: NetName=NetC4_2 Pin=ZQ1-1
+Removed Pin From Net: NetName=NetC3_2 Pin=ZQ1-3
+Removed Member From Class: ClassName=Test Board_CC1101 Member=ZQ1
+Added Component: Designator=ZQ?(HC-49SMD)
+Added Pin To Net: NetName=NetC4_2 Pin=ZQ?-1
+Added Pin To Net: NetName=NetC3_2 Pin=ZQ?-2
+Change Class Name : Old Net Name=Test Board_CC1101 New Net Name=Test Board_CC1101(HC49SMD)
+Added Member To Class: ClassName=Test Board_CC1101(HC49SMD) Member=Component ZQ? HC-49SMD

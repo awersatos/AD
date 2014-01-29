@@ -1,0 +1,9 @@
+[Interface]
+Name=posix_signals
+Category=SERVICE
+System=False
+Description=Support for posix signals
+PublicDir=services\posix\kernel\include
+
+
+

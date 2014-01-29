@@ -1,0 +1,402 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_cy7c68001" description="CY7C68001 USB Serial Controller">
+		<sfr name="IFCONFIG"		offset="1"	size="8"	description="Interface Configuration">
+			<bitfield name="IFCLKSRC"	start="7" end="7" access="rw" description="Select Clock Source">
+				<value value="0" description="External clock"/>
+				<value value="1" description="Internal clock"/>
+			</bitfield>
+			<bitfield name="3048 MHZ"	start="6" end="6" access="rw" description="Internal FIFO Clock Frequency">
+				<value value="0" description="30 MHz"/>
+				<value value="1" description="48 MHz"/>
+			</bitfield>
+			<bitfield name="IFCLKOE"	start="5" end="5" access="rw" description="IFCLK Pin">
+				<value value="0" description="IFCLK pin is floated"/>
+				<value value="1" description="IFCLK pin is driven"/>
+			</bitfield>
+			<bitfield name="IFCLKPOL"	start="4" end="4" access="rw" description="IFCLK Signal Polarity">
+				<value value="0" description="Normal"/>
+				<value value="1" description="Inverted"/>
+			</bitfield>
+			<bitfield name="ASYNC"		start="3" end="3" access="rw" description="FIFO Operation Mode">
+				<value value="0" description="Synchronous"/>
+				<value value="1" description="Asynchronous"/>
+			</bitfield>
+			<bitfield name="STANDBY"	start="2" end="2" access="rw" description="Low Power Mode">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="FLAGD/CS#"	start="1" end="1" access="rw" description="FLAGD/CS# Pin">
+				<value value="0" description="Slave Chip Select"/>
+				<value value="1" description="FLAGD"/>
+			</bitfield>
+			<bitfield name="DISCON"		start="0" end="0" access="rw" description="Internal Pull Up Resistor">
+				<value value="0" description="High"/>
+				<value value="1" description="Floating"/>
+			</bitfield>
+		</sfr>
+		<sfr name="FLAGSAB"		offset="2"	size="8"	description="FIFO FLAGA And FLAGB Assignments">
+			<bitfield name="FLAGB"		start="7" end="4" access="rw" description="FIFO FLAGB Output Pins">
+				<value value="0"  description="FF"/>
+				<value value="4"  description="EP2 PF"/>
+				<value value="5"  description="EP4 PF"/>
+				<value value="6"  description="EP6 PF"/>
+				<value value="7"  description="EP8 PF"/>
+				<value value="8"  description="EP2 EF"/>
+				<value value="9"  description="EP4 EF"/>
+				<value value="10" description="EP6 EF"/>
+				<value value="11" description="EP8 EF"/>
+				<value value="12" description="EP2 FF"/>
+				<value value="13" description="EP4 FF"/>
+				<value value="14" description="EP6 FF"/>
+				<value value="15" description="EP8 FF"/>
+			</bitfield>
+			<bitfield name="FLAGA"		start="3" end="0" access="rw" description="FIFO FLAGA Output Pins">
+				<value value="0"  description="PF"/>
+				<value value="4"  description="EP2 PF"/>
+				<value value="5"  description="EP4 PF"/>
+				<value value="6"  description="EP6 PF"/>
+				<value value="7"  description="EP8 PF"/>
+				<value value="8"  description="EP2 EF"/>
+				<value value="9"  description="EP4 EF"/>
+				<value value="10" description="EP6 EF"/>
+				<value value="11" description="EP8 EF"/>
+				<value value="12" description="EP2 FF"/>
+				<value value="13" description="EP4 FF"/>
+				<value value="14" description="EP6 FF"/>
+				<value value="15" description="EP8 FF"/>
+			</bitfield>
+		</sfr>
+		<sfr name="FLAGSCD"		offset="3"	size="8"	description="FIFO FLAGC And FLAGD Assignments">
+			<bitfield name="FLAGD"		start="7" end="4" access="rw" description="FIFO FLAGD Output Pins">
+				<value value="0"  description="CS#"/>
+				<value value="4"  description="EP2 PF"/>
+				<value value="5"  description="EP4 PF"/>
+				<value value="6"  description="EP6 PF"/>
+				<value value="7"  description="EP8 PF"/>
+				<value value="8"  description="EP2 EF"/>
+				<value value="9"  description="EP4 EF"/>
+				<value value="10" description="EP6 EF"/>
+				<value value="11" description="EP8 EF"/>
+				<value value="12" description="EP2 FF"/>
+				<value value="13" description="EP4 FF"/>
+				<value value="14" description="EP6 FF"/>
+				<value value="15" description="EP8 FF"/>
+			</bitfield>
+			<bitfield name="FLAGC"		start="3" end="0" access="rw" description="FIFO FLAGC Output Pins">
+				<value value="0"  description="EF"/>
+				<value value="4"  description="EP2 PF"/>
+				<value value="5"  description="EP4 PF"/>
+				<value value="6"  description="EP6 PF"/>
+				<value value="7"  description="EP8 PF"/>
+				<value value="8"  description="EP2 EF"/>
+				<value value="9"  description="EP4 EF"/>
+				<value value="10" description="EP6 EF"/>
+				<value value="11" description="EP8 EF"/>
+				<value value="12" description="EP2 FF"/>
+				<value value="13" description="EP4 FF"/>
+				<value value="14" description="EP6 FF"/>
+				<value value="15" description="EP8 FF"/>
+			</bitfield>
+		</sfr>
+		<sfr name="POLAR"		offset="4"	size="8"	description="FIFO Polarities">
+			<bitfield name="WUPOL"		start="7" end="7" access="rw" description="Wakeup Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="PKTEND"		start="5" end="5" access="rw" description="PKTEND Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="SLOE"		start="4" end="4" access="r" description="SLOE Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="SLRD"		start="3" end="3" access="r" description="SLRD Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="SLWR"		start="2" end="2" access="r" description="SLWR Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="EF"		start="1" end="1" access="rw" description="EE Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="FF"		start="0" end="0" access="rw" description="FF Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+		</sfr>
+		<sfr name="REVID"		offset="5"	size="8"	description="Chip Revision"/>
+		<sfr name="EP2CFG"		offset="6"	size="8"	description="Endpoint 2 Configuration">
+			<bitfield name="VALID"	start="7" end="7" access="rw" description="Valid Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DIR"	start="6" end="6" access="rw" description="Direction Bit">
+				<value value="0" description="Out"/>
+				<value value="1" description="In"/>
+			</bitfield>
+			<bitfield name="TYPE"	start="5" end="4" access="rw" description="Type Bits">
+				<value value="0" description="Invalid"/>
+				<value value="1" description="Isochronous"/>
+				<value value="2" description="Bulk"/>
+				<value value="3" description="Interrupt"/>
+			</bitfield>
+			<bitfield name="SIZE"	start="3" end="3" access="rw" description="Size Bit">
+				<value value="0" description=" 512 Bytes"/>
+				<value value="1" description="1024 Bytes"/>
+			</bitfield>
+			<bitfield name="STALL"	start="2" end="2" access="rw" description="Stall Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="BUF"	start="1" end="0" access="rw" description="Buf Bits">
+				<value value="0" description="Quad"/>
+				<value value="1" description="Invalid"/>
+				<value value="2" description="Double"/>
+				<value value="3" description="Triple"/>
+			</bitfield>
+		</sfr>
+		<sfr name="EP4CFG"		offset="7"	size="8"	description="Endpoint 4 Configuration">
+			<bitfield name="VALID"	start="7" end="7" access="rw" description="Valid Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DIR"	start="6" end="6" access="rw" description="Direction Bit">
+				<value value="0" description="Out"/>
+				<value value="1" description="In"/>
+			</bitfield>
+			<bitfield name="TYPE"	start="5" end="4" access="rw" description="Type Bits">
+				<value value="0" description="Invalid"/>
+				<value value="1" description="Isochronous"/>
+				<value value="2" description="Bulk"/>
+				<value value="3" description="Interrupt"/>
+			</bitfield>
+			<bitfield name="SIZE"	start="3" end="3" access="rw" description="Size Bit">
+				<value value="0" description=" 512 Bytes"/>
+				<value value="1" description="1024 Bytes"/>
+			</bitfield>
+			<bitfield name="STALL"	start="2" end="2" access="rw" description="Stall Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="BUF"	start="1" end="0" access="rw" description="Buf Bits">
+				<value value="0" description="Quad"/>
+				<value value="1" description="Invalid"/>
+				<value value="2" description="Double"/>
+				<value value="3" description="Triple"/>
+			</bitfield>
+		</sfr>
+		<sfr name="EP6CFG"		offset="8"	size="8"	description="Endpoint 6 Configuration">
+			<bitfield name="VALID"	start="7" end="7" access="rw" description="Valid Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DIR"	start="6" end="6" access="rw" description="Direction Bit">
+				<value value="0" description="Out"/>
+				<value value="1" description="In"/>
+			</bitfield>
+			<bitfield name="TYPE"	start="5" end="4" access="rw" description="Type Bits">
+				<value value="0" description="Invalid"/>
+				<value value="1" description="Isochronous"/>
+				<value value="2" description="Bulk"/>
+				<value value="3" description="Interrupt"/>
+			</bitfield>
+			<bitfield name="SIZE"	start="3" end="3" access="rw" description="Size Bit">
+				<value value="0" description=" 512 Bytes"/>
+				<value value="1" description="1024 Bytes"/>
+			</bitfield>
+			<bitfield name="STALL"	start="2" end="2" access="rw" description="Stall Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="BUF"	start="1" end="0" access="rw" description="Buf Bits">
+				<value value="0" description="Quad"/>
+				<value value="1" description="Invalid"/>
+				<value value="2" description="Double"/>
+				<value value="3" description="Triple"/>
+			</bitfield>
+		</sfr>
+		<sfr name="EP8CFG"		offset="9"	size="8"	description="Endpoint 8 Configuration">
+			<bitfield name="VALID"	start="7" end="7" access="rw" description="Valid Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DIR"	start="6" end="6" access="rw" description="Direction Bit">
+				<value value="0" description="Out"/>
+				<value value="1" description="In"/>
+			</bitfield>
+			<bitfield name="TYPE"	start="5" end="4" access="rw" description="Type Bits">
+				<value value="0" description="Invalid"/>
+				<value value="1" description="Isochronous"/>
+				<value value="2" description="Bulk"/>
+				<value value="3" description="Interrupt"/>
+			</bitfield>
+			<bitfield name="SIZE"	start="3" end="3" access="rw" description="Size Bit">
+				<value value="0" description=" 512 Bytes"/>
+				<value value="1" description="1024 Bytes"/>
+			</bitfield>
+			<bitfield name="STALL"	start="2" end="2" access="rw" description="Stall Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="BUF"	start="1" end="0" access="rw" description="Buf Bits">
+				<value value="0" description="Quad"/>
+				<value value="1" description="Invalid"/>
+				<value value="2" description="Double"/>
+				<value value="3" description="Triple"/>
+			</bitfield>
+		</sfr>
+		<sfr name="EP2PKTLENH"		offset="19"	size="8"	description="Endpoint 2 Packet Length H">
+			<bitfield name="INFM1"		start="7" end="7" access="rw" description="Wakeup Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="OEP1"		start="6" end="6" access="rw" description="PKTEND Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="ZEROLEN"	start="5" end="5" access="r" description="SLOE Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="WORDWIDE"	start="4" end="4" access="r" description="SLRD Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="PL10-8"		start="2" end="0" access="r" description="Packet Length Bits[10-8]"/>
+		</sfr>
+		<sfr name="EP2PKTLENL"		offset="11"	size="8"	description="Endpoint 2 Packet Length L (IN Only)">
+			<bitfield name="PL7-0"		start="7" end="0" access="r" description="Packet Length Bits[7-0]"/>
+		</sfr>
+		<sfr name="EP4PKTLENH"		offset="12"	size="8"	description="Endpoint 4 Packet Length H">
+			<bitfield name="INFM1"		start="7" end="7" access="rw" description="Wakeup Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="OEP1"		start="6" end="6" access="rw" description="PKTEND Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="ZEROLEN"	start="5" end="5" access="r" description="SLOE Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="WORDWIDE"	start="4" end="4" access="r" description="SLRD Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="PL9-8"		start="1" end="0" access="r" description="Packet Length Bits[9-8]"/>
+		</sfr>
+		<sfr name="EP4PKTLENL"		offset="13"	size="8"	description="Endpoint 4 Packet Length L (IN Only)">
+			<bitfield name="PL7-0"		start="7" end="0" access="r" description="Packet Length Bits[7-0]"/>
+		</sfr>
+		<sfr name="EP6PKTLENH"		offset="14"	size="8"	description="Endpoint 6 Packet Length H">
+			<bitfield name="INFM1"		start="7" end="7" access="rw" description="Wakeup Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="OEP1"		start="6" end="6" access="rw" description="PKTEND Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="ZEROLEN"	start="5" end="5" access="r" description="SLOE Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="WORDWIDE"	start="4" end="4" access="r" description="SLRD Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="PL10-8"		start="2" end="0" access="r" description="Packet Length Bits[10-8]"/>
+		</sfr>
+		<sfr name="EP6PKTLENL"		offset="15"	size="8"	description="Endpoint 6 Packet Length L (IN Only)">
+			<bitfield name="PL7-0"		start="7" end="0" access="r" description="Packet Length Bits[7-0]"/>
+		</sfr>
+		<sfr name="EP8PKTLENH"		offset="16"	size="8"	description="Endpoint 8 Packet Length H">
+			<bitfield name="INFM1"		start="7" end="7" access="rw" description="Wakeup Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="OEP1"		start="6" end="6" access="rw" description="PKTEND Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="ZEROLEN"	start="5" end="5" access="r" description="SLOE Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="WORDWIDE"	start="4" end="4" access="r" description="SLRD Pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="PL9-8"		start="1" end="0" access="r" description="Packet Length Bits[9-8]"/>
+		</sfr>
+		<sfr name="EP8PKTLENL"		offset="17"	size="8"	description="Endpoint 8 Packet Length L (IN Only)">
+			<bitfield name="PL7-0"		start="7" end="0" access="r" description="Packet Length Bits[7-0]"/>
+		</sfr>
+		<sfr name="EP2PFH"		offset="18"	size="8"	description="EP2 Programmable Flag H"/>
+		<sfr name="EP2PFL"		offset="19"	size="8"	description="EP2 Programmable Flag L"/>
+		<sfr name="EP4PFH"		offset="20"	size="8"	description="EP4 Programmable Flag H"/>
+		<sfr name="EP4PFL"		offset="21"	size="8"	description="EP4 Programmable Flag L"/>
+		<sfr name="EP6PFH"		offset="22"	size="8"	description="EP6 Programmable Flag H"/>
+		<sfr name="EP6PFL"		offset="23"	size="8"	description="EP6 Programmable Flag L"/>
+		<sfr name="EP8PFH"		offset="24"	size="8"	description="EP8 Programmable Flag H"/>
+		<sfr name="EP8PFL"		offset="25"	size="8"	description="EP8 Programmable Flag L"/>
+		<sfr name="EP2ISOINPKTS"	offset="26"	size="8"	description="EP2 (if ISO) IN Packets Per Frame (1-3)"/>
+		<sfr name="EP4ISOINPKTS"	offset="27"	size="8"	description="EP4 (if ISO) IN Packets Per Frame (1-3)"/>
+		<sfr name="EP6ISOINPKTS"	offset="28"	size="8"	description="EP6 (if ISO) IN Packets Per Frame (1-3)"/>
+		<sfr name="EP8ISOINPKTS"	offset="29"	size="8"	description="EP8 (if ISO) IN Packets Per Frame (1-3)"/>
+		<sfr name="EP24FLAGS"		offset="30"	size="8"	description="Endpoints 2,4 FIFO Flags"/>
+		<sfr name="EP68FLAGS"		offset="31"	size="8"	description="Endpoints 6,8 FIFO Flags"/>
+		<sfr name="INPKTEND_FLUSH"	offset="32"	size="8"	description="Force Packet End / Flush FIFO's" noaccess="true"/>
+		<sfr name="USBFRAMEH"		offset="42"	size="8"	description="USB Frame Count H"/>
+		<sfr name="USBFRAMEL"		offset="43"	size="8"	description="USB Frame Count L"/>
+		<sfr name="MICROFRAME"		offset="44"	size="8"	description="Microframe Count 0-7"/>
+		<sfr name="FNADDR"		offset="45"	size="8"	description="USB Function Address"/>
+		<sfr name="INTENABLE"		offset="46"	size="8"	description="Interrupt Enable">
+			<bitfield name="SETUP"		start="7" end="7" access="rw" description="Setyp Packet Receive Interrupt Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="EP0 BUF"	start="6" end="6" access="rw" description="Endpoint 0 Buffer Available Interrupt Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="FLAGS"		start="5" end="5" access="r" description="Endpoint State Interrupt Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="ENUM OK"	start="2" end="2" access="r" description="SX2 Enumeration Complete Interrupt Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="BUS ACTIVITY"	start="1" end="1" access="r" description="SX2 Bus Activity Interrupt Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="READY"		start="0" end="0" access="r" description="SX2 Internal Self-Test Interrupt Enable">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="DESC"		offset="48"	size="8"	description="Descriptor RAM" noaccess="true"/>
+		<sfr name="EP0BUF"		offset="49"	size="8"	description="Endpoint 0 Buffer"/>
+		<sfr name="SETUP"		offset="50"	size="8"	description="Endpoint 0 Setup Data / Stall"/>
+		<sfr name="EP0BC"		offset="51"	size="8"	description="Endpoint 0 Byte Count"/>
+		<sfr name="UNINDEXED_REG_LO"	offset="52"	size="8"	description="Un-Indexed Register Low Byte Pointer"/>
+		<sfr name="UNINDEXED_REG_HI"	offset="53"	size="8"	description="Un-Indexed Register High Byte Pointer"/>
+		<sfr name="UNINDEXED_REG_DATA"	offset="54"	size="8"	description="Un-Indexed Register Data"/>
+		<sfr name="FIFOPINPOLAR"	offset="58889"	size="8"	description="FIFO Interface Pins Polarity"/>
+		<sfr name="TOGCTL"		offset="59011"	size="8"	description="Data Toggle Control"/>
+	</group>
+</sfrfile>

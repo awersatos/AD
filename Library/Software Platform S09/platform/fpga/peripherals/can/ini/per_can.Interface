@@ -1,0 +1,6 @@
+[Interface]
+Name=per_can
+Category=PERIPHERAL
+System=False
+Description=CAN peripheral
+PublicDir=platform\fpga\peripherals\can\include

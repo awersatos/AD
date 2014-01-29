@@ -1,0 +1,38 @@
+[Plugin]
+Name=per_emac32
+Description=Ethernet Media Access Controller (IEEE802.3 MII) with 32-bit host interface
+Caption=EMAC32 Controller
+SourceDir=platform\fpga\peripherals\emac32\src
+Implement=per_emac32
+HardwareID=EMAC32
+Bitmap=per_emac32.bmp
+LargeBitmap=per_emac32_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=Interrupt
+Description=Interrrupt number
+Kind=INTERRUPT
+MustBeSet=True
+Auto=True
+
+[Instance_Option2]
+Name=phy
+GUIName=Phy Address
+Kind=UINT8
+Description=Physical Layer Interface Address. Normally there is only one interface, located at address 1.
+DefaultValue=1
+MinRange=1
+MaxRange=31
+

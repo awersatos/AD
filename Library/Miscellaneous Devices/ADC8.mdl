@@ -1,0 +1,4 @@
+* 8-Bit generic A/D converter
+* INPUTS  VCC, GND, VIN, VRP, VRM, SC, OE;
+* OUTPUTS VCC_LD, SC_LD, OE_LD, OC, D0, D1, D2, D3, D4, D5, D6, D7;
+.MODEL ADC8 xsimcode(file="{MODEL_PATH}ADC8.scb" func=ADC8 {mntymx})

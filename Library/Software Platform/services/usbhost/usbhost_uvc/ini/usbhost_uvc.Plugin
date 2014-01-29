@@ -1,0 +1,19 @@
+[Plugin]
+Name=usbhost_uvc
+Description=USB Host Video Service
+Caption=USB Host Video Service
+SourceDir=services\usbhost\usbhost_uvc\src
+GlobalCompileOption0=-DUSBHOST_ISO_SUPPORT
+Implement=usbhost_uvc
+MinInstances=1
+Bitmap=usbhost_uvc.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=usbhost
+Condition=EQ
+
+[Instance]
+Require0=usbhost
+Caption=USB Host Video Context
+Description=USB Host Video Context

@@ -1,0 +1,13 @@
+--
+--                          "num_bit.vhd"
+--
+-- This file contains no vhdl code, this file allows a GUI to reference
+-- the pre-compiled file "num_bit.mm0" as num_bit.vhd.
+-- 
+-- "num_bit.mm0" contains an implementation of the package NUMERIC_BIT, this
+-- package is part if IEEE Standard 1076.3 "Standard VHDL Synthesis Packages".
+--
+-- The file "num_std.mm0" contains the 1076.3 NUMERIC_STD package.
+--
+-- Source code for 1076.3 is copyright IEEE and is available from the IEEE.
+--

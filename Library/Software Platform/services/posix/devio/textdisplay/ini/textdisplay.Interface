@@ -1,0 +1,8 @@
+[Interface]
+Name=textdisplay
+Alias=posix_devio
+Category=SERVICE
+System=False
+PublicDir=services\posix\devio\textdisplay\include
+Description=POSIX device I/O textdisplay interface
+

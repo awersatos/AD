@@ -1,0 +1,13 @@
+[Plugin]
+Name=gps_nmea_to_location
+Description=Location interface for GPS NMEA driver.
+SourceDir=services\location\adaptors\gps_nmea\src
+CompileOption0=-I"$(SSASROOT)\services\platform\gps_nmea\include"
+CompileOption1=-I"$(SSASROOT)\services\location\include"
+CompileOption2=-I"$(SSASROOT)\services\location\internal"
+InitHandler=gps_nmea_to_location_init
+InitHandlerPriority=1
+Implement=location_adaptor
+
+[Instance]
+Require0=gps_nmea

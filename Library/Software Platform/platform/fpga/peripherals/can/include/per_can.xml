@@ -1,0 +1,241 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_can" description="CAN Controller">
+		<sfr name="MOD"		offset="0"	size="8"	description="Mode register">
+			<bitfield name="SM"	start="4" end="4" access="rw" description="Sleep Mode Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="AFM"	start="3" end="3" access="rw" description="Acceptance Filter Mode Bit">
+				<value value="0" description="Dual filter"/>
+				<value value="1" description="Single filter"/>
+			</bitfield>
+			<bitfield name="STM"	start="2" end="2" access="rw" description="Self Test Mode Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="LOM"	start="1" end="1" access="rw" description="Listen Only Mode Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="RM"	start="0" end="0" access="rw" description="Reset Mode Bit">
+				<value value="0" description="Operating mode"/>
+				<value value="1" description="Reset mode"/>
+			</bitfield>
+		</sfr>
+		<sfr name="CMR"		offset="1"	size="8"	description="Command Register">
+			<bitfield name="SRR"	start="4" end="4" access="rw" description="Self Reception Request Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="CDO"	start="3" end="3" access="rw" description="Clear Data Overrun Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RRB"	start="2" end="2" access="rw" description="Release Receive Buffer Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="AT"	start="1" end="1" access="rw" description="Abort Transmission Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TR"	start="0" end="0" access="rw" description="Transmisson Request Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="SR"		offset="2"	size="8"	access="r" description="Status Register">
+			<bitfield name="BS"	start="7" end="7" access="r" description="Bus Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="Bus-off state entered"/>
+			</bitfield>
+			<bitfield name="ES"	start="6" end="6" access="r" description="Error Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TS"	start="5" end="5" access="r" description="Transmit Status Bit">
+				<value value="0" description="Idle"/>
+				<value value="1" description="Transmitting"/>
+			</bitfield>
+			<bitfield name="RS"	start="4" end="4" access="r" description="Receive Status Bit">
+				<value value="0" description="Idle"/>
+				<value value="1" description="Receiving"/>
+			</bitfield>
+			<bitfield name="TCS"	start="3" end="3" access="r" description="Transmission Complete Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TBS"	start="2" end="2" access="r" description="Transmit Buffer Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DOS"	start="1" end="1" access="r" description="Data Overrun Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RBS"	start="0" end="0" access="r" description="Receive Buffer Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="IR"		offset="3"	size="8"	description="Interrupt Register">
+			<bitfield name="BEI"	start="7" end="7" access="r" description="Bus Error Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ALI"	start="6" end="6" access="r" description="Arbitration Lost Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="EPI"	start="5" end="5" access="r" description="Error Passive Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="WUI"	start="4" end="4" access="r" description="Wake-Up Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DOI"	start="3" end="3" access="r" description="Data Overrun Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="EI"	start="2" end="2" access="r" description="Error Warning Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TI"	start="1" end="1" access="r" description="Transmit Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RI"	start="0" end="0" access="r" description="Receive Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="IER"		offset="4"	size="8"	description="Interrupt Enable Register">
+			<bitfield name="BEI"	start="7" end="7" access="rw" description="Bus Error Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="ALI"	start="6" end="6" access="rw" description="Arbitration Lost Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="EPI"	start="5" end="5" access="rw" description="Error Passive Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="WUI"	start="4" end="4" access="rw" description="Wake-Up Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="DOI"	start="3" end="3" access="rw" description="Data Overrun Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="EI"	start="2" end="2" access="rw" description="Error Warning Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TI"	start="1" end="1" access="rw" description="Transmit Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="RI"	start="0" end="0" access="rw" description="Receive Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="BTR0"	offset="6"	size="8"	description="Bus Timing Register 0"/>
+		<sfr name="BTR1"	offset="7"	size="8"	description="Bus Timing Register 1"/>
+		<sfr name="OCR"		offset="8"	size="8"	description="Output Control Register"/>
+		<sfr name="ALC"		offset="11"	size="8"	description="Arbitration Lost capture Register"/>
+		<sfr name="ECC"		offset="12"	size="8"	description="ErrorCode Capture Register"/>
+		<sfr name="EWL"		offset="13"	size="8"	description="Error Warning Limit"/>
+		<sfr name="REC"		offset="14"	size="8"	description="Rx Error Counter"/>
+		<sfr name="TEC"		offset="15"	size="8"	description="Tx Error Counter"/>
+		<sfr name="ACR0"	offset="16"	size="8"	description="Acceptance Code Register 0"/>
+		<sfr name="ACR1"	offset="17"	size="8"	description="Acceptance Code Register 1"/>
+		<sfr name="ACR2"	offset="18"	size="8"	description="Acceptance Code Register 2"/>
+		<sfr name="ACR3"	offset="19"	size="8"	description="Acceptance Code Register 3"/>
+		<sfr name="AMR0"	offset="20"	size="8"	description="Acceptance Mask Register 0"/>
+		<sfr name="AMR1"	offset="21"	size="8"	description="Acceptance Mask Register 1"/>
+		<sfr name="AMR2"	offset="22"	size="8"	description="Acceptance Mask Register 2"/>
+		<sfr name="AMR3"	offset="23"	size="8"	description="Acceptance Mask Register 3"/>
+		<sfr name="TB0"		offset="16"	size="8"	description="Transmit Buffer, Frame info">
+			<bitfield name="IDE"	start="7" end="7" access="rw" description="Frame Format Bit">
+				<value value="0" description="Standard"/>
+				<value value="1" description="Extended"/>
+			</bitfield>
+			<bitfield name="RTR"	start="6" end="6" access="rw" description="Remote Request Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RB1"	start="5" end="5" access="rw" description="Reserved Bit 1">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RB0"	start="4" end="4" access="rw" description="Reserved Bit 0">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DLC"	start="3" end="0" access="rw" description="Length Mask"/>
+		</sfr>
+		<sfr name="TB1"		offset="17"	size="8"	description="Can ID"/>
+		<sfr name="TB2"		offset="18"	size="8"	description="Can ID"/>
+		<sfr name="TB3"		offset="19"	size="8"	description="Extended Can ID/data"/>
+		<sfr name="TB4"		offset="20"	size="8"	description="Extended Can ID/data"/>
+		<sfr name="TB5"		offset="21"	size="8"	description="Transmit data"/>
+		<sfr name="TB6"		offset="22"	size="8"	description=""/>
+		<sfr name="TB7"		offset="23"	size="8"	description=""/>
+		<sfr name="TB8"		offset="24"	size="8"	description=""/>
+		<sfr name="TB9"		offset="25"	size="8"	description=""/>
+		<sfr name="TB10"	offset="26"	size="8"	description=""/>
+		<sfr name="TB11"	offset="27"	size="8"	description=""/>
+		<sfr name="TB12"	offset="28"	size="8"	description=""/>
+		<sfr name="RB0"		offset="16"	size="8"	description="Receive Buffer, Frame info">
+			<bitfield name="IDE"	start="7" end="7" access="rw" description="Frame Format Bit">
+				<value value="0" description="Standard"/>
+				<value value="1" description="Extended"/>
+			</bitfield>
+			<bitfield name="RTR"	start="6" end="6" access="rw" description="Remote Request Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RB1"	start="5" end="5" access="rw" description="Reserved Bit 1">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RB0"	start="4" end="4" access="rw" description="Reserved Bit 0">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="DLC"	start="3" end="0" access="rw" description="Length Mask"/>
+		</sfr>
+		<sfr name="RB1"		offset="17"	size="8"	description="Can ID"/>
+		<sfr name="RB2"		offset="18"	size="8"	description="Can ID"/>
+		<sfr name="RB3"		offset="19"	size="8"	description="Extended Can ID/data"/>
+		<sfr name="RB4"		offset="20"	size="8"	description="Extended Can ID/data"/>
+		<sfr name="RB5"		offset="21"	size="8"	description="Receive data"/>
+		<sfr name="RB6"		offset="22"	size="8"	description=""/>
+		<sfr name="RB7"		offset="23"	size="8"	description=""/>
+		<sfr name="RB8"		offset="24"	size="8"	description=""/>
+		<sfr name="RB9"		offset="25"	size="8"	description=""/>
+		<sfr name="RB10"	offset="26"	size="8"	description=""/>
+		<sfr name="RB11"	offset="27"	size="8"	description=""/>
+		<sfr name="RB12"	offset="28"	size="8"	description=""/>
+		<sfr name="MC"		offset="29"	size="8"	description="Message Counter"/>
+		<sfr name="RBSA"	offset="30"	size="8"	description="Receive Buffer Start Address"/>
+		<sfr name="CDR"		offset="31"	size="8"	description="Clock Divide Register"/>
+		<sfr name="RM"		offset="32"	size="8"	description="Receive Memory"/>
+		<sfr name="TM"		offset="96"	size="8"	description="Transmit Memory"/>
+	</group>
+</sfrfile>
+

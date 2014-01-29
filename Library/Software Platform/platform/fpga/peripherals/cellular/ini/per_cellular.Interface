@@ -1,0 +1,7 @@
+[Interface]
+Name=per_cellular
+Category=PERIPHERAL
+Visible=True
+System=False
+Description=Cellular Modem Peripheral Interface
+PublicDir=platform\fpga\peripherals\cellular\include

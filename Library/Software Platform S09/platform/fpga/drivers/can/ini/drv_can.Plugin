@@ -1,0 +1,52 @@
+[Plugin]
+Name=drv_can
+Description=CAN Driver
+Caption=CAN Driver
+SourceDir=platform\fpga\drivers\can\src
+InitHandler=drv_can_init
+InitHandlerPriority=16
+Implement=drv_can
+MinInstances=1
+Bitmap=drv_can.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_can
+Condition=EQ
+
+[Instance]
+Require0=per_can
+
+[Instance_Option0]
+Name=baudrate
+Description=Baudrate
+Kind=UINT32
+DefaultValue=500000
+
+[Instance_Option1]
+Name=accept_mask
+Description=acceptance mask (only id bits with corresponding acceptance mask bits equal to 0 will be compared with the filter)
+Kind=UINT32
+DefaultValue=0xFFFFFFFF
+
+[Instance_Option2]
+Name=accept_filt
+Description=acceptance filter (id's equal to this acceptance filter are written into the receive FIFO)
+Kind=UINT32
+DefaultValue=0
+
+[Instance_Option3]
+Name=rx_buffer
+Description=Used to receive a can message
+Kind=BUFFER
+DefaultValue=1
+UserTypeHeaderFile=can_msgobj_type.h
+Type=canmo_t
+
+[Instance_Option4]
+Name=tx_buffer
+Description=Used for transmitting can messages
+Kind=BUFFER
+DefaultValue=1
+UserTypeHeaderFile=can_msgobj_type.h
+Type=canmo_t

@@ -1,0 +1,185 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2010 Altium BV     
+
+	</header>
+	<group name="per_cellular" description="WB_CELLULAR Communications Port">
+		<sfr name="BRGHIGH"	 offset="0"  size="8" description="Baudrate Register, bits 23-16"/>
+		<sfr name="BRGMID"	 offset="1"  size="8" description="Baudrate Register, bits 15-8"/>
+		<sfr name="BRGLOW"	 offset="2"  size="8" description="Baudrate Register, bits 7-0"/>
+		<sfr name="LCR"		 offset="3"  size="8" description="Line Control" >
+			<bitfield name="CTS"	start="7" end="7" access="h" description="Signal on CTS pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+            </bitfield>
+			<bitfield name="BREAK"	start="6" end="6" access="r" description="Top of FIFO contains BREAK">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXD"	start="5" end="5" access="h" description="Signal on RXD pin">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="PARERR"	start="4" end="4" access="r" description="Parity error detected">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="FRAMERR"	start="3" end="3" access="r" description="Frame error detected">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RTSVAL"	start="2" end="2" access="rw" description="State to force RTS to">
+				<value value="0" description="Low"/>
+				<value value="1" description="High"/>
+			</bitfield>
+			<bitfield name="FORCERTS" start="1" end="1" access="rw" description="Force RTS to a known state">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="CTSEN"	start="0" end="0" access="rw" description="CTS/RTS Handshake">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="STATUS"	 offset="4"  size="8" description="Device Status">
+			<bitfield name="RXFULL"	start="7" end="7" access="r" description="Receiver FIFO overrun">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXHIGH"	start="6" end="6" access="r" description="Receiver FIFO is almost full">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXNEMPTY" start="5" end="5" access="r" description="Receiver FIFO is not empty">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXTIMEOUT" start="4" end="4" access="r" description="Receiver FIFO has unread characters and delay time has passed">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXSHEMPTY" start="3" end="3" access="r" description="Transmitter shift register is empty">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXLOW"	start="2" end="2" access="r" description="Transmitter FIFO is almost empty">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXEMPTY" start="1" end="1" access="r" description="Transmitter FIFO is empty">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXFULL"	start="0" end="0" access="r" description="Transmitter FIFO is full">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="INTMASKSET"	 offset="5"  size="8" description="Interrupt Mask Read/Set">
+			<bitfield name="RXFULL"	start="7" end="7" access="rw" description="Enable receiver overrun interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXHIGH"	start="6" end="6" access="rw" description="Enable receiver almost full interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXNEMPTY" start="5" end="5" access="rw" description="Enable receiver not empty interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXTIMEOUT" start="4" end="4" access="rw" description="Enable receiver timeout interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXSHEMPTY" start="3" end="3" access="rw" description="Enable transmitter shift register empty interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXLOW"	start="2" end="2" access="rw" description="Enable transmitter FIFO is almost empty interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXEMPTY" start="1" end="1" access="rw" description="Enable transmitter FIFO is empty interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXFULL"	start="0" end="0" access="rw" description="Enable transmitter FIFO is full interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+        </sfr>
+		<sfr name="INTMASKRST"	 offset="6"  size="8" description="Interrupt Mask Reset">
+			<bitfield name="RXFULL"	start="7" end="7" access="w" description="Disable receiver overrun interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXHIGH"	start="6" end="6" access="w" description="Disable receiver almost full interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXNEMPTY" start="5" end="5" access="w" description="Disable receiver not empty interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXTIMEOUT" start="4" end="4" access="w" description="Disable receiver timeout interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXSHEMPTY" start="3" end="3" access="w" description="Disable transmitter shift register empty interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXLOW"	start="2" end="2" access="w" description="Disable transmitter FIFO is almost empty interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXEMPTY" start="1" end="1" access="w" description="Disable transmitter FIFO is empty interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="TXFULL"	start="0" end="0" access="w" description="Disable transmitter FIFO is full interrupts">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+        </sfr>
+		<sfr name="SBUF"	 offset="7"  size="8" description="Serial Transmit/Receive Buffer" noaccess="true"/>
+		<sfr name="TXLOWMARK"	 offset="8"  size="8" description="Transmitter Low Watermark"/>
+		<sfr name="RXHIGHMARK"	 offset="9"  size="8" description="Receiver High Watermark"/>
+		<sfr name="RXLOWMARK"	 offset="10" size="8" description="Receiver Low Watermark"/>
+		<sfr name="RXDTO"	 offset="11" size="8" description="Receiver Timeout"/>
+		<sfr name="ICD"		 offset="12" size="8" description="Inter Character Delay"/>
+		<sfr name="BRKLEN"	 offset="13" size="8" description="Break Length"/>
+        <sfr name="PARM"        offset="14" size="8" description="Serial Communication Parameters">
+            <bitfield name="USERPARITY" start="5" end="5" access="rw" description="Value of parity bit when User Parity selected" />
+            <bitfield name="PARITY" start="4" end="3" access="rw" description="Parity">
+                <value value="0" description="None" />
+                <value value="2" description="User" />
+                <value value="1" description="Even" />
+                <value value="3" description="Odd" />
+            </bitfield>
+            <bitfield name="STOPBITS" start="2" end="2" access="rw" description="Stopbits">
+                <value value="0" description="1 stopbit" />
+                <value value="1" description="2 stopbits" />
+           </bitfield>
+            <bitfield name="WORDLEN" start="1" end="0" access="rw" description="Word length">
+                <value value="0" description="5 bits" />
+                <value value="1" description="6 bits" />
+                <value value="2" description="7 bits" />
+                <value value="3" description="8 bits" />
+            </bitfield>
+        </sfr>
+        <sfr name="COREVERSION"     offset="15" size="8" description="Core version">
+			<bitfield name="TOGGLE" start="7" end="7" access="r" description="Version Register toggle bit"/>
+			<bitfield name="VERSIONID" start="6" end="0" access="r" description="Core version"/>
+		</sfr>
+		<sfr name="CELLULAR_STATUS"	 offset="16"  size="8" description="Auxilliary controller status register"/>
+		<sfr name="CELLULAR_COMMAND" offset="17"  size="8" description="Auxilliary controller command register">
+			<bitfield name="POWER_ON" start="0" end="0" access="rw" description="Power On command"/>
+			<bitfield name="DTR"      start="1" end="1" access="rw" description="DTR Assert command"/>
+		</sfr>
+	</group>
+</sfrfile>

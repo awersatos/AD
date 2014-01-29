@@ -1,0 +1,28 @@
+timestamp=0
+
+[j2svlib]
+B/j2svlib=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*6619
+I/j2svlib=0*25510
+M=3|0|v63|0|./src/j2svlib.vhd|0*1750*0x4b9f44eca7efc63ec385d4e2f34a59a5d9e2e2e6|0*6559*0xe9e755cba0794a30e9c6f136a45a101c
+M/j2svlib=4|0|v63|0|./src/j2svlib.vhd|0*6807*0xcaf6bf42d6e94e65cd26a755c46a8a7dfc980ee5|0*25440*0xe9e755cba0794a30e9c6f136a45a101c
+R=./src/j2svlib.vhd|36
+
+[~A]
+Comment=LATTICE ispLEVER Classic 1.3, J2SVLIB VHDL LIBRARY
+ModifyID=8
+ReadOnly=1
+Standard=1
+Vendor=LATTICE
+Version=73
+
+[~MFT]
+0=7|0j2svlib.mgf|25510|0
+1=0|1j2svlib.mgf|0|0
+3=0|3j2svlib.mgf|0|0
+
+[~U]
+j2svlib=3|0*0|0*123
+

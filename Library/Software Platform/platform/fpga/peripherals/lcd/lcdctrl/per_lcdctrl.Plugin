@@ -1,0 +1,26 @@
+[Plugin]
+Name=per_lcdctrl
+Description=NanoBoard-1 16x2 LCD Controller
+Caption=NB-1 LCD Controller
+Implement=per_lcdctrl
+HardwareID=WB_LCDCTRL
+Bitmap=per_lcdctrl.bmp
+LargeBitmap=per_lcdctrl_large.bmp
+Require0=per_lcd_common
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True

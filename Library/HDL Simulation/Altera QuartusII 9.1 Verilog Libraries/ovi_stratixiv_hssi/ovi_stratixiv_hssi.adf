@@ -1,0 +1,33 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_stratixiv_hssi
+
+[Library]
+ovi_stratixiv_hssi=.\ovi_stratixiv_hssi.LIB
+
+[$LibMap$]
+ovi_stratixiv_hssi=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[Files]
+/update_ovi_stratixiv_hssi.do=-1
+
+[Files.Data]
+.\src\update_ovi_stratixiv_hssi.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

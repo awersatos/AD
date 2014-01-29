@@ -1,0 +1,71 @@
+*  
+* Diode Model Produced by Altium Ltd  
+* Date:  11-Mar-2004 
+*  
+* Manufacturer: Agilent  
+* Component Name: HDSP-A27C  
+*  
+* Parameters derived from information available in data sheet.  
+* 
+*                 1E/2E anode  
+*                 |  1M/2M anode  
+*                 |  |  1L/2L anode
+*                 |  |  |  1K/2K anode
+*                 |  |  |  |  1J/2J anode
+*                 |  |  |  |  |  1D/2D anode
+*                 |  |  |  |  |  |  DP1 anode
+*                 |  |  |  |  |  |  |  1C/2C anode
+*                 |  |  |  |  |  |  |  |  1B/2B anode
+*                 |  |  |  |  |  |  |  |  |  DIGIT No. 2 Common cathode
+*                 |  |  |  |  |  |  |  |  |  |  1A/2A anode
+*                 |  |  |  |  |  |  |  |  |  |  |  1N/2N anode
+*                 |  |  |  |  |  |  |  |  |  |  |  |  1H/2H anode
+*                 |  |  |  |  |  |  |  |  |  |  |  |  |  1G/2G anode
+*                 |  |  |  |  |  |  |  |  |  |  |  |  |  |  DIGIT No. 1 Common cathode
+*                 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  1P/2P anode
+*                 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  1F/2F anode
+*                 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+.SUBCKT HDSP_A27C 1  2  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
+
+DA1  12  16  dHDSP_A27C
+DB1  10  16  dHDSP_A27C
+DC1   9  16  dHDSP_A27C
+DD1   7  16  dHDSP_A27C
+DE1   1  16  dHDSP_A27C
+DF1  18  16  dHDSP_A27C
+DG1  15  16  dHDSP_A27C
+DH1  14  16  dHDSP_A27C
+DJ1   6  16  dHDSP_A27C
+DK1   5  16  dHDSP_A27C
+DL1   4  16  dHDSP_A27C
+DM1   2  16  dHDSP_A27C
+DN1  13  16  dHDSP_A27C
+DP1  17  16  dHDSP_A27C
+DDP1  8  16  dHDSP_A27C
+
+DA2  12  11  dHDSP_A27C
+DB2  10  11  dHDSP_A27C
+DC2   9  11  dHDSP_A27C
+DD2   7  11  dHDSP_A27C
+DE2   1  11  dHDSP_A27C
+DF2  18  11  dHDSP_A27C
+DG2  15  11  dHDSP_A27C
+DH2  14  11  dHDSP_A27C
+DJ2   6  11  dHDSP_A27C
+DK2   5  11  dHDSP_A27C
+DL2   4  11  dHDSP_A27C
+DM2   2  11  dHDSP_A27C
+DN2  13  11  dHDSP_A27C
+DP2  17  11  dHDSP_A27C
+DDP2  8  11  dHDSP_A27C
+
+.MODEL dHDSP_A27C D
++ (  
++    IS = 2.34165185E-18 
++     N = 1.64080796 
++    RS = 5.35791037 
++    BV = 4.5
++   IBV = 100u
++ )  
+
+.ENDS HDSP_A27C

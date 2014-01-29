@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_lpm
+
+[Library]
+ovi_lpm=.\OVI_lpm.lib
+
+[$LibMap$]
+ovi_lpm=.
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_ovi_lpm.do=-1
+/220model.v=-1
+/ALTERA_MF.V=-1
+
+[Files.Data]
+.\src\update_ovi_lpm.do=Macro
+.\src\220model.v=Verilog Source Code
+.\src\ALTERA_MF.V=Verilog Source Code
+

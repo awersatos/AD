@@ -1,0 +1,8 @@
+[Interface]
+Name=ethernet
+Alias=network_interface
+Category=SERVICE
+Visible=True
+System=False
+Description=Generic Ethernet Platform services
+PublicDir=services\platform\ethernet\include

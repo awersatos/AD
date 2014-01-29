@@ -1,0 +1,38 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=stratixiv_pcie_hip
+
+[Library]
+stratixiv_pcie_hip=.\stratixiv_pcie_hip.LIB
+
+[$LibMap$]
+stratixiv_pcie_hip=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/stratixiv_pcie_hip_atoms.vhd=-1
+/stratixiv_pcie_hip_components.vhd=-1
+/update_stratixiv_pcie_hip.do=-1
+
+[Files.Data]
+.\src\stratixiv_pcie_hip_atoms.vhd=VHDL Source Code
+.\src\stratixiv_pcie_hip_components.vhd=VHDL Source Code
+.\src\update_stratixiv_pcie_hip.do=Macro
+

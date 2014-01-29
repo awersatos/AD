@@ -1,0 +1,295 @@
+[Plugin]
+Name=graphics
+Caption=Graphics Services
+Description=Graphics routines for line, rectangle, triangle, circle, arc, etc.
+SourceDir=services\platform\graphics\src
+InitHandler=
+InitHandlerPriority=16
+Implement=graphics
+MinInstances=1
+Bitmap=graphics.bmp
+LargeBitmap=graphics_large.bmp
+CompileOption0=-I"$(SSASROOT)\services\platform\graphics\internal"
+;ManualPlacement=True
+
+[CustomGeneration0]
+GeneratorKind=EXE
+GeneratorPath=services\platform\graphics\tools\AAFontGen.exe
+Caption=Generate Font...
+
+[Option0]
+Name=check_coordinates
+GUIName=Check Coordinates
+Description=Check if coordinates are within boundaries of the screen
+Kind=BOOLEAN
+DefaultValue=True
+
+[Option1]
+Name=include_runtime_rotation
+GUIName=Include Runtime Rotation
+Description=Make routine available for runtime rotation. If not set, only the rotation as set in the context is available for that context.
+Kind=BOOLEAN
+DefaultValue=True
+
+
+[Instance]
+Caption=Graphics Context
+Description=Graphics routines context
+Require0=ad_graphics
+Require0_MultipleLinks=True
+Require0_MultipleLinksMax=1
+Require0_MultipleLinksMin=0
+MultipleLinks=True
+
+[Instance_Option0]
+Name=canvas_width
+GUIName=Canvas Width
+Description=Width of the connected canvases before rotation
+AutoValue=ad_graphics.hor_res
+Kind=UINT32
+DefaultValue=240
+AutoValueRequiredInterface=ad_graphics
+
+[Instance_Option1]
+Name=canvas_height
+GUIName=Canvas Height
+Description=Height of the connected canvases before rotation
+Kind=UINT32
+AutoValue=ad_graphics.vert_res
+DefaultValue=320
+AutoValueRequiredInterface=ad_graphics
+
+[Instance_Option2]
+Name=color_format
+GUIName=Color Format
+Description=Color format. 8-BPP Palette = palette with 256 colors. 16-BPP RGB565 = RGB value (5 bits red, 6 bits green, 5 bits blue).
+Kind=ENUM
+UserTypeHeaderFile=graphics.h
+DefaultValue=COLOR_RGB565
+Enum0=COLOR_RGB565
+Enum1=COLOR_PALETTE8
+Enum2=COLOR_PALETTE4
+Enum3=COLOR_PALETTE2
+Enum4=COLOR_PALETTE1
+EnumValue0=COLOR_RGB565
+EnumValue1=COLOR_PALETTE8
+EnumValue2=COLOR_PALETTE4
+EnumValue3=COLOR_PALETTE2
+EnumValue4=COLOR_PALETTE1
+EnumGUI0=16-BPP RGB565
+EnumGUI1=8-BPP Palette
+EnumGUI2=4-BPP Palette
+EnumGUI3=2-BPP Palette
+EnumGUI4=1-BPP Palette
+AutoValue=ad_graphics.color_format
+AutoValueRequiredInterface=ad_graphics
+
+[Instance_Option2_AutoSet0]
+Option=canvasbuffer1
+AutoValueEnum0=(ceil(canvas_width/2 ))*canvas_height*4
+AutoValueEnum1=(ceil(canvas_width/4 ))*canvas_height*4
+AutoValueEnum2=(ceil(canvas_width/8 ))*canvas_height*4
+AutoValueEnum3=(ceil(canvas_width/16))*canvas_height*4
+AutoValueEnum4=(ceil(canvas_width/32))*canvas_height*4
+
+[Instance_Option2_AutoSet1]
+Option=canvasbuffer2
+AutoValueEnum0=(ceil(canvas_width/2 ))*canvas_height*4
+AutoValueEnum1=(ceil(canvas_width/4 ))*canvas_height*4
+AutoValueEnum2=(ceil(canvas_width/8 ))*canvas_height*4
+AutoValueEnum3=(ceil(canvas_width/16))*canvas_height*4
+AutoValueEnum4=(ceil(canvas_width/32))*canvas_height*4
+
+[Instance_Option2_AutoSet2]
+Option=canvasbuffer3
+AutoValueEnum0=(ceil(canvas_width/2 ))*canvas_height*4
+AutoValueEnum1=(ceil(canvas_width/4 ))*canvas_height*4
+AutoValueEnum2=(ceil(canvas_width/8 ))*canvas_height*4
+AutoValueEnum3=(ceil(canvas_width/16))*canvas_height*4
+AutoValueEnum4=(ceil(canvas_width/32))*canvas_height*4
+
+[Instance_Option2_AutoSet3]
+Option=canvasbuffer4
+AutoValueEnum0=(ceil(canvas_width/2 ))*canvas_height*4
+AutoValueEnum1=(ceil(canvas_width/4 ))*canvas_height*4
+AutoValueEnum2=(ceil(canvas_width/8 ))*canvas_height*4
+AutoValueEnum3=(ceil(canvas_width/16))*canvas_height*4
+AutoValueEnum4=(ceil(canvas_width/32))*canvas_height*4
+
+[Instance_Option3]
+Name=rotation
+GUIName=Rotation
+Description=Default rotation of the screen, 0 = no rotation, 90 = 90 degrees clockwise rotation of the screen-contents, etc.
+Kind=ENUM
+DefaultValue=0
+Enum0=0
+Enum1=90
+Enum2=180
+Enum3=270
+EnumValue0=0
+EnumValue1=90
+EnumValue2=180
+EnumValue3=270
+EnumGUI0=0 degrees
+EnumGUI1=90 degrees
+EnumGUI2=180 degrees
+EnumGUI3=270 degrees
+
+[Instance_Option4]
+Name=default_font
+GUIName=Default Font
+Description=Default Font, this font is used if routines that expect a font are called with a NULL-pointer.
+UserTypeHeaderFile=graphics.h
+Kind=ENUM
+Type=const font_t*
+DefaultValue=BPMono_8
+Enum0=Bitstream_Vera_Sans_8
+Enum1=Bitstream_Vera_Sans_10
+Enum2=Bitstream_Vera_Sans_Mono_8
+Enum3=Bitstream_Vera_Sans_Mono_10
+Enum4=Bitstream_Vera_Serif_8
+Enum5=Bitstream_Vera_Serif_10
+Enum6=BPMono_8
+Enum7=BPMono_10
+Enum8=User_Supplied
+Enum9=No_Default_Font
+EnumValue0=&bitstreamverasans8
+EnumValue1=&bitstreamverasans10
+EnumValue2=&bitstreamverasansmono8
+EnumValue3=&bitstreamverasansmono10
+EnumValue4=&bitstreamveraserif8
+EnumValue5=&bitstreamveraserif10
+EnumValue6=&bpmono8
+EnumValue7=&bpmono10
+EnumValue8=((void*)-1)
+EnumValue9=NULL
+EnumGUI0=Bitstream Vera Sans 8
+EnumGUI1=Bitstream Vera Sans 10
+EnumGUI2=Bitstream Vera Sans Mono 8
+EnumGUI3=Bitstream Vera Sans Mono 10
+EnumGUI4=Bitstream Vera Serif 8
+EnumGUI5=Bitstream Vera Serif 10
+EnumGUI6=BPMono 8
+EnumGUI7=BPMono 10
+EnumGUI8=User Supplied Font
+EnumGUI9=No Default Font
+EnumDescription0=Proportional sans-serif 8-point
+EnumDescription1=Proportional sans-serif 10-point
+EnumDescription2=Fixed width sans-serif 8-point
+EnumDescription3=Fixed width sans-serif 10-point
+EnumDescription4=Proportional serif 8-point
+EnumDescription5=Proportional serif 10-point
+EnumDescription6=Fixed width sans-serif 8-point
+EnumDescription7=Fixed width sans-serif 10-point
+EnumDescription8=The user supplied font will be used
+EnumDescription9=No default font is included
+
+[Instance_Option4_AutoSet0]
+Option=user_supplied
+AutoValueEnum0=NULL
+AutoValueEnum1=NULL
+AutoValueEnum2=NULL
+AutoValueEnum3=NULL
+AutoValueEnum4=NULL
+AutoValueEnum5=NULL
+AutoValueEnum6=NULL
+AutoValueEnum7=NULL
+AutoValueEnum8=user_supplied
+AutoValueEnum9=NULL
+
+
+[Instance_Option5]
+Name=user_supplied
+GUIName=User Supplied Font
+Description=User supplied font, used as default font.
+Kind=DATAOBJECT
+UserTypeHeaderFile=graphics.h
+Type=const font_t
+DefaultValue=NULL
+
+[Instance_Option5_Hide_If0]
+Object=default_font
+Kind=Option
+Value=user_supplied
+Condition=NOTEQ
+
+[Instance_Option6]
+Name=canvascount
+GUIName=Canvas Count
+Description=Number of allocated canvasses.
+Kind=ENUM
+Enum0=0
+Enum1=1
+Enum2=2
+Enum3=3
+Enum4=4
+DefaultValue=1
+
+[Instance_Option7]
+Name=canvasbuffer1
+GUIName=Canvas Buffer (1)
+Description=Buffer allocation for the first canvas.
+Kind=Buffer
+Type=UINT8
+DoubleBufferSupport=False
+AllocMemory=True
+MemoryQualifier=__align(4)
+NoAllocIfHidden=True
+
+[Instance_Option7_Hide_If0]
+Object=canvascount
+Kind=Option
+Value=1
+Condition=LT
+
+[Instance_Option8]
+Name=canvasbuffer2
+GUIName=Canvas Buffer (2)
+Description=Buffer allocation for the second canvas.
+Kind=Buffer
+Type=UINT8
+DoubleBufferSupport=False
+AllocMemory=True
+MemoryQualifier=__align(4)
+NoAllocIfHidden=True
+
+[Instance_Option8_Hide_If0]
+Object=canvascount
+Kind=Option
+Value=2
+Condition=LT
+
+[Instance_Option9]
+Name=canvasbuffer3
+GUIName=Canvas Buffer (3)
+Description=Buffer allocation for the third canvas.
+Kind=Buffer
+Type=UINT8
+DoubleBufferSupport=False
+AllocMemory=True
+MemoryQualifier=__align(4)
+NoAllocIfHidden=True
+
+[Instance_Option9_Hide_If0]
+Object=canvascount
+Kind=Option
+Value=3
+Condition=LT
+
+[Instance_Option10]
+Name=canvasbuffer4
+GUIName=Canvas Buffer (4)
+Description=Buffer allocation for the fourth canvas.
+Kind=Buffer
+Type=UINT8
+DoubleBufferSupport=False
+AllocMemory=True
+MemoryQualifier=__align(4)
+NoAllocIfHidden=True
+
+[Instance_Option10_Hide_If0]
+Object=canvascount
+Kind=Option
+Value=4
+Condition=LT
+

@@ -1,0 +1,13 @@
+[Plugin]
+Name=ad_adc_adc084s021
+Description=Adapts adc084s021 ADC driver to ADC generic driver
+SourceDir=platform\fpga\drivers\adc\adaptors\adc084s021\src
+Implement=ad_adc
+InitHandler=ad_adc084s021_init
+InitHandlerPriority=16
+compileOption0=-I"$(SSASROOT)\platform\fpga\drivers\adc\internal"
+compileOption1=-I"$(SSASROOT)\platform\fpga\drivers\adc\include"
+
+[Instance]
+Require0=drv_adc084s021
+

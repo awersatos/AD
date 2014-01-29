@@ -1,0 +1,12 @@
+[Plugin]
+Name=per_gps_nmea
+Implement=per_gps_nmea
+HardwareID=WB_GPS_NMEA
+Caption=GPS NMEA Port
+Description=UART interface on GPS NMEA port
+Bitmap=per_gps_nmea.bmp
+Extend=per_uart8
+GlobalCompileOption0=-I"$(SSASROOT)\platform\fpga\peripherals\uart8\include"
+
+[Instance]
+Require0=

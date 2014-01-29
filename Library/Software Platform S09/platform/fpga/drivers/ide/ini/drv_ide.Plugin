@@ -1,0 +1,62 @@
+[Plugin]
+Name=drv_ide
+Description=IDE/ATA Interface Driver
+Caption=IDE/ATA Interface Driver
+Bitmap=drv_ide.bmp
+Implement=drv_ide
+SourceDir=platform\fpga\drivers\ide\src
+
+[Available_If0]
+Kind=PLUGIN
+Object=per_ide
+Condition=EQ
+
+[Option0]
+GUIName=THREADSAFE
+Name=USE_MUTEX
+Description=Use a mutex to protect access to IDE devices.
+Kind=BOOLEAN
+DefaultValue=FALSE
+
+[Option0_Available_If0]
+Kind=FALSE
+Object=posix_threads
+Condition=EQ
+
+[Instance]
+Require0=per_ide
+
+[Instance_Option0]
+Name=CFCARD
+GUIName=CFCARD
+Kind=BOOLEAN
+DefaultValue=False
+Description=Set to true for a CF card reader.
+
+[Instance_Option1]
+Name=SLAVE
+GUIName=Slave Device
+Kind=BOOLEAN
+DefaultValue=False
+Description=Set to false for a master device, and true for a slave device.
+
+[Instance_Option2]
+Name=DMA_FROM
+GUIName=Start of DMA area
+Kind=POINTER
+DefaultValue=0xFFFFFFFF
+Description=Start/End of DMA area should describe a memory range to which the IDE Core has access through its memory port. The driver will use faster direct memory access for any request referring to a word aligned buffer in this area.
+
+[Instance_Option3]
+Name=DMA_TO
+GUIName=End of DMA area
+Kind=POINTER
+DefaultValue=0
+Description=See Start of DMA area
+
+[Instance_Option4]
+Name=TIMEOUT
+Caption=Timeout
+Description=Timeout for IDE operations (0 means no limit)
+Kind=UINT32
+DefaultValue=0

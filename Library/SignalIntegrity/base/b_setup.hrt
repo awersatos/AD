@@ -1,0 +1,1591 @@
+##############################################################################
+#
+#         INCASES Engineering GmbH EMC Device Library Setup File
+# Filename  :  b_setup.hrt
+# Version   :  2.0
+# Last Save :  Thu Sep 25 09:50:00 1997
+#
+###############################################################################
+#
+# Vendors
+#
+VENDOR!AMD
+	SYN["AM","ADVANCED_MICRO_DEVICES"]
+	DSG["Advanced Micro Devices Inc. (AMD)"];
+VENDOR!CIR
+	SYN["CIRRUS","CIL","CL"]
+	DSG["Cirrus Logic (CIR)"];
+VENDOR!CMD
+	SYN["CMDM","CMD_MICRO"]
+	DSG["California Micro Devices Corparation (CMD)"];
+VENDOR!CYP
+	SYN["CP","CYPRES"]
+	DSG["CYPRES Semiconductor (CYP)"];
+VENDOR!DAL
+	SYN["DALL","DAS","DALLAS"]
+	DSG["Dallas Semiconductor (DAL)"];
+VENDOR!FU
+	SYN["FUI","FJU","FUJI"]
+	DSG["Fujitsu Microelectronics Inc. (FU)"];
+VENDOR!ICS
+	SYN["INC","INCASES"]
+	DSG["INCASES Engineering GmbH (ICS)"];
+VENDOR!INT
+	SYN["INTEL","ITL"]
+	DSG["intel Corporation (INT)"];
+VENDOR!LAT
+	SYN["LATTICE"]
+	DSG["Lattice Semiconductor (LAT)"];
+VENDOR!MMI
+	SYN["MONO","MOMEM"]
+	DSG["Monolithic Memory Inc. (MMI)"];
+VENDOR!MOT
+	SYN["MO","MOTO","MTR"]
+	DSG["Motorola Inc. (MOT)"];
+VENDOR!NSC
+	SYN["NATIONAL","NATIONAL_SEMICONDUCTOR"]
+	DSG["National Semiconductor (NSC)"];
+VENDOR!PHI
+	SYN["PHILIPS"]
+	DSG["Philips Semiconductors (PHI)"];
+VENDOR!SIE
+	SYN["SIEM","SIEMENS"]
+	DSG["SIEMENS AG (SIE)"];
+VENDOR!SNI
+	SYN["SIENIX"]
+	DSG["Siemens Nixdorf Informationssysteme AG (SNI)"];
+VENDOR!TI
+	SYN["TEX","TEXAS","TEXAS_INSTRUMENTS"]
+	DSG["Texas Instruments Inc. (TI)"];
+VENDOR!TOS
+	SYN["TC","TOSH","TOSHIBA"]
+	DSG["Toshiba America Electronic Components Inc. (TC)"];
+###
+#
+# Families
+#
+FAMILY!54
+	SYN["SL","STANDARD_LOGIK"]
+	DSG["54er (54)"];
+FAMILY!74
+	SYN["SL","STANDARD_LOGIK"]
+	DSG["74er (74)"];
+FAMILY!75
+	DSG["75er (75)"];
+FAMILY!ASIC
+	SYN["ASIC"]
+	DSG["Application Specific IC"];
+FAMILY!CDC
+	SYN["CLK","CLK_DRIVER","CLOCK","CLOCK_DRIVER"]
+	DSG["Clock Distribution Circuits (CDC)"];
+FAMILY!CTRL
+	SYN["CON","CONT","CONTROL"]
+	DSG["Controller"];
+FAMILY!DRAM
+	SYN["DMEM","D_MEM","D_RAM","DYNAMIC_RAM"]
+	DSG["Dynamic RAM (DMEM)"];
+FAMILY!GAL
+	SYN["GENERIC_AL"]
+	DSG["Generic Array Logic (GAL)"];
+FAMILY!MCU
+	SYN["MC","MICROCONTROLLER"]
+	DSG["Microcontroller (MCU)"];
+FAMILY!MPU
+	SYN["MP","MICROPROCESSOR"]
+	DSG["Microprocessors (MPU)"];
+FAMILY!PAL
+	SYN["PROGRAMMABLE_AL"]
+	DSG["Programmable Array Logic (PAL)"];
+FAMILY!PLD
+	DSG["Programmable Logic Device (PLD)"];
+FAMILY!PROM
+	SYN["EPROM","EEPROM","FEPROM"]
+	DSG["Programmable ROM"];
+FAMILY!ROM
+	SYN["READ_ONLY_MEMORY"]
+	DSG["Read Only Memory (ROM)"];
+FAMILY!SRAM
+	SYN["SMEM","S_MEM","S_RAM","STATIC_RAM"]
+	DSG["Static RAM (SRAM)"];
+###
+#
+# Signal Classes
+#
+SIGNALCLASS!SIGBUS
+	SYN["BUS","FBUS","DBUS"]
+	DSG["Bus"]
+	REP["[0-9]*[AB][0-9][0-9]*"];
+SIGNALCLASS!SIGCLK
+	SYN["CLK","CLOCK","DCLOCK"]
+	DSG["Clock"]
+	REP[".*[cC][lL][oO]\{0,1\}[cC]\{0,1\}[kK].*","[cC][kK][abioABIO]*.*"];
+SIGNALCLASS!SIGCTRL
+	SYN["CLR","CTEN","DIR","OE","WE"]
+	DSG["Control"]
+	REP[".*[dD][iI][rR].*","[cC][lL][rR].*",".*[oO][eE].*",".*[wW][eE].*"];
+SIGNALCLASS!SIGDATA
+	SYN["DAT","DQ"]
+	DSG["Data"]
+	REP["[0-9]*[adgqyADGQY]"];
+SIGNALCLASS!SIGSUP
+	SYN["GND","VCC","VSS"]
+	DSG["Supply"]
+	REP[".*[gG][nN][dD].*",".*[vV][csCS][csCS].*"];
+###
+#
+# Technologies
+#
+TECHNOLOGY!ABT
+	SYN["ABT_MOS","ADVANCED_BICMOS"]
+	DSG["Advanced Bipolar CMOS Technology (ABT)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2"),
+		["VOLmin"]("-.5"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("ABT_040_S0_in.mac"),["FBMO"]("ABT_040_S0_out.mac"),
+		["FBMT"]("ABT_025_S0_tri.mac"),
+		["FWmin"]("30e6"),["FWmax"]("150e6"),["FWtyp"]("75e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("5E-9"),["TITFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("ABT_040_S0_in.mac"),["FBMO"]("ABT_040_S0_out.mac"),
+		["FBMT"]("ABT_025_S0_tri.mac"),
+		["FWmin"]("30e6"),["FWmax"]("150e6"),["FWtyp"]("75e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("5E-9"),["TITFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("ABT_000_S0_in.mac"),["FBMO"]("ABT_040_S0_out.mac"),
+		["FBMT"]("ABT_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("100e6"),["FWtyp"]("40e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".048"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("5E-9"),["TITFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("ABT_000_S0_in.mac"),["FBMO"]("ABT_040_S0_out.mac"),
+		["FBMT"]("ABT_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("100e6"),["FWtyp"]("40e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".048"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("5E-9"),["TITFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("ABT_000_S0_in.mac"),["FBMO"]("ABT_040_S0_out.mac"),
+		["FBMT"]("ABT_025_S0_tri.mac"),
+		["FWmin"]("30e6"),["FWmax"]("150e6"),["FWtyp"]("75e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("5E-9"),["TITFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!AC
+        SYN["AC_MOS","ADVANCED_CMOS","A_CMOS"]
+        DSG["Advanced CMOS (AC)"]
+        PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("1.5"),["VIHmin"]("3.5"),
+		["VOLmax"](".44"),["VOHmin"]("4.44"),
+		["VOLmin"]("-.5"),["VOHmax"]("5.5"),
+		["VIT"]("2.5")
+	SIGBUS["FBMI"]("AC_040_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("AC_040_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("100e6"),["FWtyp"]("40e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".048"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("AC_000_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("AC_000_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("AC_000_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!ACT
+        SYN["ACT_MOS","AC_TMOS"]
+        DSG["Advanced CMOS with TTL Inputs (ACT)"]
+        PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("0.8"),["VIHmin"]("2"),
+		["VOLmax"]("0.44"),["VOHmin"]("4.44"),
+		["VOLmin"]("-.5"),["VOHmax"]("7"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("ACT_040_S0_in.mac"),["FBMO"]("ACT_040_S0_out.mac"),
+		["FBMT"]("ACT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("94e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("ACT_040_S0_in.mac"),["FBMO"]("ACT_040_S0_out.mac"),
+		["FBMT"]("ACT_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("ACT_000_S0_in.mac"),["FBMO"]("ACT_040_S0_out.mac"),
+		["FBMT"]("ACT_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("83e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("ACT_000_S0_in.mac"),["FBMO"]("ACT_040_S0_out.mac"),
+		["FBMT"]("ACT_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("83e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("ACT_040_S0_in.mac"),["FBMO"]("ACT_040_S0_out.mac"),
+		["FBMT"]("ACT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("94e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!AHC
+	SYN["AHC_MOS","AH_CMOS","ADVANCED_HIGH_SPEED_CMOS"]
+	DSG["Advanced High Speed CMOS (AHC)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".44"),["VOHmin"]("2.4"),
+		["VOLmin"]("0"),["VOHmax"]("3.3"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("AHC_042_S0_in.mac"),["FBMO"]("AHC_042_S0_out.mac"),
+		["FBMT"]("AHC_027_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("75e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("AHC_042_S0_in.mac"),["FBMO"]("AHC_042_S0_out.mac"),
+		["FBMT"]("AHC_027_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("80e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("AHC_000_S0_in.mac"),["FBMO"]("AHC_042_S0_out.mac"),
+		["FBMT"]("AHC_027_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("AHC_000_S0_in.mac"),["FBMO"]("AHC_042_S0_out.mac"),
+		["FBMT"]("AHC_027_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("AHC_000_S0_in.mac"),["FBMO"]("AHC_042_S0_out.mac"),
+		["FBMT"]("AHC_027_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("75e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!AHC_50
+	SYN["AHC_MOS_50","AH_CMOS_50","ADVANCED_HIGH_SPEED_CMOS_50"]
+	DSG["Advanced High Speed CMOS 5.0V (AHC_50)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("1.5"),["VIHmin"]("3.5"),
+		["VOLmax"](".5"),["VOHmin"]("4.44"),
+		["VOLmin"]("-.5"),["VOHmax"]("5.5"),
+		["VIT"]("2.5")
+	SIGBUS["FBMI"]("AHC_040_S0_in.mac"),["FBMO"]("AHC_040_S0_out.mac"),
+		["FBMT"]("AHC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("75e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("AHC_040_S0_in.mac"),["FBMO"]("AHC_040_S0_out.mac"),
+		["FBMT"]("AHC_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("80e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("AHC_000_S0_in.mac"),["FBMO"]("AHC_040_S0_out.mac"),
+		["FBMT"]("AHC_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("AHC_000_S0_in.mac"),["FBMO"]("AHC_040_S0_out.mac"),
+		["FBMT"]("AHC_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("AHC_000_S0_in.mac"),["FBMO"]("AHC_040_S0_out.mac"),
+		["FBMT"]("AHC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("75e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!AHCT
+	SYN["AHCT_MOS","AH_CTMOS"]
+	DSG["Advanced High Speed CMOS with TTL Inputs (AHCT)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".44"),["VOHmin"]("2.4"),
+		["VOLmin"]("0"),["VOHmax"]("3.3"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("AHCT_042_S0_in.mac"),["FBMO"]("AHCT_042_S0_out.mac"),
+		["FBMT"]("AHCT_027_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("75e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("AHCT_042_S0_in.mac"),["FBMO"]("AHCT_042_S0_out.mac"),
+		["FBMT"]("AHCT_027_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("80e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("AHCT_000_S0_in.mac"),["FBMO"]("AHCT_042_S0_out.mac"),
+		["FBMT"]("AHCT_027_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("AHCT_000_S0_in.mac"),["FBMO"]("AHCT_042_S0_out.mac"),
+		["FBMT"]("AHCT_027_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("AHCT_000_S0_in.mac"),["FBMO"]("AHCT_042_S0_out.mac"),
+		["FBMT"]("AHCT_027_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("75e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.65"),["VOmDF"]("1.65"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!AHCT_50 
+	SYN["AHCT_MOS_50","AH_CTMOS_50"]
+	DSG["Advanced High Speed CMOS with TTL Inputs 5.0V (AHCT_50)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("1.5"),["VIHmin"]("3.5"),
+		["VOLmax"](".5"),["VOHmin"]("4.44"),
+		["VOLmin"]("-.5"),["VOHmax"]("5.5"),
+		["VIT"]("2.5")
+	SIGBUS["FBMI"]("AHCT_040_S0_in.mac"),["FBMO"]("AHCT_040_S0_out.mac"),
+		["FBMT"]("AHCT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("75e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("AHCT_040_S0_in.mac"),["FBMO"]("AHCT_040_S0_out.mac"),
+		["FBMT"]("AHCT_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("80e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("AHCT_000_S0_in.mac"),["FBMO"]("AHCT_040_S0_out.mac"),
+		["FBMT"]("AHCT_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("AHCT_000_S0_in.mac"),["FBMO"]("AHCT_040_S0_out.mac"),
+		["FBMT"]("AHCT_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("AHCT_000_S0_in.mac"),["FBMO"]("AHCT_040_S0_out.mac"),
+		["FBMT"]("AHCT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("75e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!ALS
+	SYN["TTL_ALS","ALS_TTL"]
+	DSG["Advanced Low Power Shottky (ALS)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".5"),["VOHmin"]("2"),
+		["VOLmin"]("-.5"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("ALS_040_S0_in.mac"),["FBMO"]("ALS_040_S0_out.mac"),
+		["FBMT"]("ALS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("70e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("15E-9"),["TITFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("ALS_040_S0_in.mac"),["FBMO"]("ALS_040_S0_out.mac"),
+		["FBMT"]("ALS_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("80e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("15E-9"),["TITFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("ALS_000_S0_in.mac"),["FBMO"]("ALS_000_S0_out.mac"),
+		["FBMT"]("ALS_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("15E-9"),["TITFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("ALS_000_S0_in.mac"),["FBMO"]("ALS_000_S0_out.mac"),
+		["FBMT"]("ALS_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("60e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("15E-9"),["TITFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("ALS_000_S0_in.mac"),["FBMO"]("ALS_040_S0_out.mac"),
+		["FBMT"]("ALS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("70e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("15E-9"),["TITFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!ALVC
+	SYN["ADVANCED_LOW_VOLTAGE_CMOS"]
+	DSG["Advanced Low Voltage CMOS (ALVC)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"]("0.8"),["VIHmin"]("2"),
+		["VOLmax"]("0.55"),["VOHmin"]("2.4"),
+		["VOLmin"]("-.5"),["VOHmax"]("3.8"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("ALVC_040_S0_in.mac"),["FBMO"]("ALVC_040_S0_out.mac"),
+		["FBMT"]("ALVC_025_S0_tri.mac"),
+		["FWmin"]("35e6"),["FWmax"]("160e6"),["FWtyp"]("80e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("10E-9"),["TITFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("ALVC_040_S0_in.mac"),["FBMO"]("ALVC_040_S0_out.mac"),
+		["FBMT"]("ALVC_025_S0_tri.mac"),
+		["FWmin"]("40e6"),["FWmax"]("160e6"),["FWtyp"]("80e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("10E-9"),["TITFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("ALVC_000_S0_in.mac"),["FBMO"]("ALVC_040_S0_out.mac"),
+		["FBMT"]("ALVC_025_S0_tri.mac"),
+		["FWmin"]("35e6"),["FWmax"]("160e6"),["FWtyp"]("80e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("10E-9"),["TITFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("ALVC_000_S0_in.mac"),["FBMO"]("ALVC_040_S0_out.mac"),
+		["FBMT"]("ALVC_025_S0_tri.mac"),
+		["FWmin"]("35e6"),["FWmax"]("160e6"),["FWtyp"]("80e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("10E-9"),["TITFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("ALVC_040_S0_in.mac"),["FBMO"]("ALVC_040_S0_out.mac"),
+		["FBMT"]("ALVC_025_S0_tri.mac"),
+		["FWmin"]("35e6"),["FWmax"]("160e6"),["FWtyp"]("80e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TITRmax"]("10E-9"),["TITFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!AS
+	SYN["TTL_AS","AS_TTL"]
+	DSG["Advanced Shottky (AS)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2.4"),
+		["VOLmin"]("0"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("AS_040_S0_in.mac"),["FBMO"]("AS_040_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("108e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("AS_040_S0_in.mac"),["FBMO"]("AS_040_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("20e6"),["FWmax"]("115e6"),["FWtyp"]("40e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("AS_000_S0_in.mac"),["FBMO"]("AS_000_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.002"),["IOLmax"](".02"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("AS_000_S0_in.mac"),["FBMO"]("AS_000_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.002"),["IOLmax"](".02"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("AS_000_S0_in.mac"),["FBMO"]("AS_040_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("108e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!BCT
+	SYN["BCT_MOS","BI_CMOS","BICMOS"]
+	DSG["Bipolar CMOS Technology (BCT)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2"),
+		["VOLmin"]("-.5"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("BCT_040_S0_in.mac"),["FBMO"]("BCT_040_S0_out.mac"),
+		["FBMT"]("BCT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("BCT_040_S0_in.mac"),["FBMO"]("BCT_040_S0_out.mac"),
+		["FBMT"]("BCT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("BCT_000_S0_in.mac"),["FBMO"]("BCT_000_S0_out.mac"),
+		["FBMT"]("BCT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("BCT_000_S0_in.mac"),["FBMO"]("BCT_000_S0_out.mac"),
+		["FBMT"]("BCT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("BCT_000_S0_in.mac"),["FBMO"]("BCT_040_S0_out.mac"),
+		["FBMT"]("BCT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!BTL
+	SYN["FUTURE_BUS","BUS_TRANS_LOGIC","FUTUREBUS","FB_BTL"]
+	DSG["Backplane Transceiver Logic/Futurebus+ (BTL)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("1.47"),["VIHmin"]("1.62"),
+		["VOLmax"]("1.1"),["VOHmin"]("2.1"),
+		["VOLmin"]("0"),["VOHmax"]("5"),
+		["VIT"]("1.55")
+	SIGBUS["FBMI"]("FB_A_040_S0_in.mac"),["FBMO"]("FB_A_040_S0_out.mac"),
+		["FBMT"]("FB_A_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.048"),["IOLmax"](".1"),
+		["VImDR"]("1.55"),["VImDF"]("1.55"),
+		["VOmDR"]("1.55"),["VOmDF"]("1.55"),
+		["TTRmax"]("15E-9"),["TTFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("FB_A_040_S0_in.mac"),["FBMO"]("FB_A_040_S0_out.mac"),
+		["FBMT"]("FB_A_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.048"),["IOLmax"](".1"),
+		["VImDR"]("1.55"),["VImDF"]("1.55"),
+		["VOmDR"]("1.55"),["VOmDF"]("1.55"),
+		["TTRmax"]("15E-9"),["TTFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("FB_A_000_S0_in.mac"),["FBMO"]("FB_A_040_S0_out.mac"),
+		["FBMT"]("FB_A_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.048"),["IOLmax"](".1"),
+		["VImDR"]("1.55"),["VImDF"]("1.55"),
+		["VOmDR"]("1.55"),["VOmDF"]("1.55"),
+		["TTRmax"]("15E-9"),["TTFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("FB_A_000_S0_in.mac"),["FBMO"]("FB_A_040_S0_out.mac"),
+		["FBMT"]("FB_A_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.048"),["IOLmax"](".1"),
+		["VImDR"]("1.55"),["VImDF"]("1.55"),
+		["VOmDR"]("1.55"),["VOmDF"]("1.55"),
+		["TTRmax"]("15E-9"),["TTFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("FB_A_000_S0_in.mac"),["FBMO"]("FB_A_040_S0_out.mac"),
+		["FBMT"]("FB_A_025_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.048"),["IOLmax"](".1"),
+		["VImDR"]("1.55"),["VImDF"]("1.55"),
+		["VOmDR"]("1.55"),["VOmDF"]("1.55"),
+		["TTRmax"]("15E-9"),["TTFmax"]("15E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!CMOS
+	SYN["C_MOS","C"]
+	DSG["CMOS (CMOS)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("1.5"),["VIHmin"]("3.5"),
+		["VOLmax"](".33"),["VOHmin"]("4.4"),
+		["VOLmin"]("0"),["VOHmax"]("5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("HC_040_S0_in.mac"),["FBMO"]("HC_040_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("HC_040_S0_in.mac"),["FBMO"]("HC_040_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("50e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("HC_000_S0_in.mac"),["FBMO"]("HC_000_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("6e6"),["FWmax"]("30e6"),["FWtyp"]("12e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("HC_000_S0_in.mac"),["FBMO"]("HC_000_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("6e6"),["FWmax"]("30e6"),["FWtyp"]("12e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("HC_000_S0_in.mac"),["FBMO"]("HC_040_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!F
+	SYN["FAST","TTL_F","TTL_FAST","F_TTL","FAST_TTL"]
+	DSG["FAST (F)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2"),
+		["VOLmin"]("-.5"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("F_040_S0_in.mac"),["FBMO"]("F_040_S0_out.mac"),
+		["FBMT"]("F_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("69e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("8E-9"),["TTFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("F_040_S0_in.mac"),["FBMO"]("F_040_S0_out.mac"),
+		["FBMT"]("F_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("69e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("8E-9"),["TTFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("F_000_S0_in.mac"),["FBMO"]("F_000_S0_out.mac"),
+		["FBMT"]("F_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("69e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.001"),["IOLmax"](".02"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("8E-9"),["TTFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("F_000_S0_in.mac"),["FBMO"]("F_000_S0_out.mac"),
+		["FBMT"]("F_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("69e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.001"),["IOLmax"](".02"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("8E-9"),["TTFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("F_000_S0_in.mac"),["FBMO"]("F_040_S0_out.mac"),
+		["FBMT"]("F_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("69e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("8E-9"),["TTFmax"]("5E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!FCT
+        SYN["FCT_MOS","FAST_CMOS_TECHNOLOGY"]
+	DSG["Fast CMOS Technology (FCT)"]
+        PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("1.5"),["VIHmin"]("3.5"),
+		["VOLmax"](".44"),["VOHmin"]("4.44"),
+		["VOLmin"]("-.5"),["VOHmax"]("5.5"),
+		["VIT"]("2.5")
+	SIGBUS["FBMI"]("AC_040_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("AC_040_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("100e6"),["FWtyp"]("40e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".048"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("AC_000_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("AC_000_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("AC_000_S0_in.mac"),["FBMO"]("AC_040_S0_out.mac"),
+		["FBMT"]("AC_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!GTL
+	SYN["GUNNING_TL","GT_LOGIC"]
+	DSG["Gunning Transceiver Logic (GTL)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"](".75"),["VIHmin"](".85"),
+		["VOLmax"](".55"),["VOHmin"]("1.2"),
+		["VOLmin"](".4"),["VOHmax"]("3.3"),
+		["VIT"](".8")
+	SIGBUS["FBMI"]("GTL_040_S0_in.mac"),["FBMO"]("GTL_010_S4_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-10e-6"),["IOLmax"](".04"),
+		["VImDR"](".8"),["VImDF"](".8"),
+		["VOmDR"](".8"),["VOmDF"](".8"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("GTL_040_S0_in.mac"),["FBMO"]("GTL_010_S4_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-10e-6"),["IOLmax"](".04"),
+		["VImDR"](".8"),["VImDF"](".8"),
+		["VOmDR"](".8"),["VOmDF"](".8"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("GTL_040_S0_in.mac"),["FBMO"]("GTL_010_S4_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-10e-6"),["IOLmax"](".04"),
+		["VImDR"](".8"),["VImDF"](".8"),
+		["VOmDR"](".8"),["VOmDF"](".8"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("GTL_040_S0_in.mac"),["FBMO"]("GTL_010_S4_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-10e-6"),["IOLmax"](".04"),
+		["VImDR"](".8"),["VImDF"](".8"),
+		["VOmDR"](".8"),["VOmDF"](".8"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("GTL_040_S0_in.mac"),["FBMO"]("GTL_010_S4_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-10e-6"),["IOLmax"](".04"),
+		["VImDR"](".8"),["VImDF"](".8"),
+		["VOmDR"](".8"),["VOmDF"](".8"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!GTL_LVT
+	SYN["GTLLVT"]
+	DSG["Gunning Transceiver Logic Low Voltage (GTL_LVT)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2.4"),
+		["VOLmin"]("-.5"),["VOHmax"]("3.8"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("NA"),["FBMO"]("NA"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("NA"),["FBMO"]("NA"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("NA"),["FBMO"]("NA"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("NA"),["FBMO"]("NA"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("NA"),["FBMO"]("NA"),
+		["FBMT"]("NA"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!HC
+	SYN["HC_MOS","H_CMOS","HIGH_SPEED_CMOS"]
+	DSG["High Speed CMOS (HC)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("1.5"),["VIHmin"]("3.5"),
+		["VOLmax"](".33"),["VOHmin"]("4.4"),
+		["VOLmin"]("0"),["VOHmax"]("5"),
+		["VIT"]("2.5")
+	SIGBUS["FBMI"]("HC_040_S0_in.mac"),["FBMO"]("HC_040_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("HC_040_S0_in.mac"),["FBMO"]("HC_040_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("50e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("HC_000_S0_in.mac"),["FBMO"]("HC_000_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("6e6"),["FWmax"]("30e6"),["FWtyp"]("12e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("HC_000_S0_in.mac"),["FBMO"]("HC_000_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("6e6"),["FWmax"]("30e6"),["FWtyp"]("12e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("HC_000_S0_in.mac"),["FBMO"]("HC_040_S0_out.mac"),
+		["FBMT"]("HC_024_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!HCT
+	SYN["HCT_MOS","HC_TMOS"]
+	DSG["High Speed CMOS with TTL Inputs (HCT)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2.0"),
+		["VOLmax"](".4"),["VOHmin"]("2.4"),
+		["VOLmin"]("0"),["VOHmax"]("5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("HCT_040_S0_in.mac"),["FBMO"]("HCT_040_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("HCT_040_S0_in.mac"),["FBMO"]("HCT_040_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("50e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("HCT_000_S0_in.mac"),["FBMO"]("HCT_000_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("6e6"),["FWmax"]("30e6"),["FWtyp"]("12e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("HCT_000_S0_in.mac"),["FBMO"]("HCT_000_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("6e6"),["FWmax"]("30e6"),["FWtyp"]("12e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("HCT_000_S0_in.mac"),["FBMO"]("HCT_040_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!HLL
+	SYN["HLLC_MOS","HLL_CMOS"]
+	DSG["High Speed Low Power Low Voltage CMOS (HLL)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".4"),["VOHmin"]("3.1"),
+		["VOLmin"]("0"),["VOHmax"]("3.3"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("HLL_140_S0_in.mac"),["FBMO"]("HLL_140_S0_out.mac"),
+		["FBMT"]("HLL_125_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("HLL_140_S0_in.mac"),["FBMO"]("HLL_140_S0_out.mac"),
+		["FBMT"]("HLL_125_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("HLL_100_S0_in.mac"),["FBMO"]("HLL_140_S0_out.mac"),
+		["FBMT"]("HLL_125_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("HLL_100_S0_in.mac"),["FBMO"]("HLL_140_S0_out.mac"),
+		["FBMT"]("HLL_125_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("HLL_100_S0_in.mac"),["FBMO"]("HLL_140_S0_out.mac"),
+		["FBMT"]("HLL_125_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("20E-9"),["TTFmax"]("20E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!LS
+	SYN["TTL_LS","LS_TTL","LOW_POWER_SHOTTKY"]
+	DSG["Low Power Shottky (LS)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".5"),["VOHmin"]("2.4"),
+		["VOLmin"]("0"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("LS_040_S0_in.mac"),["FBMO"]("LS_040_S0_out.mac"),
+		["FBMT"]("LS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("LS_040_S0_in.mac"),["FBMO"]("LS_040_S0_out.mac"),
+		["FBMT"]("LS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("LS_000_S0_in.mac"),["FBMO"]("LS_000_S0_out.mac"),
+		["FBMT"]("LS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.0004"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("LS_000_S0_in.mac"),["FBMO"]("LS_000_S0_out.mac"),
+		["FBMT"]("LS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.0004"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("LS_000_S0_in.mac"),["FBMO"]("LS_040_S0_out.mac"),
+		["FBMT"]("LS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!LV
+	SYN["LVHC","LV_HC","LVHC_MOS","LV_HCMOS","LV_HC_MOS"]
+	DSG["Low Voltage High Speed CMOS (LV)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".4"),["VOHmin"]("2.4"),
+		["VOLmin"]("-.5"),["VOHmax"]("3.3"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("LV_040_S0_in.mac"),["FBMO"]("LV_040_S0_out.mac"),
+		["FBMT"]("LV_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("LV_040_S0_in.mac"),["FBMO"]("LV_040_S0_out.mac"),
+		["FBMT"]("LV_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("LV_000_S0_in.mac"),["FBMO"]("LV_000_S0_out.mac"),
+		["FBMT"]("LV_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".012"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("LV_000_S0_in.mac"),["FBMO"]("LV_000_S0_out.mac"),
+		["FBMT"]("LV_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".012"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("LV_000_S0_in.mac"),["FBMO"]("LV_040_S0_out.mac"),
+		["FBMT"]("LV_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.008"),["IOLmax"](".008"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!LVC
+	SYN["LV_C","LVC_MOS","LV_CMOS"]
+	DSG["Low Voltage CMOS (LVC)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2.4"),
+		["VOLmin"]("-.5"),["VOHmax"]("3.8"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("LVC_040_S0_in.mac"),["FBMO"]("LVC_040_S0_out.mac"),
+		["FBMT"]("LVC_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("LVC_040_S0_in.mac"),["FBMO"]("LVC_040_S0_out.mac"),
+		["FBMT"]("LVC_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("LVC_000_S0_in.mac"),["FBMO"]("LVC_000_S0_out.mac"),
+		["FBMT"]("LVC_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("LVC_000_S0_in.mac"),["FBMO"]("LVC_000_S0_out.mac"),
+		["FBMT"]("LVC_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("LVC_000_S0_in.mac"),["FBMO"]("LVC_040_S0_out.mac"),
+		["FBMT"]("LVC_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.024"),["IOLmax"](".024"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!LVT
+	SYN["LVTC_MOS","LVT_CMOS","LOW_VOLTAGE_BICMOS"]
+	DSG["Low Voltage BiCMOS Technology (LVT)"]
+	PAR["VICC"]("3.3"),["VISS"]("0"),
+		["VOCC"]("3.3"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2.4"),
+		["VOLmin"]("-.5"),["VOHmax"]("3.8"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("LVT_040_S0_in.mac"),["FBMO"]("LVT_040_S0_out.mac"),
+		["FBMT"]("LVT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("LVT_040_S0_in.mac"),["FBMO"]("LVT_040_S0_out.mac"),
+		["FBMT"]("LVT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("LVT_000_S0_in.mac"),["FBMO"]("LVT_040_S0_out.mac"),
+		["FBMT"]("LVT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("LVT_000_S0_in.mac"),["FBMO"]("LVT_040_S0_out.mac"),
+		["FBMT"]("LVT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("LVT_000_S0_in.mac"),["FBMO"]("LVT_040_S0_out.mac"),
+		["FBMT"]("LVT_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.032"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("10E-9"),["TTFmax"]("10E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!S
+	SYN["TTL_S","S_TTL","TTL_SHOTTKY","SHOTTKY_TTL"]
+	DSG["Shottky (S)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2"),
+		["VOLmin"]("0"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("S_040_S0_in.mac"),["FBMO"]("S_040_S0_out.mac"),
+		["FBMT"]("S_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("S_040_S0_in.mac"),["FBMO"]("S_040_S0_out.mac"),
+		["FBMT"]("S_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("S_000_S0_in.mac"),["FBMO"]("S_000_S0_out.mac"),
+		["FBMT"]("S_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.001"),["IOLmax"](".02"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("S_000_S0_in.mac"),["FBMO"]("S_000_S0_out.mac"),
+		["FBMT"]("S_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.001"),["IOLmax"](".02"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("S_000_S0_in.mac"),["FBMO"]("S_040_S0_out.mac"),
+		["FBMT"]("S_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("50E-9"),["TTFmax"]("50E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!STD_TTL
+	SYN["STDTTL","STANDARD_TTL","TTL_STANDARD"]
+	DSG["Standard TTL (STD_TTL)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".4"),["VOHmin"]("2.4"),
+		["VOLmin"]("0"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("TTL_000_S0_in.mac"),["FBMO"]("TTL_020_S0_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.0024"),["IOLmax"](".048"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("TTL_000_S0_in.mac"),["FBMO"]("TTL_020_S0_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.0024"),["IOLmax"](".048"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("TTL_000_S0_in.mac"),["FBMO"]("TTL_000_S0_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.0004"),["IOLmax"](".016"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("TTL_000_S0_in.mac"),["FBMO"]("TTL_000_S0_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.0004"),["IOLmax"](".016"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("TTL_000_S0_in.mac"),["FBMO"]("TTL_020_S0_out.mac"),
+		["FBMT"]("NA"),
+		["FWmin"]("10e6"),["FWmax"]("30e6"),["FWtyp"]("15e6"),
+		["IOHmax"]("-.0024"),["IOLmax"](".048"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.5"),["VOmDF"]("1.5"),
+		["TTRmax"]("100E-9"),["TTFmax"]("100E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!TTL
+	SYN["TTL_LOGIC"]
+	DSG["TTL (TTL)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"](".8"),["VIHmin"]("2"),
+		["VOLmax"](".55"),["VOHmin"]("2.4"),
+		["VOLmin"]("0"),["VOHmax"]("5.5"),
+		["VIT"]("1.5")
+	SIGBUS["FBMI"]("AS_040_S0_in.mac"),["FBMO"]("AS_040_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("108e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("AS_040_S0_in.mac"),["FBMO"]("AS_040_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("20e6"),["FWmax"]("115e6"),["FWtyp"]("40e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("AS_000_S0_in.mac"),["FBMO"]("AS_000_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.002"),["IOLmax"](".02"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("AS_000_S0_in.mac"),["FBMO"]("AS_000_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("100e6"),["FWtyp"]("30e6"),
+		["IOHmax"]("-.002"),["IOLmax"](".02"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("AS_000_S0_in.mac"),["FBMO"]("AS_040_S0_out.mac"),
+		["FBMT"]("AS_025_S0_tri.mac"),
+		["FWmin"]("15e6"),["FWmax"]("108e6"),["FWtyp"]("35e6"),
+		["IOHmax"]("-.015"),["IOLmax"](".064"),
+		["VImDR"]("1.5"),["VImDF"]("1.5"),
+		["VOmDR"]("1.3"),["VOmDF"]("1.3"),
+		["TITRmax"]("8E-9"),["TITFmax"]("8E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+TECHNOLOGY!UK
+	SYN["UNKNOWN"]
+	DSG["Unknown [refers to HC] (UK)"]
+	PAR["VICC"]("5"),["VISS"]("0"),
+		["VOCC"]("5"),["VOSS"]("0"),
+		["VILmax"]("1.5"),["VIHmin"]("3.5"),
+		["VOLmax"](".33"),["VOHmin"]("4.4"),
+		["VOLmin"]("0"),["VOHmax"]("5"),
+		["VIT"]("2.5")
+	SIGBUS["FBMI"]("HCT_040_S0_in.mac"),["FBMO"]("HCT_040_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCLK["FBMI"]("HCT_040_S0_in.mac"),["FBMO"]("HCT_040_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("10e6"),["FWmax"]("50e6"),["FWtyp"]("25e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGCTRL["FBMI"]("HCT_000_S0_in.mac"),["FBMO"]("HCT_000_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("6e6"),["FWmax"]("30e6"),["FWtyp"]("12e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDATA["FBMI"]("HCT_000_S0_in.mac"),["FBMO"]("HCT_000_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("6e6"),["FWmax"]("30e6"),["FWtyp"]("12e6"),
+		["IOHmax"]("-.004"),["IOLmax"](".004"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0")
+	SIGDFT["SIGDFT"]("SIGUK")
+	SIGUK["FBMI"]("HCT_000_S0_in.mac"),["FBMO"]("HCT_040_S0_out.mac"),
+		["FBMT"]("HCT_024_S0_tri.mac"),
+		["FWmin"]("8e6"),["FWmax"]("50e6"),["FWtyp"]("20e6"),
+		["IOHmax"]("-.006"),["IOLmax"](".006"),
+		["VImDR"]("2.5"),["VImDF"]("2.5"),
+		["VOmDR"]("2.5"),["VOmDF"]("2.5"),
+		["TTRmax"]("80E-9"),["TTFmax"]("80E-9"),
+		["TOmDR"]("0"),["TOmDF"]("0");
+###
+#
+# Parttypes
+#
+PARTTYPE!BJT
+	SYN["NPN","PNP","TRANSISTOR"]
+	DSG["Bipolar Junction Transistor"]
+	FBM["SIE_BC846_bjt.mac"];
+PARTTYPE!CAPACITOR
+	SYN["CAP","P_CAPACITOR"]
+	DSG["Capacitor"];
+PARTTYPE!COIL
+	SYN["Coil"]
+	DSG["Coil"];
+PARTTYPE!CONNECTOR
+	SYN["CONNECTOR UNPLUGGED","CONNECTOR PLUGGED","TESTPOINT",
+		"MISCELLANEOUS CONNECTOR","JUMPER"]
+	DSG["Connector"]
+	FBM["AWG28_Z70t48_xtr.mac"];
+PARTTYPE!DIC
+	SYN["IC","FLATPACK","GATE ARRAY","SIP","LEADLESS CHIP CARRIER",
+		"D/A CONVERTER","A/D CONVERTER","SMALL OUTLINE IC",
+		"PLASTIC LEADED CHIP CARRIER","J-LEADED CHIP CARRIER",
+		"GULL WINGED CHIP CARRIER","LEADED SMALL OUTLINE IC",
+		"GULL WINGED LEADED CHIP CARRIER",
+		"J BEND LEADED CHIP CARRIER"]
+	DSG["Digital IC"];
+PARTTYPE!DIODE
+	SYN["DIODE","ZENER","LED","SCHOTTKY DIODE"]
+	DSG["Diode"]
+	FBM["SIE_BAS40_dio.mac"];
+PARTTYPE!FERRITE
+	SYN["FERRITE_BEAD","FERR"]
+	DSG["Ferrite Bead"]
+	FBM["NA"];
+PARTTYPE!FET
+	SYN["PFET","NFET","MOSFET","P_FET","N_FET","MOS_FET"]
+	DSG["Field Effect Transistor"]
+	FBM["PHI_BSD214_fet.mac"];
+PARTTYPE!RESISTOR
+	SYN["POTENTIOMETER","RESISTOR","RESISTOR PACK","PASTE RESISTOR"]
+	DSG["Resistor"];
+PARTTYPE!UK
+	SYN["UK","HOLEMODULE","PADMODULE","RELAY","SCR","SWITCH","TRANSFORMER",
+		"CRYSTEL","RIBBUS","FUSE","VARISTOR","VOLTAGE REGULATOR",
+		"FILTER","DELAY LINE","MECHANICAL","WIREBOND","HYBRID",
+		"HEATSINK"]
+	DSG["Unknown [handled like DIC] (UK)"];
+###
+#
+# Misc
+#
+MISC!SETTINGS
+	SRC["User"];

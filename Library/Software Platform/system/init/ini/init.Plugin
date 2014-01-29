@@ -1,0 +1,11 @@
+[Plugin]
+Name=init
+Description=initialization of the framework
+SourceFile0=system\init\src\init.c
+GlobalCompileOption0=-D__FRAMEWORK__
+FrameworkCompileOption0=-I"$(SSASROOT)\system\init\include"
+FrameworkCompileOption1=-Wc-w508
+Implement=init
+
+
+

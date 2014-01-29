@@ -1,0 +1,14 @@
+[Plugin]
+Name=cellular_to_serial
+Description=Posix interface for Cellular Modem port.
+SourceDir=services\posix\devio\serial\adaptors\cellular\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\cellular\include"
+CompileOption1=-I"$(SSASROOT)\platform\fpga\drivers\cellular\internal"
+CompileOption2=-I"$(SSASROOT)\platform\fpga\drivers\uart8\internal"
+CompileOption3=-I"$(SSASROOT)\services\posix\devio\serial\include"
+InitHandler=cellular_to_serial_init
+InitHandlerPriority=8
+Implement=serial_adaptor
+
+[Instance]
+Require0=drv_cellular

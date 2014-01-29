@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_m25px0
+Category=DRIVER
+System=False
+Description=M25PX0 serial flash memory driver
+PublicDir=platform\fpga\drivers\m25px0\include

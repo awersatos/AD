@@ -1,0 +1,81 @@
+//============================================================
+# f280c source
+//74F280c FSC 9-bit Odd/Even Parity Generator/Checker
+//ab 9/03/017: copied f280b in FAST.TXT
+//	changed prop delays values obtained from PDF August 1999
+//============================================================
+INPUTS VCC, GND, I6, I5, I4, I3, I2, I1, I0, I7, I8;
+OUTPUTS VCC_LD, I6_LD, I5_LD, I4_LD, I3_LD, I2_LD,
+        I1_LD, I0_LD, I7_LD, I8_LD, SE, SO;
+INTEGERS count;
+REALS tt_val, tplh_SE, tphl_SE, tplh_SO, tphl_SO,
+      ril_val, rih_val, ricc_val;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.75,5.25);	//check for min supply=4.75 and max supply=5.25
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.25,1.35);	//set input threshold values: vil and vih
+IO_PAIRS(I6:I6_LD, I5:I5_LD, I4:I4_LD, I3:I3_LD, I2:I2_LD,
+         I1:I1_LD, I0:I0_LD, I7:I7_LD, I8:I8_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tI0\tI1\tI2\tI3\tI4\tI5\tI6\tI7\tI8\tSE\tSO");
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 2.5n,  NULL));
+
+	tplh_SE= (MIN_TYP_MAX(tp_param: 6.5n, 10n, 15n));
+	tphl_SE= (MIN_TYP_MAX(tp_param: 6.5n, 11n, 16n));
+    
+	tplh_SO= (MIN_TYP_MAX(tp_param: 6.5n, 10n, 15n));
+	tphl_SO= (MIN_TYP_MAX(tp_param: 6.5, 11n, 16n));
+	
+    //F std output drive IOL max=20mA @ vol=0.5V: rol_param=(0.5-vol_param)/20mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 15,  NULL));
+
+    //F std output drive IOH max=-1mA @ voh=4.5V: roh_param=(voh_param-4.5)/1mA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 100, NULL));
+
+    //F input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+    ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //F input load IIL=-20uA @ 0.5V: rih= (voh_param-0.5)/20uA
+    rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 205k));
+
+    //Icc: 192.3= 5V/26mA typical, 157.1= 5.5V/35mA max 
+    ricc_val= (MIN_TYP_MAX(i_param: NULL, 192.3, 157.1));
+
+	STATE SE SO = ONE;	//initialize output
+	EXIT;
+  END;
+
+DRIVE SE SO = (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD I6_LD I5_LD I4_LD I3_LD I2_LD I1_LD I0_LD I7_LD I8_LD =
+	 (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+
+count= (I8+I7+I6+I5+I4+I3+I2+I1+I0);
+IF ((count = 0) || (count = 2) ||
+    (count = 4) || (count = 6) || (count = 8)) THEN
+  BEGIN
+    STATE SE = ONE;
+	STATE SO = ZERO;
+  ELSE
+    STATE SE = ZERO;
+    STATE SO = ONE;
+  END;
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//       present_time,I0,I1,I2,I3,I4,I5,I6,I7,I8,SE,SO);
+
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+DELAY SE =
+  CASE (TRAN_LH) : tplh_SE
+  CASE (TRAN_HL) : tphl_SE
+END;
+
+DELAY SO =
+  CASE (TRAN_LH) : tplh_SO
+  CASE (TRAN_HL) : tphl_SO
+END;
+EXIT;

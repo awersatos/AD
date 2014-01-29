@@ -1,0 +1,13 @@
+[Plugin]
+Name=bsd_usb
+Description=Provide BSD Compatible USB Framework
+Caption=BSD USB Support
+SourceDir=services\bsd\bsd_usb\src
+GlobalCompileOption0=-I"$(SSASROOT)\services\bsd\bsd_usb\include"
+CompileOption0="-Wc--no-warnings=505,523,537,544,558,577"
+InitHandler=bsd_usb_init
+InitHandlerPriority=1
+Implement=bsd_usb
+Require0=bsd_system
+
+

@@ -1,0 +1,961 @@
+timestamp=1260919563016
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[arriaii_hssi_aux_clock_div]
+A/arriaii_hssi_aux_clock_div=22|./src/arriaii_hssi_atoms.v|39|1*550
+B/arriaii_hssi_aux_clock_div=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=321,627,1034,1198
+R=./src/arriaii_hssi_atoms.v|39
+
+[arriaii_hssi_aux_clock_mult]
+A/arriaii_hssi_aux_clock_mult=22|./src/arriaii_hssi_atoms.v|113|1*1681
+B/arriaii_hssi_aux_clock_mult=3*9378
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=501,1022,1710,2039
+R=./src/arriaii_hssi_atoms.v|113
+
+[arriaii_hssi_calibration_block]
+A/arriaii_hssi_calibration_block=22|./src/arriaii_hssi_atoms.v|86797|1*913915
+B/arriaii_hssi_calibration_block=3*11689016
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=697,1064,1294,1412
+R=./src/arriaii_hssi_atoms.v|86797
+
+[arriaii_hssi_clock_divider]
+A/arriaii_hssi_clock_divider=22|./src/arriaii_hssi_atoms.v|3989|1*48082
+B/arriaii_hssi_clock_divider=3*470540
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2562,4648,7168,8087
+R=./src/arriaii_hssi_atoms.v|3989
+
+[arriaii_hssi_cmu]
+A/arriaii_hssi_cmu=22|./src/arriaii_hssi_atoms.v|84624|1*893992
+B/arriaii_hssi_cmu=3*11544934
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_hssi_cmu=4*5353
+P/~emb=16588,24582,34021,39380
+R=./src/arriaii_hssi_atoms.v|84624
+
+[arriaii_hssi_cmu_auto_speed_neg]
+A/arriaii_hssi_cmu_auto_speed_neg=22|./src/arriaii_hssi_atoms.v|68290|1*758729
+B/arriaii_hssi_cmu_auto_speed_neg=3*9592378
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1682,2531,3412,3867
+R=./src/arriaii_hssi_atoms.v|68290
+
+[arriaii_hssi_cmu_chnl_reset]
+A/arriaii_hssi_cmu_chnl_reset=22|./src/arriaii_hssi_atoms.v|67942|1*755041
+B/arriaii_hssi_cmu_chnl_reset=3*9566923
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1637,2148,3025,3326
+R=./src/arriaii_hssi_atoms.v|67942
+
+[arriaii_hssi_cmu_clk_ctl]
+A/arriaii_hssi_cmu_clk_ctl=22|./src/arriaii_hssi_atoms.v|68718|1*761269
+B/arriaii_hssi_cmu_clk_ctl=3*9628976
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=877,1377,2005,2310
+R=./src/arriaii_hssi_atoms.v|68718
+
+[arriaii_hssi_cmu_clk_gating]
+A/arriaii_hssi_cmu_clk_gating=22|./src/arriaii_hssi_atoms.v|68697|1*760601
+B/arriaii_hssi_cmu_clk_gating=3*9627982
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=285,484,672,784
+R=./src/arriaii_hssi_atoms.v|68697
+
+[arriaii_hssi_cmu_dprio_16bit]
+A/arriaii_hssi_cmu_dprio_16bit=22|./src/arriaii_hssi_atoms.v|69822|1*772572
+B/arriaii_hssi_cmu_dprio_16bit=3*9694654
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=595,1017,1499,3401
+R=./src/arriaii_hssi_atoms.v|69822
+
+[arriaii_hssi_cmu_dprio_16bit_pma]
+A/arriaii_hssi_cmu_dprio_16bit_pma=22|./src/arriaii_hssi_atoms.v|70030|1*773849
+B/arriaii_hssi_cmu_dprio_16bit_pma=3*9696354
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=652,1094,1582,3666
+R=./src/arriaii_hssi_atoms.v|70030
+
+[arriaii_hssi_cmu_dprio_addr]
+A/arriaii_hssi_cmu_dprio_addr=22|./src/arriaii_hssi_atoms.v|73208|1*798020
+B/arriaii_hssi_cmu_dprio_addr=3*10145712
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=329,1081,3041,3447
+R=./src/arriaii_hssi_atoms.v|73208
+
+[arriaii_hssi_cmu_dprio_bit]
+A/arriaii_hssi_cmu_dprio_bit=22|./src/arriaii_hssi_atoms.v|69730|1*770786
+B/arriaii_hssi_cmu_dprio_bit=3*9687318
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=439,698,992,1096
+R=./src/arriaii_hssi_atoms.v|69730
+
+[arriaii_hssi_cmu_dprio_bit_pma]
+A/arriaii_hssi_cmu_dprio_bit_pma=22|./src/arriaii_hssi_atoms.v|69774|1*771661
+B/arriaii_hssi_cmu_dprio_bit_pma=3*9690852
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=496,775,1083,1190
+R=./src/arriaii_hssi_atoms.v|69774
+
+[arriaii_hssi_cmu_dprio_centrl_bus_out_mux]
+A/arriaii_hssi_cmu_dprio_centrl_bus_out_mux=22|./src/arriaii_hssi_atoms.v|75569|1*813389
+B/arriaii_hssi_cmu_dprio_centrl_bus_out_mux=3*10297229
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6177,6772,8446,9005
+R=./src/arriaii_hssi_atoms.v|75569
+
+[arriaii_hssi_cmu_dprio_centrl_top]
+A/arriaii_hssi_cmu_dprio_centrl_top=22|./src/arriaii_hssi_atoms.v|75752|1*814727
+B/arriaii_hssi_cmu_dprio_centrl_top=3*10349523
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=850,4376,11470,14287
+R=./src/arriaii_hssi_atoms.v|75752
+
+[arriaii_hssi_cmu_dprio_chnl_bus_out_mux]
+A/arriaii_hssi_cmu_dprio_chnl_bus_out_mux=22|./src/arriaii_hssi_atoms.v|71377|1*778780
+B/arriaii_hssi_cmu_dprio_chnl_bus_out_mux=3*9698232
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6867,7519,9471,10097
+R=./src/arriaii_hssi_atoms.v|71377
+
+[arriaii_hssi_cmu_dprio_chnl_top]
+A/arriaii_hssi_cmu_dprio_chnl_top=22|./src/arriaii_hssi_atoms.v|71582|1*780212
+B/arriaii_hssi_cmu_dprio_chnl_top=3*9759236
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=884,5386,13500,16682
+R=./src/arriaii_hssi_atoms.v|71582
+
+[arriaii_hssi_cmu_dprio_cnt]
+A/arriaii_hssi_cmu_dprio_cnt=22|./src/arriaii_hssi_atoms.v|73570|1*801666
+B/arriaii_hssi_cmu_dprio_cnt=3*10187512
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=277,807,1963,2280
+R=./src/arriaii_hssi_atoms.v|73570
+
+[arriaii_hssi_cmu_dprio_ctl_data]
+A/arriaii_hssi_cmu_dprio_ctl_data=22|./src/arriaii_hssi_atoms.v|73796|1*804045
+B/arriaii_hssi_cmu_dprio_ctl_data=3*10208991
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=768,1677,4447,4729
+R=./src/arriaii_hssi_atoms.v|73796
+
+[arriaii_hssi_cmu_dprio_map]
+A/arriaii_hssi_cmu_dprio_map=22|./src/arriaii_hssi_atoms.v|78671|1*838430
+B/arriaii_hssi_cmu_dprio_map=3*10843399
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9547,17853,47526,48716
+R=./src/arriaii_hssi_atoms.v|78671
+
+[arriaii_hssi_cmu_dprio_map_index]
+A/arriaii_hssi_cmu_dprio_map_index=22|./src/arriaii_hssi_atoms.v|76820|1*828107
+B/arriaii_hssi_cmu_dprio_map_index=3*10434493
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=13800,17059,31197,31948
+R=./src/arriaii_hssi_atoms.v|76820
+
+[arriaii_hssi_cmu_dprio_reg_centrl]
+A/arriaii_hssi_cmu_dprio_reg_centrl=22|./src/arriaii_hssi_atoms.v|74573|1*810041
+B/arriaii_hssi_cmu_dprio_reg_centrl=3*10297053
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9414,10692,13032,19722
+R=./src/arriaii_hssi_atoms.v|74573
+
+[arriaii_hssi_cmu_dprio_reg_chnl]
+A/arriaii_hssi_cmu_dprio_reg_chnl=22|./src/arriaii_hssi_atoms.v|70256|1*775162
+B/arriaii_hssi_cmu_dprio_reg_chnl=3*9698058
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=10344,11784,14505,22360
+R=./src/arriaii_hssi_atoms.v|70256
+
+[arriaii_hssi_cmu_dprio_sm]
+A/arriaii_hssi_cmu_dprio_sm=22|./src/arriaii_hssi_atoms.v|74246|1*808639
+B/arriaii_hssi_cmu_dprio_sm=3*10265743
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1079,1576,2136,2392
+R=./src/arriaii_hssi_atoms.v|74246
+
+[arriaii_hssi_cmu_dprio_status]
+A/arriaii_hssi_cmu_dprio_status=22|./src/arriaii_hssi_atoms.v|72800|1*796518
+B/arriaii_hssi_cmu_dprio_status=3*9879649
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1251,2061,4917,5356
+R=./src/arriaii_hssi_atoms.v|72800
+
+[arriaii_hssi_cmu_dprio_top]
+A/arriaii_hssi_cmu_dprio_top=22|./src/arriaii_hssi_atoms.v|83888|1*887707
+B/arriaii_hssi_cmu_dprio_top=3*11518671
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=8698,11000,14353,16673
+R=./src/arriaii_hssi_atoms.v|83888
+
+[arriaii_hssi_cmu_quad_reset]
+A/arriaii_hssi_cmu_quad_reset=22|./src/arriaii_hssi_atoms.v|68084|1*756653
+B/arriaii_hssi_cmu_quad_reset=3*9576658
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2104,2690,3888,4224
+R=./src/arriaii_hssi_atoms.v|68084
+
+[arriaii_hssi_cmu_rx_ctrl]
+A/arriaii_hssi_cmu_rx_ctrl=22|./src/arriaii_hssi_atoms.v|68829|1*762606
+B/arriaii_hssi_cmu_rx_ctrl=3*9636696
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=767,1240,1810,2086
+R=./src/arriaii_hssi_atoms.v|68829
+
+[arriaii_hssi_cmu_rxclk_ctl]
+A/arriaii_hssi_cmu_rxclk_ctl=22|./src/arriaii_hssi_atoms.v|69047|1*764597
+B/arriaii_hssi_cmu_rxclk_ctl=3*9646468
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1946,2742,4092,4536
+R=./src/arriaii_hssi_atoms.v|69047
+
+[arriaii_hssi_cmu_rxclk_gating]
+A/arriaii_hssi_cmu_rxclk_gating=22|./src/arriaii_hssi_atoms.v|69027|1*763927
+B/arriaii_hssi_cmu_rxclk_gating=3*9645472
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=289,490,678,790
+R=./src/arriaii_hssi_atoms.v|69027
+
+[arriaii_hssi_cmu_tx_ctrl]
+A/arriaii_hssi_cmu_tx_ctrl=22|./src/arriaii_hssi_atoms.v|69311|1*766832
+B/arriaii_hssi_cmu_tx_ctrl=3*9665527
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=799,1295,1859,2135
+R=./src/arriaii_hssi_atoms.v|69311
+
+[arriaii_hssi_cmu_txclk_ctl]
+A/arriaii_hssi_cmu_txclk_ctl=22|./src/arriaii_hssi_atoms.v|69523|1*768823
+B/arriaii_hssi_cmu_txclk_ctl=3*9675311
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1485,2182,3146,3525
+R=./src/arriaii_hssi_atoms.v|69523
+
+[arriaii_hssi_cmu_txclk_gating]
+A/arriaii_hssi_cmu_txclk_gating=22|./src/arriaii_hssi_atoms.v|69502|1*768153
+B/arriaii_hssi_cmu_txclk_gating=3*9674315
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=289,490,678,790
+R=./src/arriaii_hssi_atoms.v|69502
+
+[arriaii_hssi_digi_chnl_hip_spt]
+A/arriaii_hssi_digi_chnl_hip_spt=22|./src/arriaii_hssi_atoms.v|8825|1*126911
+B/arriaii_hssi_digi_chnl_hip_spt=3*1275386
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2276,2842,3931,4274
+R=./src/arriaii_hssi_atoms.v|8825
+
+[arriaii_hssi_dskw_sm]
+A/arriaii_hssi_dskw_sm=22|./src/arriaii_hssi_atoms.v|62488|1*690063
+B/arriaii_hssi_dskw_sm=3*8763681
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=552,1497,4198,5246
+R=./src/arriaii_hssi_atoms.v|62488
+
+[arriaii_hssi_pcs_reset]
+A/arriaii_hssi_pcs_reset=22|./src/arriaii_hssi_atoms.v|8764|1*126056
+B/arriaii_hssi_pcs_reset=3*1272164
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=422,678,966,1134
+R=./src/arriaii_hssi_atoms.v|8764
+
+[arriaii_hssi_phystatus_generator]
+A/arriaii_hssi_phystatus_generator=22|./src/arriaii_hssi_atoms.v|9396|1*130051
+B/arriaii_hssi_phystatus_generator=3*1302174
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1192,2055,3667,4337
+R=./src/arriaii_hssi_atoms.v|9396
+
+[arriaii_hssi_phystatus_generator_fsm]
+A/arriaii_hssi_phystatus_generator_fsm=22|./src/arriaii_hssi_atoms.v|9001|1*128478
+B/arriaii_hssi_phystatus_generator_fsm=3*1287973
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1042,1633,2409,2780
+R=./src/arriaii_hssi_atoms.v|9001
+
+[arriaii_hssi_pll]
+A/arriaii_hssi_pll=22|./src/arriaii_hssi_atoms.v|4509|1*53007
+B/arriaii_hssi_pll=3*519031
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_hssi_pll=4*0
+P/~emb=2926,6232,12016,13003
+R=./src/arriaii_hssi_atoms.v|4509
+
+[arriaii_hssi_pma_c_adce]
+A/arriaii_hssi_pma_c_adce=22|./src/arriaii_hssi_atoms.v|87004|1*91022
+B/arriaii_hssi_pma_c_adce=3*932631
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3439,9934,30482,47157
+R=./src/arriaii_hssi_atoms.v|87004
+
+[arriaii_hssi_pma_c_clkgenbuf]
+A/arriaii_hssi_pma_c_clkgenbuf=22|./src/arriaii_hssi_atoms.v|610|1*6360
+B/arriaii_hssi_pma_c_clkgenbuf=3*62439
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1346,2032,2803,3549
+R=./src/arriaii_hssi_atoms.v|610
+
+[arriaii_hssi_pma_c_clkgenbuf_cmu]
+A/arriaii_hssi_pma_c_clkgenbuf_cmu=22|./src/arriaii_hssi_atoms.v|722|1*9888
+B/arriaii_hssi_pma_c_clkgenbuf_cmu=3*80137
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1493,2059,2606,3373
+R=./src/arriaii_hssi_atoms.v|722
+
+[arriaii_hssi_pma_c_clkgenbuf_tx10g]
+A/arriaii_hssi_pma_c_clkgenbuf_tx10g=22|./src/arriaii_hssi_atoms.v|3938|1*47231
+B/arriaii_hssi_pma_c_clkgenbuf_tx10g=3*469731
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=531,823,1058,1313
+R=./src/arriaii_hssi_atoms.v|3938
+
+[arriaii_hssi_pma_c_clkgendrv]
+A/arriaii_hssi_pma_c_clkgendrv=22|./src/arriaii_hssi_atoms.v|506|1*5259
+B/arriaii_hssi_pma_c_clkgendrv=3*53423
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=644,987,1476,1679
+R=./src/arriaii_hssi_atoms.v|506
+
+[arriaii_hssi_pma_c_clkgendrv_tx10g]
+A/arriaii_hssi_pma_c_clkgendrv_tx10g=22|./src/arriaii_hssi_atoms.v|3903|1*46428
+B/arriaii_hssi_pma_c_clkgendrv_tx10g=3*469554
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=519,807,1011,1288
+R=./src/arriaii_hssi_atoms.v|3903
+
+[arriaii_hssi_pma_c_controller_4t16]
+A/arriaii_hssi_pma_c_controller_4t16=22|./src/arriaii_hssi_atoms.v|426|1*4056
+B/arriaii_hssi_pma_c_controller_4t16=3*42480
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=856,1343,1874,2027
+R=./src/arriaii_hssi_atoms.v|426
+
+[arriaii_hssi_pma_c_d2a_mbpass]
+A/arriaii_hssi_pma_c_d2a_mbpass=22|./src/arriaii_hssi_atoms.v|800|1*11233
+B/arriaii_hssi_pma_c_d2a_mbpass=3*80312
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=371,633,919,1021
+R=./src/arriaii_hssi_atoms.v|800
+
+[arriaii_hssi_pma_c_deser]
+A/arriaii_hssi_pma_c_deser=22|./src/arriaii_hssi_atoms.v|1224|1*17873
+B/arriaii_hssi_pma_c_deser=3*129568
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=906,1862,3142,3807
+R=./src/arriaii_hssi_atoms.v|1224
+
+[arriaii_hssi_pma_c_deser_10g]
+A/arriaii_hssi_pma_c_deser_10g=22|./src/arriaii_hssi_atoms.v|3555|1*44767
+B/arriaii_hssi_pma_c_deser_10g=3*426321
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=524,1026,1675,1932
+R=./src/arriaii_hssi_atoms.v|3555
+
+[arriaii_hssi_pma_c_deser_10to20]
+A/arriaii_hssi_pma_c_deser_10to20=22|./src/arriaii_hssi_atoms.v|1058|1*14654
+B/arriaii_hssi_pma_c_deser_10to20=3*107879
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=643,1027,1458,1699
+R=./src/arriaii_hssi_atoms.v|1058
+
+[arriaii_hssi_pma_c_deser_ff_chain]
+A/arriaii_hssi_pma_c_deser_ff_chain=22|./src/arriaii_hssi_atoms.v|1128|1*15934
+B/arriaii_hssi_pma_c_deser_ff_chain=3*117398
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=481,801,1248,1359
+R=./src/arriaii_hssi_atoms.v|1128
+
+[arriaii_hssi_pma_c_deser_fsd_rst]
+A/arriaii_hssi_pma_c_deser_fsd_rst=22|./src/arriaii_hssi_atoms.v|1190|1*17088
+B/arriaii_hssi_pma_c_deser_fsd_rst=3*127844
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=275,491,658,768
+R=./src/arriaii_hssi_atoms.v|1190
+
+[arriaii_hssi_pma_c_deser_pcie]
+A/arriaii_hssi_pma_c_deser_pcie=22|./src/arriaii_hssi_atoms.v|996|1*13600
+B/arriaii_hssi_pma_c_deser_pcie=3*99098
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=400,681,1026,1167
+R=./src/arriaii_hssi_atoms.v|996
+
+[arriaii_hssi_pma_c_div4or5_mcnt]
+A/arriaii_hssi_pma_c_div4or5_mcnt=22|./src/arriaii_hssi_atoms.v|1502|1*20666
+B/arriaii_hssi_pma_c_div4or5_mcnt=3*171917
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=362,610,914,1042
+R=./src/arriaii_hssi_atoms.v|1502
+
+[arriaii_hssi_pma_c_divby2q]
+A/arriaii_hssi_pma_c_divby2q=22|./src/arriaii_hssi_atoms.v|368|1*3293
+B/arriaii_hssi_pma_c_divby2q=3*39754
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=401,625,866,1025
+R=./src/arriaii_hssi_atoms.v|368
+
+[arriaii_hssi_pma_c_lockdet_tx18]
+A/arriaii_hssi_pma_c_lockdet_tx18=22|./src/arriaii_hssi_atoms.v|1546|1*21562
+B/arriaii_hssi_pma_c_lockdet_tx18=3*175272
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=454,705,960,1074
+R=./src/arriaii_hssi_atoms.v|1546
+
+[arriaii_hssi_pma_c_pcie_sw]
+A/arriaii_hssi_pma_c_pcie_sw=22|./src/arriaii_hssi_atoms.v|3797|1*8229
+B/arriaii_hssi_pma_c_pcie_sw=3*70823
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=998,1589,2352,2717
+R=./src/arriaii_hssi_atoms.v|3797
+
+[arriaii_hssi_pma_c_pfd]
+A/arriaii_hssi_pma_c_pfd=22|./src/arriaii_hssi_atoms.v|1576|1*22394
+B/arriaii_hssi_pma_c_pfd=3*176707
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=342,546,729,827
+R=./src/arriaii_hssi_atoms.v|1576
+
+[arriaii_hssi_pma_c_rcv_det_digital]
+A/arriaii_hssi_pma_c_rcv_det_digital=22|./src/arriaii_hssi_atoms.v|2543|1*36112
+B/arriaii_hssi_pma_c_rcv_det_digital=3*313511
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=507,825,996,1146
+R=./src/arriaii_hssi_atoms.v|2543
+
+[arriaii_hssi_pma_c_rcv_detect]
+A/arriaii_hssi_pma_c_rcv_detect=22|./src/arriaii_hssi_atoms.v|2562|1*36867
+B/arriaii_hssi_pma_c_rcv_detect=3*313688
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=635,1045,1334,1579
+R=./src/arriaii_hssi_atoms.v|2562
+
+[arriaii_hssi_pma_c_rcv_detect_clk_gen]
+A/arriaii_hssi_pma_c_rcv_detect_clk_gen=22|./src/arriaii_hssi_atoms.v|2407|1*32847
+B/arriaii_hssi_pma_c_rcv_detect_clk_gen=3*299764
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=222,460,627,818
+R=./src/arriaii_hssi_atoms.v|2407
+
+[arriaii_hssi_pma_c_rcv_detect_control]
+A/arriaii_hssi_pma_c_rcv_detect_control=22|./src/arriaii_hssi_atoms.v|2532|1*35370
+B/arriaii_hssi_pma_c_rcv_detect_control=3*313331
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=507,810,978,1134
+R=./src/arriaii_hssi_atoms.v|2532
+
+[arriaii_hssi_pma_c_rcv_detect_div_by_2]
+A/arriaii_hssi_pma_c_rcv_detect_div_by_2=22|./src/arriaii_hssi_atoms.v|2386|1*32072
+B/arriaii_hssi_pma_c_rcv_detect_div_by_2=3*298310
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=223,425,585,668
+R=./src/arriaii_hssi_atoms.v|2386
+
+[arriaii_hssi_pma_c_rcv_detect_fsm]
+A/arriaii_hssi_pma_c_rcv_detect_fsm=22|./src/arriaii_hssi_atoms.v|2446|1*34232
+B/arriaii_hssi_pma_c_rcv_detect_fsm=3*300833
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=613,985,1312,1457
+R=./src/arriaii_hssi_atoms.v|2446
+
+[arriaii_hssi_pma_c_rcv_detect_sync]
+A/arriaii_hssi_pma_c_rcv_detect_sync=22|./src/arriaii_hssi_atoms.v|2423|1*33541
+B/arriaii_hssi_pma_c_rcv_detect_sync=3*299944
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=262,464,614,729
+R=./src/arriaii_hssi_atoms.v|2423
+
+[arriaii_hssi_pma_c_rlpbk_ctrl]
+A/arriaii_hssi_pma_c_rlpbk_ctrl=22|./src/arriaii_hssi_atoms.v|1588|1*23073
+B/arriaii_hssi_pma_c_rlpbk_ctrl=3*177720
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=339,557,718,817
+R=./src/arriaii_hssi_atoms.v|1588
+
+[arriaii_hssi_pma_c_rlpbk_mux]
+A/arriaii_hssi_pma_c_rlpbk_mux=22|./src/arriaii_hssi_atoms.v|1612|1*23743
+B/arriaii_hssi_pma_c_rlpbk_mux=3*178364
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=791,1058,1418,1571
+R=./src/arriaii_hssi_atoms.v|1612
+
+[arriaii_hssi_pma_c_rx]
+A/arriaii_hssi_pma_c_rx=22|./src/arriaii_hssi_atoms.v|1655|1*24604
+B/arriaii_hssi_pma_c_rx=3*181388
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2752,3851,5448,5876
+R=./src/arriaii_hssi_atoms.v|1655
+
+[arriaii_hssi_pma_c_sdl_en_2x]
+A/arriaii_hssi_pma_c_sdl_en_2x=22|./src/arriaii_hssi_atoms.v|2352|1*31387
+B/arriaii_hssi_pma_c_sdl_en_2x=3*297427
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=340,549,737,875
+R=./src/arriaii_hssi_atoms.v|2352
+
+[arriaii_hssi_pma_c_ser]
+A/arriaii_hssi_pma_c_ser=22|./src/arriaii_hssi_atoms.v|2014|1*28578
+B/arriaii_hssi_pma_c_ser=3*224476
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1264,2073,3364,3967
+R=./src/arriaii_hssi_atoms.v|2014
+
+[arriaii_hssi_pma_c_ser_10g]
+A/arriaii_hssi_pma_c_ser_10g=22|./src/arriaii_hssi_atoms.v|3228|1*42420
+B/arriaii_hssi_pma_c_ser_10g=3*362154
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=927,1639,2675,3023
+R=./src/arriaii_hssi_atoms.v|3228
+
+[arriaii_hssi_pma_c_ser_20to10]
+A/arriaii_hssi_pma_c_ser_20to10=22|./src/arriaii_hssi_atoms.v|1927|1*27300
+B/arriaii_hssi_pma_c_ser_20to10=3*213378
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=608,1027,1503,1759
+R=./src/arriaii_hssi_atoms.v|1927
+
+[arriaii_hssi_pma_c_tx]
+A/arriaii_hssi_pma_c_tx=22|./src/arriaii_hssi_atoms.v|2604|1*37825
+B/arriaii_hssi_pma_c_tx=3*314905
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2676,4256,6150,6950
+R=./src/arriaii_hssi_atoms.v|2604
+
+[arriaii_hssi_pma_c_tx_clkmux_cmu]
+A/arriaii_hssi_pma_c_tx_clkmux_cmu=22|./src/arriaii_hssi_atoms.v|827|1*11999
+B/arriaii_hssi_pma_c_tx_clkmux_cmu=3*81897
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1597,2210,3143,3499
+R=./src/arriaii_hssi_atoms.v|827
+
+[arriaii_hssi_pma_ppmdetect]
+A/arriaii_hssi_pma_ppmdetect=22|./src/arriaii_hssi_atoms.v|2918|1*40729
+B/arriaii_hssi_pma_ppmdetect=3*342719
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=546,1208,2005,2305
+R=./src/arriaii_hssi_atoms.v|2918
+
+[arriaii_hssi_q_pipe_interface_top]
+A/arriaii_hssi_q_pipe_interface_top=22|./src/arriaii_hssi_atoms.v|11097|1*148152
+B/arriaii_hssi_q_pipe_interface_top=3*1497786
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2992,4026,5425,6846
+R=./src/arriaii_hssi_atoms.v|11097
+
+[arriaii_hssi_rcv_sm]
+A/arriaii_hssi_rcv_sm=22|./src/arriaii_hssi_atoms.v|65207|1*720715
+B/arriaii_hssi_rcv_sm=3*9133866
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=862,6174,21389,29262
+R=./src/arriaii_hssi_atoms.v|65207
+
+[arriaii_hssi_refclk_divider]
+A/arriaii_hssi_refclk_divider=22|./src/arriaii_hssi_atoms.v|86888|1*914842
+B/arriaii_hssi_refclk_divider=3*11689629
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_hssi_refclk_divider=4*5796
+P/~emb=507,948,1335,1535
+R=./src/arriaii_hssi_atoms.v|86888
+
+[arriaii_hssi_rx_digi]
+A/arriaii_hssi_rx_digi=22|./src/arriaii_hssi_atoms.v|56239|1*629170
+B/arriaii_hssi_rx_digi=3*8142292
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=15124,19802,24181,31841
+R=./src/arriaii_hssi_atoms.v|56239
+
+[arriaii_hssi_rx_digi_auto_speed_neg]
+A/arriaii_hssi_rx_digi_auto_speed_neg=22|./src/arriaii_hssi_atoms.v|25360|1*286420
+B/arriaii_hssi_rx_digi_auto_speed_neg=3*3088121
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1275,2778,7023,8377
+R=./src/arriaii_hssi_atoms.v|25360
+
+[arriaii_hssi_rx_digi_bist_ver]
+A/arriaii_hssi_rx_digi_bist_ver=22|./src/arriaii_hssi_atoms.v|26106|1*294698
+B/arriaii_hssi_rx_digi_bist_ver=3*3186225
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1033,6412,24487,35827
+R=./src/arriaii_hssi_atoms.v|26106
+
+[arriaii_hssi_rx_digi_cdr_ctrl]
+A/arriaii_hssi_rx_digi_cdr_ctrl=22|./src/arriaii_hssi_atoms.v|29063|1*333626
+B/arriaii_hssi_rx_digi_cdr_ctrl=3*3675040
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=990,2632,7090,8996
+R=./src/arriaii_hssi_atoms.v|29063
+
+[arriaii_hssi_rx_digi_comp_chnl_top]
+A/arriaii_hssi_rx_digi_comp_chnl_top=22|./src/arriaii_hssi_atoms.v|29997|1*343130
+B/arriaii_hssi_rx_digi_comp_chnl_top=3*3792351
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3721,14502,51223,63063
+R=./src/arriaii_hssi_atoms.v|29997
+
+[arriaii_hssi_rx_digi_dec_chnl_top]
+A/arriaii_hssi_rx_digi_dec_chnl_top=22|./src/arriaii_hssi_atoms.v|37915|1*419358
+B/arriaii_hssi_rx_digi_dec_chnl_top=3*4913389
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1103,3500,15658,16526
+R=./src/arriaii_hssi_atoms.v|37915
+
+[arriaii_hssi_rx_digi_dskw_fifo]
+A/arriaii_hssi_rx_digi_dskw_fifo=22|./src/arriaii_hssi_atoms.v|39149|1*433218
+B/arriaii_hssi_rx_digi_dskw_fifo=3*5129856
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=752,2811,8267,10306
+R=./src/arriaii_hssi_atoms.v|39149
+
+[arriaii_hssi_rx_digi_eii_module]
+A/arriaii_hssi_rx_digi_eii_module=22|./src/arriaii_hssi_atoms.v|42118|1*461906
+B/arriaii_hssi_rx_digi_eii_module=3*5489042
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1114,4020,13977,16738
+R=./src/arriaii_hssi_atoms.v|42118
+
+[arriaii_hssi_rx_digi_freqdet]
+A/arriaii_hssi_rx_digi_freqdet=22|./src/arriaii_hssi_atoms.v|40323|1*445123
+B/arriaii_hssi_rx_digi_freqdet=3*5293612
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=912,3646,11022,15484
+R=./src/arriaii_hssi_atoms.v|40323
+
+[arriaii_hssi_rx_digi_iq_pipe_rx]
+A/arriaii_hssi_rx_digi_iq_pipe_rx=22|./src/arriaii_hssi_atoms.v|44247|1*483343
+B/arriaii_hssi_rx_digi_iq_pipe_rx=3*5811232
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2266,3105,4960,5434
+R=./src/arriaii_hssi_atoms.v|44247
+
+[arriaii_hssi_rx_digi_pcs_channel_testbus]
+A/arriaii_hssi_rx_digi_pcs_channel_testbus=22|./src/arriaii_hssi_atoms.v|43810|1*477780
+B/arriaii_hssi_rx_digi_pcs_channel_testbus=3*5726295
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=875,1898,5913,6077
+R=./src/arriaii_hssi_atoms.v|43810
+
+[arriaii_hssi_rx_digi_prbs_ver]
+A/arriaii_hssi_rx_digi_prbs_ver=22|./src/arriaii_hssi_atoms.v|44618|1*486545
+B/arriaii_hssi_rx_digi_prbs_ver=3*5842708
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=974,4721,18405,24585
+R=./src/arriaii_hssi_atoms.v|44618
+
+[arriaii_hssi_rx_digi_rx_ctrl]
+A/arriaii_hssi_rx_digi_rx_ctrl=22|./src/arriaii_hssi_atoms.v|36285|1*412239
+B/arriaii_hssi_rx_digi_rx_ctrl=3*4770535
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=5085,7622,11689,13189
+R=./src/arriaii_hssi_atoms.v|36285
+
+[arriaii_hssi_rx_digi_rxclk_ctl]
+A/arriaii_hssi_rx_digi_rxclk_ctl=22|./src/arriaii_hssi_atoms.v|25069|1*284181
+B/arriaii_hssi_rx_digi_rxclk_ctl=3*3069070
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1954,2758,4104,4548
+R=./src/arriaii_hssi_atoms.v|25069
+
+[arriaii_hssi_rx_digi_wordalign]
+A/arriaii_hssi_rx_digi_wordalign=22|./src/arriaii_hssi_atoms.v|46727|1*513889
+B/arriaii_hssi_rx_digi_wordalign=3*6175175
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2863,18949,117167,138817
+R=./src/arriaii_hssi_atoms.v|46727
+
+[arriaii_hssi_rx_digis_ph_fifo]
+A/arriaii_hssi_rx_digis_ph_fifo=22|./src/arriaii_hssi_atoms.v|23941|1*276556
+B/arriaii_hssi_rx_digis_ph_fifo=3*2818859
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1291,2072,3105,3616
+R=./src/arriaii_hssi_atoms.v|23941
+
+[arriaii_hssi_rx_digis_ram16x14_syn]
+A/arriaii_hssi_rx_digis_ram16x14_syn=22|./src/arriaii_hssi_atoms.v|24336|1*279820
+B/arriaii_hssi_rx_digis_ram16x14_syn=3*2883139
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=594,1260,2118,2319
+R=./src/arriaii_hssi_atoms.v|24336
+
+[arriaii_hssi_rx_digis_ram20x16_syn]
+A/arriaii_hssi_rx_digis_ram20x16_syn=22|./src/arriaii_hssi_atoms.v|24589|1*281583
+B/arriaii_hssi_rx_digis_ram20x16_syn=3*2979086
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=536,1295,2267,2458
+R=./src/arriaii_hssi_atoms.v|24589
+
+[arriaii_hssi_rx_digis_ram8x70_syn]
+A/arriaii_hssi_rx_digis_ram8x70_syn=22|./src/arriaii_hssi_atoms.v|24898|1*278426
+B/arriaii_hssi_rx_digis_ram8x70_syn=3*2846085
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=435,930,1543,1720
+R=./src/arriaii_hssi_atoms.v|24898
+
+[arriaii_hssi_rx_digis_rxclk_gating]
+A/arriaii_hssi_rx_digis_rxclk_gating=22|./src/arriaii_hssi_atoms.v|25047|1*283490
+B/arriaii_hssi_rx_digis_rxclk_gating=3*3068069
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=299,505,693,805
+R=./src/arriaii_hssi_atoms.v|25047
+
+[arriaii_hssi_rx_pcs]
+A/arriaii_hssi_rx_pcs=22|./src/arriaii_hssi_atoms.v|58015|1*638777
+B/arriaii_hssi_rx_pcs=3*8144960
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_hssi_rx_pcs=4*2071
+P/~emb=14081,30726,55399,60850
+R=./src/arriaii_hssi_atoms.v|58015
+
+[arriaii_hssi_rx_pipe_interface]
+A/arriaii_hssi_rx_pipe_interface=22|./src/arriaii_hssi_atoms.v|9865|1*133574
+B/arriaii_hssi_rx_pipe_interface=3*1339267
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1110,3064,8140,10498
+R=./src/arriaii_hssi_atoms.v|9865
+
+[arriaii_hssi_rx_pma]
+A/arriaii_hssi_rx_pma=22|./src/arriaii_hssi_atoms.v|6873|1*74328
+B/arriaii_hssi_rx_pma=3*775830
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_hssi_rx_pma=4*402
+P/~emb=3263,8875,17520,20315
+R=./src/arriaii_hssi_atoms.v|6873
+
+[arriaii_hssi_tx_digi]
+A/arriaii_hssi_tx_digi=22|./src/arriaii_hssi_atoms.v|21515|1*251103
+B/arriaii_hssi_tx_digi=3*2559586
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6879,9242,11166,14626
+R=./src/arriaii_hssi_atoms.v|21515
+
+[arriaii_hssi_tx_digi_bist_gen]
+A/arriaii_hssi_tx_digi_bist_gen=22|./src/arriaii_hssi_atoms.v|13175|1*161579
+B/arriaii_hssi_tx_digi_bist_gen=3*1638477
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=587,5685,22027,33008
+R=./src/arriaii_hssi_atoms.v|13175
+
+[arriaii_hssi_tx_digi_enc_chnl_top]
+A/arriaii_hssi_tx_digi_enc_chnl_top=22|./src/arriaii_hssi_atoms.v|18125|1*218379
+B/arriaii_hssi_tx_digi_enc_chnl_top=3*2264931
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1843,6094,20063,32950
+R=./src/arriaii_hssi_atoms.v|18125
+
+[arriaii_hssi_tx_digi_iq_pipe_tx]
+A/arriaii_hssi_tx_digi_iq_pipe_tx=22|./src/arriaii_hssi_atoms.v|21262|1*248687
+B/arriaii_hssi_tx_digi_iq_pipe_tx=3*2537586
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1724,2405,3752,4146
+R=./src/arriaii_hssi_atoms.v|21262
+
+[arriaii_hssi_tx_digi_prbs_gen]
+A/arriaii_hssi_tx_digi_prbs_gen=22|./src/arriaii_hssi_atoms.v|16478|1*198395
+B/arriaii_hssi_tx_digi_prbs_gen=3*2060816
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=555,3231,11679,17210
+R=./src/arriaii_hssi_atoms.v|16478
+
+[arriaii_hssi_tx_digi_tx_ctrl]
+A/arriaii_hssi_tx_digi_tx_ctrl=22|./src/arriaii_hssi_atoms.v|12424|1*156700
+B/arriaii_hssi_tx_digi_tx_ctrl=3*1591852
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4482,6238,9568,10615
+R=./src/arriaii_hssi_atoms.v|12424
+
+[arriaii_hssi_tx_digi_txclk_ctl]
+A/arriaii_hssi_tx_digi_txclk_ctl=22|./src/arriaii_hssi_atoms.v|11690|1*151517
+B/arriaii_hssi_tx_digi_txclk_ctl=3*1515201
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1493,2198,3163,3541
+R=./src/arriaii_hssi_atoms.v|11690
+
+[arriaii_hssi_tx_digis_ph_fifo]
+A/arriaii_hssi_tx_digis_ph_fifo=22|./src/arriaii_hssi_atoms.v|12043|1*154878
+B/arriaii_hssi_tx_digis_ph_fifo=3*1564338
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1150,1906,2899,3386
+R=./src/arriaii_hssi_atoms.v|12043
+
+[arriaii_hssi_tx_digis_ram8x49_syn]
+A/arriaii_hssi_tx_digis_ram8x49_syn=22|./src/arriaii_hssi_atoms.v|11896|1*153484
+B/arriaii_hssi_tx_digis_ram8x49_syn=3*1527224
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=435,914,1524,1702
+R=./src/arriaii_hssi_atoms.v|11896
+
+[arriaii_hssi_tx_digis_txclk_gating]
+A/arriaii_hssi_tx_digis_txclk_gating=22|./src/arriaii_hssi_atoms.v|11663|1*150826
+B/arriaii_hssi_tx_digis_txclk_gating=3*1514200
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=299,505,693,805
+R=./src/arriaii_hssi_atoms.v|11663
+
+[arriaii_hssi_tx_pcs]
+A/arriaii_hssi_tx_pcs=22|./src/arriaii_hssi_atoms.v|22182|1*255782
+B/arriaii_hssi_tx_pcs=3*2562554
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_hssi_tx_pcs=4*645
+P/~emb=7640,14976,25675,28533
+R=./src/arriaii_hssi_atoms.v|22182
+
+[arriaii_hssi_tx_pipe_interface]
+A/arriaii_hssi_tx_pipe_interface=22|./src/arriaii_hssi_atoms.v|10688|1*143927
+B/arriaii_hssi_tx_pipe_interface=3*1452579
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1219,2097,4156,4842
+R=./src/arriaii_hssi_atoms.v|10688
+
+[arriaii_hssi_tx_pma]
+A/arriaii_hssi_tx_pma=22|./src/arriaii_hssi_atoms.v|5621|1*62882
+B/arriaii_hssi_tx_pma=3*660229
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_hssi_tx_pma=4*164
+P/~emb=3448,7510,13451,15516
+R=./src/arriaii_hssi_atoms.v|5621
+
+[arriaii_hssi_tx_sm]
+A/arriaii_hssi_tx_sm=22|./src/arriaii_hssi_atoms.v|63012|1*696150
+B/arriaii_hssi_tx_sm=3*8832130
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=679,4400,16860,23576
+R=./src/arriaii_hssi_atoms.v|63012
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, ARRIAII_HSSI VERILOG LIBRARY.
+LastVerilogToplevel=arriaii_hssi_refclk_divider
+ModifyID=843
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/arriaii_hssi_atoms.v=0*1041670*1804425
+
+[~MFT]
+0=118|0ovi_arriaii_hssi.mgf|1804425|0
+1=116|1ovi_arriaii_hssi.mgf|914842|0
+3=116|3ovi_arriaii_hssi.mgf|11689629|0
+4=6|4ovi_arriaii_hssi.mgf|5796|0
+
+[~U]
+$root=12|0*0|
+arriaii_hssi_aux_clock_div=12|0*1014||0x80
+arriaii_hssi_aux_clock_mult=12|0*2289||0x80
+arriaii_hssi_calibration_block=12|0*1039579||0x90
+arriaii_hssi_clock_divider=12|0*64092||0x90
+arriaii_hssi_cmu=12|0*1015384||0x90
+arriaii_hssi_cmu_auto_speed_neg=12|0*857949||0x80
+arriaii_hssi_cmu_chnl_reset=12|0*853717||0x80
+arriaii_hssi_cmu_clk_ctl=12|0*861881||0x80
+arriaii_hssi_cmu_clk_gating=12|0*861309||0x80
+arriaii_hssi_cmu_dprio_16bit=12|0*876064||0x80
+arriaii_hssi_cmu_dprio_16bit_pma=12|0*878029||0x80
+arriaii_hssi_cmu_dprio_addr=12|0*910088||0x80
+arriaii_hssi_cmu_dprio_bit=12|0*874230||0x80
+arriaii_hssi_cmu_dprio_bit_pma=12|0*875121||0x80
+arriaii_hssi_cmu_dprio_centrl_bus_out_mux=12|0*931149||0x80
+arriaii_hssi_cmu_dprio_centrl_top=12|0*933639||0x80
+arriaii_hssi_cmu_dprio_chnl_bus_out_mux=12|0*887200||0x80
+arriaii_hssi_cmu_dprio_chnl_top=12|0*890024||0x80
+arriaii_hssi_cmu_dprio_cnt=12|0*914052||0x80
+arriaii_hssi_cmu_dprio_ctl_data=12|0*916703||0x80
+arriaii_hssi_cmu_dprio_map=12|0*968286||0x80
+arriaii_hssi_cmu_dprio_map_index=12|0*947403||0x80
+arriaii_hssi_cmu_dprio_reg_centrl=12|0*924553||0x80
+arriaii_hssi_cmu_dprio_reg_chnl=12|0*880078||0x80
+arriaii_hssi_cmu_dprio_sm=12|0*922015||0x80
+arriaii_hssi_cmu_dprio_status=12|0*906890||0x80
+arriaii_hssi_cmu_dprio_top=12|0*1008923||0x80
+arriaii_hssi_cmu_quad_reset=12|0*855617||0x80
+arriaii_hssi_cmu_rx_ctrl=12|0*863602||0x80
+arriaii_hssi_cmu_rxclk_ctl=12|0*866089||0x80
+arriaii_hssi_cmu_rxclk_gating=12|0*865515||0x80
+arriaii_hssi_cmu_tx_ctrl=12|0*869236||0x80
+arriaii_hssi_cmu_txclk_ctl=12|0*871739||0x80
+arriaii_hssi_cmu_txclk_gating=12|0*871149||0x80
+arriaii_hssi_digi_chnl_hip_spt=12|0*165671||0x80
+arriaii_hssi_dskw_sm=12|0*793077||0x80
+arriaii_hssi_pcs_reset=12|0*164704||0x80
+arriaii_hssi_phystatus_generator=12|0*170571||0x80
+arriaii_hssi_phystatus_generator_fsm=12|0*167910||0x80
+arriaii_hssi_pll=12|0*70407||0x90
+arriaii_hssi_pma_c_adce=12|0*116918||0x80
+arriaii_hssi_pma_c_clkgenbuf=12|0*8888||0x80
+arriaii_hssi_pma_c_clkgenbuf_cmu=12|0*13488||0x80
+arriaii_hssi_pma_c_clkgenbuf_tx10g=12|0*63241||0x80
+arriaii_hssi_pma_c_clkgendrv=12|0*7355||0x80
+arriaii_hssi_pma_c_clkgendrv_tx10g=12|0*62390||0x80
+arriaii_hssi_pma_c_controller_4t16=12|0*5880||0x80
+arriaii_hssi_pma_c_d2a_mbpass=12|0*15297||0x90
+arriaii_hssi_pma_c_deser=12|0*22993||0x80
+arriaii_hssi_pma_c_deser_10g=12|0*59753||0x80
+arriaii_hssi_pma_c_deser_10to20=12|0*19806||0x80
+arriaii_hssi_pma_c_deser_ff_chain=12|0*21150||0x80
+arriaii_hssi_pma_c_deser_fsd_rst=12|0*22384||0x80
+arriaii_hssi_pma_c_deser_pcie=12|0*18704||0x80
+arriaii_hssi_pma_c_div4or5_mcnt=12|0*27162||0x90
+arriaii_hssi_pma_c_divby2q=12|0*5005||0x80
+arriaii_hssi_pma_c_lockdet_tx18=12|0*28154||0x90
+arriaii_hssi_pma_c_pcie_sw=12|0*11365||0x80
+arriaii_hssi_pma_c_pfd=12|0*28938||0x90
+arriaii_hssi_pma_c_rcv_det_digital=12|0*45708||0x80
+arriaii_hssi_pma_c_rcv_detect=12|0*46447||0x80
+arriaii_hssi_pma_c_rcv_detect_clk_gen=12|0*42299||0x80
+arriaii_hssi_pma_c_rcv_detect_control=12|0*44950||0x80
+arriaii_hssi_pma_c_rcv_detect_div_by_2=12|0*41684||0x80
+arriaii_hssi_pma_c_rcv_detect_fsm=12|0*43588||0x80
+arriaii_hssi_pma_c_rcv_detect_sync=12|0*42977||0x80
+arriaii_hssi_pma_c_rlpbk_ctrl=12|0*29537||0x90
+arriaii_hssi_pma_c_rlpbk_mux=12|0*30111||0x80
+arriaii_hssi_pma_c_rx=12|0*31004||0x80
+arriaii_hssi_pma_c_sdl_en_2x=12|0*41031||0x90
+arriaii_hssi_pma_c_ser=12|0*36784||0x80
+arriaii_hssi_pma_c_ser_10g=12|0*55886||0x80
+arriaii_hssi_pma_c_ser_20to10=12|0*35234||0x80
+arriaii_hssi_pma_c_tx=12|0*47501||0x80
+arriaii_hssi_pma_c_tx_clkmux_cmu=12|0*16095||0x80
+arriaii_hssi_pma_ppmdetect=12|0*52803||0x80
+arriaii_hssi_q_pipe_interface_top=12|0*189194||0x80
+arriaii_hssi_rcv_sm=12|0*824767||0x80
+arriaii_hssi_refclk_divider=12|0*1040426||0x90
+arriaii_hssi_rx_digi=12|0*723496||0x80
+arriaii_hssi_rx_digi_auto_speed_neg=12|0*341170||0x80
+arriaii_hssi_rx_digi_bist_ver=12|0*349638||0x80
+arriaii_hssi_rx_digi_cdr_ctrl=12|0*385910||0x80
+arriaii_hssi_rx_digi_comp_chnl_top=12|0*395460||0x80
+arriaii_hssi_rx_digi_dec_chnl_top=12|0*480168||0x80
+arriaii_hssi_rx_digi_dskw_fifo=12|0*502060||0x80
+arriaii_hssi_rx_digi_eii_module=12|0*530844||0x80
+arriaii_hssi_rx_digi_freqdet=12|0*513693||0x80
+arriaii_hssi_rx_digi_iq_pipe_rx=12|0*557847||0x80
+arriaii_hssi_rx_digi_pcs_channel_testbus=12|0*552398||0x80
+arriaii_hssi_rx_digi_prbs_ver=12|0*561975||0x80
+arriaii_hssi_rx_digi_rx_ctrl=12|0*463961||0x80
+arriaii_hssi_rx_digi_rxclk_ctl=12|0*338003||0x80
+arriaii_hssi_rx_digi_wordalign=12|0*590791||0x80
+arriaii_hssi_rx_digis_ph_fifo=12|0*325994||0x80
+arriaii_hssi_rx_digis_ram16x14_syn=12|0*331594||0x80
+arriaii_hssi_rx_digis_ram20x16_syn=12|0*334349||0x80
+arriaii_hssi_rx_digis_ram8x70_syn=12|0*329672||0x80
+arriaii_hssi_rx_digis_rxclk_gating=12|0*337408||0x80
+arriaii_hssi_rx_pcs=12|0*738399||0x90
+arriaii_hssi_rx_pipe_interface=12|0*174940||0x80
+arriaii_hssi_rx_pma=12|0*97216||0x90
+arriaii_hssi_tx_digi=12|0*294959||0x80
+arriaii_hssi_tx_digi_bist_gen=12|0*209883||0x80
+arriaii_hssi_tx_digi_enc_chnl_top=12|0*262539||0x80
+arriaii_hssi_tx_digi_iq_pipe_tx=12|0*291775||0x80
+arriaii_hssi_tx_digi_prbs_gen=12|0*243627||0x80
+arriaii_hssi_tx_digi_tx_ctrl=12|0*201726||0x80
+arriaii_hssi_tx_digi_txclk_ctl=12|0*193743||0x80
+arriaii_hssi_tx_digis_ph_fifo=12|0*198192||0x80
+arriaii_hssi_tx_digis_ram8x49_syn=12|0*196254||0x80
+arriaii_hssi_tx_digis_txclk_gating=12|0*193148||0x80
+arriaii_hssi_tx_pcs=12|0*301988||0x90
+arriaii_hssi_tx_pipe_interface=12|0*184475||0x80
+arriaii_hssi_tx_pma=12|0*83386||0x90
+arriaii_hssi_tx_sm=12|0*798810||0x80
+

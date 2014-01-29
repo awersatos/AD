@@ -1,0 +1,12 @@
+[Plugin]
+Name=sockfs
+Caption=Root File System
+Description=Posix file system interface for accessing sockets
+Implement=sockfs
+Require0=filesystem_require_sockfs
+SourceDir=services\posix\filesystem\sockfs\src
+GlobalCompileOption0=-I"$(SSASROOT)\services\posix\filesystem\sockfs\include"
+; Make sure this is run before any other filesystem
+InitHandler=sockfs_plugin_init
+InitHandlerPriority=5
+

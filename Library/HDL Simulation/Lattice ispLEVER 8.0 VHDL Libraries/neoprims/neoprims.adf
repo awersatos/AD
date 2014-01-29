@@ -1,0 +1,27 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=neoprims
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+neoprims=.
+
+[Library]
+neoprims=.\neoprims.LIB
+
+[Files]
+/neo_comp.vhd=-1
+/neoprims.vhd=-1
+/update_neoprims.do=-1
+
+[Files.Data]
+.\src\neo_comp.vhd=VHDL Source Code
+.\src\neoprims.vhd=VHDL Source Code
+.\src\update_neoprims.do=Macro
+

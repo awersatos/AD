@@ -1,0 +1,106 @@
+//============================================================
+# 74DM154 source
+//74DM154 1-of-16 decoder/demultiplexer
+// jjt 22/2/2001: copied and changed LS device 
+//                to match NSC June 1989 datasheet
+//checked out
+//jm 8-25-97: Added IO_PAIRS.
+//  Added io parameter to input LOAD.
+//  Removed v1 and r1 parameters from Vcc LOAD.
+//  Reduced ttlh_val/tthl_val to just tt_val.
+//  Changed assigned values of ril_val and ricc_val.
+//  Changed tp var names to match simcode standard conventions.
+// jjt 22/2/2001: copied 74LS154 from LS.txt and changed loading.
+//
+// ****************UNDER CONSTRUCTION****************************
+//
+//============================================================
+INPUTS VCC, GND, E1, E0, A3, A2, A1, A0;
+OUTPUTS VCC_LD, E1_LD, E0_LD, A3_LD, A2_LD, A1_LD, A0_LD,
+        Y15, Y14, Y13, Y12, Y11, Y10, Y9, Y8, Y7, Y6, Y5, Y4, Y3, Y2, Y1, Y0;
+INTEGERS tblIndex, enable;
+REALS tt_val, tplh_En_val, tphl_En_val, tplh_An_val, tphl_An_val,
+      ril_val, rih_val, ricc_val;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.75,5.25);	//check for min supply=4.75 and max supply=5.25
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.25,1.35);	//set input threshold values: vil and vih
+IO_PAIRS(E1:E1_LD, E0:E0_LD, A3:A3_LD, A2:A2_LD, A1:A1_LD, A0:A0_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tE1\tE0\tA3\tA2\tA1\tA0\tSEL\tY0\tY1\tY2\tY3\tY4\tY5\tY6\tY7\tY8\tY9\tY10\tY11\tY12\tY13\tY14\tY15");
+
+	tt_val= (MIN_TYP_MAX(tt_param: NULL, 5n, NULL));        //not found on datasheet. It is an estimate 
+                                                                //since the other propagation delays matched the LS device.
+
+    tplh_An_val= (MIN_TYP_MAX(tp_param: NULL, NULL, 36n));      //checked
+    tphl_An_val= (MIN_TYP_MAX(tp_param: NULL, NULL, 33n));      //checked
+ 
+    tplh_En_val= (MIN_TYP_MAX(tp_param: NULL, NULL, 30n));      //checked
+    tphl_En_val= (MIN_TYP_MAX(tp_param: NULL, NULL, 27n));      //checked
+
+	//Output drive: ROL_PARAM (MIN) IOL max=16mA @ vol_max=0.4V: rol_param(min)= Volmax/Iolmax = 0.4/16m = 25
+        //Output drive: ROL_PARAM (TYP) IOL max=16mA @ vol_typ=0.25V: rol_param(typ)= Volmax/Iolmax = 0.25/16m = 15.63
+    rol_param= (MIN_TYP_MAX(drv_param: 25, 15.625,  NULL));     //checked
+
+	//Output drive: ROH_PARAM (MIN) Iosmin=-18mA @ Vccmax=5.25: roh_param(min)=Vccmax/Iosmin = 291.67
+	//Output drive: ROH_PARAM (MAX) Iosmax=-57mA @ Vccmax=5.25: roh_param(max)=Vccmax/Iosmax = 92.11
+    roh_param= (MIN_TYP_MAX(drv_param: 291.67, NULL, 92.11));   //checked
+
+    //input load IIH=40uA @ VI=2.4V: ril=(2.4-vol_param)/40uA;
+	ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 50k));      //checked
+
+    //LS input load IIL=-1.6mA @ 0.4V: r1=(voh_param-0.4)/1.6mA 
+	rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 1.75k));    //checked
+
+	//1 device per package           
+	//Icc Typ: 5.0V/34mA = 147.06 ohms
+	//Icc Max: 5.25V/56mA = 93.75 ohms
+	ricc_val= (MIN_TYP_MAX(i_param: NULL, 147.06, 93.75));  //checked 
+
+    STATE Y15 Y14 Y13 Y12 Y11 Y10 Y9 Y8 Y7 Y6 Y5 Y4 Y3 Y2 Y1 Y0= ONE;
+	EXIT;
+  END;
+
+
+DRIVE Y15 Y14 Y13 Y12 Y11 Y10 Y9 Y8 Y7 Y6 Y5 Y4 Y3 Y2 Y1 Y0 =
+     (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD A3_LD A2_LD A1_LD A0_LD E1_LD E0_LD =
+     (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+
+TABLE tblIndex
+E0 E1 A3 A2 A1 A0   Y0  Y1  Y2  Y3  Y4  Y5  Y6  Y7  Y8  Y9  Y10 Y11 Y12 Y13 Y14 Y15
+X  1  X  X  X  X    H   H   H   H   H   H   H   H   H   H   H   H   H   H   H   H  
+1  X  X  X  X  X    H   H   H   H   H   H   H   H   H   H   H   H   H   H   H   H 
+0  0  0  0  0  0    L   H   H   H   H   H   H   H   H   H   H   H   H   H   H   H 
+0  0  0  0  0  1    H   L   H   H   H   H   H   H   H   H   H   H   H   H   H   H  
+0  0  0  0  1  0    H   H   L   H   H   H   H   H   H   H   H   H   H   H   H   H 
+0  0  0  0  1  1    H   H   H   L   H   H   H   H   H   H   H   H   H   H   H   H 
+0  0  0  1  0  0    H   H   H   H   L   H   H   H   H   H   H   H   H   H   H   H 
+0  0  0  1  0  1    H   H   H   H   H   L   H   H   H   H   H   H   H   H   H   H 
+0  0  0  1  1  0    H   H   H   H   H   H   L   H   H   H   H   H   H   H   H   H 
+0  0  0  1  1  1    H   H   H   H   H   H   H   L   H   H   H   H   H   H   H   H 
+0  0  1  0  0  0    H   H   H   H   H   H   H   H   L   H   H   H   H   H   H   H 
+0  0  1  0  0  1    H   H   H   H   H   H   H   H   H   L   H   H   H   H   H   H  
+0  0  1  0  1  0    H   H   H   H   H   H   H   H   H   H   L   H   H   H   H   H 
+0  0  1  0  1  1    H   H   H   H   H   H   H   H   H   H   H   L   H   H   H   H 
+0  0  1  1  0  0    H   H   H   H   H   H   H   H   H   H   H   H   L   H   H   H 
+0  0  1  1  0  1    H   H   H   H   H   H   H   H   H   H   H   H   H   L   H   H 
+0  0  1  1  1  0    H   H   H   H   H   H   H   H   H   H   H   H   H   H   L   H 
+0  0  1  1  1  1    H   H   H   H   H   H   H   H   H   H   H   H   H   H   H   L;
+
+enable= (NUMBER(A3 A2 A1 A0));
+//MESSAGE("%f\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//        present_time,E1,E0,A3,A2,A1,A0,enable,Y0,Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9,Y10,Y11,Y12,Y13,Y14,Y15);//debug
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+
+enable= (CHANGED(E1) || CHANGED(E0));
+DELAY Y15 Y14 Y13 Y12 Y11 Y10 Y9 Y8 Y7 Y6 Y5 Y4 Y3 Y2 Y1 Y0 =
+  CASE (enable && TRAN_LH) : tplh_En_val
+  CASE (enable && TRAN_HL) : tphl_En_val
+  CASE (TRAN_LH)		  : tplh_An_val
+  CASE (TRAN_HL)		  : tphl_An_val
+END;
+EXIT;

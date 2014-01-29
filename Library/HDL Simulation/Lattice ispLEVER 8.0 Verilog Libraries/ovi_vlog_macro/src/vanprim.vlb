@@ -1,0 +1,422 @@
+// -------------------------------------------------------------------- 
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<< 
+// -------------------------------------------------------------------- 
+// Copyright (c) 2001 by Lattice Semiconductor Corporation 
+// -------------------------------------------------------------------- 
+// 
+// 
+//                     Lattice Semiconductor Corporation 
+//                     5555 NE Moore Court 
+//                     Hillsboro, OR 97214 
+//                     U.S.A 
+// 
+//                     TEL: 1-800-Lattice (USA and Canada) 
+//                          408-826-6000 (other locations) 
+// 
+//                     web: http://www.latticesemi.com/ 
+//                     email: techsupport@latticesemi.com 
+// 
+// -------------------------------------------------------------------- 
+// 
+// Simulation Library File for CPLD macros 
+// 
+// -------------------------------------------------------------------- 
+// 
+// Revision History : 
+
+/*************************************************************************/
+/**     Prepared by Sunnyvale Applications Center                       **/
+/**     Rev. 1.0   ---   October 15, 1998                               **/
+/**                                                                     **/
+/*************************************************************************/
+
+
+`ifdef powerup_state
+`else
+   `define powerup_state 1'bx
+`endif
+
+
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module and16(I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16,O);
+input I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (I1 && I2 && I3 && I4 && I5 && I6 && I7 && I8 && I9 && I10 && I11 && I12 && I13 && I14 && I15 && I16);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module and6(I1,I2,I3,I4,I5,I6,O);
+input I1,I2,I3,I4,I5,I6;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (I1 && I2 && I3 && I4 && I5 && I6);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module and8(I1,I2,I3,I4,I5,I6,I7,I8,O);
+input I1,I2,I3,I4,I5,I6,I7,I8;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (I1 && I2 && I3 && I4 && I5 && I6 && I7 && I8);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module and12(I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,O);
+input I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (I1 && I2 && I3 && I4 && I5 && I6 && I7 && I8 && I9 && I10 && I11 && I12);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module nand16(I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16,O);
+input I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (!I16
+     || !I15
+     || !I14
+     || !I13
+     || !I12
+     || !I11
+     || !I10
+     || !I9
+     || !I8
+     || !I7
+     || !I6
+     || !I5
+     || !I4
+     || !I3
+     || !I2
+     || !I1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module nand6(I1,I2,I3,I4,I5,I6,O);
+input I1,I2,I3,I4,I5,I6;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (!I6
+     || !I5
+     || !I4
+     || !I3
+     || !I2
+     || !I1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module nand8(I1,I2,I3,I4,I5,I6,I7,I8,O);
+input I1,I2,I3,I4,I5,I6,I7,I8;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (!I8
+     || !I7
+     || !I6
+     || !I5
+     || !I4
+     || !I3
+     || !I2
+     || !I1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module nand12(I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,O);
+input I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (!I12
+     || !I11
+     || !I10
+     || !I9
+     || !I8
+     || !I7
+     || !I6
+     || !I5
+     || !I4
+     || !I3
+     || !I2
+     || !I1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module or12(I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,O);
+input I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (I12
+     || I11
+     || I10
+     || I9
+     || I8
+     || I7
+     || I6
+     || I5
+     || I4
+     || I3
+     || I2
+     || I1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module or16(I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16,O);
+input I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (I16
+     || I15
+     || I14
+     || I13
+     || I12
+     || I11
+     || I10
+     || I9
+     || I8
+     || I7
+     || I6
+     || I5
+     || I4
+     || I3
+     || I2
+     || I1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module or6(I1,I2,I3,I4,I5,I6,O);
+input I1,I2,I3,I4,I5,I6;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (I6
+     || I5
+     || I4
+     || I3
+     || I2
+     || I1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module or8(I1,I2,I3,I4,I5,I6,I7,I8,O);
+input I1,I2,I3,I4,I5,I6,I7,I8;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (I8
+     || I7
+     || I6
+     || I5
+     || I4
+     || I3
+     || I2
+     || I1);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module nor6(I1,I2,I3,I4,I5,I6,O);
+input I1,I2,I3,I4,I5,I6;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (!I1 && !I2 && !I3 && !I4 && !I5 && !I6);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module nor12(I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,O);
+input I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (!I1 && !I2 && !I3 && !I4 && !I5 && !I6 && !I7 && !I8 && !I9 && !I10 && !I11 && !I12);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module nor8(I1,I2,I3,I4,I5,I6,I7,I8,O);
+input I1,I2,I3,I4,I5,I6,I7,I8;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (!I1 && !I2 && !I3 && !I4 && !I5 && !I6 && !I7 && !I8);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module nor16(I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16,O);
+input I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16;
+output O;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign O = (!I1 && !I2 && !I3 && !I4 && !I5 && !I6 && !I7 && !I8 && !I9 && !I10 && !I11 && !I12 && !I13 && !I14 && !I15 && !I16);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module xor3(A0,A1,A2,Y);
+input A0,A1,A2;
+inout Y;
+wire Y_X1,Y_X2;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y_X1 = (A0 && !A1
+     || !A0 && A1);
+
+assign Y_X2 = (A2);
+
+xor(Y, Y_X1, Y_X2);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module xor4(A0,A1,A2,A3,Y);
+input A0,A1,A2,A3;
+output Y;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y = (A0 && !A1 && !A2 && !A3
+     || !A0 && A1 && !A2 && !A3
+     || !A0 && !A1 && A2 && !A3
+     || A0 && A1 && A2 && !A3
+     || !A0 && !A1 && !A2 && A3
+     || A0 && A1 && !A2 && A3
+     || A0 && !A1 && A2 && A3
+     || !A0 && A1 && A2 && A3);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module xnor3(A0,A1,A2,Y);
+input A0,A1,A2;
+inout Y;
+wire Y_X1,Y_X2;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y_X1 = (!A0 && !A1
+     || A0 && A1);
+
+assign Y_X2 = (A2);
+
+xor(Y, Y_X1, Y_X2);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module xnor4(A0,A1,A2,A3,Y);
+input A0,A1,A2,A3;
+inout Y;
+wire Y_X1,Y_X2;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Y_X1 = (!A0 && !A1 && !A2
+     || A0 && A1 && !A2
+     || A0 && !A1 && A2
+     || !A0 && A1 && A2);
+
+assign Y_X2 = (A3);
+
+xor(Y, Y_X1, Y_X2);
+
+endmodule
+//Open-ABEL to Verilog Translator
+`timescale 1ns /100ps
+module lat1l(D,LE,Q);
+input D,LE;
+inout Q;
+wire Q_D,Q_LE,Q_Q,Q_QB;
+supply0 GND;
+supply1 VCC;
+
+//Equations:
+
+assign Q_D = (D);
+
+assign Q_LE = (LE);
+
+lff_apar_p0 Q_ff(Q_Q, Q_QB,Q_D,Q_LE,GND,GND);
+
+bufif1 Q_buf(Q, Q_Q, VCC);
+
+endmodule

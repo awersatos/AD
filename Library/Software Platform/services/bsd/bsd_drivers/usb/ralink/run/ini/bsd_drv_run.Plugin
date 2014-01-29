@@ -1,0 +1,25 @@
+[Plugin]
+Name=bsd_drv_run
+Description=Ralink Technology RT2700U/RT2800U/RT3000U chipset driver
+Caption=Ralink run Driver
+SourceDir=services\bsd\bsd_drivers\usb\ralink\run\src
+GlobalCompileOption0=-I"$(SSASROOT)\services\bsd\bsd_drivers\usb\ralink\run\include"
+CompileOption0=-I"$(SSASROOT)\services\bsd\bsd_drivers\usb\ralink\microcode"
+CompileOption1="-Wc--no-warnings=505,507,523,525,537,542,556,558,560,577"
+InitHandler=bsd_drv_run_init
+InitHandlerPriority=1
+Implement=bsd_drv_run
+Require0=bsd_usb
+MinInstances=0
+
+[Option0]
+Name=usb_custom_device
+GUIName=Custom USB device tuple
+Description=Custom Ralink RT2700U/RT2800U/RT3000U based device tuple(VENDOR_ID, PRODUCT_ID).
+Kind=ARRAY
+Type=UINT16
+Size=2
+DefaultValue=0x0,0x0
+MinRange=0
+MaxRange=65535
+Auto=False  

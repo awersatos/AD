@@ -1,0 +1,476 @@
+Protel Design System Design Rule Check
+PCB File : E:\AD\MISK\USB-RS232\USB-RS232.PcbDoc
+Date     : 25.08.2013
+Time     : 23:31:53
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (Disabled)(InNet('GND')),(InNet('VCC +3.3'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (Disabled)((IsTrack  And IsNet)  And InRegion(3815,3770 ,4275 ,4280)),((IsTrack  And IsNet)  And InRegion(3815,3770 ,4275 ,4280))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (Disabled)(InNet('SPI_MISO/DO','SPI_MOSI/DI','GND','VCC','GDO2','GDO0','SPI_SS','SPI_SCK','NetC3_1','NetC2_1','GND','NetC1_2','NetANT1_1','NetR1_2')  And InRegion(3815,3770 ,4275 ,4280)),(InNet('SPI_MISO','SPI_MOSI','GND','VCC','GDO2','GDO0','SPI_SS','SPI_SCK','NetC3_1','NetC2_1','GND')  And InRegion(3815,3770 ,4275 ,4280))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (Disabled)(InComponent('U1') And IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.5mm) (InPolygon),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.3mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=5mm) (Preferred=0.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.3mm) (Air Gap=0.3mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InComponent('ANT1')),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.3mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+   Violation between Pad R4-1(70.2mm,72.4mm)  Top Layer and 
+                     Pad R3-2(70.2mm,73.6mm)  Top Layer
+   Violation between Pad X1-1(63.51mm,62.25mm)  Multi-Layer and 
+                     Pad X1-4(61.51mm,62.25mm)  Multi-Layer
+   Violation between Pad X1-2(63.51mm,64.75mm)  Multi-Layer and 
+                     Pad X1-3(61.51mm,64.75mm)  Multi-Layer
+   Violation between Pad C8-1(58.4mm,60.95mm)  Bottom Layer and 
+                     Pad X1-5(58.8mm,57.48mm)  Multi-Layer
+   Violation between Pad R1-1(53mm,71mm)  Bottom Layer and 
+                     Pad D1-1(53mm,72.63mm)  Multi-Layer
+   Violation between Pad R2-1(53mm,56.1mm)  Bottom Layer and 
+                     Pad D2-1(53mm,54.37mm)  Multi-Layer
+   Violation between Pad U1-16(78.025mm,74.65mm)  Bottom Layer and 
+                     Pad U1-15(77.375mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-17(78.675mm,74.65mm)  Bottom Layer and 
+                     Pad U1-16(78.025mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-18(79.325mm,74.65mm)  Bottom Layer and 
+                     Pad U1-17(78.675mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-19(79.975mm,74.65mm)  Bottom Layer and 
+                     Pad U1-18(79.325mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-20(80.625mm,74.65mm)  Bottom Layer and 
+                     Pad U1-19(79.975mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-21(81.275mm,74.65mm)  Bottom Layer and 
+                     Pad U1-20(80.625mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-22(81.925mm,74.65mm)  Bottom Layer and 
+                     Pad U1-21(81.275mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-23(82.575mm,74.65mm)  Bottom Layer and 
+                     Pad U1-22(81.925mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-24(83.225mm,74.65mm)  Bottom Layer and 
+                     Pad U1-23(82.575mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-25(83.875mm,74.65mm)  Bottom Layer and 
+                     Pad U1-24(83.225mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-26(84.525mm,74.65mm)  Bottom Layer and 
+                     Pad U1-25(83.875mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-27(85.175mm,74.65mm)  Bottom Layer and 
+                     Pad U1-26(84.525mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-28(85.825mm,74.65mm)  Bottom Layer and 
+                     Pad U1-27(85.175mm,74.65mm)  Bottom Layer
+   Violation between Pad U1-13(78.025mm,67.75mm)  Bottom Layer and 
+                     Pad U1-14(77.375mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-12(78.675mm,67.75mm)  Bottom Layer and 
+                     Pad U1-13(78.025mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-11(79.325mm,67.75mm)  Bottom Layer and 
+                     Pad U1-12(78.675mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-10(79.975mm,67.75mm)  Bottom Layer and 
+                     Pad U1-11(79.325mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-9(80.625mm,67.75mm)  Bottom Layer and 
+                     Pad U1-10(79.975mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-8(81.275mm,67.75mm)  Bottom Layer and 
+                     Pad U1-9(80.625mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-7(81.925mm,67.75mm)  Bottom Layer and 
+                     Pad U1-8(81.275mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-6(82.575mm,67.75mm)  Bottom Layer and 
+                     Pad U1-7(81.925mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-5(83.225mm,67.75mm)  Bottom Layer and 
+                     Pad U1-6(82.575mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-4(83.875mm,67.75mm)  Bottom Layer and 
+                     Pad U1-5(83.225mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-3(84.525mm,67.75mm)  Bottom Layer and 
+                     Pad U1-4(83.875mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-2(85.175mm,67.75mm)  Bottom Layer and 
+                     Pad U1-3(84.525mm,67.75mm)  Bottom Layer
+   Violation between Pad U1-1(85.825mm,67.75mm)  Bottom Layer and 
+                     Pad U1-2(85.175mm,67.75mm)  Bottom Layer
+   Violation between Pad C3-2(90.6mm,65.6mm)  Bottom Layer and 
+                     Pad C2-1(90.6mm,64.4mm)  Bottom Layer
+   Violation between Pad C8-2(58.4mm,62.45mm)  Bottom Layer and 
+                     Pad C8-1(58.4mm,60.95mm)  Bottom Layer
+   Violation between Via (91mm,57.4mm) Top Layer to Bottom Layer and 
+                     Via (91mm,58.9mm) Top Layer to Bottom Layer
+   Violation between Via (91mm,55.9mm) Top Layer to Bottom Layer and 
+                     Via (91mm,57.4mm) Top Layer to Bottom Layer
+Rule Violations :36
+
+Processing Rule : Silkscreen Over Component Pads (Clearance=0.254mm) (All),(All)
+   Violation between Pad D1-1(53mm,72.63mm)  Multi-Layer and 
+                     Arc (53mm,73.9mm)  Top Overlay
+   Violation between Pad D1-2(53mm,75.17mm)  Multi-Layer and 
+                     Arc (53mm,73.9mm)  Top Overlay
+   Violation between Pad D2-1(53mm,54.37mm)  Multi-Layer and 
+                     Arc (53mm,53.1mm)  Top Overlay
+   Violation between Pad D2-2(53mm,51.83mm)  Multi-Layer and 
+                     Arc (53mm,53.1mm)  Top Overlay
+   Violation between Track (68.525mm,71.3mm)(68.525mm,73.1mm)  Top Overlay and 
+                     Pad VD2-1(68.735mm,72.2mm)  Top Layer
+   Violation between Text "10" (68.168mm,70.184mm)  Top Overlay and 
+                     Pad VD2-1(68.735mm,72.2mm)  Top Layer
+   Violation between Text "P1" (66.961mm,73.041mm)  Top Overlay and 
+                     Pad VD2-1(68.735mm,72.2mm)  Top Layer
+   Violation between Track (65.675mm,71.3mm)(68.525mm,71.3mm)  Top Overlay and 
+                     Pad VD2-1(68.735mm,72.2mm)  Top Layer
+   Violation between Track (65.681mm,73.1mm)(68.525mm,73.1mm)  Top Overlay and 
+                     Pad VD2-1(68.735mm,72.2mm)  Top Layer
+   Violation between Track (65.675mm,71.3mm)(65.675mm,73.1mm)  Top Overlay and 
+                     Pad VD2-2(65.465mm,72.2mm)  Top Layer
+   Violation between Track (65.675mm,71.3mm)(68.525mm,71.3mm)  Top Overlay and 
+                     Pad VD2-2(65.465mm,72.2mm)  Top Layer
+   Violation between Track (65.681mm,73.1mm)(68.525mm,73.1mm)  Top Overlay and 
+                     Pad VD2-2(65.465mm,72.2mm)  Top Layer
+   Violation between Track (68.05mm,73.75mm)(68.05mm,76.55mm)  Top Overlay and 
+                     Pad VD1-1(67.4mm,76.1mm)  Top Layer
+   Violation between Track (68.05mm,76.55mm)(69.35mm,76.55mm)  Top Overlay and 
+                     Pad VD1-1(67.4mm,76.1mm)  Top Layer
+   Violation between Text "VD2" (65.166mm,73.903mm)  Top Overlay and 
+                     Pad VD1-1(67.4mm,76.1mm)  Top Layer
+   Violation between Track (68.05mm,73.75mm)(68.05mm,76.55mm)  Top Overlay and 
+                     Pad VD1-2(67.4mm,74.2mm)  Top Layer
+   Violation between Track (68.05mm,73.75mm)(69.35mm,73.75mm)  Top Overlay and 
+                     Pad VD1-2(67.4mm,74.2mm)  Top Layer
+   Violation between Text "P1" (66.961mm,73.041mm)  Top Overlay and 
+                     Pad VD1-2(67.4mm,74.2mm)  Top Layer
+   Violation between Text "VD2" (65.166mm,73.903mm)  Top Overlay and 
+                     Pad VD1-2(67.4mm,74.2mm)  Top Layer
+   Violation between Track (69.35mm,73.75mm)(69.35mm,76.55mm)  Top Overlay and 
+                     Pad VD1-3(69.95mm,75.15mm)  Top Layer
+   Violation between Text "R3" (69.895mm,74.954mm)  Top Overlay and 
+                     Pad VD1-3(69.95mm,75.15mm)  Top Layer
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Pad VD1-3(69.95mm,75.15mm)  Top Layer
+   Violation between Text "VD2" (65.166mm,73.903mm)  Top Overlay and 
+                     Pad VD1-3(69.95mm,75.15mm)  Top Layer
+   Violation between Track (72.1mm,73.05mm)(72.1mm,74.15mm)  Top Overlay and 
+                     Pad R3-1(71.6mm,73.6mm)  Top Layer
+   Violation between Track (69.7mm,73.05mm)(72.1mm,73.05mm)  Top Overlay and 
+                     Pad R3-1(71.6mm,73.6mm)  Top Layer
+   Violation between Track (69.7mm,74.15mm)(72.1mm,74.15mm)  Top Overlay and 
+                     Pad R3-1(71.6mm,73.6mm)  Top Layer
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Pad R3-1(71.6mm,73.6mm)  Top Layer
+   Violation between Track (69.65mm,72.9mm)(70.75mm,72.9mm)  Top Overlay and 
+                     Pad R3-2(70.2mm,73.6mm)  Top Layer
+   Violation between Track (69.65mm,70.5mm)(69.65mm,72.9mm)  Top Overlay and 
+                     Pad R3-2(70.2mm,73.6mm)  Top Layer
+   Violation between Track (70.75mm,70.5mm)(70.75mm,72.9mm)  Top Overlay and 
+                     Pad R3-2(70.2mm,73.6mm)  Top Layer
+   Violation between Track (69.7mm,73.05mm)(69.7mm,74.15mm)  Top Overlay and 
+                     Pad R3-2(70.2mm,73.6mm)  Top Layer
+   Violation between Track (69.7mm,73.05mm)(72.1mm,73.05mm)  Top Overlay and 
+                     Pad R3-2(70.2mm,73.6mm)  Top Layer
+   Violation between Track (69.7mm,74.15mm)(72.1mm,74.15mm)  Top Overlay and 
+                     Pad R3-2(70.2mm,73.6mm)  Top Layer
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Pad R3-2(70.2mm,73.6mm)  Top Layer
+   Violation between Track (69.65mm,72.9mm)(70.75mm,72.9mm)  Top Overlay and 
+                     Pad R4-1(70.2mm,72.4mm)  Top Layer
+   Violation between Track (69.65mm,70.5mm)(69.65mm,72.9mm)  Top Overlay and 
+                     Pad R4-1(70.2mm,72.4mm)  Top Layer
+   Violation between Track (70.75mm,70.5mm)(70.75mm,72.9mm)  Top Overlay and 
+                     Pad R4-1(70.2mm,72.4mm)  Top Layer
+   Violation between Track (69.7mm,73.05mm)(69.7mm,74.15mm)  Top Overlay and 
+                     Pad R4-1(70.2mm,72.4mm)  Top Layer
+   Violation between Track (69.7mm,73.05mm)(72.1mm,73.05mm)  Top Overlay and 
+                     Pad R4-1(70.2mm,72.4mm)  Top Layer
+   Violation between Track (69.65mm,70.5mm)(70.75mm,70.5mm)  Top Overlay and 
+                     Pad R4-2(70.2mm,71mm)  Top Layer
+   Violation between Track (69.65mm,70.5mm)(69.65mm,72.9mm)  Top Overlay and 
+                     Pad R4-2(70.2mm,71mm)  Top Layer
+   Violation between Track (70.75mm,70.5mm)(70.75mm,72.9mm)  Top Overlay and 
+                     Pad R4-2(70.2mm,71mm)  Top Layer
+   Violation between Text "9" (70.708mm,70.184mm)  Top Overlay and 
+                     Pad R4-2(70.2mm,71mm)  Top Layer
+   Violation between Track (71.47mm,57.23mm)(71.47mm,69.93mm)  Top Overlay and 
+                     Pad P1-9(70.2mm,68.66mm)  Multi-Layer
+   Violation between Track (71.47mm,57.23mm)(71.47mm,69.93mm)  Top Overlay and 
+                     Pad P1-7(70.2mm,66.12mm)  Multi-Layer
+   Violation between Track (71.47mm,57.23mm)(71.47mm,69.93mm)  Top Overlay and 
+                     Pad P1-5(70.2mm,63.58mm)  Multi-Layer
+   Violation between Track (71.47mm,57.23mm)(71.47mm,69.93mm)  Top Overlay and 
+                     Pad P1-3(70.2mm,61.04mm)  Multi-Layer
+   Violation between Track (71.47mm,57.865mm)(72.105mm,57.23mm)  Top Overlay and 
+                     Pad P1-1(70.2mm,58.5mm)  Multi-Layer
+   Violation between Track (71.47mm,57.23mm)(71.47mm,69.93mm)  Top Overlay and 
+                     Pad P1-1(70.2mm,58.5mm)  Multi-Layer
+   Violation between Track (64.5mm,57.5mm)(64.5mm,69.5mm)  Top Overlay and 
+                     Pad X1-2(63.51mm,64.75mm)  Multi-Layer
+   Violation between Track (64.5mm,57.5mm)(64.5mm,69.5mm)  Top Overlay and 
+                     Pad X1-1(63.51mm,62.25mm)  Multi-Layer
+   Violation between Track (55.3mm,57.5mm)(56.3mm,57.5mm)  Top Overlay and 
+                     Pad X1-5(58.8mm,57.48mm)  Multi-Layer
+   Violation between Track (61.3mm,57.5mm)(64.5mm,57.5mm)  Top Overlay and 
+                     Pad X1-5(58.8mm,57.48mm)  Multi-Layer
+   Violation between Track (55.3mm,69.5mm)(56.3mm,69.5mm)  Top Overlay and 
+                     Pad X1-5(58.8mm,69.52mm)  Multi-Layer
+   Violation between Track (61.3mm,69.5mm)(64.5mm,69.5mm)  Top Overlay and 
+                     Pad X1-5(58.8mm,69.52mm)  Multi-Layer
+   Violation between Text "R1" (53.34mm,72.312mm)  Bottom Overlay and 
+                     Pad D1-2(53mm,75.17mm)  Multi-Layer
+   Violation between Track (52.45mm,69.1mm)(52.45mm,71.5mm)  Bottom Overlay and 
+                     Pad D1-1(53mm,72.63mm)  Multi-Layer
+   Violation between Track (53.55mm,69.1mm)(53.55mm,71.5mm)  Bottom Overlay and 
+                     Pad D1-1(53mm,72.63mm)  Multi-Layer
+   Violation between Track (52.45mm,71.5mm)(53.55mm,71.5mm)  Bottom Overlay and 
+                     Pad D1-1(53mm,72.63mm)  Multi-Layer
+   Violation between Text "R1" (53.34mm,72.312mm)  Bottom Overlay and 
+                     Pad D1-1(53mm,72.63mm)  Multi-Layer
+   Violation between Track (52.45mm,55.6mm)(52.45mm,58mm)  Bottom Overlay and 
+                     Pad D2-1(53mm,54.37mm)  Multi-Layer
+   Violation between Track (53.55mm,55.6mm)(53.55mm,58mm)  Bottom Overlay and 
+                     Pad D2-1(53mm,54.37mm)  Multi-Layer
+   Violation between Track (52.45mm,55.6mm)(53.55mm,55.6mm)  Bottom Overlay and 
+                     Pad D2-1(53mm,54.37mm)  Multi-Layer
+   Violation between Track (73.4mm,72.05mm)(73.4mm,73.15mm)  Bottom Overlay and 
+                     Pad C1-1(73.9mm,72.6mm)  Bottom Layer
+   Violation between Track (73.4mm,72.05mm)(75.8mm,72.05mm)  Bottom Overlay and 
+                     Pad C1-1(73.9mm,72.6mm)  Bottom Layer
+   Violation between Track (73.4mm,73.15mm)(75.8mm,73.15mm)  Bottom Overlay and 
+                     Pad C1-1(73.9mm,72.6mm)  Bottom Layer
+   Violation between Track (75.8mm,72.05mm)(75.8mm,73.15mm)  Bottom Overlay and 
+                     Pad C1-2(75.3mm,72.6mm)  Bottom Layer
+   Violation between Track (73.4mm,72.05mm)(75.8mm,72.05mm)  Bottom Overlay and 
+                     Pad C1-2(75.3mm,72.6mm)  Bottom Layer
+   Violation between Track (73.4mm,73.15mm)(75.8mm,73.15mm)  Bottom Overlay and 
+                     Pad C1-2(75.3mm,72.6mm)  Bottom Layer
+   Violation between Track (90.55mm,51.5mm)(90.55mm,53.9mm)  Bottom Overlay and 
+                     Pad C6-1(91.1mm,53.4mm)  Bottom Layer
+   Violation between Track (91.65mm,51.5mm)(91.65mm,53.9mm)  Bottom Overlay and 
+                     Pad C6-1(91.1mm,53.4mm)  Bottom Layer
+   Violation between Track (90.55mm,53.9mm)(91.65mm,53.9mm)  Bottom Overlay and 
+                     Pad C6-1(91.1mm,53.4mm)  Bottom Layer
+   Violation between Track (90.55mm,51.5mm)(90.55mm,53.9mm)  Bottom Overlay and 
+                     Pad C6-2(91.1mm,52mm)  Bottom Layer
+   Violation between Track (91.65mm,51.5mm)(91.65mm,53.9mm)  Bottom Overlay and 
+                     Pad C6-2(91.1mm,52mm)  Bottom Layer
+   Violation between Track (90.55mm,51.5mm)(91.65mm,51.5mm)  Bottom Overlay and 
+                     Pad C6-2(91.1mm,52mm)  Bottom Layer
+   Violation between Track (87.4mm,50.15mm)(89.8mm,50.15mm)  Bottom Overlay and 
+                     Pad C5-1(87.9mm,50.7mm)  Bottom Layer
+   Violation between Track (87.4mm,51.25mm)(89.8mm,51.25mm)  Bottom Overlay and 
+                     Pad C5-1(87.9mm,50.7mm)  Bottom Layer
+   Violation between Track (87.4mm,50.15mm)(87.4mm,51.25mm)  Bottom Overlay and 
+                     Pad C5-1(87.9mm,50.7mm)  Bottom Layer
+   Violation between Track (89.8mm,50.15mm)(89.8mm,51.25mm)  Bottom Overlay and 
+                     Pad C5-2(89.3mm,50.7mm)  Bottom Layer
+   Violation between Track (87.4mm,50.15mm)(89.8mm,50.15mm)  Bottom Overlay and 
+                     Pad C5-2(89.3mm,50.7mm)  Bottom Layer
+   Violation between Track (87.4mm,51.25mm)(89.8mm,51.25mm)  Bottom Overlay and 
+                     Pad C5-2(89.3mm,50.7mm)  Bottom Layer
+   Violation between Text "C5" (89.585mm,52.073mm)  Bottom Overlay and 
+                     Pad U2-15(86.645mm,52.925mm)  Bottom Layer
+   Violation between Text "C5" (89.585mm,52.073mm)  Bottom Overlay and 
+                     Pad U2-14(87.915mm,52.925mm)  Bottom Layer
+   Violation between Text "C5" (89.585mm,52.073mm)  Bottom Overlay and 
+                     Pad U2-13(89.185mm,52.925mm)  Bottom Layer
+   Violation between Track (52.45mm,69.1mm)(52.45mm,71.5mm)  Bottom Overlay and 
+                     Pad R1-1(53mm,71mm)  Bottom Layer
+   Violation between Track (53.55mm,69.1mm)(53.55mm,71.5mm)  Bottom Overlay and 
+                     Pad R1-1(53mm,71mm)  Bottom Layer
+   Violation between Track (52.45mm,71.5mm)(53.55mm,71.5mm)  Bottom Overlay and 
+                     Pad R1-1(53mm,71mm)  Bottom Layer
+   Violation between Track (52.45mm,69.1mm)(52.45mm,71.5mm)  Bottom Overlay and 
+                     Pad R1-2(53mm,69.6mm)  Bottom Layer
+   Violation between Track (53.55mm,69.1mm)(53.55mm,71.5mm)  Bottom Overlay and 
+                     Pad R1-2(53mm,69.6mm)  Bottom Layer
+   Violation between Track (52.45mm,69.1mm)(53.55mm,69.1mm)  Bottom Overlay and 
+                     Pad R1-2(53mm,69.6mm)  Bottom Layer
+   Violation between Track (52.45mm,55.6mm)(52.45mm,58mm)  Bottom Overlay and 
+                     Pad R2-1(53mm,56.1mm)  Bottom Layer
+   Violation between Track (53.55mm,55.6mm)(53.55mm,58mm)  Bottom Overlay and 
+                     Pad R2-1(53mm,56.1mm)  Bottom Layer
+   Violation between Track (52.45mm,55.6mm)(53.55mm,55.6mm)  Bottom Overlay and 
+                     Pad R2-1(53mm,56.1mm)  Bottom Layer
+   Violation between Track (52.45mm,55.6mm)(52.45mm,58mm)  Bottom Overlay and 
+                     Pad R2-2(53mm,57.5mm)  Bottom Layer
+   Violation between Track (53.55mm,55.6mm)(53.55mm,58mm)  Bottom Overlay and 
+                     Pad R2-2(53mm,57.5mm)  Bottom Layer
+   Violation between Track (52.45mm,58mm)(53.55mm,58mm)  Bottom Overlay and 
+                     Pad R2-2(53mm,57.5mm)  Bottom Layer
+   Violation between Track (90.05mm,64.9mm)(91.15mm,64.9mm)  Bottom Overlay and 
+                     Pad C2-1(90.6mm,64.4mm)  Bottom Layer
+   Violation between Track (90.05mm,65.1mm)(91.15mm,65.1mm)  Bottom Overlay and 
+                     Pad C2-1(90.6mm,64.4mm)  Bottom Layer
+   Violation between Track (91.15mm,62.5mm)(91.15mm,64.9mm)  Bottom Overlay and 
+                     Pad C2-1(90.6mm,64.4mm)  Bottom Layer
+   Violation between Track (90.05mm,62.5mm)(90.05mm,64.9mm)  Bottom Overlay and 
+                     Pad C2-1(90.6mm,64.4mm)  Bottom Layer
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Pad C2-1(90.6mm,64.4mm)  Bottom Layer
+   Violation between Track (90.05mm,62.5mm)(91.15mm,62.5mm)  Bottom Overlay and 
+                     Pad C2-2(90.6mm,63mm)  Bottom Layer
+   Violation between Track (91.15mm,62.5mm)(91.15mm,64.9mm)  Bottom Overlay and 
+                     Pad C2-2(90.6mm,63mm)  Bottom Layer
+   Violation between Track (90.05mm,62.5mm)(90.05mm,64.9mm)  Bottom Overlay and 
+                     Pad C2-2(90.6mm,63mm)  Bottom Layer
+   Violation between Track (89.7mm,64.25mm)(89.7mm,65.35mm)  Bottom Overlay and 
+                     Pad C4-1(89.2mm,64.8mm)  Bottom Layer
+   Violation between Track (87.3mm,64.25mm)(89.7mm,64.25mm)  Bottom Overlay and 
+                     Pad C4-1(89.2mm,64.8mm)  Bottom Layer
+   Violation between Track (87.3mm,65.35mm)(89.7mm,65.35mm)  Bottom Overlay and 
+                     Pad C4-1(89.2mm,64.8mm)  Bottom Layer
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Pad C4-1(89.2mm,64.8mm)  Bottom Layer
+   Violation between Track (87.3mm,64.25mm)(87.3mm,65.35mm)  Bottom Overlay and 
+                     Pad C4-2(87.8mm,64.8mm)  Bottom Layer
+   Violation between Track (87.3mm,64.25mm)(89.7mm,64.25mm)  Bottom Overlay and 
+                     Pad C4-2(87.8mm,64.8mm)  Bottom Layer
+   Violation between Track (87.3mm,65.35mm)(89.7mm,65.35mm)  Bottom Overlay and 
+                     Pad C4-2(87.8mm,64.8mm)  Bottom Layer
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Pad C4-2(87.8mm,64.8mm)  Bottom Layer
+   Violation between Track (56.05mm,60.3mm)(56.05mm,62.7mm)  Bottom Overlay and 
+                     Pad C7-1(56.6mm,60.8mm)  Bottom Layer
+   Violation between Track (57.15mm,60.3mm)(57.15mm,62.7mm)  Bottom Overlay and 
+                     Pad C7-1(56.6mm,60.8mm)  Bottom Layer
+   Violation between Track (56.05mm,60.3mm)(57.15mm,60.3mm)  Bottom Overlay and 
+                     Pad C7-1(56.6mm,60.8mm)  Bottom Layer
+   Violation between Track (56.05mm,60.3mm)(56.05mm,62.7mm)  Bottom Overlay and 
+                     Pad C7-2(56.6mm,62.2mm)  Bottom Layer
+   Violation between Track (57.15mm,60.3mm)(57.15mm,62.7mm)  Bottom Overlay and 
+                     Pad C7-2(56.6mm,62.2mm)  Bottom Layer
+   Violation between Track (56.05mm,62.7mm)(57.15mm,62.7mm)  Bottom Overlay and 
+                     Pad C7-2(56.6mm,62.2mm)  Bottom Layer
+   Violation between Track (90.05mm,67.5mm)(91.15mm,67.5mm)  Bottom Overlay and 
+                     Pad C3-1(90.6mm,67mm)  Bottom Layer
+   Violation between Track (91.15mm,65.1mm)(91.15mm,67.5mm)  Bottom Overlay and 
+                     Pad C3-1(90.6mm,67mm)  Bottom Layer
+   Violation between Track (90.05mm,65.1mm)(90.05mm,67.5mm)  Bottom Overlay and 
+                     Pad C3-1(90.6mm,67mm)  Bottom Layer
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Pad C3-1(90.6mm,67mm)  Bottom Layer
+   Violation between Text "C2" (91.194mm,65.905mm)  Bottom Overlay and 
+                     Pad C3-1(90.6mm,67mm)  Bottom Layer
+   Violation between Track (90.05mm,64.9mm)(91.15mm,64.9mm)  Bottom Overlay and 
+                     Pad C3-2(90.6mm,65.6mm)  Bottom Layer
+   Violation between Track (90.05mm,65.1mm)(91.15mm,65.1mm)  Bottom Overlay and 
+                     Pad C3-2(90.6mm,65.6mm)  Bottom Layer
+   Violation between Track (91.15mm,65.1mm)(91.15mm,67.5mm)  Bottom Overlay and 
+                     Pad C3-2(90.6mm,65.6mm)  Bottom Layer
+   Violation between Track (90.05mm,65.1mm)(90.05mm,67.5mm)  Bottom Overlay and 
+                     Pad C3-2(90.6mm,65.6mm)  Bottom Layer
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Pad C3-2(90.6mm,65.6mm)  Bottom Layer
+   Violation between Text "C2" (91.194mm,65.905mm)  Bottom Overlay and 
+                     Pad C3-2(90.6mm,65.6mm)  Bottom Layer
+Rule Violations :129
+
+Processing Rule : Silk to Silk (Clearance=0.3mm) (All),(All)
+   Violation between Text "X1" (48.702mm,72.136mm)  Top Overlay and 
+                     Arc (53mm,73.9mm)  Top Overlay
+   Violation between Text "P1" (66.961mm,73.041mm)  Top Overlay and 
+                     Track (65.681mm,73.1mm)(68.525mm,73.1mm)  Top Overlay
+   Violation between Text "10" (68.168mm,70.184mm)  Top Overlay and 
+                     Track (65.675mm,71.3mm)(68.525mm,71.3mm)  Top Overlay
+   Violation between Text "10" (68.168mm,70.184mm)  Top Overlay and 
+                     Track (68.525mm,71.3mm)(68.525mm,73.1mm)  Top Overlay
+   Violation between Text "P1" (66.961mm,73.041mm)  Top Overlay and 
+                     Track (68.525mm,71.3mm)(68.525mm,73.1mm)  Top Overlay
+   Violation between Text "10" (68.168mm,70.184mm)  Top Overlay and 
+                     Track (67.75mm,71.3mm)(67.75mm,73.1mm)  Top Overlay
+   Violation between Text "P1" (66.961mm,73.041mm)  Top Overlay and 
+                     Track (67.75mm,71.3mm)(67.75mm,73.1mm)  Top Overlay
+   Violation between Text "P1" (66.961mm,73.041mm)  Top Overlay and 
+                     Track (68.05mm,73.75mm)(68.05mm,76.55mm)  Top Overlay
+   Violation between Text "VD2" (65.166mm,73.903mm)  Top Overlay and 
+                     Track (68.05mm,73.75mm)(68.05mm,76.55mm)  Top Overlay
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Track (69.35mm,73.75mm)(69.35mm,76.55mm)  Top Overlay
+   Violation between Text "VD2" (65.166mm,73.903mm)  Top Overlay and 
+                     Track (69.35mm,73.75mm)(69.35mm,76.55mm)  Top Overlay
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Track (68.05mm,73.75mm)(69.35mm,73.75mm)  Top Overlay
+   Violation between Text "P1" (66.961mm,73.041mm)  Top Overlay and 
+                     Track (68.05mm,73.75mm)(69.35mm,73.75mm)  Top Overlay
+   Violation between Text "VD2" (65.166mm,73.903mm)  Top Overlay and 
+                     Track (68.05mm,73.75mm)(69.35mm,73.75mm)  Top Overlay
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Track (69.7mm,74.15mm)(72.1mm,74.15mm)  Top Overlay
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Track (72.1mm,73.05mm)(72.1mm,74.15mm)  Top Overlay
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Track (69.7mm,73.05mm)(69.7mm,74.15mm)  Top Overlay
+   Violation between Text "VD2" (65.166mm,73.903mm)  Top Overlay and 
+                     Track (69.7mm,73.05mm)(69.7mm,74.15mm)  Top Overlay
+   Violation between Text "9" (70.708mm,70.184mm)  Top Overlay and 
+                     Track (70.75mm,70.5mm)(70.75mm,72.9mm)  Top Overlay
+   Violation between Text "9" (70.708mm,70.184mm)  Top Overlay and 
+                     Track (69.65mm,70.5mm)(69.65mm,72.9mm)  Top Overlay
+   Violation between Text "9" (70.708mm,70.184mm)  Top Overlay and 
+                     Track (69.65mm,70.5mm)(70.75mm,70.5mm)  Top Overlay
+   Violation between Text "C6" (91.442mm,54.708mm)  Bottom Overlay and 
+                     Track (74.4mm,54.5mm)(90mm,54.5mm)  Bottom Overlay
+   Violation between Text "C6" (91.442mm,54.708mm)  Bottom Overlay and 
+                     Track (90mm,54.5mm)(90mm,61.1mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Track (90.05mm,62.5mm)(90.05mm,64.9mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Track (90.05mm,64.9mm)(91.15mm,64.9mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Track (87.3mm,65.35mm)(89.7mm,65.35mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Track (89.7mm,64.25mm)(89.7mm,65.35mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Track (87.3mm,64.25mm)(87.3mm,65.35mm)  Bottom Overlay
+   Violation between Text "C4" (89.698mm,66.413mm)  Bottom Overlay and 
+                     Track (90.05mm,65.1mm)(90.05mm,67.5mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Track (90.05mm,65.1mm)(90.05mm,67.5mm)  Bottom Overlay
+   Violation between Text "C2" (91.194mm,65.905mm)  Bottom Overlay and 
+                     Track (90.05mm,65.1mm)(90.05mm,67.5mm)  Bottom Overlay
+   Violation between Text "C2" (91.194mm,65.905mm)  Bottom Overlay and 
+                     Track (91.15mm,65.1mm)(91.15mm,67.5mm)  Bottom Overlay
+   Violation between Text "C4" (89.698mm,66.413mm)  Bottom Overlay and 
+                     Track (90.05mm,67.5mm)(91.15mm,67.5mm)  Bottom Overlay
+   Violation between Text "C2" (91.194mm,65.905mm)  Bottom Overlay and 
+                     Track (90.05mm,67.5mm)(91.15mm,67.5mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Track (90.05mm,65.1mm)(91.15mm,65.1mm)  Bottom Overlay
+   Violation between Text "VD2" (65.166mm,73.903mm)  Top Overlay and 
+                     Text "P1" (66.961mm,73.041mm)  Top Overlay
+   Violation between Text "R4" (69.86mm,73.702mm)  Top Overlay and 
+                     Text "R3" (69.895mm,74.954mm)  Top Overlay
+   Violation between Text "C4" (89.698mm,66.413mm)  Bottom Overlay and 
+                     Text "C2" (91.194mm,65.905mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Text "C2" (91.194mm,65.905mm)  Bottom Overlay
+   Violation between Text "C4" (89.698mm,66.413mm)  Bottom Overlay and 
+                     Text "C3" (90.938mm,68.312mm)  Bottom Overlay
+   Violation between Text "U2" (90.043mm,64.904mm)  Bottom Overlay and 
+                     Text "C4" (89.698mm,66.413mm)  Bottom Overlay
+   Violation between Text "C8" (59.003mm,63.911mm)  Bottom Overlay and 
+                     Text "C7" (56.939mm,63.511mm)  Bottom Overlay
+Rule Violations :42
+
+Processing Rule : Net Antennae (Tolerance=50mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 207
+Time Elapsed        : 00:00:04

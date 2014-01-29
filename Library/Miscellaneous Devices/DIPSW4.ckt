@@ -1,0 +1,25 @@
+* DIP switch 4
+* jjt 20/6/2002: created
+*
+*             Switch connections:
+*             sw1
+*             |  |  sw2
+*             |  |  |  |  sw3
+*             |  |  |  |  |  |   sw4
+*             |  |  |  |  |  |  |   |
+*             |  |  |  |  |  |  |   |
+.subckt dpsw4 1  2  4  5  7  8  10  11
++ PARAMS: STATE1=0 STATE2=0 STATE3=0 STATE4=0 RON=1m ROFF=100E6
+*
+V1 3  0 {STATE1}
+V2 6  0 {STATE2}
+V3 9  0 {STATE3}
+V4 12 0 {STATE4}
+*
+SDIP1 1  2  3  0 DIPMOD
+SDIP2 4  5  6  0 DIPMOD
+SDIP3 7  8  9  0 DIPMOD
+SDIP4 10 11 12 0 DIPMOD
+*
+.MODEL DIPMOD SW(VT=0.5 RON={RON} ROFF={ROFF})
+.ends dpsw4

@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=axcelerator
+
+[Library]
+axcelerator=.\axcelerator.LIB
+
+[$LibMap$]
+axcelerator=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/axcelerator.vhd=-1
+/update_axcelerator.do=-1
+
+[Files.Data]
+.\src\axcelerator.vhd=VHDL Source Code
+.\src\update_axcelerator.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

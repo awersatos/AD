@@ -1,0 +1,228 @@
+<?xml version="1.0" ?>
+
+<srvfile>
+	<header>
+
+Copyright 2010 Altium BV     
+
+	</header>
+	<service name="lwip" title="TCP/IP" description="TCP/IP Service Statistics">
+		<statfield name="Link"		description="Link Statistics">
+			<statfield name="XMIT"		variable="lwip_stats.link.xmit"		description="Transmitted Packets"/>
+			<statfield name="RECV"		variable="lwip_stats.link.recv"		description="Received Packets"/>
+			<statfield name="FW"		variable="lwip_stats.link.fw"		description="Forwarded Packets"/>
+			<statfield name="DROP"		variable="lwip_stats.link.drop"		description="Dropped Packets"/>
+			<statfield name="CHKERR"	variable="lwip_stats.link.chkerr"	description="Checksum Error"/>
+			<statfield name="LENERR"	variable="lwip_stats.link.lenerr"	description="Invalid Length Error"/>
+			<statfield name="MEMERR"	variable="lwip_stats.link.memerr"	description="Out of Memory Error"/>
+			<statfield name="RTERR"		variable="lwip_stats.link.rterr"	description="Routing Error"/>
+			<statfield name="PROTERR"	variable="lwip_stats.link.proterr"	description="Protocol Error"/>
+			<statfield name="OPTERR"	variable="lwip_stats.link.opterr"	description="Options Error"/>
+			<statfield name="ERR"		variable="lwip_stats.link.err"		description="Miscelleanous Error"/>
+			<statfield name="CACHEHIT"	variable="lwip_stats.link.cachehit"	description="Cache Hits"/>
+		</statfield>
+		<statfield name="Etharp"	description="Etharp Statistics">
+			<statfield name="XMIT"		variable="lwip_stats.etharp.xmit"	description="Transmitted Packets"/>
+			<statfield name="RECV"		variable="lwip_stats.etharp.recv"	description="Received Packets"/>
+			<statfield name="FW"		variable="lwip_stats.etharp.fw"		description="Forwarded Packets"/>
+			<statfield name="DROP"		variable="lwip_stats.etharp.drop"	description="Dropped Packets"/>
+			<statfield name="CHKERR"	variable="lwip_stats.etharp.chkerr"	description="Checksum Error"/>
+			<statfield name="LENERR"	variable="lwip_stats.etharp.lenerr"	description="Invalid Length Error"/>
+			<statfield name="MEMERR"	variable="lwip_stats.etharp.memerr"	description="Out of Memory Error"/>
+			<statfield name="RTERR"		variable="lwip_stats.etharp.rterr"	description="Routing Error"/>
+			<statfield name="PROTERR"	variable="lwip_stats.etharp.proterr"	description="Protocol Error"/>
+			<statfield name="OPTERR"	variable="lwip_stats.etharp.opterr"	description="Options Error"/>
+			<statfield name="ERR"		variable="lwip_stats.etharp.err"	description="Miscelleanous Error"/>
+			<statfield name="CACHEHIT"	variable="lwip_stats.etharp.cachehit"	description="Cache Hits"/>
+		</statfield>
+		<statfield name="IP Fragment"	description="IP Fragment Statistics">
+			<statfield name="XMIT"		variable="lwip_stats.ip_frag.xmit"	description="Transmitted Packets"/>
+			<statfield name="RECV"		variable="lwip_stats.ip_frag.recv"	description="Received Packets"/>
+			<statfield name="FW"		variable="lwip_stats.ip_frag.fw"	description="Forwarded Packets"/>
+			<statfield name="DROP"		variable="lwip_stats.ip_frag.drop"	description="Dropped Packets"/>
+			<statfield name="CHKERR"	variable="lwip_stats.ip_frag.chkerr"	description="Checksum Error"/>
+			<statfield name="LENERR"	variable="lwip_stats.ip_frag.lenerr"	description="Invalid Length Error"/>
+			<statfield name="MEMERR"	variable="lwip_stats.ip_frag.memerr"	description="Out of Memory Error"/>
+			<statfield name="RTERR"		variable="lwip_stats.ip_frag.rterr"	description="Routing Error"/>
+			<statfield name="PROTERR"	variable="lwip_stats.ip_frag.proterr"	description="Protocol Error"/>
+			<statfield name="OPTERR"	variable="lwip_stats.ip_frag.opterr"	description="Options Error"/>
+			<statfield name="ERR"		variable="lwip_stats.ip_frag.err"	description="Miscelleanous Error"/>
+			<statfield name="CACHEHIT"	variable="lwip_stats.ip_frag.cachehit"	description="Cache Hits"/>
+		</statfield>
+		<statfield name="IP"		description="IP Statistics">
+			<statfield name="XMIT"		variable="lwip_stats.ip.xmit"		description="Transmitted Packets"/>
+			<statfield name="RECV"		variable="lwip_stats.ip.recv"		description="Received Packets"/>
+			<statfield name="FW"		variable="lwip_stats.ip.fw"		description="Forwarded Packets"/>
+			<statfield name="DROP"		variable="lwip_stats.ip.drop"		description="Dropped Packets"/>
+			<statfield name="CHKERR"	variable="lwip_stats.ip.chkerr"		description="Checksum Error"/>
+			<statfield name="LENERR"	variable="lwip_stats.ip.lenerr"		description="Invalid Length Error"/>
+			<statfield name="MEMERR"	variable="lwip_stats.ip.memerr"		description="Out of Memory Error"/>
+			<statfield name="RTERR"		variable="lwip_stats.ip.rterr"		description="Routing Error"/>
+			<statfield name="PROTERR"	variable="lwip_stats.ip.proterr"	description="Protocol Error"/>
+			<statfield name="OPTERR"	variable="lwip_stats.ip.opterr"		description="Options Error"/>
+			<statfield name="ERR"		variable="lwip_stats.ip.err"		description="Miscelleanous Error"/>
+			<statfield name="CACHEHIT"	variable="lwip_stats.ip.cachehit"	description="Cache Hits"/>
+		</statfield>
+		<statfield name="ICMP"		description="ICMP Statistics">
+			<statfield name="XMIT"		variable="lwip_stats.icmp.xmit"		description="Transmitted Packets"/>
+			<statfield name="RECV"		variable="lwip_stats.icmp.recv"		description="Received Packets"/>
+			<statfield name="FW"		variable="lwip_stats.icmp.fw"		description="Forwarded Packets"/>
+			<statfield name="DROP"		variable="lwip_stats.icmp.drop"		description="Dropped Packets"/>
+			<statfield name="CHKERR"	variable="lwip_stats.icmp.chkerr"	description="Checksum Error"/>
+			<statfield name="LENERR"	variable="lwip_stats.icmp.lenerr"	description="Invalid Length Error"/>
+			<statfield name="MEMERR"	variable="lwip_stats.icmp.memerr"	description="Out of Memory Error"/>
+			<statfield name="RTERR"		variable="lwip_stats.icmp.rterr"	description="Routing Error"/>
+			<statfield name="PROTERR"	variable="lwip_stats.icmp.proterr"	description="Protocol Error"/>
+			<statfield name="OPTERR"	variable="lwip_stats.icmp.opterr"	description="Options Error"/>
+			<statfield name="ERR"		variable="lwip_stats.icmp.err"		description="Miscelleanous Error"/>
+			<statfield name="CACHEHIT"	variable="lwip_stats.icmp.cachehit"	description="Cache Hits"/>
+		</statfield>
+		<statfield name="UDP"		description="UDP Statistics">
+			<statfield name="XMIT"		variable="lwip_stats.udp.xmit"		description="Transmitted Packets"/>
+			<statfield name="RECV"		variable="lwip_stats.udp.recv"		description="Received Packets"/>
+			<statfield name="FW"		variable="lwip_stats.udp.fw"		description="Forwarded Packets"/>
+			<statfield name="DROP"		variable="lwip_stats.udp.drop"		description="Dropped Packets"/>
+			<statfield name="CHKERR"	variable="lwip_stats.udp.chkerr"	description="Checksum Error"/>
+			<statfield name="LENERR"	variable="lwip_stats.udp.lenerr"	description="Invalid Length Error"/>
+			<statfield name="MEMERR"	variable="lwip_stats.udp.memerr"	description="Out of Memory Error"/>
+			<statfield name="RTERR"		variable="lwip_stats.udp.rterr"		description="Routing Error"/>
+			<statfield name="PROTERR"	variable="lwip_stats.udp.proterr"	description="Protocol Error"/>
+			<statfield name="OPTERR"	variable="lwip_stats.udp.opterr"	description="Options Error"/>
+			<statfield name="ERR"		variable="lwip_stats.udp.err"		description="Miscelleanous Error"/>
+			<statfield name="CACHEHIT"	variable="lwip_stats.udp.cachehit"	description="Cache Hits"/>
+		</statfield>
+		<statfield name="TCP"		description="TCP Statistics">
+			<statfield name="XMIT"		variable="lwip_stats.tcp.xmit"		description="Transmitted Packets"/>
+			<statfield name="RECV"		variable="lwip_stats.tcp.recv"		description="Received Packets"/>
+			<statfield name="FW"		variable="lwip_stats.tcp.fw"		description="Forwarded Packets"/>
+			<statfield name="DROP"		variable="lwip_stats.tcp.drop"		description="Dropped Packets"/>
+			<statfield name="CHKERR"	variable="lwip_stats.tcp.chkerr"	description="Checksum Error"/>
+			<statfield name="LENERR"	variable="lwip_stats.tcp.lenerr"	description="Invalid Length Error"/>
+			<statfield name="MEMERR"	variable="lwip_stats.tcp.memerr"	description="Out of Memory Error"/>
+			<statfield name="RTERR"		variable="lwip_stats.tcp.rterr"		description="Routing Error"/>
+			<statfield name="PROTERR"	variable="lwip_stats.tcp.proterr"	description="Protocol Error"/>
+			<statfield name="OPTERR"	variable="lwip_stats.tcp.opterr"	description="Options Error"/>
+			<statfield name="ERR"		variable="lwip_stats.tcp.err"		description="Miscelleanous Error"/>
+			<statfield name="CACHEHIT"	variable="lwip_stats.tcp.cachehit"	description="Cache Hits"/>
+		</statfield>
+		<statfield name="Memory"	description="Memory Statistics">
+			<statfield name="AVAIL"		variable="lwip_stats.mem.avail"		description="Available"/>
+			<statfield name="USED"		variable="lwip_stats.mem.used"		description="Used"/>
+			<statfield name="MAX"		variable="lwip_stats.mem.max"		description="Maximum"/>
+			<statfield name="ERR"		variable="lwip_stats.mem.err"		description="Error"/>
+			<statfield name="ILLEGAL"	variable="lwip_stats.mem.illegal"	description="Illegal"/>
+		</statfield>
+		<statfield name="Memory Pointers"	description="Memory Pointers Statistics">
+			<statfield name="Memory Pointer 0"	description="Memory Pointer 0 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[0].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[0].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[0].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[0].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[0].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 1"	description="Memory Pointer 1 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[1].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[1].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[1].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[1].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[1].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 2"	description="Memory Pointer 2 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[2].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[2].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[2].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[2].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[2].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 3"	description="Memory Pointer 3 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[3].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[3].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[3].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[3].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[3].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 4"	description="Memory Pointer 4 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[4].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[4].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[4].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[4].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[4].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 5"	description="Memory Pointer 5 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[5].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[5].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[5].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[5].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[5].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 6"	description="Memory Pointer 6 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[6].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[6].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[6].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[6].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[6].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 7"	description="Memory Pointer 7 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[7].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[7].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[7].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[7].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[7].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 8"	description="Memory Pointer 8 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[8].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[8].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[8].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[8].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[8].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 9"	description="Memory Pointer 9 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[9].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[9].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[9].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[9].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[9].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 10"	description="Memory Pointer 10 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[10].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[10].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[10].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[10].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[10].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 11"	description="Memory Pointer 11 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[11].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[11].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[11].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[11].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[11].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 12"	description="Memory Pointer 12 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[12].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[12].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[12].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[12].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[12].illegal"	description="Illegal"/>
+			</statfield>
+			<statfield name="Memory Pointer 13"	description="Memory Pointer 13 Statistics">
+				<statfield name="AVAIL"		variable="lwip_stats.memp[13].avail"	description="Available"/>
+				<statfield name="USED"		variable="lwip_stats.memp[13].used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.memp[13].max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.memp[13].err"	description="Error"/>
+				<statfield name="ILLEGAL"	variable="lwip_stats.memp[13].illegal"	description="Illegal"/>
+			</statfield>
+		</statfield>
+		<statfield name="System"	description="System Statistics">
+			<statfield name="Semaphores"	description="System Semaphore Statistics">
+				<statfield name="USED"		variable="lwip_stats.sys.sem.used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.sys.sem.max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.sys.sem.err"	description="Error"/>
+			</statfield>
+			<statfield name="Mailboxes"	description="System Mailbox Statistics">
+				<statfield name="USED"		variable="lwip_stats.sys.mbox.used"	description="Used"/>
+				<statfield name="MAX"		variable="lwip_stats.sys.mbox.max"	description="Maximum"/>
+				<statfield name="ERR"		variable="lwip_stats.sys.mbox.err"	description="Error"/>
+			</statfield>
+		</statfield>
+	</service>
+</srvfile>

@@ -1,0 +1,6 @@
+[Interface]
+Name=usbhost_uvc
+Category=SERVICE
+System=False
+Description=USB Host Video Service
+PublicDir=services\usbhost\usbhost_uvc\include

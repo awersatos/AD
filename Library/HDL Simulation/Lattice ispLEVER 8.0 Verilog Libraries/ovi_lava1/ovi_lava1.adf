@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_LAVA1
+
+[Library]
+ovi_LAVA1=.\ovi_LAVA1.LIB
+
+[$LibMap$]
+ovi_LAVA1=.
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/xpga.v=-1
+/update_ovi_LAVA1.do=-1
+
+[Files.Data]
+.\src\xpga.v=Verilog Source Code
+.\src\update_ovi_LAVA1.do=Macro
+

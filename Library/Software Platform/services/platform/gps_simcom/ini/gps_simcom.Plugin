@@ -1,0 +1,13 @@
+[Plugin]
+Name=gps_simcom
+Caption=Simcom AT GPS Driver
+Description=Simcom AT Command GPS functionality
+SourceDir=services\platform\gps_simcom\src
+Implement=gps_simcom
+Bitmap=gps_simcom.bmp
+
+
+[Instance]
+Caption=Simcom AT GPS Driver
+Description=Simcom GPS via AT Commands
+Require0=modem

@@ -1,0 +1,18 @@
+[Plugin]
+Name=usb_msd
+Description=USB Mass Storage Service
+Caption=USB Mass Storage Service
+SourceDir=services\usb\usb_msd\src
+InitHandler=usb_msd_init
+InitHandlerPriority=16
+Bitmap=usb_msd.bmp
+Implement=usb_msd
+Require0=sysutils
+CompileOption0=-I"$(SERROOT)\usb\usb_msd\internal"
+
+[Instance]
+Caption=USB Mass Storage Context
+Description=USB Mass Storage Context
+Require0=drv_cy7c68001
+Require1=blockio
+Require1_MultipleLinks=True

@@ -1,0 +1,7 @@
+[Interface]
+Name=per_i2s
+Category=PERIPHERAL
+System=False
+Description=I2S master controller
+PublicDir=platform\fpga\peripherals\i2s\include
+

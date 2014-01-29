@@ -1,0 +1,35 @@
+[Plugin]
+Name=drv_ps2kb
+Caption=PS/2 Keyboard Driver
+Description=Low level PS/2 keyboard driver.
+Bitmap=drv_ps2kb.bmp
+Implement=drv_ps2kb
+SourceDir=platform\fpga\drivers\ps2\ps2kb\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\peripherals\ps2\include"
+CompileOption1=-I"$(SSASROOT)\platform\fpga\drivers\ps2\internal"
+CompileOption2=-I"$(SSASROOT)\platform\fpga\drivers\ps2\ps2kb\internal"
+
+[Instance]
+Require0=drv_ps2
+
+[Instance_Option0]
+Name=polling_interval
+GUIName=POLLING INTERVAL
+Kind=UINT32
+Description=Thread polling interval in milliseconds.
+
+[Instance_Option1]
+Name=polling_timeout
+GUIName=POLLING TIMEOUT
+Kind=UINT32
+Description=Thread polling timeout in seconds (0 = no timeout).
+
+[Instance_Option0_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option1_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ

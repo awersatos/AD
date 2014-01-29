@@ -1,0 +1,126 @@
+//============================================================
+# f241 source
+//74F241: Octal Buffer (3-state)
+//Signetics FAST Logic 1989 DATA HANDBOOK parameter values used.
+//dm 10-23-97: copied ls240 in LS.TXT
+//	changed SUPPLY_MIN_MAX, VIL_VIL_VALUE,
+//  iol, ioh, iil, iih, icc, rise, fall
+//  and prop delays values.
+//dw 7-4-00: corrected EXT_TABLE definition
+//  so that OEB input was active high
+//============================================================
+INPUTS VCC, GND, A3, A2, A1, A0, B3, B2, B1, B0, OEA, OEB;
+OUTPUTS VCC_LD, A3_LD, A2_LD, A1_LD, A0_LD, B3_LD, B2_LD, B1_LD, B0_LD,
+		OEA_LD, OEB_LD, OA3, OA2, OA1, OA0, OB3, OB2, OB1, OB0;
+INTEGERS tblIndex, outputs_3s, outputs_high, outputs_low;
+REALS tt_val, tplh_val, tphl_val, tpzh_val, tpzl_val, tphz_val, tplz_val,
+      ril_val, rih_OE_val, rih_val, ricc_val, ricch_val, riccl_val, riccz_val;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.5,5.5);	//check for min supply=4.5 and max supply=5.5
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.45,1.55);	//set input threshold values: vil and vih
+IO_PAIRS(A3:A3_LD, A2:A2_LD, A1:A1_LD, A0:A0_LD, B3:B3_LD,
+         B2:B2_LD, B1:B1_LD, B0:B0_LD, OEA:OEA_LD, OEB:OEB_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tOEA\tOEB\tA3\tA2\tA1\tA0\tB3\tB2\tB1\tB0\tOA3\tOA2\tOA1\tOA0\tOB3\tOB2\tOB1\tOB0");
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 2.5n,  NULL));
+
+    tplh_val= (MIN_TYP_MAX(tp_param: 2.5n, 4n, 5.2n));
+	tphl_val= (MIN_TYP_MAX(tp_param: 2.5n, 4n, 5.2n));
+
+    tpzh_val= (MIN_TYP_MAX(tp_param: 2n, 4n, 5.7n));
+	tpzl_val= (MIN_TYP_MAX(tp_param: 2n, 5n, 7n));
+
+    tphz_val= (MIN_TYP_MAX(tp_param: 2n, 4n, 6n));
+	tplz_val= (MIN_TYP_MAX(tp_param: 2n, 4n, 6n));
+
+    //F std output drive IOL max=64mA @ vol=0.5V: rol_param=(0.5-vol_param)/64mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 4.69,  NULL));
+
+	//tri-state drive IOZ max=50uA @ vo=2.4V: r3s_param=(2.7/50uA)
+	r3s_param= (MIN_TYP_MAX(drv_param: 54k, NULL, NULL));
+
+    //F std output drive IOH max=-15mA @ voh=4.5V: roh_param=(voh_param-4.5)/15mA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 6.67, NULL));
+
+    //F input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+    ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //F input load IIL=-1mA @ 0.5V: rih= (voh_param-0.5)/1mA
+    rih_OE_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 4.1k));
+
+    //F input load IIL=-1.6mA @ 0.5V: rih= (voh_param-0.5)/1.6mA
+    rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 2563));
+
+    //Icch with output high: 125= 5V/40mA typical, 91.7= 5.5V/60mA max 
+    ricch_val= (MIN_TYP_MAX(i_param: NULL, 125, 91.7));
+
+    //Iccl with output low: 83.3= 5V/60mA typical, 61.1= 5.5V/90mA max 
+    riccl_val= (MIN_TYP_MAX(i_param: NULL, 83.3, 61.1));
+
+    //Iccz with output 3-state: 76.9= 5V/65mA typical, 61.1= 5.5V/90mA max 
+    riccz_val= (MIN_TYP_MAX(i_param: NULL, 76.9, 61.1));
+
+	STATE OA3 OA2 OA1 OA0 OB3 OB2 OB1 OB0 = ZERO;	//initialize output
+	EXIT;
+  END;
+
+DRIVE OA3 OA2 OA1 OA0 OB3 OB2 OB1 OB0 =
+  (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD OEA_LD OEB_LD =
+	 (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_OE_val,io=1e9,t=1p);
+LOAD A3_LD A2_LD A1_LD A0_LD B3_LD B2_LD B1_LD B0_LD OEA_LD OEB_LD =
+	 (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+
+EXT_TABLE tblIndex
+OEA OEB OA3 OA2 OA1 OA0 OB3 OB2 OB1 OB0
+0	0	A3  A2  A1  A0  Z   Z   Z   Z
+0	1	A3  A2  A1  A0  B3  B2  B1  B0
+1	0	Z   Z   Z   Z   Z   Z   Z   Z
+1	1	Z   Z   Z   Z   B3  B2  B1  B0;
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//	   present_time,OEA,OEB,A3,A2,A1,A0,B3,B2,B1,B0,OA3,OA2,OA1,OA0,OB3,OB2,OB1,OB0);
+
+outputs_3s= (0);
+outputs_low= (0);
+outputs_high= (0);
+IF (tblIndex = 1) THEN
+  BEGIN
+    outputs_high= (OA3+OA2+OA1+OA0+OB3+OB2+OB1+OB0);
+	outputs_low= (8-outputs_high);
+  ELSE
+    IF (tblIndex = 2) THEN
+      BEGIN
+        outputs_3s= (4);
+        outputs_high= (OA3+OA2+OA1+OA0);
+		outputs_low= (4-outputs_high);
+      ELSE
+        IF (tblIndex = 3) THEN
+          BEGIN
+            outputs_3s= (4);
+            outputs_high= (OB3+OB2+OB1+OB0);
+		    outputs_low= (4-outputs_high);
+          ELSE
+            outputs_3s= (8);
+          END;
+      END;
+  END;
+
+ricc_val= (((outputs_3s*riccz_val)+(outputs_high*ricch_val)+(outputs_low*riccl_val))/8);
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+
+DELAY OA3 OA2 OA1 OA0 OB3 OB2 OB1 OB0 =
+  CASE (TRAN_LH) : tplh_val
+  CASE (TRAN_HL) : tphl_val
+  CASE (TRAN_ZH) : tpzh_val
+  CASE (TRAN_ZL) : tpzl_val
+  CASE (TRAN_HZ) : tphz_val
+  CASE (TRAN_LZ) : tplz_val
+END;
+EXIT;

@@ -1,0 +1,11 @@
+*Default NPN Darlington Transistor pkg:TO-92B 1,2,3
+*NPN Trans Pinout: C,B,E
+.SUBCKT NPN3 1 2 3
+Q1 1 2 4 QMOD .1
+Q2 1 4 3 QMOD
+R1 2 4  10E-3
+R2 4 3  100
+D1 3 1  DMOD
+.MODEL QMOD NPN()
+.MODEL DMOD D()
+.ENDS NPN3

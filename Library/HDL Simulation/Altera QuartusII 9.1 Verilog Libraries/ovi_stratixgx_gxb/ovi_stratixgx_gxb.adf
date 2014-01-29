@@ -1,0 +1,33 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_stratixgx_gxb
+
+[Library]
+ovi_stratixgx_gxb=.\ovi_stratixgx_gxb.lib
+
+[$LibMap$]
+ovi_stratixgx_gxb=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/stratixgx_hssi_atoms.v=-1
+/update_ovi_stratixgx_gxb.do=-1
+
+[Files.Data]
+.\src\stratixgx_hssi_atoms.v=Verilog Source Code
+.\src\update_ovi_stratixgx_gxb.do=Macro
+

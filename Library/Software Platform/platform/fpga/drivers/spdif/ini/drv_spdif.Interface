@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_spdif
+Category=DRIVER
+System=False
+Description=SPDIF master controller driver
+PublicDir=platform\fpga\drivers\spdif\include

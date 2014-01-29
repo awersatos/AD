@@ -1,0 +1,16 @@
+*Tunnel Diode Default
+*MCE 600V 50A 27.2ns default parameters
+*Diode Pinout: A,K
+* Parameters:
+* RS:  Series resistance value
+* RP:  Negative resistance value in parallel with capacitance. 
+* CP:   Capacitance value in parallel with negative resistance.
+* LS:  Series inductance value.
+*
+*
+.SUBCKT DTUNNEL1 1 2 PARAMS: Rs=6 Rp=-75 Cp=0.6E-12 Ls=0.1nH
+RS  1 3  {Rs}
+RP  3 4  {Rp}
+CP  3 4  {Cp}
+LS  4 2  {Ls}
+.ENDS DTUNNEL1

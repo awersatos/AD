@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=VCC +4.2V Pin=U1-4
+Removed Pin From Net: NetName=GND Pin=U3-21
+Removed Pin From Net: NetName=VCC +3.3V Pin=X3-13
+Added Component: Designator=C31(CAP_POL_D10)
+Added Component: Designator=C32(C0805)
+Added Component: Designator=U7(TO-263)
+Added Pin To Net: NetName=VCC+5V Pin=C31-1
+Added Pin To Net: NetName=VCC+5V Pin=C32-1
+Added Pin To Net: NetName=VCC+5V Pin=U7-3
+Added Pin To Net: NetName=VCC+5V Pin=X3-13
+Added Net: Name=VCC+5V
+Change Class Name : Old Net Name=DWS_Main_Board New Net Name=DWS-2_Main_Board

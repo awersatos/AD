@@ -1,0 +1,13 @@
+[Plugin]
+Name=rtc
+Description=Real Time Clock Interface
+Caption=Real Time Clock
+SourceDir=platform\fpga\drivers\rtc\src
+Implement=rtc
+Bitmap=rtc.bmp
+CompileOption0=-I"$(SSASROOT)\platform\fpga\drivers\rtc\internal"
+
+[Instance]
+Require0=ad_rtc
+
+

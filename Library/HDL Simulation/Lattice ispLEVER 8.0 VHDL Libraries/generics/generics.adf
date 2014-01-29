@@ -1,0 +1,26 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=generics
+
+[Library]
+generics=.\generics.lib
+
+[$LibMap$]
+generics=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/generics.vhd=-1
+/update_generics.do=-1
+
+[Files.Data]
+.\src\generics.vhd=VHDL Source Code
+.\src\update_generics.do=Macro
+

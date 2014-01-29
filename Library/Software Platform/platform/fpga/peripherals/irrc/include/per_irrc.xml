@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_irrc" description="IR Remote Controller">
+		<sfr name="CLK"	 offset="0"  size="32" description="Clock Register"/>
+		<sfr name="CTRL"	 offset="4"  size="32" description="Control Register">
+			<bitfield name="CODEC"		start="7" end="6" access="rw" description="Codec Selection Bit">
+				<value value="0" description="RAW"/>
+				<value value="1" description="NEC"/>
+				<value value="2" description="RC5"/>
+			</bitfield>
+			<bitfield name="RXINTRST"	start="1" end="1" access="rw" description="RX Interrrupt Reset/Acknowledge Data Reception Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="INTEN"		start="0" end="0" access="rw" description="Interrupt Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="STATUS"	 offset="8"  size="32" description="Status Register"/>
+			<bitfield name="TXBUSY"		start="4" end="4" access="rw" description="Transmistter Busy Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXREPEAT"	start="3" end="3" access="rw" description="Repeat Code Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXOVERRUN"	start="2" end="2" access="rw" description="RX Overflow Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXPDET"		start="1" end="1" access="rw" description="Pulse Detect Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="RXINT"		start="0" end="0" access="rw" description="Receive Interrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		<sfr name="DATA"	 offset="12" size="32" description="Data Register"	noaccess="true"/>
+	</group>
+</sfrfile>

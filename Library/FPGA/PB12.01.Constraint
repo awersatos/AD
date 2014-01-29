@@ -1,0 +1,100 @@
+;...............................................................................
+;Constraints File
+;   Devices : 24-Bit VGA Out, Composite Video-In/Out, Audio In/Out  TSC2301 Codec
+;   Board   : PB12 Single Connector Plug-In Peripheral Board For NB02
+;
+;   Created 10-April-2008
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB       | TargetId=PB12.01 | Image=PB12.01 | ImageOffsetX=10 | ImageOffsetY=13 | Description=Audio/Video Peripheral Board
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Connector | TargetId=HDR1
+;...............................................................................
+
+
+;...............................................................................
+; Peripheral Pins
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_I2S_MCLK     | ConnectTo=HDR1-36
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_I2S_DOUT     | ConnectTo=HDR1-32
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_I2S_DIN      | ConnectTo=HDR1-40
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_I2S_BCLK     | ConnectTo=HDR1-38
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_I2S_WCLK     | ConnectTo=HDR1-34
+Record=Constraint | TargetKind=Port | TargetId=AUDIO_MIC_EN       | ConnectTo=HDR1-30
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=VIDOUT_NTSC_PAL    | ConnectTo=HDR1-46
+Record=Constraint | TargetKind=Port | TargetId=VIDOUT_MHZ_14_3    | ConnectTo=HDR1-42
+Record=Constraint | TargetKind=Port | TargetId=VIDOUT_FSC4        | ConnectTo=HDR1-44
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN7         | ConnectTo=HDR1-66
+Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN6         | ConnectTo=HDR1-64
+Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN5         | ConnectTo=HDR1-62
+Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN4         | ConnectTo=HDR1-60
+Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN3         | ConnectTo=HDR1-58
+Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN2         | ConnectTo=HDR1-56
+Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN1         | ConnectTo=HDR1-54
+Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN0         | ConnectTo=HDR1-52
+
+;Record=Constraint | TargetKind=Port | TargetId=VGA_GREEN[7..0] | ConnectTo=HDR1-52,HDR1-54,HDR1-56,HDR1-58,HDR1-60,HDR1-62,HDR1-64,HDR1-66
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE7          | ConnectTo=HDR1-100
+Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE6          | ConnectTo=HDR1-98
+Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE5          | ConnectTo=HDR1-96
+Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE4          | ConnectTo=HDR1-94
+Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE3          | ConnectTo=HDR1-92
+Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE2          | ConnectTo=HDR1-90
+Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE1          | ConnectTo=HDR1-88
+Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE0          | ConnectTo=HDR1-86
+;Record=Constraint | TargetKind=Port | TargetId=VGA_BLUE[7..0] | ConnectTo=HDR1-86,HDR1-88,HDR1-90,HDR1-92,HDR1-94,HDR1-96,HDR1-98,HDR1-100
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=VGA_RED7           | ConnectTo=HDR1-70
+Record=Constraint | TargetKind=Port | TargetId=VGA_RED6           | ConnectTo=HDR1-72
+Record=Constraint | TargetKind=Port | TargetId=VGA_RED5           | ConnectTo=HDR1-74
+Record=Constraint | TargetKind=Port | TargetId=VGA_RED4           | ConnectTo=HDR1-76
+Record=Constraint | TargetKind=Port | TargetId=VGA_RED3           | ConnectTo=HDR1-78
+Record=Constraint | TargetKind=Port | TargetId=VGA_RED2           | ConnectTo=HDR1-80
+Record=Constraint | TargetKind=Port | TargetId=VGA_RED1           | ConnectTo=HDR1-82
+Record=Constraint | TargetKind=Port | TargetId=VGA_RED0           | ConnectTo=HDR1-84
+;Record=Constraint | TargetKind=Port | TargetId=VGA_RED[7..0] | ConnectTo=HDR1-70,HDR1-72,HDR1-74,HDR1-76,HDR1-78,HDR1-80,HDR1-82,HDR1-84
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=VGA_VSYNC          | ConnectTo=HDR1-48
+Record=Constraint | TargetKind=Port | TargetId=VGA_HSYNC          | ConnectTo=HDR1-50
+Record=Constraint | TargetKind=Port | TargetId=VGA_CLK            | ConnectTo=HDR1-68
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_VSYNC        | ConnectTo=HDR1-8
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_PCLK         | ConnectTo=HDR1-28 | FPGA_CLOCK_ALLOW_ON_NON_CLOCK_PIN=True
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_INTERQ_GPLC  | ConnectTo=HDR1-2
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_HSYNC        | ConnectTo=HDR1-6
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_FID_CLCO     | ConnectTo=HDR1-10
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_AVID         | ConnectTo=HDR1-4
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA7        | ConnectTo=HDR1-26
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA6        | ConnectTo=HDR1-24
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA5        | ConnectTo=HDR1-22
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA4        | ConnectTo=HDR1-20
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA3        | ConnectTo=HDR1-18
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA2        | ConnectTo=HDR1-16
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA1        | ConnectTo=HDR1-14
+Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA0        | ConnectTo=HDR1-12
+;Record=Constraint | TargetKind=Port | TargetId=VIDIN_DATA[7..0] | ConnectTo=HDR1-26,HDR1-24,HDR1-22,HDR1-20,HDR1-18,HDR1-16,HDR1-14,HDR1-12
+;...............................................................................
+

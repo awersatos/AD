@@ -1,0 +1,7 @@
+[Interface]
+Name=ethernet
+Category=SERVICE
+Visible=True
+System=False
+Description=Generic Ethernet Platform services
+PublicDir=services\platform\ethernet\include

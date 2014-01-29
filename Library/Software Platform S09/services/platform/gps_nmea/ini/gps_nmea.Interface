@@ -1,0 +1,6 @@
+[Interface]
+Name=gps_nmea
+Category=SERVICE
+System=False
+PublicDir=services\platform\gps_nmea\include
+Description=Generic GPS-NMEA Platform services

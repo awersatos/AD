@@ -1,0 +1,33 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_arriagx
+
+[Library]
+ovi_arriagx=.\ovi_arriagx.LIB
+
+[$LibMap$]
+ovi_arriagx=.
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[Files]
+/update_ovi_arriagx.do=-1
+/arriagx_atoms.v=-1
+
+[Files.Data]
+.\src\update_ovi_arriagx.do=Macro
+.\src\arriagx_atoms.v=Verilog Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

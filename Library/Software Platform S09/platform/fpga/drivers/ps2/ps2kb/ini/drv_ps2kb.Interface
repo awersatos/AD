@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_ps2kb
+Category=DRIVER
+System=False
+Description=Low level PS/2 keyboard driver.
+PublicDir=platform\fpga\drivers\ps2\ps2kb\include

@@ -1,0 +1,8 @@
+[Interface]
+Name=keyboard
+Alias=posix_devio
+Category=SERVICE
+System=False
+Description=Posix device I/O (c library) interface to keyboard services
+PublicDir=services\posix\devio\keyboard\include
+

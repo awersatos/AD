@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=hardcopyII
+
+[Library]
+hardcopyII=.\hardcopyII.lib
+
+[$LibMap$]
+hardcopyII=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/hardcopyii_atoms.vhd=-1
+/hardcopyii_components.vhd=-1
+/update_hardcopyii.do=-1
+
+[Files.Data]
+.\src\hardcopyii_atoms.vhd=VHDL Source Code
+.\src\hardcopyii_components.vhd=VHDL Source Code
+.\src\update_hardcopyii.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

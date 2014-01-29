@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_sdhc
+Category=DRIVER
+System=False
+Description=SD Host Controller driver
+PublicDir=platform\fpga\drivers\sdhc\include
+
+

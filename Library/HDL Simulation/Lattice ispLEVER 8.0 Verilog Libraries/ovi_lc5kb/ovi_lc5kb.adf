@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_lc5kb
+
+[Library]
+ovi_lc5kb=.\ovi_lc5kb.lib
+
+[$LibMap$]
+lc5kb=.
+Active_lib=
+ovi_lc5kb=.
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/mach.v=-1
+/update_ovi_lc5kb.do=-1
+
+[Files.Data]
+.\src\mach.v=Verilog Source Code
+.\src\update_ovi_lc5kb.do=Macro
+

@@ -1,0 +1,27 @@
+V 000041 56 456 1265381537185 pcsm_16x12
+(_unit pcsm_16x12
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_tchk setuphold 0 255
+			(_port WCLK (posedge))
+			(_port DI ())
+		)
+		(_tchk setuphold 0 256
+			(_port WCLK (posedge))
+			(_port WA ())
+		)
+		(_tchk setuphold 0 257
+			(_port WCLK (posedge))
+			(_port WEN ())
+		)
+		(_tchk setuphold 0 260
+			(_port RCLK (posedge))
+			(_port RA ())
+		)
+		(_tchk setuphold 0 261
+			(_port RCLK (posedge))
+			(_port REN ())
+		)
+	)
+)

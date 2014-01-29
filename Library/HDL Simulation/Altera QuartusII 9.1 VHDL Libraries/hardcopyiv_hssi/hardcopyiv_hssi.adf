@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=hardcopyiv_hssi
+
+[Library]
+hardcopyiv_hssi=.\hardcopyiv_hssi.lib
+
+[$LibMap$]
+hardcopyiv_hssi=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/hardcopyiv_hssi_atoms.vhd=-1
+/hardcopyiv_hssi_components.vhd=-1
+/update_hardcopyiv_hssi.do=-1
+
+[Files.Data]
+.\src\hardcopyiv_hssi_atoms.vhd=VHDL Source Code
+.\src\hardcopyiv_hssi_components.vhd=VHDL Source Code
+.\src\update_hardcopyiv_hssi.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

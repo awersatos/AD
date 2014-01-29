@@ -1,0 +1,8 @@
+[Interface]
+Name=drv_fpu
+Category=DRIVER
+System=False
+Description=FPU driver
+PublicDir=platform\fpga\drivers\fpu\include
+
+

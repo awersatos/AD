@@ -1,0 +1,31 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_lc5kmx
+
+[Library]
+ovi_lc5kmx=.\ovi_lc5kmx.LIB
+
+[$LibMap$]
+ovi_lc5kmx=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/lc5kmx.v=-1
+/update_ovi_lc5kmx.do=-1
+
+[Files.Data]
+.\src\lc5kmx.v=Verilog Source Code
+.\src\update_ovi_lc5kmx.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

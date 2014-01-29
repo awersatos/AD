@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_maxII
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+ovi_maxII=.
+
+[Library]
+ovi_maxII=.\ovi_maxII.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/maxII_atoms.v=-1
+/update_ovi_maxII.do=-1
+
+[Files.Data]
+.\src\maxII_atoms.v=Verilog Source Code
+.\src\update_ovi_maxII.do=Macro
+

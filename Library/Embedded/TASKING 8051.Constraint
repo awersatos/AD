@@ -1,0 +1,19 @@
+;...............................................................................
+;Constraints File
+;   Device  :
+;   Board   :
+;   Project :
+;
+;   Created 21/10/2004
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Internal-Data_Memory        | Memory_BusName=idata |  Memory_Width=8 | Memory_Depth=256     | ProgramDownloadAddress=0x0 | Memory_BusType=c51:idata_bus | Memory_Description=Processor's{n}internal memory
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Processor Main Memory Space | Memory_BusName=xdata |  Memory_Width=8 | Memory_Depth=64k     | ProgramDownloadAddress=0x0 | Memory_BusType=c51:xdata_bus | Memory_Description=Processor's{n}external memory
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Code Memory                 | Memory_BusName=code  |  Memory_Width=8 | Memory_Depth=64k     | ProgramDownloadAddress=0x0 | Memory_BusType=c51:code_bus  | Memory_Description=Where the{n}program code resides
+                                                                  
+Record=NEXUS_CORE | ComponentDesignator=iram  | Memory_Depth=256 | Memory_UsageType=ram | ProgramDownloadAddress=0x0 | Memory_BusType=c51:idata_bus | Default=True
+Record=NEXUS_CORE | ComponentDesignator=xram  | Memory_Depth=64k | Memory_UsageType=ram | ProgramDownloadAddress=0x0 | Memory_BusType=c51:xdata_bus
+Record=NEXUS_CORE | ComponentDesignator=xrom  | Memory_Depth=64k | Memory_UsageType=rom | ProgramDownloadAddress=0x0 | Memory_BusType=c51:code_bus  | Default=True

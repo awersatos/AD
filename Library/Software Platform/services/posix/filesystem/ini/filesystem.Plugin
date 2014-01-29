@@ -1,0 +1,122 @@
+[Plugin]
+Name=posix_filesystem_mounting
+Caption=Filesystem Mounting
+Description=Standard POSIX filesystem mounting
+Implement=posix_filesystem_mounting
+Bitmap=filesystem.bmp
+SourceDir=services\posix\filesystem\src
+GlobalCompileOption0=-D__POSIX_FILE_SYSTEM__=1
+GlobalCompileOption1=-D__UNIFIED_HANDLES__=1
+FrameworkCompileOption0=-I"$(SSASROOT)\services\posix\filesystem\internal"
+FrameworkCompileOption1=-I"$(SSASROOT)\services\posix\internal"
+Require0=rootfs
+; Make sure this is run first
+InitHandler=fs_plugin_init
+InitHandlerPriority=32
+
+[PluginApplicationCode]
+NoGenerate=True
+
+[Option0]
+Name=MOUNT_MAX
+GUIName=Mount Table Size
+Description=Maximum number of mounted filesystems.
+Kind=UINT32
+DefaultValue=4
+
+[Option1]
+Name=OPEN_MAX
+GUIName=File Descriptor Limit
+Description=Maximum number of file descriptors (used for open files, shared memory object, devices and sockets).
+Kind=UINT32
+DefaultValue=20
+MinRange=8
+MaxRange=31
+InLimitsCfg=True
+
+[Option2]
+Name=NAME_MAX
+GUIName=Filename Limit
+Description=Maximum number of bytes in a filename.
+Kind=UINT32
+DefaultValue=30
+MinRange=14
+InLimitsCfg=True
+
+[Option3]
+Name=PATH_MAX
+GUIName=Pathname Limit
+Description=Maximum number of bytes in a pathname.
+Kind=UINT32
+DefaultValue=255
+MinRange=255
+InLimitsCfg=True
+
+[Option4]
+Name=FS_MAX
+GUIName=Filesystem limit
+Description=Maximum number of filesystems.
+Kind=UINT32
+DefaultValue=4
+MinRange=4
+
+[Option5_Hide_If0]
+Kind=INTERFACE
+Object=blockio
+Condition=NOTEQ
+
+; readonly option just to inform devfs is present
+[Option5]
+Name=DEVFS
+GUIName=devfs support
+Description=Virtual filesystem to access devices in /dev (included by block device service).
+Kind=BOOLEAN
+AutoValue=True
+
+[Option5_Hide_If0]
+Kind=INTERFACE
+Object=devfs
+Condition=NOTEQ
+
+; readonly option just to inform shmfs is present
+[Option6]
+Name=SHMFS
+GUIName=shmfs support
+Description=Virtual filesystem to access shared memory objects in /shm (included by multi threading with shared memory support).
+Kind=BOOLEAN
+Value=True
+AutoValue=True
+
+[Option6_Hide_If0]
+Kind=INTERFACE
+Object=shmfs
+Condition=NOTEQ
+
+; readonly option just to inform fatfs is present
+[Option7]
+Name=FATFS
+GUIName=fatfs support
+Description=Microsoft FAT filesystem (included by storage system with fatfs support).
+Kind=BOOLEAN
+Value=True
+AutoValue=True
+
+[Option7_Hide_If0]
+Kind=INTERFACE
+Object=fatfs
+Condition=NOTEQ
+
+; readonly option just to inform sockfs is present
+[Option8]
+Name=SOCKFS
+GUIName=sockfs support
+Description=Virtual filesystem to access sockets (included by tcp/ip networking with unified handle support).
+Kind=BOOLEAN
+Value=True
+AutoValue=True
+
+[Option8_Hide_If0]
+Kind=INTERFACE
+Object=sockfs
+Condition=NOTEQ
+

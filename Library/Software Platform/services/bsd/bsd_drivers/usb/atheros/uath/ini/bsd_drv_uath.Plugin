@@ -1,0 +1,14 @@
+[Plugin]
+Name=bsd_drv_uath
+Description=Atheros AR5005UG/AR5005UX chipset driver
+Caption=Atheros uath Driver
+SourceDir=services\bsd\bsd_drivers\usb\atheros\uath\src
+GlobalCompileOption0=-I"$(SSASROOT)\services\bsd\bsd_drivers\usb\atheros\uath\include"
+;CompileOption0=-I"$(SSASROOT)\services\bsd\bsd_drivers\usb\ralink\microcode"
+InitHandler=bsd_drv_uath_init
+InitHandlerPriority=1
+Implement=bsd_drv_uath
+Require0=bsd_usb
+MinInstances=0
+
+

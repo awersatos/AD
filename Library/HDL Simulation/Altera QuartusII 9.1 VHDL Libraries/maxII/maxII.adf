@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=maxII
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+maxII=.
+
+[Library]
+maxII=.\maxII.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/maxII_atoms.vhd=-1
+/maxII_components.vhd=-1
+/update_maxII.do=-1
+
+[Files.Data]
+.\src\maxII_atoms.vhd=VHDL Source Code
+.\src\maxII_components.vhd=VHDL Source Code
+.\src\update_maxII.do=Macro
+

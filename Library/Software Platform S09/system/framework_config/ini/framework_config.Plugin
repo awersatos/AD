@@ -1,0 +1,56 @@
+[Plugin]
+Name=framework_config
+Caption=Software Platform Configuration
+Description=Global configuration for the Software Platform
+Implement=framework_config
+
+[Option0]
+Name=ndebug
+GUIName=Disable asserts
+Description=Define NDEBUG to disable asserts. This reduces the code size of the software platform.
+Kind=BOOLEAN
+DefaultValue=True
+NoGenerate=True
+
+; Option0 set => disable asserts => generate -DNDEBUG
+[Option1_Available_If0]
+Kind=Option
+Object=ndebug
+Condition=EQ
+Value=True
+
+[Option1_Hide_If0]
+Kind=True
+
+[Option1]
+Name=ndebug_define
+Kind=BOOLEAN
+DefaultValue=True
+Auto=True
+NoGenerate=True
+GenerateFrameworkDefine=NDEBUG
+
+; Option0 not set => enable asserts => generate -UNDEBUG
+[Option2_Available_If0]
+Kind=Option
+Object=ndebug
+Condition=EQ
+Value=False
+
+[Option2_Hide_If0]
+Kind=True
+
+[Option2]
+Name=ndebug_undefine
+Kind=BOOLEAN
+DefaultValue=True
+Auto=True
+NoGenerate=True
+GenerateFrameworkUndefine=NDEBUG
+
+[Option3]
+Name=clockhz
+GUIName=Processor Clock (Hz)
+Description=Frequency of the processor clock in Hz
+Kind=UINT32
+DefaultValue=50000000

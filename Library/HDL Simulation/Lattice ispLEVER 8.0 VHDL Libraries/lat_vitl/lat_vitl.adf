@@ -1,0 +1,25 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=lat_vitl
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+lat_vitl=.
+
+[Library]
+lat_vitl=.\lat_vitl.LIB
+
+[Files]
+/update_lat_vitl.do=-1
+/vital.vhd=-1
+
+[Files.Data]
+.\src\update_lat_vitl.do=Macro
+.\src\vital.vhd=VHDL Source Code
+

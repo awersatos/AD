@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_mgen_vlog
+
+[Library]
+ovi_mgen_vlog=.\ovi_mgen_vlog.LIB
+
+[$LibMap$]
+ovi_mgen_vlog=.
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_ovi_mgen_vlog.do=-1
+/generic.vlb=-1
+
+[Files.Data]
+.\src\update_ovi_mgen_vlog.do=Macro
+.\src\generic.vlb=Verilog Source Code
+

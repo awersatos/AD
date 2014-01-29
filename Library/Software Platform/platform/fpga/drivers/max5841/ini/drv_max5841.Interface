@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_max5841
+Category=DRIVER
+System=False
+Description=MAX5841 A/D converter
+PublicDir=platform\fpga\drivers\max5841\include

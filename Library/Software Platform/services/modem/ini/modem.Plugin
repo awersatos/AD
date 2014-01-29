@@ -1,0 +1,54 @@
+[Plugin]
+Name=modem
+Caption=Modem Services
+Description=AT modem and SMS messaging
+SourceDir=services\modem\src
+CompileOption0=-I"$(SSASROOT)\services\modem\internal"
+CompileOption1=-I"$(SSASROOT)\system\sysutils\include"
+GlobalCompileOption0=-I"$(SSASROOT)\services\modem\include"
+Implement=modem
+Bitmap=modem.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=serial
+Condition=EQ
+
+[Instance]
+Caption=Modem Context
+Description=AT modem and SMS messaging context
+Require0=serial
+
+[Instance_Option0]
+Name=Kind
+GUIName=Type
+Description=Modem Type. Will be automatically set by the peripheral layer if possible.
+Kind=ENUM
+DefaultValue=MODEM_TELIT
+Enum0=MODEM_HAYES
+Enum1=MODEM_TELIT
+Enum2=MODEM_SIM5218A
+Enum3=MODEM_SIM548C
+EnumValue0=0
+EnumValue1=1
+EnumValue2=2
+EnumValue3=3
+EnumGUI0=Hayes Modem
+EnumGUI1=Telit Modem
+EnumGUI2=SIMCom SIM5218A 3G GSM-GPRS-GPS Modem
+EnumGUI3=SIMCom SIM548C  2G GSM-GPRS-GPS Modem
+AutoValue=serial.ModemType
+AutoValueRequiredInterface=per_cellular
+
+[Instance_Option0_Auto_If0]
+Kind=PLUGIN
+Object=per_cellular
+Condition=EQ
+
+[Instance_Option1]
+Name=timeout
+GUINAME=Timeout (ms)
+Description=Maximum time allowed for modem to respond to a command (milliseconds)
+Kind=UINT32
+DefaultValue=600
+   

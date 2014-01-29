@@ -1,0 +1,26 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=j2svlib
+
+[Library]
+j2svlib=.\j2svlib.lib
+
+[$LibMap$]
+j2svlib=.
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/j2svlib.vhd=-1
+/update_j2svlib.do=-1
+
+[Files.Data]
+.\src\j2svlib.vhd=VHDL Source Code
+.\src\update_j2svlib.do=Macro
+

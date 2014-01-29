@@ -1,0 +1,176 @@
+** LMH6553 SPICE model Rev D
+**
+*////////////////////////////////////////////////////////
+** This model will give typical performance characteristics
+** for the following parameters
+*
+*     closed loop frequency response vs gain
+*     output current and voltage clamping
+*     input bias current error (common mode)
+*     input bias current error (differential mode)
+*     input common mode voltage offset
+*     slew rate and step response
+*     vnoise, referred to the input
+*     inoise, referred to the input
+*     output balance error vs frequency
+*     common mode frequency response
+*     Isupply temco
+*     Isupply dependence on supply voltage
+*
+** This model does not capture the following performance
+** characteristics. These will be included in the next release.
+*
+*     precision clamping
+*     harmonic distortion
+*
+**/////// Rev Info/////////////////////////////////////
+** 2008-Nov-05 revD Added series 0V Vsrc's to r41/27/28 to resove
+**                  "less than two nodes" errors under Microsim
+**
+** 2008-Nov-05 revC Flattened file (removed subcircuits) and
+**                  fixed a few more small errors.
+**
+** 2008-Nov-02 revB Removed trailing "1"'s from Q's and D's, modified "Q" lines in output stage subckt,
+**                  Moved .models up to top of deck. PG.
+**
+*//////////////////////////////////////////////////////
+** Top Level Circuit Description
+*//////////////////////////////////////////////////////
+** Pin Desciptions
+*                Positive Supply Voltage
+*                |   Negative Supply Voltage
+*                |   |   Positive Input Terminal
+*                |   |   |   Negative Input Terminal
+*                |   |   |   |   Positive Output Terminal
+*                |   |   |   |   |   Negative Output Terminal
+*                |   |   |   |   |   |   Output Common Mode Reference Input
+*                |   |   |   |   |   |   |   Output Clamp Control Input
+*                |   |   |   |   |   |   |   |
+.subckt LMH6553 vcc vee vip vim vop vom vcm vclmp
+l1 vim a0198 1e-9
+l0 vip a0118 1e-9
+l3 vom a0117 1e-9
+l2 vop a0113 1e-9
+r41 a02155 0 200
+vr41 a0215 a02155 0
+e0 a0118 a0100 a0215 0 1
+r27 a2220 0 5e-3
+vr27 a2220 a220 0
+g3 a202 vee a220 0 1
+r28 a2167 0 5e-3
+vr28 a2167 a167 0
+g4 a176 vee a167 0 1
+g1 vcc a108 vcc vee 140e-6
+g0 a111 a134 a108 vee 10.0e-3
+d3 a119 a0198 DIODEnoisy
+d4 a199 a0100 DIODEnoisy
+d6 a113 a140 DIODEideal
+d5 a115 a146 DIODEideal
+d1 a0198 a176 DIODEnoisy
+d0 a0100 a202 DIODEnoisy
+c4 a0100 a0198 6e-12
+c0 a203 0 2.1e-12
+c1 a205 0 2.1e-12
+q12 a174 a134 a224 0 NPNXTR
+q2 a134 a134 a248 0 NPNXTR
+q0 a202 a134 a250 0 NPNXTR
+q9 a140 vcm a149 0 NPNXTR
+q1 a176 a134 a252 0 NPNXTR
+q10 a146 a148 a174 0 NPNXTR
+q11 a149 a134 a222 0 NPNXTR
+q3 a119 a111 a154 0 PNPXTR
+q5 a111 a111 a157 0 PNPXTR
+q4 a199 a111 a160 0 PNPXTR
+v2 a241 a174 0
+v1 a202 a176 0
+i9 a0100 a0198 2.5e-6
+i5 vcc a148 12e-6
+i0 vcc a108 7e-3
+f2 0 a203 v2 1.0
+f3 0 a205 v2 1.0
+f1 0 a205 v1 -2.0
+f0 0 a203 v1 2.0
+rtm 0 a205 128e3
+r29 a222 vee 250
+r30 a224 vee 250
+r31 vcc a113 250
+rtp a203 0 128e3
+r32 vcc a115 250
+r20 vcc a157 250
+r15 a0113 a148 2.5e3
+r22 vcc a160 175
+r16 a148 a0117 2.5e3
+r33 a149 a241 200
+rtc a108 vee 14.3 tc=400e-6,-5e-6
+r21 vcc a154 175
+r19 a248 vee 250
+r17 a250 vee 175
+r18 a252 vee 175
+* hiz_limiter
+e500 a5037 0 a5049 0 1.0
+e501 a5041 0 a5062 0 1.0
+e503 a5045 0 vclmp 0 1.0
+v500 a5069 vcm 1.0
+i503 vcc vclmp 100e-6
+i507 vcc a5062 100e-6
+i506 a5068 vee 100e-6
+i504 a5049 vee 100e-6
+d502 a205 a5037 DIODEideal
+d505 a5041 a203 DIODEideal
+d506 a203 a5037 DIODEideal
+d500 vclmp a5049 DIODEideal
+d503 a5041 a205 DIODEideal
+d504 a5062 a5068 DIODEideal
+r501 a5045 a5066 1000
+r503 a5066 a5068 1000
+r504 a5069 vclmp 100e3
+* Ideal OpAmp
+c400 a4060 0 3.2e-12
+e400 a4029 0 a4060 0 1.0
+g400 a4060 0 vcm a5066 -20e-3
+r404 a4060 0 100e3
+r406 a4029 a5068 10
+** N Buffer Stage
+c201 vee a2005 250e-15
+c200 vcc a2017 250e-15
+q205 a2017 a111 a2040 0 PNPXTR
+q202 vee a205 a2017 0 PNPXTR
+q200 vee a2005 a2038 0 PNPXTR
+q207 a2005 a134 a2029 0 NPNXTR
+q203 vcc a205 a2005 0 NPNXTR
+q201 vcc a2017 a2060 0 NPNXTR
+r205 a0117 a2038 2
+r204 a2060 a0117 2
+r202 a2029 vee 160
+r200 vcc a2040 225
+* P Buffer Stage
+c301 vee a3005 250e-15
+c300 vcc a3017 250e-15
+q305 a3017 a111 a3040 0 PNPXTR
+q302 vee a203 a3017 0 PNPXTR
+q300 vee a3005 a3038 0 PNPXTR
+q307 a3005 a134 a3029 0 NPNXTR
+q303 vcc a203 a3005 0 NPNXTR
+q301 vcc a3017 a3060 0 NPNXTR
+r305 a0113 a3038 2
+r304 a3060 a0113 2
+r302 a3029 vee 160
+r300 vcc a3040 225
+*//////////////////////////////
+** Device Model Parameters
+*//////////////////////////////
+**
+**
+.model DIODEideal d(tnom=25.0 is=1e-18)
+.model DIODEnoisy d(tnom=25.0 is=1e-18 af=2.0 kf=80e-12)
+.model NPNXTR npn(tnom=25.0             is=14.42e-18            bf=121
++                 vaf=200.0             rb=57.00                re=3.000
++                 rc=7.000              cje=206.3e-15           cjc=81.45e-15
++                 kf=480.0e-12          af=2.000)
+.model PNPXTR pnp(tnom=25.0             is=18.92e-18            bf=79
++                 vaf=60.00             rb=35.80                re=1.600
++                 rc=3.500              cje=167.4e-15           cjc=126.8e-15
++                 kf=350.0e-12          af=2.000)
+*
+.ENDS LMH6553
+

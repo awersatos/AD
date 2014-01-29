@@ -1,0 +1,203 @@
+//============================================================
+# ls197 source
+//74LS197 4-bit Binary Ripple counter
+//changed STATE to STATE_BIT: dennis 7-20-97
+//checked out
+// jjt 22/1/2002: changed state commands in parallel loading
+//                section to state_bit statements.
+//============================================================
+INPUTS VCC, GND, MR, PL, CP0, CP1, D3, D2, D1, D0;
+OUTPUTS VCC_LD, MR_LD, PL_LD, CP0_LD, CP1_LD, D3_LD, D2_LD, D1_LD, D0_LD,
+        Q3, Q2, Q1, Q0;
+INTEGERS div5, reset, count2, count5, load, data;
+REALS ttlh_val, tthl_val, CP0_Q0_tplh, CP0_Q0_tphl, CP1_Q1_tplh, DATA_tplh,
+	  DATA_tphl, CP1_Q1_tphl, CP1_Q2_tplh, CP1_Q2_tphl, CP1_Q3_tplh, PL_tplh,
+	  PL_tphl, CP1_Q3_tphl, MR_tphl, CP0_tw, CP1_tw, MR_tw, PL_tw, MR_trec,
+	  ril_val, rih_val, ricc_val, DATA_tsh, DATA_thh, DATA_tsl,
+	  DATA_thl, PL_trec;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.75,5.25);	//check for min supply=4.75 and max supply=5.25
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.25,1.35);	//set input threshold values: vil and vih
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tMR\tPL\tCP0\tCP1\tD3\tD2\tD1\tD0\tQ3\tQ2\tQ1\tQ0");
+	ttlh_val= (MIN_TYP_MAX(tt_param: NULL, 5n, NULL));
+	tthl_val= (MIN_TYP_MAX(tt_param: NULL, 5n, NULL));
+
+    CP0_Q0_tplh= (MIN_TYP_MAX(tp_param: NULL, 8n, 15n));
+   	CP0_Q0_tphl= (MIN_TYP_MAX(tp_param: NULL, 14n, 21n));
+
+    CP1_Q1_tplh= (MIN_TYP_MAX(tp_param: NULL, 12n, 19n));
+    CP1_Q1_tphl= (MIN_TYP_MAX(tp_param: NULL, 23n, 35n));
+
+    CP1_Q2_tplh= (MIN_TYP_MAX(tp_param: NULL, 34n, 51n));
+    CP1_Q2_tphl= (MIN_TYP_MAX(tp_param: NULL, 42n, 63n));
+
+	CP1_Q3_tplh= (MIN_TYP_MAX(tp_param: NULL, 55n, 78n));
+    CP1_Q3_tphl= (MIN_TYP_MAX(tp_param: NULL, 63n, 95n));
+	
+    DATA_tplh= (MIN_TYP_MAX(tp_param: NULL, 18n, 27n));
+    DATA_tphl= (MIN_TYP_MAX(tp_param: NULL, 29n, 44n));
+
+	PL_tplh= (MIN_TYP_MAX(tp_param: NULL, 26n, 39n));
+    PL_tphl= (MIN_TYP_MAX(tp_param: NULL, 30n, 45n));
+	
+	MR_tphl= (MIN_TYP_MAX(tp_param: NULL, 34n, 51n));
+	
+	CP0_tw = (20n);
+    CP1_tw = (30n);
+    MR_tw = (15n);
+    PL_tw = (20n);
+	DATA_tsh = (10n);
+	DATA_thh = (20n);
+	DATA_tsl = (15n);
+	DATA_thl = (20n);
+    MR_trec = (30n);
+    PL_trec = (30n);
+    	
+	//LS std output drive IOL max=8mA @ vol=0.4V: rol_param=(0.4-vol_param)/8mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 25,  NULL));
+
+	//LS std output drive IOH max=-400uA @ voh=4.5V: roh_param=(voh_param-4.5)/400uA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 250, NULL));
+
+    //LS input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+	ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //LS input load IIL=-0.4mA @ 0.4V: r1= (voh_param-0.4)/0.4mA
+	rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 10.5k));
+
+	//Icc @ 5V with output low: 312.5= 16mA typical, 185.2= 27mA max
+	ricc_val= (MIN_TYP_MAX(i_param: NULL, 312.5, 185.2));
+
+	div5= (0);
+	STATE Q0 Q1 Q2 Q3 = ZERO;    //initialize outputs
+	EXIT;
+  END;
+
+DRIVE Q0 Q1 Q2 Q3 = (v0=vol_param,v1=voh_param,ttlh=ttlh_val,tthl=tthl_val);
+LOAD MR_LD PL_LD CP0_LD CP1_LD D3_LD D2_LD D1_LD D0_LD =
+  (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,t=1p);
+
+reset= (0);
+count2= (0);
+count5= (0);
+
+IF (MR) THEN
+  BEGIN
+  IF (PL) THEN
+    BEGIN
+	  IF (CHANGED_HL(CP0)) THEN
+        BEGIN
+	      count2= (1);
+          IF (Q0) THEN
+            BEGIN
+              STATE Q0 = ZERO;
+	        ELSE
+	          STATE Q0 = ONE;
+	        END;
+	    END;
+      IF (CHANGED_HL(CP1)) THEN
+        BEGIN
+	      count5= (1);
+	      div5= (div5 + 1);
+	      IF (div5 > 8) THEN
+		    BEGIN
+		      div5 = (0);
+		    END;
+
+		  STATE_BIT Q1 Q2 Q3 = (div5);
+	    END;
+	ELSE
+	  load= (1);
+	  STATE_BIT Q3 = (D3);
+	  STATE_BIT Q2 = (D2);
+	  STATE_BIT Q1 = (D1);
+	  STATE_BIT Q0 = (D0);
+	END;
+  ELSE
+	reset= (1);
+	div5= (0);
+	STATE Q0 Q1 Q2 Q3 = ZERO;
+  END;  
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//        present_time,MR,PL,CP0,CP1,D3,D2,D1,D0,Q3,Q2,Q1,Q0);
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,v1=pwr_param,r1=1e6,t=1p);
+
+IF (warn_param) THEN
+  BEGIN
+    WIDTH (MR twh=MR_tw twl=MR_tw "MR");
+	IF (MR) THEN
+	  BEGIN
+        RECOVER (CP1=HL MR TREC=MR_trec "MR->CP1");
+		WIDTH (PL twh=PL_tw twl=PL_tw "PL");
+		IF (PL) THEN
+		  BEGIN
+		    RECOVER (CP1=HL PL TREC=PL_trec "PL->CP1");
+			WIDTH (CP0 twl=CP0_tw twh=CP0_tw "CP0");
+			WIDTH (CP1 twl=CP1_tw twh=CP1_tw "CP1");
+		  ELSE
+		    SETUP_HOLD(PL=LH D0 D1 D2 D3 TSH=DATA_tsh THH=DATA_thh "Dx->PL");
+			SETUP_HOLD(PL=LH D0 D1 D2 D3 TSL=DATA_tsl THL=DATA_thl "Dx->PL");
+		  END;
+      END; 
+  END;
+   
+data = (CHANGED(D0) || CHANGED(D1) || CHANGED(D2) || CHANGED(D3));
+DELAY Q0 =
+  CASE (TRAN_LH && count2) : CP0_Q0_tplh
+  CASE (TRAN_HL && count2) : CP0_Q0_tphl 
+  
+  CASE (TRAN_LH && data) : DATA_tplh
+  CASE (TRAN_HL && data) : DATA_tphl 
+  
+  CASE (TRAN_LH && load) : PL_tplh
+  CASE (TRAN_HL && load) : PL_tphl 
+  
+  CASE (reset) : MR_tphl
+END;
+
+DELAY Q1 =
+  CASE (TRAN_LH && count5) : CP1_Q1_tplh
+  CASE (TRAN_HL && count5) : CP1_Q1_tphl 
+  
+  CASE (TRAN_LH && data) : DATA_tplh
+  CASE (TRAN_HL && data) : DATA_tphl 
+  
+  CASE (TRAN_LH && load) : PL_tplh
+  CASE (TRAN_HL && load) : PL_tphl 
+  
+  CASE (reset) : MR_tphl
+END;
+
+DELAY Q2 =
+  CASE (TRAN_LH && data) : DATA_tplh
+  CASE (TRAN_HL && data) : DATA_tphl 
+  
+  CASE (TRAN_LH && load) : PL_tplh
+  CASE (TRAN_HL && load) : PL_tphl 
+  
+  CASE (reset) : MR_tphl
+  
+  CASE (TRAN_LH) : CP1_Q2_tplh
+  CASE (TRAN_HL) : CP1_Q2_tphl 
+END;
+
+
+DELAY Q3 =
+  CASE (TRAN_LH && data) : DATA_tplh
+  CASE (TRAN_HL && data) : DATA_tphl 
+  
+  CASE (TRAN_LH && load) : PL_tplh
+  CASE (TRAN_HL && load) : PL_tphl 
+  
+  CASE (reset) : MR_tphl 
+  
+  CASE (TRAN_LH) : CP1_Q3_tplh
+  CASE (TRAN_HL) : CP1_Q3_tphl 
+END;
+EXIT;

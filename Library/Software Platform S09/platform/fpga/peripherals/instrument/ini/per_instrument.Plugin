@@ -1,0 +1,65 @@
+[Plugin]
+Name=per_instrument
+Description=Fully customizable virtual instrument with base address, data width, input signals and output signals.
+Caption=Custom Instrument
+SourceDir=platform\fpga\peripherals\instrument\src
+Implement=per_instrument
+HardwareID=CUSTOM_INSTRUMENT
+Bitmap=per_instrument.bmp
+LargeBitmap=per_instrument_large.bmp
+Visible=True
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=Hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=WishboneDataWith
+CodeName=datawidth
+GUIName=Data Width
+Description=Data width (in bits) of the Custom Instrument
+Kind=ENUM
+Enum0=8
+Enum1=16
+Enum2=32
+EnumDescription0=8 bit data width
+EnumDescription1=16 bit data width
+EnumDescription2=32 bit data width
+DefaultValue=8
+Auto=True
+
+[Instance_Option2]
+Name=InputSignals
+GUIName=Input Signals
+Description=The input signals of the Custom Instrument. The input signal names entered must be separated by commas (eg. IN1, IN2).
+Kind=STRINGS
+DefaultValue=
+Auto=True
+
+[Instance_Option3]
+Name=OutputSignals
+GUIName=Output Signals
+Description=The output signals of the Custom Instrument. The output signal names entered must be separated by commas (eg. OUT1, OUT2).
+Kind=STRINGS
+DefaultValue=
+Auto=True
+
+[Instance_CustomGeneration0]
+HeaderFile=instruments.h
+SourceFile=instruments.c
+GeneratorKind=CCC
+GeneratorId=CUSTOM_INSTRUMENT
+

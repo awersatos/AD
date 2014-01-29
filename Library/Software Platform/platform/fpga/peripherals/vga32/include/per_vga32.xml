@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_vga32" description="32-bit VGA Controller">
+		<sfr name="CTRL_REG"	offset="0"	size="32" description="Control Register">
+			<bitfield name="LITTLEENDIAN"	start="31" end="31" access="rw" description="Little Endian Mode Bit">
+				<value value="0" description="Bit Endian Mode"/>
+				<value value="1" description="Little Endian Mode"/>
+			</bitfield>
+			<bitfield name="CKDE"	start="12" end="12" access="rw" description="Clock Division Enable Bit">
+				<value value="0" description="50 MHz 800x600 or 25 MHz 640x480"/>
+				<value value="1" description="25 MHz 800x600"/>
+			</bitfield>
+			<bitfield name="BOP"	start="11" end="11" access="rw" description="Blanking Synchronization Output Polarity Bit">
+				<value value="0" description="Sync pulse active high"/>
+				<value value="1" description="Sync pulse active low"/>
+			</bitfield>
+			<bitfield name="COP"	start="10" end="10" access="rw" description="Composite Synchronization Output Polarity Bit">
+				<value value="0" description="Sync pulse active high"/>
+				<value value="1" description="Sync pulse active low"/>
+			</bitfield>
+			<bitfield name="VOP"	start="9" end="9" access="rw" description="Vertical Synchronization Output Polarity Bit">
+				<value value="0" description="Sync pulse active high"/>
+				<value value="1" description="Sync pulse active low"/>
+			</bitfield>
+			<bitfield name="HOP"	start="8" end="8" access="rw" description="Horizontal Synchronization Output Polarity Bit">
+				<value value="0" description="Sync pulse active high"/>
+				<value value="1" description="Sync pulse active low"/>
+			</bitfield>
+			<bitfield name="CME"	start="7" end="7" access="rw" description="Color Mode Enable Bit">
+				<value value="0" description="Black And White Mode"/>
+				<value value="1" description="Color Lookup Mode"/>
+			</bitfield>
+			<bitfield name="BM"	start="6" end="5" access="rw" description="Bitmode Control Bits">
+				<value value="0" description="8-bit per pixel"/>
+				<value value="1" description="4-bit per pixel"/>
+				<value value="2" description="2-bit per pixel"/>
+				<value value="3" description="1-bit per pixel"/>
+			</bitfield>
+			<bitfield name="LTB"	start="4" end="4" access="rw" description="Color Lookup Table Select Bit">
+				<value value="0" description="Bank 0"/>
+				<value value="1" description="Bank 1"/>
+			</bitfield>
+			<bitfield name="VSE"	start="0" end="0" access="rw" description="Video System Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+		</sfr>
+		<sfr name="STAT_REG"	offset="4"	size="32" description="Status Register">
+			<bitfield name="ACP"	start="4" end="4" access="rw" description="Active Color Lookup Table Flag Bit">
+				<value value="0" description="Bank 0"/>
+				<value value="1" description="Bank 1"/>
+			</bitfield>
+		</sfr>
+		<sfr name="HTIM_REG"	offset="8"	size="32" description="Horizontal Timing Register">
+			<bitfield name="HSYNC"		start="31" end="24" access="rw" description="Horizontal Sync Pulse Length"/>
+			<bitfield name="HBPORCH"	start="23" end="16" access="rw" description="Horizontal Back Porsch Length"/>
+			<bitfield name="HVISIBLE"	start="15"  end="0" access="rw" description="Horizontal Visible Area"/>
+		</sfr>
+		<sfr name="VTIM_REG"	offset="12"	size="32" description="Vertical Timing Register">
+			<bitfield name="VSYNC"		start="31" end="24" access="rw" description="Vertical Sync Pulse Length"/>
+			<bitfield name="VBPORCH"	start="23" end="16" access="rw" description="Vertical Back Porsch Length"/>
+			<bitfield name="VVISIBLE"	start="15"  end="0" access="rw" description="Vertical Visible Area"/>
+		</sfr>
+		<sfr name="HVLEN_REG"	offset="16"	size="32" description="Horizontal And Vertical Length Register">
+			<bitfield name="HLEN"	start="31" end="16" access="rw" description="Number Of Line Pixels"/>
+			<bitfield name="VLEN"	start="15"  end="0" access="rw" description="Number Of Frame Lines "/>
+		</sfr>
+		<sfr name="VMBA_REG"	offset="20"	size="32" description="Video Memory Base Address Register"/>
+		<sfr name="CDIV_REG"	offset="24"	size="32" description="System Clock Division Register"/>
+		<sfr name="CLUTOFF_REG"	offset="28"	size="32" description="Color Lookup Table Offset Register"/>
+        <sfr name="CLUT0"       offset="512" size="32" description="Start Address Color Look-up table #0" />
+        <sfr name="CLUT1"       offset="768" size="32" description="Start Address Color Look-up table #1" />
+	</group>
+</sfrfile>

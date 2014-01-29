@@ -1,0 +1,209 @@
+//============================================================
+# 4040 source 
+//jjt 23/5/2000: 4040.txt in FSC/NSC are the same, but 
+//             saved in two separate files for future modification.
+//4040B: 12-Stage Binary Counter
+//dm 8-12-97: rewrote.
+//jjt: 23/5/2000: changed logic so that the Q12 output would work:
+//              ... IF (internal_reg > 4095) THEN ...
+//jjt 15/1/2002: copied HCC4040 from ST.
+//============================================================
+INPUTS VDD, GND, CP, MR;
+OUTPUTS VDD_LD, CP_LD, MR_LD,
+        Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11;
+INTEGERS internal_reg;
+REALS tt_5, tt_10, tt_15, tt_val, vdd_val, rin_val, ridd_val,
+      rout_5, rout_10, rout_15, tphl_Q0, tphl_Q0_5, tphl_Q0_10,
+	  tphl_Q0_15, tplh_Q0, tplh_Q0_5, tplh_Q0_10, tplh_Q0_15,
+	  tphl_Qn, tphl_Qn_5, tphl_Qn_10, tphl_Qn_15, tplh_Qn,
+	  tplh_Qn_5, tplh_Qn_10, tplh_Qn_15, tp_MR_5, tp_MR_10,
+	  tp_MR_15, twh_CP, twh_CP_5, twh_CP_10, twh_CP_15, twh_MR,
+	  twh_MR_5, twh_MR_10, twh_MR_15, trec_MR, trec_MR_5,
+	  trec_MR_10, trec_MR_15;
+
+PWR_GND_PINS(VDD,GND);	//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(3,18);	//check for min supply=3 and max supply=18
+VOL_VOH_MIN(0,0,0.1);	//set min vol_param=gnd_param+0, max voh_param=pwr_param-0
+VIL_VIH_PERCENT(33,66);	//CMOS vil=33% of supply, vih=66% of supply
+IO_PAIRS(CP:CP_LD, MR:MR_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tMR\tCP\tQ0\tQ3\tQ4\tQ5\tQ6\tQ7\tQ8\tQ9\tQ10\tQ11");
+	//Note: ttlh and tthl values are the same
+	tt_5= (MIN_TYP_MAX(tt_param: NULL, 60n, 120n));
+	tt_10= (MIN_TYP_MAX(tt_param: NULL, 30n, 60n));
+	tt_15= (MIN_TYP_MAX(tt_param: NULL, 20n, 40n));
+
+    tphl_Q0_5= (MIN_TYP_MAX(tp_param: NULL, 105n, 210n));
+    tphl_Q0_10= (MIN_TYP_MAX(tp_param: NULL, 45n, 90n));
+    tphl_Q0_15= (MIN_TYP_MAX(tp_param: NULL, 35n, 70n));
+
+    tplh_Q0_5= (MIN_TYP_MAX(tp_param: NULL, 85n, 170n));
+    tplh_Q0_10= (MIN_TYP_MAX(tp_param: NULL, 40n, 80n));
+    tplh_Q0_15= (MIN_TYP_MAX(tp_param: NULL, 30n, 60n));
+
+    tphl_Qn_5= (MIN_TYP_MAX(tp_param: NULL, 20n, 40n));
+    tphl_Qn_10= (MIN_TYP_MAX(tp_param: NULL, 8n, 16n));
+    tphl_Qn_15= (MIN_TYP_MAX(tp_param: NULL, 5n, 10n));
+
+    tplh_Qn_5= (MIN_TYP_MAX(tp_param: NULL, 35n, 70n));
+    tplh_Qn_10= (MIN_TYP_MAX(tp_param: NULL, 15n, 30n));
+    tplh_Qn_15= (MIN_TYP_MAX(tp_param: NULL, 10n, 20n));
+
+    tp_MR_5= (MIN_TYP_MAX(tp_param: NULL, 90n, 180n));
+    tp_MR_10= (MIN_TYP_MAX(tp_param: NULL, 40n, 80n));
+    tp_MR_15= (MIN_TYP_MAX(tp_param: NULL, 30n, 60n));
+
+    twh_CP_5= (50n);	//min twh @ 5V
+	twh_CP_10= (30n);	//min twh @ 10V
+	twh_CP_15= (20n);	//min twh @ 15V
+
+    twh_MR_5= (40n);	//min twh @ 5V
+	twh_MR_10= (30n);	//min twh @ 10V
+	twh_MR_15= (20n);	//min twh @ 15V
+
+    trec_MR_5= (40n);	//min twh @ 5V
+	trec_MR_10= (30n);	//min twh @ 10V
+	trec_MR_15= (20n);	//min twh @ 15V
+
+	//CMOS B IOH min=0.44mA @ Vdd=5V and Voh=4.6V: rout=(Vdd-Voh)/IOH=909
+	//CMOS B IOL min=0.44mA @ Vdd=5V and Vol=0.4V: rout=Vol/IOL=909
+    rout_5= (MIN_TYP_MAX(drv_param: 909,NULL,NULL));
+
+	//CMOS B IOH min=1.1mA @ Vdd=10V and Voh=9.5V: rout=(Vdd-Voh)/IOH=454.5
+	//CMOS B IOL min=1.1mA @ Vdd=10V and Voh=0.5V: rout=Vol/IOL=454.5
+    rout_10= (MIN_TYP_MAX(drv_param: 454.5,NULL,NULL));
+
+	//CMOS B IOH min=3mA @ Vdd=15V and Voh=13.5V: rout=(Vdd-Voh)/IOH=500
+	//CMOS B IOL min=3mA @ Vdd=15V and Vol=1.5V: rout=Vol/IOL=500
+    rout_15= (MIN_TYP_MAX(drv_param: 500,NULL,NULL));
+
+	//Note: Input loading and Idd are linear over Vdd ranges
+    //CMOS input current @ 25'C: IIN=0.1uA @ VDD=15v rin= (15/0.1uA);
+	rin_val= (MIN_TYP_MAX(ld_param: NULL, 1.5E8, NULL));
+
+	//Idd @ 5V with output low: 1E9= 5nA typical, 250k= 20uA max
+	ridd_val= (MIN_TYP_MAX(i_param: NULL, 1E9, 250k));
+
+	internal_reg = (0);
+	STATE Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 = ZERO;    //initialize outputs
+	EXIT;
+  END;
+
+vdd_val= (pwr_param - gnd_param);
+rol_param= (PWL_TABLE(vdd_val: 5,rout_5,10,rout_10,15,rout_15));
+roh_param= (rol_param);			// Drive high same as drive low
+tt_val= (PWL_TABLE(vdd_val:5,tt_5,10,tt_10,15,tt_15));
+
+DRIVE Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 = 
+  (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD MR_LD CP_LD = 
+  (v0=vol_param,r0=rin_val,v1=voh_param,r1=rin_val,io=1e12,t=1p);
+
+IF (MR) THEN
+  BEGIN
+	internal_reg = (0);
+  ELSE
+	IF (CHANGED_HL(CP)) THEN
+	  BEGIN
+		internal_reg = (internal_reg + 1);
+		IF (internal_reg > 4095) THEN
+		  BEGIN
+		    internal_reg = (0);
+		  END;
+	  END;
+  END;
+
+STATE_BIT Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 = (internal_reg);
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//        present_time,MR,CP,Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11);
+
+IF (warn_param) THEN
+  BEGIN
+    twh_MR= (PWL_TABLE(vdd_val: 5,twh_MR_5,10,twh_MR_10,15,twh_MR_15));
+	WIDTH(MR Twh=twh_MR "MR");
+	IF (~(MR)) THEN
+	  BEGIN
+        twh_CP= (PWL_TABLE(vdd_val: 5,twh_CP_5,10,twh_CP_10,15,twh_CP_15));
+		WIDTH(CP Twh=twh_CP "CP");
+
+        trec_MR= (PWL_TABLE(vdd_val: 5,trec_MR_5,10,trec_MR_10,15,trec_MR_15));
+        RECOVER(CP=HL MR TREC=trec_MR "CP->MR");
+	  END;
+  END;
+
+LOAD VDD_LD = (v0=gnd_param,r0=ridd_val,t=1p);
+
+IF (MR) THEN
+  BEGIN
+    DELAY Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 = 
+	  (PWL_TABLE(vdd_val:5,tp_MR_5,10,tp_MR_10,15,tp_MR_15));
+  ELSE
+    tplh_Q0= (PWL_TABLE(vdd_val:5,tplh_Q0_5,10,tplh_Q0_10,15,tplh_Q0_15));
+    tphl_Q0= (PWL_TABLE(vdd_val:5,tphl_Q0_5,10,tphl_Q0_10,15,tphl_Q0_15));
+    tplh_Qn= (PWL_TABLE(vdd_val:5,tplh_Qn_5,10,tplh_Qn_10,15,tplh_Qn_15));
+    tphl_Qn= (PWL_TABLE(vdd_val:5,tphl_Qn_5,10,tphl_Qn_10,15,tphl_Qn_15));
+
+	DELAY Q0 =
+      CASE (TRAN_LH) : tplh_Q0
+	  CASE (TRAN_HL) : tphl_Q0
+	END;
+
+	DELAY Q1 =
+      CASE (TRAN_LH) : (tplh_Q0 + tplh_Qn)
+	  CASE (TRAN_HL) : (tphl_Q0 + tphl_Qn)
+	END;
+
+	DELAY Q2 =
+      CASE (TRAN_LH) : (tplh_Q0 + (2*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (2*tphl_Qn))
+	END;
+
+	DELAY Q3 =
+      CASE (TRAN_LH) : (tplh_Q0 + (3*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (3*tphl_Qn))
+	END;
+
+	DELAY Q4 =
+      CASE (TRAN_LH) : (tplh_Q0 + (4*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (4*tphl_Qn))
+	END;
+
+	DELAY Q5 =
+      CASE (TRAN_LH) : (tplh_Q0 + (5*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (5*tphl_Qn))
+	END;
+
+	DELAY Q6 =
+      CASE (TRAN_LH) : (tplh_Q0 + (6*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (6*tphl_Qn))
+	END;
+
+	DELAY Q7 =
+      CASE (TRAN_LH) : (tplh_Q0 + (7*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (7*tphl_Qn))
+	END;
+
+	DELAY Q8 =
+      CASE (TRAN_LH) : (tplh_Q0 + (8*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (8*tphl_Qn))
+	END;
+
+	DELAY Q9 =
+      CASE (TRAN_LH) : (tplh_Q0 + (9*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (9*tphl_Qn))
+	END;
+
+	DELAY Q10 =
+      CASE (TRAN_LH) : (tplh_Q0 + (10*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (10*tphl_Qn))
+	END;
+
+	DELAY Q11 =
+      CASE (TRAN_LH) : (tplh_Q0 + (11*tplh_Qn))
+	  CASE (TRAN_HL) : (tphl_Q0 + (11*tphl_Qn))
+	END;
+  END;
+EXIT;

@@ -1,0 +1,50 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=xp
+
+[Library]
+xp=.\xp.lib
+
+[$LibMap$]
+xp=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files.Data]
+.\src\ORCA_CMB.vhd=VHDL Source Code
+.\src\ORCA_CNT.vhd=VHDL Source Code
+.\src\ORCA_IO.vhd=VHDL Source Code
+.\src\ORCA_LUT.vhd=VHDL Source Code
+.\src\ORCA_MEM.vhd=VHDL Source Code
+.\src\ORCA_MIS.vhd=VHDL Source Code
+.\src\ORCA_MISC.vhd=VHDL Source Code
+.\src\ORCA_SEQ.vhd=VHDL Source Code
+.\src\update_xp.do=Macro
+.\src\XP_MEM.vhd=VHDL Source Code
+.\src\XP_PKG.vhd=VHDL Source Code
+
+[Files]
+/ORCA_CMB.vhd=-1
+/ORCA_CNT.vhd=-1
+/ORCA_IO.vhd=-1
+/ORCA_LUT.vhd=-1
+/ORCA_MEM.vhd=-1
+/ORCA_MIS.vhd=-1
+/ORCA_MISC.vhd=-1
+/ORCA_SEQ.vhd=-1
+/XP_MEM.vhd=-1
+/XP_PKG.vhd=-1
+/update_xp.do=-1
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

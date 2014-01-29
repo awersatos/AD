@@ -1,0 +1,44 @@
+[Plugin]
+Name=drv_mp3dec
+Description=MP3 Decoder Driver
+Caption=MP3 Decoder Driver
+SourceDir=platform\fpga\drivers\mp3dec\src
+InitHandler=
+InitHandlerPriority=16
+Implement=drv_mp3dec
+MinInstances=1
+Bitmap=drv_mp3dec.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_mp3dec
+Condition=EQ
+
+[Instance]
+Require0=per_mp3dec
+
+[Instance_Option0]
+Name=scratchtype
+GUIName=Core scratch memory location
+Kind=ENUM
+Enum0=PRIVATE
+EnumGUI0=Private to core
+Enum1=SHARED
+EnumGUI1=Shared with CPU
+DefaultValue=PRIVATE
+
+[Instance_Option1]
+Name=scratchbuffer
+GUIName=Scratch Buffer
+Description=Buffer allocation for scratch memory used by the core
+Kind=Buffer
+Type=UINT32
+AllocMemory=True
+AutoValue=6080
+NoAllocIfHidden=True
+
+[Instance_Option1_Hide_If0]
+Object=scratchtype
+Kind=Option
+Value=PRIVATE
+Condition=EQ

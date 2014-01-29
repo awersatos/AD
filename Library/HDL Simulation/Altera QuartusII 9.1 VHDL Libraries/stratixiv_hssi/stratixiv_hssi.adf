@@ -1,0 +1,38 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=stratixiv_hssi
+
+[Library]
+stratixiv_hssi=.\stratixiv_hssi.LIB
+
+[$LibMap$]
+stratixiv_hssi=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/stratixiv_hssi_atoms.vhd=-1
+/stratixiv_hssi_components.vhd=-1
+/update_stratixiv_hssi.do=-1
+
+[Files.Data]
+.\src\stratixiv_hssi_atoms.vhd=VHDL Source Code
+.\src\stratixiv_hssi_components.vhd=VHDL Source Code
+.\src\update_stratixiv_hssi.do=Macro
+

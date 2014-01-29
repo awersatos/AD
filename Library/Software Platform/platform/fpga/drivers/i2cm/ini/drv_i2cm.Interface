@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_i2cm
+Category=DRIVER
+System=False
+Description=I2C master controller driver
+PublicDir=platform\fpga\drivers\i2cm\include

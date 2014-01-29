@@ -1,0 +1,6 @@
+*****************************************************************
+.MODEL BAS70 D(IS=3N N=1.06 RS=29 XTI=1.8 EG=.68 
++ CJO=1.55P M=.29 VJ=.36 FC=.5 BV=70 IBV=100n TT=25P)
+* ISR=2.5n NR=1k IKF=5m
+* for 27C reverse current simulation use: GMIN=.5e-9
+* 17.12.1993 SIEMENS PD1 KURTH

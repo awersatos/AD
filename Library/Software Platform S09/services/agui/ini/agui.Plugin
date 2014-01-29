@@ -1,0 +1,76 @@
+[Plugin]
+Name=agui
+Caption=GUI Services
+Description=Graphical user interface objects
+SourceDir=services\agui\src
+InitHandler=agui_init
+InitHandlerPriority=1
+Implement=agui
+MinInstances=1
+Bitmap=agui.bmp
+CompileOption0=-I"$(SSASROOT)\services\agui\internal"
+CompileOption1=-I"$(SSASROOT)\services\posix\include"
+
+[Option0]
+Name=appearance
+GUIName=Appearance
+Description=Appearance of the AGUI
+Kind=ENUM
+DefaultValue=3D
+Enum0=2D
+Enum1=3D
+EnumDescription0=2D appearance of the objects
+EnumDescription1=3D appearance of the objects
+
+[Option1]
+Name=checkbox_size
+GUIName=Checkbox size
+Description=Size of the checkbox for both width and height
+Kind=integer
+DefaultValue=15
+MinRange=8
+MaxRange=30
+
+[Option2]
+Name=corner_radius
+GUIName=Component corner radius
+Description=Radius of the component corners
+Kind=integer
+DefaultValue=7
+MinRange=0
+MaxRange=10
+
+[Option2_Hide_If0]
+Object=appearance
+Kind=Option
+Condition=NOTEQ
+Value=2D
+
+[Option3]
+Name=bar_width
+GUIName=Scrollbar size
+Description=Width of the scrollbars and sliders
+Kind=uint8_t
+DefaultValue=15
+MinRange=10
+MaxRange=50
+
+[Instance]
+Caption=GUI Context
+Description=Graphical user interface context
+Require0=graphics
+Require1=pointer
+
+[Instance_Option0]
+Name=priority
+GUIName=Thread Priority
+Description=In a multi-threading environment a thread is started for each instance of AGUI. This thread executes the input events and updates the screen. Normally this thread has a higher priority as the main thread.
+Kind=integer
+DefaultValue=40
+MinRange=1
+MaxRange=62
+
+[Instance_Option0_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ

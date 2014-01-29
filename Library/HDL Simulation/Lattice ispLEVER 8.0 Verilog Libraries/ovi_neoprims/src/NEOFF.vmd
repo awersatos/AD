@@ -1,0 +1,172 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Copyright (c) 2005 by Lattice Semiconductor Corporation
+// --------------------------------------------------------------------
+//
+//
+//                     Lattice Semiconductor Corporation
+//                     5555 NE Moore Court
+//                     Hillsboro, OR 97214
+//                     U.S.A.
+//
+//                     TEL: 1-800-Lattice  (USA and Canada)
+//                          1-408-826-6000 (other locations)
+//
+//                     web: http://www.latticesemi.com/
+//                     email: techsupport@latticesemi.com
+//
+// --------------------------------------------------------------------
+//
+// Simulation Library File for NEOPRIMS
+//
+// $Header: /home/dmsys/pvcs/RCSMigTest/rcs/verilog/pkg/versclibs/data/neoprims/RCS/NEOFF.vmd,v 1.6 2005/05/19 18:23:52 pradeep Exp $ 
+//
+`timescale 1 ns / 100 ps
+`celldefine
+
+   module NEOFF (OUT, IN, CLK, SET, RST, CE);
+
+      output OUT;
+      input  IN, CLK, SET, RST, CE;
+
+//    This initialization stuff was removed because we went ahead and
+//    modified the verilog writer to add connections for power/ground
+//    if these pins were left unconnected.
+//    wire RRST, RSET, RCE;
+
+//      assign RRST = (RST === 1'bz) ? 1'b0 : RST;
+//      assign RSET = (SET === 1'bz) ? 1'b0 : SET;
+//      assign RCE = (CE === 1'bz) ? 1'b1 : CE;
+
+      ffsrce (OUT, CLK, IN, CE, SET, RST);
+
+//`ifdef NOCHECKS
+//`else
+        // constraint logic for timing checks
+        NNP_UDP         (INSH, CE, SET, RST);
+        NN_UDP          (CESH, SET, RST);
+//`endif
+
+   specify
+
+      specparam INDLYLH      = 0:0:0,  INDLYHL      = 0:0:0 ;
+      specparam OUTDLYLH     = 0:0:0,  OUTDLYHL     = 0:0:0 ;
+      specparam CLKDLYLH     = 0:0:0,  CLKDLYHL     = 0:0:0 ;
+      specparam SETDLYLH     = 0:0:0,  SETDLYHL     = 0:0:0 ;
+      specparam RSTDLYLH     = 0:0:0,  RSTDLYHL     = 0:0:0 ;
+      specparam CEDLYLH      = 0:0:0,  CEDLYHL      = 0:0:0 ;
+      specparam SUINCLK      = 0:0:0,  HOLDINCLK    = 0:0:0 ;
+      specparam HOLDSETCLK   = 0:0:0,  HOLDRSTCLK   = 0:0:0 ;
+      specparam SUCECLK      = 0:0:0,  HOLDCECLK    = 0:0:0 ;
+      specparam RECSETCLK    = 0:0:0,  RECRSTCLK    = 0:0:0 ;
+      specparam PWCLKHI      = 0:0:0,  PWCLKLO      = 0:0:0 ;
+      specparam PWINHI       = 0:0:0,  PWINLO       = 0:0:0 ;
+      specparam PWRSTHI      = 0:0:0,  PWRSTLO      = 0:0:0 ;
+      specparam PWSETHI      = 0:0:0,  PWSETLO      = 0:0:0 ;
+
+//      These are for data edge specific setup/hold params, which
+//      are unsupported in SDF.
+//      specparam SUINHICLK    = 0:0:0,  SUINLOCLK    = 0:0:0 ;
+//      specparam HOLDINHICLK  = 0:0:0,  HOLDINLOCLK  = 0:0:0 ;
+//      specparam HOLDSETHICLK = 0:0:0,  HOLDSETLOCLK = 0:0:0 ;
+//      specparam HOLDRSTHICLK = 0:0:0,  HOLDRSTLOCLK = 0:0:0 ;
+//      specparam SUCEHICLK    = 0:0:0,  SUCELOCLK    = 0:0:0 ;
+//      specparam HOLDCEHICLK  = 0:0:0,  HOLDCELOCLK  = 0:0:0 ;
+//    $setup(posedge IN, posedge CLK, SUINHICLK) ;
+//    $setup(negedge IN, posedge CLK, SUINLOCLK) ;
+//    $hold(posedge CLK, posedge IN, HOLDINHICLK) ;
+//    $hold(posedge CLK, negedge IN, HOLDINLOCLK) ;
+//    $hold(posedge CLK, posedge SET, HOLDSETHICLK) ;
+//    $hold(posedge CLK, negedge SET, HOLDSETLOCLK) ;
+//    $hold(posedge CLK, posedge RST, HOLDRSTHICLK) ;
+//    $hold(posedge CLK, negedge RST, HOLDRSTLOCLK) ;
+//    $setup(posedge CE, posedge CLK, SUCEHICLK) ;
+//    $setup(negedge CE, posedge CLK, SUCELOCLK) ;
+//    $hold(posedge CLK, posedge CE, HOLDCEHICLK) ;
+//    $hold(posedge CLK, negedge CE, HOLDCELOCLK) ;
+
+      (CLK => OUT) = (CLKDLYLH+OUTDLYLH, CLKDLYHL+OUTDLYHL);
+      (SET => OUT) = (SETDLYLH+OUTDLYLH, SETDLYHL+OUTDLYHL);
+      (RST => OUT) = (RSTDLYLH+OUTDLYLH, RSTDLYHL+OUTDLYHL);
+      (CE => OUT) = (CEDLYLH+OUTDLYLH, CEDLYHL+OUTDLYHL);
+
+      $setup( IN, posedge CLK &&& INSH, SUINCLK) ;
+      $setup( CE, posedge CLK &&& CESH, SUCECLK) ;
+      $setup( SET, posedge CLK, RECSETCLK) ;
+      $setup( RST, posedge CLK, RECRSTCLK) ;
+      $hold(posedge CLK &&& INSH,  IN, HOLDINCLK) ;
+      $hold(posedge CLK,  SET, HOLDSETCLK) ;
+      $hold(posedge CLK,  RST, HOLDRSTCLK) ;
+      $hold(posedge CLK &&& CESH,  CE, HOLDCECLK) ;
+
+//      Someday the SDF writer may be changed to use RECOVERY
+//      $recovery(negedge SET, posedge CLK, RECSETCLK) ;
+//      $recovery(negedge RST, posedge CLK, RECRSTCLK) ;
+
+      $width(posedge CLK, PWCLKHI);
+      $width(negedge CLK, PWCLKLO);
+      $width(posedge IN, PWINHI);
+      $width(negedge IN, PWINLO);
+      $width(posedge RST, PWRSTHI);
+      $width(negedge RST, PWRSTLO);
+      $width(posedge SET, PWSETHI);
+      $width(negedge SET, PWSETLO);
+
+   endspecify
+   endmodule
+`endcelldefine
+
+`celldefine
+   primitive ffsrce (q, clk, d, ce, set, rst);
+
+   output q; reg q;
+   input  clk, d, ce, set, rst;
+
+     table
+
+   //    clk    d     ce   set   rst     q     q+ ;
+
+         (01)   0      1    0     0  :   ?  :  0 ;
+         (01)   1      1    0     0  :   ?  :  1 ;
+         (01)   0      0    0     0  :   ?  :  - ;
+         (01)   1      0    0     0  :   ?  :  - ;
+         (0x)   0      0    0     0  :   ?  :  - ;
+         (0x)   1      0    0     0  :   ?  :  - ;
+         (01)   x      0    0     0  :   ?  :  - ;
+       	 (01)   x      1    0     0  :   ?  :  x ;
+         (?0)   ?      ?    0     0  :   ?  :  - ;
+//       (??)   ?      ?    1     0  :   ?  :  1 ;
+//       (??)   ?      ?    0     1  :   ?  :  0 ;
+//       (??)   ?      ?    x     1  :   ?  :  0 ;
+//       (??)   ?      ?    1     x  :   ?  :  1 ;
+//       (??)   ?      ?    1     1  :   ?  :  x ;
+          ?    (??)    ?    0     0  :   ?  :  - ;
+          ?    (??)    ?    x     0  :   ?  :  - ;
+//        ?    (??)    ?    1     0  :   ?  :  1 ;
+//        ?    (??)    ?    0     1  :   ?  :  0 ;
+//        ?    (??)    ?    x     1  :   ?  :  0 ;
+//        ?    (??)    ?    1     1  :   ?  :  x ;
+          ?    (??)    ?    0     x  :   ?  :  - ;
+          ?    (??)    ?    x     x  :   ?  :  - ;
+//        ?    (??)    ?    1     x  :   ?  :  1 ;
+          ?     ?     (??)  0     0  :   ?  :  - ;
+          ?     ?     (??)  x     0  :   ?  :  - ;
+//        ?     ?     (??)  1     0  :   ?  :  1 ;
+//        ?     ?     (??)  0     1  :   ?  :  0 ;
+//        ?     ?     (??)  x     1  :   ?  :  0 ;
+//        ?     ?     (??)  1     1  :   ?  :  x ;
+          ?     ?     (??)  0     x  :   ?  :  - ;
+          ?     ?     (??)  x     x  :   ?  :  - ;
+//        ?     ?     (??)  1     x  :   ?  :  1 ;
+          ?     ?      ?   (?0)   ?  :   ?  :  - ;
+          ?     ?      ?    ?    (?0):   ?  :  - ;
+          ?     ?      ?    1     0  :   ?  :  1 ;
+          ?     ?      ?    0     1  :   ?  :  0 ;
+          ?     ?      ?    1     x  :   ?  :  1 ;
+          ?     ?      ?    x     1  :   ?  :  0 ;
+          ?     ?      ?    1     1  :   ?  :  x ;
+
+     endtable
+   endprimitive
+`endcelldefine

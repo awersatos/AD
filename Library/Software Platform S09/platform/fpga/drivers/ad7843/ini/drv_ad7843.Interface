@@ -1,0 +1,6 @@
+[Interface]
+Name=drv_ad7843
+Category=DRIVER
+System=False
+Description=AD7843 touchscreen driver
+PublicDir=platform\fpga\drivers\ad7843\include

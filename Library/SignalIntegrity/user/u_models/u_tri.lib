@@ -1,0 +1,481 @@
+################################################################################
+#
+#                          EDL Macromodel Library File
+#       Filename: u_tri.lib
+#        Creator: INCASES Engineering GmbH
+#        Version: 1.1
+#      Last Save: Thu Dec 03 10:43:07 1998
+#
+################################################################################
+#IDBM:LVC240_OUT_tp_tri.mac
+################################################################################
+#
+#         Header: 1.0;
+#       Filename: LVC240_OUT_tp_tri.mac;
+#        FileRev: 1.00;
+#           Date: Wed Nov 11 15:53:44 1998;
+#     Permission: ;
+#      Simulator: 2;
+#      Modeltype: 6;
+#     Technology: HC;
+#        Changes: ;
+#          Notes: Derived from IBIS Version 1.1, File lvc240db.ibs, Revision 10,
+#		Date 08/20/98, Component lvc240, Vendor Philips_Semicond, Buffer
+#		3;
+#
+# RefSource
+#      Component: lvc240;
+#   Manufacturer: Philips_Semicond;
+#     Buffername: LVC240_OUT;
+#     Buffertype: TRI->IN;
+#           Pins: 3, 4, 7, 9, 12, 14, 16, 18;
+#         Method: IBIS;
+#      Copyright: File originated at INCASES Eng. GmbH The following is a sample
+#		IBIS file for the LVC240.;
+#     Disclaimer:  Please be aware that in the absence of a written agreement to
+#		the contrary, INCASES Engineering GmbH assumes no liability for:
+#		(1) the accuracy of the IBIS Models provided to your company
+#		(2) the proper functioning of these Models in your design system
+#		or for any resulting applications (3) infringement of patents,
+#		copyrights, or intellectual property rights resulting from your
+#		use of these models.;
+#          Notes: File originated at INCASES Eng. GmbH The following is a sample
+#		IBIS file for the LVC240.;
+#
+# RefCondition
+#        Process: Typical;
+#    Temperature: UnKnown;
+#     SupplyVolt: 3.300000e+000;
+#        RefVolt: ;
+#     GndPackage: Explicit;
+#     VccPackage: Explicit;
+#     SigPackage: Explicit;
+#    TermLineImp: ;
+#  TermLineDelay: ;
+#          Notes: Model characteristic based on... POWER Clamp Typical, GND Clamp
+#		Typical, C_comp Typical, ;
+#
+# LinearModel
+#     Resistance: 1.000000e+09;
+#    Capacitance: 4.000000e-012;
+#     Inductance: ;
+#       GndClamp: UnKnown;
+#       PowClamp: UnKnown;
+#          Notes: ;
+#
+################################################################################
+MOD_STRUC 6
+GND_CLAMP
+20
+-9.800000e-001  -1.450000e-001
+-9.200000e-001  -9.830000e-002
+-8.700000e-001  -6.540000e-002
+-8.400000e-001  -4.910000e-002
+-8.100000e-001  -3.620000e-002
+-7.900000e-001  -2.930000e-002
+-7.700000e-001  -2.390000e-002
+-7.500000e-001  -1.970000e-002
+-7.300000e-001  -1.640000e-002
+-7.000000e-001  -1.280000e-002
+-6.700000e-001  -1.040000e-002
+-6.400000e-001  -8.500000e-003
+-6.100000e-001  -7.000000e-003
+-5.600000e-001  -5.000000e-003
+-5.500000e-001  -4.700000e-003
+-5.400000e-001  -4.300000e-003
+-5.300000e-001  -4.100000e-003
+-5.000000e-001  -3.825000e-003
+-3.000000e-001  0.000000e+000
+3.300000e+000  0.000000e+000
+POWER_CLAMP
+32
+-1.440000e+000  1.570000e-001
+-1.240000e+000  1.217000e-001
+-1.040000e+000  8.060000e-002
+-9.200000e-001  5.160000e-002
+-8.100000e-001  2.320000e-002
+-7.800000e-001  1.650000e-002
+-7.600000e-001  1.280000e-002
+-7.400000e-001  9.900000e-003
+-7.300000e-001  8.700000e-003
+-7.100000e-001  6.900000e-003
+-6.900000e-001  5.600000e-003
+-6.700000e-001  4.700000e-003
+-6.600000e-001  4.300000e-003
+-6.500000e-001  4.100000e-003
+-6.300000e-001  3.500000e-003
+-6.200000e-001  3.300000e-003
+-6.100000e-001  3.000000e-003
+-6.000000e-001  2.900000e-003
+-5.900000e-001  2.700000e-003
+-5.800000e-001  2.600000e-003
+-5.700000e-001  2.400000e-003
+-5.500000e-001  2.200000e-003
+-5.400000e-001  2.000000e-003
+-5.100000e-001  1.700000e-003
+-5.000000e-001  1.700000e-003
+-4.800000e-001  1.500000e-003
+-4.600000e-001  1.500000e-003
+-4.500000e-001  1.400000e-003
+-4.400000e-001  1.400000e-003
+-4.300000e-001  1.240000e-003
+-4.200000e-001  0.000000e+000
+0.000000e+000  0.000000e+000
+C_COMP
+c     4e-012
+k     0.0
+END
+#IDBM:LVC240_OUT_tp_tri.mac
+################################################################################
+#
+#         Header: 1.0;
+#       Filename: LVC240_OUT_tp_tri.mac;
+#        FileRev: 1.00;
+#           Date: Wed Nov 11 21:04:48 1998;
+#     Permission: ;
+#      Simulator: 2;
+#      Modeltype: 6;
+#     Technology: HC;
+#        Changes: ;
+#          Notes: Derived from IBIS Version 1.1, File lvc240db.ibs, Revision 10,
+#		Date 08/20/98, Component lvc240, Vendor Philips_Semicond, Buffer
+#		3;
+#
+# RefSource
+#      Component: lvc240;
+#   Manufacturer: Philips_Semicond;
+#     Buffername: LVC240_OUT;
+#     Buffertype: TRI->IN;
+#           Pins: 3, 4, 7, 9, 12, 14, 16, 18;
+#         Method: IBIS;
+#      Copyright: File originated at INCASES Eng. GmbH The following is a sample
+#		IBIS file for the LVC240.;
+#     Disclaimer:  Please be aware that in the absence of a written agreement to
+#		the contrary, INCASES Engineering GmbH assumes no liability for:
+#		(1) the accuracy of the IBIS Models provided to your company
+#		(2) the proper functioning of these Models in your design system
+#		or for any resulting applications (3) infringement of patents,
+#		copyrights, or intellectual property rights resulting from your
+#		use of these models.;
+#          Notes: File originated at INCASES Eng. GmbH The following is a sample
+#		IBIS file for the LVC240.;
+#
+# RefCondition
+#        Process: Typical;
+#    Temperature: UnKnown;
+#     SupplyVolt: 3.300000e+000;
+#        RefVolt: ;
+#     GndPackage: Explicit;
+#     VccPackage: Explicit;
+#     SigPackage: Explicit;
+#    TermLineImp: ;
+#  TermLineDelay: ;
+#          Notes: Model characteristic based on... POWER Clamp Typical, GND Clamp
+#		Typical, C_comp Typical, ;
+#
+# LinearModel
+#     Resistance: 1.000000e+09;
+#    Capacitance: 4.000000e-012;
+#     Inductance: ;
+#       GndClamp: UnKnown;
+#       PowClamp: UnKnown;
+#          Notes: ;
+#
+################################################################################
+MOD_STRUC 6
+GND_CLAMP
+20
+-9.800000e-001  -1.450000e-001
+-9.200000e-001  -9.830000e-002
+-8.700000e-001  -6.540000e-002
+-8.400000e-001  -4.910000e-002
+-8.100000e-001  -3.620000e-002
+-7.900000e-001  -2.930000e-002
+-7.700000e-001  -2.390000e-002
+-7.500000e-001  -1.970000e-002
+-7.300000e-001  -1.640000e-002
+-7.000000e-001  -1.280000e-002
+-6.700000e-001  -1.040000e-002
+-6.400000e-001  -8.500000e-003
+-6.100000e-001  -7.000000e-003
+-5.600000e-001  -5.000000e-003
+-5.500000e-001  -4.700000e-003
+-5.400000e-001  -4.300000e-003
+-5.300000e-001  -4.100000e-003
+-5.000000e-001  -3.825000e-003
+-3.000000e-001  0.000000e+000
+3.300000e+000  0.000000e+000
+POWER_CLAMP
+32
+-1.440000e+000  1.570000e-001
+-1.240000e+000  1.217000e-001
+-1.040000e+000  8.060000e-002
+-9.200000e-001  5.160000e-002
+-8.100000e-001  2.320000e-002
+-7.800000e-001  1.650000e-002
+-7.600000e-001  1.280000e-002
+-7.400000e-001  9.900000e-003
+-7.300000e-001  8.700000e-003
+-7.100000e-001  6.900000e-003
+-6.900000e-001  5.600000e-003
+-6.700000e-001  4.700000e-003
+-6.600000e-001  4.300000e-003
+-6.500000e-001  4.100000e-003
+-6.300000e-001  3.500000e-003
+-6.200000e-001  3.300000e-003
+-6.100000e-001  3.000000e-003
+-6.000000e-001  2.900000e-003
+-5.900000e-001  2.700000e-003
+-5.800000e-001  2.600000e-003
+-5.700000e-001  2.400000e-003
+-5.500000e-001  2.200000e-003
+-5.400000e-001  2.000000e-003
+-5.100000e-001  1.700000e-003
+-5.000000e-001  1.700000e-003
+-4.800000e-001  1.500000e-003
+-4.600000e-001  1.500000e-003
+-4.500000e-001  1.400000e-003
+-4.400000e-001  1.400000e-003
+-4.300000e-001  1.240000e-003
+-4.200000e-001  0.000000e+000
+0.000000e+000  0.000000e+000
+C_COMP
+c     4e-012
+k     0.0
+END
+#IDBM:LVC240_OUT_tp_tri.mac
+################################################################################
+#
+#         Header: 1.0;
+#       Filename: LVC240_OUT_tp_tri.mac;
+#        FileRev: 1.00;
+#           Date: Thu Nov 12 11:01:01 1998;
+#     Permission: ;
+#      Simulator: 2;
+#      Modeltype: 6;
+#     Technology: HC;
+#        Changes: ;
+#          Notes: Derived from IBIS Version 1.1, File lvc240db.ibs, Revision 10,
+#		Date 08/20/98, Component lvc240, Vendor Philips_Semicond, Buffer
+#		3;
+#
+# RefSource
+#      Component: lvc240;
+#   Manufacturer: Philips_Semicond;
+#     Buffername: LVC240_OUT;
+#     Buffertype: TRI->IN;
+#           Pins: 3, 4, 7, 9, 12, 14, 16, 18;
+#         Method: IBIS;
+#      Copyright: File originated at INCASES Eng. GmbH The following is a sample
+#		IBIS file for the LVC240.;
+#     Disclaimer:  Please be aware that in the absence of a written agreement to
+#		the contrary, INCASES Engineering GmbH assumes no liability for:
+#		(1) the accuracy of the IBIS Models provided to your company
+#		(2) the proper functioning of these Models in your design system
+#		or for any resulting applications (3) infringement of patents,
+#		copyrights, or intellectual property rights resulting from your
+#		use of these models.;
+#          Notes: File originated at INCASES Eng. GmbH The following is a sample
+#		IBIS file for the LVC240.;
+#
+# RefCondition
+#        Process: Typical;
+#    Temperature: UnKnown;
+#     SupplyVolt: 3.300000e+000;
+#        RefVolt: ;
+#     GndPackage: Explicit;
+#     VccPackage: Explicit;
+#     SigPackage: Explicit;
+#    TermLineImp: ;
+#  TermLineDelay: ;
+#          Notes: Model characteristic based on... POWER Clamp Typical, GND Clamp
+#		Typical, C_comp Typical, ;
+#
+# LinearModel
+#     Resistance: 1.000000e+09;
+#    Capacitance: 4.000000e-012;
+#     Inductance: ;
+#       GndClamp: UnKnown;
+#       PowClamp: UnKnown;
+#          Notes: ;
+#
+################################################################################
+MOD_STRUC 6
+GND_CLAMP
+20
+-9.800000e-001  -1.450000e-001
+-9.200000e-001  -9.830000e-002
+-8.700000e-001  -6.540000e-002
+-8.400000e-001  -4.910000e-002
+-8.100000e-001  -3.620000e-002
+-7.900000e-001  -2.930000e-002
+-7.700000e-001  -2.390000e-002
+-7.500000e-001  -1.970000e-002
+-7.300000e-001  -1.640000e-002
+-7.000000e-001  -1.280000e-002
+-6.700000e-001  -1.040000e-002
+-6.400000e-001  -8.500000e-003
+-6.100000e-001  -7.000000e-003
+-5.600000e-001  -5.000000e-003
+-5.500000e-001  -4.700000e-003
+-5.400000e-001  -4.300000e-003
+-5.300000e-001  -4.100000e-003
+-5.000000e-001  -3.825000e-003
+-3.000000e-001  0.000000e+000
+3.300000e+000  0.000000e+000
+POWER_CLAMP
+32
+-1.440000e+000  1.570000e-001
+-1.240000e+000  1.217000e-001
+-1.040000e+000  8.060000e-002
+-9.200000e-001  5.160000e-002
+-8.100000e-001  2.320000e-002
+-7.800000e-001  1.650000e-002
+-7.600000e-001  1.280000e-002
+-7.400000e-001  9.900000e-003
+-7.300000e-001  8.700000e-003
+-7.100000e-001  6.900000e-003
+-6.900000e-001  5.600000e-003
+-6.700000e-001  4.700000e-003
+-6.600000e-001  4.300000e-003
+-6.500000e-001  4.100000e-003
+-6.300000e-001  3.500000e-003
+-6.200000e-001  3.300000e-003
+-6.100000e-001  3.000000e-003
+-6.000000e-001  2.900000e-003
+-5.900000e-001  2.700000e-003
+-5.800000e-001  2.600000e-003
+-5.700000e-001  2.400000e-003
+-5.500000e-001  2.200000e-003
+-5.400000e-001  2.000000e-003
+-5.100000e-001  1.700000e-003
+-5.000000e-001  1.700000e-003
+-4.800000e-001  1.500000e-003
+-4.600000e-001  1.500000e-003
+-4.500000e-001  1.400000e-003
+-4.400000e-001  1.400000e-003
+-4.300000e-001  1.240000e-003
+-4.200000e-001  0.000000e+000
+0.000000e+000  0.000000e+000
+C_COMP
+c     4e-012
+k     0.0
+END
+@IDBM:LVC240_OUT_tp_tri.mac
+################################################################################
+#
+#         Header: 1.0;
+#       Filename: LVC240_OUT_tp_tri.mac;
+#        FileRev: 1.00;
+#           Date: Thu Dec 03 10:43:07 1998;
+#     Permission: ;
+#      Simulator: 2;
+#      Modeltype: 6;
+#     Technology: HC;
+#        Changes: ;
+#          Notes: Derived from IBIS Version 1.1, File lvc240db.ibs, Revision 10,
+#		Date 08/20/98, Component lvc240, Vendor Philips_Semicond, Buffer
+#		3;
+#
+# RefSource
+#      Component: lvc240;
+#   Manufacturer: Philips_Semicond;
+#     Buffername: LVC240_OUT;
+#     Buffertype: TRI->IN;
+#           Pins: 3, 4, 7, 9, 12, 14, 16, 18;
+#         Method: IBIS;
+#      Copyright: File originated at INCASES Eng. GmbH The following is a sample
+#		IBIS file for the LVC240.;
+#     Disclaimer:  Please be aware that in the absence of a written agreement to
+#		the contrary, INCASES Engineering GmbH assumes no liability for:
+#		(1) the accuracy of the IBIS Models provided to your company
+#		(2) the proper functioning of these Models in your design system
+#		or for any resulting applications (3) infringement of patents,
+#		copyrights, or intellectual property rights resulting from your
+#		use of these models.;
+#          Notes: File originated at INCASES Eng. GmbH The following is a sample
+#		IBIS file for the LVC240.;
+#
+# RefCondition
+#        Process: Typical;
+#    Temperature: UnKnown;
+#     SupplyVolt: 3.300000e+000;
+#        RefVolt: ;
+#     GndPackage: Explicit;
+#     VccPackage: Explicit;
+#     SigPackage: Explicit;
+#    TermLineImp: ;
+#  TermLineDelay: ;
+#          Notes: Model characteristic based on... POWER Clamp Typical, GND Clamp
+#		Typical, C_comp Typical, ;
+#
+# LinearModel
+#     Resistance: 1.000000e+09;
+#    Capacitance: 4.000000e-012;
+#     Inductance: ;
+#       GndClamp: UnKnown;
+#       PowClamp: UnKnown;
+#          Notes: ;
+#
+################################################################################
+MOD_STRUC 6
+GND_CLAMP
+20
+-9.800000e-001  -1.450000e-001
+-9.200000e-001  -9.830000e-002
+-8.700000e-001  -6.540000e-002
+-8.400000e-001  -4.910000e-002
+-8.100000e-001  -3.620000e-002
+-7.900000e-001  -2.930000e-002
+-7.700000e-001  -2.390000e-002
+-7.500000e-001  -1.970000e-002
+-7.300000e-001  -1.640000e-002
+-7.000000e-001  -1.280000e-002
+-6.700000e-001  -1.040000e-002
+-6.400000e-001  -8.500000e-003
+-6.100000e-001  -7.000000e-003
+-5.600000e-001  -5.000000e-003
+-5.500000e-001  -4.700000e-003
+-5.400000e-001  -4.300000e-003
+-5.300000e-001  -4.100000e-003
+-5.000000e-001  -3.825000e-003
+-3.000000e-001  0.000000e+000
+3.300000e+000  0.000000e+000
+POWER_CLAMP
+32
+-1.440000e+000  1.570000e-001
+-1.240000e+000  1.217000e-001
+-1.040000e+000  8.060000e-002
+-9.200000e-001  5.160000e-002
+-8.100000e-001  2.320000e-002
+-7.800000e-001  1.650000e-002
+-7.600000e-001  1.280000e-002
+-7.400000e-001  9.900000e-003
+-7.300000e-001  8.700000e-003
+-7.100000e-001  6.900000e-003
+-6.900000e-001  5.600000e-003
+-6.700000e-001  4.700000e-003
+-6.600000e-001  4.300000e-003
+-6.500000e-001  4.100000e-003
+-6.300000e-001  3.500000e-003
+-6.200000e-001  3.300000e-003
+-6.100000e-001  3.000000e-003
+-6.000000e-001  2.900000e-003
+-5.900000e-001  2.700000e-003
+-5.800000e-001  2.600000e-003
+-5.700000e-001  2.400000e-003
+-5.500000e-001  2.200000e-003
+-5.400000e-001  2.000000e-003
+-5.100000e-001  1.700000e-003
+-5.000000e-001  1.700000e-003
+-4.800000e-001  1.500000e-003
+-4.600000e-001  1.500000e-003
+-4.500000e-001  1.400000e-003
+-4.400000e-001  1.400000e-003
+-4.300000e-001  1.240000e-003
+-4.200000e-001  0.000000e+000
+0.000000e+000  0.000000e+000
+C_COMP
+c     4e-012
+k     0.0
+END

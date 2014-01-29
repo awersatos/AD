@@ -1,0 +1,76 @@
+;...............................................................................
+;Constraints File
+;   Devices : GPS/GPRS/GSM
+;   Board   : PB07 Single Connector Plug-In Peripheral Board For NB02
+;
+;   Created 25-Jan-2008
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB       | TargetId=PB07.03 | Image=PB02.06 | ImageOffsetX=12 | ImageOffsetY=16
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=Connector | TargetId=HDR1
+;...............................................................................
+
+Record=Constraint | TargetKind=Port | TargetId=GPS_TRI    | ConnectTo=HDR1-42 ;I RX_TRACE
+Record=Constraint | TargetKind=Port | TargetId=GPS_TRO    | ConnectTo=HDR1-48 ;O TX_TRACE
+Record=Constraint | TargetKind=Port | TargetId=GPS_NEMAI  | ConnectTo=HDR1-66 ;O TX_GPS
+Record=Constraint | TargetKind=Port | TargetId=GPS_NEMAO  | ConnectTo=HDR1-54 ;I RX_GPS
+Record=Constraint | TargetKind=Port | TargetId=GPS_BINI   | ConnectTo=HDR1-44 ;O TX_GPS_BIN
+Record=Constraint | TargetKind=Port | TargetId=GPS_BINO   | ConnectTo=HDR1-46 ;I RX_GPS_BIN
+Record=Constraint | TargetKind=Port | TargetId=GSM_TXD    | ConnectTo=HDR1-30 ;I TXD
+Record=Constraint | TargetKind=Port | TargetId=GSM_RXD    | ConnectTo=HDR1-28 ;O RXD
+Record=Constraint | TargetKind=Port | TargetId=GSM_CTS    | ConnectTo=HDR1-34 ;O CTS
+Record=Constraint | TargetKind=Port | TargetId=GSM_RTS    | ConnectTo=HDR1-26 ;I RTS
+
+Record=Constraint | TargetKind=Port | TargetId=GSM_DCD    | ConnectTo=HDR1-24 ;O DCD
+Record=Constraint | TargetKind=Port | TargetId=GSM_DTR    | ConnectTo=HDR1-32 ;I DTR
+Record=Constraint | TargetKind=Port | TargetId=GSM_DSR    | ConnectTo=HDR1-36 ;O DSR
+Record=Constraint | TargetKind=Port | TargetId=GSM_RI     | ConnectTo=HDR1-38 ;O RING
+Record=Constraint | TargetKind=Port | TargetId=PYT_CLK    | ConnectTo=HDR1-72 ;IO CLK
+Record=Constraint | TargetKind=Port | TargetId=PYT_MRST   | ConnectTo=HDR1-80 ;IO MRST
+Record=Constraint | TargetKind=Port | TargetId=PYT_MTSR   | ConnectTo=HDR1-78 ;IO MTSR
+Record=Constraint | TargetKind=Port | TargetId=GSM_ON_OFF | ConnectTo=HDR1-70 ;I ON_OFF
+Record=Constraint | TargetKind=Port | TargetId=GSM_STAT   | ConnectTo=HDR1-68 ;O STAT_LED
+Record=Constraint | TargetKind=Port | TargetId=PWR_ON     | ConnectTo=HDR1-82 ;
+
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_SDA_CDOUT | ConnectTo=HDR1-86
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_SCL_CCLK  | ConnectTo=HDR1-88
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_RST_N     | ConnectTo=HDR1-100
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_AD0       | ConnectTo=HDR1-92
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_AD1       | ConnectTo=HDR1-96
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_AD2       | ConnectTo=HDR1-94
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_SDIN      | ConnectTo=HDR1-74
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_SDOUT     | ConnectTo=HDR1-98
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_MS        | ConnectTo=HDR1-56
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_MCLK      | ConnectTo=HDR1-84
+
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_LRCK      | ConnectTo=HDR1-76
+Record=Constraint | TargetKind=Port | TargetId=GSM_AUDIO_SCLK      | ConnectTo=HDR1-90
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED1_R | ConnectTo=HDR1-20
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED1_G | ConnectTo=HDR1-22
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED1_B | ConnectTo=HDR1-18
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED2_R | ConnectTo=HDR1-10
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED2_G | ConnectTo=HDR1-12
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED2_B | ConnectTo=HDR1-4
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED3_R | ConnectTo=HDR1-8
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED3_G | ConnectTo=HDR1-6
+
+Record=Constraint | TargetKind=Port | TargetId=STATUS_LED3_B | ConnectTo=HDR1-2
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-41
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-42
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-43
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-44
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-45
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-46
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-47
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-48
+;Record=Constraint | TargetKind=Port | TargetId=       | ConnectTo=HDR1-49
+

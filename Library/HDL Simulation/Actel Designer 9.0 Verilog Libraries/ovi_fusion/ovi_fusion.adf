@@ -1,0 +1,51 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_fusion
+
+[Library]
+ovi_fusion=.\ovi_fusion.lib
+
+[$LibMap$]
+ovi_fusion=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FAMILY=
+VerilogDirsChanged=1
+
+[Files]
+/update_ovi_fusion.do=-1
+/fusion.v=-1
+/ovi_fusion.opt=-1
+
+[Files.Data]
+.\src\update_ovi_fusion.do=Macro
+.\src\fusion.v=Verilog Source Code
+.\src\ovi_fusion.opt=External File
+
+[LocalVerilogSets]
+Strict=0
+Strict2001=1
+SystemVerilog3=0
+ErrorOutputLimit=0
+WarningPrnLevel=1
+OptimizationLevel=2
+EnableDebug=1
+StrictLRMMode=0
+ProtectLevel=0
+AdditionalOptions=
+[DefineMacro]
+Global=
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

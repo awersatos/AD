@@ -1,0 +1,4 @@
+*ZENER
+*Default Zener 10V @ 10mA
+*Zener Diode Pinout: A,K
+.MODEL ZENER D( BV=10 IBV=10E-3 )

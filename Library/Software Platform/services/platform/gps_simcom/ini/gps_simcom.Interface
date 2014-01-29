@@ -1,0 +1,6 @@
+[Interface]
+Name=gps_simcom
+Category=DRIVER
+System=False
+PublicDir=services\platform\gps_simcom\include
+Description=Simcom AT command GPS driver

@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=2
+Current Config=compile
+
+[Configurations]
+compile=apa
+
+[Library]
+apa=.\apa.LIB
+
+[$LibMap$]
+apa=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/apa.vhd=-1
+/update_apa.do=-1
+
+[Files.Data]
+.\src\apa.vhd=VHDL Source Code
+.\src\update_apa.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

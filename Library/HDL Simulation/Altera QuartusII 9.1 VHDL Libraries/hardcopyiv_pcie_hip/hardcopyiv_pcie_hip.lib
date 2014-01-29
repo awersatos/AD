@@ -1,0 +1,340 @@
+timestamp=0
+
+[hardcopyiv_hssi_pcie_hip]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|244682|1*2498315
+B/trans=3*46443548
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*12498106
+I/trans=0*12694484
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*12460750*0x40a8a3c6314a0bc1b75bd933c17bbb9ae42ffe68|0*12498011*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*12498535*0xd59c2a61000a6365094eb2b0981db8e0c544974b|0*12694380*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|243783
+
+[hardcopyiv_pcie_hip_components]
+B/hardcopyiv_pcie_hip_components=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*40996
+I/hardcopyiv_pcie_hip_components=I/HARDCOPYIV_PCIE_HIP_COMPONENTS 0*48245
+M=3|0|v63|0|./src/hardcopyiv_pcie_hip_components.vhd|0*980*0x8cffd488bad753a91e1bff35e85bc272c3c0ed87|0*40890*0xf2538cdc6f7b23a146389216c886e772
+M/hardcopyiv_pcie_hip_components=M/HARDCOPYIV_PCIE_HIP_COMPONENTS 4|0|v63|0|./src/hardcopyiv_pcie_hip_components.vhd|0*41255*0x2f1ccdfe20101f9a6c292298ebb52a7f5bf96640|0*48106*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_components.vhd|23
+
+[hardcopyiv_pciehip_clkmux]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|1217|1*15727
+B/trans=3*173334
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*101353
+I/trans=0*103922
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*100552*0xd564da7871a6e04e6607b5bf2194722f1267e5b3|0*101257*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*101575*0x2483307c48d0adccda92c9f5fb0647086f1274ee|0*103817*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|1196
+
+[hardcopyiv_pciehip_compute_bit]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|8799|1*80067
+B/trans=3*574004
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*362573
+I/trans=0*363570
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*362024*0x7c5422ffe71cf2a532d00f64b28bfb7f46ec419a|0*362472*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*362928*0x2546694acefe9360c9a33aea967d34cfe045e5bb|0*363460*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|8791
+
+[hardcopyiv_pciehip_dprio_16bit]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|1443|1*17731
+B/trans=3*185332
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*107773
+I/trans=0*113626
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*106915*0xc5f5ffbacb7c8b1c9acfc46514255b4012ce9fc9|0*107672*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*108128*0x237ef41884f42c3dfd119cb889b4aafc1488561d|0*113516*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|1421
+
+[hardcopyiv_pciehip_dprio_addr]
+A/rtl=A/RTL 21|./src/hardcopyiv_pcie_hip_atoms.vhd|1777|1*19293
+B/rtl=3*187541
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*114828
+I/rtl=I/RTL 0*126685
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*114293*0xae395737810dffd8e8d260ca73f14d9a9dd67262|0*114728*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*115038*0x733814c1fd511de748b791a9621f6033bb37e75c|0*126578*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|1765
+
+[hardcopyiv_pciehip_dprio_bit]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|1369|1*16873
+B/trans=3*181639
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*105107
+I/trans=0*106249
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*104407*0xf79d2d8ad0a42946763a3bcd6030a074f45fc314|0*105008*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*105460*0x8f733cb68683c405d395152e6d2809d769c1d788|0*106141*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|1351
+
+[hardcopyiv_pciehip_dprio_bus_out_mux]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|3409|1*30595
+B/trans=3*356647
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*166870
+I/trans=0*173351
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*155747*0xf9b73b4e5340e2f2154706e33d931126498fd98b|0*166763*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*167055*0xf314a36d5528b46fe82278843e327c506ebd38bb|0*173235*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|3180
+
+[hardcopyiv_pciehip_dprio_cnt]
+A/rtl=A/RTL 21|./src/hardcopyiv_pcie_hip_atoms.vhd|2174|1*23111
+B/rtl=3*246153
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*127704
+I/rtl=I/RTL 0*133048
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*127204*0x47754eeb789b8bd4e08bb7ca3e75f148a09ff6b7|0*127605*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*127913*0x3680899520c8ebb222caf6300ed8c181cc2a1c40|0*132942*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|2163
+
+[hardcopyiv_pciehip_dprio_ctl_data]
+A/rtl=A/RTL 21|./src/hardcopyiv_pcie_hip_atoms.vhd|2421|1*25279
+B/rtl=3*271145
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*134489
+I/rtl=I/RTL 0*146893
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*133651*0xd31b0df20be30282482f175dcf0a9cc37e9240ee|0*134385*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*134671*0x0ad5a1ed6544f390d3a995abd2e70ef03e2df01f|0*146782*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|2399
+
+[hardcopyiv_pciehip_dprio_reg]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|3882|1*34895
+B/trans=3*375721
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*191076
+I/trans=0*244998
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*174727*0xb5d7bb73a69631c011faa842473072ae6e6cfaa8|0*190977*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*191253*0x49025c608b716f698d2c6605b6a87affe82d1842|0*244890*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|3531
+
+[hardcopyiv_pciehip_dprio_reg_top]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|6358|1*48203
+B/trans=3*409131
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*251800
+I/trans=0*328225
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*245842*0x0427dbcd96c57bc680b2dc103736db563549e4ee|0*251697*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*252029*0x4e1f9be54963f97f917ac352f8adbabce9c0bcd2|0*328113*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|6227
+
+[hardcopyiv_pciehip_dprio_sm]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|2892|1*29065
+B/trans=3*328473
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*148743
+I/trans=0*154500
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*147511*0x7dfa3e2e25d17ee83efdaa0cecb29fdcc7820dce|0*148645*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*149095*0xabc959298fc4bf0793a46c39bfe2e2be0d392b97|0*154393*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|2849
+
+[hardcopyiv_pciehip_ecc_chk]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|8952|1*81959
+B/trans=3*579130
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*368394
+I/trans=0*376344
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*367735*0xc6a268fadd5500870cdd4bf14b69b7fb8bfe5355|0*368297*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*368745*0x1ad11ecd059f3e536d037f096c15555966025686|0*376238*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|8940
+
+[hardcopyiv_pciehip_ecc_decoder]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|9162|1*83361
+B/trans=3*588519
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*377549
+I/trans=0*378296
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*376992*0x708e076e7c5d9ce0775388040dd0b1369a571482|0*377448*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*377904*0x50315bd25c21bd4a18ce0a9dee16af9745c90b93|0*378186*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|9153
+
+[hardcopyiv_pciehip_ecc_gen]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|8827|1*80749
+B/trans=3*575365
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*364743
+I/trans=0*367059
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*364170*0x339ebaf33e69e1cf0b28d68a9037ee4b991a21ce|0*364646*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*365094*0xce3cbd621f7484f479abb950e46888a5a952ce71|0*366953*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|8818
+
+[hardcopyiv_pciehip_hip_dprio_top]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|8111|1*69367
+B/trans=3*539682
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*335211
+I/trans=0*361418
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*329217*0xdc08d37749d7ba5838224a3874da07b6c1f4efc8|0*335108*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*335392*0x0219e2967e903e6cf4fd35e5e6dc24c11fd162e2|0*361306*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|7973
+
+[hardcopyiv_pciehip_hip_mram]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|9317|1*84773
+B/trans=3*592513
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*383330
+I/trans=0*388428
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*381404*0x77d6bab69ca97383298e3ebc021741c2ee72770e|0*383232*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*383682*0x8f5b6000a465738c8586d7b2c6fc626772ddd0a4|0*388321*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|9255
+
+[hardcopyiv_pciehip_hip_top]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|241428|1*2464303
+B/trans=3*46268949
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*12378734
+I/trans=0*12455322
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*12366388*0x17e1e80f053e97e3f4df4f63f90acc913fb450a4|0*12378637*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*12378909*0xff5e4ac148a8efa923e7a393120c3e0d70a54e8b|0*12455216*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|240969
+
+[hardcopyiv_pciehip_iei_detect]
+A/rtl=A/RTL 21|./src/hardcopyiv_pcie_hip_atoms.vhd|10126|1*95595
+B/rtl=3*654552
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*408412
+I/rtl=I/RTL 0*782327
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*407322*0xf7a58ee64b5d3ff206609d34b586d3f5b7aa5c91|0*408312*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*408622*0x56fb17aedaa8b0d95020a3bb969eb456b9ebacda|0*782220*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|10100
+
+[hardcopyiv_pciehip_mram_top]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|9576|1*88513
+B/trans=3*620279
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*390955
+I/trans=0*397890
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*389314*0x8a669d7344ae9e93aadb990b0ddb1e4a7facd356|0*390857*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*391307*0xd2ba08f848ca5c57dfcd763718746a7e410f39e3|0*397783*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|9493
+
+[hardcopyiv_pciehip_param]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|223|1*3491
+B/trans=3*15883
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*57857
+I/trans=0*99895
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*50276*0xf3a75ffeb67672c9be1512dd334989b9db23ebf2|0*57762*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*58206*0xbdc84d5b797acd18164a46f1e157cf64d9811e76|0*99791*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|42
+
+[hardcopyiv_pciehip_pciexp_dcfiforam]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|9890|1*92397
+B/trans=3*638397
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*399557
+I/trans=0*400874
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*398720*0xd26334b859152cd016500d8ca31ab0f613b7916c|0*399451*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*399917*0xce3a8ce99eb9b44f112c29c7a7f47b4b9fe90804|0*400759*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|9873
+
+[hardcopyiv_pciehip_pciexp_dcram_rtry]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|9956|1*93463
+B/trans=3*643782
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*402404
+I/trans=0*403738
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*401569*0x42e7ce83dbf44909c99f93dfc73e56f6f048d24f|0*402297*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*402765*0x0e98b448d9de4d4004ee387898ef6fe9b860098e|0*403622*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|9938
+
+[hardcopyiv_pciehip_pciexp_dcram_rxvc]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|10026|1*94529
+B/trans=3*649167
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*405269
+I/trans=0*406601
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*404434*0x426ee072fad376729edea782c603f330998accd9|0*405162*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*405630*0xa47948d4a1ac4a57ef5cb2df0dcd5f04ef3f88e1|0*406485*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|10008
+
+[hardcopyiv_pciehip_pciexp_top_hip]
+A/rtl=A/RTL 21|./src/hardcopyiv_pcie_hip_atoms.vhd|19280|1*175653
+B/rtl=3*2263574
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*795614
+I/rtl=I/RTL 0*12364223
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*784579*0xf3bdc8ebcc9ae089b0740082954d7b0831197b9a|0*795510*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*795892*0x29a5e0ece9954e0afa153c2793bcdbc5a47fab8e|0*12364112*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|18963
+
+[hardcopyiv_pciehip_pulse_ext]
+A/trans=21|./src/hardcopyiv_pcie_hip_atoms.vhd|9192|1*84011
+B/trans=3*589548
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*379489
+I/trans=0*380549
+M=11|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*378898*0xfc337bb2e2688e1320b53527aaaa548809f5651d|0*379390*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/hardcopyiv_pcie_hip_atoms.vhd|0*379842*0x36b6b3b820765234fd2b12e614da55f9fb0dfeec|0*380441*0xf2538cdc6f7b23a146389216c886e772
+R=./src/hardcopyiv_pcie_hip_atoms.vhd|9181
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, HARDCOPYIV_PCIE_HIP VHDL LIBRARY
+ModifyID=164
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=189|0hardcopyiv_pcie_hip.mgf|12694484|0
+1=26|1hardcopyiv_pcie_hip.mgf|2498315|0
+3=26|3hardcopyiv_pcie_hip.mgf|46443548|0
+
+[~U]
+hardcopyiv_hssi_pcie_hip=11|0*12455695|
+hardcopyiv_pcie_hip_components=HARDCOPYIV_PCIE_HIP_COMPONENTS 3|0*0|0*162
+hardcopyiv_pciehip_clkmux=11|0*100250|
+hardcopyiv_pciehip_compute_bit=11|0*361781|
+hardcopyiv_pciehip_dprio_16bit=11|0*106608|
+hardcopyiv_pciehip_dprio_addr=11|0*114035|
+hardcopyiv_pciehip_dprio_bit=11|0*104150|
+hardcopyiv_pciehip_dprio_bus_out_mux=11|0*154858|
+hardcopyiv_pciehip_dprio_cnt=11|0*126947|
+hardcopyiv_pciehip_dprio_ctl_data=11|0*133309|
+hardcopyiv_pciehip_dprio_reg=11|0*173542|
+hardcopyiv_pciehip_dprio_reg_top=11|0*245229|
+hardcopyiv_pciehip_dprio_sm=11|0*147079|
+hardcopyiv_pciehip_ecc_chk=11|0*367464|
+hardcopyiv_pciehip_ecc_decoder=11|0*376749|
+hardcopyiv_pciehip_ecc_gen=11|0*363931|
+hardcopyiv_pciehip_hip_dprio_top=11|0*328556|
+hardcopyiv_pciehip_hip_mram=11|0*380908|
+hardcopyiv_pciehip_hip_top=11|0*12364277|
+hardcopyiv_pciehip_iei_detect=11|0*406968|
+hardcopyiv_pciehip_mram_top=11|0*388834|
+hardcopyiv_pciehip_param=11|0*48535|
+hardcopyiv_pciehip_pciexp_dcfiforam=11|0*398392|
+hardcopyiv_pciehip_pciexp_dcram_rtry=11|0*401240|
+hardcopyiv_pciehip_pciexp_dcram_rxvc=11|0*404105|
+hardcopyiv_pciehip_pciexp_top_hip=11|0*782685|
+hardcopyiv_pciehip_pulse_ext=11|0*378657|
+

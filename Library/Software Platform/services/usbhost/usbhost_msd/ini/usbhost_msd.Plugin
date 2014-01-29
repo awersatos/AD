@@ -1,0 +1,88 @@
+[Plugin]
+Name=usbhost_msd
+Description=USB Host Mass Storage Service
+Caption=USB Host Mass Storage Service
+SourceDir=services\usbhost\usbhost_msd\src
+FrameworkCompileOption0=-I"$(SERROOT)\usbhost\usbhost_msd\internal"
+Implement=usbhost_msd
+MinInstances=1
+Bitmap=usbhost_msd.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=usbhost
+Condition=EQ
+
+[Instance]
+Require0=usbhost
+Caption=USB Host Mass Storage Context
+Description=USB Host Mass Storage Context
+
+[Instance_Option0]
+Name=automount
+Description=Automatically mount a connected USB mass storage device in the file system. This requires a link up to a Storage System Context.
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option1]
+Name=readonly
+Description=Mount the connected USB mass storage device read only.
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option1_Hide_If0]
+Object=automount
+Kind=OPTION
+Condition=EQ
+Value=False
+
+[Instance_Option2]
+Name=numdev
+Description=The maximum number of simultaneously connected USB mass storage devices. When using automount, this value needs to be added to the Mount Point Limit of the FAT File System in the Storage System service.
+Kind=UINT8
+DefaultValue=3
+
+; hidden cache blocksize option
+; exported to filesystem layer and used by fatfs plugin
+[Instance_Option3]
+Name=cache_blocksize
+Kind=UINT32
+AutoValue=4096
+DefaultValue=4096
+NoGenerate=True
+
+[Instance_Option3_Hide_If0]
+Kind=True
+
+[Instance_Option4]
+Name=cache
+Description=Use a cache to speed up access to USB mass storage device. The number of device blocks in a cache page is determined by the cache page size divided by the device's block size. Block sizes vary from 512 to 4096 bytes.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Instance_Option5]
+Name=pagesize_kb
+GUIName=page size (kB)
+Description=Cache page size in kBytes.
+Kind=UINT32
+DefaultValue=16
+MinRange=4
+
+[Instance_Option5_Hide_If0]
+Object=cache
+Kind=OPTION
+Condition=EQ
+Value=False
+
+[Instance_Option6]
+Name=numpages
+Description=Number of cache pages per USB mass storage device.
+Kind=UINT32
+DefaultValue=3
+MinRange=1
+
+[Instance_Option6_Hide_If0]
+Object=cache
+Kind=OPTION
+Condition=EQ
+Value=False

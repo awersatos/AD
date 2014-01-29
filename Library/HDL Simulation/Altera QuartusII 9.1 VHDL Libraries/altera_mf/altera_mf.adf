@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=altera_mf
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+altera_mf=.
+
+[Library]
+altera_mf=.\altera_mf.LIB
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/altera_mf.vhd=-1
+/altera_mf_components.vhd=-1
+/update_altera_mf.do=-1
+
+[Files.Data]
+.\src\altera_mf.vhd=VHDL Source Code
+.\src\altera_mf_components.vhd=VHDL Source Code
+.\src\update_altera_mf.do=Macro
+

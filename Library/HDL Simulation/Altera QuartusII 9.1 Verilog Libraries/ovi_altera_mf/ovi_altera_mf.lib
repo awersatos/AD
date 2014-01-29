@@ -1,0 +1,667 @@
+timestamp=1260919184720
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[ALTERA_DEVICE_FAMILIES]
+A/ALTERA_DEVICE_FAMILIES=22|./src/altera_mf.v|1356|1*4390
+B/ALTERA_DEVICE_FAMILIES=3*131439
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4212,7772,13586,14378
+R=./src/altera_mf.v|1356
+
+[ALTERA_MF_HINT_EVALUATION]
+A/ALTERA_MF_HINT_EVALUATION=22|./src/altera_mf.v|1234|1*3420
+B/ALTERA_MF_HINT_EVALUATION=3*120261
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=234,616,1444,1606
+R=./src/altera_mf.v|1234
+
+[ALTERA_MF_MEMORY_INITIALIZATION]
+A/ALTERA_MF_MEMORY_INITIALIZATION=22|./src/altera_mf.v|71|1*1244
+B/ALTERA_MF_MEMORY_INITIALIZATION=3*612
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=573,2192,9890,10938
+R=./src/altera_mf.v|71
+
+[MF_cycloneiii_pll]
+A/MF_cycloneiii_pll=22|./src/altera_mf.v|14428|1*78981
+B/MF_cycloneiii_pll=3*2253996
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=10543,18000,29539,32225
+R=./src/altera_mf.v|14428
+
+[MF_cycloneiiigl_m_cntr]
+A/MF_cycloneiiigl_m_cntr=22|./src/altera_mf.v|17749|1*96601
+B/MF_cycloneiiigl_m_cntr=3*2790319
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=331,617,892,1085
+R=./src/altera_mf.v|17749
+
+[MF_cycloneiiigl_n_cntr]
+A/MF_cycloneiiigl_n_cntr=22|./src/altera_mf.v|17830|1*97552
+B/MF_cycloneiiigl_n_cntr=3*2795809
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=227,485,736,893
+R=./src/altera_mf.v|17830
+
+[MF_cycloneiiigl_pll]
+A/MF_cycloneiiigl_pll=22|./src/altera_mf.v|18100|1*100364
+B/MF_cycloneiiigl_pll=3*2822647
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=10656,18262,29981,32871
+R=./src/altera_mf.v|18100
+
+[MF_cycloneiiigl_scale_cntr]
+A/MF_cycloneiiigl_scale_cntr=22|./src/altera_mf.v|17901|1*98423
+B/MF_cycloneiiigl_scale_cntr=3*2800019
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=397,765,1109,1339
+R=./src/altera_mf.v|17901
+
+[MF_pll_reg]
+A/MF_pll_reg=22|./src/altera_mf.v|2353|1*12835
+B/MF_pll_reg=3*286843
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=234,403,608,735
+R=./src/altera_mf.v|2353
+
+[MF_stratix_pll]
+A/MF_stratix_pll=22|./src/altera_mf.v|2412|1*13534
+B/MF_stratix_pll=3*288373
+C=8.2.1986.SP1.35.3497  (Windows)
+D/MF_stratix_pll=4*0
+P/~emb=10405,18162,29129,33581
+R=./src/altera_mf.v|2412
+
+[MF_stratixii_pll]
+A/MF_stratixii_pll=22|./src/altera_mf.v|6503|1*34948
+B/MF_stratixii_pll=3*970419
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=8871,16132,26447,29947
+R=./src/altera_mf.v|6503
+
+[MF_stratixiii_pll]
+A/MF_stratixiii_pll=22|./src/altera_mf.v|10334|1*54972
+B/MF_stratixiii_pll=3*1531327
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=13313,21434,34578,37856
+R=./src/altera_mf.v|10334
+
+[a_graycounter]
+A/a_graycounter=22|./src/altera_mf.v|47260|1*251146
+B/a_graycounter=3*12006479
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=458,797,1151,1307
+R=./src/altera_mf.v|47260
+
+[alt3pram]
+A/alt3pram=22|./src/altera_mf.v|45464|1*242493
+B/alt3pram=3*11645346
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1477,2904,5187,5978
+R=./src/altera_mf.v|45464
+
+[alt_aeq_s4]
+A/alt_aeq_s4=22|./src/altera_mf.v|47779|1*257025
+B/alt_aeq_s4=3*12060563
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1427,1981,2534,2877
+R=./src/altera_mf.v|47779
+
+[alt_cal]
+A/alt_cal=22|./src/altera_mf.v|47678|1*255449
+B/alt_cal=3*12052840
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=977,1582,2369,2577
+R=./src/altera_mf.v|47678
+
+[alt_dfe]
+A/alt_dfe=22|./src/altera_mf.v|48147|1*260455
+B/alt_dfe=3*12119177
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1645,2415,3467,4008
+R=./src/altera_mf.v|48147
+
+[alt_eyemon]
+A/alt_eyemon=22|./src/altera_mf.v|47868|1*258396
+B/alt_eyemon=3*12070690
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1654,2429,3477,4011
+R=./src/altera_mf.v|47868
+
+[altaccumulate]
+A/altaccumulate=22|./src/altera_mf.v|31049|1*189140
+B/altaccumulate=3*6415745
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=682,1440,2248,2517
+R=./src/altera_mf.v|31049
+
+[altclklock]
+A/altclklock=22|./src/altera_mf.v|40570|1*224259
+B/altclklock=3*10689088
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1320,3074,4834,5515
+R=./src/altera_mf.v|40570
+
+[altddio_bidir]
+A/altddio_bidir=22|./src/altera_mf.v|42002|1*230951
+B/altddio_bidir=3*10940211
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1098,1659,2242,2718
+R=./src/altera_mf.v|42002
+
+[altddio_in]
+A/altddio_in=22|./src/altera_mf.v|41496|1*227888
+B/altddio_in=3*10807124
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=614,1315,1953,2355
+R=./src/altera_mf.v|41496
+
+[altddio_out]
+A/altddio_out=22|./src/altera_mf.v|41758|1*229323
+B/altddio_out=3*10878887
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=750,1516,2238,2538
+R=./src/altera_mf.v|41758
+
+[altdpram]
+A/altdpram=22|./src/altera_mf.v|42141|1*232309
+B/altdpram=3*10944360
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2083,3725,5870,6256
+R=./src/altera_mf.v|42141
+
+[altera_std_synchronizer]
+A/altera_std_synchronizer=22|./src/altera_mf.v|47484|1*253538
+B/altera_std_synchronizer=3*12036754
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=239,677,1121,1361
+R=./src/altera_mf.v|47484
+
+[altera_std_synchronizer_bundle]
+A/altera_std_synchronizer_bundle=22|./src/altera_mf.v|47643|1*254554
+B/altera_std_synchronizer_bundle=3*12050662
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=295,519,787,1067
+R=./src/altera_mf.v|47643
+
+[altfp_mult]
+A/altfp_mult=22|./src/altera_mf.v|39680|1*220192
+B/altfp_mult=3*10504392
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1298,2601,4490,5339
+R=./src/altera_mf.v|39680
+
+[altlvds_rx]
+A/altlvds_rx=22|./src/altera_mf.v|23409|1*135979
+B/altlvds_rx=3*4020856
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=19962,25601,33184,36746
+R=./src/altera_mf.v|23409
+
+[altlvds_tx]
+A/altlvds_tx=22|./src/altera_mf.v|26911|1*160712
+B/altlvds_tx=3*5050464
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=18175,23536,30733,34257
+R=./src/altera_mf.v|26911
+
+[altmult_accum]
+A/altmult_accum=22|./src/altera_mf.v|31291|1*191090
+B/altmult_accum=3*6469767
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=5377,8380,15895,17145
+R=./src/altera_mf.v|31291
+
+[altmult_add]
+A/altmult_add=22|./src/altera_mf.v|33387|1*198882
+B/altmult_add=3*7078162
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=14783,21587,44984,48069
+R=./src/altera_mf.v|33387
+
+[altparallel_flash_loader]
+A/altparallel_flash_loader=22|./src/altera_mf.v|50019|1*272648
+B/altparallel_flash_loader=3*12330190
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1986,2737,3245,3442
+R=./src/altera_mf.v|50019
+
+[altpll]
+A/altpll=22|./src/altera_mf.v|21462|1*118642
+B/altpll=3*3359760
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=13099,18259,31169,33005
+R=./src/altera_mf.v|21462
+
+[altserial_flash_loader]
+A/altserial_flash_loader=22|./src/altera_mf.v|50095|1*274193
+B/altserial_flash_loader=3*12335650
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=538,886,1083,1202
+R=./src/altera_mf.v|50095
+
+[altshift_taps]
+A/altshift_taps=22|./src/altera_mf.v|47128|1*249868
+B/altshift_taps=3*11988513
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=590,973,1394,1569
+R=./src/altera_mf.v|47128
+
+[altsource_probe]
+A/altsource_probe=22|./src/altera_mf.v|50120|1*275016
+B/altsource_probe=3*12336119
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1277,1764,2175,2366
+R=./src/altera_mf.v|50120
+
+[altsqrt]
+A/altsqrt=22|./src/altera_mf.v|40365|1*222891
+B/altsqrt=3*10655516
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=457,881,1419,1654
+R=./src/altera_mf.v|40365
+
+[altsquare]
+A/altsquare=22|./src/altera_mf.v|47349|1*252152
+B/altsquare=3*12013412
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=465,943,1393,1622
+R=./src/altera_mf.v|47349
+
+[altstratixii_oct]
+A/altstratixii_oct=22|./src/altera_mf.v|50003|1*271991
+B/altstratixii_oct=3*12329863
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=287,492,633,734
+R=./src/altera_mf.v|50003
+
+[altsyncram]
+A/altsyncram=22|./src/altera_mf.v|42672|1*235632
+B/altsyncram=3*11111898
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3998,8514,13741,15699
+R=./src/altera_mf.v|42672
+
+[arm_m_cntr]
+A/arm_m_cntr=22|./src/altera_mf.v|6218|1*32191
+B/arm_m_cntr=3*951169
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=307,580,855,1048
+R=./src/altera_mf.v|6218
+
+[arm_n_cntr]
+A/arm_n_cntr=22|./src/altera_mf.v|6298|1*33098
+B/arm_n_cntr=3*956647
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,588,855,1024
+R=./src/altera_mf.v|6298
+
+[arm_scale_cntr]
+A/arm_scale_cntr=22|./src/altera_mf.v|6380|1*33957
+B/arm_scale_cntr=3*961613
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=373,727,1071,1301
+R=./src/altera_mf.v|6380
+
+[cda_m_cntr]
+A/cda_m_cntr=22|./src/altera_mf.v|14149|1*76224
+B/cda_m_cntr=3*2235502
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=307,579,854,1047
+R=./src/altera_mf.v|14149
+
+[cda_n_cntr]
+A/cda_n_cntr=22|./src/altera_mf.v|14230|1*77147
+B/cda_n_cntr=3*2240980
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,448,699,856
+R=./src/altera_mf.v|14230
+
+[cda_scale_cntr]
+A/cda_scale_cntr=22|./src/altera_mf.v|14301|1*77990
+B/cda_scale_cntr=3*2245178
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=373,726,1071,1302
+R=./src/altera_mf.v|14301
+
+[cycloneiiigl_post_divider]
+A/cycloneiiigl_post_divider=22|./src/altera_mf.v|18011|1*99442
+B/cycloneiiigl_post_divider=3*2808849
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=216,474,717,868
+R=./src/altera_mf.v|18011
+
+[dcfifo]
+A/dcfifo=22|./src/altera_mf.v|30915|1*187373
+B/dcfifo=3*6407475
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1198,1854,2544,2841
+R=./src/altera_mf.v|30915
+
+[dcfifo_async]
+A/dcfifo_async=22|./src/altera_mf.v|29256|1*175753
+B/dcfifo_async=3*6007433
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=979,2095,3542,4522
+R=./src/altera_mf.v|29256
+
+[dcfifo_dffpipe]
+A/dcfifo_dffpipe=22|./src/altera_mf.v|29026|1*173692
+B/dcfifo_dffpipe=3*5979840
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=310,519,815,968
+R=./src/altera_mf.v|29026
+
+[dcfifo_fefifo]
+A/dcfifo_fefifo=22|./src/altera_mf.v|29104|1*174587
+B/dcfifo_fefifo=3*5994511
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=469,998,1355,1541
+R=./src/altera_mf.v|29104
+
+[dcfifo_low_latency]
+A/dcfifo_low_latency=22|./src/altera_mf.v|30047|1*181204
+B/dcfifo_low_latency=3*6134310
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1444,3014,4929,5648
+R=./src/altera_mf.v|30047
+
+[dcfifo_mixed_widths]
+A/dcfifo_mixed_widths=22|./src/altera_mf.v|30627|1*184713
+B/dcfifo_mixed_widths=3*6278594
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=25503,28559,31311,32293
+R=./src/altera_mf.v|30627
+
+[dcfifo_sync]
+A/dcfifo_sync=22|./src/altera_mf.v|29742|1*178840
+B/dcfifo_sync=3*6071102
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=859,1813,2837,3267
+R=./src/altera_mf.v|29742
+
+[dffp]
+A/dffp=22|./src/altera_mf.v|1996|1*8591
+B/dffp=3*261919
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=222,386,590,719
+R=./src/altera_mf.v|1996
+
+[dummy_hub]
+A/dummy_hub=22|./src/altera_mf.v|49513|1*266190
+B/dummy_hub=3*12266032
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2772,3452,4712,5264
+R=./src/altera_mf.v|49513
+
+[flexible_lvds_rx]
+A/flexible_lvds_rx=22|./src/altera_mf.v|25425|1*150640
+B/flexible_lvds_rx=3*4706805
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1275,2198,3502,4041
+R=./src/altera_mf.v|25425
+
+[flexible_lvds_tx]
+A/flexible_lvds_tx=22|./src/altera_mf.v|28466|1*171275
+B/flexible_lvds_tx=3*5708458
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1009,2057,3284,3882
+R=./src/altera_mf.v|28466
+
+[jtag_tap_controller]
+A/jtag_tap_controller=22|./src/altera_mf.v|49056|1*264730
+B/jtag_tap_controller=3*12245052
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1259,1866,2965,3675
+R=./src/altera_mf.v|49056
+
+[lcell]
+A/lcell=22|./src/altera_mf.v|34|1*694
+B/lcell=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=113,256,364,442
+R=./src/altera_mf.v|34
+
+[parallel_add]
+A/parallel_add=22|./src/altera_mf.v|46153|1*246040
+B/parallel_add=3*11787500
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=634,1220,1943,2137
+R=./src/altera_mf.v|46153
+
+[pll_iobuf]
+A/pll_iobuf=22|./src/altera_mf.v|2029|1*9284
+B/pll_iobuf=3*263763
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=171,335,514,617
+R=./src/altera_mf.v|2029
+
+[scfifo]
+A/scfifo=22|./src/altera_mf.v|46322|1*247653
+B/scfifo=3*11853713
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1229,2305,3836,4769
+R=./src/altera_mf.v|46322
+
+[signal_gen]
+A/signal_gen=22|./src/altera_mf.v|48489|1*262511
+B/signal_gen=3*12167661
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=860,1936,4156,4826
+R=./src/altera_mf.v|48489
+
+[sld_signaltap]
+A/sld_signaltap=22|./src/altera_mf.v|49897|1*269961
+B/sld_signaltap=3*12323150
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=3199,4287,5002,5236
+R=./src/altera_mf.v|49897
+
+[sld_virtual_jtag]
+A/sld_virtual_jtag=22|./src/altera_mf.v|49770|1*268408
+B/sld_virtual_jtag=3*12321030
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1885,2601,3288,3849
+R=./src/altera_mf.v|49770
+
+[stratix_lvds_rx]
+A/stratix_lvds_rx=22|./src/altera_mf.v|24588|1*145096
+B/stratix_lvds_rx=3*4515528
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=456,869,1245,1424
+R=./src/altera_mf.v|24588
+
+[stratix_tx_outclk]
+A/stratix_tx_outclk=22|./src/altera_mf.v|28258|1*168821
+B/stratix_tx_outclk=3*5680516
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=386,814,1250,1442
+R=./src/altera_mf.v|28258
+
+[stratixgx_dpa_lvds_rx]
+A/stratixgx_dpa_lvds_rx=22|./src/altera_mf.v|24696|1*146376
+B/stratixgx_dpa_lvds_rx=3*4529336
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=935,1901,2980,3423
+R=./src/altera_mf.v|24696
+
+[stratixii_lvds_rx]
+A/stratixii_lvds_rx=22|./src/altera_mf.v|25099|1*148686
+B/stratixii_lvds_rx=3*4638779
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1387,2326,3173,3527
+R=./src/altera_mf.v|25099
+
+[stratixii_tx_outclk]
+A/stratixii_tx_outclk=22|./src/altera_mf.v|28365|1*170071
+B/stratixii_tx_outclk=3*5694974
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=390,797,1214,1380
+R=./src/altera_mf.v|28365
+
+[stratixiii_lvds_rx]
+A/stratixiii_lvds_rx=22|./src/altera_mf.v|25885|1*153025
+B/stratixiii_lvds_rx=3*4875159
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2001,2864,4026,4741
+R=./src/altera_mf.v|25885
+
+[stratixiii_lvds_rx_channel]
+A/stratixiii_lvds_rx_channel=22|./src/altera_mf.v|26058|1*155412
+B/stratixiii_lvds_rx_channel=3*4933390
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1684,3040,5002,5775
+R=./src/altera_mf.v|26058
+
+[stratixiii_lvds_rx_dpa]
+A/stratixiii_lvds_rx_dpa=22|./src/altera_mf.v|26642|1*159025
+B/stratixiii_lvds_rx_dpa=3*5006953
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=923,1564,2181,2467
+R=./src/altera_mf.v|26642
+
+[stx_m_cntr]
+A/stx_m_cntr=22|./src/altera_mf.v|2055|1*9918
+B/stx_m_cntr=3*264908
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=307,580,855,1048
+R=./src/altera_mf.v|2055
+
+[stx_n_cntr]
+A/stx_n_cntr=22|./src/altera_mf.v|2133|1*10841
+B/stx_n_cntr=3*269618
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=252,640,916,1109
+R=./src/altera_mf.v|2133
+
+[stx_scale_cntr]
+A/stx_scale_cntr=22|./src/altera_mf.v|2218|1*11764
+B/stx_scale_cntr=3*275120
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=422,820,1222,1487
+R=./src/altera_mf.v|2218
+
+[ttn_m_cntr]
+A/ttn_m_cntr=22|./src/altera_mf.v|10055|1*52215
+B/ttn_m_cntr=3*1512845
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=307,578,853,1046
+R=./src/altera_mf.v|10055
+
+[ttn_n_cntr]
+A/ttn_n_cntr=22|./src/altera_mf.v|10136|1*53138
+B/ttn_n_cntr=3*1518323
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,448,699,856
+R=./src/altera_mf.v|10136
+
+[ttn_scale_cntr]
+A/ttn_scale_cntr=22|./src/altera_mf.v|10207|1*53981
+B/ttn_scale_cntr=3*1522521
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=373,726,1071,1302
+R=./src/altera_mf.v|10207
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, ALTERA_MF VERILOG LIBRARY
+LastVerilogToplevel=altsource_probe
+ModifyID=600
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/altera_mf.v=0*538704*930698
+
+[~MFT]
+0=82|0ovi_altera_mf.mgf|930698|0
+1=80|1ovi_altera_mf.mgf|275016|0
+3=80|3ovi_altera_mf.mgf|12336119|0
+4=0|4ovi_altera_mf.mgf|0|0
+
+[~U]
+$root=12|0*0|
+ALTERA_DEVICE_FAMILIES=12|0*14936||0x80
+ALTERA_MF_HINT_EVALUATION=12|0*13358||0x80
+ALTERA_MF_MEMORY_INITIALIZATION=12|0*1180||0x80
+MF_cycloneiii_pll=12|0*156135||0x80
+MF_cycloneiiigl_m_cntr=12|0*191995||0x80
+MF_cycloneiiigl_n_cntr=12|0*193010||0x80
+MF_cycloneiiigl_pll=12|0*196158||0x80
+MF_cycloneiiigl_scale_cntr=12|0*193913||0x80
+MF_pll_reg=12|0*30661||0x80
+MF_stratix_pll=12|0*31328||0x80
+MF_stratixii_pll=12|0*72470||0x80
+MF_stratixiii_pll=12|0*112542||0x80
+a_graycounter=12|0*502562||0x90
+alt3pram=12|0*485943||0x90
+alt_aeq_s4=12|0*509433||0x90
+alt_cal=12|0*507441||0x90
+alt_dfe=12|0*514735||0x90
+alt_eyemon=12|0*511172||0x90
+altaccumulate=12|0*356402||0x90
+altclklock=12|0*440593||0x90
+altddio_bidir=12|0*453283||0x90
+altddio_in=12|0*448108||0x80
+altddio_out=12|0*450631||0x80
+altdpram=12|0*454945||0x90
+altera_std_synchronizer=12|0*505338||0x80
+altera_std_synchronizer_bundle=12|0*506626||0x90
+altfp_mult=12|0*431918||0x90
+altlvds_rx=12|0*251021||0x90
+altlvds_tx=12|0*297944||0x90
+altmult_accum=12|0*359296||0x90
+altmult_add=12|0*377744||0x90
+altparallel_flash_loader=12|0*535072||0x90
+altpll=12|0*232644||0x90
+altserial_flash_loader=12|0*536745||0x90
+altshift_taps=12|0*501076||0x90
+altsource_probe=12|0*537488||0x90
+altsqrt=12|0*438649||0x90
+altsquare=12|0*503712||0x90
+altstratixii_oct=12|0*534575||0x90
+altsyncram=12|0*461466||0x80
+arm_m_cntr=12|0*69089||0x80
+arm_n_cntr=12|0*70076||0x80
+arm_scale_cntr=12|0*71175||0x80
+cda_m_cntr=12|0*152962||0x80
+cda_n_cntr=12|0*153949||0x80
+cda_scale_cntr=12|0*154824||0x80
+cycloneiiigl_post_divider=12|0*195236||0x80
+dcfifo=12|0*354683||0x90
+dcfifo_async=12|0*330473||0x80
+dcfifo_dffpipe=12|0*327756||0x80
+dcfifo_fefifo=12|0*328667||0x80
+dcfifo_low_latency=12|0*339202||0x80
+dcfifo_mixed_widths=12|0*346149||0x80
+dcfifo_sync=12|0*335462||0x80
+dffp=12|0*25873||0x80
+dummy_hub=12|0*527286||0x80
+flexible_lvds_rx=12|0*281106||0x80
+flexible_lvds_tx=12|0*322011||0x80
+jtag_tap_controller=12|0*523938||0x80
+lcell=12|0*806||0x90
+parallel_add=12|0*491920||0x90
+pll_iobuf=12|0*26502||0x80
+scfifo=12|0*494301||0x90
+signal_gen=12|0*518295||0x80
+sld_signaltap=12|0*532241||0x90
+sld_virtual_jtag=12|0*530304||0x90
+stratix_lvds_rx=12|0*271850||0x80
+stratix_tx_outclk=12|0*319333||0x80
+stratixgx_dpa_lvds_rx=12|0*273146||0x80
+stratixii_lvds_rx=12|0*277520||0x80
+stratixii_tx_outclk=12|0*320743||0x80
+stratixiii_lvds_rx=12|0*285859||0x80
+stratixiii_lvds_rx_channel=12|0*288758||0x80
+stratixiii_lvds_rx_dpa=12|0*295297||0x80
+stx_m_cntr=12|0*27024||0x80
+stx_n_cntr=12|0*27979||0x80
+stx_scale_cntr=12|0*29110||0x80
+ttn_m_cntr=12|0*109369||0x80
+ttn_n_cntr=12|0*110356||0x80
+ttn_scale_cntr=12|0*111231||0x80
+

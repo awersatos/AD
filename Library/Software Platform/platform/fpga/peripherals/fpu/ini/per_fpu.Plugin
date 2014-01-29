@@ -1,0 +1,34 @@
+[Plugin]
+Name=per_fpu
+Description=Single precision floating point unit (IEEE-754)
+Caption=FPU
+SourceDir=platform\fpga\peripherals\fpu\src
+HardwareID=WB_FPU
+Implement=per_fpu
+Bitmap=per_fpu.bmp
+LargeBitmap=per_fpu_large.bmp
+InitHandler=fpu_rtl_init
+InitHandlerPriority=8
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=Hardware base address
+Kind=UINT32
+Auto=True
+
+[Instance_Option1]
+Name=LIB_USES_FPU
+GUIName=Use FPU from runtime library
+Description=Tick if you want this FPU to be used by the runtime library. Note: there can be only one FPU with this option set!
+Kind=Boolean
+DefaultValue=False

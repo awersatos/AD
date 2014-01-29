@@ -1,0 +1,46 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Copyright (c) 2005 by Lattice Semiconductor Corporation
+// --------------------------------------------------------------------
+//
+//
+//                     Lattice Semiconductor Corporation
+//                     5555 NE Moore Court
+//                     Hillsboro, OR 97214
+//                     U.S.A.
+//
+//                     TEL: 1-800-Lattice  (USA and Canada)
+//                          1-408-826-6000 (other locations)
+//
+//                     web: http://www.latticesemi.com/
+//                     email: techsupport@latticesemi.com
+//
+// --------------------------------------------------------------------
+//
+// Simulation Library File for NEOPRIMS
+//
+// $Header: /home/dmsys/pvcs/RCSMigTest/rcs/verilog/pkg/versclibs/data/neoprims/RCS/NEOXOR2.vmd,v 1.3 2005/05/19 18:23:57 pradeep Exp $ 
+//
+`timescale 1 ns / 100 ps
+`celldefine
+
+   module NEOXOR2 (OUT, IN0, IN1) ;
+
+      output OUT ;
+      input IN0, IN1 ;
+
+      xor (OUT, IN0, IN1) ;
+
+   specify
+
+      specparam INDLYLH0     = 0:0:0,  INDLYLH1     = 0:0:0 ;
+      specparam INDLYHL0     = 0:0:0,  INDLYHL1     = 0:0:0 ;
+      specparam OUTDLYLH     = 0:0:0,  OUTDLYHL     = 0:0:0 ;
+
+      (IN0 => OUT) = (INDLYLH0 +OUTDLYLH, INDLYHL0 +OUTDLYHL);
+      (IN1 => OUT) = (INDLYLH1 +OUTDLYLH, INDLYHL1 +OUTDLYHL);
+
+   endspecify
+   endmodule
+`endcelldefine

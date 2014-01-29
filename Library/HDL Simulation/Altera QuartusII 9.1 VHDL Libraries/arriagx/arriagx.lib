@@ -1,0 +1,632 @@
+timestamp=0
+
+[arriagx_and1]
+A/altvital=A/AltVITAL 21|./src/arriagx_atoms.vhd|1416|1*7263
+B/altvital=3*41080
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*39253
+I/altvital=I/AltVITAL 0*40278
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*38632*0xf2c057cac07e71dead11359a33fbc3a4b097c035|0*39182*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/arriagx_atoms.vhd|0*39494*0xe9da6661e76b2dfe78e2080e0ea2e7f992914f28|0*40195*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|1399
+
+[arriagx_asmiblock]
+A/architecture_asmiblock=21|./src/arriagx_atoms.vhd|2681|1*19720
+B/architecture_asmiblock=3*137951
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_asmiblock=8.2.1986.SP1.35.3497  (Windows)
+I=0*82872
+I/architecture_asmiblock=0*83427
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*82417*0x9d1f9b8dd0dc49e0c01e5f6b3cba2c18adf6bb56|0*82796*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_asmiblock=21|0|v63|0|./src/arriagx_atoms.vhd|0*83086*0xc11e2173cc03baf5488405873f5612e6739f10db|0*83325*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|2670
+
+[arriagx_asynch_io]
+A/behave=21|./src/arriagx_atoms.vhd|3581|1*28184
+B/behave=3*167407
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*114245
+I/behave=0*121706
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*112000*0xa2881fc2d2e8b0cb71b1d9db042bcfdf7326e80f|0*114169*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/arriagx_atoms.vhd|0*114571*0x54dc6fb55521c34bf62b72679e0e4af54ddf761f|0*121620*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|3531
+
+[arriagx_atom_pack]
+B/arriagx_atom_pack=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*2836
+I/arriagx_atom_pack=0*7359
+M=3|0|v63|0|./src/arriagx_atoms.vhd|0*874*0xfa53d85bac19040d0f52fe9ada97a93adb02db86|0*2760*0xf2538cdc6f7b23a146389216c886e772
+M/arriagx_atom_pack=4|0|v63|0|./src/arriagx_atoms.vhd|0*3082*0x96e47a80d30be0c84aa0cf2f1115a1d01e3d6f69|0*7263*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|21
+
+[arriagx_clkctrl]
+A/vital_clkctrl=21|./src/arriagx_atoms.vhd|3437|1*26342
+B/vital_clkctrl=3*163870
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_clkctrl=8.2.1986.SP1.35.3497  (Windows)
+I=0*108532
+I/vital_clkctrl=0*111016
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*107431*0x1561b3b37dee1ab8c03f08f8c8391ccce46fc55e|0*108458*0xf2538cdc6f7b23a146389216c886e772
+M/vital_clkctrl=21|0|v63|0|./src/arriagx_atoms.vhd|0*108824*0xce523575c335202b45012525685c41e4ac06e482|0*110925*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|3412
+
+[arriagx_components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*128436
+I=0*535692
+M=3|0|v63|0|./src/arriagx_components.vhd|0*502321*0x5a2b20e7e64eeb4c3b4000183950d1d1a2d50a51|0*535610*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_components.vhd|21
+
+[arriagx_crcblock]
+A/architecture_crcblock=21|./src/arriagx_atoms.vhd|2655|1*19086
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_crcblock=8.2.1986.SP1.35.3497  (Windows)
+I=0*81431
+I/architecture_crcblock=0*81936
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*80928*0x499e5c2e45decf5e22806cfe364ecd191aec18e5|0*81356*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_crcblock=21|0|v63|0|./src/arriagx_atoms.vhd|0*81644*0x02127a7c4a54dfd4a1d41ea10e53ee2c6eacdf38|0*81836*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|2640
+
+[arriagx_dffe]
+A/behave=21|./src/arriagx_atoms.vhd|1067|1*2554
+B/behave=3*30734
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*27935
+I/behave=0*31756
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*26325*0x79217dcbdedefda5f1b162a0055cc3c8f041ccfe|0*27864*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/arriagx_atoms.vhd|0*28224*0xd7709c8d68b456c45f7041804ba49da80c3e87cf|0*31675*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|1031
+
+[arriagx_dll]
+A/vital_armdll=21|./src/arriagx_atoms.vhd|13663|1*118964
+B/vital_armdll=3*1061773
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_armdll=8.2.1986.SP1.35.3497  (Windows)
+I=0*471869
+I/vital_armdll=0*491194
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*469115*0x677574dbc2123c46cd69592783d9a0e87ab3e0ee|0*471799*0xf2538cdc6f7b23a146389216c886e772
+M/vital_armdll=21|0|v63|0|./src/arriagx_atoms.vhd|0*472205*0xca3cc427cba8474a52adb014d0f729b991b92c4b|0*491108*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|13604
+
+[arriagx_ena_reg]
+A/behave=21|./src/arriagx_atoms.vhd|3322|1*24843
+B/behave=3*161296
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*104829
+I/behave=0*106696
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*103794*0x485f88ebfa25d54f0ae35561b1205a964f4928a4|0*104755*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/arriagx_atoms.vhd|0*105121*0x7cfed29be3230736f3de04def4dec9d7e1583252|0*106612*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|3297
+
+[arriagx_io]
+A/structure=21|./src/arriagx_atoms.vhd|4330|1*34695
+B/structure=3*198368
+C=8.2.1986.SP1.35.3497  (Windows)
+C/structure=8.2.1986.SP1.35.3497  (Windows)
+I=0*139253
+I/structure=0*148476
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*136717*0x81b2c6eba581db306e4f20d10b5a899f57b1ff69|0*139184*0xf2538cdc6f7b23a146389216c886e772
+M/structure=21|0|v63|0|./src/arriagx_atoms.vhd|0*139540*0xaedf5f649942a019bc0a2fb2cae7b5808bc31796|0*148394*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|4266
+
+[arriagx_io_latch]
+A/vital_io_latch=21|./src/arriagx_atoms.vhd|4102|1*32788
+B/vital_io_latch=3*190594
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_io_latch=8.2.1986.SP1.35.3497  (Windows)
+I=0*131298
+I/vital_io_latch=0*135738
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*129559*0x51cf7a46501195b906d51a429baa5c895452f6b4|0*131223*0xf2538cdc6f7b23a146389216c886e772
+M/vital_io_latch=21|0|v63|0|./src/arriagx_atoms.vhd|0*131591*0xe4616a6cf9a4511b3c694a1336d5e1fe2b5db995|0*135645*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|4063
+
+[arriagx_io_register]
+A/vital_io_reg=21|./src/arriagx_atoms.vhd|3902|1*30883
+B/vital_io_reg=3*182762
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_io_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*124279
+I/vital_io_reg=0*128765
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*122527*0x53166eaf70b402561cf97fed5271b762428746e2|0*124201*0xf2538cdc6f7b23a146389216c886e772
+M/vital_io_reg=21|0|v63|0|./src/arriagx_atoms.vhd|0*124575*0x2c7dce37fbc68e2669e09ed8a7c3bcd9b84a48fb|0*128671*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|3863
+
+[arriagx_jtag]
+A/architecture_jtag=21|./src/arriagx_atoms.vhd|2624|1*18440
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_jtag=8.2.1986.SP1.35.3497  (Windows)
+I=0*79952
+I/architecture_jtag=0*80424
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*79247*0xab410172719dbe34bd1ac1d91bc4e78f1ad437ff|0*79881*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_jtag=21|0|v63|0|./src/arriagx_atoms.vhd|0*80161*0x0279f2311a61e80bae74e7911b607dfe0a4f1fac|0*80332*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|2601
+
+[arriagx_lcell_comb]
+A/vital_lcell_comb=21|./src/arriagx_atoms.vhd|3068|1*22678
+B/vital_lcell_comb=3*149295
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_lcell_comb=8.2.1986.SP1.35.3497  (Windows)
+I=0*97151
+I/vital_lcell_comb=0*103094
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*94146*0x3bf3e27907f3c88ec51a180ae0b0256c93089f00|0*97074*0xf2538cdc6f7b23a146389216c886e772
+M/vital_lcell_comb=21|0|v63|0|./src/arriagx_atoms.vhd|0*97446*0x2d93c636123cc60a30bfd724b217f835801ebd2a|0*102997*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|3002
+
+[arriagx_lcell_ff]
+A/vital_lcell_ff=21|./src/arriagx_atoms.vhd|2755|1*20371
+B/vital_lcell_ff=3*138200
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_lcell_ff=8.2.1986.SP1.35.3497  (Windows)
+I=0*86590
+I/vital_lcell_ff=0*93239
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*84197*0x300ffa6048fef6d5ccde21fe1a6348e5582aeba8|0*86515*0xf2538cdc6f7b23a146389216c886e772
+M/vital_lcell_ff=21|0|v63|0|./src/arriagx_atoms.vhd|0*86883*0x4413a7a434f78d2e26545629e975a6e8b784e5e3|0*93146*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|2705
+
+[arriagx_lvds_receiver]
+A/vital_arm_lvds_receiver=21|./src/arriagx_atoms.vhd|13253|1*114390
+B/vital_arm_lvds_receiver=3*1045681
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_arm_lvds_receiver=8.2.1986.SP1.35.3497  (Windows)
+I=0*459635
+I/vital_arm_lvds_receiver=0*467881
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*457393*0xe6be7656bab595d434bdcdfd6ab25f395ce9a388|0*459555*0xf2538cdc6f7b23a146389216c886e772
+M/vital_arm_lvds_receiver=21|0|v63|0|./src/arriagx_atoms.vhd|0*459933*0xa2428b031a3d9878d55e3524ce04237c5cf91ace|0*467774*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|13204
+
+[arriagx_lvds_reg]
+A/vital_arriagx_lvds_reg=21|./src/arriagx_atoms.vhd|12476|1*104671
+B/vital_arriagx_lvds_reg=3*1019416
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_arriagx_lvds_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*433634
+I/vital_arriagx_lvds_reg=0*435049
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*432607*0x557dbf823f066efccdbd2df9bd86ec44fd8ca9ec|0*433559*0xf2538cdc6f7b23a146389216c886e772
+M/vital_arriagx_lvds_reg=21|0|v63|0|./src/arriagx_atoms.vhd|0*433927*0x89948a5167447d39722ce28cb0b74ae6ba945a0d|0*434948*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|12452
+
+[arriagx_lvds_rx_bitslip]
+A/vital_arm_lvds_rx_bitslip=21|./src/arriagx_atoms.vhd|12851|1*109081
+B/vital_arm_lvds_rx_bitslip=3*1032627
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_arm_lvds_rx_bitslip=8.2.1986.SP1.35.3497  (Windows)
+I=0*445918
+I/vital_arm_lvds_rx_bitslip=0*449959
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*444714*0x25e1f33db7bd806f282be4476328f9e0d3a1f096|0*445836*0xf2538cdc6f7b23a146389216c886e772
+M/vital_arm_lvds_rx_bitslip=21|0|v63|0|./src/arriagx_atoms.vhd|0*446218*0x046f5464d3cf252ace751691ba658562f9b705f7|0*449848*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|12825
+
+[arriagx_lvds_rx_deser]
+A/vital_arm_lvds_rx_deser=21|./src/arriagx_atoms.vhd|13048|1*111463
+B/vital_arm_lvds_rx_deser=3*1037896
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_arm_lvds_rx_deser=8.2.1986.SP1.35.3497  (Windows)
+I=0*451639
+I/vital_arm_lvds_rx_deser=0*453030
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*450727*0x3d4d48a39920b3e97a32546d7a7deb1c8b97ad65|0*451559*0xf2538cdc6f7b23a146389216c886e772
+M/vital_arm_lvds_rx_deser=21|0|v63|0|./src/arriagx_atoms.vhd|0*451937*0xcd51fa8d3b5dd54e18dac4a5d725c776a31ec28f|0*452923*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|13027
+
+[arriagx_lvds_rx_fifo]
+A/vital_arm_lvds_rx_fifo=21|./src/arriagx_atoms.vhd|12676|1*107182
+B/vital_arm_lvds_rx_fifo=3*1026685
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_arm_lvds_rx_fifo=8.2.1986.SP1.35.3497  (Windows)
+I=0*440185
+I/vital_arm_lvds_rx_fifo=0*443870
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*438977*0xb1d80865882833ed09de8ff5501aba0c2b36f13f|0*440106*0xf2538cdc6f7b23a146389216c886e772
+M/vital_arm_lvds_rx_fifo=21|0|v63|0|./src/arriagx_atoms.vhd|0*440514*0x435d42a8138870fd97e2c3850065610c2b2aab8d|0*443765*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|12650
+
+[arriagx_lvds_rx_fifo_sync_ram]
+A/vital_arm_lvds_rx_fifo_sync_ram=21|./src/arriagx_atoms.vhd|12561|1*106090
+B/vital_arm_lvds_rx_fifo_sync_ram=3*1021578
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_arm_lvds_rx_fifo_sync_ram=8.2.1986.SP1.35.3497  (Windows)
+I=0*436274
+I/vital_arm_lvds_rx_fifo_sync_ram=0*438230
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*435655*0x946c7b9292f85ed1e2d123649f09249bd6a735fa|0*436186*0xf2538cdc6f7b23a146389216c886e772
+M/vital_arm_lvds_rx_fifo_sync_ram=21|0|v63|0|./src/arriagx_atoms.vhd|0*436580*0x7402aacf448f928f1a9fcddd86945603e3d3c4a5|0*438107*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|12549
+
+[arriagx_lvds_rx_parallel_reg]
+A/vital_arm_lvds_rx_parallel_reg=21|./src/arriagx_atoms.vhd|13132|1*112803
+B/vital_arm_lvds_rx_parallel_reg=3*1041059
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_arm_lvds_rx_parallel_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*454874
+I/vital_arm_lvds_rx_parallel_reg=0*456407
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*453817*0x6b8417647b4acaddce36cddafe1839ab0778f2c7|0*454787*0xf2538cdc6f7b23a146389216c886e772
+M/vital_arm_lvds_rx_parallel_reg=21|0|v63|0|./src/arriagx_atoms.vhd|0*455179*0x18e3011b4fa5da36be20bfdac0a1aeca091f8a91|0*456286*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|13110
+
+[arriagx_lvds_transmitter]
+A/vital_transmitter_atom=21|./src/arriagx_atoms.vhd|12187|1*101234
+B/vital_transmitter_atom=3*1008957
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_transmitter_atom=8.2.1986.SP1.35.3497  (Windows)
+I=0*424937
+I/vital_transmitter_atom=0*431750
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*422931*0xfd0dd4c53f78a8f5fdebdd0ffb068b277b423f19|0*424854*0xf2538cdc6f7b23a146389216c886e772
+M/vital_transmitter_atom=21|0|v63|0|./src/arriagx_atoms.vhd|0*425270*0x5eafed964c635d8489b5c0610cd1f5c21fd62fa9|0*431641*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|12146
+
+[arriagx_lvds_tx_out_block]
+A/vital_tx_out_block=21|./src/arriagx_atoms.vhd|12045|1*99835
+B/vital_tx_out_block=3*1005511
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_tx_out_block=8.2.1986.SP1.35.3497  (Windows)
+I=0*419829
+I/vital_tx_out_block=0*421957
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*418669*0x5b110eaf2029a46f2035a53a5204338d26f94cab|0*419745*0xf2538cdc6f7b23a146389216c886e772
+M/vital_tx_out_block=21|0|v63|0|./src/arriagx_atoms.vhd|0*420163*0x39e500743fb39cbb44fa1abeb7c9d4d0f86d4769|0*421851*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|12019
+
+[arriagx_lvds_tx_parallel_register]
+A/vital_tx_reg=21|./src/arriagx_atoms.vhd|11927|1*97914
+B/vital_tx_reg=3*999863
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_tx_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*415629
+I/vital_tx_reg=0*417868
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*414347*0xf92a089d979fcb4699f53a971c2405514dc5ad34|0*415537*0xf2538cdc6f7b23a146389216c886e772
+M/vital_tx_reg=21|0|v63|0|./src/arriagx_atoms.vhd|0*415971*0xb8a4aba775e39adf214e02ecf5a15166bbd67796|0*417760*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|11901
+
+[arriagx_lvds_tx_reg]
+A/vital_arriagx_lvds_tx_reg=21|./src/arriagx_atoms.vhd|11808|1*96332
+B/vital_arriagx_lvds_tx_reg=3*997194
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_arriagx_lvds_tx_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*411494
+I/vital_arriagx_lvds_tx_reg=0*413523
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*410397*0xc06ab32286997918a69ef06701a491ca815444ed|0*411416*0xf2538cdc6f7b23a146389216c886e772
+M/vital_arriagx_lvds_tx_reg=21|0|v63|0|./src/arriagx_atoms.vhd|0*411790*0xea61ab2aa58400fe1cf64a86c49aa022a77d7615|0*413416*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|11783
+
+[arriagx_m_cntr]
+A/behave=21|./src/arriagx_atoms.vhd|4675|1*39191
+B/behave=3*223666
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*149652
+I/behave=0*150580
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*149192*0x22add9c0a959bc30a7d13e954551079c3a900cfe|0*149579*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/arriagx_atoms.vhd|0*149895*0xc017b536d141e8316c3262b66a3a7c62e9a7e2dd|0*150497*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|4665
+
+[arriagx_mac_addnsub]
+A/arch=21|./src/arriagx_atoms.vhd|8802|1*71042
+B/arch=3*525771
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*281990
+I/arch=0*291927
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*281040*0x31696a358aadf2b4020fe678f45259f5fd87e384|0*281912*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*282350*0xe3481f31a892ca3f367dec7710099b1a230591f7|0*291841*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|8782
+
+[arriagx_mac_bit_register]
+A/arch=21|./src/arriagx_atoms.vhd|7760|1*56979
+B/arch=3*386124
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*239511
+I/arch=0*241727
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*238279*0x99fd44ac0bb7994a95e9e21362be20181bbba19a|0*239428*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*239844*0x75595a19f94653051acd2e3cd50eadb7ef9363b1|0*241636*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|7736
+
+[arriagx_mac_dynamic_mux]
+A/arch=21|./src/arriagx_atoms.vhd|9698|1*74452
+B/arch=3*660237
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*313913
+I/arch=0*320650
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*312767*0x76edbb70821ac99b81b8a0311f3ce483198f58fb|0*313831*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*314245*0xbc0d0377612b3af44b4d12eecafdfad943b64b96|0*320560*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|9672
+
+[arriagx_mac_dynamic_src]
+A/arch=21|./src/arriagx_atoms.vhd|9122|1*72475
+B/arch=3*576172
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*294064
+I/arch=0*312034
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*292688*0x1030c424b5942111b35e2e00a07fa6092eece1b1|0*293982*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*294428*0xccf9b9932f26c8464b525e84073f723b9bb5e6e6|0*311944*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|9089
+
+[arriagx_mac_mult]
+A/arch=21|./src/arriagx_atoms.vhd|8363|1*64967
+B/arch=3*447886
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*263283
+I/arch=0*280190
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*260972*0x638cd4fc5b4be3bcd222156682c7d234e4ebcdcb|0*263208*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*263640*0xbe8660f880be2dc14e6b4c2a5d8273f564b43c90|0*280107*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|8311
+
+[arriagx_mac_mult_internal]
+A/arch=21|./src/arriagx_atoms.vhd|8215|1*62718
+B/arch=3*416073
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*256683
+I/arch=0*260084
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*255101*0x6165c30507607a7dbada5a1106142da99878fc8e|0*256599*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*257017*0xacf08973fad2782d6ea09a7e90a1cfb64c14da2f|0*259992*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|8186
+
+[arriagx_mac_out]
+A/arch=21|./src/arriagx_atoms.vhd|10588|1*83649
+B/arch=3*802400
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*351044
+I/arch=0*409484
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*346327*0xfb8f64b52ba413aa31d52d962056028eecf72389|0*350970*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*351400*0x7e090b598e633272316f4f8b6fb2f68fc3f2b25b|0*409402*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|10474
+
+[arriagx_mac_out_internal]
+A/arch=21|./src/arriagx_atoms.vhd|9936|1*75597
+B/arch=3*737614
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*325498
+I/arch=0*340354
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*321672*0x6abd0b5fea5fe058b3657ebc97bfe6c2991d4e49|0*325415*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*325863*0x1fbaed79ec2dc4ef482691bb222027b2bfee6efe|0*340263*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|9869
+
+[arriagx_mac_pin_map]
+A/arch=21|./src/arriagx_atoms.vhd|10373|1*82184
+B/arch=3*782107
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*342067
+I/arch=0*345222
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*341260*0x2d4a705b83c1f92771dbe7b8a2af518955a0749b|0*341989*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*342395*0xb48f4ecf82c7aa34b80f936724839c7e83d7e1c2|0*345136*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|10359
+
+[arriagx_mac_register]
+A/arch=21|./src/arriagx_atoms.vhd|7868|1*58492
+B/arch=3*389216
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*243906
+I/arch=0*246266
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*242522*0x948a9363d2ad0515ab6524b796cd3867f2cb6f4b|0*243827*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*244235*0x1c38ee700224fc657efbdfac64554653a13dca4d|0*246179*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|7844
+
+[arriagx_mac_rs_block]
+A/arch=21|./src/arriagx_atoms.vhd|7982|1*60437
+B/arch=3*397348
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*248235
+I/arch=0*254241
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*247025*0x7a91b2aada0d4e3174903edf56f71f7c4fad29f7|0*248156*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*248596*0x7c86fbb6a756decd771cb595c5f7a59630bf0f95|0*254154*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|7959
+
+[arriagx_mux21]
+A/altvital=A/AltVITAL 21|./src/arriagx_atoms.vhd|1230|1*4597
+B/altvital=3*35892
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*33251
+I/altvital=I/AltVITAL 0*34451
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*32390*0x1ea8c510ad19fe70f23a78d50b25aef7181a9759|0*33179*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/arriagx_atoms.vhd|0*33493*0xaec1087b7173d08492f51f8d3238bca20345e4c5|0*34367*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|1210
+
+[arriagx_mux41]
+A/altvital=A/AltVITAL 21|./src/arriagx_atoms.vhd|1323|1*5810
+B/altvital=3*37460
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*36280
+I/altvital=I/AltVITAL 0*38060
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*35104*0x248f5f8344cd18e01c49faa05150a108d85e9068|0*36208*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/arriagx_atoms.vhd|0*36522*0xa526fdc433eb8717ca6a5bb8724b255bf4aa21e4|0*37976*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|1295
+
+[arriagx_n_cntr]
+A/behave=21|./src/arriagx_atoms.vhd|4728|1*39858
+B/behave=3*224824
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*151549
+I/behave=0*152684
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*151089*0xcfb46e03440598c866b8b7c2f2c51912f84c259f|0*151476*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/arriagx_atoms.vhd|0*151792*0x8dc5c2d5f38d20e5dd85b7cf0a580c7eebd991d6|0*152601*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|4718
+
+[arriagx_pll]
+A/vital_pll=21|./src/arriagx_atoms.vhd|5143|1*42099
+B/vital_pll=3*228369
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_pll=8.2.1986.SP1.35.3497  (Windows)
+I=0*165585
+I/vital_pll=0*237440
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*158218*0xbd384818b2c1e2c32ee160bd7bbde185639c4e7e|0*165515*0xf2538cdc6f7b23a146389216c886e772
+M/vital_pll=21|0|v63|0|./src/arriagx_atoms.vhd|0*165937*0x14614934e316c70341164ef81776a0641d410ac7|0*237357*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|4909
+
+[arriagx_pll_reg]
+A/behave=21|./src/arriagx_atoms.vhd|4861|1*41544
+B/behave=3*227692
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*155982
+I/behave=0*156559
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*155598*0xaf08a7495680038802e569e1a603d328fe45bd45|0*155908*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/arriagx_atoms.vhd|0*156146*0x6f24e84af90fb8b7cd04f44079f639417d4e68b6|0*156475*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|4851
+
+[arriagx_pllpack]
+B/arriagx_pllpack=3*11718
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*1398
+I=0*11389
+I/arriagx_pllpack=0*25712
+M=3|0|v63|0|./src/arriagx_atoms.vhd|0*8525*0x5150ea1666dfb61e339a4f525baa24fae194d885|0*11315*0xf2538cdc6f7b23a146389216c886e772
+M/arriagx_pllpack=4|0|v63|0|./src/arriagx_atoms.vhd|0*11553*0x1e135587e90eee197a2c7551dd6740b24c5c8ece|0*25620*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|325
+
+[arriagx_ram_block]
+A/block_arch=21|./src/arriagx_atoms.vhd|1809|1*11735
+B/block_arch=3*53484
+C=8.2.1986.SP1.35.3497  (Windows)
+C/block_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*54788
+I/block_arch=0*78589
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*50951*0x788bc62ad24454060c34583fa142816fcd08d149|0*54712*0xf2538cdc6f7b23a146389216c886e772
+M/block_arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*55082*0x77192a914a194e254fb21577c0921830e29b6aaf|0*78499*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|1722
+
+[arriagx_ram_pulse_generator]
+A/pgen_arch=21|./src/arriagx_atoms.vhd|1673|1*10585
+B/pgen_arch=3*51251
+C=8.2.1986.SP1.35.3497  (Windows)
+C/pgen_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*48487
+I/pgen_arch=0*49815
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*47802*0x18701d1aa34ebcf187654949ee10b4c715689769|0*48401*0xf2538cdc6f7b23a146389216c886e772
+M/pgen_arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*48791*0xce3ed365640521b60a4e73a5f7d81ffceae45062|0*49716*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|1660
+
+[arriagx_ram_register]
+A/reg_arch=21|./src/arriagx_atoms.vhd|1513|1*8460
+B/reg_arch=3*41991
+C=8.2.1986.SP1.35.3497  (Windows)
+C/reg_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*42656
+I/reg_arch=0*47192
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*41001*0x383751d96b6d321c3f305ab48b622db3e0f970d2|0*42577*0xf2538cdc6f7b23a146389216c886e772
+M/reg_arch=21|0|v63|0|./src/arriagx_atoms.vhd|0*42953*0x4c8a393600ea019b3872d1ad39a3202fb5e71843|0*47101*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|1476
+
+[arriagx_routing_wire]
+A/behave=21|./src/arriagx_atoms.vhd|14696|1*127337
+B/behave=3*1113490
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*500062
+I/behave=0*501525
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*499348*0xa85e263409e0dc01df14ed5bdf0d12709882b0fc|0*499983*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/arriagx_atoms.vhd|0*500359*0x8a222bafd2e202a842d3c4bd58fc1898b70b2fbf|0*501436*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|14681
+
+[arriagx_rublock]
+A/architecture_rublock=21|./src/arriagx_atoms.vhd|14407|1*124599
+B/architecture_rublock=3*1106410
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_rublock=8.2.1986.SP1.35.3497  (Windows)
+I=0*492668
+I/architecture_rublock=0*495017
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*491899*0x999c42eac1f36bb9d38d69a87600181ea0cb8d02|0*492594*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_rublock=21|0|v63|0|./src/arriagx_atoms.vhd|0*492912*0xb5fb3a5e9907f36cffc409f7b95e55bb687fe179|0*494919*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|14383
+
+[arriagx_scale_cntr]
+A/behave=21|./src/arriagx_atoms.vhd|4790|1*40701
+B/behave=3*226162
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*153728
+I/behave=0*155132
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*153213*0xe6b69d5971072105fc6bd80ef3fabf6a177d9600|0*153651*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/arriagx_atoms.vhd|0*153975*0x06e60075a5d4d6834d7b27538523d0c3cb1a685c|0*155045*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|4778
+
+[arriagx_termination]
+A/vital_armtermination=21|./src/arriagx_atoms.vhd|14649|1*125936
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_armtermination=8.2.1986.SP1.35.3497  (Windows)
+I=0*498125
+I/vital_armtermination=0*498718
+M=11|0|v63|0|./src/arriagx_atoms.vhd|0*495930*0xc90e1d83551544615917d72e3dae94bf793e9e9d|0*498047*0xf2538cdc6f7b23a146389216c886e772
+M/vital_armtermination=21|0|v63|0|./src/arriagx_atoms.vhd|0*498421*0xe1fa5d6718d42abfc1c311451c8fd01196930585|0*498616*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriagx_atoms.vhd|14597
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, ARRIAGX VHDL LIBRARY
+ModifyID=298
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=363|0arriagx.mgf|535692|0
+1=51|1arriagx.mgf|128436|0
+3=47|3arriagx.mgf|1113490|0
+
+[~U]
+arriagx_and1=11|0*38311|
+arriagx_asmiblock=11|0*82171|
+arriagx_asynch_io=11|0*111354|
+arriagx_atom_pack=3|0*0|0*213
+arriagx_clkctrl=11|0*106995|
+arriagx_components=3|0*501829|0*501963
+arriagx_crcblock=11|0*80651|
+arriagx_dffe=11|0*25892|
+arriagx_dll=11|0*468363|
+arriagx_ena_reg=11|0*103406|
+arriagx_io=11|0*136046|
+arriagx_io_latch=11|0*129074|
+arriagx_io_register=11|0*122039|
+arriagx_jtag=11|0*78958|
+arriagx_lcell_comb=11|0*93579|
+arriagx_lcell_ff=11|0*83664|
+arriagx_lvds_receiver=11|0*456743|
+arriagx_lvds_reg=11|0*432218|
+arriagx_lvds_rx_bitslip=11|0*444270|
+arriagx_lvds_rx_deser=11|0*450317|
+arriagx_lvds_rx_fifo=11|0*438568|
+arriagx_lvds_rx_fifo_sync_ram=11|0*435365|
+arriagx_lvds_rx_parallel_reg=11|0*453352|
+arriagx_lvds_transmitter=11|0*422310|
+arriagx_lvds_tx_out_block=11|0*418223|
+arriagx_lvds_tx_parallel_register=11|0*413845|
+arriagx_lvds_tx_reg=11|0*409989|
+arriagx_m_cntr=11|0*148933|
+arriagx_mac_addnsub=11|0*280696|
+arriagx_mac_bit_register=11|0*237898|
+arriagx_mac_dynamic_mux=11|0*312403|
+arriagx_mac_dynamic_src=11|0*292292|
+arriagx_mac_mult=11|0*260423|
+arriagx_mac_mult_internal=11|0*254607|
+arriagx_mac_out=11|0*345555|
+arriagx_mac_out_internal=11|0*320987|
+arriagx_mac_pin_map=11|0*340868|
+arriagx_mac_register=11|0*242065|
+arriagx_mac_rs_block=11|0*246600|
+arriagx_mux21=11|0*32052|
+arriagx_mux41=11|0*34702|
+arriagx_n_cntr=11|0*150830|
+arriagx_pll=11|0*156730|
+arriagx_pll_reg=11|0*155386|
+arriagx_pllpack=3|0*7623|0*7754
+arriagx_ram_block=11|0*50129|
+arriagx_ram_pulse_generator=11|0*47498|
+arriagx_ram_register=11|0*40528|
+arriagx_routing_wire=11|0*499035|
+arriagx_rublock=11|0*491543|
+arriagx_scale_cntr=11|0*152934|
+arriagx_termination=11|0*495282|
+

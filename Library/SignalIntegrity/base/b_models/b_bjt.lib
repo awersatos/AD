@@ -1,0 +1,1210 @@
+###############################################################################
+#                         EDL Macromodel Library File
+#    Filename: b_bjt.lib
+#     Creator: INCASES Engineering GmbH
+#     Version: 1.1
+#   Last Save: Tue Jan 27 10:32:18 MET 1998
+#
+###############################################################################
+#
+#   Copyright: Copyright (C) 1998, INCASES Engineering GmbH.
+#              Unauthorized reproduction and/or distribution is strictly
+#              prohibited. All rights reserved.
+#
+#  Disclaimer: Please be aware that in the absence of a written agreement
+#              to the contrary, INCASES Engineering GmbH assumes no
+#              liability for:
+#              (1) the accuracy of the macromodels provided to your company;
+#              (2) the proper functioning of these models in your design
+#                  system or for any resulting applications;
+#              (3) infringement of patents, copyrights or intellectual
+#                  property rights resulting from your use of these models.
+#
+###############################################################################
+@IDBM:SIE_BC846_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BC846_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BC846
+AF	1.00E+00
+BF	3.20E+02
+BR	1.47E+01
+CJC	7.16E-12
+CJE	1.03E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	1.79E-01
+IKR	1.00E+00
+IRB	3.37E-03
+IS	3.71E-13
+ISC	1.71E-13
+ISE	2.77E-15
+ITF	2.26E+00
+KF	0.00E+00
+MJC	4.60E-01
+MJE	3.86E-01
+MJS	3.30E-01
+NC	1.21E+00
+NE	1.37E+00
+NF	1.14E+00
+NR	1.21E+00
+PTF	0.00E+00
+RB	1.00E+02
+RBM	1.00E+01
+RC	1.75E+00
+RE	1.00E-02
+TF	5.65E-10
+TR	0.00E+00
+VAF	2.49E+02
+VAR	3.31E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	9.99E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.10E+02
+XTI	3.00E+00
+END
+@IDBM:SIE_BC847_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BC847_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BC847
+AF	1.00E+00
+BF	3.20E+02
+BR	1.47E+01
+CJC	7.16E-12
+CJE	1.03E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	1.79E-01
+IKR	1.00E+00
+IRB	3.37E-03
+IS	3.71E-13
+ISC	1.71E-13
+ISE	2.77E-15
+ITF	2.26E+00
+KF	0.00E+00
+MJC	4.60E-01
+MJE	3.86E-01
+MJS	3.30E-01
+NC	1.21E+00
+NE	1.37E+00
+NF	1.14E+00
+NR	1.21E+00
+PTF	0.00E+00
+RB	1.00E+02
+RBM	1.00E+01
+RC	1.75E+00
+RE	1.00E-02
+TF	5.65E-10
+TR	0.00E+00
+VAF	2.49E+02
+VAR	3.31E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	9.99E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.10E+02
+XTI	3.00E+00
+END
+@IDBM:SIE_BC848_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BC848_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BC848
+AF	1.00E+00
+BF	3.20E+02
+BR	1.47E+01
+CJC	7.16E-12
+CJE	1.03E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	1.79E-01
+IKR	1.00E+00
+IRB	3.37E-03
+IS	3.71E-13
+ISC	1.71E-13
+ISE	2.77E-15
+ITF	2.26E+00
+KF	0.00E+00
+MJC	4.60E-01
+MJE	3.86E-01
+MJS	3.30E-01
+NC	1.21E+00
+NE	1.37E+00
+NF	1.14E+00
+NR	1.21E+00
+PTF	0.00E+00
+RB	1.00E+02
+RBM	1.00E+01
+RC	1.75E+00
+RE	1.00E-02
+TF	5.65E-10
+TR	0.00E+00
+VAF	2.49E+02
+VAR	3.31E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	9.99E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.10E+02
+XTI	3.00E+00
+END
+@IDBM:SIE_BC857_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BC857_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 301;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BC857
+AF	1.00E+00
+BF	3.72E+02
+BR	2.85E-02
+CJC	1.13E-11
+CJE	1.13E-10
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	1.33E-01
+IKR	1.00E+00
+IRB	2.46E-03
+IS	1.63E-13
+ISC	7.42E-13
+ISE	4.39E-13
+ITF	2.78E+00
+KF	0.00E+00
+MJC	3.98E-01
+MJE	5.98E-01
+MJS	3.30E-01
+NC	1.52E+00
+NE	2.00E+00
+NF	1.06E+00
+NR	1.51E+00
+PTF	0.00E+00
+RB	5.00E+01
+RBM	1.00E+01
+RC	3.83E+00
+RE	1.00E-02
+TF	5.30E-10
+TR	0.00E+00
+VAF	2.68E+01
+VAR	1.00E+01
+VJC	3.00E-01
+VJE	7.38E-01
+VJS	7.50E-01
+VTF	9.99E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	3.39E-01
+XTI	3.00E+00
+END
+@IDBM:SIE_BC858_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BC858_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 301;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BC858
+AF	1.00E+00
+BF	3.72E+02
+BR	2.85E-02
+CJC	1.13E-11
+CJE	1.13E-10
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	1.33E-01
+IKR	1.00E+00
+IRB	2.46E-03
+IS	1.63E-13
+ISC	7.42E-13
+ISE	4.39E-13
+ITF	2.78E+00
+KF	0.00E+00
+MJC	3.98E-01
+MJE	5.98E-01
+MJS	3.30E-01
+NC	1.52E+00
+NE	2.00E+00
+NF	1.06E+00
+NR	1.51E+00
+PTF	0.00E+00
+RB	5.00E+01
+RBM	1.00E+01
+RC	3.83E+00
+RE	1.00E-02
+TF	5.30E-10
+TR	0.00E+00
+VAF	2.68E+01
+VAR	1.00E+01
+VJC	3.00E-01
+VJE	7.38E-01
+VJS	7.50E-01
+VTF	9.99E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	3.39E-01
+XTI	3.00E+00
+END
+@IDBM:SIE_BCX41_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BCX41_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BCX41
+AF	1.00E+00
+BF	1.70E+02
+BR	9.55E-02
+CJC	2.58E-11
+CJE	4.69E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	2.13E-01
+IKR	1.00E+00
+IRB	6.59E-02
+IS	1.69E-12
+ISC	9.92E-13
+ISE	3.23E-14
+ITF	6.20E+00
+KF	0.00E+00
+MJC	5.11E-01
+MJE	3.97E-01
+MJS	3.30E-01
+NC	2.00E+00
+NE	1.28E+00
+NF	1.20E+00
+NR	1.41E+00
+PTF	0.00E+00
+RB	7.17E+00
+RBM	1.00E+01
+RC	5.54E-01
+RE	1.00E-02
+TF	1.50E-09
+TR	0.00E+00
+VAF	7.00E+02
+VAR	8.58E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	1.00E+06
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.00E+02
+XTI	3.00E+00
+END
+@IDBM:SIE_BCX42_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BCX42_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 301;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BCX42
+AF	1.00E+00
+BF	1.52E+02
+BR	1.16E-01
+CJC	3.90E-11
+CJE	5.74E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	1.18E-01
+IKR	1.00E+00
+IRB	8.03E-02
+IS	7.59E-14
+ISC	1.72E-12
+ISE	1.90E-14
+ITF	1.28E+00
+KF	0.00E+00
+MJC	4.85E-01
+MJE	4.41E-01
+MJS	3.30E-01
+NC	2.00E+00
+NE	1.27E+00
+NF	1.01E+00
+NR	1.21E+00
+PTF	0.00E+00
+RB	2.42E+00
+RBM	4.95E+00
+RC	8.89E-01
+RE	1.00E-02
+TF	8.18E-10
+TR	0.00E+00
+VAF	3.28E+02
+VAR	2.61E+01
+VJC	3.00E-01
+VJE	3.15E-01
+VJS	7.50E-01
+VTF	9.99E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	5.01E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_BFG196_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BFG196_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BFG196
+BF	1.25E+02
+IS	1.72E-15
+FC	5.09E-01
+NF	8.00E-01
+VAF	2.00
+IKF	4.29E-01
+ISE	1.19E-13
+NE	1.17E+00
+BR	1.05E+01
+NR	9.42E-01
+VAR	3.81E+00
+IKR	1.95E-02
+ISC	4.86E-15
+NC	8.82E-01
+RB	1.29E+00
+IRB	8.401E-05
+RBM	1.00E+00
+RE	7.51E-01
+RC	2.71E-01
+CJE	1.33E-14
+VJE	7.31E-01
+MJE	3.30E-01
+TF	2.39E-11
+XTF	4.43E-01
+VTF	1.00E-01
+ITF	1.97E-03
+PTF	0.00E+00
+CJC	1.66E-12
+VJC	7.30E-01
+MJC	3.28E-01
+XCJC	2.99E-01
+TR	2.24E-09
+CJS	0.00E+00
+VJS	7.50E-01
+MJS	0.00E+00
+XTB	0.00E+00
+EG	1.11E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_BFP420_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BFP420_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BFP420
+IS	2.00E-16
+BF	7.25E+01
+NF	1.24E+00
+VAF	2.83E+01
+IKF	4.87E-01
+ISE	1.90E-14
+NE	2.05E+00
+BR	7.82E+00
+NR	1.33E+00
+VAR	1.97E+01
+IKR	6.91E-01
+ISC	1.92E-17
+NC	1.17E+00
+RB	3.48E+00
+IRB	7.29E-04
+RBM	8.57E+00
+RE	3.11E-01
+RC	1.01E-01
+CJE	1.80E-15
+VJE	8.05E-01
+MJE	4.65E-01
+TF	6.76E-12
+XTF	4.21E-01
+VTF	2.37E-01
+ITF	1.00E-03
+PTF	0.00E+00
+CJC	2.34E-13
+VJC	8.19E-01
+MJC	3.02E-01
+XCJC	3.00E-01
+TR	2.32E-09
+CJS	0.00E+00
+VJS	7.50E-01
+MJS	0.00E+00
+XTB	0.00E+00
+EG	1.11E+00
+XTI	3.00E+00
+FC	7.32E-01
+END
+@IDBM:SIE_BFR180_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BFR180_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BFR180
+IS	1.85E-16
+BF	9.46E+01
+NF	1.02E+00
+VAF	2.68E+01
+IKF	2.52E-02
+ISE	1.30E-13
+NE	1.98E+00
+BR	2.03E+01
+NR	9.30E-01
+VAR	3.21E+00
+IKR	1.21E-02
+ISC	6.18E-15
+NC	1.61E+00
+RB	1.42E+00
+IRB	1.00E-05
+RBM	6.00E+01
+RE	3.70E+00
+RC	5.60E-01
+CJE	3.24E-15
+VJE	1.18E+00
+MJE	4.18E-01
+TF	1.48E-11
+XTF	3.06E-01
+VTF	2.20E-01
+ITF	1.02E-03
+PTF	0.00E+00
+CJC	1.83E-13
+VJC	1.18E+00
+MJC	3.04E-01
+XCJC	8.33E-02
+TR	2.26E-09
+CJS	0.00E+00
+VJS	7.50E-01
+MJS	0.00E+00
+XTB	0.00E+00
+EG	1.11E+00
+XTI	3.00E+00
+FC	8.79E-01
+END
+@IDBM:SIE_BFS480_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BFS480_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BFS480
+IS	6.47E-15
+BF	8.98E+01
+NF	1.08E+00
+VAF	2.56E+01
+IKF	7.34E-02
+ISE	1.55E-14
+NE	1.61E+00
+BR	2.02E+01
+NR	8.34E-01
+VAR	5.69E+00
+IKR	1.26E-02
+ISC	1.40E-15
+NC	1.06E+00
+RB	1.50E+01
+IRB	3.19E-05
+RBM	1.49E+01
+RE	2.45E+00
+RC	6.98E+00
+CJE	3.62E-14
+VJE	7.00E-01
+MJE	6.97E-01
+TF	1.17E-11
+XTF	2.15E-01
+VTF	2.03E-01
+ITF	6.21E-03
+PTF	0.00E+00
+CJC	2.52E-13
+VJC	1.19E+00
+MJC	3.00E-01
+XCJC	1.91E-01
+TR	2.36E-09
+CJS	0.00E+00
+VJS	7.50E-01
+MJS	0.00E+00
+XTB	0.00E+00
+EG	1.11E+00
+XTI	3.00E+00
+FC	9.62E-01
+END
+@IDBM:SIE_BFT92_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BFT92_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 301;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BFT92
+IS	4.53E-15
+BF	9.85E+01
+NF	9.05E-01
+VAF	1.09E+01
+IKF	1.61E-02
+ISE	1.21E-14
+NE	1.11E+00
+BR	1.02E+01
+NR	1.27E+00
+VAR	4.75E+01
+IKR	1.97E-02
+ISC	2.47E-17
+NC	1.20E+00
+RB	7.95E+00
+IRB	7.95E-04
+RBM	1.59E+00
+RE	1.51E+00
+RC	6.67E-01
+CJE	1.77E-15
+VJE	7.90E-01
+MJE	3.21E-01
+TF	3.21E-11
+XTF	3.02E-01
+VTF	2.15E-01
+ITF	1.32E-05
+PTF	0.00E+00
+CJC	9.22E-13
+VJC	1.20E+00
+MJC	3.00E-01
+XCJC	3.00E-01
+TR	2.07E-09
+CJS	0.00E-09
+VJS	7.50E-09
+MJS	0.00E+00
+XTB	0.00E+00
+EG	1.11E+00
+XTI	3.00E+00
+FC	7.51E-01
+END
+@IDBM:SIE_BSS63_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BSS63_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 301;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BSS63
+AF	1.00E+00
+BF	1.52E+02
+BR	1.16E-01
+CJC	3.90E-11
+CJE	5.74E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	1.18E-01
+IKR	1.00E+00
+IRB	8.03E-02
+IS	7.59E-14
+ISC	1.72E-12
+ISE	1.90E-14
+ITF	1.28E+00
+KF	0.00E+00
+MJC	4.85E-01
+MJE	4.41E-01
+MJS	3.30E-01
+NC	2.00E+00
+NE	1.27E+00
+NF	1.01E+00
+NR	1.21E+00
+PTF	0.00E+00
+RB	2.42E+00
+RBM	4.95E+00
+RC	8.89E-01
+RE	1.00E-02
+TF	8.18E-10
+TR	0.00E+00
+VAF	3.28E+02
+VAR	2.61E+01
+VJC	3.00E-01
+VJE	3.15E-01
+VJS	7.50E-01
+VTF	9.99E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	5.01E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_BSS64_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_BSS64_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_BSS64
+AF	1.00E+00
+BF	1.70E+02
+BR	9.55E-02
+CJC	2.58E-11
+CJE	4.69E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	2.13E-01
+IKR	1.00E+00
+IRB	6.59E-02
+IS	1.69E-12
+ISC	9.92E-13
+ISE	3.23E-14
+ITF	6.20E+00
+KF	0.00E+00
+MJC	5.11E-01
+MJE	3.97E-01
+MJS	3.30E-01
+NC	2.00E+00
+NE	1.28E+00
+NF	1.20E+00
+NR	1.41E+00
+PTF	0.00E+00
+RB	7.17E+00
+RBM	1.00E+01
+RC	5.54E-01
+RE	1.00E-02
+TF	1.50E-09
+TR	0.00E+00
+VAF	7.00E+02
+VAR	8.58E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	1.00E+06
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.00E+02
+XTI	3.00E+00
+END
+@IDBM:SIE_PZT2222A_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_PZT2222A_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_PZT2222A
+AF	1.00E+00
+BF	3.03E+02
+BR	1.00E-02
+CJC	1.37E-11
+CJE	2.64E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	2.11E-01
+IKR	1.00E+00
+IRB	9.62E-03
+IS	1.75E-12
+ISC	9.42E-14
+ISE	5.92E-14
+ITF	5.09E-01
+KF	0.00E+00
+MJC	4.89E-01
+MJE	4.09E-01
+MJS	3.30E-01
+NC	1.00E+00
+NE	1.26E+00
+NF	1.10E+00
+NR	1.71E+00
+PTF	0.00E+00
+RB	8.63E+01
+RBM	1.00E-02
+RC	1.07E+00
+RE	1.00E-02
+TF	5.16E-10
+TR	0.00E+00
+VAF	3.60E+02
+VAR	1.64E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	1.09E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.64E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_PZT2222_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_PZT2222_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_PZT2222
+AF	1.00E+00
+BF	3.03E+02
+BR	1.00E-02
+CJC	1.37E-11
+CJE	2.64E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	2.11E-01
+IKR	1.00E+00
+IRB	9.62E-03
+IS	1.75E-12
+ISC	9.42E-14
+ISE	5.92E-14
+ITF	5.09E-01
+KF	0.00E+00
+MJC	4.89E-01
+MJE	4.09E-01
+MJS	3.30E-01
+NC	1.00E+00
+NE	1.26E+00
+NF	1.10E+00
+NR	1.71E+00
+PTF	0.00E+00
+RB	8.63E+01
+RBM	1.00E-02
+RC	1.07E+00
+RE	1.00E-02
+TF	5.16E-10
+TR	0.00E+00
+VAF	3.60E+02
+VAR	1.64E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	1.09E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.64E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_PZT3904_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_PZT3904_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_PZT3904
+AF	1.00E+00
+BF	3.00E+02
+BR	1.19E+01
+CJC	4.75E-12
+CJE	8.54E-12
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	5.58E-02
+IKR	1.00E+00
+IRB	1.70E-03
+IS	5.42E-14
+ISC	1.08E-11
+ISE	1.20E-15
+ITF	2.86E-04
+KF	0.00E+00
+MJC	4.02E-01
+MJE	3.68E-01
+MJS	3.30E-01
+NC	1.66E+00
+NE	1.25E+00
+NF	1.09E+00
+NR	1.02E+00
+PTF	0.00E+00
+RB	1.51E+02
+RBM	1.00E-02
+RC	1.63E+00
+RE	1.29E-02
+TF	1.58E-10
+TR	0.00E+00
+VAF	2.88E+02
+VAR	4.18E+01
+VJC	3.83E-01
+VJE	3.33E-01
+VJS	7.50E-01
+VTF	1.90E-01
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	4.69E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_SMBT2222A_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_SMBT2222A_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_SMBT2222A
+AF	1.00E+00
+BF	3.03E+02
+BR	1.00E-02
+CJC	1.37E-11
+CJE	2.64E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	2.11E-01
+IKR	1.00E+00
+IRB	9.62E-03
+IS	1.75E-12
+ISC	9.42E-14
+ISE	5.92E-14
+ITF	5.09E-01
+KF	0.00E+00
+MJC	4.89E-01
+MJE	4.09E-01
+MJS	3.30E-01
+NC	1.00E+00
+NE	1.26E+00
+NF	1.10E+00
+NR	1.71E+00
+PTF	0.00E+00
+RB	8.63E+01
+RBM	1.00E-02
+RC	1.07E+00
+RE	1.00E-02
+TF	5.16E-10
+TR	0.00E+00
+VAF	3.60E+02
+VAR	1.64E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	1.09E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.64E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_SMBT3904_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_SMBT3904_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_SMBT3904
+AF	1.00E+00
+BF	3.00E+02
+BR	1.19E+01
+CJC	4.75E-12
+CJE	8.54E-12
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	5.58E-02
+IKR	1.00E+00
+IRB	1.70E-03
+IS	5.42E-14
+ISC	1.08E-11
+ISE	1.20E-15
+ITF	2.86E-04
+KF	0.00E+00
+MJC	4.02E-01
+MJE	3.68E-01
+MJS	3.30E-01
+NC	1.66E+00
+NE	1.25E+00
+NF	1.09E+00
+NR	1.02E+00
+PTF	0.00E+00
+RB	1.51E+02
+RBM	1.00E-02
+RC	1.63E+00
+RE	1.29E-02
+TF	1.58E-10
+TR	0.00E+00
+VAF	2.88E+02
+VAR	4.18E+01
+VJC	3.83E-01
+VJE	3.33E-01
+VJS	7.50E-01
+VTF	1.90E-01
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	4.69E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_SXT2222A_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_SXT2222A_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_SXT2222A
+AF	1.00E+00
+BF	3.03E+02
+BR	1.00E-02
+CJC	1.37E-11
+CJE	2.64E-11
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	2.11E-01
+IKR	1.00E+00
+IRB	9.62E-03
+IS	1.75E-12
+ISC	9.42E-14
+ISE	5.92E-14
+ITF	5.09E-01
+KF	0.00E+00
+MJC	4.89E-01
+MJE	4.09E-01
+MJS	3.30E-01
+NC	1.00E+00
+NE	1.26E+00
+NF	1.10E+00
+NR	1.71E+00
+PTF	0.00E+00
+RB	8.63E+01
+RBM	1.00E-02
+RC	1.07E+00
+RE	1.00E-02
+TF	5.16E-10
+TR	0.00E+00
+VAF	3.60E+02
+VAR	1.64E+01
+VJC	3.00E-01
+VJE	3.00E-01
+VJS	7.50E-01
+VTF	1.09E+05
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	1.64E+00
+XTI	3.00E+00
+END
+@IDBM:SIE_SXT3904_bjt.mac
+###############################################################################
+#
+#  Header     : 1.0;
+#  Filename   : SIE_SXT3904_bjt.mac; 
+#  FileRev    : 1;
+#  Date       : 05 JAN 1998;
+#  Permission : ;
+#  Simulator  : 4;
+#  Modeltype  : 300;
+#  Technology : ;
+#  Changes    : None;
+#  Notes      : None;
+#
+###############################################################################
+BJT SIE_SXT3904
+AF	1.00E+00
+BF	3.00E+02
+BR	1.19E+01
+CJC	4.75E-12
+CJE	8.54E-12
+CJS	0.00E+00
+EG	1.11E+00
+FC	5.00E-01
+IKF	5.58E-02
+IKR	1.00E+00
+IRB	1.70E-03
+IS	5.42E-14
+ISC	1.08E-11
+ISE	1.20E-15
+ITF	2.86E-04
+KF	0.00E+00
+MJC	4.02E-01
+MJE	3.68E-01
+MJS	3.30E-01
+NC	1.66E+00
+NE	1.25E+00
+NF	1.09E+00
+NR	1.02E+00
+PTF	0.00E+00
+RB	1.51E+02
+RBM	1.00E-02
+RC	1.63E+00
+RE	1.29E-02
+TF	1.58E-10
+TR	0.00E+00
+VAF	2.88E+02
+VAR	4.18E+01
+VJC	3.83E-01
+VJE	3.33E-01
+VJS	7.50E-01
+VTF	1.90E-01
+XCJC	1.00E+00
+XTB	0.00E+00
+XTF	4.69E+00
+XTI	3.00E+00
+END

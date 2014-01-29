@@ -1,0 +1,350 @@
+timestamp=1260919190033
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[CYCLONEII_PRIM_DFFE]
+A/CYCLONEII_PRIM_DFFE=22|./src/cycloneii_atoms.v|22|1*566
+B/CYCLONEII_PRIM_DFFE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=294,506,988,1022
+R=./src/cycloneii_atoms.v|22
+
+[CYCLONEII_PRIM_DFFEAS]
+A/CYCLONEII_PRIM_DFFEAS=22|./src/cycloneii_atoms.v|95|1*1370
+B/CYCLONEII_PRIM_DFFEAS=3*722
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=418,656,1034,1068
+R=./src/cycloneii_atoms.v|95
+
+[CYCLONEII_PRIM_DFFEAS_HIGH]
+A/CYCLONEII_PRIM_DFFEAS_HIGH=22|./src/cycloneii_atoms.v|133|1*2160
+B/CYCLONEII_PRIM_DFFEAS_HIGH=3*1298
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=428,671,1049,1083
+R=./src/cycloneii_atoms.v|133
+
+[cycloneii_and1]
+A/cycloneii_and1=22|./src/cycloneii_atoms.v|346|1*6634
+B/cycloneii_and1=3*5302
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_and1=4*2558
+P/~emb=129,280,382,471
+R=./src/cycloneii_atoms.v|346
+
+[cycloneii_and16]
+A/cycloneii_and16=22|./src/cycloneii_atoms.v|359|1*7225
+B/cycloneii_and16=3*5459
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_and16=4*2717
+P/~emb=143,343,524,815
+R=./src/cycloneii_atoms.v|359
+
+[cycloneii_asmiblock]
+A/cycloneii_asmiblock=22|./src/cycloneii_atoms.v|1550|1*21773
+B/cycloneii_asmiblock=3*211782
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=294,499,661,776
+R=./src/cycloneii_atoms.v|1550
+
+[cycloneii_asynch_io]
+A/cycloneii_asynch_io=22|./src/cycloneii_atoms.v|5604|1*46377
+B/cycloneii_asynch_io=3*775196
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_asynch_io=4*6463
+P/~emb=535,1064,1593,1985
+R=./src/cycloneii_atoms.v|5604
+
+[cycloneii_b17mux21]
+A/cycloneii_b17mux21=22|./src/cycloneii_atoms.v|399|1*8698
+B/cycloneii_b17mux21=3*7113
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=203,374,530,620
+R=./src/cycloneii_atoms.v|399
+
+[cycloneii_b5mux21]
+A/cycloneii_b5mux21=22|./src/cycloneii_atoms.v|420|1*9918
+B/cycloneii_b5mux21=3*9374
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=198,366,522,612
+R=./src/cycloneii_atoms.v|420
+
+[cycloneii_bmux21]
+A/cycloneii_bmux21=22|./src/cycloneii_atoms.v|388|1*8073
+B/cycloneii_bmux21=3*5617
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=199,367,523,613
+R=./src/cycloneii_atoms.v|388
+
+[cycloneii_clk_delay_cal_ctrl]
+A/cycloneii_clk_delay_cal_ctrl=22|./src/cycloneii_atoms.v|6100|1*52067
+B/cycloneii_clk_delay_cal_ctrl=3*821874
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_clk_delay_cal_ctrl=4*7605
+P/~emb=2781,3364,4033,4392
+R=./src/cycloneii_atoms.v|6100
+
+[cycloneii_clk_delay_ctrl]
+A/cycloneii_clk_delay_ctrl=22|./src/cycloneii_atoms.v|5946|1*50154
+B/cycloneii_clk_delay_ctrl=3*809197
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_clk_delay_ctrl=4*7220
+P/~emb=2921,3605,4283,4594
+R=./src/cycloneii_atoms.v|5946
+
+[cycloneii_clkctrl]
+A/cycloneii_clkctrl=22|./src/cycloneii_atoms.v|6370|1*55202
+B/cycloneii_clkctrl=3*837920
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=414,856,1258,1683
+R=./src/cycloneii_atoms.v|6370
+
+[cycloneii_crcblock]
+A/cycloneii_crcblock=22|./src/cycloneii_atoms.v|1522|1*21066
+B/cycloneii_crcblock=3*211317
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=333,564,729,839
+R=./src/cycloneii_atoms.v|1522
+
+[cycloneii_dffe]
+A/cycloneii_dffe=22|./src/cycloneii_atoms.v|171|1*2955
+B/cycloneii_dffe=3*1879
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_dffe=4*0
+P/~emb=243,526,746,945
+R=./src/cycloneii_atoms.v|171
+
+[cycloneii_ena_reg]
+A/cycloneii_ena_reg=22|./src/cycloneii_atoms.v|6283|1*54048
+B/cycloneii_ena_reg=3*834779
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_ena_reg=4*8145
+P/~emb=249,495,815,1019
+R=./src/cycloneii_atoms.v|6283
+
+[cycloneii_io]
+A/cycloneii_io=22|./src/cycloneii_atoms.v|5781|1*47853
+B/cycloneii_io=3*788316
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1424,2362,3429,4101
+R=./src/cycloneii_atoms.v|5781
+
+[cycloneii_jtag]
+A/cycloneii_jtag=22|./src/cycloneii_atoms.v|1475|1*20315
+B/cycloneii_jtag=3*210992
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=663,937,1193,1363
+R=./src/cycloneii_atoms.v|1475
+
+[cycloneii_latch]
+A/cycloneii_latch=22|./src/cycloneii_atoms.v|220|1*3930
+B/cycloneii_latch=3*2712
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_latch=4*1020
+P/~emb=214,419,662,870
+R=./src/cycloneii_atoms.v|220
+
+[cycloneii_lcell_comb]
+A/cycloneii_lcell_comb=22|./src/cycloneii_atoms.v|5484|1*44980
+B/cycloneii_lcell_comb=3*764967
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_lcell_comb=4*5701
+P/~emb=548,985,1572,1862
+R=./src/cycloneii_atoms.v|5484
+
+[cycloneii_lcell_ff]
+A/cycloneii_lcell_ff=22|./src/cycloneii_atoms.v|5334|1*43217
+B/cycloneii_lcell_ff=3*757877
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_lcell_ff=4*4771
+P/~emb=483,897,1442,1746
+R=./src/cycloneii_atoms.v|5334
+
+[cycloneii_m_cntr]
+A/cycloneii_m_cntr=22|./src/cycloneii_atoms.v|1579|1*22449
+B/cycloneii_m_cntr=3*212112
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=319,598,877,1073
+R=./src/cycloneii_atoms.v|1579
+
+[cycloneii_mac_data_reg]
+A/cycloneii_mac_data_reg=22|./src/cycloneii_atoms.v|6446|1*56548
+B/cycloneii_mac_data_reg=3*839389
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_mac_data_reg=4*8468
+P/~emb=286,644,1174,1847
+R=./src/cycloneii_atoms.v|6446
+
+[cycloneii_mac_mult]
+A/cycloneii_mac_mult=22|./src/cycloneii_atoms.v|6751|1*61070
+B/cycloneii_mac_mult=3*866569
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=757,1321,2222,2735
+R=./src/cycloneii_atoms.v|6751
+
+[cycloneii_mac_mult_internal]
+A/cycloneii_mac_mult_internal=22|./src/cycloneii_atoms.v|6666|1*59746
+B/cycloneii_mac_mult_internal=3*844777
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_mac_mult_internal=4*9577
+P/~emb=426,755,1322,1574
+R=./src/cycloneii_atoms.v|6666
+
+[cycloneii_mac_out]
+A/cycloneii_mac_out=22|./src/cycloneii_atoms.v|6904|1*62769
+B/cycloneii_mac_out=3*892556
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_mac_out=4*10010
+P/~emb=509,867,1398,1653
+R=./src/cycloneii_atoms.v|6904
+
+[cycloneii_mac_sign_reg]
+A/cycloneii_mac_sign_reg=22|./src/cycloneii_atoms.v|6578|1*58539
+B/cycloneii_mac_sign_reg=3*842551
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_mac_sign_reg=4*9033
+P/~emb=230,488,821,1047
+R=./src/cycloneii_atoms.v|6578
+
+[cycloneii_mux21]
+A/cycloneii_mux21=22|./src/cycloneii_atoms.v|278|1*4922
+B/cycloneii_mux21=3*3754
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_mux21=4*1673
+P/~emb=179,363,561,704
+R=./src/cycloneii_atoms.v|278
+
+[cycloneii_mux41]
+A/cycloneii_mux41=22|./src/cycloneii_atoms.v|305|1*5690
+B/cycloneii_mux41=3*4420
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_mux41=4*1983
+P/~emb=250,460,732,918
+R=./src/cycloneii_atoms.v|305
+
+[cycloneii_n_cntr]
+A/cycloneii_n_cntr=22|./src/cycloneii_atoms.v|1660|1*23378
+B/cycloneii_n_cntr=3*217752
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=215,604,870,1039
+R=./src/cycloneii_atoms.v|1660
+
+[cycloneii_nmux21]
+A/cycloneii_nmux21=22|./src/cycloneii_atoms.v|410|1*9325
+B/cycloneii_nmux21=3*8611
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=181,345,485,575
+R=./src/cycloneii_atoms.v|410
+
+[cycloneii_pll]
+A/cycloneii_pll=22|./src/cycloneii_atoms.v|1918|1*25994
+B/cycloneii_pll=3*233553
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_pll=4*4421
+P/~emb=8264,15311,25197,28322
+R=./src/cycloneii_atoms.v|1918
+
+[cycloneii_pll_reg]
+A/cycloneii_pll_reg=22|./src/cycloneii_atoms.v|1855|1*25256
+B/cycloneii_pll_reg=3*231716
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=248,436,645,771
+R=./src/cycloneii_atoms.v|1855
+
+[cycloneii_ram_block]
+A/cycloneii_ram_block=22|./src/cycloneii_atoms.v|570|1*12997
+B/cycloneii_ram_block=3*32103
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=9415,11794,15361,17351
+R=./src/cycloneii_atoms.v|570
+
+[cycloneii_ram_pulse_generator]
+A/cycloneii_ram_pulse_generator=22|./src/cycloneii_atoms.v|440|1*10544
+B/cycloneii_ram_pulse_generator=3*10871
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_ram_pulse_generator=4*2878
+P/~emb=256,514,771,942
+R=./src/cycloneii_atoms.v|440
+
+[cycloneii_ram_register]
+A/cycloneii_ram_register=22|./src/cycloneii_atoms.v|487|1*11582
+B/cycloneii_ram_register=3*14092
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_ram_register=4*3184
+P/~emb=439,772,1229,1474
+R=./src/cycloneii_atoms.v|487
+
+[cycloneii_routing_wire]
+A/cycloneii_routing_wire=22|./src/cycloneii_atoms.v|5300|1*42474
+B/cycloneii_routing_wire=3*757396
+C=8.2.1986.SP1.35.3497  (Windows)
+D/cycloneii_routing_wire=4*4586
+P/~emb=163,338,486,612
+R=./src/cycloneii_atoms.v|5300
+
+[cycloneii_scale_cntr]
+A/cycloneii_scale_cntr=22|./src/cycloneii_atoms.v|1743|1*24243
+B/cycloneii_scale_cntr=3*222916
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=385,746,1097,1332
+R=./src/cycloneii_atoms.v|1743
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, CYCLONEII VERILOG LIBRARY.
+LastVerilogToplevel=cycloneii_mac_out
+ModifyID=316
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/cycloneii_atoms.v=0*87459*142258
+
+[~MFT]
+0=40|0ovi_cycloneii.mgf|142258|0
+1=38|1ovi_cycloneii.mgf|62769|0
+3=38|3ovi_cycloneii.mgf|892556|0
+4=19|4ovi_cycloneii.mgf|10010|0
+
+[~U]
+$root=12|0*0|
+CYCLONEII_PRIM_DFFE=12|0*454||0xa0
+CYCLONEII_PRIM_DFFEAS=12|0*1274||0xa0
+CYCLONEII_PRIM_DFFEAS_HIGH=12|0*2080||0xa0
+cycloneii_and1=12|0*6218||0x90
+cycloneii_and16=12|0*6649||0x90
+cycloneii_asmiblock=12|0*23965||0x90
+cycloneii_asynch_io=12|0*67785||0x80
+cycloneii_b17mux21=12|0*7786||0x90
+cycloneii_b5mux21=12|0*8750||0x90
+cycloneii_bmux21=12|0*7289||0x90
+cycloneii_clk_delay_cal_ctrl=12|0*74995||0x90
+cycloneii_clk_delay_ctrl=12|0*72794||0x90
+cycloneii_clkctrl=12|0*78338||0x90
+cycloneii_crcblock=12|0*23386||0x90
+cycloneii_dffe=12|0*2891||0x80
+cycloneii_ena_reg=12|0*77264||0x80
+cycloneii_io=12|0*69917||0x90
+cycloneii_jtag=12|0*22635||0x90
+cycloneii_latch=12|0*3850||0x90
+cycloneii_lcell_comb=12|0*66036||0x90
+cycloneii_lcell_ff=12|0*64257||0x90
+cycloneii_m_cntr=12|0*24497||0x80
+cycloneii_mac_data_reg=12|0*79652||0x80
+cycloneii_mac_mult=12|0*83758||0x90
+cycloneii_mac_mult_internal=12|0*82370||0x80
+cycloneii_mac_out=12|0*85953||0x90
+cycloneii_mac_sign_reg=12|0*81275||0x80
+cycloneii_mux21=12|0*4746||0x80
+cycloneii_mux41=12|0*5402||0x80
+cycloneii_n_cntr=12|0*25506||0x80
+cycloneii_nmux21=12|0*8285||0x90
+cycloneii_pll=12|0*28650||0x90
+cycloneii_pll_reg=12|0*27960||0x80
+cycloneii_ram_block=12|0*11525||0x90
+cycloneii_ram_pulse_generator=12|0*9232||0x80
+cycloneii_ram_register=12|0*10142||0x80
+cycloneii_routing_wire=12|0*63722||0x90
+cycloneii_scale_cntr=12|0*26611||0x80
+

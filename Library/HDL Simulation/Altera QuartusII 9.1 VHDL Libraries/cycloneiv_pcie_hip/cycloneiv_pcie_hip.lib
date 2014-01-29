@@ -1,0 +1,340 @@
+timestamp=0
+
+[cycloneiv_hssi_pcie_hip]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|212694|1*2189594
+B/trans=3*40763559
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*10904034
+I/trans=0*11100323
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*10866690*0x00ff40f392186a6a3e819032b9a0457873f702a2|0*10903941*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*10904446*0xeb6bb815a6048c6f9582f371335ee0dacffece44|0*11100221*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|211795
+
+[cycloneiv_pcie_hip_components]
+B/cycloneiv_pcie_hip_components=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*40985
+I/cycloneiv_pcie_hip_components=I/CYCLONEIV_PCIE_HIP_COMPONENTS 0*48225
+M=3|0|v63|0|./src/cycloneiv_pcie_hip_components.vhd|0*978*0x946d58651d7a4f2381bb4c72eca23b7f3dc66189|0*40881*0xf2538cdc6f7b23a146389216c886e772
+M/cycloneiv_pcie_hip_components=M/CYCLONEIV_PCIE_HIP_COMPONENTS 4|0|v63|0|./src/cycloneiv_pcie_hip_components.vhd|0*41243*0x73579e570235b448035be1c8383842a8a3f5cc83|0*48089*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_components.vhd|23
+
+[cycloneiv_pciehip_clkmux]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|1217|1*15694
+B/trans=3*212633
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*103259
+I/trans=0*105822
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*102464*0x37382f8da1b060e685ea61766a2da904139442db|0*103165*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*103480*0xf8e3b4d406bcf2a41e59b88c19d76f11d65f6f6b|0*105719*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|1196
+
+[cycloneiv_pciehip_compute_bit]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|8799|1*79954
+B/trans=3*613303
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*364163
+I/trans=0*365154
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*363621*0xf950065e23aafddf337c92bc9b2bcf90e7e5bbe0|0*364064*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*364517*0x65acffae54d52b70f501090962811365ba284c8c|0*365046*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|8791
+
+[cycloneiv_pciehip_dprio_16bit]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|1443|1*17698
+B/trans=3*224631
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*109649
+I/trans=0*115479
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*108798*0xd10e94bc8746789b9b08ba282aadce79ea82da20|0*109550*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*110003*0x5ccfa76bf045018512a82610e3156f56d6d073e0|0*115371*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|1421
+
+[cycloneiv_pciehip_dprio_addr]
+A/rtl=A/RTL 21|./src/cycloneiv_pcie_hip_atoms.vhd|1777|1*19260
+B/rtl=3*226840
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*116673
+I/rtl=I/RTL 0*128524
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*116144*0x4e3de5be171147d11584fa8474d1a838f82c967a|0*116575*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*116882*0x44d1455df127d98b1613bab8237a1303caa84a60|0*128419*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|1765
+
+[cycloneiv_pciehip_dprio_bit]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|1369|1*16840
+B/trans=3*220938
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*106998
+I/trans=0*108134
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*106305*0x7ffa1ef39dbf86559d35c4afc6fbd0ec4daa1c35|0*106901*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*107350*0x10649eb91237a7c786f35750ab17274f6c8d1711|0*108028*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|1351
+
+[cycloneiv_pciehip_dprio_bus_out_mux]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|3409|1*30546
+B/trans=3*395946
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*168658
+I/trans=0*175133
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*157541*0xfec60bf667005784bfb7505a6884237d15066c76|0*168553*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*168842*0x10d83615d170cb95f2f30b8ad58110d44086a3d3|0*175019*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|3180
+
+[cycloneiv_pciehip_dprio_cnt]
+A/rtl=A/RTL 21|./src/cycloneiv_pcie_hip_atoms.vhd|2174|1*23078
+B/rtl=3*285452
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*129535
+I/rtl=I/RTL 0*134873
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*129041*0x480686262abf152edc9d80bb1a147ceb6458a42a|0*129438*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*129743*0x946fd40ab945d2e094bc25f100d83f43404d1f8b|0*134769*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|2163
+
+[cycloneiv_pciehip_dprio_ctl_data]
+A/rtl=A/RTL 21|./src/cycloneiv_pcie_hip_atoms.vhd|2421|1*25246
+B/rtl=3*310444
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*136306
+I/rtl=I/RTL 0*148704
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*135474*0xf40eaf2630ddc649ceaa72a69b9000847d58ac01|0*136204*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*136487*0xa72ef3e859fe24adafcf94de72da695a8f6f8178|0*148595*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|2399
+
+[cycloneiv_pciehip_dprio_reg]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|3882|1*34766
+B/trans=3*415020
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*192850
+I/trans=0*246655
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*176507*0x244bd46842304d6ed39a3e4f9d9f81bf7cad2edb|0*192753*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*193026*0x81f275ffc057dc06143e44a4eb882d4615528dc9|0*246549*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|3531
+
+[cycloneiv_pciehip_dprio_reg_top]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|6358|1*48058
+B/trans=3*448430
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*253449
+I/trans=0*329864
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*247497*0x0dfadabd74a5ee2b36eb39388e49477e568651b0|0*253348*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*253677*0x45595e40e140a8be4b1d1f26c2dc109792e23628|0*329754*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|6227
+
+[cycloneiv_pciehip_dprio_sm]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|2892|1*29032
+B/trans=3*367772
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*150545
+I/trans=0*156296
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*149320*0x6475ebe068cf5b2f48476ce29a524687b19242c7|0*150449*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*150896*0x65958ac54d6f33b7ee16ea5492652315ee6e968c|0*156191*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|2849
+
+[cycloneiv_pciehip_ecc_chk]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|8952|1*81846
+B/trans=3*618429
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*369945
+I/trans=0*377886
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*369293*0x8301d1b013d5865185a9282f2c548ad266b76ff5|0*369850*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*370295*0x4d06ae84d15362ca292f8907adb2a7105cc926b2|0*377782*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|8940
+
+[cycloneiv_pciehip_ecc_decoder]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|9162|1*83248
+B/trans=3*627818
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*379082
+I/trans=0*379823
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*378532*0x8ff58b97de83171c5f3b958b9ab908af756335f0|0*378983*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*379436*0xa35d42fc120369044eb891f8d732a5a5ab92f50f|0*379715*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|9153
+
+[cycloneiv_pciehip_ecc_gen]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|8827|1*80636
+B/trans=3*614664
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*366318
+I/trans=0*368619
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*365752*0x5bc21ab5458e61e4962df17bd6649878e197c862|0*366223*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*366668*0x04d5152e1c8690e17c7bc5c3d672d81e15b10a90|0*368515*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|8818
+
+[cycloneiv_pciehip_hip_dprio_top]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|8111|1*69254
+B/trans=3*578981
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*336826
+I/trans=0*363017
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*330838*0xd343423d25d26f15673c85ed7b3275217556d2ec|0*336725*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*337006*0x63a3decaee2490f8782fad30bb8008f6ddb6ea77|0*362907*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|7973
+
+[cycloneiv_pciehip_hip_mram]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|9317|1*84644
+B/trans=3*631812
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*384833
+I/trans=0*389965
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*382914*0x41bb5b9e6293f5c1173dc193c753f7b58335c184|0*384737*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*385184*0x1ddc2b6ec81fa7e76ba5a4f67c42b3096e7a3445|0*389860*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|9255
+
+[cycloneiv_pciehip_hip_top]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|209465|1*2155822
+B/trans=3*40595956
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*10786004
+I/trans=0*10861264
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*10773664*0x94b333c9e3bdfd0fa96034bf43507bcb49757b06|0*10785909*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*10786178*0x0f2aa8250984328f9f9c25812482ce63f78ff86d|0*10861160*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|209006
+
+[cycloneiv_pciehip_iei_detect]
+A/rtl=A/RTL 21|./src/cycloneiv_pcie_hip_atoms.vhd|10131|1*95498
+B/rtl=3*695175
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*409880
+I/rtl=I/RTL 0*783789
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*408796*0x4fe6605a0933ce054291ea65a107a05b0b3370c7|0*409782*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*410089*0x790295d92abb7e3fa573cd0dce1794a0839f3431|0*783684*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|10105
+
+[cycloneiv_pciehip_mram_top]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|9576|1*88400
+B/trans=3*660762
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*392467
+I/trans=0*399459
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*390833*0x3e2ce53c08c313f9fedf2e880b408b0a9fc4a5e6|0*392371*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*392818*0x9db5095bb0cc199d60723f6323e35be1e12b654f|0*399354*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|9493
+
+[cycloneiv_pciehip_param]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|223|1*3474
+B/trans=3*15882
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*57827
+I/trans=0*101793
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*50253*0x9e5893fb7fef09e1ba56756cf6eb1db0f90b8ed6|0*57734*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*58175*0x07bfa9ab458abb43cd412a8e62e2c1a40916402e|0*101691*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|42
+
+[cycloneiv_pciehip_pciexp_dcfiforam]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|9895|1*92300
+B/trans=3*679020
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*401101
+I/trans=0*402412
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*400271*0x21a2d62fbd70715edfc16cce8573f9adacd12877|0*400997*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*401460*0x69a5f752b5a1bde2e67ba1212b5189bd42bbc2c2|0*402299*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|9878
+
+[cycloneiv_pciehip_pciexp_dcram_rtry]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|9961|1*93366
+B/trans=3*684405
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*403917
+I/trans=0*405245
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*403089*0x42a3cb45f5ff7761b172b7676d43ddd32ae72c4a|0*403812*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*404277*0xcf891943f5b4a1fdde4c638061beb259d8fb700a|0*405131*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|9943
+
+[cycloneiv_pciehip_pciexp_dcram_rxvc]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|10031|1*94432
+B/trans=3*689790
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*406751
+I/trans=0*408077
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*405923*0x600ac5a45e4550ea450efa5e36f86bb0d01d053c|0*406646*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*407111*0xe31e9adba589d241b6cdc16f689d997a8acd706e|0*407963*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|10013
+
+[cycloneiv_pciehip_pciexp_top_hip]
+A/rtl=A/RTL 21|./src/cycloneiv_pcie_hip_atoms.vhd|19285|1*175540
+B/rtl=3*2304197
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*797065
+I/rtl=I/RTL 0*10771501
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*786039*0x365c6e868da8c44c8bd4d0cd84c24ce675342eb9|0*796963*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*797342*0x7e903e18811765ff9c3258005c7879acb9d65c34|0*10771392*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|18968
+
+[cycloneiv_pciehip_pulse_ext]
+A/trans=21|./src/cycloneiv_pcie_hip_atoms.vhd|9192|1*83882
+B/trans=3*628847
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*381007
+I/trans=0*382061
+M=11|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*380423*0x0f0b91b2d1efc97f33b9412562b3e708e3b49386|0*380910*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/cycloneiv_pcie_hip_atoms.vhd|0*381359*0xec84d7f91f63bcf85b1404d6fb4266c67ba0ce1a|0*381955*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiv_pcie_hip_atoms.vhd|9181
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, CYCLONEIV_PCIE_HIP VHDL LIBRARY
+ModifyID=164
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=189|0cycloneiv_pcie_hip.mgf|11100323|0
+1=26|1cycloneiv_pcie_hip.mgf|2189594|0
+3=26|3cycloneiv_pcie_hip.mgf|40763559|0
+
+[~U]
+cycloneiv_hssi_pcie_hip=11|0*10861636|
+cycloneiv_pcie_hip_components=CYCLONEIV_PCIE_HIP_COMPONENTS 3|0*0|0*161
+cycloneiv_pciehip_clkmux=11|0*102147|
+cycloneiv_pciehip_compute_bit=11|0*363379|
+cycloneiv_pciehip_dprio_16bit=11|0*108492|
+cycloneiv_pciehip_dprio_addr=11|0*115887|
+cycloneiv_pciehip_dprio_bit=11|0*106049|
+cycloneiv_pciehip_dprio_bus_out_mux=11|0*156653|
+cycloneiv_pciehip_dprio_cnt=11|0*128785|
+cycloneiv_pciehip_dprio_ctl_data=11|0*135133|
+cycloneiv_pciehip_dprio_reg=11|0*175323|
+cycloneiv_pciehip_dprio_reg_top=11|0*246885|
+cycloneiv_pciehip_dprio_sm=11|0*148889|
+cycloneiv_pciehip_ecc_chk=11|0*369023|
+cycloneiv_pciehip_ecc_decoder=11|0*378290|
+cycloneiv_pciehip_ecc_gen=11|0*365514|
+cycloneiv_pciehip_hip_dprio_top=11|0*330194|
+cycloneiv_pciehip_hip_mram=11|0*382419|
+cycloneiv_pciehip_hip_top=11|0*10771554|
+cycloneiv_pciehip_iei_detect=11|0*408443|
+cycloneiv_pciehip_mram_top=11|0*390354|
+cycloneiv_pciehip_param=11|0*48513|
+cycloneiv_pciehip_pciexp_dcfiforam=11|0*399960|
+cycloneiv_pciehip_pciexp_dcram_rtry=11|0*402777|
+cycloneiv_pciehip_pciexp_dcram_rxvc=11|0*405611|
+cycloneiv_pciehip_pciexp_top_hip=11|0*784146|
+cycloneiv_pciehip_pulse_ext=11|0*380183|
+

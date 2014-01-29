@@ -1,0 +1,32 @@
+[Available_If]
+Plugin=posix_threads
+
+[Declaration]
+Out0=THREAD
+Out1={
+Out2=ENUM ["SUSPENDED"= 0,"READY"= 2,"RUNNING"= 3,"WAITING"= 1] STATE, "State";
+Out3=CTYPE "int" PRIORITY, "Priority";
+Out4=ENUM ["FIFO"= 0,"RR"= 2,"SPORADIC"= 2,"OTHER"= 3] POLICY, "Policy";
+Out5=CTYPE "unsigned long" STARTROUTINE, "Start address";
+Out6=CTYPE "unsigned int"  STACKSIZE, "Stack size";
+Out7=CTYPE "unsigned long" STACKADDR, "Stack address";
+Out8=CTYPE "unsigned long" SP, "SP register";
+Out9=CTYPE "unsigned long" PC, "PC register";
+Out10=CTYPE "unsigned long long" CPUCLOCK, "Clock";
+Out11=},"Threads";
+
+
+[Implementation]
+Out0=THREAD thread_$
+Out1={
+Out2=STATE="_posix_thread_table[$] ? _posix_thread_table[$]->state:-1";
+Out3=PRIORITY="_posix_thread_table[$] ? _posix_thread_table[$]->priority:-1";
+Out4=POLICY="_posix_thread_table[$] ? _posix_thread_table[$]->schedpolicy:-1";
+Out5=STARTROUTINE= "_posix_thread_table[$] ?(unsigned long)_posix_thread_table[$]->start_routine:-1";
+Out6=STACKSIZE="_posix_thread_table[$] ?(unsigned int)_posix_thread_table[$]->stacksize:-1";
+Out7=STACKADDR="_posix_thread_table[$] ?(unsigned long)_posix_thread_table[$]->stackaddr:-1";
+Out8=SP="_posix_thread_table[$] ?(unsigned long)_posix_thread_table[$]->spuser:-1";
+Out9=PC="( _posix_thread_table[$] ) ?(unsigned long)_posix_thread_table[$]->ra:-1";
+Out10=CPUCLOCK="_posix_thread_table[$] ?(unsigned long long)_posix_thread_table[$]->btime:-1";
+Out11=};
+Number=posix_threads.threads_max

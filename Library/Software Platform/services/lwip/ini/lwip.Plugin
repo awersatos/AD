@@ -1,0 +1,225 @@
+[Plugin]
+Name=lwip
+Caption=TCP/IP Networking
+Description=TCP/IP Internet protocol suite 
+SourceDir=services\lwip\lwipsrc
+SourceFile0=services\lwip\src\sys_arch.c
+SourceFile1=services\lwip\src\lwip.c
+SourceFile2=services\lwip\adaptors\netif\src\netif_impl.c
+SourceFile3=services\lwip\src\memcpyl.c
+GlobalCompileOption0=-I"$(SSASROOT)\services\lwip\include"
+GlobalCompileOption1=-I"$(SSASROOT)\services\lwip\lwipsrc\include"
+GlobalCompileOption2=-I"$(SSASROOT)\services\lwip\lwipsrc\include\ipv4"
+CompileOption0=-I"$(SSASROOT)\services\lwip\internal"
+CompileOption1=-I"$(SSASROOT)\services\lwip\adaptors\netif\include"
+CompileOption2=-I"$(SSASROOT)\system\sysutils\include"
+CompileOption3=-Wc--no-warnings=500,507,549,556,560,589
+Implement=lwip
+Bitmap=lwip.bmp
+InitHandler=lwip_init_plugin
+InitHandlerPriority=1
+Require0=posix_threads
+Require1=sockfs
+
+[Require1_If0]
+Kind=OPTION
+Object=UNIFIED
+Condition=EQ
+Value=True
+
+[Option0]
+Name=DHCP
+Description=If this option is set, DHCP will be used to dynamically configure IP address, Network mask, and Gateway and DNS Server addresses.
+Kind=BOOLEAN
+DefaultValue=True
+
+[Option1]
+Name=DNS
+Description=If this option is set, the user can use dns_gethostbyname to resolve host names into IP addresses.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option2]
+Name=userheader
+GUIName=Custom Options Header
+Description=If this option is set, the plugin will use lwipopts_user.h file from the project directory for configuration. If not set, a default configuration will be used that is suitable for basic TCP/IP usage.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Option3]
+Name=default_interface
+GUIName=Default interface
+Description=Name of the default network interface
+Kind=INSTANCE
+Interface=lwip
+
+[Option4]
+Name=stats
+GUIName=Statistics
+Description=If this options is set, the plugin will collect statistical data on your running TCP/IP networking stack. You can view and refresh the data during a debugging session by means of the TCP/IP panel from the Embedded panels menu.
+Kind=BOOLEAN
+Interface=lwip
+
+[Option5]
+Name=UNIFIED
+GUIName=Unified handles
+Description=Includes sockfs virtual filesystem to allow read/write/close to be used on socket handles. Without sockfs only lwip_read/lwip_write/lwip_close can be used.
+Kind=BOOLEAN
+Default=true
+Autovalue=false
+
+[Option5_Auto_If0]
+Kind=INTERFACE
+Object=filesystem_require
+Condition=NOTEQ
+
+[Option5_Auto_If1]
+Kind=INTERFACE
+Object=posix_devio
+Condition=NOTEQ
+
+[Option5_Hide_If0]
+Kind=INTERFACE
+Object=filesystem_require
+Condition=NOTEQ
+
+[Option5_Hide_If1]
+Kind=INTERFACE
+Object=posix_devio
+Condition=NOTEQ
+
+[___Option6]
+Name=user_timeouts
+GUIName=User Timeouts
+Description=This option allows the user to allocate additional system timeouts (used by the socket layer, sys_msleep(), sys_timeout() and sys_sem_wait_timeout()) beyond those needed by the TCP/IP service itself.
+Kind=UINT8
+DefaultValue=0
+
+[___Option7]
+Name=OPEN_TIMEOUT_MS
+GUIName=Startup Timeout (ms)
+Description=How many milliseconds to wait for the TCP/IP service to start
+Kind=UINT32
+DefaultValue=1000
+
+[Instance]
+Caption=TCP/IP Network Adapter
+Description=TCP/IP Network Adapter 
+Require0=netif
+
+[___Instance_Option0]
+Name=hostname
+GUIName=Host Name
+Description=The Host Name for the TCP/IP instance. 
+Kind=STRING
+DefaultValue=NanoBoard_01
+Auto=False
+
+[Instance_Option0]
+Name=ipaddr
+GUIName=IP Address
+Description=The IP address of the TCP/IP instance. If DHCP is enabled, this address is used only if DHCP is unable to dynamically allocate an IP address.
+Kind=ARRAY
+Type=UINT8
+Size=4
+DefaultValue=192,168,1,1
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option0_Available_If0]
+Kind=Option
+Object=DHCP
+Condition=EQ
+Value=False
+
+[Instance_Option1]
+Name=netmask
+GUIName=Network Mask
+Description=The Network Mask of the TCP/IP instance. If DHCP is enabled, this mask is used only if DHCP is unable to dynamically allocate a Network Mask.
+Kind=ARRAY
+Type=UINT8
+Size=4
+DefaultValue=255,255,255,0
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option1_Available_If0]
+Kind=Option
+Object=DHCP
+Condition=EQ
+Value=False
+
+[Instance_Option2]
+Name=gw
+GUIName=Default Gateway
+Description=The IP address of the default gateway for this TCP/IP instance. If DHCP is enabled, this address is used only if DHCP is unable to dynamically allocate a Gateway IP address.
+Kind=ARRAY
+Type=UINT8
+Size=4
+DefaultValue=192,168,1,254
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option2_Available_If0]
+Kind=Option
+Object=DHCP
+Condition=EQ
+Value=False
+
+[Instance_Option3]
+Name=primary_dns
+GUIName=Primary DNS Server
+Description=The IP address of the primary DNS server for this TCP/IP instance. If DHCP is enabled, this address is used only if DHCP is unable to dynamically allocate a Primary DNS Server address.
+Kind=ARRAY
+Type=UINT8
+Size=4
+DefaultValue=0,0,0,0
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option3_Available_If0]
+Kind=Option
+Object=DHCP
+Condition=EQ
+Value=False
+
+[Instance_Option3_Available_If1]
+Kind=Option
+Object=DNS
+Condition=EQ
+Value=True
+
+[Instance_Option4]
+Name=secondary_dns
+GUIName=Secondary DNS Server
+Description=The IP address of the secondary DNS server for this TCP/IP instance. If DHCP is enabled, this address is used only if DHCP is unable to dynamically allocate a Secondary DNS Server address.
+Kind=ARRAY
+Type=UINT8
+Size=4
+DefaultValue=0,0,0,0
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option4_Available_If0]
+Kind=Option
+Object=DHCP
+Condition=EQ
+Value=False
+
+[Instance_Option4_Available_If1]
+Kind=Option
+Object=DNS
+Condition=EQ
+Value=True
+
+
+
+
+
+ 
+

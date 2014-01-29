@@ -1,0 +1,27 @@
+[Plugin]
+Name=bsd_usb_wifi
+Description=USB WIFI Support
+Caption=USB WIFI Support
+Implement=bsd_usb_wifi
+Require0=bsd_usb
+Require1=bsd_drv_run
+Require2=bsd_drv_rum
+
+[PluginApplicationCode]
+NoGenerate=True
+
+[Option0]
+Name=ENABLE_USB_DRV_RUN
+GUIName=BSD run Driver
+Description=Ralink Technology RT2700U/RT2800U/RT3000U chipset driver
+Kind=BOOLEAN
+AutoValue=True
+
+[Option1]
+Name=ENABLE_USB_DRV_RUM
+GUIName=BSD rum Driver
+Description=Ralink Technology RT2501USB/RT2601USB chipset driver
+Kind=BOOLEAN
+AutoValue=True
+
+

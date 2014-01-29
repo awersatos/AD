@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_axcelerator
+
+[Library]
+ovi_axcelerator=.\ovi_axcelerator.LIB
+
+[$LibMap$]
+ovi_axcelerator=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/update_ovi_axcelerator.do=-1
+/axcelerator.v=-1
+
+[Files.Data]
+.\src\update_ovi_axcelerator.do=Macro
+.\src\axcelerator.v=Verilog Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVerilogSets]
+Strict=0
+Strict2001=1
+SystemVerilog3=0
+ErrorOutputLimit=0
+WarningPrnLevel=1
+OptimizationLevel=2
+EnableDebug=1
+StrictLRMMode=0
+ProtectLevel=0
+AdditionalOptions=

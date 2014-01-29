@@ -1,0 +1,52 @@
+V 000038 56 1110 1260919158370 dffeas
+(_unit dffeas
+	(_specify
+		(_tchk setuphold 0 348
+			(_port clk (posedge) (_code  26 nosloadsclr))
+			(_port d ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 349
+			(_port clk (posedge) (_code  27 reset))
+			(_port sclr ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 350
+			(_port clk (posedge) (_code  28 reset))
+			(_port sload ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 351
+			(_port clk (posedge) (_code  29 sloaddata))
+			(_port asdata ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 352
+			(_port clk (posedge) (_code  30 reset))
+			(_port ena ())
+			(_register (viol))
+		)
+		(_modpath parallel positive 0 354
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 355
+			(_port clrn in negedge)
+			(_port q out negedge)
+		)
+		(_modpath parallel positive 0 356
+			(_port prn in negedge)
+			(_port q out negedge)
+		)
+		(_modpath parallel positive 0 357
+			(_port aload in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel unknown 0 358
+			(_port asdata in )
+			(_port q out )
+		)
+	)
+)

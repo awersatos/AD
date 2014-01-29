@@ -1,0 +1,99 @@
+//============================================================
+# ls377 source
+//74LS377: Octal D Flip-Flops with clock enable
+//rbd 7-17-97: Added Hold row to table
+//dm 9-2-97: Added IO_PAIRS.
+//  Added io parameter to input LOAD.
+//  Reduced ttlh_val/tthl_val to just tt_val.
+//  Modified function to use internal register.
+//  Removed v1 and r1 parameters from Vcc LOAD.
+//  Use 5.25V for ricc max. calculations.
+//dw 18-4-00: Changed internal_reg= (NUMBER(D5 D4 D3 D2 D1 D0)); and
+//  STATE_BIT Q0 Q1 Q2 Q3 Q4 Q5 = (internal_reg); to include D6, D7, Q6 & Q7
+//============================================================
+INPUTS VCC, GND, E, CP, D7, D6, D5, D4, D3, D2, D1, D0;
+OUTPUTS VCC_LD, E_LD, CP_LD, D7_LD, D6_LD, D5_LD, D4_LD, D3_LD, D2_LD, D1_LD,
+		D0_LD, Q7, Q6, Q5, Q4, Q3, Q2, Q1, Q0;
+INTEGERS internal_reg;
+REALS tt_val, tplh_val, tphl_val, ril_val, rih_val, riccl_val,
+	  ricch_val, ricc_val, ts_data, th_data, ts_val, th_val, CP_twl;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.75,5.25);	//check for min supply=4.75 and max supply=5.25
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.25,1.35);	//set input threshold values: vil and vih
+IO_PAIRS(E:E_LD, CP:CP_LD, D7:D7_LD, D6:D6_LD, D5:D5_LD,
+         D4:D4_LD, D3:D3_LD, D2:D2_LD, D1:D1_LD, D0:D0_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tCP\tE\tD0\tD1\tD2\tD3\tD4\tD5\tD6\tD7\tQ0\tQ1\tQ2\tQ3\tQ4\tQ5\tQ6\tQ7");
+
+    //NOTE: both ttlh and tthl are the same value
+	tt_val= (MIN_TYP_MAX(tt_param: NULL, 5n, NULL));
+
+    tplh_val= (MIN_TYP_MAX(tp_param: NULL, 17n, 27n));
+	tphl_val= (MIN_TYP_MAX(tp_param: NULL, 18n, 27n));
+
+	CP_twl= (20n);
+	ts_data= (20n);
+	th_data= (5n);
+	ts_val= (20n);
+	th_val= (5n);
+
+	//LS std output drive IOL max=8mA @ vol=0.4V: rol_param=(0.4-vol_param)/8mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 25,  NULL));
+
+	//LS std output drive IOH max=-400uA @ voh=4.5V: roh_param=(voh_param-4.5)/400uA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 250, NULL));
+
+    //LS input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+	ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //LS input load IIL=-0.4mA @ 0.4V: r1= (voh_param-0.4)/0.4mA
+	rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 10.5k));
+
+	//Icc @ 5V with output high: 277.8= 5/18mA typical, 187.5= 5.25/28mA max
+	ricch_val= (MIN_TYP_MAX(i_param: NULL, 277.8, 187.5));
+
+	//Icc @ 5V with output low: 227.3= 5/22mA typical, 150= 5.25/35mA max
+	riccl_val= (MIN_TYP_MAX(i_param: NULL, 227.3, 150));
+
+    internal_reg= (0);
+	STATE Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 = ZERO;	//initialize output
+	EXIT;
+  END;
+
+DRIVE Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 = (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD E_LD CP_LD D7_LD D6_LD D5_LD D4_LD D3_LD D2_LD D1_LD D0_LD =
+	 (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+
+IF ((~(E)) && CHANGED_LH(CP)) THEN
+  BEGIN
+    internal_reg= (NUMBER(D7 D6 D5 D4 D3 D2 D1 D0));
+  END;
+
+STATE_BIT Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 = (internal_reg);
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//	   present_time,CP,E,D0,D1,D2,D3,D4,D5,D6,D7,Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7);
+IF (Q7 && Q6 && Q5 && Q4 && Q3 && Q2 && Q1 && Q0) THEN
+  BEGIN
+    ricc_val= (ricch_val);	//output high
+  ELSE
+    ricc_val= (riccl_val);	//output low
+  END;
+
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+IF (warn_param) THEN
+  BEGIN
+	WIDTH(CP Twl=CP_twl "CP");
+	SETUP_HOLD(CP=LH D0 D1 D2 D3 D4 D5 D6 D7 Ts=ts_data Th=th_data "Dn->CP");
+	SETUP_HOLD(CP=LH E Ts=ts_val Th=th_val "E->CP");
+  END;
+
+DELAY Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 =
+  CASE (TRAN_LH) : tplh_val
+  CASE (TRAN_HL) : tphl_val
+END;
+EXIT;

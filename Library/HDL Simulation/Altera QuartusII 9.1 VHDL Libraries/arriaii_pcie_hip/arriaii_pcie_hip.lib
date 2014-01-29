@@ -1,0 +1,340 @@
+timestamp=0
+
+[arriaii_hssi_pcie_hip]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|212694|1*2189800
+B/trans=3*40763557
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*10902804
+I/trans=0*11098947
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*10865476*0x24c23876c33b4dace1555623cc70645d69148c72|0*10902715*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*10903214*0x59d19600249faaac145e12365216982fdf640956|0*11098849*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|211795
+
+[arriaii_pcie_hip_components]
+B/arriaii_pcie_hip_components=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*40963
+I/arriaii_pcie_hip_components=I/ARRIAII_PCIE_HIP_COMPONENTS 0*48185
+M=3|0|v63|0|./src/arriaii_pcie_hip_components.vhd|0*974*0x3e911fccb31bb25032c6687cfc1facb1109768b3|0*40863*0xf2538cdc6f7b23a146389216c886e772
+M/arriaii_pcie_hip_components=M/ARRIAII_PCIE_HIP_COMPONENTS 4|0|v63|0|./src/arriaii_pcie_hip_components.vhd|0*41219*0x32fa04399194b962f9b792e72d04801559deba43|0*48055*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_components.vhd|23
+
+[arriaii_pciehip_clkmux]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|1217|1*15676
+B/trans=3*212631
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*103155
+I/trans=0*105706
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*102372*0x88f419aefa4fa6afb59039cf1122f59a2bbdde73|0*103065*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*103374*0x33faa1af6aa062e7662c07d4764aa9965490774c|0*105607*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|1196
+
+[arriaii_pciehip_compute_bit]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|8799|1*79872
+B/trans=3*613301
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*363443
+I/trans=0*364422
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*362915*0xf634a76c2c523885fb1a1c53ed81205a75a2c277|0*363348*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*363795*0x4691ff7a0e302ddbae31be0b50173f49f7289d4b|0*364318*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|8791
+
+[arriaii_pciehip_dprio_16bit]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|1443|1*17680
+B/trans=3*224629
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*109469
+I/trans=0*115253
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*108632*0xd7aa932abefcdebbbd9bd0eb31c3b66e7391aef6|0*109374*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*109821*0x80114b4fa092506f562753c4366d06500b92398d|0*115149*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|1421
+
+[arriaii_pciehip_dprio_addr]
+A/rtl=A/RTL 21|./src/arriaii_pcie_hip_atoms.vhd|1777|1*19226
+B/rtl=3*226838
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*116431
+I/rtl=I/RTL 0*128270
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*115914*0x9e3344b8ff7801ece9a55e7926362696e4ca7bc9|0*116337*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*116638*0x268f8e110764f8e73dee0add760ea34e1a37349d|0*128169*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|1765
+
+[arriaii_pciehip_dprio_bit]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|1369|1*16822
+B/trans=3*220936
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*106864
+I/trans=0*107988
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*106185*0x9c9fb22d43fd2788df0e9c8d105b6efec8953754|0*106771*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*107214*0x3f4ca9b710f87905082bdc2244a917b3ef3223ad|0*107886*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|1351
+
+[arriaii_pciehip_dprio_bus_out_mux]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|3409|1*30512
+B/trans=3*395944
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*168302
+I/trans=0*174765
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*157197*0x9bc759ced725c8789226516aab535a692f0b450a|0*168201*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*168484*0xf1d3782bbd8ab579d660ce8bc2a716e34e0796ed|0*174655*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|3180
+
+[arriaii_pciehip_dprio_cnt]
+A/rtl=A/RTL 21|./src/arriaii_pcie_hip_atoms.vhd|2174|1*23044
+B/rtl=3*285450
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*129265
+I/rtl=I/RTL 0*134591
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*128783*0x5216d462ea8eea50e7426882621ac17828d9c74c|0*129172*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*129471*0x26482d0abad641a5227dd5a00acfc959e44d7573|0*134491*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|2163
+
+[arriaii_pciehip_dprio_ctl_data]
+A/rtl=A/RTL 21|./src/arriaii_pcie_hip_atoms.vhd|2421|1*25212
+B/rtl=3*310442
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*136008
+I/rtl=I/RTL 0*148394
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*135188*0xaeca3d1d9735ae8bc91294238eea4faf06d1ef7f|0*135910*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*136187*0xa616382e8d76e31d43787d35dcf8cee32a9b43a1|0*148289*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|2399
+
+[arriaii_pciehip_dprio_reg]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|3882|1*34780
+B/trans=3*415018
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*192466
+I/trans=0*246037
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*176135*0x1c74d2650869c16010bfd7d368c90761fb4fdd51|0*192373*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*192640*0x70456390c318c3a67d359f2c57b19fc682c1e604|0*245935*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|3531
+
+[arriaii_pciehip_dprio_reg_top]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|6358|1*48040
+B/trans=3*448428
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*252815
+I/trans=0*329210
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*246875*0xc002bdb9fa69f79068d2a3c9e873c12ef140e2e2|0*252718*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*253041*0x7765f216052addb2145d7fe93540e2519d04f0d5|0*329104*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|6227
+
+[arriaii_pciehip_dprio_sm]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|2892|1*28998
+B/trans=3*367770
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*150217
+I/trans=0*155956
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*149006*0x01aa29bdaaaa67f70a053587ab71d8ef03cfa0e6|0*150125*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*150566*0x8cd09a77c19621ea95fa28e5b51bc4d4b4ae8c91|0*155855*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|2849
+
+[arriaii_pciehip_ecc_chk]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|8952|1*81764
+B/trans=3*618427
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*369147
+I/trans=0*377070
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*368509*0xc4891825611db0cfbe033cb60f9e28f5fd27071c|0*369056*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*369495*0x5de62d171cdc34dfd828e3a5b8f78e0f0e92f5ec|0*376970*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|8940
+
+[arriaii_pciehip_ecc_decoder]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|9162|1*83150
+B/trans=3*627816
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*378248
+I/trans=0*378977
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*377712*0x7d9a09f4caf5a8dffc651fe489379da71206d272|0*378153*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*378600*0x24a207ad64512cb874aec0be6624f0f337ac5902|0*378873*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|9153
+
+[arriaii_pciehip_ecc_gen]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|8827|1*80554
+B/trans=3*614662
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*365568
+I/trans=0*367839
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*365016*0xb32d47a221a97b3e5de92e448f366b86e6584740|0*365477*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*365916*0x7886b66e6dd04c362e88e8a80d57d58ef76d841c|0*367739*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|8818
+
+[arriaii_pciehip_hip_dprio_top]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|8111|1*69188
+B/trans=3*578979
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*336156
+I/trans=0*362315
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*330180*0xdd0b087201afc7bc312fe100cc97cc082c554e0e|0*336059*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*336334*0xcb94bdbf98eedea411c286a3f92956df990b775b|0*362209*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|7973
+
+[arriaii_pciehip_hip_mram]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|9317|1*84530
+B/trans=3*631810
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*383939
+I/trans=0*389059
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*382034*0x2f0fadce387e610af521ea213e9831999adff63e|0*383847*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*384288*0x9e74a54052f9bad5dc9bfe0a5bdfae4c49f7c3a2|0*388958*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|9255
+
+[arriaii_pciehip_hip_top]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|209465|1*2156028
+B/trans=3*40595954
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*10784844
+I/trans=0*10860070
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*10772516*0x2b468943faea2dd84fffd842aa9b496973d480a0|0*10784753*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*10785016*0x9e6f4355b415e4a0c4024df7855d6062e6f376fd|0*10859970*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|209006
+
+[arriaii_pciehip_iei_detect]
+A/rtl=A/RTL 21|./src/arriaii_pcie_hip_atoms.vhd|10131|1*95352
+B/rtl=3*695173
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*408804
+I/rtl=I/RTL 0*782701
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*407732*0x7407f3d16b375c3cc3b421583fe25f82fb8c4536|0*408710*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*409011*0x167c61e87d33a5699cf892ee70fc3a3ceeacc15e|0*782600*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|10105
+
+[arriaii_pciehip_mram_top]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|9576|1*88286
+B/trans=3*660760
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*391543
+I/trans=0*398505
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*389923*0xe38f8b53d177dd000efff28073a5c98039f21db8|0*391451*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*391892*0x7f265c883020045f944af21c5143315cd4b63f44|0*398404*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|9493
+
+[arriaii_pciehip_param]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|223|1*3472
+B/trans=3*15880
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*57767
+I/trans=0*101721
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*50207*0xeb7e4fb4835c6dbd8055d2650d8297c72fdf407c|0*57678*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*58113*0x00b7bd3a11dbb133749232fa5f66964c5386fca1|0*101623*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|42
+
+[arriaii_pciehip_pciexp_dcfiforam]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|9895|1*92186
+B/trans=3*679018
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*400129
+I/trans=0*401428
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*399313*0x502f85b0753c37b512b8cb69bdd5835a82a4aa87|0*400029*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*400486*0x95036588d42664fff3a2ab5dd54b22ead4fd0f03|0*401319*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|9878
+
+[arriaii_pciehip_pciexp_dcram_rtry]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|9961|1*93252
+B/trans=3*684403
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*402915
+I/trans=0*404231
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*402101*0x953e6bb193562f011cc0f87e9b441e892bd31f5e|0*402814*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*403273*0xfab751cd67b5fb451789250dfb5dcdf716b6c836|0*404121*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|9943
+
+[arriaii_pciehip_pciexp_dcram_rxvc]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|10031|1*94302
+B/trans=3*689788
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*405719
+I/trans=0*407033
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*404905*0xad19c18d198bd95707c0d83008c595106b1eb876|0*405618*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*406077*0x721fdf2ec8275c6d2aa7bc896326583d5919a11f|0*406923*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|10013
+
+[arriaii_pciehip_pciexp_top_hip]
+A/rtl=A/RTL 21|./src/arriaii_pcie_hip_atoms.vhd|19285|1*175394
+B/rtl=3*2304195
+C=8.2.1986.SP1.35.3497  (Windows)
+C/rtl=8.2.1986.SP1.35.3497  (Windows)
+I=0*795955
+I/rtl=I/RTL 0*10770357
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*784947*0xd9cf03650e05e67fc863a7dc7b1872abf248e6ea|0*795857*0xf2538cdc6f7b23a146389216c886e772
+M/rtl=M/RTL 21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*796230*0xfe2a3ff4fd8e4cdb8e3afc47df5220910558e58a|0*10770252*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|18968
+
+[arriaii_pciehip_pulse_ext]
+A/trans=21|./src/arriaii_pcie_hip_atoms.vhd|9192|1*83784
+B/trans=3*628845
+C=8.2.1986.SP1.35.3497  (Windows)
+C/trans=8.2.1986.SP1.35.3497  (Windows)
+I=0*380143
+I/trans=0*381185
+M=11|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*379573*0xebd996f617908ee0a0602bb859cd17eca84d326c|0*380050*0xf2538cdc6f7b23a146389216c886e772
+M/trans=21|0|v63|0|./src/arriaii_pcie_hip_atoms.vhd|0*380493*0x93fd9dd107cdda8bbadba63c98bc2ae329c8360f|0*381083*0xf2538cdc6f7b23a146389216c886e772
+R=./src/arriaii_pcie_hip_atoms.vhd|9181
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, ARRIAII_PCIE_HIP VHDL LIBRARY
+ModifyID=164
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=189|0arriaii_pcie_hip.mgf|11098947|0
+1=26|1arriaii_pcie_hip.mgf|2189800|0
+3=26|3arriaii_pcie_hip.mgf|40763557|0
+
+[~U]
+arriaii_hssi_pcie_hip=11|0*10860424|
+arriaii_pcie_hip_components=ARRIAII_PCIE_HIP_COMPONENTS 3|0*0|0*159
+arriaii_pciehip_clkmux=11|0*102073|
+arriaii_pciehip_compute_bit=11|0*362675|
+arriaii_pciehip_dprio_16bit=11|0*108344|
+arriaii_pciehip_dprio_addr=11|0*115659|
+arriaii_pciehip_dprio_bit=11|0*105931|
+arriaii_pciehip_dprio_bus_out_mux=11|0*156311|
+arriaii_pciehip_dprio_cnt=11|0*128529|
+arriaii_pciehip_dprio_ctl_data=11|0*134849|
+arriaii_pciehip_dprio_reg=11|0*174953|
+arriaii_pciehip_dprio_reg_top=11|0*246265|
+arriaii_pciehip_dprio_sm=11|0*148577|
+arriaii_pciehip_ecc_chk=11|0*368241|
+arriaii_pciehip_ecc_decoder=11|0*377472|
+arriaii_pciehip_ecc_gen=11|0*364780|
+arriaii_pciehip_hip_dprio_top=11|0*329538|
+arriaii_pciehip_hip_mram=11|0*381541|
+arriaii_pciehip_hip_top=11|0*10770408|
+arriaii_pciehip_iei_detect=11|0*407397|
+arriaii_pciehip_mram_top=11|0*389446|
+arriaii_pciehip_param=11|0*48469|
+arriaii_pciehip_pciexp_dcfiforam=11|0*399004|
+arriaii_pciehip_pciexp_dcram_rtry=11|0*401791|
+arriaii_pciehip_pciexp_dcram_rxvc=11|0*404595|
+arriaii_pciehip_pciexp_top_hip=11|0*783056|
+arriaii_pciehip_pulse_ext=11|0*379335|
+

@@ -1,0 +1,19 @@
+* DIP switch 2
+* jjt 19/6/2002: created
+*
+*             Switch connections:
+*             sw1
+*             |  |  sw2
+*             |  |  |  |
+*             |  |  |  |
+.subckt dpsw2 1  2  4  5
++ PARAMS: STATE1=0 STATE2=0 RON=1m ROFF=100E6
+*
+V1 3 0 {STATE1}
+V2 6 0 {STATE2}
+*
+SDIP1 1 2 3 0 DIPMOD
+SDIP2 4 5 6 0 DIPMOD
+*
+.MODEL DIPMOD SW(VT=0.5 RON={RON} ROFF={ROFF})
+.ends dpsw2

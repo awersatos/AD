@@ -1,0 +1,1302 @@
+V 000040 56 167 1265384870748 SBNX16V15
+(_unit SBNX16V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000040 56 167 1265384870764 SBNX32V15
+(_unit SBNX32V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000040 56 482 1265384870961 MUX21SV15
+(_unit MUX21SV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 25
+			(_code  1 NT*SD)
+			(_port D0 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 27
+			(_code  2 SD)
+			(_port D1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 29
+			(_code  3 NT*D0*AN*D1)
+			(_port SD in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 31
+			(_code  4 D0*AN*NT*D1)
+			(_port SD in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 165 1265384870966 SBNSV15
+(_unit SBNSV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384870971 DELC4V15
+(_unit DELC4V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 62
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000040 56 167 1265384870976 SBIX16V15
+(_unit SBIX16V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 165 1265384870983 SBNHV15
+(_unit SBNHV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384870988 DELC1V15
+(_unit DELC1V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 62
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000040 56 1391 1265384870993 MUX41V15
+(_unit MUX41V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 25
+			(_code  1 NT*SD1*AN*NT*SD2)
+			(_port D0 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 27
+			(_code  2 SD1*AN*NT*SD2)
+			(_port D1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 29
+			(_code  3 NT*SD1*AN*SD2)
+			(_port D2 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 31
+			(_code  4 SD1*AN*SD2)
+			(_port D3 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 33
+			(_code  5 NT*D0*AN*D1*AN*NT*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 35
+			(_code  6 D0*AN*NT*D1*AN*NT*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 37
+			(_code  7 NT*D2*AN*D3*AN*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 39
+			(_code  8 D2*AN*NT*D3*AN*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 41
+			(_code  9 NT*D0*AN*D2*AN*NT*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 43
+			(_code  10 D0*AN*NT*D2*AN*NT*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 45
+			(_code  11 NT*D1*AN*D3*AN*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 47
+			(_code  12 D1*AN*NT*D3*AN*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 165 1265384870998 INRBV15
+(_unit INRBV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 481 1265384871003 MUX21V15
+(_unit MUX21V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 25
+			(_code  1 NT*SD)
+			(_port D0 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 27
+			(_code  2 SD)
+			(_port D1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 29
+			(_code  3 NT*D0*AN*D1)
+			(_port SD in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 31
+			(_code  4 D0*AN*NT*D1)
+			(_port SD in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 209 1265384871008 FD1S3AQV15
+(_unit FD1S3AQV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 45
+			(_port CK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+	)
+)
+V 000041 56 283 1265384871013 FD1S1AQV15
+(_unit FD1S1AQV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 43
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 44
+			(_port CK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+	)
+)
+V 000041 56 168 1265384871038 BIP02AV15C
+(_unit BIP02AV15C
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 28
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 168 1265384871043 BIP02FV33C
+(_unit BIP02FV33C
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 28
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384871052 TRANUV33
+(_unit TRANUV33
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000043 56 324 1265384871061 BN01P24FV33C
+(_unit BN01P24FV33C
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 31
+			(_port A in )
+			(_port PAD out )
+		)
+		(_modpath parallel unknown 0 32
+			(_port EN in )
+			(_port PAD out )
+		)
+		(_modpath parallel positive 0 33
+			(_port PAD in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384871066 TRANDV15
+(_unit TRANDV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384871071 INRBHV33
+(_unit INRBHV33
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000042 56 169 1265384871076 BSIN02FV33C
+(_unit BSIN02FV33C
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 29
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000040 56 241 1265384871085 BOZ6FV33C
+(_unit BOZ6FV33C
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 29
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel unknown 0 30
+			(_port EN in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384871106 SBNX8V15
+(_unit SBNX8V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 1392 1265384871119 MUX41SV15
+(_unit MUX41SV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 25
+			(_code  1 NT*SD1*AN*NT*SD2)
+			(_port D0 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 27
+			(_code  2 SD1*AN*NT*SD2)
+			(_port D1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 29
+			(_code  3 NT*SD1*AN*SD2)
+			(_port D2 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 31
+			(_code  4 SD1*AN*SD2)
+			(_port D3 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 33
+			(_code  5 NT*D0*AN*D1*AN*NT*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 35
+			(_code  6 D0*AN*NT*D1*AN*NT*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 37
+			(_code  7 NT*D2*AN*D3*AN*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 39
+			(_code  8 D2*AN*NT*D3*AN*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 41
+			(_code  9 NT*D0*AN*D2*AN*NT*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 43
+			(_code  10 D0*AN*NT*D2*AN*NT*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 45
+			(_code  11 NT*D1*AN*D3*AN*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 47
+			(_code  12 D1*AN*NT*D3*AN*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 705 1265384871124 FD1S3ENV15
+(_unit FD1S3ENV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 56
+			(_port CK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+		(_modpath parallel negative 0 57
+			(_port CK in posedge)
+			(_port QN out posedge)
+			(_datain D in posedge)
+		)
+		(_modpath parallel positive 0 58
+			(_code  1 NT*CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 59
+			(_code  2 NT*CK)
+			(_port CDN in )
+			(_port QN out )
+		)
+		(_modpath parallel positive 0 60
+			(_code  3 CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 61
+			(_code  4 CK)
+			(_port CDN in )
+			(_port QN out )
+		)
+	)
+)
+V 000038 56 239 1265384871129 AND2V15
+(_unit AND2V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 396 1265384871134 FD1S2BQV15
+(_unit FD1S2BQV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 52
+			(_port CK in negedge)
+			(_port Q out negedge)
+			(_datain D in negedge)
+		)
+		(_modpath parallel positive 0 53
+			(_code  1 NT*CK)
+			(_port PD in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 54
+			(_code  2 CK)
+			(_port PD in )
+			(_port Q out )
+		)
+	)
+)
+V 000038 56 313 1265384871143 NR3HV15
+(_unit NR3HV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 25
+			(_port C in )
+			(_port Z out )
+		)
+	)
+)
+V 000037 56 238 1265384871148 NR2V15
+(_unit NR2V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 313 1265384871153 OR3HV15
+(_unit OR3HV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 25
+			(_port C in )
+			(_port Z out )
+		)
+	)
+)
+V 000037 56 238 1265384871162 OR2V15
+(_unit OR2V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000037 56 460 1265384871167 OR5V15
+(_unit OR5V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 25
+			(_port C in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 26
+			(_port D in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 27
+			(_port E in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 457 1265384871172 XOR2V15
+(_unit XOR2V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 25
+			(_code  1 NT*B)
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 27
+			(_code  2 B)
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 29
+			(_code  3 NT*A)
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 31
+			(_code  4 A)
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 396 1265384871177 FD1S3BQV15
+(_unit FD1S3BQV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 52
+			(_port CK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+		(_modpath parallel positive 0 53
+			(_code  1 NT*CK)
+			(_port PD in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 54
+			(_code  2 CK)
+			(_port PD in )
+			(_port Q out )
+		)
+	)
+)
+V 000041 56 398 1265384871182 FD1S2EQV15
+(_unit FD1S2EQV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 53
+			(_port CK in negedge)
+			(_port Q out negedge)
+			(_datain D in negedge)
+		)
+		(_modpath parallel positive 0 54
+			(_code  1 NT*CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 55
+			(_code  2 CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+	)
+)
+V 000039 56 166 1265384871187 DELC5V15
+(_unit DELC5V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 62
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 239 1265384871192 NR2BV15
+(_unit NR2BV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 240 1265384871378 AND2HV15
+(_unit AND2HV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384871389 INRBHV15
+(_unit INRBHV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 239 1265384871394 OR2HV15
+(_unit OR2HV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 239 1265384871399 OR2SV15
+(_unit OR2SV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384871404 DELC2V15
+(_unit DELC2V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 62
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000042 56 215 1265384871413 FL1S3AQHV15
+(_unit FL1S3AQHV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 51
+			(_port CK in posedge)
+			(_port Q out posedge)
+			(_datain SYNC_D in posedge)
+		)
+	)
+)
+V 000042 56 210 1265384872093 FD1S2AQHV15
+(_unit FD1S2AQHV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 45
+			(_port CK in negedge)
+			(_port Q out negedge)
+			(_datain D in negedge)
+		)
+	)
+)
+V 000040 56 167 1265384872108 SBN3X8V15
+(_unit SBN3X8V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000042 56 399 1265384872117 FD1S3EQHV15
+(_unit FD1S3EQHV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 53
+			(_port CK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+		(_modpath parallel positive 0 54
+			(_code  1 NT*CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 55
+			(_code  2 CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+	)
+)
+V 000041 56 168 1265384872143 SBN6X16V15
+(_unit SBN6X16V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 165 1265384872156 SBISV15
+(_unit SBISV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384872161 SBIX6V15
+(_unit SBIX6V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000037 56 386 1265384872300 NR4V15
+(_unit NR4V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 25
+			(_port C in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 26
+			(_port D in )
+			(_port Z out )
+		)
+	)
+)
+V 000037 56 238 1265384872305 ND2V15
+(_unit ND2V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 241 1265384872312 ND2I1V15
+(_unit ND2I1V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 25
+			(_port AN in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 26
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 313 1265384872317 ND3LV15
+(_unit ND3LV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 25
+			(_port C in )
+			(_port Z out )
+		)
+	)
+)
+V 000042 56 544 1265384872330 FS0S1DNHV15
+(_unit FS0S1DNHV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 56
+			(_port S in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 57
+			(_port S in )
+			(_port QN out )
+		)
+		(_modpath parallel positive 0 58
+			(_port R in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 59
+			(_port R in )
+			(_port QN out )
+		)
+		(_modpath parallel positive 0 60
+			(_port CD in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 61
+			(_port CD in )
+			(_port QN out )
+		)
+	)
+)
+V 000039 56 166 1265384872339 SBIX8V15
+(_unit SBIX8V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000037 56 386 1265384872344 OR4V15
+(_unit OR4V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 25
+			(_port C in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 26
+			(_port D in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 313 1265384872349 NR3LV15
+(_unit NR3LV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 25
+			(_port C in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 239 1265384872358 ND2HV15
+(_unit ND2HV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000037 56 386 1265384872363 ND4V15
+(_unit ND4V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 25
+			(_port C in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 26
+			(_port D in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 239 1265384872368 OR2LV15
+(_unit OR2LV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 387 1265384872373 ND4LV15
+(_unit ND4LV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 25
+			(_port C in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 26
+			(_port D in )
+			(_port Z out )
+		)
+	)
+)
+V 000040 56 482 1265384872378 MUX21IV15
+(_unit MUX21IV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 27
+			(_code  1 NT*SD)
+			(_port D0 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 29
+			(_code  2 SD)
+			(_port D1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 31
+			(_code  3 NT*D0*AN*D1)
+			(_port SD in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 33
+			(_code  4 D0*AN*NT*D1)
+			(_port SD in )
+			(_port Z out )
+		)
+	)
+)
+V 000041 56 1392 1265384872383 MUX41IV15
+(_unit MUX41IV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 27
+			(_code  1 NT*SD1*AN*NT*SD2)
+			(_port D0 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 29
+			(_code  2 SD1*AN*NT*SD2)
+			(_port D1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 31
+			(_code  3 NT*SD1*AN*SD2)
+			(_port D2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 33
+			(_code  4 SD1*AN*SD2)
+			(_port D3 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 35
+			(_code  5 NT*D0*AN*D1*AN*NT*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 37
+			(_code  6 D0*AN*NT*D1*AN*NT*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 39
+			(_code  7 NT*D2*AN*D3*AN*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 41
+			(_code  8 D2*AN*NT*D3*AN*SD2)
+			(_port SD1 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 43
+			(_code  9 NT*D0*AN*D2*AN*NT*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 45
+			(_code  10 D0*AN*NT*D2*AN*NT*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 47
+			(_code  11 NT*D1*AN*D3*AN*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 49
+			(_code  12 D1*AN*NT*D3*AN*SD1)
+			(_port SD2 in )
+			(_port Z out )
+		)
+	)
+)
+V 000038 56 165 1265384872388 SBNLV15
+(_unit SBNLV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000043 56 400 1265384872393 FDS1S3EQHV15
+(_unit FDS1S3EQHV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 53
+			(_port CK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+		(_modpath parallel positive 0 54
+			(_code  1 NT*CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 55
+			(_code  2 CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+	)
+)
+V 000042 56 399 1265384872398 FD1S2EQPV15
+(_unit FD1S2EQPV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 53
+			(_port CK in negedge)
+			(_port Q out negedge)
+			(_datain D in negedge)
+		)
+		(_modpath parallel positive 0 54
+			(_code  1 NT*CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 55
+			(_code  2 CK)
+			(_port CDN in )
+			(_port Q out )
+		)
+	)
+)
+V 000037 56 312 1265384872403 ND3V15
+(_unit ND3V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 24
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 25
+			(_port C in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384872408 INRBLV15
+(_unit INRBLV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 458 1265384872413 XNOR2V15
+(_unit XNOR2V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel negative 0 25
+			(_code  1 NT*B)
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 27
+			(_code  2 B)
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel negative 0 29
+			(_code  3 NT*A)
+			(_port B in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 31
+			(_code  4 A)
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 240 1265384872418 AND2LV15
+(_unit AND2LV15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 23
+			(_port A in )
+			(_port Z out )
+		)
+		(_modpath parallel positive 0 24
+			(_port B in )
+			(_port Z out )
+		)
+	)
+)
+V 000039 56 166 1265384872463 SBNX3V15
+(_unit SBNX3V15
+	(_specify
+		(_specparam rdly real 0.01)
+		(_specparam fdly real 0.01)
+		(_modpath parallel positive 0 24
+			(_port A in )
+			(_port Z out )
+		)
+	)
+)

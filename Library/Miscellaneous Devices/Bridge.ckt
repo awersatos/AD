@@ -1,0 +1,14 @@
+*Default Diode Bridge Rectifier
+*Connections:
+*              V- 
+*              | AC1
+*              | | V+
+*              | | | AC2
+*              | | | |
+.SUBCKT BRIDGE 1 2 3 4
+D1 1 2 DMOD
+D2 1 4 DMOD
+D3 2 3 DMOD
+D4 4 3 DMOD
+.MODEL DMOD D ()
+.ENDS BRIDGE

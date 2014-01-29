@@ -1,0 +1,9 @@
+[Interface]
+Name=per_lcd_common
+Category=INTERNAL
+CanBeVisible=False
+System=False
+Description=common lcd implementation 
+PublicDir=platform\fpga\peripherals\lcd\include
+
+

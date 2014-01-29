@@ -1,0 +1,12 @@
+[Plugin]
+Name=drv_ps2mouse
+Caption=PS/2 Mouse Driver
+Description=Driver for PS/2 mouse devices. 
+Bitmap=drv_ps2mouse.bmp
+Implement=drv_ps2mouse
+SourceDir=platform\fpga\drivers\ps2\ps2mouse\src
+CompileOption0=-I"$(SSASROOT)\platform\fpga\peripherals\ps2\include"
+CompileOption1=-I"$(SSASROOT)\platform\fpga\drivers\ps2\internal"
+
+[Instance]
+Require0=drv_ps2

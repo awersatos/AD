@@ -1,0 +1,10 @@
+;*******************************************************************************
+; Altium IdCode Converter
+;
+; Add links in form shown below to specify how Id Codes in BSDL files should be
+; parsed when X (ie don't care) symbols have been used.  If no entry is given in
+; the table, all X values will be converted to 0.
+;
+; 000001001000000011000000100100XX=00000100100000001100000010010011
+;
+;*******************************************************************************

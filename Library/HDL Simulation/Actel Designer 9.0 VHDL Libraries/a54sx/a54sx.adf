@@ -1,0 +1,30 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=a54sx
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+a54sx=.
+
+[Library]
+a54sx=.\a54sx.LIB
+
+[Files]
+/update_a54sx.do=-1
+/54sx.vhd=-1
+
+[Files.Data]
+.\src\update_a54sx.do=Macro
+.\src\54sx.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

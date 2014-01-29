@@ -1,0 +1,68 @@
+[Plugin]
+Name=per_ioport
+Description=Configurable parallel port unit, with base address, data width, number of ports and type of port.
+Caption=General Purpose I/O Port
+SourceDir=platform\fpga\peripherals\ioport\src
+Implement=per_ioport
+HardwareID=WB_PRTIO
+Bitmap=per_ioport.bmp
+LargeBitmap=per_ioport_large.bmp
+Visible=True
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=BusWidth
+GUIName=Bus Data Width
+Description=Wishbone data bus width (in bits)
+Kind=ENUM
+Enum0=8
+Enum1=16
+Enum2=32
+EnumDescription0=8 bit data width
+EnumDescription1=16 bit data width
+EnumDescription2=32 bit data width
+DefaultValue=8
+Auto=True
+
+[Instance_Option2]
+Name=PortCount
+GUIName=Port Count
+Description=The number of ports in the IO Port
+Kind=UINT8
+MinRange=1
+MaxRange=50
+DefaultValue=1
+Auto=True
+
+[Instance_Option3]
+Name=Ports
+GUIName=Ports
+Description=The names of all of the ports on the component
+Kind=ARRAY
+Type=STRING
+NoGenerate=True
+Auto=True
+
+[Instance_CustomGeneration0]
+HeaderFile=ioport.h
+SourceFile=ioport.c
+GeneratorKind=CCC
+GeneratorId=WB_PRTIO
+
+

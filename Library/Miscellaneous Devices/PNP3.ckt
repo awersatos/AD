@@ -1,0 +1,11 @@
+*Default PNP Darlington Transistor pkg:TO-92B 1,2,3
+*PNP Trans Pinout: C,B,E
+.SUBCKT PNP3 1 2 3
+Q1 1 2 4 QMOD .1
+Q2 1 4 3 QMOD
+R1 2 4  10E3
+R2 4 3  100
+D1 1 3  DMOD
+.MODEL QMOD PNP ()
+.MODEL DMOD D ()
+.ENDS PNP3

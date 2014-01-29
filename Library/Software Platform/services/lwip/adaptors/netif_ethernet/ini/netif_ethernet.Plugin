@@ -1,0 +1,20 @@
+[Plugin]
+Name=netif_ethernet
+Description=Provides a Network Interface for the Ethernet Context to the Lightweight IP Service
+SourceDir=services\lwip\adaptors\netif_ethernet\src
+Implement=netif
+Require0=lwip
+CompileOption0=-I"$(SSASROOT)\services\lwip\adaptors\netif\include"
+CompileOption1=-I"$(SSASROOT)\services\lwip\adaptors\netif_ethernet\include"
+CompileOption2=-I"$(SSASROOT)\services\lwip\internal"
+InitHandler=netif_ethernet_init_adaptor
+InitHandlerPriority=8
+
+[Available_If0]
+kind=PLUGIN
+Object=ethernet
+Condition=EQ
+
+[Instance]
+Require0=ethernet
+

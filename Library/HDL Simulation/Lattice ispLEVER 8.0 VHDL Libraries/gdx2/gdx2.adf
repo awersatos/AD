@@ -1,0 +1,33 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=gdx2
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+gdx2=.
+
+[Library]
+gdx2=.\gdx2.LIB
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/gdx2.vhd=-1
+/gdx2_components.vhd=-1
+/update_gdx2.do=-1
+
+[Files.Data]
+.\src\gdx2.vhd=VHDL Source Code
+.\src\gdx2_components.vhd=VHDL Source Code
+.\src\update_gdx2.do=Macro
+

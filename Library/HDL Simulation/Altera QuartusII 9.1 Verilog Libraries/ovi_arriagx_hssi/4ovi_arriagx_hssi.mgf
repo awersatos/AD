@@ -1,0 +1,223 @@
+V 000058 56 134 1260919536538 arriagx_hssi_refclk_divider
+(_unit arriagx_hssi_refclk_divider
+	(_specify
+		(_modpath parallel unknown 0 467
+			(_port inclk in )
+			(_port clkout out )
+		)
+	)
+)
+V 000061 56 311 1260919536543 arriagx_hssi_cmu_clock_divider
+(_unit arriagx_hssi_cmu_clock_divider
+	(_specify
+		(_modpath parallel unknown 0 552
+			(_port clk in )
+			(_port coreclkout out )
+		)
+		(_modpath parallel unknown 0 553
+			(_port clk in )
+			(_port pclkx8out out )
+		)
+		(_modpath parallel unknown 0 554
+			(_port pclkin in )
+			(_port coreclkout out )
+		)
+	)
+)
+V 000051 56 125 1260919536548 arriagx_hssi_cmu_pll
+(_unit arriagx_hssi_cmu_pll
+	(_specify
+		(_modpath parallel unknown 0 716
+			(_port clk in )
+			(_port clkout out )
+		)
+	)
+)
+V 000067 56 416 1260919537112 arriagx_hssi_central_management_unit
+(_unit arriagx_hssi_central_management_unit
+	(_specify
+		(_tchk setuphold 0 60879
+			(_port dpclk (posedge))
+			(_port dprioin ())
+		)
+		(_modpath parallel positive 0 60881
+			(_port dpclk in posedge)
+			(_port dprioout out posedge)
+			(_datain dprioout_tim in posedge)
+		)
+		(_modpath parallel positive 0 60882
+			(_port dpclk in posedge)
+			(_port dpriooe out posedge)
+			(_datain dpriooe_tim in posedge)
+		)
+	)
+)
+V 000056 56 1205 1260919537117 arriagx_hssi_transmitter
+(_unit arriagx_hssi_transmitter
+	(_specify
+		(_tchk setuphold 0 62041
+			(_port coreclk (posedge))
+			(_port ctrlenable ())
+		)
+		(_tchk setuphold 0 62042
+			(_port coreclk (posedge))
+			(_port datain ())
+		)
+		(_tchk setuphold 0 62043
+			(_port coreclk (posedge))
+			(_port datainfull ())
+		)
+		(_tchk setuphold 0 62044
+			(_port coreclk (posedge))
+			(_port detectrxloop ())
+		)
+		(_tchk setuphold 0 62045
+			(_port coreclk (posedge))
+			(_port dispval ())
+		)
+		(_tchk setuphold 0 62046
+			(_port coreclk (posedge))
+			(_port forcedisp ())
+		)
+		(_tchk setuphold 0 62047
+			(_port coreclk (posedge))
+			(_port forcedispcompliance ())
+		)
+		(_tchk setuphold 0 62048
+			(_port coreclk (posedge))
+			(_port forceelecidle ())
+		)
+		(_tchk setuphold 0 62049
+			(_port coreclk (posedge))
+			(_port phfifowrenable ())
+		)
+		(_tchk setuphold 0 62050
+			(_port coreclk (posedge))
+			(_port powerdn ())
+		)
+		(_modpath parallel positive 0 62052
+			(_port coreclk in posedge)
+			(_port phfifooverflow out posedge)
+			(_datain td_out_full_tx in posedge)
+		)
+		(_modpath parallel positive 0 62053
+			(_port coreclk in posedge)
+			(_port phfifounderflow out posedge)
+			(_datain td_out_empty_tx in posedge)
+		)
+	)
+)
+V 000053 56 3387 1260919537143 arriagx_hssi_receiver
+(_unit arriagx_hssi_receiver
+	(_specify
+		(_modpath parallel positive 0 64794
+			(_port coreclk in posedge)
+			(_port a1a2sizeout out posedge)
+			(_datain a1a2sizeout_reg in posedge)
+		)
+		(_modpath parallel positive 0 64795
+			(_port coreclk in posedge)
+			(_port ctrldetect out posedge)
+			(_datain ctrldetect_reg in posedge)
+		)
+		(_modpath parallel positive 0 64796
+			(_port coreclk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_reg in posedge)
+		)
+		(_modpath parallel positive 0 64797
+			(_port coreclk in posedge)
+			(_port disperr out posedge)
+			(_datain disperr_reg in posedge)
+		)
+		(_modpath parallel positive 0 64798
+			(_port coreclk in posedge)
+			(_port errdetect out posedge)
+			(_datain errdetect_reg in posedge)
+		)
+		(_modpath parallel positive 0 64799
+			(_port coreclk in posedge)
+			(_port patterndetect out posedge)
+			(_datain patterndetect_reg in posedge)
+		)
+		(_modpath parallel positive 0 64800
+			(_port coreclk in posedge)
+			(_port rmfifodatadeleted out posedge)
+			(_datain rmfifodatadeleted_reg in posedge)
+		)
+		(_modpath parallel positive 0 64801
+			(_port coreclk in posedge)
+			(_port rmfifodatainserted out posedge)
+			(_datain rmfifodatainserted_reg in posedge)
+		)
+		(_modpath parallel positive 0 64802
+			(_port coreclk in posedge)
+			(_port runningdisp out posedge)
+			(_datain runningdisp_reg in posedge)
+		)
+		(_modpath parallel positive 0 64803
+			(_port coreclk in posedge)
+			(_port syncstatus out posedge)
+			(_datain syncstatus_reg in posedge)
+		)
+		(_modpath parallel positive 0 64805
+			(_port coreclk in posedge)
+			(_port pipebufferstat (_constant \0\) out posedge)
+			(_datain pi_out_rxd_ch (_constant \13\) in posedge)
+		)
+		(_modpath parallel positive 0 64806
+			(_port coreclk in posedge)
+			(_port pipebufferstat (_constant \1\) out posedge)
+			(_datain pi_out_rxd_ch (_constant \14\) in posedge)
+		)
+		(_modpath parallel positive 0 64807
+			(_port coreclk in posedge)
+			(_port pipebufferstat (_constant \2\) out posedge)
+			(_datain pi_out_rxd_ch (_constant \45\) in posedge)
+		)
+		(_modpath parallel positive 0 64808
+			(_port coreclk in posedge)
+			(_port pipebufferstat (_constant \3\) out posedge)
+			(_datain pi_out_rxd_ch (_constant \46\) in posedge)
+		)
+		(_modpath parallel positive 0 64809
+			(_port coreclk in posedge)
+			(_port byteorderalignstatus out posedge)
+			(_datain rd_out_byteord_flag in posedge)
+		)
+		(_modpath parallel positive 0 64810
+			(_port coreclk in posedge)
+			(_port phfifooverflow out posedge)
+			(_datain rd_out_full_rx in posedge)
+		)
+		(_modpath parallel positive 0 64811
+			(_port coreclk in posedge)
+			(_port phfifounderflow out posedge)
+			(_datain rd_out_empty_rx in posedge)
+		)
+		(_modpath parallel positive 0 64812
+			(_port coreclk in posedge)
+			(_port pipestatus out posedge)
+			(_datain pi_out_rxstatus in posedge)
+		)
+		(_modpath parallel positive 0 64813
+			(_port coreclk in posedge)
+			(_port pipephydonestatus out posedge)
+			(_datain pi_out_phystatus in posedge)
+		)
+		(_modpath parallel positive 0 64814
+			(_port coreclk in posedge)
+			(_port pipedatavalid out posedge)
+			(_datain pi_out_rxvalid in posedge)
+		)
+		(_modpath parallel positive 0 64817
+			(_port coreclk in posedge)
+			(_port dataoutfull out posedge)
+			(_datain pi_out_rxd_ch in posedge)
+		)
+		(_tchk setuphold 0 64819
+			(_port coreclk (posedge))
+			(_port phfifordenable ())
+		)
+	)
+)

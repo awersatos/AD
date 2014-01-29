@@ -1,0 +1,109 @@
+//============================================================
+# f273 source
+//74F273: Octal D Flip-Flops
+//dm 10-24-97: copied ls273 in LS.TXT
+//	changed SUPPLY_MIN_MAX, VIL_VIL_VALUE,
+//  iol, ioh, iil, iih, icc, rise, fall
+//  setup, hold, width and prop delays values.
+//dw 18-4-00: Modified MR so that it is active low
+//  as per the datasheet
+//============================================================
+INPUTS VCC, GND, nMR, CP, D7, D6, D5, D4, D3, D2, D1, D0;
+OUTPUTS VCC_LD, nMR_LD, CP_LD, D7_LD, D6_LD, D5_LD, D4_LD,
+        D3_LD, D2_LD, D1_LD, D0_LD, Q7, Q6, Q5, Q4, Q3, Q2,
+	    Q1, Q0;
+INTEGERS internal_reg, mr_chg, hi_outputs;
+REALS tt_val, tplh_val, tphl_val, tphl_MR_val, ts_val,
+      th_val, CP_twl, CP_twh, MR_tw, trec_val, ril_val, rih_val,
+	  ricc_val, riccl_val, ricch_val;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.5,5.5);	//check for min supply=4.5 and max supply=5.5
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.45,1.55);	//set input threshold values: vil and vih
+IO_PAIRS(nMR:nMR_LD, CP:CP_LD, D7:D7_LD, D6:D6_LD, D5:D5_LD,
+         D4:D4_LD, D3:D3_LD, D2:D2_LD, D1:D1_LD, D0:D0_LD);
+
+IF (init_sim) THEN
+  BEGIN
+//MESSAGE("time\tnMR\tCP\tD0\tD1\tD2\tD3\tD4\tD5\tD6\tD7\tQ0\tQ1\tQ2\tQ3\tQ4\tQ5\tQ6\tQ7");
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 2.5n,  NULL));
+
+    tplh_val= (MIN_TYP_MAX(tp_param: 4n, 7.5n, 9.5n));
+	tphl_val= (MIN_TYP_MAX(tp_param: 4n, 7.5n, 9.5n));
+
+	tphl_MR_val= (MIN_TYP_MAX(tp_param: 4n, 5.5n, 8.5n));
+
+	ts_val= (3n);
+	th_val= (5n);
+	CP_twh= (4n);
+	CP_twl= (5n);
+	MR_tw= (3.5n);
+	trec_val= (8.5n);
+
+    //F std output drive IOL max=20mA @ vol=0.5V: rol_param=(0.5-vol_param)/20mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 15,  NULL));
+
+    //F std output drive IOH max=-1mA @ voh=4.5V: roh_param=(voh_param-4.5)/1mA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 100, NULL));
+
+    //F input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+    ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //F input load IIL=-20uA @ 0.5V: rih= (voh_param-0.5)/20uA
+    rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 205k));
+
+    //Icch with output high: 76.9= 5V/65mA typical, 64.7= 5.5V/85mA max 
+    ricch_val= (MIN_TYP_MAX(i_param: NULL, 76.9, 64.7));
+
+    //Iccl with output low: 73.5= 5V/68mA typical, 62.5= 5.5V/88mA max 
+    riccl_val= (MIN_TYP_MAX(i_param: NULL, 73.5, 62.5));
+
+    internal_reg= (0);
+	STATE Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 = ZERO;	//initialize output
+	EXIT;
+  END;
+
+DRIVE Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 =
+  (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD nMR_LD CP_LD D7_LD D6_LD D5_LD D4_LD D3_LD D2_LD D1_LD D0_LD =
+  (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+
+IF (nMR) THEN
+  BEGIN
+    IF (CHANGED_LH(CP)) THEN
+	  BEGIN
+	    internal_reg= (NUMBER(D7 D6 D5 D4 D3 D2 D1 D0));
+	  END;
+  ELSE
+    internal_reg= (0);
+  END;
+
+STATE_BIT Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 = (internal_reg);
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d",
+//	   present_time,nMR,CP,D0,D1,D2,D3,D4,D5,D6,D7,Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7);
+hi_outputs= (Q0+Q1+Q2+Q3+Q4+Q5+Q6+Q7);
+ricc_val= (((hi_outputs*ricch_val)+((8-hi_outputs)*riccl_val))/8);
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,v1=pwr_param,r1=1e6,t=1p);
+
+IF (warn_param) THEN
+  BEGIN
+	WIDTH(nMR Twl=MR_tw Twh=MR_tw "MR");
+	IF (~(nMR)) THEN
+	  BEGIN
+	    WIDTH(CP Twl=CP_twl Twh=CP_twh "CP");
+		SETUP_HOLD(CP=LH D0 D1 D2 D3 D4 D5 D6 D7 Ts=ts_val Th=th_val "Dn->CP");
+	  END;
+	RECOVER(CP=LH nMR Trech=trec_val "CP->MR");
+  END;
+
+mr_chg= (CHANGED_HL(nMR));
+DELAY Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 =
+  CASE (mr_chg) : tphl_MR_val
+  CASE (TRAN_LH) : tplh_val
+  CASE (TRAN_HL) : tphl_val
+END;
+EXIT;

@@ -1,0 +1,8 @@
+[Interface]
+Name=usbhost_keyboard
+Category=SERVICE
+System=False
+Description=USB Host Keyboard Service
+PublicDir=services\usbhost\usbhost_keyboard\include
+
+

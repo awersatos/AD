@@ -1,0 +1,410 @@
+;...............................................................................
+;Constraints File
+;   Board   : NB2DSK01.07
+;   Created 21/06/2007
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+Record=Constraint | TargetKind=PCB         | TargetId=NB2DSK01.07 | Image=NB2DSK01.07
+;...............................................................................
+
+;...............................................................................
+; Declare PlugIn Boards
+;...............................................................................
+Record=Constraint | TargetKind=PlugIn    | TargetId=DB    | IdIndex=1 | ImageOffsetX=423 | ImageOffsetY=225 | ImageRotation=0
+Record=Constraint | TargetKind=PlugIn    | TargetId=EXT_A | IdIndex=2 | ImageOffsetX=17  | ImageOffsetY=254 | ImageRotation=0
+Record=Constraint | TargetKind=PlugIn    | TargetId=EXT_B | IdIndex=3 | ImageOffsetX=183 | ImageOffsetY=254 | ImageRotation=0
+Record=Constraint | TargetKind=PlugIn    | TargetId=EXT_C | IdIndex=4 | ImageOffsetX=323 | ImageOffsetY=223 | ImageRotation=180
+;...............................................................................
+
+;...............................................................................
+; Declare Connectors
+;...............................................................................
+Record=Constraint | TargetKind=Connector | TargetId=HDR_T  | PlugIn=DB | Index=0
+Record=Constraint | TargetKind=Connector | TargetId=HDR_B  | PlugIn=DB | Index=1
+Record=Constraint | TargetKind=Connector | TargetId=HDR_L  | PlugIn=DB | Index=2
+Record=Constraint | TargetKind=Connector | TargetId=EXT_A  | PlugIn=EXT_A
+Record=Constraint | TargetKind=Connector | TargetId=EXT_B  | PlugIn=EXT_B
+Record=Constraint | TargetKind=Connector | TargetId=EXT_C  | PlugIn=EXT_C
+Record=Constraint | TargetKind=Connector | TargetId=USER_A
+Record=Constraint | TargetKind=Connector | TargetId=USER_B
+;...............................................................................
+
+;...............................................................................
+; General Purpose I/O
+;...............................................................................
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-100 | ConnectTo=HDR_L-99
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-98  | ConnectTo=HDR_L-97
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-96  | ConnectTo=HDR_L-95
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-94  | ConnectTo=HDR_L-93
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-92  | ConnectTo=HDR_L-91
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-90  | ConnectTo=HDR_L-89
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-88  | ConnectTo=HDR_L-87
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-86  | ConnectTo=HDR_L-85
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-84  | ConnectTo=HDR_L-83
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-82  | ConnectTo=HDR_L-81
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-80  | ConnectTo=HDR_L-79
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-78  | ConnectTo=HDR_L-77
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-76  | ConnectTo=HDR_L-75
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-74  | ConnectTo=HDR_L-73
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-72  | ConnectTo=HDR_L-71
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-70  | ConnectTo=HDR_L-69
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-68  | ConnectTo=HDR_L-67
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-66  | ConnectTo=HDR_L-65
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-64  | ConnectTo=HDR_L-63
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-62  | ConnectTo=HDR_L-61
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-60  | ConnectTo=HDR_L-59
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-58  | ConnectTo=HDR_L-57
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-56  | ConnectTo=HDR_L-55
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-54  | ConnectTo=HDR_L-53
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-52  | ConnectTo=HDR_L-51
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-50  | ConnectTo=HDR_L-49
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-48  | ConnectTo=HDR_L-47
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-46  | ConnectTo=HDR_L-45
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-44  | ConnectTo=HDR_L-43
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-42  | ConnectTo=HDR_L-41
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-40  | ConnectTo=HDR_L-39
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-38  | ConnectTo=HDR_L-37
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-36  | ConnectTo=HDR_L-35
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-34  | ConnectTo=HDR_L-33
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-32  | ConnectTo=HDR_L-31
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-30  | ConnectTo=HDR_L-29
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-28  | ConnectTo=HDR_L-27
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-26  | ConnectTo=HDR_L-25
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-24  | ConnectTo=HDR_L-23
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-22  | ConnectTo=HDR_L-21
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-20  | ConnectTo=HDR_L-19
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-18  | ConnectTo=HDR_L-17
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-16  | ConnectTo=HDR_L-15
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-14  | ConnectTo=HDR_L-13
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-12  | ConnectTo=HDR_L-11
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-10  | ConnectTo=HDR_L-9
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-8   | ConnectTo=HDR_L-7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-6   | ConnectTo=HDR_L-5
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-4   | ConnectTo=HDR_L-3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_A-2   | ConnectTo=HDR_L-1
+
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-100 | ConnectTo=HDR_L-100
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-98  | ConnectTo=HDR_L-98
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-96  | ConnectTo=HDR_L-96
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-94  | ConnectTo=HDR_L-94
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-92  | ConnectTo=HDR_L-92
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-90  | ConnectTo=HDR_L-90
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-88  | ConnectTo=HDR_L-88
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-86  | ConnectTo=HDR_L-86
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-84  | ConnectTo=HDR_L-84
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-82  | ConnectTo=HDR_L-82
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-80  | ConnectTo=HDR_L-80
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-78  | ConnectTo=HDR_L-78
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-76  | ConnectTo=HDR_L-76
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-74  | ConnectTo=HDR_L-74
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-72  | ConnectTo=HDR_L-72
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-70  | ConnectTo=HDR_L-70
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-68  | ConnectTo=HDR_L-68
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-66  | ConnectTo=HDR_L-66
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-64  | ConnectTo=HDR_L-64
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-62  | ConnectTo=HDR_L-62
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-60  | ConnectTo=HDR_L-60
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-58  | ConnectTo=HDR_L-58
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-56  | ConnectTo=HDR_L-56
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-54  | ConnectTo=HDR_L-54
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-52  | ConnectTo=HDR_L-52
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-50  | ConnectTo=HDR_L-50
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-48  | ConnectTo=HDR_L-48
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-46  | ConnectTo=HDR_L-46
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-44  | ConnectTo=HDR_L-44
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-42  | ConnectTo=HDR_L-42
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-40  | ConnectTo=HDR_L-40
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-38  | ConnectTo=HDR_L-38
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-36  | ConnectTo=HDR_L-36
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-34  | ConnectTo=HDR_L-34
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-32  | ConnectTo=HDR_L-32
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-30  | ConnectTo=HDR_L-30
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-28  | ConnectTo=HDR_L-28
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-26  | ConnectTo=HDR_L-26
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-24  | ConnectTo=HDR_L-24
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-22  | ConnectTo=HDR_L-22
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-20  | ConnectTo=HDR_L-20
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-18  | ConnectTo=HDR_L-18
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-16  | ConnectTo=HDR_L-16
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-14  | ConnectTo=HDR_L-14
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-12  | ConnectTo=HDR_L-12
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-10  | ConnectTo=HDR_L-10
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-8   | ConnectTo=HDR_L-8
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-6   | ConnectTo=HDR_L-6
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-4   | ConnectTo=HDR_L-4
+Record=Constraint | TargetKind=Connection | TargetId=EXT_B-2   | ConnectTo=HDR_L-2
+
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-100 | ConnectTo=HDR_T-2
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-98  | ConnectTo=HDR_T-4
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-96  | ConnectTo=HDR_T-3
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-94  | ConnectTo=HDR_T-6
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-92  | ConnectTo=HDR_T-5
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-90  | ConnectTo=HDR_T-8
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-88  | ConnectTo=HDR_T-7
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-86  | ConnectTo=HDR_T-10
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-84  | ConnectTo=HDR_T-9
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-82  | ConnectTo=HDR_T-12
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-80  | ConnectTo=HDR_T-11
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-78  | ConnectTo=HDR_T-13
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-76  | ConnectTo=HDR_T-15
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-74  | ConnectTo=HDR_T-17
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-72  | ConnectTo=HDR_T-19
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-70  | ConnectTo=HDR_T-21
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-68  | ConnectTo=HDR_T-23
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-66  | ConnectTo=HDR_T-25
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-64  | ConnectTo=HDR_T-27
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-62  | ConnectTo=HDR_T-29
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-60  | ConnectTo=HDR_T-31
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-58  | ConnectTo=HDR_T-33
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-56  | ConnectTo=HDR_T-35
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-54  | ConnectTo=HDR_T-37
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-52  | ConnectTo=HDR_T-39
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-50  | ConnectTo=HDR_T-41
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-48  | ConnectTo=HDR_T-43
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-46  | ConnectTo=HDR_T-45
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-44  | ConnectTo=HDR_T-47
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-42  | ConnectTo=HDR_T-49
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-40  | ConnectTo=HDR_T-51
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-38  | ConnectTo=HDR_T-53
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-36  | ConnectTo=HDR_T-55
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-34  | ConnectTo=HDR_T-57
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-32  | ConnectTo=HDR_T-59
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-30  | ConnectTo=HDR_T-61
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-28  | ConnectTo=HDR_T-63
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-26  | ConnectTo=HDR_T-65
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-24  | ConnectTo=HDR_T-67
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-22  | ConnectTo=HDR_T-69
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-20  | ConnectTo=HDR_T-71
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-18  | ConnectTo=HDR_T-73
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-16  | ConnectTo=HDR_T-75
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-14  | ConnectTo=HDR_T-77
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-12  | ConnectTo=HDR_T-79
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-10  | ConnectTo=HDR_T-81
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-8   | ConnectTo=HDR_T-83
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-6   | ConnectTo=HDR_T-85
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-4   | ConnectTo=HDR_T-87
+Record=Constraint | TargetKind=Connection | TargetId=EXT_C-2   | ConnectTo=HDR_T-89
+
+;-------------------------------------------------------------------------------
+; PS/2 Connectors
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=MOUSEDATA    | ConnectTo=HDR_T-32    | TargetIdAlias=PS2A_DATA
+Record=Constraint | TargetKind=Port | TargetId=MOUSECLOCK   | ConnectTo=HDR_T-30    | TargetIdAlias=PS2A_CLK
+Record=Constraint | TargetKind=Port | TargetId=KBDATA       | ConnectTo=HDR_T-28    | TargetIdAlias=PS2B_DATA
+Record=Constraint | TargetKind=Port | TargetId=KBCLOCK      | ConnectTo=HDR_T-26    | TargetIdAlias=PS2B_CLK
+
+;-------------------------------------------------------------------------------
+; RS-232 Connector
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=RS232_TX     | ConnectTo=HDR_T-20    | TargetIdAlias=RS_TX
+Record=Constraint | TargetKind=Port | TargetId=RS232_RX     | ConnectTo=HDR_T-24    | TargetIdAlias=RS_RX
+Record=Constraint | TargetKind=Port | TargetId=RS232_RTS    | ConnectTo=HDR_T-18    | TargetIdAlias=RS_RTS
+Record=Constraint | TargetKind=Port | TargetId=RS232_CTS    | ConnectTo=HDR_T-22    | TargetIdAlias=RS_CTS
+
+;-------------------------------------------------------------------------------
+; Access to Motherboard SPI Chain
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=DAU_SPI_MODE | ConnectTo=HDR_T-52    | TargetIdAlias=SPI_MODE
+Record=Constraint | TargetKind=Port | TargetId=DAU_SPI_SEL  | ConnectTo=HDR_T-48    | TargetIdAlias=SPI_SEL
+Record=Constraint | TargetKind=Port | TargetId=DAU_SPI_CLK  | ConnectTo=HDR_T-46    | TargetIdAlias=SPI_CLK
+Record=Constraint | TargetKind=Port | TargetId=DAU_SPI_DOUT | ConnectTo=HDR_T-44    | TargetIdAlias=SPI_DOUT
+Record=Constraint | TargetKind=Port | TargetId=DAU_SPI_DIN  | ConnectTo=HDR_T-50    | TargetIdAlias=SPI_DIN
+
+;-------------------------------------------------------------------------------
+; Motherboard I2C Bus
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=SCL          | ConnectTo=HDR_B-5
+Record=Constraint | TargetKind=Port | TargetId=SDA          | ConnectTo=HDR_B-3
+
+;-------------------------------------------------------------------------------
+; Push-button PDA-Style Switches
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=SW_USER0     | ConnectTo=HDR_B-42
+Record=Constraint | TargetKind=Port | TargetId=SW_USER1     | ConnectTo=HDR_B-44
+Record=Constraint | TargetKind=Port | TargetId=SW_USER2     | ConnectTo=HDR_B-46
+Record=Constraint | TargetKind=Port | TargetId=SW_USER3     | ConnectTo=HDR_B-48
+Record=Constraint | TargetKind=Port | TargetId=SW_USER4     | ConnectTo=HDR_B-50
+;Record=Constraint | TargetKind=Port | TargetId=SW_USER[4..0] | ConnectTo=HDR_B-50, HDR_B-48, HDR_B-46, HDR_B-46, HDR_B-44, HDR_B-42
+
+;-------------------------------------------------------------------------------
+; User LEDS
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=USER_LED0    | ConnectTo=HDR_B-6    | TargetIdAlias=LEDS0
+Record=Constraint | TargetKind=Port | TargetId=USER_LED1    | ConnectTo=HDR_B-8    | TargetIdAlias=LEDS1
+Record=Constraint | TargetKind=Port | TargetId=USER_LED2    | ConnectTo=HDR_B-10   | TargetIdAlias=LEDS2
+Record=Constraint | TargetKind=Port | TargetId=USER_LED3    | ConnectTo=HDR_B-12   | TargetIdAlias=LEDS3
+Record=Constraint | TargetKind=Port | TargetId=USER_LED4    | ConnectTo=HDR_B-14   | TargetIdAlias=LEDS4
+Record=Constraint | TargetKind=Port | TargetId=USER_LED5    | ConnectTo=HDR_B-16   | TargetIdAlias=LEDS5
+Record=Constraint | TargetKind=Port | TargetId=USER_LED6    | ConnectTo=HDR_B-18   | TargetIdAlias=LEDS6
+Record=Constraint | TargetKind=Port | TargetId=USER_LED7    | ConnectTo=HDR_B-20   | TargetIdAlias=LEDS7
+;Record=Constraint | TargetKind=Port | TargetId=USER_LED[7..0] | ConnectTo=HDR_B-20, HDR_B-18, HDR_B-16, HDR_B-14, HDR_B-12, HDR_B-10, HDR_B-8, HDR_B-6
+
+;-------------------------------------------------------------------------------
+; User DIPS
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=SW0          | ConnectTo=HDR_B-22
+Record=Constraint | TargetKind=Port | TargetId=SW1          | ConnectTo=HDR_B-24
+Record=Constraint | TargetKind=Port | TargetId=SW2          | ConnectTo=HDR_B-26
+Record=Constraint | TargetKind=Port | TargetId=SW3          | ConnectTo=HDR_B-28
+Record=Constraint | TargetKind=Port | TargetId=SW4          | ConnectTo=HDR_B-30
+Record=Constraint | TargetKind=Port | TargetId=SW5          | ConnectTo=HDR_B-32
+Record=Constraint | TargetKind=Port | TargetId=SW6          | ConnectTo=HDR_B-34
+Record=Constraint | TargetKind=Port | TargetId=SW7          | ConnectTo=HDR_B-36
+;Record=Constraint | TargetKind=Port | TargetId=SW[7..0] | ConnectTo=HDR_B-36,HDR_B-34,HDR_B-32,HDR_B-30,HDR_B-28,HDR_B-26,HDR_B-24,HDR_B-22
+
+;-------------------------------------------------------------------------------
+; Soft JTAG Chain
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=JTAG_NEXUS_TCK
+Record=Constraint | TargetKind=Port | TargetId=NEXUS_TDO    | ConnectTo=HDR_T-76    | TargetIdAlias=JTAG_NEXUS_TDO
+Record=Constraint | TargetKind=Port | TargetId=NEXUS_TMS    | ConnectTo=HDR_T-80    | TargetIdAlias=JTAG_NEXUS_TMS
+Record=Constraint | TargetKind=Port | TargetId=NEXUS_TCK    | ConnectTo=HDR_T-82    | TargetIdAlias=JTAG_NEXUS_TCK
+Record=Constraint | TargetKind=Port | TargetId=NEXUS_TDI    | ConnectTo=HDR_T-84    | TargetIdAlias=JTAG_NEXUS_TDI
+
+;-------------------------------------------------------------------------------
+; System Clocks - AUX1 is DB SDRAM Clock
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=REF_CLK      | ConnectTo=HDR_B-4     | TargetIdAlias=CLK_REF
+Record=Constraint | TargetKind=Port | TargetId=FPGA_CLK     | ConnectTo=HDR_B-2     | TargetIdAlias=CLK_BRD
+Record=Constraint | TargetKind=Port | TargetId=FPGA_CLK1    | ConnectTo=HDR_T-90    | TargetIdAlias=BUS_SDRAM_CLK_IN
+
+;-------------------------------------------------------------------------------
+; User Headers
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=IO0          | ConnectTo=HDR_B-7     | TargetIdAlias=HA2
+Record=Constraint | TargetKind=Port | TargetId=IO1          | ConnectTo=HDR_B-9     | TargetIdAlias=HA3
+Record=Constraint | TargetKind=Port | TargetId=IO2          | ConnectTo=HDR_B-11    | TargetIdAlias=HA4
+Record=Constraint | TargetKind=Port | TargetId=IO3          | ConnectTo=HDR_B-13    | TargetIdAlias=HA5
+Record=Constraint | TargetKind=Port | TargetId=IO4          | ConnectTo=HDR_B-15    | TargetIdAlias=HA6
+Record=Constraint | TargetKind=Port | TargetId=IO5          | ConnectTo=HDR_B-17    | TargetIdAlias=HA7
+Record=Constraint | TargetKind=Port | TargetId=IO6          | ConnectTo=HDR_B-19    | TargetIdAlias=HA8
+Record=Constraint | TargetKind=Port | TargetId=IO7          | ConnectTo=HDR_B-21    | TargetIdAlias=HA9
+Record=Constraint | TargetKind=Port | TargetId=IO8          | ConnectTo=HDR_B-23    | TargetIdAlias=HA10
+Record=Constraint | TargetKind=Port | TargetId=IO9          | ConnectTo=HDR_B-25    | TargetIdAlias=HA11
+Record=Constraint | TargetKind=Port | TargetId=IO10         | ConnectTo=HDR_B-27    | TargetIdAlias=HA12
+Record=Constraint | TargetKind=Port | TargetId=IO11         | ConnectTo=HDR_B-29    | TargetIdAlias=HA13
+Record=Constraint | TargetKind=Port | TargetId=IO12         | ConnectTo=HDR_B-31    | TargetIdAlias=HA14
+Record=Constraint | TargetKind=Port | TargetId=IO13         | ConnectTo=HDR_B-33    | TargetIdAlias=HA15
+Record=Constraint | TargetKind=Port | TargetId=IO14         | ConnectTo=HDR_B-35    | TargetIdAlias=HA16
+Record=Constraint | TargetKind=Port | TargetId=IO15         | ConnectTo=HDR_B-37    | TargetIdAlias=HA17
+Record=Constraint | TargetKind=Port | TargetId=IO16         | ConnectTo=HDR_B-39    | TargetIdAlias=HA18
+Record=Constraint | TargetKind=Port | TargetId=IO17         | ConnectTo=HDR_B-41    | TargetIdAlias=HA19
+;Record=Constraint | TargetKind=Port | TargetId=HA[19..2] | ConnectTo=HDR_B-41,HDR_B-39,HDR_B-37,HDR_B-35,HDR_B-33,HDR_B-31,HDR_B-29,HDR_B-27,HDR_B-25,HDR_B-23,HDR_B-21,HDR_B-19,HDR_B-17,HDR_B-15,HDR_B-13,HDR_B-11,HDR_B-9,HDR_B-7
+
+Record=Constraint | TargetKind=Port | TargetId=IO18         | ConnectTo=HDR_B-43    | TargetIdAlias=HB2
+Record=Constraint | TargetKind=Port | TargetId=IO19         | ConnectTo=HDR_B-45    | TargetIdAlias=HB3
+Record=Constraint | TargetKind=Port | TargetId=IO20         | ConnectTo=HDR_B-47    | TargetIdAlias=HB4
+Record=Constraint | TargetKind=Port | TargetId=IO21         | ConnectTo=HDR_B-49    | TargetIdAlias=HB5
+Record=Constraint | TargetKind=Port | TargetId=IO22         | ConnectTo=HDR_B-51    | TargetIdAlias=HB6
+Record=Constraint | TargetKind=Port | TargetId=IO23         | ConnectTo=HDR_B-53    | TargetIdAlias=HB7
+Record=Constraint | TargetKind=Port | TargetId=IO24         | ConnectTo=HDR_B-55    | TargetIdAlias=HB8
+Record=Constraint | TargetKind=Port | TargetId=IO25         | ConnectTo=HDR_B-57    | TargetIdAlias=HB9
+Record=Constraint | TargetKind=Port | TargetId=IO26         | ConnectTo=HDR_B-59    | TargetIdAlias=HB10
+Record=Constraint | TargetKind=Port | TargetId=IO27         | ConnectTo=HDR_B-61    | TargetIdAlias=HB11
+Record=Constraint | TargetKind=Port | TargetId=IO28         | ConnectTo=HDR_B-63    | TargetIdAlias=HB12
+Record=Constraint | TargetKind=Port | TargetId=IO29         | ConnectTo=HDR_B-65    | TargetIdAlias=HB13
+Record=Constraint | TargetKind=Port | TargetId=IO30         | ConnectTo=HDR_B-67    | TargetIdAlias=HB14
+Record=Constraint | TargetKind=Port | TargetId=IO31         | ConnectTo=HDR_B-69    | TargetIdAlias=HB15
+Record=Constraint | TargetKind=Port | TargetId=IO32         | ConnectTo=HDR_B-71    | TargetIdAlias=HB16
+Record=Constraint | TargetKind=Port | TargetId=IO33         | ConnectTo=HDR_B-73    | TargetIdAlias=HB17
+Record=Constraint | TargetKind=Port | TargetId=IO34         | ConnectTo=HDR_B-75    | TargetIdAlias=HB18
+Record=Constraint | TargetKind=Port | TargetId=IO35         | ConnectTo=HDR_B-77    | TargetIdAlias=HB19
+;Record=Constraint | TargetKind=Port | TargetId=HB[19..0] | ConnectTo=HDR_B-77,HDR_B-75,HDR_B-73,HDR_B-71,HDR_B-69,HDR_B-67,HDR_B-65,HDR_B-63,HDR_B-61,HDR_B-59,HDR_B-57,HDR_B-55,HDR_B-53,HDR_B-51,HDR_B-49,HDR_B-47,HDR_B-45,HDR_B-43
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-7     | ConnectTo=USER_A-2
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-9     | ConnectTo=USER_A-3
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-11    | ConnectTo=USER_A-4
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-13    | ConnectTo=USER_A-5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-15    | ConnectTo=USER_A-6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-17    | ConnectTo=USER_A-7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-19    | ConnectTo=USER_A-8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-21    | ConnectTo=USER_A-9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-23    | ConnectTo=USER_A-10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-25    | ConnectTo=USER_A-11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-27    | ConnectTo=USER_A-12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-29    | ConnectTo=USER_A-13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-31    | ConnectTo=USER_A-14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-33    | ConnectTo=USER_A-15
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-35    | ConnectTo=USER_A-16
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-37    | ConnectTo=USER_A-17
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-39    | ConnectTo=USER_A-18
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-41    | ConnectTo=USER_A-19
+
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-43    | ConnectoTo=USER_B-2
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-45    | ConnectoTo=USER_B-3
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-47    | ConnectoTo=USER_B-4
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-49    | ConnectoTo=USER_B-5
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-51    | ConnectoTo=USER_B-6
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-53    | ConnectoTo=USER_B-7
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-55    | ConnectoTo=USER_B-8
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-57    | ConnectoTo=USER_B-9
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-59    | ConnectoTo=USER_B-10
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-61    | ConnectoTo=USER_B-11
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-63    | ConnectoTo=USER_B-12
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-65    | ConnectoTo=USER_B-13
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-67    | ConnectoTo=USER_B-14
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-69    | ConnectoTo=USER_B-15
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-71    | ConnectoTo=USER_B-16
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-73    | ConnectoTo=USER_B-17
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-75    | ConnectoTo=USER_B-18
+Record=Constraint | TargetKind=Connection | TargetId=HDR_B-77    | ConnectoTo=USER_B-19
+
+;-------------------------------------------------------------------------------
+; Reset Button
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=DAU_RESET_SW | ConnectTo=HDR_B-38    | TargetIdAlias=TEST_BUTTON
+
+;-------------------------------------------------------------------------------
+; CAN interface
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=CAN_TXD      | ConnectTo=HDR_T-16
+Record=Constraint | TargetKind=Port | TargetId=CAN_RXD      | ConnectTo=HDR_T-14
+;-------------------------------------------------------------------------------
+; Buzzer
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=BUZZER       | ConnectTo=HDR_B-40    | TargetIdAlias=SPEAKER
+
+;-------------------------------------------------------------------------------
+; TFT and TouchScreen interface
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_IRQ      | ConnectTo=HDR_B-81
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_BLIGHT   | ConnectTo=HDR_B-91
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_DISP_ON  | ConnectTo=HDR_B-89
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_STH      | ConnectTo=HDR_B-86
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_STV      | ConnectTo=HDR_B-84
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_POL      | ConnectTo=HDR_B-83
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_M        | ConnectTo=HDR_B-87
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_MUX      | ConnectTo=HDR_B-85
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_BLUE0    | ConnectTo=HDR_B-62
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_BLUE1    | ConnectTo=HDR_B-64
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_BLUE2    | ConnectTo=HDR_B-66
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_BLUE3    | ConnectTo=HDR_B-68
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_BLUE4    | ConnectTo=HDR_B-70
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_GREEN0   | ConnectTo=HDR_B-72
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_GREEN1   | ConnectTo=HDR_B-74
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_GREEN2   | ConnectTo=HDR_B-76
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_GREEN3   | ConnectTo=HDR_B-78
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_GREEN4   | ConnectTo=HDR_B-80
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_GREEN5   | ConnectTo=HDR_B-82
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_RED0     | ConnectTo=HDR_B-52
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_RED1     | ConnectTo=HDR_B-54
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_RED2     | ConnectTo=HDR_B-56
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_RED3     | ConnectTo=HDR_B-58
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_RED4     | ConnectTo=HDR_B-60
+
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_CL1      | ConnectTo=HDR_B-88
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_CL2      | ConnectTo=HDR_B-90
+Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_CL3      | ConnectTo=HDR_B-92
+;Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_CL[3..1] | ConnectTo=HDR_B-92,HDR_B-90,HDR_B-88
+;Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_BLUE[4..0] | ConnectTo=HDR_B-70,HDR_B-68,HDR_B-66,HDR_B-64,HDR_B-62
+;Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_GREEN[5..0] | ConnectTo=HDR_B-82,HDR_B-80,HDR_B-78,HDR_B-76,HDR_B-74,HDR_B-72
+;Record=Constraint | TargetKind=Port | TargetId=DAU_TFT_RED[4..0] | ConnectTo=HDR_B-60,HDR_B-58,HDR_B-56,HDR_B-54,HDR_B-52
+
+;-------------------------------------------------------------------------------
+; One Wire
+;-------------------------------------------------------------------------------
+Record=Constraint | TargetKind=Port | TargetId=ONE_WIRE | ConnectTo=HDR_B-79
+

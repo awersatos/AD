@@ -1,0 +1,500 @@
+timestamp=0
+
+[alt_bidir_buf]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1637|1*28758
+B/behavior=3*53314
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*76637
+I/behavior=I/BEHAVIOR 0*77327
+M=11|0|v63|0|./src/altera_primitives.vhd|0*75905*0x6fa760799d6785a5bacb4c3e2071952e056698b9|0*76561*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*76799*0x58c1e86a1b5dcd7915db66071e6a037246280ab6|0*77239*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1619
+
+[alt_bidir_diff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1584|1*27817
+B/behavior=3*52094
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*74551
+I/behavior=I/BEHAVIOR 0*75395
+M=11|0|v63|0|./src/altera_primitives.vhd|0*73791*0xf101d7a87f08ee74848e618e208d59e9b2e3a2f0|0*74474*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*74714*0x732e15f93be171f7456a962ee288c7c5fb09831e|0*75306*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1565
+
+[alt_inbuf]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1334|1*21169
+B/behavior=3*46941
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*60981
+I/behavior=I/BEHAVIOR 0*61375
+M=11|0|v63|0|./src/altera_primitives.vhd|0*60487*0x35da7892acb8397be9f91f1cced9e17c0f22d490|0*60909*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*61139*0x75c85a6925098b5925313a0c8ef3cd084fd4acc1|0*61291*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1322
+
+[alt_inbuf_diff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1437|1*24373
+B/behavior=3*48577
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*67239
+I/behavior=I/BEHAVIOR 0*67914
+M=11|0|v63|0|./src/altera_primitives.vhd|0*66698*0x0484bd18f9ecc6dc305d6a5b20f85bb39bcc23e2|0*67162*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*67402*0x82bacf20340b69c97468fb54faee494bdec07a93|0*67825*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1424
+
+[alt_iobuf]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1409|1*23512
+B/behavior=3*48054
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*65778
+I/behavior=I/BEHAVIOR 0*66240
+M=11|0|v63|0|./src/altera_primitives.vhd|0*65016*0xd6b3e4abec31b634e1f35362f35db3b273df73ed|0*65706*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*65936*0xdb39005551893492e8dc27ea3677e9e77de3636b|0*66156*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1389
+
+[alt_iobuf_diff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1531|1*26860
+B/behavior=3*50934
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*72488
+I/behavior=I/BEHAVIOR 0*73280
+M=11|0|v63|0|./src/altera_primitives.vhd|0*71715*0x806e1de72a1941a6675ca84d079f678877d09153|0*72411*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*72651*0xa83ef21f8add4f483b79b8dfa1683e9f4c162503|0*73191*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1511
+
+[alt_outbuf]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1357|1*21886
+B/behavior=3*47284
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*62507
+I/behavior=I/BEHAVIOR 0*62905
+M=11|0|v63|0|./src/altera_primitives.vhd|0*61861*0xff5fef3cbeeaf4d250f56058851d6539ddb0eec4|0*62434*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*62666*0x5cb9dd61854d51de339683b787ba234161a2a249|0*62820*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1341
+
+[alt_outbuf_diff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1474|1*25202
+B/behavior=3*49244
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*69066
+I/behavior=I/BEHAVIOR 0*69499
+M=11|0|v63|0|./src/altera_primitives.vhd|0*68410*0x144190fdea309549c90938c7020617cadd7649e8|0*68988*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*69230*0x453940279a70a2558b8686f14d41d46dbc87cab1|0*69409*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1458
+
+[alt_outbuf_tri]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1381|1*22699
+B/behavior=3*47627
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*64082
+I/behavior=I/BEHAVIOR 0*64510
+M=11|0|v63|0|./src/altera_primitives.vhd|0*63396*0x8eb3f01aa24486e7c6d253d8f094944dad70c2b3|0*64005*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*64245*0xd3a12082b22c2b5b73cea6e8e709b619d92ffed0|0*64421*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1364
+
+[alt_outbuf_tri_diff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|1499|1*26031
+B/behavior=3*49987
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*70696
+I/behavior=I/BEHAVIOR 0*71199
+M=11|0|v63|0|./src/altera_primitives.vhd|0*70000*0xfefaecd4b1b749b3bf32b0a03388c7910b0102b7|0*70614*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*70864*0x2cb2c316421b79724400378ea1329d51b66b8cba|0*71105*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1482
+
+[altera_europa_support_lib]
+B/altera_europa_support_lib=3*54077
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*29619
+I=0*81280
+I/altera_europa_support_lib=0*92227
+M=3|0|v63|0|./src/altera_europa_support_lib.vhd|0*78404*0x5d270f8db7632afa80818ac683a14c3412c58a1e|0*81184*0xf2538cdc6f7b23a146389216c886e772
+M/altera_europa_support_lib=4|0|v63|0|./src/altera_europa_support_lib.vhd|0*81534*0x3d8927f6243a3412c3db26480dc077a14159c9da|0*92103*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_europa_support_lib.vhd|24
+
+[altera_primitives_components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*592
+I=0*10900
+M=3|0|v63|0|./src/altera_primitives_components.vhd|0*1997*0x877eb4f15d4da42a90b84a796d037c6a3c5fe3de|0*10798*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives_components.vhd|46
+
+[carry]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|35|1*2190
+B/behavior=3*343
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*12575
+I/behavior=I/BEHAVIOR 0*12958
+M=11|0|v63|0|./src/altera_primitives.vhd|0*12314*0x8dcd4d3b61e231c7df03d80b5f574b59dccf0cb0|0*12507*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*12729*0x79b8473c46d8026af73e5cf0449967a7a098fba6|0*12878*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|30
+
+[carry_sum]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|61|1*3208
+B/behavior=3*1029
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*14626
+I/behavior=I/BEHAVIOR 0*15039
+M=11|0|v63|0|./src/altera_primitives.vhd|0*14308*0xd7849abb4ae4e2da5d1ca39e0a01fe0c6e2755b8|0*14554*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*14784*0x0d77c941aedcd072291fe69c151c80e66d5cd3ed|0*14955*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|54
+
+[cascade]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|47|1*2699
+B/behavior=3*686
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*13562
+I/behavior=I/BEHAVIOR 0*13953
+M=11|0|v63|0|./src/altera_primitives.vhd|0*13293*0x04afbc60a898fecded617b7055c3b075e89bc4ea|0*13492*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*13718*0xe35613de9192c77eb69e8cbdba9c4690fa2294dd|0*13871*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|42
+
+[clklock]
+A/behavior=21|./src/altera_primitives.vhd|1040|1*19652
+B/behavior=3*33708
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*53049
+I/behavior=0*60052
+M=11|0|v63|0|./src/altera_primitives.vhd|0*52702*0x018037a51a9a3e8ce141adb005f5cf710f628fdf|0*52979*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=21|0|v63|0|./src/altera_primitives.vhd|0*53205*0x75b96eb5db17a9c3166b2c92a5b8416b76d3bf79|0*59970*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|1026
+
+[dff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|268|1*9015
+B/behavior=3*8112
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*26586
+I/behavior=I/BEHAVIOR 0*27406
+M=11|0|v63|0|./src/altera_primitives.vhd|0*26297*0xd027c4bee35b1c9421b4ece110e923aef2a17054|0*26520*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*26738*0xf81a5eb9acb6bca3d8fef0cd1ae9a6c2a56771fc|0*27328*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|262
+
+[dffe]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|312|1*9780
+B/behavior=3*9035
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*28099
+I/behavior=I/BEHAVIOR 0*28891
+M=11|0|v63|0|./src/altera_primitives.vhd|0*27800*0xf9860613cac5889b668b71e900d57d9d937f25db|0*28032*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*28252*0xb43b639666ca3208796e78eb9bd714302d37ca5a|0*28812*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|306
+
+[dffea]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|355|1*10529
+B/behavior=3*9958
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*29622
+I/behavior=I/BEHAVIOR 0*30412
+M=11|0|v63|0|./src/altera_primitives.vhd|0*29303*0xe1fc1e0a55ab009881d6d105b5341d954fd3752f|0*29554*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*29776*0x6c870309d160ee684c64915dbc0fc922d431cf2d|0*30332*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|349
+
+[dffeas]
+A/vital_dffeas=21|./src/altera_primitives.vhd|450|1*11294
+B/vital_dffeas=3*10881
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_dffeas=8.2.1986.SP1.35.3497  (Windows)
+I=0*33624
+I/vital_dffeas=0*39889
+M=11|0|v63|0|./src/altera_primitives.vhd|0*31178*0xb67dee0eac0e6af7c70c810b1139c60fcb79e094|0*33555*0xf2538cdc6f7b23a146389216c886e772
+M/vital_dffeas=21|0|v63|0|./src/altera_primitives.vhd|0*33891*0x89e156921971810c930a29da29316a1f6d038f46|0*39804*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|394
+
+[dffeas_pack]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*1133
+M=3|0|v63|0|./src/altera_primitives_components.vhd|0*382*0x347509b280847411b37a54fbf5a47196f381bc2f|0*1048*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives_components.vhd|25
+
+[dlatch]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|192|1*7773
+B/behavior=3*5493
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*23829
+I/behavior=I/BEHAVIOR 0*24348
+M=11|0|v63|0|./src/altera_primitives.vhd|0*23507*0x00a31516f873396477e447844c19354b196fa344|0*23760*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*23984*0x19b23e02577b65bda8bc8c085141e52e9117c4aa|0*24267*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|184
+
+[exp]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|74|1*3749
+B/behavior=3*1664
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*15627
+I/behavior=I/BEHAVIOR 0*16003
+M=11|0|v63|0|./src/altera_primitives.vhd|0*15374*0xa976f7c698e263c5e0cef9e26f96cd2d3f7f1151|0*15561*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*15779*0xa156f2bde264b8cba4c3c9b58f4a163cde4786eb|0*15925*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|69
+
+[global]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|23|1*1681
+B/behavior=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*11593
+I/behavior=I/BEHAVIOR 0*11980
+M=11|0|v63|0|./src/altera_primitives.vhd|0*11328*0x4db820c4d2ed935c431672241586105b69d1e8fc|0*11524*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*11748*0x206f9b58f561d034b7bb8ab4405b0456a6f0ae45|0*11899*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|18
+
+[jkff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|837|1*16163
+B/behavior=3*28648
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*46020
+I/behavior=I/BEHAVIOR 0*46726
+M=11|0|v63|0|./src/altera_primitives.vhd|0*45722*0x764a495ea0c956e44ddf1c2ae4696f89aaaf4b38|0*45953*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*46173*0xe68075e6f5ed3e50489dfbf7041830c372d8e44a|0*46647*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|831
+
+[jkffe]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|877|1*16896
+B/behavior=3*29571
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*47430
+I/behavior=I/BEHAVIOR 0*48108
+M=11|0|v63|0|./src/altera_primitives.vhd|0*47122*0xfbcc448ef17a8180f543db4148da797e8917d89e|0*47362*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*47584*0x78c63596c269913b84195adaa80608bb2e735438|0*48028*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|871
+
+[latch]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|170|1*7216
+B/behavior=3*4377
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*22704
+I/behavior=I/BEHAVIOR 0*23157
+M=11|0|v63|0|./src/altera_primitives.vhd|0*22429*0x54401780c36ab9fab11a846d3bba145e007a2692|0*22636*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*22858*0x407e119b860bfe31d01d53827c01ca7286c95ddb|0*23077*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|164
+
+[lut_input]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|145|1*6198
+B/behavior=3*3691
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*20666
+I/behavior=I/BEHAVIOR 0*21065
+M=11|0|v63|0|./src/altera_primitives.vhd|0*20389*0xa64c4e242f5b3e107b1f1568adcb410da63593e9|0*20594*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*20824*0x3de35f53cb0f4e524858fc363e3fb84bb6086e36|0*20981*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|140
+
+[lut_output]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|157|1*6707
+B/behavior=3*4034
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*21688
+I/behavior=I/BEHAVIOR 0*22091
+M=11|0|v63|0|./src/altera_primitives.vhd|0*21407*0xbd77f68e64c6aac910f49bc6433f2ba99b545a10|0*21615*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*21847*0x24b35f5a167e8c3e8522588c7294d1d6fec92b6b|0*22006*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|152
+
+[opndrn]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|98|1*4719
+B/behavior=3*2494
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*17567
+I/behavior=I/BEHAVIOR 0*18034
+M=11|0|v63|0|./src/altera_primitives.vhd|0*17302*0xdf936f36c47d060a12168c3b4d01d71db47cb52b|0*17498*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*17722*0x5ce0ab895b05fa96e9adad8f02382dfe78145d92|0*17953*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|93
+
+[prim_gdff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|216|1*8346
+B/behavior=3*6332
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*25055
+I/behavior=I/BEHAVIOR 0*25946
+M=11|0|v63|0|./src/altera_primitives.vhd|0*24734*0x4d2f4cba339d2bf93becb030ad7c64c648beec2a|0*24983*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*25213*0x7cdd15b3468385b45402b6c97b0a605ddc9aea77|0*25862*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|210
+
+[prim_gjkff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|799|1*15558
+B/behavior=3*27280
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*44683
+I/behavior=I/BEHAVIOR 0*45369
+M=11|0|v63|0|./src/altera_primitives.vhd|0*44379*0xd49ddf23d592a81cbe1698a8d6cde71e15e1130e|0*44610*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*44842*0x8339180d858ae24a8c5a7dcd590420147ad80672|0*45284*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|793
+
+[prim_gsrff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|914|1*17613
+B/behavior=3*30494
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*48830
+I/behavior=I/BEHAVIOR 0*49516
+M=11|0|v63|0|./src/altera_primitives.vhd|0*48526*0x93fa363400fefd253001b1ff5bbc283fb2c1148a|0*48757*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*48989*0x95d66c492824225459fff5be1d3aaed656945378|0*49431*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|908
+
+[prim_gtff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|688|1*13551
+B/behavior=3*24270
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*40655
+I/behavior=I/BEHAVIOR 0*41285
+M=11|0|v63|0|./src/altera_primitives.vhd|0*40359*0x9b3f8fff83954a8a92ba08c3e079b02ef7a9d353|0*40583*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*40813*0x6981510c182c213ca5b2601bc7284ff9bc78c562|0*41201*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|682
+
+[row_global]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|119|1*5196
+B/behavior=3*2921
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*18654
+I/behavior=I/BEHAVIOR 0*19057
+M=11|0|v63|0|./src/altera_primitives.vhd|0*18373*0x138d724a8d15020efbe5fce45b5d43502a23d743|0*18581*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*18813*0x690e5c634cabc4f4a7b41e4095bd40395533e176|0*18972*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|114
+
+[soft]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|86|1*4226
+B/behavior=3*2151
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*16590
+I/behavior=I/BEHAVIOR 0*16969
+M=11|0|v63|0|./src/altera_primitives.vhd|0*16333*0x74be555bbfcf204e0d20a1f6240240a6b7a43731|0*16523*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*16743*0xb1e93bafc26c7ed7d9f042158124cb54e960603b|0*16890*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|81
+
+[srff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|952|1*18218
+B/behavior=3*31862
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*50167
+I/behavior=I/BEHAVIOR 0*50873
+M=11|0|v63|0|./src/altera_primitives.vhd|0*49869*0x7b172106241e7296d8b11fc4b8deccf8d617fad6|0*50100*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*50320*0x7a73dd0fa39e0ea3088502f255498b977d5066e0|0*50794*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|946
+
+[srffe]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|992|1*18935
+B/behavior=3*32785
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*51577
+I/behavior=I/BEHAVIOR 0*52255
+M=11|0|v63|0|./src/altera_primitives.vhd|0*51269*0x026f2558db4b48bb261fff3cd5fc791e2171aac4|0*51509*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*51731*0x25ead0a3fe8cfc620db70e21e371e03476e66869|0*52175*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|986
+
+[tff]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|723|1*14156
+B/behavior=3*25434
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*41925
+I/behavior=I/BEHAVIOR 0*42610
+M=11|0|v63|0|./src/altera_primitives.vhd|0*41636*0xf01232acc6534c7baeac7761c2366bb9d6c5ecbf|0*41859*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*42077*0x5333daabec23a7ebc61b0cba4ab8190db3f12b93|0*42532*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|717
+
+[tffe]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|762|1*14857
+B/behavior=3*26357
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*43303
+I/behavior=I/BEHAVIOR 0*43962
+M=11|0|v63|0|./src/altera_primitives.vhd|0*43004*0x216079c77ccf48d0a952089470b3c60a02ba8887|0*43236*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*43456*0x7ba81442538da6bd0a5b56f98bcee40d4a87679e|0*43883*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|756
+
+[tri]
+A/behavior=A/BEHAVIOR 21|./src/altera_primitives.vhd|132|1*5705
+B/behavior=3*3264
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavior=8.2.1986.SP1.35.3497  (Windows)
+I=0*19666
+I/behavior=I/BEHAVIOR 0*20054
+M=11|0|v63|0|./src/altera_primitives.vhd|0*19393*0x17d5f06a46efc97f6d37db91d0a073434b5bd9ac|0*19600*0xf2538cdc6f7b23a146389216c886e772
+M/behavior=M/BEHAVIOR 21|0|v63|0|./src/altera_primitives.vhd|0*19818*0x62cfe2feccbb742dd4f62fb11a7f63a7aa7a34fb|0*19976*0xf2538cdc6f7b23a146389216c886e772
+R=./src/altera_primitives.vhd|126
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, ALTERA VHDL LIBRARY
+ModifyID=240
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=283|0altera.mgf|92227|0
+1=40|1altera.mgf|29619|0
+3=38|3altera.mgf|54077|0
+
+[~U]
+alt_bidir_buf=11|0*75567|
+alt_bidir_diff=11|0*73452|
+alt_inbuf=11|0*60217|
+alt_inbuf_diff=11|0*66407|
+alt_iobuf=11|0*64682|
+alt_iobuf_diff=11|0*71376|
+alt_outbuf=11|0*61542|
+alt_outbuf_diff=11|0*68086|
+alt_outbuf_tri=11|0*63073|
+alt_outbuf_tri_diff=11|0*69672|
+altera_europa_support_lib=3|0*77498|0*77687
+altera_primitives_components=3|0*1373|0*1533
+carry=CARRY 11|0*12144|
+carry_sum=CARRY_SUM 11|0*14118|
+cascade=CASCADE 11|0*13121|
+clklock=11|0*52466|
+dff=DFF 11|0*26113|
+dffe=DFFE 11|0*27615|
+dffea=DFFEA 11|0*29101|
+dffeas=DFFEAS 11|0*30623|
+dffeas_pack=3|0*0|0*127
+dlatch=11|0*23320|
+exp=EXP 11|0*15206|
+global=GLOBAL 11|0*11157|
+jkff=JKFF 11|0*45537|
+jkffe=JKFFE 11|0*46936|
+latch=11|0*22259|
+lut_input=LUT_INPUT 11|0*20215|
+lut_output=LUT_OUTPUT 11|0*21232|
+opndrn=OPNDRN 11|0*17131|
+prim_gdff=PRIM_GDFF 11|0*24512|
+prim_gjkff=PRIM_GJKFF 11|0*44172|
+prim_gsrff=PRIM_GSRFF 11|0*48319|
+prim_gtff=PRIM_GTFF 11|0*40169|
+row_global=ROW_GLOBAL 11|0*18198|
+soft=SOFT 11|0*16164|
+srff=SRFF 11|0*49684|
+srffe=SRFFE 11|0*51083|
+tff=TFF 11|0*41452|
+tffe=TFFE 11|0*42819|
+tri=TRI 11|0*19225|
+

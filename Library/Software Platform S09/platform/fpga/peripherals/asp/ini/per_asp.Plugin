@@ -1,0 +1,10 @@
+[Plugin]
+Name=per_asp
+HardwareID=WB_ASP
+Implement=per_asp
+
+[Instance]
+Require0=
+
+; NOTE: this plugin is only needed to make sure the ASP core does not
+;       show up in a software platform document as generic device.

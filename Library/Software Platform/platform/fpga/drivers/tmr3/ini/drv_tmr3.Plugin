@@ -1,0 +1,234 @@
+[Plugin]
+Name=drv_tmr3
+Description=TMR3 Dual Timer Driver
+Caption=TMR3 Dual Timer Driver
+SourceDir=platform\fpga\drivers\tmr3\src
+InitHandlerPriority=8
+Implement=drv_tmr3
+MinInstances=1
+Bitmap=drv_tmr3.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_tmr3
+Condition=EQ
+
+[Instance]
+Require0=per_tmr3
+
+[Instance_Option0]
+GuiName=Timer A Gated
+Name=timer_a_gated
+Kind=BOOLEAN
+DefaultValue=FALSE
+Description=Enables external gate control
+
+[Instance_Option1]
+GuiName=Timer A Counter Mode
+Name=timer_a_counter_mode
+Kind=BOOLEAN
+DefaultValue=FALSE
+Description=Selects Timer or Counter operation. In timer mode, the register is incremented after every 12 cycles of the external system clock signal. In counter mode, the register is incremented when a rising edge is observed at the corresponding external clock input pin.
+
+[Instance_Option2]
+GuiName=Timer A Mode
+Name=timer_a_mode
+Kind=ENUM
+Type=UINT8
+Description=Initial mode Timer A
+DefaultValue=13_bit
+Enum0=13_bit
+EnumValue0=0
+EnumDescription0=13-bit Timer/Counter, with 5 lower bits in TLA and 8 bits in THA. The 3 high order bits of TLA held at zero.
+Enum1=16_bit
+EnumValue1=1
+EnumDescription1=16-bit Timer/Counter.
+Enum2=8_bit_autoreload
+EnumValue2=2
+EnumDescription2=8-bit auto-reload Timer/Counter. The reload value is kept in THA, while TLA is incremented after every period of the external clock signal (CLK).
+Enum3=dual_8_bit
+EnumValue3=3
+EnumDescription3=TLA operates as an 8-bit timer/counter, THA operates as an 8-bit timer. Both registers function independently of each other.
+
+[Instance_Option3]
+GuiName=Timer A value
+Name=timer_a_13bit
+Kind=UINT16
+MaxRange=8191
+DefaultValue=50
+Description=Timer/Counter value (increments to overlow)
+
+[Instance_Option3_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=NOTEQ
+Value=13_bit
+
+[Instance_Option4]
+GuiName=Timer A value
+Name=timer_a_16bit
+Kind=UINT16
+MaxRange=65535
+DefaultValue=50
+Description=Timer/Counter value (increments to overlow)
+
+[Instance_Option4_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=NOTEQ
+Value=16_bit
+
+[Instance_Option5]
+GuiName=Timer A value
+Name=timer_a_auto_reload
+Kind=UINT8
+MaxRange=255
+DefaultValue=50
+Description=Timer/Counter value (increments to overlow)
+
+[Instance_Option5_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=NOTEQ
+Value=8_bit_autoreload
+
+[Instance_Option6]
+GuiName=Timer A0 value
+Name=timer_a_tla
+Kind=UINT8
+MaxRange=255
+DefaultValue=50
+Description=Timer/Counter value (increments to overlow)
+
+[Instance_Option6_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=NOTEQ
+Value=dual_8_bit
+
+[Instance_Option7]
+GuiName=Timer A1 value
+Name=timer_a_tha
+Kind=UINT8
+MaxRange=255
+DefaultValue=50
+Description=Timer/Counter value (increments to overlow)
+
+[Instance_Option7_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=NOTEQ
+Value=dual_8_bit
+
+[Instance_Option8]
+GuiName=Timer B Gated
+Name=timer_b_gated
+Kind=BOOLEAN
+DefaultValue=FALSE
+Description=Enables external gate control
+
+[Instance_Option8_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=EQ
+Value=dual_8_bit
+
+[Instance_Option9]
+GuiName=Timer B Counter Mode
+Name=timer_b_counter_mode
+Kind=BOOLEAN
+DefaultValue=FALSE
+Description=Selects Timer or Counter operation. In timer mode, the register is incremented after every 12 cycles of the external system clock signal. In counter mode, the register is incremented when a rising edge is observed at the corresponding external clock input pin.
+
+[Instance_Option9_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=EQ
+Value=dual_8_bit
+
+[Instance_Option10]
+GuiName=Timer B Mode
+Name=Timer_B_mode
+Kind=ENUM
+Type=UINT8
+Description=Initial mode Timer B
+DefaultValue=13_bit
+Enum0=13_bit
+EnumValue0=0
+EnumDescription0=13-bit Timer/Counter, with 5 lower bits in TLB and 8 bits in THB. The 3 high order bits of TLB held at zero.
+Enum1=16_bit
+EnumValue1=1
+EnumDescription1=16-bit Timer/Counter.
+Enum2=8_bit_autoreload
+EnumValue2=2
+EnumDescription2=8-bit auto-reload Timer/Counter. The reload value is kept in THB, while TLB is incremented after every period of the external clock signal (CLK).
+
+[Instance_Option10_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=EQ
+Value=dual_8_bit
+
+[Instance_Option11]
+GuiName=Timer B value
+Name=timer_b_13bit
+Kind=UINT16
+MaxRange=8191
+DefaultValue=50
+Description=Timer/Counter value (increments to overlow)
+
+[Instance_Option11_Hide_If0]
+Kind=OPTION
+Object=Timer_B_mode
+Condition=NOTEQ
+OrCondition=True
+Value=13_BIT
+
+[Instance_Option11_Hide_If1]
+Kind=OPTION
+Object=timer_a_mode
+Condition=EQ
+OrCondition=True
+Value=dual_8_bit
+
+[Instance_Option12]
+GuiName=Timer B value
+Name=timer_b_16bit
+Kind=UINT16
+DefaultValue=50
+Description=Timer/Counter value (increments to overlow)
+
+[Instance_Option12_Hide_If0]
+Kind=OPTION
+Object=Timer_B_mode
+Condition=NOTEQ
+OrCondition=True
+Value=16_bit
+
+[Instance_Option12_Hide_If1]
+Kind=OPTION
+Object=timer_a_mode
+Condition=EQ
+OrCondition=True
+Value=dual_8_bit
+
+[Instance_Option13]
+GuiName=Timer B value
+Name=timer_b_auto_reload
+Kind=UINT8
+DefaultValue=50
+Description=Timer/Counter value (increments to overlow)
+
+[Instance_Option13_Hide_If0]
+Kind=OPTION
+Object=timer_a_mode
+Condition=EQ
+OrCondition=True
+Value=dual_8_bit
+
+[Instance_Option13_Hide_If1]
+Kind=OPTION
+Object=timer_b_mode
+OrCondition=True
+Condition=NOTEQ
+Value=8_bit_autoreload

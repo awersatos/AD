@@ -1,0 +1,50 @@
+*  
+* Diode Model Produced by Altium Ltd  
+* Date:  10-Mar-2004 
+*  
+* Manufacturer: Agilent  
+* Component Name: HDSP-A213  
+*  
+* Parameters derived from information available in data sheet.  
+*
+*                 common-anode
+*                 |  kathode-f
+*                 |  |  kathode-g
+*                 |  |  |  kathode-e
+*                 |  |  |  |  kathode-d
+*                 |  |  |  |  |  common-anode
+*                 |  |  |  |  |  |  kathode-DP
+*                 |  |  |  |  |  |  |  kathode-c
+*                 |  |  |  |  |  |  |  |  kathode-b
+*                 |  |  |  |  |  |  |  |  |  kathode-a
+*                 |  |  |  |  |  |  |  |  |  |
+.SUBCKT HDSP_A213 1  2  3  4  5  6  7  8  9  10
+
+DA1  10  1 dHDSP_A213
+DB1   9  1 dHDSP_A213
+DC1   8  1 dHDSP_A213
+DD1   5  1 dHDSP_A213
+DE1   4  1 dHDSP_A213
+DF1   2  1 dHDSP_A213
+DG1   3  1 dHDSP_A213
+DDP1  7  1 dHDSP_A213
+
+DA2  10  6 dHDSP_A213
+DB2   9  6 dHDSP_A213
+DC2   8  6 dHDSP_A213
+DD2   5  6 dHDSP_A213
+DE2   4  6 dHDSP_A213
+DF2   2  6 dHDSP_A213
+DG2   3  6 dHDSP_A213
+DDP2  7  6 dHDSP_A213
+
+.MODEL dHDSP_A213 D
++ (  
++     IS = 2.92097419E-52 
++      N = 0.52799867 
++     RS = 25.27044243 
++     BV = 30
++    IBV = 100u 
++ )  
+
+.ENDS HDSP_A213

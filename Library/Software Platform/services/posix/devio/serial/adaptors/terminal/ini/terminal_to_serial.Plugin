@@ -1,0 +1,11 @@
+[Plugin]
+Name=terminal_to_serial
+Description=Posix interface for TERMINAL serial port.
+SourceDir=services\posix\devio\serial\adaptors\terminal\src
+CompileOption0=-I"$(SSASROOT)\services\posix\devio\serial\include"
+InitHandler=terminal_to_serial_init
+InitHandlerPriority=8
+Implement=serial_adaptor
+
+[Instance]
+Require0=drv_terminal

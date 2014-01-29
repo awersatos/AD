@@ -1,0 +1,2201 @@
+V 000035 56 112 1265381360216 SPLL
+(_unit SPLL
+	(_specify
+		(_modpath parallel unknown 0 48
+			(_port CLK_IN in )
+			(_port CLK_OUT out )
+		)
+	)
+)
+V 000037 56 201 1265381360227 STDPLL
+(_unit STDPLL
+	(_specify
+		(_modpath parallel unknown 0 427
+			(_port CLK_IN in )
+			(_port CLK_OUT out )
+		)
+		(_modpath parallel unknown 0 428
+			(_port CLK_IN in )
+			(_port PLL_LOCK out )
+		)
+	)
+)
+V 000038 56 374 1265381360243 STDPLLX
+(_unit STDPLLX
+	(_specify
+		(_modpath parallel unknown 0 872
+			(_port PLL_RST in )
+			(_port PLL_LOCK out )
+		)
+		(_modpath parallel unknown 0 873
+			(_port CLK_IN in )
+			(_port CLK_OUT out )
+		)
+		(_modpath parallel unknown 0 874
+			(_port CLK_IN in )
+			(_port PLL_LOCK out )
+		)
+		(_modpath parallel unknown 0 875
+			(_port CLK_IN in )
+			(_port SEC_OUT out )
+		)
+	)
+)
+V 000035 56 178 1265381360248 AND2
+(_unit AND2
+	(_specify
+		(_modpath parallel unknown 0 894
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 895
+			(_port I1 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 253 1265381360253 AND3
+(_unit AND3
+	(_specify
+		(_modpath parallel unknown 0 915
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 916
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 917
+			(_port I2 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 328 1265381360258 AND4
+(_unit AND4
+	(_specify
+		(_modpath parallel unknown 0 938
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 939
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 940
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 941
+			(_port I3 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 403 1265381360263 AND5
+(_unit AND5
+	(_specify
+		(_modpath parallel unknown 0 962
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 963
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 964
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 965
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 966
+			(_port I4 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 478 1265381360268 AND6
+(_unit AND6
+	(_specify
+		(_modpath parallel unknown 0 987
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 988
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 989
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 990
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 991
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 992
+			(_port I5 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 560 1265381360273 AND7
+(_unit AND7
+	(_specify
+		(_modpath parallel unknown 0 1013
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1014
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1015
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1016
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1017
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1018
+			(_port I5 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1019
+			(_port I6 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 636 1265381360278 AND8
+(_unit AND8
+	(_specify
+		(_modpath parallel unknown 0 1040
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1041
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1042
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1043
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1044
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1045
+			(_port I5 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1046
+			(_port I6 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1047
+			(_port I7 in )
+			(_port O out )
+		)
+	)
+)
+V 000037 56 260 1265381360283 BI_DIR
+(_unit BI_DIR
+	(_specify
+		(_modpath parallel unknown 0 1134
+			(_port I0 in )
+			(_port IO out )
+		)
+		(_modpath parallel unknown 0 1135
+			(_port OE in )
+			(_port IO out )
+		)
+		(_modpath parallel unknown 0 1136
+			(_port IO in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 104 1265381360288 BUFF
+(_unit BUFF
+	(_specify
+		(_modpath parallel unknown 0 1156
+			(_port I0 in )
+			(_port O out )
+		)
+	)
+)
+V 000036 56 181 1265381360293 BUFTH
+(_unit BUFTH
+	(_specify
+		(_modpath parallel unknown 0 1206
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1207
+			(_port OE in )
+			(_port O out )
+		)
+	)
+)
+V 000036 56 181 1265381360298 BUFTI
+(_unit BUFTI
+	(_specify
+		(_modpath parallel unknown 0 1226
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1227
+			(_port OE in )
+			(_port O out )
+		)
+	)
+)
+V 000036 56 181 1265381360303 BUFTL
+(_unit BUFTL
+	(_specify
+		(_modpath parallel unknown 0 1276
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 1277
+			(_port OE in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 105 1265381360308 CLKI
+(_unit CLKI
+	(_specify
+		(_modpath parallel unknown 0 1296
+			(_port PAD in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 356 1265381360313 DFF
+(_unit DFF
+	(_specify
+		(_modpath parallel unknown 0 1332
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_tchk setuphold 0 1333
+			(_port CLK (posedge))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1334
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk period 0 1335
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000035 56 519 1265381360322 DFFC
+(_unit DFFC
+	(_specify
+		(_modpath parallel unknown 0 1372
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_tchk setuphold 0 1373
+			(_port CLK (posedge) (_code  3 CE*EQ*1))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1374
+			(_port CLK (posedge))
+			(_port CE (posedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 1375
+			(_port CLK (posedge) (_code  4 CE*EQ*1))
+			(_register (notifier))
+		)
+		(_tchk period 0 1376
+			(_port CLK (posedge) (_code  5 CE*EQ*1))
+			(_register (notifier))
+		)
+	)
+)
+V 000036 56 919 1265381360331 DFFCR
+(_unit DFFCR
+	(_specify
+		(_modpath parallel unknown 0 1414
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1415
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 1416
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1417
+			(_port CLK (posedge) (_code  3 CE_R))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1418
+			(_port CLK (posedge) (_code  4 R*EQ*1))
+			(_port CE (posedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 1419
+			(_port CLK (posedge) (_code  5 CE_R))
+			(_register (notifier))
+		)
+		(_tchk period 0 1420
+			(_port CLK (posedge) (_code  6 CE_R))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1421
+			(_port R (posedge))
+			(_port CLK (posedge) (_code  7 CE*EQ*1))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1422
+			(_port CLK (posedge) (_code  8 CE*EQ*1))
+			(_port R (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000037 56 923 1265381360336 DFFCRH
+(_unit DFFCRH
+	(_specify
+		(_modpath parallel unknown 0 1462
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1463
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 1464
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1465
+			(_port CLK (posedge) (_code  3 CE_NR))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1466
+			(_port CLK (posedge) (_code  4 R*EQ*0))
+			(_port CE (posedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 1467
+			(_port CLK (posedge) (_code  5 CE_NR))
+			(_register (notifier))
+		)
+		(_tchk period 0 1468
+			(_port CLK (posedge) (_code  6 CE_NR))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1469
+			(_port R (negedge))
+			(_port CLK (posedge) (_code  7 CE*EQ*1))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1470
+			(_port CLK (posedge) (_code  8 CE*EQ*1))
+			(_port R (negedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000038 56 1302 1265381360341 DFFCRS
+(_unit DFFCRS
+	(_specify
+		(_modpath parallel unknown 0 1512
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1513
+			(_port R in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1514
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 1515
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 1516
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1517
+			(_port CLK (posedge) (_code  3 CE_R_S))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1518
+			(_port CLK (posedge) (_code  4 CE_R_S))
+			(_register (notifier))
+		)
+		(_tchk period 0 1519
+			(_port CLK (posedge) (_code  5 CE_R_S))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1520
+			(_port R (posedge))
+			(_port CLK (posedge) (_code  6 CE_S))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1521
+			(_port CLK (posedge) (_code  7 CE_S))
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1522
+			(_port S (posedge))
+			(_port CLK (posedge) (_code  8 CE_R))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1523
+			(_port CLK (posedge) (_code  9 CE_R))
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1525
+			(_port CLK (posedge) (_code  10 R_S))
+			(_port CE (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000039 56 1315 1265381360346 DFFCRSH
+(_unit DFFCRSH
+	(_specify
+		(_modpath parallel unknown 0 1568
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1569
+			(_port R in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1570
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 1571
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 1572
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1573
+			(_port CLK (posedge) (_code  3 CE_NR_NS))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1574
+			(_port CLK (posedge) (_code  4 CE_NR_NS))
+			(_register (notifier))
+		)
+		(_tchk period 0 1575
+			(_port CLK (posedge) (_code  5 CE_NR_NS))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1576
+			(_port R (negedge))
+			(_port CLK (posedge) (_code  6 CE_NS))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1577
+			(_port CLK (posedge) (_code  7 CE_NS))
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1578
+			(_port S (negedge))
+			(_port CLK (posedge) (_code  8 CE_NR))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1579
+			(_port CLK (posedge) (_code  9 CE_NR))
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1580
+			(_port CLK (posedge) (_code  10 NR_NS))
+			(_port CE (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000036 56 919 1265381360351 DFFCS
+(_unit DFFCS
+	(_specify
+		(_modpath parallel unknown 0 1618
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1619
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 1620
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1621
+			(_port CLK (posedge) (_code  3 CE_S))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1622
+			(_port CLK (posedge) (_code  4 CE_S))
+			(_register (notifier))
+		)
+		(_tchk period 0 1623
+			(_port CLK (posedge) (_code  5 CE_S))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1624
+			(_port S (posedge))
+			(_port CLK (posedge) (_code  6 CE*EQ*1))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1625
+			(_port CLK (posedge) (_code  7 CE*EQ*1))
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1626
+			(_port CLK (posedge) (_code  8 S*EQ*1))
+			(_port CE (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000037 56 923 1265381360356 DFFCSH
+(_unit DFFCSH
+	(_specify
+		(_modpath parallel unknown 0 1666
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1667
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 1668
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1669
+			(_port CLK (posedge) (_code  3 CE_NS))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1670
+			(_port CLK (posedge) (_code  4 CE_NS))
+			(_register (notifier))
+		)
+		(_tchk period 0 1671
+			(_port CLK (posedge) (_code  5 CE_NS))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1672
+			(_port S (negedge))
+			(_port CLK (posedge) (_code  6 CE*EQ*1))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1673
+			(_port CLK (posedge) (_code  7 CE*EQ*1))
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1674
+			(_port CLK (posedge) (_code  8 S*EQ*0))
+			(_port CE (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000035 56 748 1265381360361 DFFR
+(_unit DFFR
+	(_specify
+		(_modpath parallel unknown 0 1711
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1712
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 1714
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1715
+			(_port CLK (posedge) (_code  3 R))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1716
+			(_port CLK (posedge) (_code  4 R))
+			(_register (notifier))
+		)
+		(_tchk period 0 1717
+			(_port CLK (posedge) (_code  5 R))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1718
+			(_port R (posedge))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1719
+			(_port CLK (posedge))
+			(_port R (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000036 56 752 1265381360366 DFFRH
+(_unit DFFRH
+	(_specify
+		(_modpath parallel unknown 0 1758
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1759
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 1760
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1761
+			(_port CLK (posedge) (_code  3 R2))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1762
+			(_port CLK (posedge) (_code  4 R2))
+			(_register (notifier))
+		)
+		(_tchk period 0 1763
+			(_port CLK (posedge) (_code  5 R2))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1764
+			(_port R (negedge))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1765
+			(_port CLK (posedge))
+			(_port R (negedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000037 56 1159 1265381360371 DFFRS
+(_unit DFFRS
+	(_specify
+		(_modpath parallel unknown 0 1804
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1805
+			(_port R in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1806
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 1807
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 1808
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1809
+			(_port CLK (posedge) (_code  3 R_S))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1810
+			(_port CLK (posedge) (_code  4 R_S))
+			(_register (notifier))
+		)
+		(_tchk period 0 1811
+			(_port CLK (posedge) (_code  5 R_S))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1812
+			(_port R (posedge) (_code  6 S))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1813
+			(_port CLK (posedge) (_code  7 S))
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1814
+			(_port S (posedge) (_code  8 R))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1815
+			(_port CLK (posedge) (_code  9 R))
+			(_port S (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000038 56 1170 1265381360376 DFFRSH
+(_unit DFFRSH
+	(_specify
+		(_modpath parallel unknown 0 1856
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1857
+			(_port R in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1858
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 1859
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 1860
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1861
+			(_port CLK (posedge) (_code  3 NR_NS))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1862
+			(_port CLK (posedge) (_code  4 NR_NS))
+			(_register (notifier))
+		)
+		(_tchk period 0 1863
+			(_port CLK (posedge) (_code  5 NR_NS))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1864
+			(_port R (negedge) (_code  6 S1))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1865
+			(_port CLK (posedge) (_code  7 S1))
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1866
+			(_port S (negedge) (_code  8 R1))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1867
+			(_port CLK (posedge) (_code  9 R1))
+			(_port S (negedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000035 56 748 1265381360381 DFFS
+(_unit DFFS
+	(_specify
+		(_modpath parallel unknown 0 1904
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1905
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 1906
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1907
+			(_port CLK (posedge) (_code  3 S))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1908
+			(_port CLK (posedge) (_code  4 S))
+			(_register (notifier))
+		)
+		(_tchk period 0 1909
+			(_port CLK (posedge) (_code  5 S))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1910
+			(_port S (posedge))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1911
+			(_port CLK (posedge))
+			(_port S (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000036 56 752 1265381360386 DFFSH
+(_unit DFFSH
+	(_specify
+		(_modpath parallel unknown 0 1949
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1950
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 1951
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 1952
+			(_port CLK (posedge) (_code  3 S1))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1953
+			(_port CLK (posedge) (_code  4 S1))
+			(_register (notifier))
+		)
+		(_tchk period 0 1954
+			(_port CLK (posedge) (_code  5 S1))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 1955
+			(_port S (negedge))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 1956
+			(_port CLK (posedge))
+			(_port S (negedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000035 56 432 1265381360391 DLAT
+(_unit DLAT
+	(_specify
+		(_modpath parallel unknown 0 1993
+			(_port LAT in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 1994
+			(_port D in )
+			(_port Q out )
+		)
+		(_tchk setuphold 0 1995
+			(_port LAT (negedge))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 1996
+			(_port LAT (posedge))
+			(_register (notifier))
+		)
+		(_tchk period 0 1997
+			(_port LAT (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000036 56 824 1265381360400 DLATR
+(_unit DLATR
+	(_specify
+		(_modpath parallel unknown 0 2033
+			(_port LAT in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2034
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2035
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 2036
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 2037
+			(_port LAT (negedge) (_code  3 R))
+			(_port D ())
+			(_register (notifier))
+		)
+		(_tchk width 0 2038
+			(_port LAT (posedge) (_code  4 R))
+			(_register (notifier))
+		)
+		(_tchk period 0 2039
+			(_port LAT (posedge) (_code  5 R))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 2040
+			(_port R (posedge))
+			(_port LAT (negedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 2041
+			(_port LAT (negedge))
+			(_port R (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000037 56 828 1265381360405 DLATRH
+(_unit DLATRH
+	(_specify
+		(_modpath parallel unknown 0 2079
+			(_port LAT in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2080
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2081
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 2082
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 2083
+			(_port LAT (negedge))
+			(_port D () (_code  3 R1))
+			(_register (notifier))
+		)
+		(_tchk width 0 2084
+			(_port LAT (posedge) (_code  4 R1))
+			(_register (notifier))
+		)
+		(_tchk period 0 2085
+			(_port LAT (posedge) (_code  5 R1))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 2086
+			(_port R (negedge))
+			(_port LAT (negedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 2087
+			(_port LAT (negedge))
+			(_port R (negedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000038 56 1255 1265381360413 DLATRS
+(_unit DLATRS
+	(_specify
+		(_modpath parallel unknown 0 2128
+			(_port LAT in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2129
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2130
+			(_port S in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2131
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 2132
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 2133
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 2134
+			(_port LAT (negedge))
+			(_port D () (_code  3 R_S))
+			(_register (notifier))
+		)
+		(_tchk width 0 2135
+			(_port LAT (posedge) (_code  4 R_S))
+			(_register (notifier))
+		)
+		(_tchk period 0 2136
+			(_port LAT (posedge) (_code  5 R_S))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 2137
+			(_port R (posedge) (_code  6 S*EQ*1))
+			(_port LAT (negedge))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 2138
+			(_port S (posedge) (_code  7 R*EQ*1))
+			(_port LAT (negedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 2139
+			(_port LAT (negedge) (_code  8 S*EQ*1))
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 2140
+			(_port LAT (negedge) (_code  9 R*EQ*1))
+			(_port S (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000039 56 1262 1265381360418 DLATRSH
+(_unit DLATRSH
+	(_specify
+		(_modpath parallel unknown 0 2181
+			(_port LAT in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2182
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2183
+			(_port S in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2184
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 2185
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 2186
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 2187
+			(_port LAT (negedge))
+			(_port D () (_code  3 NR_NS))
+			(_register (notifier))
+		)
+		(_tchk width 0 2188
+			(_port LAT (posedge) (_code  4 NR_NS))
+			(_register (notifier))
+		)
+		(_tchk period 0 2189
+			(_port LAT (posedge) (_code  5 NR_NS))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 2190
+			(_port R (negedge) (_code  6 S*EQ*0))
+			(_port LAT (negedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 2191
+			(_port LAT (negedge))
+			(_port R (negedge) (_code  7 S*EQ*0))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 2192
+			(_port S (negedge) (_code  8 R*EQ*0))
+			(_port LAT (negedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 2193
+			(_port LAT (negedge))
+			(_port S (negedge) (_code  9 R*EQ*0))
+			(_register (notifier))
+		)
+	)
+)
+V 000036 56 824 1265381360423 DLATS
+(_unit DLATS
+	(_specify
+		(_modpath parallel unknown 0 2230
+			(_port LAT in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2231
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2232
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 2233
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 2234
+			(_port LAT (negedge))
+			(_port D () (_code  3 S))
+			(_register (notifier))
+		)
+		(_tchk width 0 2235
+			(_port LAT (posedge) (_code  4 S))
+			(_register (notifier))
+		)
+		(_tchk period 0 2236
+			(_port LAT (posedge) (_code  5 S))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 2237
+			(_port S (posedge))
+			(_port LAT (negedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 2238
+			(_port LAT (negedge))
+			(_port S (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000037 56 828 1265381360428 DLATSH
+(_unit DLATSH
+	(_specify
+		(_modpath parallel unknown 0 2276
+			(_port LAT in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2277
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 2278
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 2279
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 2280
+			(_port LAT (negedge))
+			(_port D () (_code  3 S1))
+			(_register (notifier))
+		)
+		(_tchk width 0 2281
+			(_port LAT (posedge) (_code  4 S1))
+			(_register (notifier))
+		)
+		(_tchk period 0 2282
+			(_port LAT (posedge) (_code  5 S1))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 2283
+			(_port S (negedge))
+			(_port LAT (negedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 2284
+			(_port LAT (negedge))
+			(_port S (negedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000033 56 27 1265381360433 VCC
+(_unit VCC
+	(_specify
+	)
+)
+V 000033 56 27 1265381360438 GND
+(_unit GND
+	(_specify
+	)
+)
+V 000037 56 107 1265381360443 GSRBUF
+(_unit GSRBUF
+	(_specify
+		(_modpath parallel unknown 0 2344
+			(_port SRI in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 104 1265381360448 IBUF
+(_unit IBUF
+	(_specify
+		(_modpath parallel unknown 0 2393
+			(_port I0 in )
+			(_port O out )
+		)
+	)
+)
+V 000037 56 107 1265381360453 LVDSIN
+(_unit LVDSIN
+	(_specify
+		(_modpath parallel unknown 0 2411
+			(_port PIN in )
+			(_port O out )
+		)
+	)
+)
+V 000038 56 109 1265381360460 LVDSOUT
+(_unit LVDSOUT
+	(_specify
+		(_modpath parallel unknown 0 2429
+			(_port I in )
+			(_port POUT out )
+		)
+	)
+)
+V 000038 56 188 1265381360465 LVDSTRI
+(_unit LVDSTRI
+	(_specify
+		(_modpath parallel unknown 0 2451
+			(_port I in )
+			(_port POUT out )
+		)
+		(_modpath parallel unknown 0 2452
+			(_port OE in )
+			(_port POUT out )
+		)
+	)
+)
+V 000034 56 103 1265381360470 INV
+(_unit INV
+	(_specify
+		(_modpath parallel unknown 0 2472
+			(_port I0 in )
+			(_port O out )
+		)
+	)
+)
+V 000036 56 181 1265381360475 INVTH
+(_unit INVTH
+	(_specify
+		(_modpath parallel unknown 0 2517
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2518
+			(_port OE in )
+			(_port O out )
+		)
+	)
+)
+V 000036 56 181 1265381360480 INVTL
+(_unit INVTL
+	(_specify
+		(_modpath parallel unknown 0 2562
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2563
+			(_port OE in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 180 1265381360485 NAN2
+(_unit NAN2
+	(_specify
+		(_modpath parallel unknown 0 2583
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2584
+			(_port I1 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 256 1265381360490 NAN3
+(_unit NAN3
+	(_specify
+		(_modpath parallel unknown 0 2605
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2606
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2607
+			(_port I2 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 332 1265381360495 NAN4
+(_unit NAN4
+	(_specify
+		(_modpath parallel unknown 0 2628
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2629
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2630
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2631
+			(_port I3 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 408 1265381360500 NAN5
+(_unit NAN5
+	(_specify
+		(_modpath parallel unknown 0 2652
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2653
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2654
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2655
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2656
+			(_port I4 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 484 1265381360505 NAN6
+(_unit NAN6
+	(_specify
+		(_modpath parallel unknown 0 2677
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2678
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2679
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2680
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2681
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2682
+			(_port I5 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 560 1265381360523 NAN7
+(_unit NAN7
+	(_specify
+		(_modpath parallel unknown 0 2703
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2704
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2705
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2706
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2707
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2708
+			(_port I5 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2709
+			(_port I6 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 636 1265381360538 NAN8
+(_unit NAN8
+	(_specify
+		(_modpath parallel unknown 0 2730
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2731
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2732
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2733
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2734
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2735
+			(_port I5 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2736
+			(_port I6 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2737
+			(_port I7 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 180 1265381360543 NOR2
+(_unit NOR2
+	(_specify
+		(_modpath parallel unknown 0 2756
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2757
+			(_port I1 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 256 1265381360555 NOR3
+(_unit NOR3
+	(_specify
+		(_modpath parallel unknown 0 2778
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2779
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2780
+			(_port I2 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 332 1265381360560 NOR4
+(_unit NOR4
+	(_specify
+		(_modpath parallel unknown 0 2801
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2802
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2803
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2804
+			(_port I3 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 408 1265381360571 NOR5
+(_unit NOR5
+	(_specify
+		(_modpath parallel unknown 0 2825
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2826
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2827
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2828
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2829
+			(_port I4 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 484 1265381360586 NOR6
+(_unit NOR6
+	(_specify
+		(_modpath parallel unknown 0 2850
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2851
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2852
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2853
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2854
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2855
+			(_port I5 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 560 1265381360591 NOR7
+(_unit NOR7
+	(_specify
+		(_modpath parallel unknown 0 2876
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2877
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2878
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2879
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2880
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2881
+			(_port I5 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2882
+			(_port I6 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 636 1265381360596 NOR8
+(_unit NOR8
+	(_specify
+		(_modpath parallel unknown 0 2903
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2904
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2905
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2906
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2907
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2908
+			(_port I5 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2909
+			(_port I6 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2910
+			(_port I7 in )
+			(_port O out )
+		)
+	)
+)
+V 000035 56 104 1265381360601 OBUF
+(_unit OBUF
+	(_specify
+		(_modpath parallel unknown 0 2949
+			(_port I0 in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 179 1265381360606 OR2
+(_unit OR2
+	(_specify
+		(_modpath parallel unknown 0 2968
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2969
+			(_port I1 in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 255 1265381360611 OR3
+(_unit OR3
+	(_specify
+		(_modpath parallel unknown 0 2990
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2991
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 2992
+			(_port I2 in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 331 1265381360616 OR4
+(_unit OR4
+	(_specify
+		(_modpath parallel unknown 0 3013
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3014
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3015
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3016
+			(_port I3 in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 407 1265381360632 OR5
+(_unit OR5
+	(_specify
+		(_modpath parallel unknown 0 3037
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3038
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3039
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3040
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3041
+			(_port I4 in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 483 1265381360637 OR6
+(_unit OR6
+	(_specify
+		(_modpath parallel unknown 0 3062
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3063
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3064
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3065
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3066
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3067
+			(_port I5 in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 559 1265381360642 OR7
+(_unit OR7
+	(_specify
+		(_modpath parallel unknown 0 3088
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3089
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3090
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3091
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3092
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3093
+			(_port I5 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3094
+			(_port I6 in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 635 1265381360647 OR8
+(_unit OR8
+	(_specify
+		(_modpath parallel unknown 0 3115
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3116
+			(_port I1 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3117
+			(_port I2 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3118
+			(_port I3 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3119
+			(_port I4 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3120
+			(_port I5 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3121
+			(_port I6 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3122
+			(_port I7 in )
+			(_port O out )
+		)
+	)
+)
+V 000034 56 356 1265381360652 TFF
+(_unit TFF
+	(_specify
+		(_modpath parallel unknown 0 3160
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_tchk setuphold 0 3161
+			(_port CLK (posedge))
+			(_port T ())
+			(_register (notifier))
+		)
+		(_tchk width 0 3162
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk period 0 3163
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000035 56 748 1265381360663 TFFR
+(_unit TFFR
+	(_specify
+		(_modpath parallel unknown 0 3200
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 3201
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 3202
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 3203
+			(_port CLK (posedge))
+			(_port T () (_code  3 R))
+			(_register (notifier))
+		)
+		(_tchk width 0 3204
+			(_port CLK (posedge) (_code  4 R))
+			(_register (notifier))
+		)
+		(_tchk period 0 3205
+			(_port CLK (posedge) (_code  5 R))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 3206
+			(_port R (posedge))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 3207
+			(_port CLK (posedge))
+			(_port R (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000036 56 764 1265381360672 TFFRH
+(_unit TFFRH
+	(_specify
+		(_modpath parallel unknown 0 3245
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 3246
+			(_port R in )
+			(_port Q out )
+		)
+		(_tchk width 0 3247
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 3248
+			(_port CLK (posedge))
+			(_port T () (_code  3 R*EQ*0))
+			(_register (notifier))
+		)
+		(_tchk width 0 3249
+			(_port CLK (posedge) (_code  4 R*EQ*0))
+			(_register (notifier))
+		)
+		(_tchk period 0 3250
+			(_port CLK (posedge) (_code  5 R*EQ*0))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 3251
+			(_port R (negedge))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 3252
+			(_port CLK (posedge))
+			(_port R (negedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000037 56 1159 1265381360677 TFFRS
+(_unit TFFRS
+	(_specify
+		(_modpath parallel unknown 0 3290
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 3291
+			(_port R in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 3292
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 3293
+			(_port R (negedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 3294
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 3295
+			(_port CLK (posedge))
+			(_port T () (_code  3 S_R))
+			(_register (notifier))
+		)
+		(_tchk width 0 3296
+			(_port CLK (posedge) (_code  4 S_R))
+			(_register (notifier))
+		)
+		(_tchk period 0 3297
+			(_port CLK (posedge) (_code  5 S_R))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 3298
+			(_port R (posedge) (_code  6 S))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 3299
+			(_port CLK (posedge))
+			(_port R (posedge) (_code  7 S))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 3300
+			(_port S (posedge) (_code  8 R))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 3301
+			(_port CLK (posedge))
+			(_port S (posedge) (_code  9 R))
+			(_register (notifier))
+		)
+	)
+)
+V 000038 56 1164 1265381360682 TFFRSH
+(_unit TFFRSH
+	(_specify
+		(_modpath parallel unknown 0 3340
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 3341
+			(_port R in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 3342
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 3343
+			(_port R (posedge))
+			(_register (notifier))
+		)
+		(_tchk width 0 3344
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 3345
+			(_port CLK (posedge))
+			(_port T () (_code  3 S_R))
+			(_register (notifier))
+		)
+		(_tchk width 0 3346
+			(_port CLK (posedge) (_code  4 S_R))
+			(_register (notifier))
+		)
+		(_tchk period 0 3347
+			(_port CLK (posedge) (_code  5 S_R))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 3348
+			(_port R (negedge) (_code  6 S1))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 3349
+			(_port CLK (posedge))
+			(_port R (negedge) (_code  7 S1))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 3350
+			(_port S (negedge) (_code  8 R1))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 3351
+			(_port CLK (posedge))
+			(_port S (negedge) (_code  9 R1))
+			(_register (notifier))
+		)
+	)
+)
+V 000035 56 748 1265381360687 TFFS
+(_unit TFFS
+	(_specify
+		(_modpath parallel unknown 0 3386
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 3387
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 3388
+			(_port S (negedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 3389
+			(_port CLK (posedge))
+			(_port T () (_code  3 S))
+			(_register (notifier))
+		)
+		(_tchk width 0 3390
+			(_port CLK (posedge) (_code  4 S))
+			(_register (notifier))
+		)
+		(_tchk period 0 3391
+			(_port CLK (posedge) (_code  5 S))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 3392
+			(_port S (posedge))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 3393
+			(_port CLK (posedge))
+			(_port S (posedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000036 56 764 1265381360696 TFFSH
+(_unit TFFSH
+	(_specify
+		(_modpath parallel unknown 0 3431
+			(_port CLK in )
+			(_port Q out )
+		)
+		(_modpath parallel unknown 0 3432
+			(_port S in )
+			(_port Q out )
+		)
+		(_tchk width 0 3433
+			(_port S (posedge))
+			(_register (notifier))
+		)
+		(_tchk setuphold 0 3434
+			(_port CLK (posedge))
+			(_port T () (_code  3 S*EQ*0))
+			(_register (notifier))
+		)
+		(_tchk width 0 3435
+			(_port CLK (posedge) (_code  4 S*EQ*0))
+			(_register (notifier))
+		)
+		(_tchk period 0 3436
+			(_port CLK (posedge) (_code  5 S*EQ*0))
+			(_register (notifier))
+		)
+		(_tchk recovery 0 3437
+			(_port S (negedge))
+			(_port CLK (posedge))
+			(_register (notifier))
+		)
+		(_tchk hold 0 3438
+			(_port CLK (posedge))
+			(_port S (negedge))
+			(_register (notifier))
+		)
+	)
+)
+V 000035 56 180 1265381360701 XOR2
+(_unit XOR2
+	(_specify
+		(_modpath parallel unknown 0 3457
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3458
+			(_port I1 in )
+			(_port O out )
+		)
+	)
+)
+V 000038 56 183 1265381360710 XORSOFT
+(_unit XORSOFT
+	(_specify
+		(_modpath parallel unknown 0 3478
+			(_port I0 in )
+			(_port O out )
+		)
+		(_modpath parallel unknown 0 3479
+			(_port I1 in )
+			(_port O out )
+		)
+	)
+)

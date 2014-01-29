@@ -1,0 +1,8 @@
+[Interface]
+Name=usb_msd
+Category=SERVICE
+System=False
+Description=USB Mass Storage Service
+PublicDir=services\usb\usb_msd\include
+
+

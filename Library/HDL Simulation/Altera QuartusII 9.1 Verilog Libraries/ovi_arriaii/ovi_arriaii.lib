@@ -1,0 +1,716 @@
+timestamp=1260919567688
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[ARRIAII_PRIM_DFFE]
+A/ARRIAII_PRIM_DFFE=22|./src/arriaii_atoms.v|26|1*806
+B/ARRIAII_PRIM_DFFE=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=290,500,982,1016
+R=./src/arriaii_atoms.v|26
+
+[ARRIAII_PRIM_DFFEAS]
+A/ARRIAII_PRIM_DFFEAS=22|./src/arriaii_atoms.v|99|1*1608
+B/ARRIAII_PRIM_DFFEAS=3*720
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=414,649,1027,1061
+R=./src/arriaii_atoms.v|99
+
+[ARRIAII_PRIM_DFFEAS_HIGH]
+A/ARRIAII_PRIM_DFFEAS_HIGH=22|./src/arriaii_atoms.v|137|1*2396
+B/ARRIAII_PRIM_DFFEAS_HIGH=3*1294
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=424,664,1042,1076
+R=./src/arriaii_atoms.v|137
+
+[arriaii_and1]
+A/arriaii_and1=22|./src/arriaii_atoms.v|350|1*6860
+B/arriaii_and1=3*5288
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_and1=4*2542
+P/~emb=125,274,376,465
+R=./src/arriaii_atoms.v|350
+
+[arriaii_and16]
+A/arriaii_and16=22|./src/arriaii_atoms.v|363|1*7449
+B/arriaii_and16=3*5443
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_and16=4*2697
+P/~emb=139,336,517,808
+R=./src/arriaii_atoms.v|363
+
+[arriaii_and2]
+A/arriaii_and2=22|./src/arriaii_atoms.v|2975|1*37916
+B/arriaii_and2=3*347706
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_and2=4*10678
+P/~emb=154,310,440,568
+R=./src/arriaii_atoms.v|2975
+
+[arriaii_asmiblock]
+A/arriaii_asmiblock=22|./src/arriaii_atoms.v|12423|1*112226
+B/arriaii_asmiblock=3*1864107
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=435,663,865,1004
+R=./src/arriaii_atoms.v|12423
+
+[arriaii_b17mux21]
+A/arriaii_b17mux21=22|./src/arriaii_atoms.v|403|1*8902
+B/arriaii_b17mux21=3*7093
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=199,365,521,611
+R=./src/arriaii_atoms.v|403
+
+[arriaii_b5mux21]
+A/arriaii_b5mux21=22|./src/arriaii_atoms.v|424|1*10118
+B/arriaii_b5mux21=3*9350
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=194,358,514,604
+R=./src/arriaii_atoms.v|424
+
+[arriaii_bmux21]
+A/arriaii_bmux21=22|./src/arriaii_atoms.v|392|1*8279
+B/arriaii_bmux21=3*5599
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=195,359,515,605
+R=./src/arriaii_atoms.v|392
+
+[arriaii_carry_chain_adder]
+A/arriaii_carry_chain_adder=22|./src/arriaii_atoms.v|5279|1*63865
+B/arriaii_carry_chain_adder=3*794472
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_carry_chain_adder=4*17164
+P/~emb=218,416,622,751
+R=./src/arriaii_atoms.v|5279
+
+[arriaii_clkena]
+A/arriaii_clkena=22|./src/arriaii_atoms.v|3086|1*39577
+B/arriaii_clkena=3*351024
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=390,779,1126,1480
+R=./src/arriaii_atoms.v|3086
+
+[arriaii_clkselect]
+A/arriaii_clkselect=22|./src/arriaii_atoms.v|2924|1*36986
+B/arriaii_clkselect=3*347378
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_clkselect=4*9981
+P/~emb=240,501,702,950
+R=./src/arriaii_atoms.v|2924
+
+[arriaii_controller]
+A/arriaii_controller=22|./src/arriaii_atoms.v|14263|1*133761
+B/arriaii_controller=3*2011474
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=159,334,442,524
+R=./src/arriaii_atoms.v|14263
+
+[arriaii_crcblock]
+A/arriaii_crcblock=22|./src/arriaii_atoms.v|14233|1*132992
+B/arriaii_crcblock=3*2010875
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=391,668,844,945
+R=./src/arriaii_atoms.v|14233
+
+[arriaii_ddio_in]
+A/arriaii_ddio_in=22|./src/arriaii_atoms.v|3970|1*49437
+B/arriaii_ddio_in=3*416091
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=605,1104,1651,2243
+R=./src/arriaii_atoms.v|3970
+
+[arriaii_ddio_oe]
+A/arriaii_ddio_oe=22|./src/arriaii_atoms.v|3821|1*48077
+B/arriaii_ddio_oe=3*408676
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=530,1007,1470,2011
+R=./src/arriaii_atoms.v|3821
+
+[arriaii_ddio_out]
+A/arriaii_ddio_out=22|./src/arriaii_atoms.v|3591|1*45964
+B/arriaii_ddio_out=3*394491
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=766,1451,2318,3026
+R=./src/arriaii_atoms.v|3591
+
+[arriaii_ddr_delay_chain_s]
+A/arriaii_ddr_delay_chain_s=22|./src/arriaii_atoms.v|6976|1*75470
+B/arriaii_ddr_delay_chain_s=3*1033006
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=456,921,1425,1594
+R=./src/arriaii_atoms.v|6976
+
+[arriaii_ddr_gray_decoder]
+A/arriaii_ddr_gray_decoder=22|./src/arriaii_atoms.v|6947|1*74629
+B/arriaii_ddr_gray_decoder=3*1025090
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=197,391,604,728
+R=./src/arriaii_atoms.v|6947
+
+[arriaii_ddr_io_reg]
+A/arriaii_ddr_io_reg=22|./src/arriaii_atoms.v|7063|1*76824
+B/arriaii_ddr_io_reg=3*1044500
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_ddr_io_reg=4*17431
+P/~emb=597,962,1376,1696
+R=./src/arriaii_atoms.v|7063
+
+[arriaii_dffe]
+A/arriaii_dffe=22|./src/arriaii_atoms.v|175|1*3189
+B/arriaii_dffe=3*1873
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_dffe=4*0
+P/~emb=239,519,739,938
+R=./src/arriaii_atoms.v|175
+
+[arriaii_dll]
+A/arriaii_dll=22|./src/arriaii_atoms.v|7163|1*78219
+B/arriaii_dll=3*1047666
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_dll=4*18600
+P/~emb=1299,3104,5415,6163
+R=./src/arriaii_atoms.v|7163
+
+[arriaii_dll_offset_ctrl]
+A/arriaii_dll_offset_ctrl=22|./src/arriaii_atoms.v|7886|1*82777
+B/arriaii_dll_offset_ctrl=3*1113814
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_dll_offset_ctrl=4*20009
+P/~emb=681,1539,3019,3403
+R=./src/arriaii_atoms.v|7886
+
+[arriaii_dpa_block]
+A/arriaii_dpa_block=22|./src/arriaii_atoms.v|13390|1*123345
+B/arriaii_dpa_block=3*1946406
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=444,990,1560,2043
+R=./src/arriaii_atoms.v|13390
+
+[arriaii_dpa_retime_block]
+A/arriaii_dpa_retime_block=22|./src/arriaii_atoms.v|13240|1*121960
+B/arriaii_dpa_retime_block=3*1928285
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=755,1160,1847,2101
+R=./src/arriaii_atoms.v|13240
+
+[arriaii_dqs_delay_chain]
+A/arriaii_dqs_delay_chain=22|./src/arriaii_atoms.v|13955|1*129059
+B/arriaii_dqs_delay_chain=3*1985001
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_dqs_delay_chain=4*24306
+P/~emb=962,1739,2458,2739
+R=./src/arriaii_atoms.v|13955
+
+[arriaii_dqs_enable]
+A/arriaii_dqs_enable=22|./src/arriaii_atoms.v|8173|1*85601
+B/arriaii_dqs_enable=3*1136566
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_dqs_enable=4*21882
+P/~emb=311,562,879,1039
+R=./src/arriaii_atoms.v|8173
+
+[arriaii_dqs_enable_ctrl]
+A/arriaii_dqs_enable_ctrl=22|./src/arriaii_atoms.v|14115|1*131099
+B/arriaii_dqs_enable_ctrl=3*2008737
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=382,733,1029,1392
+R=./src/arriaii_atoms.v|14115
+
+[arriaii_ena_reg]
+A/arriaii_ena_reg=22|./src/arriaii_atoms.v|3006|1*38521
+B/arriaii_ena_reg=3*347861
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_ena_reg=4*10911
+P/~emb=245,475,772,950
+R=./src/arriaii_atoms.v|3006
+
+[arriaii_ff]
+A/arriaii_ff=22|./src/arriaii_atoms.v|2759|1*35215
+B/arriaii_ff=3*339016
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_ff=4*8885
+P/~emb=500,923,1485,1810
+R=./src/arriaii_atoms.v|2759
+
+[arriaii_first_stage_add_sub]
+A/arriaii_first_stage_add_sub=22|./src/arriaii_atoms.v|4715|1*56891
+B/arriaii_first_stage_add_sub=3*683836
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_first_stage_add_sub=4*14587
+P/~emb=379,693,977,1125
+R=./src/arriaii_atoms.v|4715
+
+[arriaii_fsa_isse]
+A/arriaii_fsa_isse=22|./src/arriaii_atoms.v|4560|1*55226
+B/arriaii_fsa_isse=3*480918
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1276,1914,3467,3627
+R=./src/arriaii_atoms.v|4560
+
+[arriaii_io_ibuf]
+A/arriaii_io_ibuf=22|./src/arriaii_atoms.v|3384|1*43756
+B/arriaii_io_ibuf=3*380037
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_io_ibuf=4*12441
+P/~emb=290,621,959,1135
+R=./src/arriaii_atoms.v|3384
+
+[arriaii_io_obuf]
+A/arriaii_io_obuf=22|./src/arriaii_atoms.v|3474|1*44764
+B/arriaii_io_obuf=3*386880
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_io_obuf=4*12679
+P/~emb=399,752,1221,1463
+R=./src/arriaii_atoms.v|3474
+
+[arriaii_io_pad]
+A/arriaii_io_pad=22|./src/arriaii_atoms.v|8234|1*86660
+B/arriaii_io_pad=3*1138908
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=180,390,578,714
+R=./src/arriaii_atoms.v|8234
+
+[arriaii_jtag]
+A/arriaii_jtag=22|./src/arriaii_atoms.v|14187|1*132259
+B/arriaii_jtag=3*2010552
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=624,897,1141,1302
+R=./src/arriaii_atoms.v|14187
+
+[arriaii_latch]
+A/arriaii_latch=22|./src/arriaii_atoms.v|224|1*4162
+B/arriaii_latch=3*2704
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_latch=4*1016
+P/~emb=210,411,653,860
+R=./src/arriaii_atoms.v|224
+
+[arriaii_lcell_comb]
+A/arriaii_lcell_comb=22|./src/arriaii_atoms.v|446|1*10742
+B/arriaii_lcell_comb=3*10845
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lcell_comb=4*2854
+P/~emb=1110,1705,3129,3631
+R=./src/arriaii_atoms.v|446
+
+[arriaii_lvds_receiver]
+A/arriaii_lvds_receiver=22|./src/arriaii_atoms.v|13584|1*124787
+B/arriaii_lvds_receiver=3*1963988
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_receiver=4*24073
+P/~emb=1583,2863,4244,5367
+R=./src/arriaii_atoms.v|13584
+
+[arriaii_lvds_reg]
+A/arriaii_lvds_reg=22|./src/arriaii_atoms.v|12987|1*116959
+B/arriaii_lvds_reg=3*1890415
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_reg=4*23138
+P/~emb=247,437,686,847
+R=./src/arriaii_atoms.v|12987
+
+[arriaii_lvds_rx_bitslip]
+A/arriaii_lvds_rx_bitslip=22|./src/arriaii_atoms.v|12687|1*115383
+B/arriaii_lvds_rx_bitslip=3*1880692
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_rx_bitslip=4*22757
+P/~emb=406,1083,1594,1997
+R=./src/arriaii_atoms.v|12687
+
+[arriaii_lvds_rx_deser]
+A/arriaii_lvds_rx_deser=22|./src/arriaii_atoms.v|12851|1*117888
+B/arriaii_lvds_rx_deser=3*1892267
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_rx_deser=4*23595
+P/~emb=310,554,820,973
+R=./src/arriaii_atoms.v|12851
+
+[arriaii_lvds_rx_fifo]
+A/arriaii_lvds_rx_fifo=22|./src/arriaii_atoms.v|12559|1*114050
+B/arriaii_lvds_rx_fifo=3*1873952
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_rx_fifo=4*22394
+P/~emb=322,745,1152,1460
+R=./src/arriaii_atoms.v|12559
+
+[arriaii_lvds_rx_fifo_sync_ram]
+A/arriaii_lvds_rx_fifo_sync_ram=22|./src/arriaii_atoms.v|12459|1*112932
+B/arriaii_lvds_rx_fifo_sync_ram=3*1864435
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=354,647,1112,1301
+R=./src/arriaii_atoms.v|12459
+
+[arriaii_lvds_rx_parallel_reg]
+A/arriaii_lvds_rx_parallel_reg=22|./src/arriaii_atoms.v|12917|1*118870
+B/arriaii_lvds_rx_parallel_reg=3*1896996
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_rx_parallel_reg=4*23827
+P/~emb=378,631,917,1088
+R=./src/arriaii_atoms.v|12917
+
+[arriaii_lvds_transmitter]
+A/arriaii_lvds_transmitter=22|./src/arriaii_atoms.v|1091|1*17310
+B/arriaii_lvds_transmitter=3*56924
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_transmitter=4*6637
+P/~emb=1025,1833,2628,3143
+R=./src/arriaii_atoms.v|1091
+
+[arriaii_lvds_tx_out_block]
+A/arriaii_lvds_tx_out_block=22|./src/arriaii_atoms.v|985|1*16100
+B/arriaii_lvds_tx_out_block=3*51111
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_tx_out_block=4*6058
+P/~emb=381,714,1079,1295
+R=./src/arriaii_atoms.v|985
+
+[arriaii_lvds_tx_parallel_register]
+A/arriaii_lvds_tx_parallel_register=22|./src/arriaii_atoms.v|904|1*14914
+B/arriaii_lvds_tx_parallel_register=3*47110
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_tx_parallel_register=4*5729
+P/~emb=387,707,1065,1297
+R=./src/arriaii_atoms.v|904
+
+[arriaii_lvds_tx_reg]
+A/arriaii_lvds_tx_reg=22|./src/arriaii_atoms.v|834|1*13854
+B/arriaii_lvds_tx_reg=3*45303
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_lvds_tx_reg=4*5202
+P/~emb=253,468,758,954
+R=./src/arriaii_atoms.v|834
+
+[arriaii_m_cntr]
+A/arriaii_m_cntr=22|./src/arriaii_atoms.v|8270|1*87443
+B/arriaii_m_cntr=3*1139549
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=315,592,867,1060
+R=./src/arriaii_atoms.v|8270
+
+[arriaii_mac_mult]
+A/arriaii_mac_mult=22|./src/arriaii_atoms.v|4283|1*53049
+B/arriaii_mac_mult=3*445209
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1072,1842,3422,4013
+R=./src/arriaii_atoms.v|4283
+
+[arriaii_mac_multiplier]
+A/arriaii_mac_multiplier=22|./src/arriaii_atoms.v|4220|1*51938
+B/arriaii_mac_multiplier=3*428902
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_mac_multiplier=4*14164
+P/~emb=416,675,1104,1216
+R=./src/arriaii_atoms.v|4220
+
+[arriaii_mac_out]
+A/arriaii_mac_out=22|./src/arriaii_atoms.v|5326|1*64691
+B/arriaii_mac_out=3*796321
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=4601,8476,17114,20331
+R=./src/arriaii_atoms.v|5326
+
+[arriaii_mac_register]
+A/arriaii_mac_register=22|./src/arriaii_atoms.v|4136|1*50861
+B/arriaii_mac_register=3*424490
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_mac_register=4*13072
+P/~emb=363,696,972,1131
+R=./src/arriaii_atoms.v|4136
+
+[arriaii_mlab_cell]
+A/arriaii_mlab_cell=22|./src/arriaii_atoms.v|3203|1*41626
+B/arriaii_mlab_cell=3*354975
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_mlab_cell=4*11545
+P/~emb=1717,2450,3109,3377
+R=./src/arriaii_atoms.v|3203
+
+[arriaii_mlab_cell_pulse_generator]
+A/arriaii_mlab_cell_pulse_generator=22|./src/arriaii_atoms.v|3161|1*40696
+B/arriaii_mlab_cell_pulse_generator=3*353010
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_mlab_cell_pulse_generator=4*11230
+P/~emb=238,482,711,881
+R=./src/arriaii_atoms.v|3161
+
+[arriaii_mux21]
+A/arriaii_mux21=22|./src/arriaii_atoms.v|282|1*5152
+B/arriaii_mux21=3*3744
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_mux21=4*1665
+P/~emb=175,355,553,697
+R=./src/arriaii_atoms.v|282
+
+[arriaii_mux41]
+A/arriaii_mux41=22|./src/arriaii_atoms.v|309|1*5918
+B/arriaii_mux41=3*4408
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_mux41=4*1971
+P/~emb=246,454,726,912
+R=./src/arriaii_atoms.v|309
+
+[arriaii_n_cntr]
+A/arriaii_n_cntr=22|./src/arriaii_atoms.v|8351|1*88370
+B/arriaii_n_cntr=3*1145031
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=211,461,712,869
+R=./src/arriaii_atoms.v|8351
+
+[arriaii_nmux21]
+A/arriaii_nmux21=22|./src/arriaii_atoms.v|414|1*9527
+B/arriaii_nmux21=3*8589
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=177,337,477,567
+R=./src/arriaii_atoms.v|414
+
+[arriaii_oscillator]
+A/arriaii_oscillator=22|./src/arriaii_atoms.v|1304|1*20215
+B/arriaii_oscillator=3*71735
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_oscillator=4*7148
+P/~emb=218,431,630,775
+R=./src/arriaii_atoms.v|1304
+
+[arriaii_pclk_divider]
+A/arriaii_pclk_divider=22|./src/arriaii_atoms.v|13047|1*119843
+B/arriaii_pclk_divider=3*1900468
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=221,463,771,936
+R=./src/arriaii_atoms.v|13047
+
+[arriaii_pll]
+A/arriaii_pll=22|./src/arriaii_atoms.v|8603|1*90964
+B/arriaii_pll=3*1159878
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_pll=4*22151
+P/~emb=13332,21449,34582,37844
+R=./src/arriaii_atoms.v|8603
+
+[arriaii_pll_reg]
+A/arriaii_pll_reg=22|./src/arriaii_atoms.v|8535|1*90228
+B/arriaii_pll_reg=3*1158043
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=244,431,641,768
+R=./src/arriaii_atoms.v|8535
+
+[arriaii_pseudo_diff_out]
+A/arriaii_pseudo_diff_out=22|./src/arriaii_atoms.v|13909|1*128235
+B/arriaii_pseudo_diff_out=3*1982602
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=221,427,650,791
+R=./src/arriaii_atoms.v|13909
+
+[arriaii_ram_block]
+A/arriaii_ram_block=22|./src/arriaii_atoms.v|1487|1*23595
+B/arriaii_ram_block=3*95177
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=156006,159057,163961,166478
+R=./src/arriaii_atoms.v|1487
+
+[arriaii_ram_pulse_generator]
+A/arriaii_ram_pulse_generator=22|./src/arriaii_atoms.v|1356|1*21114
+B/arriaii_ram_pulse_generator=3*73649
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_ram_pulse_generator=4*7339
+P/~emb=300,570,852,1021
+R=./src/arriaii_atoms.v|1356
+
+[arriaii_ram_register]
+A/arriaii_ram_register=22|./src/arriaii_atoms.v|1404|1*22182
+B/arriaii_ram_register=3*77168
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_ram_register=4*7642
+P/~emb=435,767,1221,1469
+R=./src/arriaii_atoms.v|1404
+
+[arriaii_rotate_shift_block]
+A/arriaii_rotate_shift_block=22|./src/arriaii_atoms.v|5229|1*62830
+B/arriaii_rotate_shift_block=3*791222
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_rotate_shift_block=4*16807
+P/~emb=421,714,986,1121
+R=./src/arriaii_atoms.v|5229
+
+[arriaii_round_block]
+A/arriaii_round_block=22|./src/arriaii_atoms.v|4889|1*59286
+B/arriaii_round_block=3*748007
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=361,686,1036,1230
+R=./src/arriaii_atoms.v|4889
+
+[arriaii_round_saturate_block]
+A/arriaii_round_saturate_block=22|./src/arriaii_atoms.v|5146|1*61585
+B/arriaii_round_saturate_block=3*788970
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_round_saturate_block=4*15823
+P/~emb=667,1090,1508,1814
+R=./src/arriaii_atoms.v|5146
+
+[arriaii_routing_wire]
+A/arriaii_routing_wire=22|./src/arriaii_atoms.v|798|1*13113
+B/arriaii_routing_wire=3*44824
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_routing_wire=4*5022
+P/~emb=159,331,479,603
+R=./src/arriaii_atoms.v|798
+
+[arriaii_rublock]
+A/arriaii_rublock=22|./src/arriaii_atoms.v|1267|1*19447
+B/arriaii_rublock=3*71137
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=473,760,967,1098
+R=./src/arriaii_atoms.v|1267
+
+[arriaii_saturate_block]
+A/arriaii_saturate_block=22|./src/arriaii_atoms.v|4979|1*60298
+B/arriaii_saturate_block=3*761595
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=653,1143,1771,2027
+R=./src/arriaii_atoms.v|4979
+
+[arriaii_scale_cntr]
+A/arriaii_scale_cntr=22|./src/arriaii_atoms.v|8422|1*89217
+B/arriaii_scale_cntr=3*1149209
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=381,740,1084,1314
+R=./src/arriaii_atoms.v|8422
+
+[arriaii_second_stage_add_accum]
+A/arriaii_second_stage_add_accum=22|./src/arriaii_atoms.v|4777|1*57943
+B/arriaii_second_stage_add_accum=3*694952
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_second_stage_add_accum=4*14938
+P/~emb=505,913,1297,1475
+R=./src/arriaii_atoms.v|4777
+
+[arriaii_select_ini_phase_dpaclk]
+A/arriaii_select_ini_phase_dpaclk=22|./src/arriaii_atoms.v|13122|1*120760
+B/arriaii_select_ini_phase_dpaclk=3*1910593
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=324,746,1327,1492
+R=./src/arriaii_atoms.v|13122
+
+[arriaii_spiblock]
+A/arriaii_spiblock=22|./src/arriaii_atoms.v|14282|1*134388
+B/arriaii_spiblock=3*2011803
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=393,609,791,927
+R=./src/arriaii_atoms.v|14282
+
+[arriaii_termination]
+A/arriaii_termination=22|./src/arriaii_atoms.v|14358|1*135871
+B/arriaii_termination=3*2013775
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=911,1379,1800,2036
+R=./src/arriaii_atoms.v|14358
+
+[arriaii_termination_logic]
+A/arriaii_termination_logic=22|./src/arriaii_atoms.v|14316|1*134965
+B/arriaii_termination_logic=3*2011962
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=375,625,843,949
+R=./src/arriaii_atoms.v|14316
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, ARRIAII VERILOG LIBRARY.
+LastVerilogToplevel=arriaii_termination
+ModifyID=662
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/arriaii_atoms.v=0*179151*287693
+
+[~MFT]
+0=83|0ovi_arriaii.mgf|287693|0
+1=81|1ovi_arriaii.mgf|135871|0
+3=81|3ovi_arriaii.mgf|2013775|0
+4=41|4ovi_arriaii.mgf|24306|0
+
+[~U]
+$root=12|0*0|
+ARRIAII_PRIM_DFFE=12|0*838||0xa0
+ARRIAII_PRIM_DFFEAS=12|0*1656||0xa0
+ARRIAII_PRIM_DFFEAS_HIGH=12|0*2444||0xa0
+arriaii_and1=12|0*6540||0x90
+arriaii_and16=12|0*6969||0x90
+arriaii_and2=12|0*42396||0x80
+arriaii_asmiblock=12|0*151328||0x90
+arriaii_b17mux21=12|0*8086||0x90
+arriaii_b5mux21=12|0*9046||0x90
+arriaii_bmux21=12|0*7607||0x90
+arriaii_carry_chain_adder=12|0*73417||0x80
+arriaii_clkena=12|0*43881||0x90
+arriaii_clkselect=12|0*41578||0x90
+arriaii_controller=12|0*175997||0x90
+arriaii_crcblock=12|0*175356||0x90
+arriaii_ddio_in=12|0*55197||0x90
+arriaii_ddio_oe=12|0*53501||0x90
+arriaii_ddio_out=12|0*50876||0x90
+arriaii_ddr_delay_chain_s=12|0*91470||0x90
+arriaii_ddr_gray_decoder=12|0*90789||0x80
+arriaii_ddr_io_reg=12|0*92952||0x90
+arriaii_dffe=12|0*3253||0x90
+arriaii_dll=12|0*94283||0x90
+arriaii_dll_offset_ctrl=12|0*101863||0x90
+arriaii_dpa_block=12|0*163951||0x80
+arriaii_dpa_retime_block=12|0*162294||0x80
+arriaii_dqs_delay_chain=12|0*171103||0x90
+arriaii_dqs_enable=12|0*105615||0x90
+arriaii_dqs_enable_ctrl=12|0*173559||0x90
+arriaii_ena_reg=12|0*42873||0x80
+arriaii_ff=12|0*39663||0x90
+arriaii_first_stage_add_sub=12|0*64923||0x80
+arriaii_fsa_isse=12|0*62394||0x80
+arriaii_io_ibuf=12|0*48220||0x90
+arriaii_io_obuf=12|0*49420||0x90
+arriaii_io_pad=12|0*106514||0x90
+arriaii_jtag=12|0*174655||0x90
+arriaii_latch=12|0*4210||0x90
+arriaii_lcell_comb=12|0*9526||0x90
+arriaii_lvds_receiver=12|0*166113||0x90
+arriaii_lvds_reg=12|0*157085||0x80
+arriaii_lvds_rx_bitslip=12|0*154869||0x80
+arriaii_lvds_rx_deser=12|0*157902||0x80
+arriaii_lvds_rx_fifo=12|0*153264||0x80
+arriaii_lvds_rx_fifo_sync_ram=12|0*151938||0x80
+arriaii_lvds_rx_parallel_reg=12|0*158852||0x80
+arriaii_lvds_transmitter=12|0*17118||0x90
+arriaii_lvds_tx_out_block=12|0*15844||0x80
+arriaii_lvds_tx_parallel_register=12|0*14642||0x80
+arriaii_lvds_tx_reg=12|0*13694||0x80
+arriaii_m_cntr=12|0*107089||0x80
+arriaii_mac_mult=12|0*59257||0x90
+arriaii_mac_multiplier=12|0*58194||0x80
+arriaii_mac_out=12|0*74115||0x90
+arriaii_mac_register=12|0*57053||0x80
+arriaii_mlab_cell=12|0*45882||0x90
+arriaii_mlab_cell_pulse_generator=12|0*45064||0x80
+arriaii_mux21=12|0*5088||0x80
+arriaii_mux41=12|0*5726||0x80
+arriaii_n_cntr=12|0*108080||0x80
+arriaii_nmux21=12|0*8583||0x90
+arriaii_oscillator=12|0*20487||0x90
+arriaii_pclk_divider=12|0*159825||0x80
+arriaii_pll=12|0*110962||0x90
+arriaii_pll_reg=12|0*110274||0x90
+arriaii_pseudo_diff_out=12|0*170407||0x90
+arriaii_ram_block=12|0*23547||0x90
+arriaii_ram_pulse_generator=12|0*21194||0x80
+arriaii_ram_register=12|0*22150||0x80
+arriaii_rotate_shift_block=12|0*72414||0x80
+arriaii_round_block=12|0*67654||0x80
+arriaii_round_saturate_block=12|0*71121||0x80
+arriaii_routing_wire=12|0*13177||0x90
+arriaii_rublock=12|0*19783||0x90
+arriaii_saturate_block=12|0*68970||0x80
+arriaii_scale_cntr=12|0*108959||0x80
+arriaii_second_stage_add_accum=12|0*66055||0x80
+arriaii_select_ini_phase_dpaclk=12|0*160790||0x80
+arriaii_spiblock=12|0*176416||0x90
+arriaii_termination=12|0*177691||0x90
+arriaii_termination_logic=12|0*176961||0x90
+

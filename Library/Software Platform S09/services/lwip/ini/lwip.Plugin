@@ -1,0 +1,57 @@
+[Plugin]
+Name=lwip
+Caption=TCP/IP Networking
+Description=TCP/IP Internet protocol suite 
+SourceDir=services\lwip\src
+Implement=lwip
+Bitmap=lwip.bmp
+
+[Option0]
+Name=userheader
+Description=If this option is set, the user can supply its own lwipopts_user.h file in the project dircetory. If not set a generic default set will be used suitable for basic TCPIP usage.
+Kind=BOOLEAN
+DefaultValue=False
+
+[Instance]
+Caption=TCP/IP Networking Context
+Description=TCP/IP over Ethernet context 
+Require0=ethernet
+
+[Instance_Option0]
+Name=ipaddr
+Description=IP address
+Kind=ARRAY
+Type=UINT8
+Size=4
+DefaultValue=192,168,1,1
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option1]
+Name=netmask
+Description=Netmask
+Kind=ARRAY
+Type=UINT8
+Size=4
+DefaultValue=255,255,255,0
+MinRange=0
+MaxRange=255
+Auto=False
+
+[Instance_Option2]
+Name=gw
+Description=Gateway IP address
+Kind=ARRAY
+Type=UINT8
+Size=4
+DefaultValue=192,168,1,254
+MinRange=0
+MaxRange=255
+Auto=False
+
+
+
+
+
+

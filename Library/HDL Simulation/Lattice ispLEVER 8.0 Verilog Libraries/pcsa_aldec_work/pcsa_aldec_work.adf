@@ -1,0 +1,29 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=pcsa_aldec_work
+
+[Library]
+pcsa_aldec_work=.\pcsa_aldec_work.LIB
+
+[$LibMap$]
+pcsa_aldec_work=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+

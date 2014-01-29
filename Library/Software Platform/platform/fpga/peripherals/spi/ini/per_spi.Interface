@@ -1,0 +1,6 @@
+[Interface]
+Name=per_spi
+Category=PERIPHERAL
+System=False
+Description=SPI controller peripheral
+PublicDir=platform\fpga\peripherals\spi\include

@@ -1,0 +1,5 @@
+[Interface]
+Name=blockio
+Category=SERVICE
+Description=Blockio services (Posix + bread, bwrite, bflush, ...)
+PublicDir=services\posix\devio\blockio\include

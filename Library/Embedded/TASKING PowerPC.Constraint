@@ -1,0 +1,22 @@
+;...............................................................................
+;Constraints File
+;   Device  :
+;   Board   :
+;   Project :
+;
+;   Created 21/10/2004
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+; Defines the processor's bus layout
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Internal-Memory | Memory_BusName=Main |  Memory_Width=32 | Memory_Depth=0x01000000 | ProgramDownloadAddress=0x00000000 | Memory_BusType=PPC:local_bus | Memory_Description =Where the{n}boot code resides
+Record=BUS_LAYOUT_INFO | ComponentDesignator=External-Memory | Memory_BusName=Main |  Memory_Width=32 | Memory_Depth=0xFE000000 | ProgramDownloadAddress=0x01000000 | Memory_BusType=PPC:local_bus | Memory_Description =
+Record=BUS_LAYOUT_INFO | ComponentDesignator=Processor I/O   | Memory_BusName=Main |  Memory_Width=32 | Memory_Depth=0x01000000 | ProgramDownloadAddress=0xFF000000 | Memory_BusType=PPC:local_bus | Memory_Description =Memory Mapped I/O | Memory_MappedIO=True
+                                                        
+; Defines the processor's memory layout on the buses
+Record=NEXUS_CORE | ComponentDesignator=Internal_RAM | Memory_Width=32 | Memory_Depth=16k   | Memory_UsageType=nvram | ProgramDownloadAddress=0x00000000 | Memory_BusType=PPC:local_bus
+Record=NEXUS_CORE | ComponentDesignator=Daughter_RAM | Memory_Width=32 | Memory_Depth=1024k  | Memory_UsageType=ram | ProgramDownloadAddress=0x01000000 | Memory_BusType=PPC:local_bus | Default=True
+

@@ -1,0 +1,11 @@
+[Plugin]
+Name=ad_ps2mouse_to_pointer
+Description=Adapts the PS2MOUSE driver to POINTER platform level.
+SourceDir=services\platform\pointer\adaptors\ps2mouse\src
+Implement=ad_pointer
+InitHandler=ps2mouse_to_pointer_init
+InitHandlerPriority=16
+
+[Instance]
+Require0=drv_ps2mouse
+

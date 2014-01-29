@@ -1,0 +1,40 @@
+[Plugin]
+Name=per_uart8
+Implement=per_uart8
+HardwareID=WB_UART8_V2
+Caption=UART Serial Port
+Description=Full duplex 8-bit UART serial communications port (no parity, 8 data bits and 1 stop bit).
+Bitmap=per_uart8.bmp
+LargeBitmap=per_uart8_large.bmp
+HardwareID1=WB_MIDI
+Caption1=MIDI Port
+Description1=UART interface on MIDI port
+Bitmap1=per_midi.bmp
+LargeBitmap1=per_midi_large.bmp
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=baseaddress
+GUIName=Base Address
+Description=hardware base address
+Kind=UINT32
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=interrupt0
+GUIName=TX Interrupt
+CodeName=tx_interrupt
+Description=tx interrupt number
+Kind=INTERRUPT
+Auto=True
+
+[Instance_Option2]
+Name=interrupt1
+GUIName=RX Interrupt
+CodeName=rx_interrupt
+Description=rx interrupt number
+Kind=INTERRUPT
+Auto=True

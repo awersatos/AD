@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=stratixiigx
+
+[Library]
+stratixiigx=.\stratixiigx.lib
+
+[$LibMap$]
+stratixiigx=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+
+[Files]
+/update_stratixiigx.do=-1
+/stratixiigx_atoms.vhd=-1
+/stratixiigx_components.vhd=-1
+
+[Files.Data]
+.\src\update_stratixiigx.do=Macro
+.\src\stratixiigx_atoms.vhd=VHDL Source Code
+.\src\stratixiigx_components.vhd=VHDL Source Code
+

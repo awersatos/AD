@@ -1,0 +1,7 @@
+*1N4149 MCE 3-13-97
+*Ref: National Discrete Products Databook, 1996
+*75V 10mA Si Computer Diode pkg:DIODE0.4 1,2
+.MODEL 1N4149 D (IS=14.2P RS=4.2 N=1.7 BV=75 IBV=5U
++ CJO=1.74P VJ=0.75 M=0.333 TT=4.32N)
+
+

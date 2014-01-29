@@ -1,0 +1,25 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=lat_vhd
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+lat_vhd=.
+
+[Library]
+lat_vhd=.\lat_vhd.LIB
+
+[Files]
+/func.vhd=-1
+/update_lat_vhd.do=-1
+
+[Files.Data]
+.\src\func.vhd=VHDL Source Code
+.\src\update_lat_vhd.do=Macro
+

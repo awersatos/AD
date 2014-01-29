@@ -1,0 +1,169 @@
+timestamp=0
+
+[addmacc_macro]
+A/addmacc=21|./src/ADDMACC_MACRO.vhd|58|1*172796
+B/addmacc=3*2368921
+C=8.2.1986.SP1.35.3497  (Windows)
+C/addmacc=8.2.1986.SP1.35.3497  (Windows)
+I=0*598997
+I/addmacc=0*608341
+M=11|0|v63|0|./src/ADDMACC_MACRO.vhd|0*598047*0xda13dcdeb5c02e94867473760dd2f8d193ffb26a|0*598925*0x4ace356d5b51cb5a507be15551d3bb15
+M/addmacc=21|0|v63|0|./src/ADDMACC_MACRO.vhd|0*599351*0x57a8c31d929738b0cf2ad983991a7fdb471ac1a7|0*608258*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/ADDMACC_MACRO.vhd|35
+
+[addsub_macro]
+A/addsub=21|./src/ADDSUB_MACRO.vhd|60|1*136497
+B/addsub=3*2240298
+C=8.2.1986.SP1.35.3497  (Windows)
+C/addsub=8.2.1986.SP1.35.3497  (Windows)
+I=0*540661
+I/addsub=0*548200
+M=11|0|v63|0|./src/ADDSUB_MACRO.vhd|0*539776*0x283ddaa56c02da4c6123d5f0d3d6a177d9d1eeb6|0*540591*0x4ace356d5b51cb5a507be15551d3bb15
+M/addsub=21|0|v63|0|./src/ADDSUB_MACRO.vhd|0*541014*0x22c819f10ab69c9a3da4b27d981fdb4a1eaa99a2|0*548120*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/ADDSUB_MACRO.vhd|35
+
+[bram_sdp_macro]
+A/bram_v=A/bram_V 21|./src/BRAM_SDP_MACRO.vhd|208|1*4112
+B/bram_v=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+C/bram_v=8.2.1986.SP1.35.3497  (Windows)
+I=0*216513
+I/bram_v=I/bram_V 0*279931
+M=11|0|v63|0|./src/BRAM_SDP_MACRO.vhd|0*163986*0x67e88aae9dc9a8661a60be8a8ad7f2523e3a6ec2|0*216439*0x4ace356d5b51cb5a507be15551d3bb15
+M/bram_v=M/bram_V 21|0|v63|0|./src/BRAM_SDP_MACRO.vhd|0*216756*0x644aaba2796a1cec3708d5e15ff29697d1bf230e|0*279847*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/BRAM_SDP_MACRO.vhd|30
+
+[bram_single_macro]
+A/bram_v=A/bram_V 21|./src/BRAM_SINGLE_MACRO.vhd|205|1*50845
+B/bram_v=3*834140
+C=8.2.1986.SP1.35.3497  (Windows)
+C/bram_v=8.2.1986.SP1.35.3497  (Windows)
+I=0*333655
+I/bram_v=I/bram_V 0*396355
+M=11|0|v63|0|./src/BRAM_SINGLE_MACRO.vhd|0*281195*0x2813ff50a6d6228f1b3187cdb15fe3208c643012|0*333575*0x4ace356d5b51cb5a507be15551d3bb15
+M/bram_v=M/bram_V 21|0|v63|0|./src/BRAM_SINGLE_MACRO.vhd|0*333901*0x40c43091f578df4897513b2a14ff29fa30603f12|0*396265*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/BRAM_SINGLE_MACRO.vhd|32
+
+[bram_tdp_macro]
+A/bram_v=A/bram_V 21|./src/BRAM_TDP_MACRO.vhd|218|1*91418
+B/bram_v=3*1628152
+C=8.2.1986.SP1.35.3497  (Windows)
+C/bram_v=8.2.1986.SP1.35.3497  (Windows)
+I=0*450541
+I/bram_v=I/bram_V 0*502537
+M=11|0|v63|0|./src/BRAM_TDP_MACRO.vhd|0*397635*0xe6c4f87e007f86a37da0fd5afe11f3a0b486960b|0*450467*0x4ace356d5b51cb5a507be15551d3bb15
+M/bram_v=M/bram_V 21|0|v63|0|./src/BRAM_TDP_MACRO.vhd|0*450784*0x7076bb2cd1c4e633dcac4d7a8f54e9c829525dcc|0*502453*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/BRAM_TDP_MACRO.vhd|30
+
+[counter_load_macro]
+A/counter=21|./src/COUNTER_LOAD_MACRO.vhd|53|1*142798
+B/counter=3*2262377
+C=8.2.1986.SP1.35.3497  (Windows)
+C/counter=8.2.1986.SP1.35.3497  (Windows)
+I=0*549806
+I/counter=0*556004
+M=11|0|v63|0|./src/COUNTER_LOAD_MACRO.vhd|0*548967*0xb1274c2a647abb47f5c0f9119c28f8c2779eb864|0*549724*0x4ace356d5b51cb5a507be15551d3bb15
+M/counter=21|0|v63|0|./src/COUNTER_LOAD_MACRO.vhd|0*550165*0xd3877a75af0901c069fbdc2410b26b009e50fcab|0*555911*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/COUNTER_LOAD_MACRO.vhd|34
+
+[counter_tc_macro]
+A/count=21|./src/COUNTER_TC_MACRO.vhd|54|1*148428
+B/count=3*2275925
+C=8.2.1986.SP1.35.3497  (Windows)
+C/count=8.2.1986.SP1.35.3497  (Windows)
+I=0*557721
+I/count=0*563893
+M=11|0|v63|0|./src/COUNTER_TC_MACRO.vhd|0*556808*0x090fc4fb92a1d408dd3e1f999a29a7361293e822|0*557643*0x4ace356d5b51cb5a507be15551d3bb15
+M/count=21|0|v63|0|./src/COUNTER_TC_MACRO.vhd|0*558078*0x6d7f58117a7d12c3281704c4ff7f5e53b8c99933|0*563806*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/COUNTER_TC_MACRO.vhd|34
+
+[eq_compare_macro]
+A/compare=21|./src/EQ_COMPARE_MACRO.vhd|55|1*153448
+B/compare=3*2287327
+C=8.2.1986.SP1.35.3497  (Windows)
+C/compare=8.2.1986.SP1.35.3497  (Windows)
+I=0*565620
+I/compare=0*572584
+M=11|0|v63|0|./src/EQ_COMPARE_MACRO.vhd|0*564661*0x02e2807af2e004c35e43b496977a8c25cfd21f9c|0*565542*0x4ace356d5b51cb5a507be15551d3bb15
+M/compare=21|0|v63|0|./src/EQ_COMPARE_MACRO.vhd|0*565977*0x580ca8cbfca8257f2ad8a7fb73e054d4c78515c7|0*572495*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/EQ_COMPARE_MACRO.vhd|34
+
+[fifo_dualclock_macro]
+A/fifo_v=A/fifo_V 21|./src/FIFO_DUALCLOCK_MACRO.vhd|66|1*124535
+B/fifo_v=3*2127088
+C=8.2.1986.SP1.35.3497  (Windows)
+C/fifo_v=8.2.1986.SP1.35.3497  (Windows)
+I=0*504684
+I/fifo_v=I/fifo_V 0*520745
+M=11|0|v63|0|./src/FIFO_DUALCLOCK_MACRO.vhd|0*503372*0xc8a84551451b61c41e4c7a132b34f7b178019e73|0*504598*0x4ace356d5b51cb5a507be15551d3bb15
+M/fifo_v=M/fifo_V 21|0|v63|0|./src/FIFO_DUALCLOCK_MACRO.vhd|0*504981*0x408733a4f096494f41ad8b72147e690e96f2a5c7|0*520649*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/FIFO_DUALCLOCK_MACRO.vhd|32
+
+[fifo_sync_macro]
+A/fifo_v=A/fifo_V 21|./src/FIFO_SYNC_MACRO.vhd|65|1*130516
+B/fifo_v=3*2183443
+C=8.2.1986.SP1.35.3497  (Windows)
+C/fifo_v=8.2.1986.SP1.35.3497  (Windows)
+I=0*522832
+I/fifo_v=I/fifo_V 0*538980
+M=11|0|v63|0|./src/FIFO_SYNC_MACRO.vhd|0*521597*0x223fa96fac2909831381f23bc0d2ad13413bf0a2|0*522756*0x4ace356d5b51cb5a507be15551d3bb15
+M/fifo_v=M/fifo_V 21|0|v63|0|./src/FIFO_SYNC_MACRO.vhd|0*523124*0x06f95417697a7f72ddbe5789b6577e132f7c2166|0*538894*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/FIFO_SYNC_MACRO.vhd|32
+
+[macc_macro]
+A/macc=21|./src/MACC_MACRO.vhd|58|1*158710
+B/macc=3*2307599
+C=8.2.1986.SP1.35.3497  (Windows)
+C/macc=8.2.1986.SP1.35.3497  (Windows)
+I=0*574167
+I/macc=0*584845
+M=11|0|v63|0|./src/MACC_MACRO.vhd|0*573332*0x649a56b8a6c034a80301370d9c5cc736ff092ac9|0*574101*0x4ace356d5b51cb5a507be15551d3bb15
+M/macc=21|0|v63|0|./src/MACC_MACRO.vhd|0*574518*0x717d57886e027438fa0ecc1b4a25affcb7e2fbe5|0*584771*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/MACC_MACRO.vhd|35
+
+[mult_macro]
+A/mult=21|./src/MULT_MACRO.vhd|54|1*165793
+B/mult=3*2339684
+C=8.2.1986.SP1.35.3497  (Windows)
+C/mult=8.2.1986.SP1.35.3497  (Windows)
+I=0*586327
+I/mult=0*597257
+M=11|0|v63|0|./src/MULT_MACRO.vhd|0*585600*0x2ccb21ae6c5650ef4b4604d682de93fd85b3aeab|0*586261*0x4ace356d5b51cb5a507be15551d3bb15
+M/mult=21|0|v63|0|./src/MULT_MACRO.vhd|0*586678*0x831dcba9e00822bca14091af4a6f8a138a4981e2|0*597183*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/MULT_MACRO.vhd|35
+
+[vcomponents]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*163039
+M=3|0|v63|0|./src/unimacro_VCOMP.vhd|0*414*0x0a2bc6dbee6d0f259eef58c994afe01e37dd609d|0*162968*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/unimacro_VCOMP.vhd|13
+
+[~A]
+Comment=XILINX ISE 12.1, UNIMACRO VHDL LIBRARY
+ModifyID=76
+ReadOnly=1
+Standard=1
+Vendor=XILINX
+Version=73
+
+[~MFT]
+0=88|0unimacro.mgf|608341|0
+1=12|1unimacro.mgf|172796|0
+3=11|3unimacro.mgf|2368921|0
+
+[~U]
+addmacc_macro=ADDMACC_MACRO 11|0*597709|
+addsub_macro=ADDSUB_MACRO 11|0*539439|
+bram_sdp_macro=BRAM_SDP_MACRO 11|0*163199|
+bram_single_macro=BRAM_SINGLE_MACRO 11|0*280421|
+bram_tdp_macro=BRAM_TDP_MACRO 11|0*396784|
+counter_load_macro=COUNTER_LOAD_MACRO 11|0*548656|
+counter_tc_macro=COUNTER_TC_MACRO 11|0*556467|
+eq_compare_macro=EQ_COMPARE_MACRO 11|0*564320|
+fifo_dualclock_macro=FIFO_DUALCLOCK_MACRO 11|0*502963|
+fifo_sync_macro=FIFO_SYNC_MACRO 11|0*521209|
+macc_macro=MACC_MACRO 11|0*573013|
+mult_macro=MULT_MACRO 11|0*585297|
+vcomponents=VCOMPONENTS 3|0*0|0*127
+

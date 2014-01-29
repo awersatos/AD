@@ -1,0 +1,647 @@
+V 000056 56 16675 1260919806346 stratixiv_hssi_pcie_hip
+(_unit stratixiv_hssi_pcie_hip
+	(_specify
+		(_tchk setuphold 0 233286
+			(_port pldclk (posedge))
+			(_port corecrst ())
+		)
+		(_tchk setuphold 0 233287
+			(_port pldclk (posedge))
+			(_port coresrst ())
+		)
+		(_tchk setuphold 0 233288
+			(_port pldclk (posedge))
+			(_port cplerr ())
+		)
+		(_tchk setuphold 0 233289
+			(_port pldclk (posedge))
+			(_port cplpending ())
+		)
+		(_tchk setuphold 0 233290
+			(_port pldclk (posedge))
+			(_port dlctrllink2 ())
+		)
+		(_tchk setuphold 0 233291
+			(_port pldclk (posedge))
+			(_port dldataupfc ())
+		)
+		(_tchk setuphold 0 233292
+			(_port pldclk (posedge))
+			(_port dlhdrupfc ())
+		)
+		(_tchk setuphold 0 233293
+			(_port pldclk (posedge))
+			(_port dlinhdllp ())
+		)
+		(_tchk setuphold 0 233294
+			(_port pldclk (posedge))
+			(_port dlmaxploaddcr ())
+		)
+		(_tchk setuphold 0 233295
+			(_port pldclk (posedge))
+			(_port dlreqphycfg ())
+		)
+		(_tchk setuphold 0 233296
+			(_port pldclk (posedge))
+			(_port dlreqphypm ())
+		)
+		(_tchk setuphold 0 233297
+			(_port pldclk (posedge))
+			(_port dlrequpfc ())
+		)
+		(_tchk setuphold 0 233298
+			(_port pldclk (posedge))
+			(_port dlreqwake ())
+		)
+		(_tchk setuphold 0 233299
+			(_port pldclk (posedge))
+			(_port dlrxecrcchk ())
+		)
+		(_tchk setuphold 0 233300
+			(_port pldclk (posedge))
+			(_port dlsndupfc ())
+		)
+		(_tchk setuphold 0 233301
+			(_port pldclk (posedge))
+			(_port dltxcfgextsy ())
+		)
+		(_tchk setuphold 0 233302
+			(_port pldclk (posedge))
+			(_port dltxreqpm ())
+		)
+		(_tchk setuphold 0 233303
+			(_port pldclk (posedge))
+			(_port dltxtyppm ())
+		)
+		(_tchk setuphold 0 233304
+			(_port pldclk (posedge))
+			(_port dltypupfc ())
+		)
+		(_tchk setuphold 0 233305
+			(_port pldclk (posedge))
+			(_port dlvcctrl ())
+		)
+		(_tchk setuphold 0 233306
+			(_port pldclk (posedge))
+			(_port dlvcidmap ())
+		)
+		(_tchk setuphold 0 233307
+			(_port pldclk (posedge))
+			(_port dlvcidupfc ())
+		)
+		(_tchk setuphold 0 233308
+			(_port pldclk (posedge))
+			(_port lmiaddr ())
+		)
+		(_tchk setuphold 0 233309
+			(_port pldclk (posedge))
+			(_port lmidin ())
+		)
+		(_tchk setuphold 0 233310
+			(_port pldclk (posedge))
+			(_port lmirden ())
+		)
+		(_tchk setuphold 0 233311
+			(_port pldclk (posedge))
+			(_port lmiwren ())
+		)
+		(_tchk setuphold 0 233312
+			(_port pldclk (posedge))
+			(_port physrst ())
+		)
+		(_tchk setuphold 0 233313
+			(_port pldclk (posedge))
+			(_port pldsrst ())
+		)
+		(_tchk setuphold 0 233314
+			(_port pldclk (posedge))
+			(_port rxmaskvc0 ())
+		)
+		(_tchk setuphold 0 233315
+			(_port pldclk (posedge))
+			(_port rxmaskvc1 ())
+		)
+		(_tchk setuphold 0 233316
+			(_port pldclk (posedge))
+			(_port rxreadyvc0 ())
+		)
+		(_tchk setuphold 0 233317
+			(_port pldclk (posedge))
+			(_port rxreadyvc1 ())
+		)
+		(_tchk setuphold 0 233318
+			(_port pldclk (posedge))
+			(_port swdnin ())
+		)
+		(_tchk setuphold 0 233319
+			(_port pldclk (posedge))
+			(_port swupin ())
+		)
+		(_tchk setuphold 0 233320
+			(_port pldclk (posedge))
+			(_port tlaermsinum ())
+		)
+		(_tchk setuphold 0 233321
+			(_port pldclk (posedge))
+			(_port tlappintasts ())
+		)
+		(_tchk setuphold 0 233322
+			(_port pldclk (posedge))
+			(_port tlappmsinum ())
+		)
+		(_tchk setuphold 0 233323
+			(_port pldclk (posedge))
+			(_port tlappmsireq ())
+		)
+		(_tchk setuphold 0 233324
+			(_port pldclk (posedge))
+			(_port tlappmsitc ())
+		)
+		(_tchk setuphold 0 233325
+			(_port pldclk (posedge))
+			(_port tlhpgctrler ())
+		)
+		(_tchk setuphold 0 233326
+			(_port pldclk (posedge))
+			(_port tlpexmsinum ())
+		)
+		(_tchk setuphold 0 233327
+			(_port pldclk (posedge))
+			(_port tlpmauxpwr ())
+		)
+		(_tchk setuphold 0 233328
+			(_port pldclk (posedge))
+			(_port tlpmdata ())
+		)
+		(_tchk setuphold 0 233329
+			(_port pldclk (posedge))
+			(_port tlpmetocr ())
+		)
+		(_tchk setuphold 0 233330
+			(_port pldclk (posedge))
+			(_port tlpmevent ())
+		)
+		(_tchk setuphold 0 233331
+			(_port pldclk (posedge))
+			(_port txdatavc00 ())
+		)
+		(_tchk setuphold 0 233332
+			(_port pldclk (posedge))
+			(_port txdatavc01 ())
+		)
+		(_tchk setuphold 0 233333
+			(_port pldclk (posedge))
+			(_port txdatavc10 ())
+		)
+		(_tchk setuphold 0 233334
+			(_port pldclk (posedge))
+			(_port txdatavc11 ())
+		)
+		(_tchk setuphold 0 233335
+			(_port pldclk (posedge))
+			(_port txeopvc00 ())
+		)
+		(_tchk setuphold 0 233336
+			(_port pldclk (posedge))
+			(_port txeopvc01 ())
+		)
+		(_tchk setuphold 0 233337
+			(_port pldclk (posedge))
+			(_port txeopvc10 ())
+		)
+		(_tchk setuphold 0 233338
+			(_port pldclk (posedge))
+			(_port txeopvc11 ())
+		)
+		(_tchk setuphold 0 233339
+			(_port pldclk (posedge))
+			(_port txerrvc0 ())
+		)
+		(_tchk setuphold 0 233340
+			(_port pldclk (posedge))
+			(_port txerrvc1 ())
+		)
+		(_tchk setuphold 0 233341
+			(_port pldclk (posedge))
+			(_port txsopvc00 ())
+		)
+		(_tchk setuphold 0 233342
+			(_port pldclk (posedge))
+			(_port txsopvc01 ())
+		)
+		(_tchk setuphold 0 233343
+			(_port pldclk (posedge))
+			(_port txsopvc10 ())
+		)
+		(_tchk setuphold 0 233344
+			(_port pldclk (posedge))
+			(_port txsopvc11 ())
+		)
+		(_tchk setuphold 0 233345
+			(_port pldclk (posedge))
+			(_port txvalidvc0 ())
+		)
+		(_tchk setuphold 0 233346
+			(_port pldclk (posedge))
+			(_port txvalidvc1 ())
+		)
+		(_modpath parallel positive 0 233349
+			(_port pldclk in posedge)
+			(_port clrrxpath out posedge)
+			(_datain clrrxpath_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233350
+			(_port pldclk in posedge)
+			(_port dlackphypm out posedge)
+			(_datain dlackphypm_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233351
+			(_port pldclk in posedge)
+			(_port dlackrequpfc out posedge)
+			(_datain dlackrequpfc_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233352
+			(_port pldclk in posedge)
+			(_port dlacksndupfc out posedge)
+			(_datain dlacksndupfc_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233353
+			(_port pldclk in posedge)
+			(_port dlcurrentdeemp out posedge)
+			(_datain dlcurrentdeemp_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233354
+			(_port pldclk in posedge)
+			(_port dlcurrentspeed out posedge)
+			(_datain dlcurrentspeed_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233355
+			(_port pldclk in posedge)
+			(_port dldllreq out posedge)
+			(_datain dldllreq_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233356
+			(_port pldclk in posedge)
+			(_port dlerrdll out posedge)
+			(_datain dlerrdll_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233357
+			(_port pldclk in posedge)
+			(_port dlerrphy out posedge)
+			(_datain dlerrphy_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233358
+			(_port pldclk in posedge)
+			(_port dllinkautobdwstatus out posedge)
+			(_datain dllinkautobdwstatus_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233359
+			(_port pldclk in posedge)
+			(_port dllinkbdwmngstatus out posedge)
+			(_datain dllinkbdwmngstatus_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233360
+			(_port pldclk in posedge)
+			(_port dlltssm out posedge)
+			(_datain dlltssm_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233361
+			(_port pldclk in posedge)
+			(_port dlrpbufemp out posedge)
+			(_datain dlrpbufemp_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233362
+			(_port pldclk in posedge)
+			(_port dlrstentercompbit out posedge)
+			(_datain dlrstentercompbit_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233363
+			(_port pldclk in posedge)
+			(_port dlrsttxmarginfield out posedge)
+			(_datain dlrsttxmarginfield_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233364
+			(_port pldclk in posedge)
+			(_port dlrxtyppm out posedge)
+			(_datain dlrxtyppm_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233365
+			(_port pldclk in posedge)
+			(_port dlrxvalpm out posedge)
+			(_datain dlrxvalpm_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233366
+			(_port pldclk in posedge)
+			(_port dltxackpm out posedge)
+			(_datain dltxackpm_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233367
+			(_port pldclk in posedge)
+			(_port dlup out posedge)
+			(_datain dlup_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233368
+			(_port pldclk in posedge)
+			(_port dlupexit out posedge)
+			(_datain dlupexit_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233369
+			(_port pldclk in posedge)
+			(_port dlvcstatus out posedge)
+			(_datain dlvcstatus_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233370
+			(_port pldclk in posedge)
+			(_port ev128ns out posedge)
+			(_datain ev128ns_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233371
+			(_port pldclk in posedge)
+			(_port ev1us out posedge)
+			(_datain ev1us_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233372
+			(_port pldclk in posedge)
+			(_port hotrstexit out posedge)
+			(_datain hotrstexit_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233373
+			(_port pldclk in posedge)
+			(_port intstatus out posedge)
+			(_datain intstatus_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233374
+			(_port pldclk in posedge)
+			(_port l2exit out posedge)
+			(_datain l2exit_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233375
+			(_port pldclk in posedge)
+			(_port laneact out posedge)
+			(_datain laneact_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233376
+			(_port pldclk in posedge)
+			(_port linkup out posedge)
+			(_datain linkup_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233377
+			(_port pldclk in posedge)
+			(_port lmiack out posedge)
+			(_datain lmiack_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233378
+			(_port pldclk in posedge)
+			(_port lmidout out posedge)
+			(_datain lmidout_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233379
+			(_port pldclk in posedge)
+			(_port resetstatus out posedge)
+			(_datain resetstatus_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233380
+			(_port pldclk in posedge)
+			(_port rxbardecvc0 out posedge)
+			(_datain rxbardecvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233381
+			(_port pldclk in posedge)
+			(_port rxbardecvc1 out posedge)
+			(_datain rxbardecvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233382
+			(_port pldclk in posedge)
+			(_port rxbevc00 out posedge)
+			(_datain rxbevc00_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233383
+			(_port pldclk in posedge)
+			(_port rxbevc01 out posedge)
+			(_datain rxbevc01_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233384
+			(_port pldclk in posedge)
+			(_port rxbevc10 out posedge)
+			(_datain rxbevc10_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233385
+			(_port pldclk in posedge)
+			(_port rxbevc11 out posedge)
+			(_datain rxbevc11_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233386
+			(_port pldclk in posedge)
+			(_port rxdatavc00 out posedge)
+			(_datain rxdatavc00_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233387
+			(_port pldclk in posedge)
+			(_port rxdatavc01 out posedge)
+			(_datain rxdatavc01_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233388
+			(_port pldclk in posedge)
+			(_port rxdatavc10 out posedge)
+			(_datain rxdatavc10_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233389
+			(_port pldclk in posedge)
+			(_port rxdatavc11 out posedge)
+			(_datain rxdatavc11_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233390
+			(_port pldclk in posedge)
+			(_port rxeopvc00 out posedge)
+			(_datain rxeopvc00_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233391
+			(_port pldclk in posedge)
+			(_port rxeopvc01 out posedge)
+			(_datain rxeopvc01_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233392
+			(_port pldclk in posedge)
+			(_port rxeopvc10 out posedge)
+			(_datain rxeopvc10_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233393
+			(_port pldclk in posedge)
+			(_port rxeopvc11 out posedge)
+			(_datain rxeopvc11_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233394
+			(_port pldclk in posedge)
+			(_port rxerrvc0 out posedge)
+			(_datain rxerrvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233395
+			(_port pldclk in posedge)
+			(_port rxerrvc1 out posedge)
+			(_datain rxerrvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233396
+			(_port pldclk in posedge)
+			(_port rxfifoemptyvc0 out posedge)
+			(_datain rxfifoemptyvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233397
+			(_port pldclk in posedge)
+			(_port rxfifoemptyvc1 out posedge)
+			(_datain rxfifoemptyvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233398
+			(_port pldclk in posedge)
+			(_port rxfifofullvc0 out posedge)
+			(_datain rxfifofullvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233399
+			(_port pldclk in posedge)
+			(_port rxfifofullvc1 out posedge)
+			(_datain rxfifofullvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233400
+			(_port pldclk in posedge)
+			(_port rxsopvc00 out posedge)
+			(_datain rxsopvc00_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233401
+			(_port pldclk in posedge)
+			(_port rxsopvc01 out posedge)
+			(_datain rxsopvc01_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233402
+			(_port pldclk in posedge)
+			(_port rxsopvc10 out posedge)
+			(_datain rxsopvc10_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233403
+			(_port pldclk in posedge)
+			(_port rxsopvc11 out posedge)
+			(_datain rxsopvc11_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233404
+			(_port pldclk in posedge)
+			(_port rxvalidvc0 out posedge)
+			(_datain rxvalidvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233405
+			(_port pldclk in posedge)
+			(_port rxvalidvc1 out posedge)
+			(_datain rxvalidvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233406
+			(_port pldclk in posedge)
+			(_port serrout out posedge)
+			(_datain serrout_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233407
+			(_port pldclk in posedge)
+			(_port swdnwake out posedge)
+			(_datain swdnwake_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233408
+			(_port pldclk in posedge)
+			(_port swuphotrst out posedge)
+			(_datain swuphotrst_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233409
+			(_port pldclk in posedge)
+			(_port tlappintaack out posedge)
+			(_datain tlappintaack_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233410
+			(_port pldclk in posedge)
+			(_port tlappmsiack out posedge)
+			(_datain tlappmsiack_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233411
+			(_port pldclk in posedge)
+			(_port tlpmetosr out posedge)
+			(_datain tlpmetosr_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233412
+			(_port pldclk in posedge)
+			(_port txcredvc0 out posedge)
+			(_datain txcredvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233413
+			(_port pldclk in posedge)
+			(_port txcredvc1 out posedge)
+			(_datain txcredvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233414
+			(_port pldclk in posedge)
+			(_port txfifoemptyvc0 out posedge)
+			(_datain txfifoemptyvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233415
+			(_port pldclk in posedge)
+			(_port txfifoemptyvc1 out posedge)
+			(_datain txfifoemptyvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233416
+			(_port pldclk in posedge)
+			(_port txfifofullvc0 out posedge)
+			(_datain txfifofullvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233417
+			(_port pldclk in posedge)
+			(_port txfifofullvc1 out posedge)
+			(_datain txfifofullvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233418
+			(_port pldclk in posedge)
+			(_port txfifordpvc0 out posedge)
+			(_datain txfifordpvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233419
+			(_port pldclk in posedge)
+			(_port txfifordpvc1 out posedge)
+			(_datain txfifordpvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233420
+			(_port pldclk in posedge)
+			(_port txfifowrpvc0 out posedge)
+			(_datain txfifowrpvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233421
+			(_port pldclk in posedge)
+			(_port txfifowrpvc1 out posedge)
+			(_datain txfifowrpvc1_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233422
+			(_port pldclk in posedge)
+			(_port txreadyvc0 out posedge)
+			(_datain txreadyvc0_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233423
+			(_port pldclk in posedge)
+			(_port txreadyvc1 out posedge)
+			(_datain txreadyvc1_tmp in posedge)
+		)
+		(_tchk setuphold 0 233426
+			(_port dpclk (posedge))
+			(_port dpriodisable ())
+		)
+		(_tchk setuphold 0 233427
+			(_port dpclk (posedge))
+			(_port dprioin ())
+		)
+		(_modpath parallel positive 0 233430
+			(_port dpclk in posedge)
+			(_port dataenablen out posedge)
+			(_datain dataenablen_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233431
+			(_port dpclk in posedge)
+			(_port dprioout out posedge)
+			(_datain dprioout_tmp in posedge)
+		)
+		(_modpath parallel positive 0 233432
+			(_port dpclk in posedge)
+			(_port dpriostate out posedge)
+			(_datain dpriostate_tmp in posedge)
+		)
+	)
+)

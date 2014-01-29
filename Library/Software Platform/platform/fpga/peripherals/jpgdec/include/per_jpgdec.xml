@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_jpgdec" description="JPG Decoder Controller">
+		<sfr name="STATUS"		offset="0"	size="32" description="Status Register">
+			<bitfield name="RESET"			start="8" end="8" access="rw" description="Reset Decoder Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="START"			start="7" end="7" access="rw" description="Start Decoding Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ERROR_NOTSUPPORTED"	start="6" end="6" access="r" description="Error Not Supported Format Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ERROR_CORRUPT"		start="5" end="5" access="r" description="Error Data Corrupt Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ERROR_NOTJPG"		start="4" end="4" access="r" description="Error Header Not Recognized Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ERROR"			start="3" end="3" access="r" description="Error Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="WRITEFULL"		start="2" end="2" access="r" description="Write Buffer Full Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="READEMPTY"		start="1" end="1" access="r" description="Read Buffer Empty Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="READY"			start="0" end="0" access="r" description="Image Ready Status Bit">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="INTMASK"		offset="4"	size="32" description="Interrupt Mask Register">
+			<bitfield name="RESET"			start="8" end="8" access="rw" description="Enable interrupts on Reset flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ERROR_NOTSUPPORTED"	start="6" end="6" access="rw" description="Enable interrupts on Unsupported flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ERROR_CORRUPT"		start="5" end="5" access="rw" description="Enable interrupts on Data Corrupt flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ERROR_NOTJPG"		start="4" end="4" access="rw" description="Enable interrupts on Header Not Recognized flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="ERROR"			start="3" end="3" access="rw" description="Enable interrupts on Status Error flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="WRITEFULL"		start="2" end="2" access="rw" description="Enable interrupt on Write Buffer Full flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="READEMPTY"		start="1" end="1" access="rw" description="Enable interrupt on Read Buffer Empty flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+			<bitfield name="READY"			start="0" end="0" access="rw" description="Enable interrupt on Image Ready flag">
+				<value value="0" description="False"/>
+				<value value="1" description="True"/>
+			</bitfield>
+		</sfr>
+		<sfr name="SIZE_X"		offset="8"	size="32" description="Image Width Register"/>
+		<sfr name="SIZE_Y"		offset="12"	size="32" description="Image Height Register"/>
+		<sfr name="START_X"		offset="16"	size="32" description="Decoding Area Start Column Register"/>
+		<sfr name="START_Y"		offset="20"	size="32" description="Decoding Area Start Row Register"/>
+		<sfr name="END_X"		offset="24"	size="32" description="Decoding Area End Column Register"/>
+		<sfr name="END_Y"		offset="28"	size="32" description="Decoding Area End Row Register"/>
+		<sfr name="READADDRESS"		offset="32"	size="32" description="Read Address Register"/>
+		<sfr name="READCOUNT"		offset="36"	size="32" description="Read Count Register"/>
+		<sfr name="WRITESTARTADDRESS"	offset="40"	size="32" description="Write Area Start Register"/>
+		<sfr name="WRITEENDADDRESS"	offset="44"	size="32" description="Write Area End Register"/>
+		<sfr name="WRITEOFFSET"		offset="48"	size="32" description="Write Address Offset Register"/>
+		<sfr name="WRITEWIDTH"		offset="52"	size="32" description="Write Line Width Register"/>
+		<sfr name="WRITEADDRESS"	offset="56"	size="32" description="Write Address Register"/>
+		<sfr name="VERSION"	        offset="60"	size="32" description="Version Register">
+			<bitfield name="LITTLEENDIAN"			start="8" end="8" access="rw" description="Little Endian Mode">
+				<value value="0" description="Big Endian"/>
+				<value value="1" description="Little Endian"/>
+			</bitfield>
+			<bitfield name="MAJORVERSION"			start="7" end="4" access="rw" description="Major Version">
+			</bitfield>
+			<bitfield name="MINORVERSION"			start="3" end="0" access="rw" description="Minor Version">
+			</bitfield>
+		</sfr>
+	</group>
+</sfrfile>

@@ -1,0 +1,47 @@
+[Plugin]
+Name=per_led
+Caption=LED Controller
+Description=LED controller for adjusting the intensity of LEDs.
+Bitmap=per_led.bmp
+LargeBitmap=per_led_large.bmp
+HardwareId=WB_LED_CTRL
+Implement=per_led
+
+[Available_If0]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=
+
+[Instance_Option0]
+Name=BASEADDRESS
+GUIName=Base Address
+Description=Hardware base address
+Kind=POINTER
+DefaultValue=0
+Auto=True
+
+[Instance_Option1]
+Name=NumLEDs
+GUIName=Number of LEDs
+Description=Number of LEDs
+Kind=UINT8
+DefaultValue=
+Auto=True
+
+[Instance_Option2]
+Name=IsRGB
+GUIName=RGB
+Description=RGB LEDs
+Kind=BOOLEAN
+DefaultValue=
+Auto=True
+
+[Instance_CustomGeneration0]
+HeaderFile=led_info.h
+SourceFile=led_info.c
+GeneratorKind=CCC
+GeneratorId=WB_LED_CTRL

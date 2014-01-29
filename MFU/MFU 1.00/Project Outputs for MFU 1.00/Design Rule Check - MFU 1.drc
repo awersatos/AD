@@ -1,0 +1,87 @@
+Protel Design System Design Rule Check
+PCB File : E:\AD\MFU\MFU 1.00\MFU 1.00.PcbDoc
+Date     : 26.04.2013
+Time     : 16:56:56
+
+Processing Rule : Room BLUETOOTH_UNIT (Bounding Region = (126.2mm, 60.3mm, 154.1mm, 86.3mm) (InComponentClass('BLUETOOTH_UNIT'))
+Rule Violations :0
+
+Processing Rule : Room GSM_UNIT (Bounding Region = (74.9mm, 15.3mm, 154.1mm, 47mm) (InComponentClass('GSM_UNIT'))
+Rule Violations :0
+
+Processing Rule : Room NAVIGATION_UNIT (Bounding Region = (114.9mm, 89.5mm, 154.4mm, 111.1mm) (InComponentClass('NAVIGATION_UNIT'))
+Rule Violations :0
+
+Processing Rule : Room MFU 1.00 (Bounding Region = (74.6mm, 49.3mm, 138.3mm, 109.9mm) (InComponentClass('MFU 1.00'))
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=50mm) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)
+   Violation between Pad K1-4(61.175mm,28.37mm)  Multi-Layer and 
+                     Pad R4-2(64mm,30.25mm)  Top Layer
+   Violation between Pad U12-5(58.1mm,84.525mm)  Top Layer and 
+                     Pad C45-1(59.85mm,84.95mm)  Top Layer
+   Violation between Pad U12-7(58.1mm,85.825mm)  Top Layer and 
+                     Pad C45-1(59.85mm,84.95mm)  Top Layer
+   Violation between Pad U12-6(58.1mm,85.175mm)  Top Layer and 
+                     Pad C45-1(59.85mm,84.95mm)  Top Layer
+   Violation between Pad U12-5(58.1mm,84.525mm)  Top Layer and 
+                     Pad C45-2(59.85mm,83.55mm)  Top Layer
+Rule Violations :5
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Pads and Vias to follow the Drill pairs settings
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.3mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.3mm, Vertical Gap = 0.3mm ) (Disabled)(All),(All) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (Disabled)(InComponent('C10')),(InComponent('R1')) 
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InComponent('ANT1')),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.3mm) (Air Gap=0.3mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=12mm) (Preferred=0.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.3mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.5mm) (InPolygon),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (InComponent('U12','U7','U9','U8') And IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (InRegion(3140,2260 ,4450 ,3400)),(All)
+Rule Violations :0
+
+Processing Rule : Room CAR ALARM_UNIT (Bounding Region = (5mm, 15.3mm, 71.7mm, 103.5mm) (InComponentClass('CAR ALARM_UNIT'))
+Rule Violations :0
+
+Processing Rule : Room POWER_UNIT (Bounding Region = (19.3mm, 79.1mm, 86.4mm, 111.4mm) (InComponentClass('POWER_UNIT'))
+Rule Violations :0
+
+
+Violations Detected : 5
+Time Elapsed        : 00:00:08

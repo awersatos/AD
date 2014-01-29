@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=pmi_work
+
+[Library]
+pmi_work=.\pmi_work.LIB
+
+[$LibMap$]
+pmi_work=.
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/update_pmi_work.do=-1
+
+[Files.Data]
+.\src\update_pmi_work.do=Macro
+

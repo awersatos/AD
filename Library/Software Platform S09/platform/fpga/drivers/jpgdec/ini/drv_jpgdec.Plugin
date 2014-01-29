@@ -1,0 +1,19 @@
+[Plugin]
+Name=drv_jpgdec
+Description=JPEG Decoder Driver
+Caption=JPEG Decoder Driver
+SourceDir=platform\fpga\drivers\jpgdec\src
+InitHandler=
+InitHandlerPriority=16
+Implement=drv_jpgdec
+MinInstances=1
+Bitmap=drv_jpgdec.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_jpgdec
+Condition=EQ
+
+[Instance]
+Require0=per_jpgdec
+

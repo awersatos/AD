@@ -1,0 +1,672 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://E:\AD\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">24.11.2012</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">15:55:56</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///E:\AD\Tesla\Driver\Driver.PcbDoc" class="file"><acronym title="E:\AD\Tesla\Driver\Driver.PcbDoc">E:\AD\Tesla\Driver\Driver.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">77</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDASA0JD"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAEB0JD">Net Antennae (Tolerance=50mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAKB0JD">Silk to Silk (Clearance=0.3mm) (All),(All)</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAAG0JD">Silkscreen Over Component Pads (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">61</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDARX1JD">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAXX1JD">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA3X1JD">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAGA2JD">Hole Size Constraint (Min=0.3mm) (Max=5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAMA2JD">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDASA2JD">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAYA2JD">Short-Circuit Constraint (Allowed=Yes) (InComponent('ANT1')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA4A2JD">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.3mm) (Air Gap=0.3mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAEB2JD">Width Constraint (Min=0.2mm) (Max=15mm) (Preferred=0.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAKB2JD">Clearance Constraint (Gap=0.3mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAQB2JD">Clearance Constraint (Gap=0.5mm) (InPolygon),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAWB2JD">Clearance Constraint (Gap=0.2mm) (InComponent('U1') And IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA2B2JD">Clearance Constraint (Gap=0.2mm) (InNet('SPI_MISO/DO','SPI_MOSI/DI','GND','VCC','GDO2','GDO0','SPI_SS','SPI_SCK','NetC3_1','NetC2_1','GND','NetC1_2','NetANT1_1','NetR1_2')  And InRegion(3815,3770 ,4275 ,4280)),(InNet('SPI_MISO','SPI_MOSI','GND','VCC','GDO2','GDO0','SPI_SS','SPI_SCK','NetC3_1','NetC2_1','GND')  And InRegion(3815,3770 ,4275 ,4280))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDACC2JD">Clearance Constraint (Gap=0.2mm) ((IsTrack  And IsNet)  And InRegion(3815,3770 ,4275 ,4280)),((IsTrack  And IsNet)  And InRegion(3815,3770 ,4275 ,4280))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAIC2JD">Clearance Constraint (Gap=0.2mm) (Disabled)(InNet('GND')),(InNet('VCC +3.3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">77</td>
+</tr>
+</table><br><hr><a name="IDAKB0JD"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk to Silk (Clearance=0.3mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3546.815mil|Location2.Y=3626.796mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3546.815mil|Location2.Y=3626.796mil|Absolute=True">Text "C5" (70.928mm,90.343mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.425mil|Location2.X=2907.48mil|Location1.Y=3556.102mil|Location2.Y=3563.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.425mil|Location2.X=2907.48mil|Location1.Y=3556.102mil|Location2.Y=3563.976mil|Absolute=True">Track (72.45mm,90.425mm)(73.75mm,90.425mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3546.815mil|Location2.Y=3626.796mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3546.815mil|Location2.Y=3626.796mil|Absolute=True">Text "C5" (70.928mm,90.343mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.425mil|Location2.X=2907.48mil|Location1.Y=3617.126mil|Location2.Y=3625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.425mil|Location2.X=2907.48mil|Location1.Y=3617.126mil|Location2.Y=3625mil|Absolute=True">Track (72.45mm,91.975mm)(73.75mm,91.975mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3432.642mil|Location2.Y=3512.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3432.642mil|Location2.Y=3512.622mil|Absolute=True">Text "C7" (70.928mm,87.443mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.425mil|Location2.X=2907.48mil|Location1.Y=3506.89mil|Location2.Y=3514.764mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.425mil|Location2.X=2907.48mil|Location1.Y=3506.89mil|Location2.Y=3514.764mil|Absolute=True">Track (72.45mm,89.175mm)(73.75mm,89.175mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3432.642mil|Location2.Y=3512.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3432.642mil|Location2.Y=3512.622mil|Absolute=True">Text "C7" (70.928mm,87.443mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.425mil|Location2.X=2907.48mil|Location1.Y=3445.866mil|Location2.Y=3453.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.425mil|Location2.X=2907.48mil|Location1.Y=3445.866mil|Location2.Y=3453.74mil|Absolute=True">Track (72.45mm,87.625mm)(73.75mm,87.625mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1996.303mil|Location2.X=2116.271mil|Location1.Y=3218.61mil|Location2.Y=3298.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1996.303mil|Location2.X=2116.271mil|Location1.Y=3218.61mil|Location2.Y=3298.591mil|Absolute=True">Text "D2" (50.96mm,82.007mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True">Track (49.3mm,82.1mm)(55.9mm,82.1mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.764mil|Location2.X=2010.732mil|Location1.Y=3213.984mil|Location2.Y=3293.965mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.764mil|Location2.X=2010.732mil|Location1.Y=3213.984mil|Location2.Y=3293.965mil|Absolute=True">Text "R2" (48.279mm,81.889mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True">Track (49.3mm,82.1mm)(55.9mm,82.1mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.764mil|Location2.X=2010.732mil|Location1.Y=3213.984mil|Location2.Y=3293.965mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.764mil|Location2.X=2010.732mil|Location1.Y=3213.984mil|Location2.Y=3293.965mil|Absolute=True">Text "R2" (48.279mm,81.889mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=1944.882mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=1944.882mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True">Track (49.3mm,82.1mm)(49.3mm,94.6mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.866mil|Location2.X=1628.834mil|Location1.Y=3808.063mil|Location2.Y=3888.044mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.866mil|Location2.X=1628.834mil|Location1.Y=3808.063mil|Location2.Y=3888.044mil|Absolute=True">Text "C4" (38.579mm,96.979mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1576.772mil|Location2.X=1635.827mil|Location1.Y=3839.567mil|Location2.Y=3847.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1576.772mil|Location2.X=1635.827mil|Location1.Y=3839.567mil|Location2.Y=3847.441mil|Absolute=True">Track (40.15mm,97.625mm)(41.45mm,97.625mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615mil|Location2.X=1734.968mil|Location1.Y=3808.748mil|Location2.Y=3888.729mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615mil|Location2.X=1734.968mil|Location1.Y=3808.748mil|Location2.Y=3888.729mil|Absolute=True">Text "C3" (41.275mm,96.996mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1576.772mil|Location2.X=1635.827mil|Location1.Y=3839.567mil|Location2.Y=3847.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1576.772mil|Location2.X=1635.827mil|Location1.Y=3839.567mil|Location2.Y=3847.441mil|Absolute=True">Track (40.15mm,97.625mm)(41.45mm,97.625mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2015.842mil|Location2.X=2115.817mil|Location1.Y=4049.851mil|Location2.Y=4129.831mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2015.842mil|Location2.X=2115.817mil|Location1.Y=4049.851mil|Location2.Y=4129.831mil|Absolute=True">Text "D1" (51.456mm,103.12mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4082.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4082.677mil|Absolute=True">Track (49.5mm,103.6mm)(56.1mm,103.6mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.614mil|Location2.X=1994.588mil|Location1.Y=4044.347mil|Location2.Y=4124.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.614mil|Location2.X=1994.588mil|Location1.Y=4044.347mil|Location2.Y=4124.327mil|Absolute=True">Text "R1" (48.377mm,102.98mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4082.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4082.677mil|Absolute=True">Track (49.5mm,103.6mm)(56.1mm,103.6mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.614mil|Location2.X=1994.588mil|Location1.Y=4044.347mil|Location2.Y=4124.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.614mil|Location2.X=1994.588mil|Location1.Y=4044.347mil|Location2.Y=4124.327mil|Absolute=True">Text "R1" (48.377mm,102.98mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=1952.756mil|Location1.Y=4074.803mil|Location2.Y=4574.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=1952.756mil|Location1.Y=4074.803mil|Location2.Y=4574.803mil|Absolute=True">Track (49.5mm,103.6mm)(49.5mm,116.1mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1510.756mil|Location2.X=1610.73mil|Location1.Y=3940.252mil|Location2.Y=4020.233mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1510.756mil|Location2.X=1610.73mil|Location1.Y=3940.252mil|Location2.Y=4020.233mil|Absolute=True">Text "C1" (38.627mm,100.336mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1582.677mil|Location2.X=1590.551mil|Location1.Y=3996.063mil|Location2.Y=4200.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1582.677mil|Location2.X=1590.551mil|Location1.Y=3996.063mil|Location2.Y=4200.787mil|Absolute=True">Track (40.3mm,101.6mm)(40.3mm,106.6mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1510.756mil|Location2.X=1610.73mil|Location1.Y=3940.252mil|Location2.Y=4020.233mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1510.756mil|Location2.X=1610.73mil|Location1.Y=3940.252mil|Location2.Y=4020.233mil|Absolute=True">Text "C1" (38.627mm,100.336mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1582.677mil|Location2.X=1661.417mil|Location1.Y=3996.063mil|Location2.Y=4003.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1582.677mil|Location2.X=1661.417mil|Location1.Y=3996.063mil|Location2.Y=4003.937mil|Absolute=True">Track (40.3mm,101.6mm)(42.1mm,101.6mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.866mil|Location2.X=1628.834mil|Location1.Y=3808.063mil|Location2.Y=3888.044mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.866mil|Location2.X=1628.834mil|Location1.Y=3808.063mil|Location2.Y=3888.044mil|Absolute=True">Text "C4" (38.579mm,96.979mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615mil|Location2.X=1734.968mil|Location1.Y=3808.748mil|Location2.Y=3888.729mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615mil|Location2.X=1734.968mil|Location1.Y=3808.748mil|Location2.Y=3888.729mil|Absolute=True">Text "C3" (41.275mm,96.996mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.764mil|Location2.X=2010.732mil|Location1.Y=3213.984mil|Location2.Y=3293.965mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.764mil|Location2.X=2010.732mil|Location1.Y=3213.984mil|Location2.Y=3293.965mil|Absolute=True">Text "R2" (48.279mm,81.889mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1996.303mil|Location2.X=2116.271mil|Location1.Y=3218.61mil|Location2.Y=3298.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1996.303mil|Location2.X=2116.271mil|Location1.Y=3218.61mil|Location2.Y=3298.591mil|Absolute=True">Text "D2" (50.96mm,82.007mm)  Top Overlay</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDAAG0JD"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silkscreen Over Component Pads (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2417.323mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2417.323mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True">Track (61.3mm,82.1mm)(61.3mm,94.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2417.654mil|Location2.X=2488.646mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2417.654mil|Location2.X=2488.646mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q4-G(62.31mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2677.165mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2677.165mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True">Track (61.3mm,82.1mm)(67.9mm,82.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2417.654mil|Location2.X=2488.646mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2417.654mil|Location2.X=2488.646mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q4-G(62.31mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2669.291mil|Location2.X=2677.165mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2669.291mil|Location2.X=2677.165mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True">Track (67.9mm,82.1mm)(67.9mm,94.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2597.969mil|Location2.X=2668.961mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2597.969mil|Location2.X=2668.961mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q4-S(66.89mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2677.165mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2677.165mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True">Track (61.3mm,82.1mm)(67.9mm,82.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2597.969mil|Location2.X=2668.961mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2597.969mil|Location2.X=2668.961mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q4-S(66.89mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3546.815mil|Location2.Y=3626.796mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3546.815mil|Location2.Y=3626.796mil|Absolute=True">Text "C5" (70.928mm,90.343mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2791.276mil|Location2.X=2840.614mil|Location1.Y=3552.102mil|Location2.Y=3629mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2791.276mil|Location2.X=2840.614mil|Location1.Y=3552.102mil|Location2.Y=3629mil|Absolute=True">Pad R3-2(71.525mm,91.2mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2260.827mil|Location2.X=2270.669mil|Location1.Y=3223.425mil|Location2.Y=3375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2260.827mil|Location2.X=2270.669mil|Location1.Y=3223.425mil|Location2.Y=3375mil|Absolute=True">Track (57.55mm,82mm)(57.55mm,85.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3232.22mil|Location2.Y=3291.401mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3232.22mil|Location2.Y=3291.401mil|Absolute=True">Pad C6-2(58.5mm,82.85mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2335.63mil|Location2.X=2345.472mil|Location1.Y=3223.425mil|Location2.Y=3375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2335.63mil|Location2.X=2345.472mil|Location1.Y=3223.425mil|Location2.Y=3375mil|Absolute=True">Track (59.45mm,82mm)(59.45mm,85.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3232.22mil|Location2.Y=3291.401mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3232.22mil|Location2.Y=3291.401mil|Absolute=True">Pad C6-2(58.5mm,82.85mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2260.827mil|Location2.X=2345.472mil|Location1.Y=3223.425mil|Location2.Y=3233.268mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2260.827mil|Location2.X=2345.472mil|Location1.Y=3223.425mil|Location2.Y=3233.268mil|Absolute=True">Track (57.55mm,82mm)(59.45mm,82mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3232.22mil|Location2.Y=3291.401mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3232.22mil|Location2.Y=3291.401mil|Absolute=True">Pad C6-2(58.5mm,82.85mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2260.827mil|Location2.X=2270.669mil|Location1.Y=3223.425mil|Location2.Y=3375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2260.827mil|Location2.X=2270.669mil|Location1.Y=3223.425mil|Location2.Y=3375mil|Absolute=True">Track (57.55mm,82mm)(57.55mm,85.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3307.024mil|Location2.Y=3366.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3307.024mil|Location2.Y=3366.205mil|Absolute=True">Pad C6-1(58.5mm,84.75mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2335.63mil|Location2.X=2345.472mil|Location1.Y=3223.425mil|Location2.Y=3375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2335.63mil|Location2.X=2345.472mil|Location1.Y=3223.425mil|Location2.Y=3375mil|Absolute=True">Track (59.45mm,82mm)(59.45mm,85.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3307.024mil|Location2.Y=3366.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3307.024mil|Location2.Y=3366.205mil|Absolute=True">Pad C6-1(58.5mm,84.75mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2260.827mil|Location2.X=2345.472mil|Location1.Y=3365.157mil|Location2.Y=3375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2260.827mil|Location2.X=2345.472mil|Location1.Y=3365.157mil|Location2.Y=3375mil|Absolute=True">Track (57.55mm,85.6mm)(59.45mm,85.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3307.024mil|Location2.Y=3366.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.622mil|Location2.X=2336.677mil|Location1.Y=3307.024mil|Location2.Y=3366.205mil|Absolute=True">Pad C6-1(58.5mm,84.75mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3432.642mil|Location2.Y=3512.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2782.453mil|Location2.X=2902.421mil|Location1.Y=3432.642mil|Location2.Y=3512.622mil|Absolute=True">Text "C7" (70.928mm,87.443mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2791.276mil|Location2.X=2840.614mil|Location1.Y=3441.866mil|Location2.Y=3518.764mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2791.276mil|Location2.X=2840.614mil|Location1.Y=3441.866mil|Location2.Y=3518.764mil|Absolute=True">Pad C5-1(71.525mm,88.4mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=1944.882mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=1944.882mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True">Track (49.3mm,82.1mm)(49.3mm,94.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.213mil|Location2.X=2016.205mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.213mil|Location2.X=2016.205mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q3-G(50.31mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1996.303mil|Location2.X=2116.271mil|Location1.Y=3218.61mil|Location2.Y=3298.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1996.303mil|Location2.X=2116.271mil|Location1.Y=3218.61mil|Location2.Y=3298.591mil|Absolute=True">Text "D2" (50.96mm,82.007mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.213mil|Location2.X=2016.205mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.213mil|Location2.X=2016.205mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q3-G(50.31mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True">Track (49.3mm,82.1mm)(55.9mm,82.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.213mil|Location2.X=2016.205mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.213mil|Location2.X=2016.205mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q3-G(50.31mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.764mil|Location2.X=2010.732mil|Location1.Y=3213.984mil|Location2.Y=3293.965mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.764mil|Location2.X=2010.732mil|Location1.Y=3213.984mil|Location2.Y=3293.965mil|Absolute=True">Text "R2" (48.279mm,81.889mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.213mil|Location2.X=2016.205mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.213mil|Location2.X=2016.205mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q3-G(50.31mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2196.851mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2196.851mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3728.347mil|Absolute=True">Track (55.9mm,82.1mm)(55.9mm,94.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.528mil|Location2.X=2196.52mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.528mil|Location2.X=2196.52mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q3-S(54.89mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1937.008mil|Location2.X=2204.724mil|Location1.Y=3228.347mil|Location2.Y=3236.22mil|Absolute=True">Track (49.3mm,82.1mm)(55.9mm,82.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.528mil|Location2.X=2196.52mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.528mil|Location2.X=2196.52mil|Location1.Y=3240.882mil|Location2.Y=3366.992mil|Absolute=True">Pad Q3-S(54.89mm,83.92mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.748mil|Location2.X=1900.591mil|Location1.Y=3042.323mil|Location2.Y=3193.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.748mil|Location2.X=1900.591mil|Location1.Y=3042.323mil|Location2.Y=3193.898mil|Absolute=True">Track (48.15mm,77.4mm)(48.15mm,81mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3051.118mil|Location2.Y=3110.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3051.118mil|Location2.Y=3110.299mil|Absolute=True">Pad R2-2(49.1mm,78.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1965.551mil|Location2.X=1975.394mil|Location1.Y=3042.323mil|Location2.Y=3193.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1965.551mil|Location2.X=1975.394mil|Location1.Y=3042.323mil|Location2.Y=3193.898mil|Absolute=True">Track (50.05mm,77.4mm)(50.05mm,81mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3051.118mil|Location2.Y=3110.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3051.118mil|Location2.Y=3110.299mil|Absolute=True">Pad R2-2(49.1mm,78.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.748mil|Location2.X=1975.394mil|Location1.Y=3042.323mil|Location2.Y=3052.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.748mil|Location2.X=1975.394mil|Location1.Y=3042.323mil|Location2.Y=3052.165mil|Absolute=True">Track (48.15mm,77.4mm)(50.05mm,77.4mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3051.118mil|Location2.Y=3110.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3051.118mil|Location2.Y=3110.299mil|Absolute=True">Pad R2-2(49.1mm,78.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.748mil|Location2.X=1900.591mil|Location1.Y=3042.323mil|Location2.Y=3193.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.748mil|Location2.X=1900.591mil|Location1.Y=3042.323mil|Location2.Y=3193.898mil|Absolute=True">Track (48.15mm,77.4mm)(48.15mm,81mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3125.921mil|Location2.Y=3185.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3125.921mil|Location2.Y=3185.102mil|Absolute=True">Pad R2-1(49.1mm,80.15mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1965.551mil|Location2.X=1975.394mil|Location1.Y=3042.323mil|Location2.Y=3193.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1965.551mil|Location2.X=1975.394mil|Location1.Y=3042.323mil|Location2.Y=3193.898mil|Absolute=True">Track (50.05mm,77.4mm)(50.05mm,81mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3125.921mil|Location2.Y=3185.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3125.921mil|Location2.Y=3185.102mil|Absolute=True">Pad R2-1(49.1mm,80.15mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.748mil|Location2.X=1975.394mil|Location1.Y=3184.055mil|Location2.Y=3193.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1890.748mil|Location2.X=1975.394mil|Location1.Y=3184.055mil|Location2.Y=3193.898mil|Absolute=True">Track (48.15mm,81mm)(50.05mm,81mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3125.921mil|Location2.Y=3185.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.543mil|Location2.X=1966.598mil|Location1.Y=3125.921mil|Location2.Y=3185.102mil|Absolute=True">Pad R2-1(49.1mm,80.15mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.858mil|Location2.X=1518.701mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.858mil|Location2.X=1518.701mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True">Track (38.45mm,92.5mm)(38.45mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True">Pad C4-2(39.4mm,93.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1583.661mil|Location2.X=1593.504mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1583.661mil|Location2.X=1593.504mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True">Track (40.35mm,92.5mm)(40.35mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True">Pad C4-2(39.4mm,93.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.858mil|Location2.X=1593.504mil|Location1.Y=3636.811mil|Location2.Y=3646.653mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.858mil|Location2.X=1593.504mil|Location1.Y=3636.811mil|Location2.Y=3646.653mil|Absolute=True">Track (38.45mm,92.5mm)(40.35mm,92.5mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True">Pad C4-2(39.4mm,93.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.858mil|Location2.X=1518.701mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.858mil|Location2.X=1518.701mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True">Track (38.45mm,92.5mm)(38.45mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True">Pad C4-1(39.4mm,95.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1583.661mil|Location2.X=1593.504mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1583.661mil|Location2.X=1593.504mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True">Track (40.35mm,92.5mm)(40.35mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True">Pad C4-1(39.4mm,95.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.858mil|Location2.X=1593.504mil|Location1.Y=3778.543mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.858mil|Location2.X=1593.504mil|Location1.Y=3778.543mil|Location2.Y=3788.386mil|Absolute=True">Track (38.45mm,96.1mm)(40.35mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.654mil|Location2.X=1584.709mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True">Pad C4-1(39.4mm,95.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615.158mil|Location2.X=1625mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615.158mil|Location2.X=1625mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True">Track (41.15mm,92.5mm)(41.15mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True">Pad C3-2(42.1mm,93.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1689.961mil|Location2.X=1699.803mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1689.961mil|Location2.X=1699.803mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True">Track (43.05mm,92.5mm)(43.05mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True">Pad C3-2(42.1mm,93.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615.158mil|Location2.X=1699.803mil|Location1.Y=3636.811mil|Location2.Y=3646.653mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615.158mil|Location2.X=1699.803mil|Location1.Y=3636.811mil|Location2.Y=3646.653mil|Absolute=True">Track (41.15mm,92.5mm)(43.05mm,92.5mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3645.606mil|Location2.Y=3704.787mil|Absolute=True">Pad C3-2(42.1mm,93.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615.158mil|Location2.X=1625mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615.158mil|Location2.X=1625mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True">Track (41.15mm,92.5mm)(41.15mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True">Pad C3-1(42.1mm,95.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1689.961mil|Location2.X=1699.803mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1689.961mil|Location2.X=1699.803mil|Location1.Y=3636.811mil|Location2.Y=3788.386mil|Absolute=True">Track (43.05mm,92.5mm)(43.05mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True">Pad C3-1(42.1mm,95.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615.158mil|Location2.X=1699.803mil|Location1.Y=3778.543mil|Location2.Y=3788.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615.158mil|Location2.X=1699.803mil|Location1.Y=3778.543mil|Location2.Y=3788.386mil|Absolute=True">Track (41.15mm,96.1mm)(43.05mm,96.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.953mil|Location2.X=1691.008mil|Location1.Y=3720.41mil|Location2.Y=3779.59mil|Absolute=True">Pad C3-1(42.1mm,95.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2417.323mil|Location1.Y=4082.677mil|Location2.Y=4582.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2417.323mil|Location1.Y=4082.677mil|Location2.Y=4582.677mil|Absolute=True">Track (61.3mm,103.8mm)(61.3mm,116.3mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2417.654mil|Location2.X=2488.646mil|Location1.Y=4095.213mil|Location2.Y=4221.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2417.654mil|Location2.X=2488.646mil|Location1.Y=4095.213mil|Location2.Y=4221.323mil|Absolute=True">Pad Q2-G(62.31mm,105.62mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2677.165mil|Location1.Y=4082.677mil|Location2.Y=4090.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2677.165mil|Location1.Y=4082.677mil|Location2.Y=4090.551mil|Absolute=True">Track (61.3mm,103.8mm)(67.9mm,103.8mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2417.654mil|Location2.X=2488.646mil|Location1.Y=4095.213mil|Location2.Y=4221.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2417.654mil|Location2.X=2488.646mil|Location1.Y=4095.213mil|Location2.Y=4221.323mil|Absolute=True">Pad Q2-G(62.31mm,105.62mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2669.291mil|Location2.X=2677.165mil|Location1.Y=4082.677mil|Location2.Y=4582.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2669.291mil|Location2.X=2677.165mil|Location1.Y=4082.677mil|Location2.Y=4582.677mil|Absolute=True">Track (67.9mm,103.8mm)(67.9mm,116.3mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2597.969mil|Location2.X=2668.961mil|Location1.Y=4095.213mil|Location2.Y=4221.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2597.969mil|Location2.X=2668.961mil|Location1.Y=4095.213mil|Location2.Y=4221.323mil|Absolute=True">Pad Q2-S(66.89mm,105.62mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2677.165mil|Location1.Y=4082.677mil|Location2.Y=4090.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2409.449mil|Location2.X=2677.165mil|Location1.Y=4082.677mil|Location2.Y=4090.551mil|Absolute=True">Track (61.3mm,103.8mm)(67.9mm,103.8mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2597.969mil|Location2.X=2668.961mil|Location1.Y=4095.213mil|Location2.Y=4221.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2597.969mil|Location2.X=2668.961mil|Location1.Y=4095.213mil|Location2.Y=4221.323mil|Absolute=True">Pad Q2-S(66.89mm,105.62mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.638mil|Location2.X=2282.48mil|Location1.Y=4073.819mil|Location2.Y=4225.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.638mil|Location2.X=2282.48mil|Location1.Y=4073.819mil|Location2.Y=4225.394mil|Absolute=True">Track (57.85mm,103.6mm)(57.85mm,107.2mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4082.614mil|Location2.Y=4141.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4082.614mil|Location2.Y=4141.795mil|Absolute=True">Pad C2-2(58.8mm,104.45mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2347.441mil|Location2.X=2357.283mil|Location1.Y=4073.819mil|Location2.Y=4225.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2347.441mil|Location2.X=2357.283mil|Location1.Y=4073.819mil|Location2.Y=4225.394mil|Absolute=True">Track (59.75mm,103.6mm)(59.75mm,107.2mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4082.614mil|Location2.Y=4141.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4082.614mil|Location2.Y=4141.795mil|Absolute=True">Pad C2-2(58.8mm,104.45mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.638mil|Location2.X=2357.283mil|Location1.Y=4073.819mil|Location2.Y=4083.661mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.638mil|Location2.X=2357.283mil|Location1.Y=4073.819mil|Location2.Y=4083.661mil|Absolute=True">Track (57.85mm,103.6mm)(59.75mm,103.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4082.614mil|Location2.Y=4141.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4082.614mil|Location2.Y=4141.795mil|Absolute=True">Pad C2-2(58.8mm,104.45mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.638mil|Location2.X=2282.48mil|Location1.Y=4073.819mil|Location2.Y=4225.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.638mil|Location2.X=2282.48mil|Location1.Y=4073.819mil|Location2.Y=4225.394mil|Absolute=True">Track (57.85mm,103.6mm)(57.85mm,107.2mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4157.417mil|Location2.Y=4216.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4157.417mil|Location2.Y=4216.598mil|Absolute=True">Pad C2-1(58.8mm,106.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2347.441mil|Location2.X=2357.283mil|Location1.Y=4073.819mil|Location2.Y=4225.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2347.441mil|Location2.X=2357.283mil|Location1.Y=4073.819mil|Location2.Y=4225.394mil|Absolute=True">Track (59.75mm,103.6mm)(59.75mm,107.2mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4157.417mil|Location2.Y=4216.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4157.417mil|Location2.Y=4216.598mil|Absolute=True">Pad C2-1(58.8mm,106.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.638mil|Location2.X=2357.283mil|Location1.Y=4215.551mil|Location2.Y=4225.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.638mil|Location2.X=2357.283mil|Location1.Y=4215.551mil|Location2.Y=4225.394mil|Absolute=True">Track (57.85mm,107.2mm)(59.75mm,107.2mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4157.417mil|Location2.Y=4216.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2281.433mil|Location2.X=2348.488mil|Location1.Y=4157.417mil|Location2.Y=4216.598mil|Absolute=True">Pad C2-1(58.8mm,106.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615mil|Location2.X=1734.968mil|Location1.Y=3808.748mil|Location2.Y=3888.729mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1615mil|Location2.X=1734.968mil|Location1.Y=3808.748mil|Location2.Y=3888.729mil|Absolute=True">Text "C3" (41.275mm,96.996mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1643.638mil|Location2.X=1692.976mil|Location1.Y=3835.567mil|Location2.Y=3912.465mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1643.638mil|Location2.X=1692.976mil|Location1.Y=3835.567mil|Location2.Y=3912.465mil|Absolute=True">Pad C1-1(42.375mm,98.4mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.866mil|Location2.X=1628.834mil|Location1.Y=3808.063mil|Location2.Y=3888.044mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1508.866mil|Location2.X=1628.834mil|Location1.Y=3808.063mil|Location2.Y=3888.044mil|Absolute=True">Text "C4" (38.579mm,96.979mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1519.622mil|Location2.X=1568.961mil|Location1.Y=3835.567mil|Location2.Y=3912.465mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1519.622mil|Location2.X=1568.961mil|Location1.Y=3835.567mil|Location2.Y=3912.465mil|Absolute=True">Pad C1-2(39.225mm,98.4mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=1952.756mil|Location1.Y=4074.803mil|Location2.Y=4574.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=1952.756mil|Location1.Y=4074.803mil|Location2.Y=4574.803mil|Absolute=True">Track (49.5mm,103.6mm)(49.5mm,116.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1953.087mil|Location2.X=2024.079mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1953.087mil|Location2.X=2024.079mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True">Pad Q1-G(50.51mm,105.42mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2015.842mil|Location2.X=2115.817mil|Location1.Y=4049.851mil|Location2.Y=4129.831mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2015.842mil|Location2.X=2115.817mil|Location1.Y=4049.851mil|Location2.Y=4129.831mil|Absolute=True">Text "D1" (51.456mm,103.12mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1953.087mil|Location2.X=2024.079mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1953.087mil|Location2.X=2024.079mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True">Pad Q1-G(50.51mm,105.42mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.614mil|Location2.X=1994.588mil|Location1.Y=4044.347mil|Location2.Y=4124.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.614mil|Location2.X=1994.588mil|Location1.Y=4044.347mil|Location2.Y=4124.327mil|Absolute=True">Text "R1" (48.377mm,102.98mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1953.087mil|Location2.X=2024.079mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1953.087mil|Location2.X=2024.079mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True">Pad Q1-G(50.51mm,105.42mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4082.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4082.677mil|Absolute=True">Track (49.5mm,103.6mm)(56.1mm,103.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1953.087mil|Location2.X=2024.079mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1953.087mil|Location2.X=2024.079mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True">Pad Q1-G(50.51mm,105.42mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2204.724mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4574.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2204.724mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4574.803mil|Absolute=True">Track (56.1mm,103.6mm)(56.1mm,116.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2133.402mil|Location2.X=2204.394mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2133.402mil|Location2.X=2204.394mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True">Pad Q1-S(55.09mm,105.42mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4082.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=2212.599mil|Location1.Y=4074.803mil|Location2.Y=4082.677mil|Absolute=True">Track (49.5mm,103.6mm)(56.1mm,103.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2133.402mil|Location2.X=2204.394mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2133.402mil|Location2.X=2204.394mil|Location1.Y=4087.339mil|Location2.Y=4213.449mil|Absolute=True">Pad Q1-S(55.09mm,105.42mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1510.756mil|Location2.X=1610.73mil|Location1.Y=3940.252mil|Location2.Y=4020.233mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1510.756mil|Location2.X=1610.73mil|Location1.Y=3940.252mil|Location2.Y=4020.233mil|Absolute=True">Text "C1" (38.627mm,100.336mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1480.252mil|Location2.X=1574.866mil|Location1.Y=4007.614mil|Location2.Y=4039.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1480.252mil|Location2.X=1574.866mil|Location1.Y=4007.614mil|Location2.Y=4039.236mil|Absolute=True">Pad U1-8(38.8mm,102.195mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.685mil|Location2.X=1904.527mil|Location1.Y=3873.032mil|Location2.Y=4024.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.685mil|Location2.X=1904.527mil|Location1.Y=3873.032mil|Location2.Y=4024.606mil|Absolute=True">Track (48.25mm,98.5mm)(48.25mm,102.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3881.827mil|Location2.Y=3941.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3881.827mil|Location2.Y=3941.008mil|Absolute=True">Pad R1-2(49.2mm,99.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1969.488mil|Location2.X=1979.331mil|Location1.Y=3873.032mil|Location2.Y=4024.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1969.488mil|Location2.X=1979.331mil|Location1.Y=3873.032mil|Location2.Y=4024.606mil|Absolute=True">Track (50.15mm,98.5mm)(50.15mm,102.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3881.827mil|Location2.Y=3941.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3881.827mil|Location2.Y=3941.008mil|Absolute=True">Pad R1-2(49.2mm,99.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.685mil|Location2.X=1979.331mil|Location1.Y=3873.032mil|Location2.Y=3882.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.685mil|Location2.X=1979.331mil|Location1.Y=3873.032mil|Location2.Y=3882.874mil|Absolute=True">Track (48.25mm,98.5mm)(50.15mm,98.5mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3881.827mil|Location2.Y=3941.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3881.827mil|Location2.Y=3941.008mil|Absolute=True">Pad R1-2(49.2mm,99.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.685mil|Location2.X=1904.527mil|Location1.Y=3873.032mil|Location2.Y=4024.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.685mil|Location2.X=1904.527mil|Location1.Y=3873.032mil|Location2.Y=4024.606mil|Absolute=True">Track (48.25mm,98.5mm)(48.25mm,102.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3956.63mil|Location2.Y=4015.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3956.63mil|Location2.Y=4015.811mil|Absolute=True">Pad R1-1(49.2mm,101.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1969.488mil|Location2.X=1979.331mil|Location1.Y=3873.032mil|Location2.Y=4024.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1969.488mil|Location2.X=1979.331mil|Location1.Y=3873.032mil|Location2.Y=4024.606mil|Absolute=True">Track (50.15mm,98.5mm)(50.15mm,102.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3956.63mil|Location2.Y=4015.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3956.63mil|Location2.Y=4015.811mil|Absolute=True">Pad R1-1(49.2mm,101.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.685mil|Location2.X=1979.331mil|Location1.Y=4014.764mil|Location2.Y=4024.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1894.685mil|Location2.X=1979.331mil|Location1.Y=4014.764mil|Location2.Y=4024.606mil|Absolute=True">Track (48.25mm,102.1mm)(50.15mm,102.1mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3956.63mil|Location2.Y=4015.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\AD\Tesla\Driver\Driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.48mil|Location2.X=1970.535mil|Location1.Y=3956.63mil|Location2.Y=4015.811mil|Absolute=True">Pad R1-1(49.2mm,101.25mm)  Top Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

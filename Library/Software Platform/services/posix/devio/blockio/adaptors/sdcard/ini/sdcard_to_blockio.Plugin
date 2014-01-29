@@ -1,0 +1,11 @@
+[Plugin]
+Name=sdcard_to_blockio
+Description=SD Flash device i\o driver
+Implement=blockio_adaptor
+Require0=blockio
+SourceDir=services\posix\devio\blockio\adaptors\sdcard\src
+InitHandler=sdcard_to_blockio_plugin_init
+InitHandlerPriority=8
+
+[Instance]
+Require0=drv_sdcard

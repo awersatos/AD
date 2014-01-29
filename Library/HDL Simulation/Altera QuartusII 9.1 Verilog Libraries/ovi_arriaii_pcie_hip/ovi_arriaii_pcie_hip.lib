@@ -1,0 +1,235 @@
+timestamp=1260919662110
+
+[$root]
+A/$root=22|""|0|1*0
+B/$root=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+
+[arriaii_hssi_pcie_hip]
+A/arriaii_hssi_pcie_hip=22|./src/arriaii_pcie_hip_atoms.v|198361|1*2589501
+B/arriaii_hssi_pcie_hip=3*39123168
+C=8.2.1986.SP1.35.3497  (Windows)
+D/arriaii_hssi_pcie_hip=4*0
+P/~emb=16546,27167,51593,56677
+R=./src/arriaii_pcie_hip_atoms.v|198361
+
+[arriaii_pciehip_clkmux]
+A/arriaii_pciehip_clkmux=22|./src/arriaii_pcie_hip_atoms.v|1243|1*15934
+B/arriaii_pciehip_clkmux=3*320615
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=769,1173,1737,1933
+R=./src/arriaii_pcie_hip_atoms.v|1243
+
+[arriaii_pciehip_compute_bit]
+A/arriaii_pciehip_compute_bit=22|./src/arriaii_pcie_hip_atoms.v|7331|1*49356
+B/arriaii_pciehip_compute_bit=3*649523
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=192,454,741,869
+R=./src/arriaii_pcie_hip_atoms.v|7331
+
+[arriaii_pciehip_dprio_16bit]
+A/arriaii_pciehip_dprio_16bit=22|./src/arriaii_pcie_hip_atoms.v|1409|1*18015
+B/arriaii_pciehip_dprio_16bit=3*331350
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=593,1016,1495,3367
+R=./src/arriaii_pcie_hip_atoms.v|1409
+
+[arriaii_pciehip_dprio_addr]
+A/arriaii_pciehip_dprio_addr=22|./src/arriaii_pcie_hip_atoms.v|1644|1*19291
+B/arriaii_pciehip_dprio_addr=3*333049
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=327,1081,3016,3425
+R=./src/arriaii_pcie_hip_atoms.v|1644
+
+[arriaii_pciehip_dprio_bit]
+A/arriaii_pciehip_dprio_bit=22|./src/arriaii_pcie_hip_atoms.v|1365|1*17141
+B/arriaii_pciehip_dprio_bit=3*327805
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=437,700,994,1098
+R=./src/arriaii_pcie_hip_atoms.v|1365
+
+[arriaii_pciehip_dprio_bus_out_mux]
+A/arriaii_pciehip_dprio_bus_out_mux=22|./src/arriaii_pcie_hip_atoms.v|3008|1*31244
+B/arriaii_pciehip_dprio_bus_out_mux=3*484290
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=13859,14966,19313,20729
+R=./src/arriaii_pcie_hip_atoms.v|3008
+
+[arriaii_pciehip_dprio_cnt]
+A/arriaii_pciehip_dprio_cnt=22|./src/arriaii_pcie_hip_atoms.v|2006|1*22936
+B/arriaii_pciehip_dprio_cnt=3*374836
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=275,809,1970,2282
+R=./src/arriaii_pcie_hip_atoms.v|2006
+
+[arriaii_pciehip_dprio_ctl_data]
+A/arriaii_pciehip_dprio_ctl_data=22|./src/arriaii_pcie_hip_atoms.v|2232|1*25298
+B/arriaii_pciehip_dprio_ctl_data=3*396386
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=766,1676,4548,4836
+R=./src/arriaii_pcie_hip_atoms.v|2232
+
+[arriaii_pciehip_dprio_reg]
+A/arriaii_pciehip_dprio_reg=22|./src/arriaii_pcie_hip_atoms.v|3571|1*33856
+B/arriaii_pciehip_dprio_reg=3*610785
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=20511,23124,28133,43344
+R=./src/arriaii_pcie_hip_atoms.v|3571
+
+[arriaii_pciehip_dprio_reg_top]
+A/arriaii_pciehip_dprio_reg_top=22|./src/arriaii_pcie_hip_atoms.v|5804|1*40364
+B/arriaii_pciehip_dprio_reg_top=3*610953
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=7242,11069,14791,21637
+R=./src/arriaii_pcie_hip_atoms.v|5804
+
+[arriaii_pciehip_dprio_sm]
+A/arriaii_pciehip_dprio_sm=22|./src/arriaii_pcie_hip_atoms.v|2682|1*29843
+B/arriaii_pciehip_dprio_sm=3*452981
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1077,1575,2136,2395
+R=./src/arriaii_pcie_hip_atoms.v|2682
+
+[arriaii_pciehip_ecc_chk]
+A/arriaii_pciehip_ecc_chk=22|./src/arriaii_pcie_hip_atoms.v|7366|1*51024
+B/arriaii_pciehip_ecc_chk=3*652948
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=350,1353,1670,1902
+R=./src/arriaii_pcie_hip_atoms.v|7366
+
+[arriaii_pciehip_ecc_decoder]
+A/arriaii_pciehip_ecc_decoder=22|./src/arriaii_pcie_hip_atoms.v|7485|1*51944
+B/arriaii_pciehip_ecc_decoder=3*673576
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=208,397,590,690
+R=./src/arriaii_pcie_hip_atoms.v|7485
+
+[arriaii_pciehip_ecc_gen]
+A/arriaii_pciehip_ecc_gen=22|./src/arriaii_pcie_hip_atoms.v|7346|1*50152
+B/arriaii_pciehip_ecc_gen=3*652782
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=218,527,730,1146
+R=./src/arriaii_pcie_hip_atoms.v|7346
+
+[arriaii_pciehip_hip_dprio_top]
+A/arriaii_pciehip_hip_dprio_top=22|./src/arriaii_pcie_hip_atoms.v|6858|1*46508
+B/arriaii_pciehip_hip_dprio_top=3*649351
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=7353,8392,10205,13059
+R=./src/arriaii_pcie_hip_atoms.v|6858
+
+[arriaii_pciehip_hip_mram]
+A/arriaii_pciehip_hip_mram=22|./src/arriaii_pcie_hip_atoms.v|7574|1*53422
+B/arriaii_pciehip_hip_mram=3*677531
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=2059,3115,4043,4633
+R=./src/arriaii_pcie_hip_atoms.v|7574
+
+[arriaii_pciehip_hip_top]
+A/arriaii_pciehip_hip_top=22|./src/arriaii_pcie_hip_atoms.v|196182|1*2571683
+B/arriaii_pciehip_hip_top=3*39031936
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=16905,22120,32179,40420
+R=./src/arriaii_pcie_hip_atoms.v|196182
+
+[arriaii_pciehip_iei_detect]
+A/arriaii_pciehip_iei_detect=22|./src/arriaii_pcie_hip_atoms.v|8194|1*61333
+B/arriaii_pciehip_iei_detect=3*716434
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=978,11705,44101,61957
+R=./src/arriaii_pcie_hip_atoms.v|8194
+
+[arriaii_pciehip_mram_top]
+A/arriaii_pciehip_mram_top=22|./src/arriaii_pcie_hip_atoms.v|7750|1*55351
+B/arriaii_pciehip_mram_top=3*680355
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=1674,2731,4012,5271
+R=./src/arriaii_pcie_hip_atoms.v|7750
+
+[arriaii_pciehip_param]
+A/arriaii_pciehip_param=22|./src/arriaii_pcie_hip_atoms.v|38|1*390
+B/arriaii_pciehip_param=3*148
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=6851,12106,19459,19718
+R=./src/arriaii_pcie_hip_atoms.v|38
+
+[arriaii_pciehip_pciexp_dcfiforam]
+A/arriaii_pciehip_pciexp_dcfiforam=22|./src/arriaii_pcie_hip_atoms.v|8013|1*58032
+B/arriaii_pciehip_pciexp_dcfiforam=3*694824
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=469,751,1068,1199
+R=./src/arriaii_pcie_hip_atoms.v|8013
+
+[arriaii_pciehip_pciexp_dcram_rtry]
+A/arriaii_pciehip_pciexp_dcram_rtry=22|./src/arriaii_pcie_hip_atoms.v|8054|1*59089
+B/arriaii_pciehip_pciexp_dcram_rtry=3*702352
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=471,785,1146,1316
+R=./src/arriaii_pcie_hip_atoms.v|8054
+
+[arriaii_pciehip_pciexp_dcram_rxvc]
+A/arriaii_pciehip_pciexp_dcram_rxvc=22|./src/arriaii_pcie_hip_atoms.v|8110|1*60211
+B/arriaii_pciehip_pciexp_dcram_rxvc=3*709393
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=471,785,1146,1316
+R=./src/arriaii_pcie_hip_atoms.v|8110
+
+[arriaii_pciehip_pciexp_top_hip]
+A/arriaii_pciehip_pciexp_top_hip=22|./src/arriaii_pcie_hip_atoms.v|15414|1*127922
+B/arriaii_pciehip_pciexp_top_hip=3*1634254
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=14512,352618,1455462,1926306
+R=./src/arriaii_pcie_hip_atoms.v|15414
+
+[arriaii_pciehip_pulse_ext]
+A/arriaii_pciehip_pulse_ext=22|./src/arriaii_pcie_hip_atoms.v|7502|1*52628
+B/arriaii_pciehip_pulse_ext=3*674614
+C=8.2.1986.SP1.35.3497  (Windows)
+P/~emb=283,495,771,961
+R=./src/arriaii_pcie_hip_atoms.v|7502
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, ARRIAII_PCIE_HIP VERILOG LIBRARY.
+LastVerilogToplevel=arriaii_hssi_pcie_hip
+ModifyID=193
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+src/arriaii_pcie_hip_atoms.v=0*1762575*3640111
+
+[~MFT]
+0=28|0ovi_arriaii_pcie_hip.mgf|3640111|0
+1=26|1ovi_arriaii_pcie_hip.mgf|2589501|0
+3=26|3ovi_arriaii_pcie_hip.mgf|39123168|0
+4=0|4ovi_arriaii_pcie_hip.mgf|0|0
+
+[~U]
+$root=12|0*0|
+arriaii_hssi_pcie_hip=12|0*1723207||0x90
+arriaii_pciehip_clkmux=12|0*17518||0x80
+arriaii_pciehip_compute_bit=12|0*68726||0x80
+arriaii_pciehip_dprio_16bit=12|0*20095||0x80
+arriaii_pciehip_dprio_addr=12|0*22123||0x80
+arriaii_pciehip_dprio_bit=12|0*19205||0x80
+arriaii_pciehip_dprio_bus_out_mux=12|0*36680||0x80
+arriaii_pciehip_dprio_cnt=12|0*26166||0x80
+arriaii_pciehip_dprio_ctl_data=12|0*28848||0x80
+arriaii_pciehip_dprio_reg=12|0*42780||0x80
+arriaii_pciehip_dprio_reg_top=12|0*54952||0x80
+arriaii_pciehip_dprio_sm=12|0*34159||0x80
+arriaii_pciehip_ecc_chk=12|0*70330||0x80
+arriaii_pciehip_ecc_decoder=12|0*72322||0x80
+arriaii_pciehip_ecc_gen=12|0*69426||0x80
+arriaii_pciehip_hip_dprio_top=12|0*64680||0x80
+arriaii_pciehip_hip_mram=12|0*73736||0x80
+arriaii_pciehip_hip_top=12|0*1700349||0x80
+arriaii_pciehip_iei_detect=12|0*82831||0x80
+arriaii_pciehip_mram_top=12|0*76305||0x80
+arriaii_pciehip_param=12|0*374||0x80
+arriaii_pciehip_pciexp_dcfiforam=12|0*79818||0x80
+arriaii_pciehip_pciexp_dcram_rtry=12|0*80747||0x80
+arriaii_pciehip_pciexp_dcram_rxvc=12|0*81789||0x80
+arriaii_pciehip_pciexp_top_hip=12|0*149228||0x80
+arriaii_pciehip_pulse_ext=12|0*72910||0x80
+

@@ -1,0 +1,108 @@
+//============================================================
+# f113 source
+//74F113 JK flip-flop
+//dm 10-10-97: copied ls113 in LS.TXT
+//	changed SUPPLY_MIN_MAX, VIL_VIL_VALUE,
+//  iol, ioh, iil, iih, icc, rise, fall
+//  setup, hold, width and prop delays values.
+// jjt 16/3/2001: copied f113 in Fast.txt and added toggling for
+//                the J and K low case.
+//============================================================
+INPUTS VCC, GND, INJ, CLK, INK, SET;
+OUTPUTS VCC_LD, INJ_LD, CLK_LD, INK_LD, SET_LD, QN, Q;
+INTEGERS tblIndex, set_chg;
+REALS tt_val, tplh_CLK_val, tphl_CLK_val, tplh_SR_val, tphl_SR_val,
+      tsh_val, tsl_val, th_val, tw_clk, twl_set, trec_val, ril_val,
+	  rih_val, rih_S_val, rih_CP_val, ricc_val;
+
+PWR_GND_PINS(VCC,GND);		//set pwr_param and gnd_param values
+SUPPLY_MIN_MAX(4.5,5.5);	//check for min supply=4.5 and max supply=5.5
+VOL_VOH_MIN(0.2,-0.4,0.1);	//set min vol_param=gnd_param+0.2, max voh_param=pwr_param-0.4
+VIL_VIH_VALUE(1.45,1.55);	//set input threshold values: vil and vih
+IO_PAIRS(INJ:INJ_LD, CLK:CLK_LD, INK:INK_LD, SET:SET_LD);
+
+IF (init_sim) THEN
+  BEGIN		//select prop delay, setup, hold, and width times
+//MESSAGE("time\tSET\tCLK\tJ\tK\tQ\tQN");//debug
+
+    //NOTE: both ttlh and tthl are the same value
+    tt_val= (MIN_TYP_MAX(tt_param: NULL, 2.5n,  NULL));
+
+    tplh_CLK_val= (MIN_TYP_MAX(tp_param: 2n, 4n, 6n));
+    tphl_CLK_val= (MIN_TYP_MAX(tp_param: 2n, 4n, 6n));
+    
+    tplh_SR_val= (MIN_TYP_MAX(tp_param: 2n, 4.5n, 6.5n));
+    tphl_SR_val= (MIN_TYP_MAX(tp_param: 2n, 4.5n, 6.5n));
+
+    tsh_val= (4n);
+    tsl_val= (3.5n);
+    th_val= (0n);
+    tw_clk= (4.5n);
+	twl_set= (4.5n);
+	trec_val= (4.5n);
+
+    //F std output drive IOL max=20mA @ vol=0.5V: rol_param=(0.5-vol_param)/20mA
+    rol_param= (MIN_TYP_MAX(drv_param: NULL, 15,  NULL));
+
+    //F std output drive IOH max=-1mA @ voh=4.5V: roh_param=(voh_param-4.5)/1mA
+    roh_param= (MIN_TYP_MAX(drv_param: NULL, 100, NULL));
+
+    //F input load IIH=20uA @ 2.7V: ril= (2.7-vol_param)/20uA;
+    ril_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 125k));
+
+    //F input load IIL=-600uA @ 0.5V: rih= (voh_param-0.5)/600uA
+    rih_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 6833.3));
+
+    //F input load IIL=-2.4mA @ 0.5V: rih= (voh_param-0.5)/2.4mA
+    rih_CP_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 1708.3));
+
+    //F input load IIL=-3mA @ 0.5V: rih= (voh_param-0.5)/3mA
+    rih_S_val= (MIN_TYP_MAX(ld_param: NULL, NULL, 1366.7));
+
+    //Icc: 333.3= 5V/15mA typical, 261.9= 5.5V/21mA max 
+    ricc_val= (MIN_TYP_MAX(i_param: NULL, 333.3, 261.9)*2);//2 parts per pkg
+
+	STATE Q = ZERO;		// initialize output states
+	STATE QN = ONE;
+	EXIT;
+  END;
+
+DRIVE Q QN = (v0=vol_param,v1=voh_param,ttlh=tt_val,tthl=tt_val);
+LOAD INJ_LD INK_LD =
+  (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_val,io=1e9,t=1p);
+LOAD SET_LD =
+  (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_S_val,io=1e9,t=1p);
+LOAD CLK_LD =
+  (v0=vol_param,r0=ril_val,v1=voh_param,r1=rih_CP_val,io=1e9,t=1p);
+
+EXT_TABLE tblIndex
+SET 	CLK 	INJ 	INK		Q	QN
+0   	X   	X   	X		H	L
+1   	v   	1   	1		~Q	Q
+1   	v   	0   	1		L	H
+1   	v   	1   	0		H	L
+1   	v   	0   	0		~Q	Q
+1   	X	X	X		Q	~Q;
+
+//MESSAGE("%fs\t%d\t%d\t%d\t%d\t%d\t%d",present_time,SET,CLK,INJ,INK,Q,QN);//debug
+LOAD VCC_LD = (v0=gnd_param,r0=ricc_val,t=1p);
+IF (warn_param) THEN
+  BEGIN
+    IF (SET) THEN
+      BEGIN
+	    RECOVER(CLK=HL SET TREC=trec_val "SET->CLK");
+        SETUP_HOLD(CLK=HL INJ INK Tsh=tsh_val Tsl=tsl_val Th=th_val "CLK->J or K");
+        WIDTH(SET Twl=twl_set "SET");
+        WIDTH(CLK Twl=tw_clk Twh=tw_clk "CLK");
+      END;
+  END;
+
+set_chg= ((tblIndex < 2) && (tblIndex > 4));
+DELAY Q QN =
+  CASE (TRAN_LH && set_chg) : tplh_SR_val
+  CASE (TRAN_HL && set_chg) : tphl_SR_val
+
+  CASE (TRAN_LH) : tplh_CLK_val
+  CASE (TRAN_HL) : tphl_CLK_val
+END;
+EXIT;

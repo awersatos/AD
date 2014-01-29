@@ -1,0 +1,39 @@
+[Plugin]
+Name=drv_cs4270
+Description=CS4270 stereo audio CODEC controller driver
+Caption=CS4270 Audio Codec Driver
+SourceDir=platform\fpga\drivers\cs4270\src
+Implement=drv_cs4270
+Bitmap=drv_cs4270.bmp
+
+[Available_If0]
+Kind=PLUGIN
+Object=drv_spi
+Condition=EQ
+
+[Instance]
+Require0=drv_spi
+
+[Instance_Option0]
+Name=bus_sharing
+GUIName=SPI bus sharing
+Description=Handle multidrop SPI bus sharing at driver level
+Kind=BOOLEAN
+DefaultValue=True
+Auto=False
+
+[Instance_Option1]
+Name=channel
+GUIName=SPI channel
+Description=SPI channel number for this device. This should be 11 when using NanoBoard SPI multiplexer
+Kind=UINT8
+MinRange=1
+DefaultValue=11
+Auto=False
+
+[Instance_Option1_Hide_If0]
+Kind=OPTION
+Object=bus_sharing
+Condition=EQ
+Value=False
+

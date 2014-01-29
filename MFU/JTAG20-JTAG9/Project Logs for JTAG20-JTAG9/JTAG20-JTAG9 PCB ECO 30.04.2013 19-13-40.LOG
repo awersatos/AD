@@ -1,0 +1,52 @@
+Added Component: Designator=P1(PBD-10R)
+Added Component: Designator=P2(IDC-20M)
+Added Component: Designator=R1(C0805)
+Added Component: Designator=R2(C0805)
+Added Component: Designator=R3(C0805)
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=GND Pin=P2-4
+Added Pin To Net: NetName=GND Pin=P2-6
+Added Pin To Net: NetName=GND Pin=P2-8
+Added Pin To Net: NetName=GND Pin=P2-10
+Added Pin To Net: NetName=GND Pin=P2-12
+Added Pin To Net: NetName=GND Pin=P2-14
+Added Pin To Net: NetName=GND Pin=P2-16
+Added Pin To Net: NetName=GND Pin=P2-18
+Added Pin To Net: NetName=GND Pin=P2-20
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R2-1
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Net: Name=GND
+Added Pin To Net: NetName=NetP2_11 Pin=P2-11
+Added Pin To Net: NetName=NetP2_11 Pin=R1-2
+Added Net: Name=NetP2_11
+Added Pin To Net: NetName=NetP2_17 Pin=P2-17
+Added Pin To Net: NetName=NetP2_17 Pin=R2-2
+Added Net: Name=NetP2_17
+Added Pin To Net: NetName=NetP2_19 Pin=P2-19
+Added Pin To Net: NetName=NetP2_19 Pin=R3-2
+Added Net: Name=NetP2_19
+Added Pin To Net: NetName=NRST Pin=P1-7
+Added Pin To Net: NetName=NRST Pin=P2-15
+Added Net: Name=NRST
+Added Pin To Net: NetName=TCK Pin=P1-4
+Added Pin To Net: NetName=TCK Pin=P2-9
+Added Net: Name=TCK
+Added Pin To Net: NetName=TDI Pin=P1-2
+Added Pin To Net: NetName=TDI Pin=P2-5
+Added Net: Name=TDI
+Added Pin To Net: NetName=TDO Pin=P1-8
+Added Pin To Net: NetName=TDO Pin=P2-13
+Added Net: Name=TDO
+Added Pin To Net: NetName=TMS Pin=P1-6
+Added Pin To Net: NetName=TMS Pin=P2-7
+Added Net: Name=TMS
+Added Pin To Net: NetName=TRST Pin=P1-10
+Added Pin To Net: NetName=TRST Pin=P2-3
+Added Net: Name=TRST
+Added Pin To Net: NetName=VCC Pin=P1-9
+Added Pin To Net: NetName=VCC Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Net: Name=VCC
+Added Class: Name=JTAG20-JTAG9

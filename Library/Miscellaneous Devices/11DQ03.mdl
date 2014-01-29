@@ -1,0 +1,7 @@
+*11DQ03 MCE 7-17-95
+*Ref: IR Power Semiconductors Product Digest '94
+*MCE 30V 1.1A pkg:DIODE0.4 1,2
+.MODEL 11DQ03 D(IS=5.18E-9 RS=0.146 N=0.878 TT=4.32E-6 CJO=1.18E-10 
++ VJ=0.75 M=0.333 EG=0.69 XTI=2 BV=30 IBV=6.01E-6 )
+
+

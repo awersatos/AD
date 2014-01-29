@@ -1,0 +1,54 @@
+*Transformer Subcircuit Parameters
+*RATIO1 = Turns ratio= Secondary1/Primary
+*RATIO2 = Turns ratio= Secondary2/Primary
+*RATIO3 = Turns ratio= Secondary3/Primary
+*RPRI   = Primary DC resistance
+*R2D    = Secondary1 leakage resistance referred to the primary side
+*R3D    = Secondary2 leakage resistance referred to the primary side
+*R4D    = Secondary3 leakage resistance referred to the primary side
+*L1     = Primary Leakage inductance
+*XM     = Magnetizing Reactance
+*RCORE  = Core Loss Resistance
+*X2D   = Secondary1 Leakage Reactance referred to the primary side
+*X3D   = Secondary2 Leakage Reactance referred to the primary side
+*X4D   = Secondary3 Leakage Reactance referred to the primary side
+
+*Non-ideal 4-winding Transformer
+*jjt created 17/1/2001.
+*jjt 18/1/2002: deleted a comment line (of default values) which lacked the asterisk, changed the parameter comments
+*               to be consistent with the parameters to avoid possible confusion.
+*Connections:
+*                 Pri+
+*                 |   Pri-
+*                 |   |   Sec1+
+*                 |   |   |   Sec1-
+*                 |   |   |   |   Sec2+
+*                 |   |   |   |   |   Sec2-
+*                 |   |   |   |   |   |   Sec3+
+*                 |   |   |   |   |   |   |   Sec3-
+*                 |   |   |   |   |   |   |   |
+*                 |   |   |   |   |   |   |   |
+.SUBCKT NI4WTRANS 1   2   3   4   5   6   7   8   PARAMS: RATIO1=1 RATIO2=1 RATIO3=1 RPRI=0.1 R2D=0.1 R3D=0.1 R4D=0.1 L1=1U
++ X2D=1u X3D=1u X4D=1u XM=1k RCORE=1Meg
+
+VISRC1   4 13 0V
+VISRC2   6 16 0V
+VISRC3   8 19 0V 
+FCTRL1   12 2 VISRC1 {RATIO1}
+FCTRL2   15 2 VISRC2 {RATIO2}
+FCTRL3   18 2 VISRC3 {RATIO3}
+EVCVS1   3 13 12 2 {RATIO1}
+EVCVS2   5 16 15 2 {RATIO2}
+EVCVS3   7 19 18 2 {RATIO3}
+RRPRI    1 10 {RPRI}
+RR2D    11 12 {R2D}
+RR3D    14 15 {R3D}
+RR4D    17 18 {R4D}
+LL1   10 9 {L1}
+LX2D  9 11 {X2D}
+LX3D  9 14 {X3D}
+LX4D  9 17 {X4D}
+LXM   9 2 {XM}
+RRCORE 9 2 {RCORE}
+
+.ENDS NI4WTRANS

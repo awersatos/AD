@@ -1,0 +1,11 @@
+[Plugin]
+Name=shmfs
+Caption=Shared memory object File System
+Description=Implementation of posix file system interface for accessing shared memory objects.
+Implement=shmfs
+Require0=posix_devio
+SourceDir=services\posix\filesystem\shmfs\src
+; Make sure this is not run first
+InitHandler=shmfs_plugin_init
+InitHandlerPriority=4
+

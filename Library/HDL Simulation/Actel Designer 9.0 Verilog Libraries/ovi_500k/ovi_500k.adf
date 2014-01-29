@@ -1,0 +1,45 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ovi_500k
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+ovi_500k=.
+
+[Library]
+ovi_500k=.\OVI_500k.lib
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/a500k.v=-1
+/update_ovi_500k.do=-1
+
+[Files.Data]
+.\src\a500k.v=Verilog Source Code
+.\src\update_ovi_500k.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVerilogSets]
+Strict=0
+Strict2001=1
+SystemVerilog3=0
+ErrorOutputLimit=0
+WarningPrnLevel=1
+OptimizationLevel=2
+EnableDebug=1
+StrictLRMMode=0
+ProtectLevel=0
+AdditionalOptions=

@@ -1,0 +1,10 @@
+[Interface]
+Name=shmfs
+Category=SERVICE
+CanBeVisible=False
+Description=Shared memory objects file system implementation
+
+[Available_If0]
+Kind=INTERFACE
+Object=posix_filesystem
+Condition=EQ

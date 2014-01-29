@@ -1,0 +1,1230 @@
+timestamp=0
+
+[cbd16ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|22|1*1224
+B/behavioral=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*24657
+I/behavioral=I/Behavioral 0*25433
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*24210*0x8f3882325cc95919a14527ea0266cd799f2c87f8|0*24592*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*24893*0x86309d1c8fb1d1773ebea24195ef1271e648dd8e|0*25354*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|10
+S/cbd16ce=S/CBD16CE 40|0|2*0
+
+[cbd16cle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|65|1*2007
+B/behavioral=3*3050
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*26444
+I/behavioral=I/Behavioral 0*27250
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*25933*0x95a18f932d77eaf548b05fae2fd961ac22888da2|0*26378*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*26681*0x3d37ae53de77f30a837a85e3e2590fa838400d6e|0*27170*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|51
+S/cbd16cle=S/CBD16CLE 40|0|2*4136
+
+[cbd16cled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|109|1*2822
+B/behavioral=3*6380
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*28285
+I/behavioral=I/Behavioral 0*29364
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*27752*0x618db85c623e4eb01c51381ab0b0e456d913673d|0*28218*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*28523*0x6b055f24d36edbc209bee64ac8e9fd376abea37c|0*29283*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|95
+S/cbd16cled=S/CBD16CLED 40|0|2*9425
+
+[cbd16re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|161|1*3701
+B/behavioral=3*11014
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*30294
+I/behavioral=I/Behavioral 0*31066
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*29849*0xda98216acd6d506504fe0ea9a3a3ec83eef716ba|0*30229*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*30530*0xb24600e4e461a97ecc851b29256f9ac573e5449d|0*30987*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|149
+S/cbd16re=S/CBD16RE 40|0|2*15227
+
+[cbd16rle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|203|1*4500
+B/behavioral=3*14064
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*32059
+I/behavioral=I/Behavioral 0*32861
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*31550*0xa0f36c99e991455573c963cc2ceda3d0a0f088a5|0*31993*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*32296*0x81e036de9dc6983b9f4a71251a1fdda6f4034e24|0*32781*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|189
+S/cbd16rle=S/CBD16RLE 40|0|2*19368
+
+[cbd16x1]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|249|1*5315
+B/behavioral=3*17394
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*33933
+I/behavioral=I/Behavioral 0*35199
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*33361*0x9b329db0b92af57d32a14caefed99f5709ae429f|0*33868*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*34169*0x73f33dfb53134bed33c8a56e217661f5b4e34bbd|0*35120*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|233
+S/cbd16x1=S/CBD16X1 40|0|2*24660
+
+[cbd16x2]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|311|1*6258
+B/behavioral=3*23008
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*36270
+I/behavioral=I/Behavioral 0*37524
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*35698*0x6ee15f81d007d86e5f7344cb49aff0d75b13a70d|0*36205*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*36506*0xd839c3c57511411560a4ecb86932ed34bfb3fd6a|0*37445*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|295
+S/cbd16x2=S/CBD16X2 40|0|2*31469
+
+[cbd2ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|369|1*7201
+B/behavioral=3*28574
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*38451
+I/behavioral=I/Behavioral 0*39225
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*38006*0xdc20ae86bab4d6185158036a6498561a505e8871|0*38387*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*38686*0x7345b60d9863fe62b6d156d6ffe788aa81459194|0*39147*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=2-Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|357
+S/cbd2ce=S/CBD2CE 40|0|2*38275
+
+[cbd2cle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|411|1*8000
+B/behavioral=3*31624
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*40214
+I/behavioral=I/Behavioral 0*41018
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*39707*0x650ebf692a41024771fa360223705312097f6322|0*40149*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*40450*0x548f6d0230b842346a0452e6d10182cda1f37b40|0*40939*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=2-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|398
+S/cbd2cle=S/CBD2CLE 40|0|2*42407
+
+[cbd2cled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|455|1*8815
+B/behavioral=3*34954
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*42049
+I/behavioral=I/Behavioral 0*43102
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*41518*0x9f94ed05501c812b218163c55083f59bd515a496|0*41983*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*42286*0x58b6517c8d73308894eda8fab6b7703265cfa60e|0*43022*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=2-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|441
+S/cbd2cled=S/CBD2CLED 40|0|2*47692
+
+[cbd2re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|504|1*9678
+B/behavioral=3*39588
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*44028
+I/behavioral=I/Behavioral 0*44800
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*43585*0x2a45ac9dca25b1bb2deeabe920152e5c34097e9a|0*43964*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*44263*0xbc1c7bc2f2f787de70dde01717c0ccc562367581|0*44722*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=2-Bit Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|492
+S/cbd2re=S/CBD2RE 40|0|2*53490
+
+[cbd2rle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|545|1*10477
+B/behavioral=3*42638
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*45787
+I/behavioral=I/Behavioral 0*46587
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*45282*0x41cac50174286e09c67a73778d0734a75ab24927|0*45722*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*46023*0xb79a87e306f93c71f7ba3d94feaa69c73c40005f|0*46508*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=2-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|532
+S/cbd2rle=S/CBD2RLE 40|0|2*57627
+
+[cbd2x1]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|591|1*11292
+B/behavioral=3*45968
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*47655
+I/behavioral=I/Behavioral 0*48917
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*47085*0x2393f03dd2fda7560c0f6c5f2bda4336316f7a66|0*47591*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*47890*0x9db4de88d59914b52fd87f7b51743de7a93aca4e|0*48839*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=2-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|575
+S/cbd2x1=S/CBD2X1 40|0|2*62915
+
+[cbd2x2]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|653|1*12219
+B/behavioral=3*51582
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*49982
+I/behavioral=I/Behavioral 0*51523
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*49414*0xf6308a9caf141e5d5f99fa086647384062c07256|0*49918*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*50217*0xcbd2a9d3e62a40ff422762e06c0b631f20d146ca|0*51445*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=2-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|637
+S/cbd2x2=S/CBD2X2 40|0|2*69720
+
+[cbd4ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|728|1*13178
+B/behavioral=3*57800
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*52449
+I/behavioral=I/Behavioral 0*53223
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*52004*0x81fcac894cb6bb75698b46f4ce401986e2ae443f|0*52385*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*52684*0x0582ba0534111f42314d3cba4da46f8ae4a9cd32|0*53145*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|716
+S/cbd4ce=S/CBD4CE 40|0|2*76522
+
+[cbd4cle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|769|1*13977
+B/behavioral=3*60850
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*54214
+I/behavioral=I/Behavioral 0*55018
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*53705*0x29dfff8cedb02b0b2be9a3ef7d73cf0cc5e80137|0*54149*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*54450*0x7adda81e78ddc3f8c7730980345651ed4c9c1309|0*54939*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|756
+S/cbd4cle=S/CBD4CLE 40|0|2*80654
+
+[cbd4cled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|813|1*14792
+B/behavioral=3*64180
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*56049
+I/behavioral=I/Behavioral 0*57104
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*55518*0x0f129217a7184071b9fd6fd645ec950bab682ef0|0*55983*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*56286*0x08b5520b81eb04ff6e8bb8d9339f2b2f9238f146|0*57024*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|799
+S/cbd4cled=S/CBD4CLED 40|0|2*85939
+
+[cbd4re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|863|1*15655
+B/behavioral=3*68814
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*58030
+I/behavioral=I/Behavioral 0*58800
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*57587*0x8f2a6860ae7e68457a7045fb3ac2866c23983ef4|0*57966*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*58265*0x112fd0981eb1931fdd141e97959db92981670495|0*58722*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|851
+S/cbd4re=S/CBD4RE 40|0|2*91737
+
+[cbd4rle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|905|1*16454
+B/behavioral=3*71864
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*59789
+I/behavioral=I/Behavioral 0*60589
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*59282*0x9a4cb276aae8c7f3accac152eb33068a2999f525|0*59724*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*60025*0xb3fed47547d3765aeaa45a5ac49c6a4bbd2579c4|0*60510*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|891
+S/cbd4rle=S/CBD4RLE 40|0|2*95874
+
+[cbd4x1]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|951|1*17269
+B/behavioral=3*75194
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*61657
+I/behavioral=I/Behavioral 0*63209
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*61087*0x3cdfa30793eed4c5579b7463be91db071c30498f|0*61593*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*61892*0xfa8dd64c5b481e7d440e438df330270a0a41672e|0*63131*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|935
+S/cbd4x1=S/CBD4X1 40|0|2*101162
+
+[cbd4x2]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1030|1*18228
+B/behavioral=3*81460
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*64276
+I/behavioral=I/Behavioral 0*65821
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*63706*0x840a92b3a0532fe6d35a8d75ed1a83e133908d8d|0*64212*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*64511*0x4e66e78f4cd8014177c8cf8da4800c55b7659385|0*65743*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1014
+S/cbd4x2=S/CBD4X2 40|0|2*107967
+
+[cbd8ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1105|1*19187
+B/behavioral=3*87726
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*66747
+I/behavioral=I/Behavioral 0*67521
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*66302*0x6a187c0cbe0e35ac6900d6b70167a629d8664981|0*66683*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*66982*0x0b656d9ebe2a260b82ea95876c1ca5a5274f30c4|0*67443*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1093
+S/cbd8ce=S/CBD8CE 40|0|2*114769
+
+[cbd8cle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1147|1*19986
+B/behavioral=3*90776
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*68510
+I/behavioral=I/Behavioral 0*69314
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*68003*0x97736ba351d536912aa8006a51f5451e8a6e613b|0*68445*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*68746*0x24106f4979594c1b1c9f59b9922d16e571e4ebe9|0*69235*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1134
+S/cbd8cle=S/CBD8CLE 40|0|2*118901
+
+[cbd8cled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1191|1*20801
+B/behavioral=3*94106
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*70345
+I/behavioral=I/Behavioral 0*71398
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*69814*0xf43ecc98d2d066e9cf35cd717759e98729b39b48|0*70279*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*70582*0x346874b0e8b7c2ff96620ff60fc189b2017c928f|0*71318*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1177
+S/cbd8cled=S/CBD8CLED 40|0|2*124192
+
+[cbd8re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1241|1*21664
+B/behavioral=3*98740
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*72324
+I/behavioral=I/Behavioral 0*73094
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*71881*0x03e2f1d50102d30623b023edf132bb5f4514497b|0*72260*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*72559*0xbdd4ed64cc56d7df3d46ad7a7b28840a473fc3fa|0*73016*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1229
+S/cbd8re=S/CBD8RE 40|0|2*129988
+
+[cbd8rle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1283|1*22463
+B/behavioral=3*101790
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*74085
+I/behavioral=I/Behavioral 0*74885
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*73576*0x53120dddd4ece96ec006e65facea9a1b92090bbe|0*74020*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*74321*0x83a7d9e46c57d2715443df839ad120b8c66ec942|0*74806*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Loadable Cascadable Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1269
+S/cbd8rle=S/CBD8RLE 40|0|2*134125
+
+[cbd8x1]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1329|1*23278
+B/behavioral=3*105120
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*75953
+I/behavioral=I/Behavioral 0*77211
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*75383*0xfb2a9b622c2a4c44b72d23ec34c4424c12eea666|0*75889*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*76188*0x601fcb6803e0e842018dbc9fb24333929bbaba80|0*77133*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1313
+S/cbd8x1=S/CBD8X1 40|0|2*139413
+
+[cbd8x2]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1392|1*24221
+B/behavioral=3*110686
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*78276
+I/behavioral=I/Behavioral 0*79526
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*77708*0x4a2abbc31df6b83b9afcd68881e91bc638c031ac|0*78212*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*78511*0x59692687b97d90c81c74fd87313b64504bcd8ac6|0*79448*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Loadable Cascadable Bidirectional Dual Edge Triggered Binary Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1376
+S/cbd8x2=S/CBD8X2 40|0|2*146216
+
+[cdd4ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1450|1*25164
+B/behavioral=3*116252
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*80386
+I/behavioral=I/Behavioral 0*81251
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*79975*0x365037dc255192a59596abe15d1cc22c20a51189|0*80322*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*80621*0x3406284df46a7ed77b16f820f09e7571b925e3d4|0*81173*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Cascadable Dual Edge Triggered BCD Counter with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1439
+S/cdd4ce=S/CDD4CE 40|0|2*153018
+
+[cdd4cle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1500|1*25931
+B/behavioral=3*118482
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*82168
+I/behavioral=I/Behavioral 0*83065
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*81701*0xe3cc74d233e9b819d9e820bdc6945b0a5c63d112|0*82103*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*82404*0x38ed43c61f1a10d9d104ad5acae9da9d3c0a14bf|0*82986*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Cascadable Dual Edge Triggered BCD Counter with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1487
+S/cdd4cle=S/CDD4CLE 40|0|2*157110
+
+[cdd4re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1550|1*26714
+B/behavioral=3*120832
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*83924
+I/behavioral=I/Behavioral 0*84781
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*83515*0x360102586474bc7531811558710ff62a07f69f81|0*83860*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*84159*0xb1f40aef6839c3949003158c77d8ceea23366a10|0*84703*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Cascadable Dual Edge Triggered BCD Counter with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1539
+S/cdd4re=S/CDD4RE 40|0|2*162345
+
+[cdd4rle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1600|1*27481
+B/behavioral=3*123062
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*85696
+I/behavioral=I/Behavioral 0*86583
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*85231*0x34b214899c6d77e021024e4204405cb7a22dbddc|0*85631*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*85932*0x1de34eadcc684b9b168ae0d5c4a9eaeea88d53ec|0*86504*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Cascadable Dual Edge Triggered BCD Counter with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1587
+S/cdd4rle=S/CDD4RLE 40|0|2*166438
+
+[cjd4ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1649|1*28264
+B/behavioral=3*125412
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*87469
+I/behavioral=I/Behavioral 0*88155
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*87065*0x857611229ecb8d9454ff82b4ab318ca6b4184f78|0*87405*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*87704*0xa830c041092513f82e954543aecce51632529702|0*88077*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1639
+S/cjd4ce=S/CJD4CE 40|0|2*171676
+
+[cjd4re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1685|1*28999
+B/behavioral=3*128326
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*89022
+I/behavioral=I/Behavioral 0*89700
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*88620*0x84682ef15b3a42e6935ad1300e476591e530f56b|0*88958*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*89257*0x8e12c1ca6547c19d0261fd6a728c9b48b46d4f51|0*89622*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1675
+S/cjd4re=S/CJD4RE 40|0|2*174798
+
+[cjd5ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1721|1*29734
+B/behavioral=3*131240
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*90585
+I/behavioral=I/Behavioral 0*91271
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*90181*0x38bbef7f853b97b1b0c9e82a4c168717de8cf148|0*90521*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*90820*0xf0cf4143197dc6edb04c636bc49caf15ecd75364|0*91193*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=5-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1711
+S/cjd5ce=S/CJD5CE 40|0|2*177917
+
+[cjd5re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1757|1*30469
+B/behavioral=3*134154
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*92138
+I/behavioral=I/Behavioral 0*92816
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*91736*0x5cff7319b543cfb9a7470d2dfdd918d88a604728|0*92074*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*92373*0x5844484586870c35b7cace24890072ff40327df4|0*92738*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=5-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1747
+S/cjd5re=S/CJD5RE 40|0|2*181039
+
+[cjd8ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1793|1*31204
+B/behavioral=3*137068
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*93703
+I/behavioral=I/Behavioral 0*94389
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*93297*0x2834f2b65321493136f01bae4b74eda29aef39ea|0*93639*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*93938*0x55261596e95e81e882523c2a92f4fdf2430c1e9f|0*94311*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1783
+S/cjd8ce=S/CJD8CE 40|0|2*184158
+
+[cjd8re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1827|1*31939
+B/behavioral=3*139982
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*95252
+I/behavioral=I/Behavioral 0*95930
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*94854*0xe1f96b9e3e560d6385428d7434d1b3e0d4280564|0*95188*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*95487*0xce871011d5363daae2a86c34afcb61dbed68ad45|0*95852*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Dual Edge Triggered Johnson Counters with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1819
+S/cjd8re=S/CJD8RE 40|0|2*187280
+
+[cpld_det_components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*23806
+M=3|0|v63|0|./src/cpld_det.vhd|0*2014*0x2fe7bd7d4e97e2ed2dd651158a9d2133c13dbcad|0*23733*0x4ace356d5b51cb5a507be15551d3bb15
+R=./src/cpld_det.vhd|8
+
+[fdd]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1861|1*32674
+B/behavioral=3*142896
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*96666
+I/behavioral=I/Behavioral 0*97151
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*96344*0xda308e6dd0a0792852fa0e79df318dd73ac21e52|0*96605*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*96898*0xb597d8f42b3cfa71e29f500acc8f5ca8759053f5|0*97076*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop
+R=./src/cpld_det_sim.vhd|1853
+S/fdd=S/FDD 40|0|2*190399
+
+[fdd16]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1885|1*33201
+B/behavioral=3*143301
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*97938
+I/behavioral=I/Behavioral 0*98431
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*97580*0x64bb98ff3ef2780cae581847eb14ac95a52786b0|0*97875*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*98172*0xc3c4564e5b239d91d6e221b9fd94fe2744a0c159|0*98354*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16 Dual Edge Triggered D Flip-Flops
+R=./src/cpld_det_sim.vhd|1877
+S/fdd16=S/FDD16 40|0|2*192646
+
+[fdd16ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1911|1*33792
+B/behavioral=3*143706
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*99287
+I/behavioral=I/Behavioral 0*99839
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*98880*0x53787c2e5705f5d97a02a43ea4607be473b8e12f|0*99222*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*99523*0x3abc0a2dbcfa0a9c175bf92973a6f2795210c85f|0*99760*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Dual Edge Triggered Data Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1901
+S/fdd16ce=S/FDD16CE 40|0|2*195193
+
+[fdd16re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1941|1*34415
+B/behavioral=3*144255
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*100695
+I/behavioral=I/Behavioral 0*101253
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*100290*0x207cb5581f4d83861f74090a5f3a4662ab11e054|0*100630*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*100931*0x7ac55300d8240d1aed1cf759fb51e9e26192ae4c|0*101174*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Dual Edge Triggered Data Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|1931
+S/fdd16re=S/FDD16RE 40|0|2*198913
+
+[fdd4]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1969|1*35038
+B/behavioral=3*144804
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*102039
+I/behavioral=I/Behavioral 0*102528
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*101685*0xbdef67072d8d0c4beb3fe590ff33c5ca08a3b048|0*101977*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*102272*0xaa59857e61426535e56999619b8cecc6bc6bd67a|0*102452*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4 Dual Edge Triggered D Flip-Flops
+R=./src/cpld_det_sim.vhd|1961
+S/fdd4=S/FDD4 40|0|2*202632
+
+[fdd4ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|1995|1*35629
+B/behavioral=3*145209
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*103378
+I/behavioral=I/Behavioral 0*103928
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*102975*0xcb83b97efdf14bd4204d2da0b2db616447db3943|0*103314*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*103613*0xd19c5c4fb46b66912d9d4c96b6211c19811f0662|0*103850*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Dual Edge Triggered Data Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|1985
+S/fdd4ce=S/FDD4CE 40|0|2*205174
+
+[fdd4re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2025|1*36252
+B/behavioral=3*145758
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*104778
+I/behavioral=I/Behavioral 0*105320
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*104377*0xa4475ff71a570def2eb5ca25da8e61cda2c22b37|0*104714*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*105013*0xf151a9297fc50cac2b66a7dc038048fc769d5832|0*105242*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Dual Edge Triggered Data Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|2015
+S/fdd4re=S/FDD4RE 40|0|2*208889
+
+[fdd8]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2053|1*36875
+B/behavioral=3*146307
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*106107
+I/behavioral=I/Behavioral 0*106596
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*105751*0xa3426d9d10e4cfc5fdbfff6d08d7790d23e92d03|0*106045*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*106340*0x223fe9c6931e4a1f90637999e6b78e4721ef3517|0*106520*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8 Dual Edge Triggered D Flip-Flops
+R=./src/cpld_det_sim.vhd|2045
+S/fdd8=S/FDD8 40|0|2*212603
+
+[fdd8ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2079|1*37466
+B/behavioral=3*146712
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*107446
+I/behavioral=I/Behavioral 0*108000
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*107043*0xee49b7a725724d91db79f7014bce5d8394e577d9|0*107382*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*107681*0xc0b2295e6d8efea9b65ce47aacbdbed0218f19cc|0*107922*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Dual Edge Triggered Data Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2069
+S/fdd8ce=S/FDD8CE 40|0|2*215145
+
+[fdd8re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2109|1*38089
+B/behavioral=3*147261
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*108850
+I/behavioral=I/Behavioral 0*109396
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*108449*0x380c623182da86a4f1be825df7372d2bf30961ad|0*108786*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*109085*0x73d6735a4c33b14c12bf7a214c7137cd0ab10384|0*109318*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Dual Edge Triggered Data Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|2099
+S/fdd8re=S/FDD8RE 40|0|2*218862
+
+[fddc]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2138|1*38712
+B/behavioral=3*147810
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*110158
+I/behavioral=I/Behavioral 0*110683
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*109811*0x200eb58d8f08906887a1526f1239ef25d3313232|0*110096*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*110391*0x277335d7b6411fcff6e255be408c784ef9494f5f|0*110607*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=D Dual Edge Triggered Flip-Flop with Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2129
+S/fddc=S/FDDC 40|0|2*222572
+
+[fddce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2166|1*39255
+B/behavioral=3*149020
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*111484
+I/behavioral=I/Behavioral 0*112024
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*111113*0x10efbed90d420ce5c4d6082954505f38f97882c4|0*111421*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*111718*0x5fc416c4502e68c1dd15904cf568827394310a71|0*111947*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2156
+S/fddce=S/FDDCE 40|0|2*225476
+
+[fddcp]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2196|1*39798
+B/behavioral=3*149545
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*112827
+I/behavioral=I/Behavioral 0*113378
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*112455*0x8468bc4f0306c79ac096b4d064912b1163493807|0*112764*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*113061*0xf7ac51623c6d681a09689973a55695321b5209ca|0*113301*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual EdgeArchitectures Supported Triggered D Flip-Flop Asynchronous Preset and Clear
+R=./src/cpld_det_sim.vhd|2186
+S/fddcp=S/FDDCP 40|0|2*228882
+
+[fddcpe]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2227|1*40341
+B/behavioral=3*150106
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*114206
+I/behavioral=I/Behavioral 0*114779
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*113810*0x6758422eed58834d1215a711501deac4c14f23ff|0*114142*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*114441*0x2ea139530a8c8ab5353bfc47912e99e57f582261|0*114701*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Clock Enable and Asynchronous Preset and Clear
+R=./src/cpld_det_sim.vhd|2216
+S/fddcpe=S/FDDCPE 40|0|2*232430
+
+[fddp]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2258|1*40900
+B/behavioral=3*150715
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*115541
+I/behavioral=I/Behavioral 0*116059
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*115194*0x68649eae6bda68282d95fb0e53860cc888574f11|0*115479*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*115774*0x24084d0c1572fed69ca7147caa8b2740d886e661|0*115983*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Asynchronous Preset
+R=./src/cpld_det_sim.vhd|2249
+S/fddp=S/FDDP 40|0|2*236485
+
+[fddpe]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2286|1*41443
+B/behavioral=3*151192
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*116860
+I/behavioral=I/Behavioral 0*117402
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*116489*0x5bfd965506b7807a399523efc167955aad8d136b|0*116797*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*117094*0xce0413731dfb54a3761f315b4d7a5e37cb315161|0*117325*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Clock Enable and Asynchronous Preset
+R=./src/cpld_det_sim.vhd|2276
+S/fddpe=S/FDDPE 40|0|2*239385
+
+[fddr]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2315|1*41986
+B/behavioral=3*151717
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*118161
+I/behavioral=I/Behavioral 0*118681
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*117816*0xcc42e07ac3861c3369b08b6c69dd56b071f6f5f3|0*118099*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*118394*0x57b950fbb5984a97755323352e1b747d973086d0|0*118605*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Reset
+R=./src/cpld_det_sim.vhd|2306
+S/fddr=S/FDDR 40|0|2*242787
+
+[fddre]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2344|1*42529
+B/behavioral=3*152194
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*119480
+I/behavioral=I/Behavioral 0*120010
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*119111*0x7027d5f393d2f54c18a5411c7efe76179d2dd71b|0*119417*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*119714*0x7f054d9f5248993a9e76c0b37288c7daf05ef484|0*119933*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|2334
+S/fddre=S/FDDRE 40|0|2*245688
+
+[fddrs]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2374|1*43072
+B/behavioral=3*152719
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*120809
+I/behavioral=I/Behavioral 0*121352
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*120441*0xbc58ae26c02604ec6cc2a1f1e5f9e8be7ca1bb4f|0*120746*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*121043*0xaf97e4a4419db7b18a9c315d452bc2c59f0aa5fd|0*121275*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Reset and Set
+R=./src/cpld_det_sim.vhd|2364
+S/fddrs=S/FDDRS 40|0|2*249101
+
+[fddrse]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2407|1*43615
+B/behavioral=3*153280
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*122176
+I/behavioral=I/Behavioral 0*122733
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*121784*0xd3a3856fca1a7c15d33a51bba3b81b12bf27373b|0*122112*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*122411*0xbab591201869ec6481159b483940bbd7d3e4e105|0*122655*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Reset and Set and Clock Enable
+R=./src/cpld_det_sim.vhd|2396
+S/fddrse=S/FDDRSE 40|0|2*252635
+
+[fddse]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2439|1*44174
+B/behavioral=3*153889
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*123534
+I/behavioral=I/Behavioral 0*124064
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*123165*0x8057c9209c37e88d731a327376da6d333cdc9282|0*123471*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*123768*0x04ac6117dd5f8441dccfa4a7b2433eae982d3fcb|0*123987*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=D Flip-Flop with Clock Enable and Synchronous Set
+R=./src/cpld_det_sim.vhd|2429
+S/fddse=S/FDDSE 40|0|2*256682
+
+[fddsr]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2469|1*44717
+B/behavioral=3*154414
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*124863
+I/behavioral=I/Behavioral 0*125404
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*124495*0xaa7d032830c24e72351a2b64feefb079d7e8ca3f|0*124800*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*125097*0xc63de1ad357296fb0b6d9e084fe1f04a2543660e|0*125327*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Set and Reset
+R=./src/cpld_det_sim.vhd|2459
+S/fddsr=S/FDDSR 40|0|2*260068
+
+[fddsre]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2501|1*45260
+B/behavioral=3*154975
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*126228
+I/behavioral=I/Behavioral 0*126785
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*125836*0x77b5c74a5b0b1f5383b59faebd4e05f044f331d9|0*126164*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*126463*0xe3739041091790ce11231b9bfda56e560209f62e|0*126707*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered D Flip-Flop with Synchronous Set and Reset and Clock Enable
+R=./src/cpld_det_sim.vhd|2490
+S/fddsre=S/FDDSRE 40|0|2*263602
+
+[ftdce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2533|1*45819
+B/behavioral=3*155584
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*127588
+I/behavioral=I/Behavioral 0*128202
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*127217*0x5ac14fed46907506f09867c23620a441a4fd83c6|0*127525*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*127822*0xe796eff782fb7feb5fa6cd4031b413e163184136|0*128125*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered Toggle Flip-Flop with Toggle and Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2523
+S/ftdce=S/FTDCE 40|0|2*267649
+
+[ftdcle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2572|1*46442
+B/behavioral=3*156850
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*129047
+I/behavioral=I/Behavioral 0*129693
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*128634*0x9fb07ff011cfadb1a89d98e69a97692000310398|0*128983*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*129282*0xf9ff0ba66851e85aca5063617c0e61ace638f95b|0*129615*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2560
+S/ftdcle=S/FTDCLE 40|0|2*282717
+
+[ftdclex]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2613|1*47081
+B/behavioral=3*158248
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*130544
+I/behavioral=I/Behavioral 0*131194
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*130127*0x6554978ddd2ae764b8c6df7b1d5bed6585da7a9b|0*130479*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*130780*0x6c285df3f14b9d2e5a9e8b0a482cd0d13db940b9|0*131115*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2601
+S/ftdclex=S/FTDCLEX 40|0|2*287150
+
+[ftdcp]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2652|1*47720
+B/behavioral=3*159646
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*131999
+I/behavioral=I/Behavioral 0*132624
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*131627*0x6cb64da185fd3c4dec784bfa7654bab3665ff214|0*131936*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*132233*0xd1976bcab270fb32529c24582da0893263761d05|0*132547*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Toggle Flip-Flop with Toggle Enable and Asynchronous Clear and Preset
+R=./src/cpld_det_sim.vhd|2642
+S/ftdcp=S/FTDCP 40|0|2*271081
+
+[ftdcpe]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2689|1*48343
+B/behavioral=3*160948
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*133452
+I/behavioral=I/Behavioral 0*134099
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*133056*0x0ce49cfffefceb9cdfd5b9a837e73871d8c58dc0|0*133388*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*133687*0x70a76e47916a5f5c4638418b1c2db3f569bfe931|0*134021*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Toggle Flip-Flop with Toggle Enable and Asynchronous Clear and Clock Enable and Preset
+R=./src/cpld_det_sim.vhd|2678
+S/ftdcpe=S/FTDCPE 40|0|2*274596
+
+[ftdrse]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2728|1*48982
+B/behavioral=3*162298
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*134924
+I/behavioral=I/Behavioral 0*135560
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*134532*0xdb7f2ddf4ba10666f8d3aaa803bad9021bba9429|0*134860*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*135159*0xb621d54f17c8e13af075fa1d14fcce7e73d0d79d|0*135482*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered Toggle Flip-Flop with Toggle and Clock Enable and Synchronous Reset and Set
+R=./src/cpld_det_sim.vhd|2717
+S/ftdrse=S/FTDRSE 40|0|2*278654
+
+[ftdrsle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2770|1*49621
+B/behavioral=3*163648
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*136428
+I/behavioral=I/Behavioral 0*137103
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*135994*0x5c70fd21832a55b2f266f2aa60edb302c7ecbf87|0*136363*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*136664*0x174b6d9e4b3c82da56a987c5f58ae696f0c4b23f|0*137024*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=Dual Edge Triggered Toggle/Loadable Flip-Flop with Toggle and Clock Enable and Synchronous Reset and Set
+R=./src/cpld_det_sim.vhd|2757
+S/ftdrsle=S/FTDRSLE 40|0|2*291604
+
+[srd16ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2813|1*50276
+B/behavioral=3*165106
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*138017
+I/behavioral=I/Behavioral 0*138661
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*137586*0x87cf26987889b190da51dbd69016774f2ee417a3|0*137952*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*138253*0xd77e0d4190c001a826438d93949d91d129098008|0*138582*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2802
+S/srd16ce=S/SRD16CE 40|0|2*296668
+
+[srd16cle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2849|1*51011
+B/behavioral=3*167364
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*139638
+I/behavioral=I/Behavioral 0*140320
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*139145*0xc0664b5e3228f5ebc0b42fd02393afee6ac895ee|0*139572*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*139875*0x78fa23c4dd598a7535fdde461862eb36181ce8fe|0*140240*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2836
+S/srd16cle=S/SRD16CLE 40|0|2*300318
+
+[srd16cled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2891|1*51778
+B/behavioral=3*169914
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*141362
+I/behavioral=I/Behavioral 0*142110
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*140822*0x69ca13c975281e7ea6223b276bf84fb3ac920a5c|0*141295*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*141600*0x8ce3aeff152b6c3a77eef90ed4594f95b2b364ea|0*142029*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|2876
+S/srd16cled=S/SRD16CLED 40|0|2*305128
+
+[srd16re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2933|1*52561
+B/behavioral=3*173368
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*143022
+I/behavioral=I/Behavioral 0*143662
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*142595*0x01b224b0e47643a03a59023ae17ff30b8ca84cce|0*142957*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*143258*0x37d583e51fdcb7fee1221959b91be89b67d62543|0*143583*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|2922
+S/srd16re=S/SRD16RE 40|0|2*310886
+
+[srd16rle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|2969|1*53296
+B/behavioral=3*175626
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*144637
+I/behavioral=I/Behavioral 0*145320
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*144146*0x84663c3f7da3283f0885a84a0e14137c8d25bff3|0*144571*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*144874*0x2a4ea5e4ef1c626b9d8faa589b87ef01b3ce5043|0*145240*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|2956
+S/srd16rle=S/SRD16RLE 40|0|2*314527
+
+[srd16rled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3012|1*54063
+B/behavioral=3*178164
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*146360
+I/behavioral=I/Behavioral 0*147105
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*145822*0xb9149e14bab5bd654e93e5bbb1ef7c08c1e0da68|0*146293*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*146598*0xe9546b0c3d767dfa63dccd13bf6ad4bf9180ef7f|0*147024*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=16-Bit Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|2997
+S/srd16rled=S/SRD16RLED 40|0|2*319334
+
+[srd4ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3055|1*54846
+B/behavioral=3*181618
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*148014
+I/behavioral=I/Behavioral 0*148656
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*147589*0x8aa31c7cc085bd8bc86a12f18dd6eb277aa83ae7|0*147950*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*148249*0x12b0f98fca2adad61fa57097df1d00bcea689d21|0*148578*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|3044
+S/srd4ce=S/SRD4CE 40|0|2*325093
+
+[srd4cle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3091|1*55581
+B/behavioral=3*183876
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*149627
+I/behavioral=I/Behavioral 0*150305
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*149138*0x248c4c63e1951d3fc7fddce7d2b3dab32bf4a22f|0*149562*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*149863*0xdf479bbc2c50243017a1f12a85052ecf23afe680|0*150226*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|3078
+S/srd4cle=S/SRD4CLE 40|0|2*328739
+
+[srd4cled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3133|1*56348
+B/behavioral=3*186426
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*151341
+I/behavioral=I/Behavioral 0*152085
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*150805*0x4c3df124d27d6d92c090efaedd64a62633a40ce7|0*151275*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*151578*0x519f780f36c064d770a4640845654b7d733c3284|0*152005*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|3118
+S/srd4cled=S/SRD4CLED 40|0|2*333545
+
+[srd4re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3175|1*57131
+B/behavioral=3*189880
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*152991
+I/behavioral=I/Behavioral 0*153627
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*152568*0xefd5634a656c18d199eac5b9a2a58dfc9cdfc93f|0*152927*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*153226*0x6ac4feaf9e007f184005e6e74d70cda748852464|0*153549*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|3164
+S/srd4re=S/SRD4RE 40|0|2*339299
+
+[srd4rle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3211|1*57866
+B/behavioral=3*192138
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*154596
+I/behavioral=I/Behavioral 0*155275
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*154109*0x8bf3f4b3f635b3516940020516d8015bd1b55793|0*154531*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*154832*0xb9c62f59541aced4217cab1522ffaef7fece53a0|0*155196*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|3198
+S/srd4rle=S/SRD4RLE 40|0|2*342936
+
+[srd4rled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3254|1*58617
+B/behavioral=3*194676
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*156309
+I/behavioral=I/Behavioral 0*157050
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*155775*0xf9c3edd1d713f8b809e15740e1b89476013e5cdd|0*156243*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*156546*0x64117ebfeda6bf702b34086b9e72464d8f01708e|0*156970*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=4-Bit Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|3239
+S/srd4rled=S/SRD4RLED 40|0|2*347739
+
+[srd8ce]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3297|1*59400
+B/behavioral=3*198130
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*157958
+I/behavioral=I/Behavioral 0*158598
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*157533*0xf8df01cb34153b498b809993f6a4f4af13007860|0*157894*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*158193*0xdcbb42070941d1114683c46eb1d884daaa80d23a|0*158520*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|3286
+S/srd8ce=S/SRD8CE 40|0|2*353494
+
+[srd8cle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3333|1*60135
+B/behavioral=3*200388
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*159571
+I/behavioral=I/Behavioral 0*160249
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*159080*0xbf68f6763302097ac30143bc65bbf1987ca43ae1|0*159506*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*159807*0x54bef670404eab2dae808a5b272a8020dfca443c|0*160170*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|3320
+S/srd8cle=S/SRD8CLE 40|0|2*357134
+
+[srd8cled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3375|1*60902
+B/behavioral=3*202938
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*161285
+I/behavioral=I/Behavioral 0*162029
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*160749*0xf04dfc49ab0759f61ae3b68d58d613de39066e02|0*161219*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*161522*0x9094ba53a8372e5058336a353ee10c40cc8b36d5|0*161949*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Dual Edge Triggered Shift Registers with Clock Enable and Asynchronous Clear
+R=./src/cpld_det_sim.vhd|3360
+S/srd8cled=S/SRD8CLED 40|0|2*361936
+
+[srd8re]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3417|1*61685
+B/behavioral=3*206392
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*162935
+I/behavioral=I/Behavioral 0*163571
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*162512*0x65f72353943b1b9d9dd998986b38d024815bd761|0*162871*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*163170*0x1e973c8a60a086cdc3d1783be0c57acec688803f|0*163493*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Serial-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|3406
+S/srd8re=S/SRD8RE 40|0|2*367690
+
+[srd8rle]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3453|1*62420
+B/behavioral=3*208650
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*164540
+I/behavioral=I/Behavioral 0*165219
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*164053*0x93ab497af94ea2994fa444ae0131468d933107d4|0*164475*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*164776*0x7169c107bc3597b50384134581bbded73cfbf476|0*165140*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Loadable Serial/Parallel-In Parallel-Out Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|3440
+S/srd8rle=S/SRD8RLE 40|0|2*371331
+
+[srd8rled]
+A/behavioral=A/Behavioral 21|./src/cpld_det_sim.vhd|3496|1*63171
+B/behavioral=3*211188
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behavioral=8.2.1986.SP1.35.3497  (Windows)
+I=0*166253
+I/behavioral=I/Behavioral 0*166994
+M=11|0|v63|0|./src/cpld_det_sim.vhd|0*165719*0xd00eba5f3d50a755ad5eba0ce763f870a909b996|0*166187*0x4ace356d5b51cb5a507be15551d3bb15
+M/behavioral=M/Behavioral 21|0|v63|0|./src/cpld_det_sim.vhd|0*166490*0xc3c7e3d6d678af0b1d18d1aafbce80822cc4cfd2|0*166914*0x4ace356d5b51cb5a507be15551d3bb15
+P/description=8-Bit Dual Edge Triggered Shift Registers with Clock Enable and Synchronous Reset
+R=./src/cpld_det_sim.vhd|3481
+S/srd8rled=S/SRD8RLED 40|0|2*376132
+
+[~A]
+Comment=XILINX ISE 12.1, CPLD VHDL LIBRARY
+ModifyID=692
+ReadOnly=1
+Standard=1
+Vendor=XILINX
+Version=73
+
+[~MFT]
+0=606|0cpld.mgf|166994|0
+1=86|1cpld.mgf|63171|0
+2=85|2cpld.mgf|376132|0
+3=85|3cpld.mgf|211188|0
+
+[~U]
+cbd16ce=CBD16CE 11|0*23974||0x3
+cbd16cle=CBD16CLE 11|0*25680||0x3
+cbd16cled=CBD16CLED 11|0*27498||0x3
+cbd16re=CBD16RE 11|0*29613||0x3
+cbd16rle=CBD16RLE 11|0*31313||0x3
+cbd16x1=CBD16X1 11|0*33109||0x3
+cbd16x2=CBD16X2 11|0*35446||0x3
+cbd2ce=CBD2CE 11|0*37771||0x3
+cbd2cle=CBD2CLE 11|0*39471||0x3
+cbd2cled=CBD2CLED 11|0*41265||0x3
+cbd2re=CBD2RE 11|0*43350||0x3
+cbd2rle=CBD2RLE 11|0*45046||0x3
+cbd2x1=CBD2X1 11|0*46834||0x3
+cbd2x2=CBD2X2 11|0*49163||0x3
+cbd4ce=CBD4CE 11|0*51769||0x3
+cbd4cle=CBD4CLE 11|0*53469||0x3
+cbd4cled=CBD4CLED 11|0*55265||0x3
+cbd4re=CBD4RE 11|0*57352||0x3
+cbd4rle=CBD4RLE 11|0*59046||0x3
+cbd4x1=CBD4X1 11|0*60836||0x3
+cbd4x2=CBD4X2 11|0*63455||0x3
+cbd8ce=CBD8CE 11|0*66067||0x3
+cbd8cle=CBD8CLE 11|0*67767||0x3
+cbd8cled=CBD8CLED 11|0*69561||0x3
+cbd8re=CBD8RE 11|0*71646||0x3
+cbd8rle=CBD8RLE 11|0*73340||0x3
+cbd8x1=CBD8X1 11|0*75132||0x3
+cbd8x2=CBD8X2 11|0*77457||0x3
+cdd4ce=CDD4CE 11|0*79772||0x3
+cdd4cle=CDD4CLE 11|0*81497||0x3
+cdd4re=CDD4RE 11|0*83312||0x3
+cdd4rle=CDD4RLE 11|0*85027||0x3
+cjd4ce=CJD4CE 11|0*86830||0x3
+cjd4re=CJD4RE 11|0*88401||0x3
+cjd5ce=CJD5CE 11|0*89946||0x3
+cjd5re=CJD5RE 11|0*91517||0x3
+cjd8ce=CJD8CE 11|0*93062||0x3
+cjd8re=CJD8RE 11|0*94635||0x3
+cpld_det_components=CPLD_DET_COMPONENTS 3|0*0|0*135
+fdd=FDD 11|0*96176||0x3
+fdd16=FDD16 11|0*97394||0x3
+fdd16ce=FDD16CE 11|0*98676||0x3
+fdd16re=FDD16RE 11|0*100086||0x3
+fdd4=FDD4 11|0*101500||0x3
+fdd4ce=FDD4CE 11|0*102772||0x3
+fdd4re=FDD4RE 11|0*104174||0x3
+fdd8=FDD8 11|0*105566||0x3
+fdd8ce=FDD8CE 11|0*106840||0x3
+fdd8re=FDD8RE 11|0*108246||0x3
+fddc=FDDC 11|0*109642||0x3
+fddce=FDDCE 11|0*110927||0x3
+fddcp=FDDCP 11|0*112269||0x3
+fddcpe=FDDCPE 11|0*113623||0x3
+fddp=FDDP 11|0*115025||0x3
+fddpe=FDDPE 11|0*116303||0x3
+fddr=FDDR 11|0*117647||0x3
+fddre=FDDRE 11|0*118925||0x3
+fddrs=FDDRS 11|0*120255||0x3
+fddrse=FDDRSE 11|0*121597||0x3
+fddse=FDDSE 11|0*122979||0x3
+fddsr=FDDSR 11|0*124309||0x3
+fddsre=FDDSRE 11|0*125649||0x3
+ftdce=FTDCE 11|0*127031||0x3
+ftdcle=FTDCLE 11|0*128447||0x3
+ftdclex=FTDCLEX 11|0*129939||0x3
+ftdcp=FTDCP 11|0*131441||0x3
+ftdcpe=FTDCPE 11|0*132869||0x3
+ftdrse=FTDRSE 11|0*134345||0x3
+ftdrsle=FTDRSLE 11|0*135806||0x3
+srd16ce=SRD16CE 11|0*137350||0x3
+srd16cle=SRD16CLE 11|0*138908||0x3
+srd16cled=SRD16CLED 11|0*140568||0x3
+srd16re=SRD16RE 11|0*142359||0x3
+srd16rle=SRD16RLE 11|0*143909||0x3
+srd16rled=SRD16RLED 11|0*145568||0x3
+srd4ce=SRD4CE 11|0*147354||0x3
+srd4cle=SRD4CLE 11|0*148902||0x3
+srd4cled=SRD4CLED 11|0*150552||0x3
+srd4re=SRD4RE 11|0*152333||0x3
+srd4rle=SRD4RLE 11|0*153873||0x3
+srd4rled=SRD4RLED 11|0*155522||0x3
+srd8ce=SRD8CE 11|0*157298||0x3
+srd8cle=SRD8CLE 11|0*158844||0x3
+srd8cled=SRD8CLED 11|0*160496||0x3
+srd8re=SRD8RE 11|0*162277||0x3
+srd8rle=SRD8RLE 11|0*163817||0x3
+srd8rled=SRD8RLED 11|0*165466||0x3
+

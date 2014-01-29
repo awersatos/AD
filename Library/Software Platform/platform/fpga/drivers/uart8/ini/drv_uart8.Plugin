@@ -1,0 +1,261 @@
+[Plugin]
+Name=drv_uart8
+Implement=drv_uart8
+; GUI
+Caption=UART Serial Port Driver
+Description=Driver for WB_UART8 devices
+Bitmap=drv_uart8.bmp
+; Compilation
+CompileOption0=-I"$(SWPLATFORM)\platform\fpga\drivers\uart8\internal"
+SourceFile0=platform\fpga\drivers\uart8\src\drv_uart8.c
+SourceFile1=platform\fpga\drivers\uart8\src\drv_uart8_internal.c
+SourceFile2=platform\fpga\drivers\uart8\src\drv_uart8_interrupts.c
+
+
+[Instance]
+Require0=per_uart8
+
+[Instance_Option0]
+Name=baudrate
+GUIName=Baudrate
+Description=Tranmissing speed in bits per second
+Kind=UINT32
+DefaultValue=19200
+
+[Instance_Option1]
+Name=parity
+GUIName=Parity
+Description=Optional error detection bit, or alternatively usable as user controllable 9th bit
+Kind=ENUM
+DefaultValue=NONE
+Enum0=NONE
+Enum1=ODD
+Enum2=EVEN
+Enum3=USER
+EnumDescription0=No parity
+EnumDescription1=Odd parity
+EnumDescription2=Even parity
+EnumDescription3=User controlled
+
+
+[Instance_Option2]
+Name=databits
+GUIName=Databits
+Description=Databits per word
+Kind=UINT8
+DefaultValue=8
+MinRange=5
+MaxRange=8
+
+[Instance_Option3]
+Name=stopbits
+GUIName=Stopbits
+Description=Number of trailing stopbits after each word
+Kind=UINT8
+DefaultValue=1
+MinRange=1
+MaxRange=2
+
+
+[Instance_Option4]
+Name=handshake
+GUIName=Handshake
+Description=hardware or software handshaking modes
+Kind=ENUM
+DefaultValue=NONE
+Enum0=NONE
+EnumDescription0=No handshaking is used
+Enum1=RTSHARD
+EnumDescription1=Core handles RTS/CTS handshaking, margin is defined by core
+Enum2=RTSSOFT
+EnumDescription2=Software handles RTS/CTS handshaking, RX_BUFFER and RX_MARGIN must be set
+
+;
+; Transmit
+;
+
+[Instance_Option5]
+Name=tx_buffer
+GUIName=TX Buffer Size
+Description=Transmitter software buffer size. If you specify a size of 0 software buffering and interrupt generation will be disabled.
+Kind=BUFFER
+Type=UINT16
+DefaultValue=128
+AutoValue=0
+
+[Instance_Option5_Auto_If0]
+Object=tx_interrupt_value
+Kind=OPTION
+Value=-1
+Condition=EQ
+
+; NOTE: different blocking mode options with and without kernel
+[Instance_Option6]
+Name=tx_blocking
+GUIName=TX Blocking
+Description=Write behavior when no space in buffer (False = abort, True = keep on trying)
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option6_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=NOTEQ
+
+[Instance_Option7]
+Name=tx_blocking_mode
+GUIName=TX Blocking Mode
+Description=Write behavior when no space in buffer (NONE = abort, LOOP = keep on trying, POLL = ask every TX_POLLMS, YIELD = yield to scheduler, NOTIFY = wait for interrupt notification)
+Kind=ENUM
+DefaultValue=YIELD
+Enum0=NONE
+Enum1=LOOP
+Enum2=POLL
+Enum3=YIELD
+Enum4=NOTIFY
+EnumDescription0=abort (return -1)
+EnumDescription1=keep trying (busywait)
+EnumDescription2=interval polling mode
+EnumDescription3=yield to scheduler
+EnumDescription4=wait for interrupt notification
+
+[Instance_Option7_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option8]
+Name=tx_pollmscs
+GUIName=TX Poll Interval
+Description=Write polling time (mscs) when using POLL
+Kind=UINT32
+DefaultValue=200
+MinRange=100
+MaxRange=1000
+
+[Instance_Option8_Available_If0]
+Kind=OPTION
+Object=tx_blocking_mode
+Condition=EQ
+Value=POLL
+
+;
+; Receive
+;
+
+[Instance_Option9]
+Name=rx_buffer
+GUIName=RX Buffer Size
+Description=Receiver software buffer size. If you specify a size of 0 software buffering and interrupt generation will be disabled.
+Kind=BUFFER
+Type=UINT16
+DefaultValue=128
+AutoValue=0
+
+[Instance_Option9_Auto_If0]
+Object=rx_interrupt_value
+Kind=OPTION
+Value=-1
+Condition=EQ
+
+[Instance_Option10]
+Name=rx_margin
+GUIName=RX Margin
+Description=Software buffer margin for handshaking, must be smaller than size of RX_BUFFER
+Kind=INT32
+MinRange=0
+DefaultValue=16
+
+[Instance_Option10_Hide_If0]
+Kind=OPTION
+Object=handshake
+Condition=NOTEQ
+Value=RTSSOFT
+
+; NOTE: different blocking mode options with and without kernel
+[Instance_Option11]
+Name=rx_blocking
+GUIName=RX Blocking
+Description=Read behavior when no data in buffer (False = abort, True = keep on trying)
+Kind=BOOLEAN
+DefaultValue=True
+
+[Instance_Option11_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=NOTEQ
+
+[Instance_Option12]
+Name=rx_blocking_mode
+GUIName=RX Blocking Mode
+Description=Read behavior when no data in buffer (NONE = abort, LOOP = keep on trying, POLL = ask every RX_POLLMS, YIELD = yield to scheduler, NOTIFY = wait for interrupt notification)
+Kind=ENUM
+DefaultValue=YIELD
+Enum0=NONE
+Enum1=LOOP
+Enum2=POLL
+Enum3=YIELD
+Enum4=NOTIFY
+EnumDescription0=abort (return -1)
+EnumDescription1=keep trying (busywait)
+EnumDescription2=interval polling mode
+EnumDescription3=yield to scheduler
+EnumDescription4=wait for interrupt notification
+
+[Instance_Option12_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option13]
+Name=rx_pollmscs
+GUIName=RX Poll Interval
+Description=Read polling time (mscs) when using POLL
+Kind=UINT32
+DefaultValue=200
+MinRange=100
+MaxRange=1000
+
+[Instance_Option13_Available_If0]
+Kind=OPTION
+Object=rx_blocking_mode
+Condition=EQ
+Value=POLL
+
+[Instance_Option14]
+Name=MUTEX
+GUIName=Thread Safe Operation
+Description=Use mutexes to protect send and receive functions
+Kind=BOOLEAN
+DefaultValue=False
+
+[Instance_Option14_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+; Inherited options that force the buffers to 0 when interrupts are not connected
+; See [Auto_If] clauses above
+
+[Instance_Option15]
+Name=tx_interrupt_value
+GUIName=TX Interrupt Value
+Description=Inherited from hardware wrapper. If the interrupt is not connected (value is -1) transmitter software buffering can not be used.
+NoGenerate=True
+Kind=INT8
+MinRange=-1
+MaxRange=31
+DefaultValue=-1
+AutoValue=per_uart8.interrupt0
+
+[Instance_Option16]
+Name=rx_interrupt_value
+GUIName=RX Interrupt Value
+Description=Inherited from hardware wrapper. If the interrupt is not connected (value is -1) receiver software buffering can not be used.
+NoGenerate=True
+Kind=INT8
+MinRange=-1
+MaxRange=31
+DefaultValue=-1
+AutoValue=per_uart8.interrupt1
+

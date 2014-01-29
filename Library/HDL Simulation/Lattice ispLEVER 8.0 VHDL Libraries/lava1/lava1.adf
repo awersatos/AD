@@ -1,0 +1,31 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=lava1
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+lava1=.
+
+[Library]
+lava1=.\lava1.LIB
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/lava1.vhd=-1
+/update_lava1.do=-1
+
+[Files.Data]
+.\src\lava1.vhd=VHDL Source Code
+.\src\update_lava1.do=Macro
+

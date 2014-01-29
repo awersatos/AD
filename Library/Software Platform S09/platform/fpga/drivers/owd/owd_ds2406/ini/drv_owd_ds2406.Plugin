@@ -1,0 +1,19 @@
+[Plugin]
+Name=drv_owd_ds2406
+Description=DS2406 One Wire Device Driver
+Caption=DS2406 Driver
+SourceDir=platform\fpga\drivers\owd\owd_ds2406\src
+Implement=drv_owd_ds2406
+MinInstances=1
+Bitmap=drv_owd_ds2406.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=drv_owm
+Condition=EQ
+
+[Instance]
+Require0=drv_owm
+
+
+

@@ -1,0 +1,35 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=stratixgx_gxb
+
+[Library]
+stratixgx_gxb=.\stratixgx_gxb.lib
+
+[$LibMap$]
+stratixgx_gxb=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/stratixgx_hssi_components.vhd=-1
+/stratixgx_hssi_atoms.vhd=-1
+/update_stratixgx_gxb.do=-1
+
+[Files.Data]
+.\src\stratixgx_hssi_components.vhd=VHDL Source Code
+.\src\stratixgx_hssi_atoms.vhd=VHDL Source Code
+.\src\update_stratixgx_gxb.do=Macro
+

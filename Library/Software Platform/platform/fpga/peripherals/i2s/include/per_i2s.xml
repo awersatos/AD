@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+
+<sfrfile>
+	<header>
+
+Copyright 2009 Altium BV     
+
+	</header>
+	<group name="per_i2s" description="I2S Configurable Audio Streaming Controller">
+		<sfr name="CONTROL"	 offset="0"  size="32" description="Control Register">
+            <bitfield name="WATERMARK" start="31" end="16" access="rw" description="Interrupt Generation Watermark Level"/>
+            <bitfield name="CPEN" start="15" end="15" access="rw" description="Clock Prescaler Enable">
+                <value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+            </bitfield>
+            <bitfield name="PRESCALER" start="7" end="0" access="rw" description="Prescaler value"/>
+        </sfr>
+		<sfr name="MODE"	 offset="4"  size="32" description="Mode Register">
+            <bitfield name="WJUST" start="16" end="15" access="rw" description="Word Justification">
+                <value value="0" description="Normal"/>
+                <value value="1" description="Left Justified"/>
+                <value value="2" description="Right Justified"/>
+            </bitfield>
+			<bitfield name="RXIE"	start="14" end="14" access="rw" description="Receiver Interrupt Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TXIE"	start="13" end="13" access="rw" description="Transmitter Interrupt Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="RXEN"	start="12" end="12" access="rw" description="Receiver Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="TXEN"	start="11" end="11" access="rw" description="Transmitter Enable Bit">
+				<value value="0" description="Disabled"/>
+				<value value="1" description="Enabled"/>
+			</bitfield>
+			<bitfield name="SLR"	start="10" end="10" access="rw" description="Left/Right for Mono In Bit">
+				<value value="0" description="Left"/>
+				<value value="1" description="Right"/>
+			</bitfield>
+			<bitfield name="MI"	start="9"  end="9"  access="rw" description="Stereo/Mono In Bit">
+				<value value="0" description="Stereo"/>
+				<value value="1" description="Mono"/>
+			</bitfield>
+			<bitfield name="MO"	start="8"  end="8"  access="rw" description="Stereo/Mono Out Bit">
+				<value value="0" description="Stereo"/>
+				<value value="1" description="Mono"/>
+			</bitfield>
+			<bitfield name="WWIDTH"		start="5"  end="0"  access="rw" description="Word Width">
+                <value value="16" description="16 bit"/>
+                <value value="20" description="20 bit"/>
+                <value value="24" description="24 bit"/>
+                <value value="32" description="32 bit"/>
+            </bitfield>
+             
+		</sfr>
+		<sfr name="STATUS"	 offset="8"  size="32" description="Status Register">
+            <bitfield name="CORESIZE" start="31" end="16" access="r" description="Core Size">
+                <value value="5" description="32 samples"/>
+                <value value="10" description="1k samples"/>
+                <value value="11" description="2k samples"/>
+                <value value="12" description="4k samples"/>
+                <value value="13" description="8k samples"/>
+            </bitfield>
+            <bitfield name="COREREV" start="15" end="8" access="r" description="Core Revision"/>
+            <bitfield name="RXW" start="7" end="7" access="r" description="Receive FIFO Watermark State">
+                <value value="0" description="Watermark not reached"/>
+                <value value="1" description="Watermark reached"/>
+            </bitfield>
+            <bitfield name="RXF" start="6" end="6" access="r" description="Receive FIFO Full state">
+                <value value="0" description="Not Full"/>
+                <value value="1" description="Full"/>
+            </bitfield>
+            <bitfield name="RXE" start="5" end="5" access="r" description="Receive FIFO Empty state">
+                <value value="0" description="Not Empty"/>
+                <value value="1" description="Empty"/>
+            </bitfield>
+            <bitfield name="RXLR" start="4" end="4" access="r" description="Receive FIFO Left/Right state">
+                <value value="0" description="Next data is from Left channel"/>
+                <value value="1" description="Next data is from Right channel"/>
+            </bitfield>
+            <bitfield name="TXW" start="3" end="3" access="r" description="Transmit FIFO Watermark State">
+                <value value="0" description="Watermark not reached"/>
+                <value value="1" description="Watermark reached"/>
+            </bitfield>
+            <bitfield name="TXF" start="2" end="2" access="r" description="Transmit FIFO Full state">
+                <value value="0" description="Not Full"/>
+                <value value="1" description="Full"/>
+            </bitfield>
+            <bitfield name="TXE" start="1" end="1" access="r" description="Transmit FIFO Empty state">
+                <value value="0" description="Not Empty"/>
+                <value value="1" description="Empty"/>
+            </bitfield>
+            <bitfield name="TXLR" start="0" end="0" access="r" description="Transmit FIFO Left/Right state">
+                <value value="0" description="Next data is for Left channel"/>
+                <value value="1" description="Next data is for Right channel"/>
+            </bitfield>
+        </sfr>
+		<sfr name="DATA"	 offset="12" size="32" description="Data Register"	noaccess="true"/>
+		<sfr name="RX_POINTERS"	 offset="16" size="32" description="Receiver FIFO Pointers Register">
+            <bitfield name="RXBUF_TAIL" start="31" end="16" access="r" description="Tail of the receiver buffer"/>
+            <bitfield name="RXBUF_HEAD" start="15" end="0" access="r" description="Head of the receiver buffer"/>
+        </sfr>
+		<sfr name="TX_POINTERS"	 offset="20" size="32" description="Transmitter FIFO Pointers Register">
+            <bitfield name="TXBUF_TAIL" start="31" end="16" access="r" description="Tail of the transmitter buffer"/>
+            <bitfield name="TXBUF_HEAD" start="15" end="0" access="r" description="Head of the transmitter buffer"/>
+        </sfr>
+	</group>
+</sfrfile>

@@ -1,0 +1,59 @@
+[Plugin]
+Name=drv_max1104
+Description=MAX1104 8-bit Audio Codec Driver
+Caption=MAX1104 Audio Codec Driver
+SourceDir=platform\fpga\drivers\max1104\src
+InitHandlerPriority=8
+Implement=drv_max1104
+MinInstances=1
+Bitmap=drv_max1104.bmp
+
+[PluginApplicationCode]
+OpenType=max1104_t *
+OpenFunction=drv_max1104_open
+
+[Available_If0]
+Kind=PLUGIN
+Object=drv_spi
+Condition=EQ
+
+[Instance]
+Require0=drv_spi
+
+[Instance_Option0]
+Name=DEVICE_ID
+Kind=UINT8
+DefaultValue=4
+Description=Device ID for MAX1104 on multiplexed SPI controller
+
+[Instance_Option1]
+Name=MODE
+Kind=ENUM
+Description=Initial mode for MAX1104
+DefaultValue=ContinousADCDAC
+Enum0=ContinousADCDAC
+EnumValue0=0xEB
+Enum1=ContinousADC
+EnumValue1=0xAB
+Enum2=ContinuosDAC
+EnumValue2=0xCB
+Enum3=SingleADCDAC
+EnumValue3=0xE3
+Enum4=SingleADC
+EnumValue4=0xA3
+Enum5=SingleDAC
+EnumValue5=0xC3
+
+[Instance_Option2]
+Name=tx_buffer
+Description=Transmit buffer size
+Kind=BUFFER
+DefaultValue=100
+Type=UINT8
+
+[Instance_Option3]
+Name=rx_buffer
+Description=Receive buffer size
+Kind=BUFFER
+DefaultValue=100
+Type=UINT8

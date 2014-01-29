@@ -1,0 +1,63 @@
+[Plugin]
+Name=drv_i2cm
+Description=I2C Master Controller Driver
+Caption=I2C Driver
+SourceDir=platform\fpga\drivers\i2cm\src
+Implement=drv_i2cm
+MinInstances=1
+Bitmap=drv_i2cm.bmp
+
+[Available_If0]
+kind=PLUGIN
+Object=per_i2cm
+Condition=EQ
+
+[Available_If1]
+Kind=ENVIRONMENT
+Object=PROCESSOR
+Condition=EQ
+Value=SPROC
+
+[Instance]
+Require0=per_i2cm
+MultipleLinks=True
+
+[Instance_Option0]
+Name=SCLK
+Description=SCLK Frequency in Hz, typically 100 kb/s for standard mode, 400 kb/s for fast mode or 3.4 Mb/s for high speed mode
+Kind=UINT32
+DefaultValue=100000
+Auto=False
+
+[Instance_Option1]
+Name=wait_mode
+GUIName=Wait mode
+Description=Activity while waiting on peripheral
+Kind=ENUM
+Enum0=NOP
+EnumDescription0=Keep trying, no rescheduling
+Enum1=YIELD
+EnumDescription1=Reschedule
+Enum2=SLEEP
+EnumDescription2=Sleep for specified number of millisecondse
+DefaultValue=NOP
+
+[Instance_Option1_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+[Instance_Option2]
+Name=wait_sleepms
+GUIName=Wait sleep duration
+Kind=INT
+Description=Sleep duration if thread has to wait and Wait mode is SLEEP
+DefaultValue=100
+
+[Instance_Option2_Available_If0]
+Kind=INTERFACE
+Object=posix_threads
+Condition=EQ
+
+
+

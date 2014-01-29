@@ -1,0 +1,15 @@
+[Interface]
+Name=bsd_drv_rum
+Category=SERVICE
+CanBeVisible=False
+Description=Ralink Technology RT2501USB/RT2601USB chipset driver
+
+[Available_If0]
+Kind=INTERFACE
+Object=bsd_framework
+Condition=EQ
+
+
+
+
+

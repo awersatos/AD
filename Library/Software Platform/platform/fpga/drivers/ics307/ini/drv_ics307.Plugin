@@ -1,0 +1,26 @@
+[Plugin]
+Name=drv_ics307
+Description=ICS307-02 Serially Programmable Clock Source
+Caption=ICS307 Clock Generator Driver
+SourceDir=platform\fpga\drivers\ics307\src
+Implement=drv_ics307
+Bitmap=drv_ics307.bmp
+
+[PluginApplicationCode]
+OpenType=ics307_t *
+OpenFunction=drv_ics307_open
+
+[Available_If0]
+Kind=PLUGIN
+Object=drv_spi
+Condition=EQ
+
+[Instance]
+Require0=drv_spi
+
+[Instance_Option0]
+Name=DEVICE_ID
+Kind=UINT8
+DefaultValue=4
+Description=Device ID for ICS307 on multiplexed SPI controller
+

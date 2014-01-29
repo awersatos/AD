@@ -1,0 +1,2561 @@
+V 000040 56 2642 1265381445916 NEOAND16
+(_unit NEOAND16
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYLH8 integer (0 0 0))
+		(_specparam INDLYLH9 integer (0 0 0))
+		(_specparam INDLYLH10 integer (0 0 0))
+		(_specparam INDLYLH11 integer (0 0 0))
+		(_specparam INDLYLH12 integer (0 0 0))
+		(_specparam INDLYLH13 integer (0 0 0))
+		(_specparam INDLYLH14 integer (0 0 0))
+		(_specparam INDLYLH15 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam INDLYHL8 integer (0 0 0))
+		(_specparam INDLYHL9 integer (0 0 0))
+		(_specparam INDLYHL10 integer (0 0 0))
+		(_specparam INDLYHL11 integer (0 0 0))
+		(_specparam INDLYHL12 integer (0 0 0))
+		(_specparam INDLYHL13 integer (0 0 0))
+		(_specparam INDLYHL14 integer (0 0 0))
+		(_specparam INDLYHL15 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 59
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 60
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 61
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 62
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 63
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 64
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 65
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 66
+			(_port IN7 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 67
+			(_port IN8 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 68
+			(_port IN9 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 69
+			(_port IN10 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 70
+			(_port IN11 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 71
+			(_port IN12 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 72
+			(_port IN13 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 73
+			(_port IN14 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 74
+			(_port IN15 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 425 1265381445921 NEOAND2
+(_unit NEOAND2
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 41
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 42
+			(_port IN1 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 582 1265381445926 NEOAND3
+(_unit NEOAND3
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 43
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 44
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 45
+			(_port IN2 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000040 56 5215 1265381445931 NEOAND32
+(_unit NEOAND32
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYLH8 integer (0 0 0))
+		(_specparam INDLYLH9 integer (0 0 0))
+		(_specparam INDLYLH10 integer (0 0 0))
+		(_specparam INDLYLH11 integer (0 0 0))
+		(_specparam INDLYLH12 integer (0 0 0))
+		(_specparam INDLYLH13 integer (0 0 0))
+		(_specparam INDLYLH14 integer (0 0 0))
+		(_specparam INDLYLH15 integer (0 0 0))
+		(_specparam INDLYLH16 integer (0 0 0))
+		(_specparam INDLYLH17 integer (0 0 0))
+		(_specparam INDLYLH18 integer (0 0 0))
+		(_specparam INDLYLH19 integer (0 0 0))
+		(_specparam INDLYLH20 integer (0 0 0))
+		(_specparam INDLYLH21 integer (0 0 0))
+		(_specparam INDLYLH22 integer (0 0 0))
+		(_specparam INDLYLH23 integer (0 0 0))
+		(_specparam INDLYLH24 integer (0 0 0))
+		(_specparam INDLYLH25 integer (0 0 0))
+		(_specparam INDLYLH26 integer (0 0 0))
+		(_specparam INDLYLH27 integer (0 0 0))
+		(_specparam INDLYLH28 integer (0 0 0))
+		(_specparam INDLYLH29 integer (0 0 0))
+		(_specparam INDLYLH30 integer (0 0 0))
+		(_specparam INDLYLH31 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam INDLYHL8 integer (0 0 0))
+		(_specparam INDLYHL9 integer (0 0 0))
+		(_specparam INDLYHL10 integer (0 0 0))
+		(_specparam INDLYHL11 integer (0 0 0))
+		(_specparam INDLYHL12 integer (0 0 0))
+		(_specparam INDLYHL13 integer (0 0 0))
+		(_specparam INDLYHL14 integer (0 0 0))
+		(_specparam INDLYHL15 integer (0 0 0))
+		(_specparam INDLYHL16 integer (0 0 0))
+		(_specparam INDLYHL17 integer (0 0 0))
+		(_specparam INDLYHL18 integer (0 0 0))
+		(_specparam INDLYHL19 integer (0 0 0))
+		(_specparam INDLYHL20 integer (0 0 0))
+		(_specparam INDLYHL21 integer (0 0 0))
+		(_specparam INDLYHL22 integer (0 0 0))
+		(_specparam INDLYHL23 integer (0 0 0))
+		(_specparam INDLYHL24 integer (0 0 0))
+		(_specparam INDLYHL25 integer (0 0 0))
+		(_specparam INDLYHL26 integer (0 0 0))
+		(_specparam INDLYHL27 integer (0 0 0))
+		(_specparam INDLYHL28 integer (0 0 0))
+		(_specparam INDLYHL29 integer (0 0 0))
+		(_specparam INDLYHL30 integer (0 0 0))
+		(_specparam INDLYHL31 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 81
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 82
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 83
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 84
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 85
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 86
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 87
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 88
+			(_port IN7 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 89
+			(_port IN8 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 90
+			(_port IN9 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 91
+			(_port IN10 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 92
+			(_port IN11 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 93
+			(_port IN12 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 94
+			(_port IN13 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 95
+			(_port IN14 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 96
+			(_port IN15 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 97
+			(_port IN16 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 98
+			(_port IN17 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 99
+			(_port IN18 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 100
+			(_port IN19 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 101
+			(_port IN20 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 102
+			(_port IN21 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 103
+			(_port IN22 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 104
+			(_port IN23 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 105
+			(_port IN24 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 106
+			(_port IN25 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 107
+			(_port IN26 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 108
+			(_port IN27 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 109
+			(_port IN28 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 110
+			(_port IN29 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 111
+			(_port IN30 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 112
+			(_port IN31 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 739 1265381445936 NEOAND4
+(_unit NEOAND4
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 43
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 44
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 45
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN3 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 896 1265381445961 NEOAND5
+(_unit NEOAND5
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 45
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 47
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN4 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000039 56 1053 1265381445966 NEOAND6
+(_unit NEOAND6
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 45
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 47
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN5 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000039 56 1210 1265381445971 NEOAND7
+(_unit NEOAND7
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 47
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 51
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 52
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 53
+			(_port IN6 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000039 56 1367 1265381445976 NEOAND8
+(_unit NEOAND8
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 47
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 51
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 52
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 53
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 54
+			(_port IN7 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000037 56 436 1265381445985 NEOBUF
+(_unit NEOBUF
+	(_specify
+		(_specparam INDLYLH integer (0 0 0))
+		(_specparam INDLYHL integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_specparam PWINHI integer (0 0 0))
+		(_specparam PWINLO integer (0 0 0))
+		(_modpath parallel unknown 0 41
+			(_port IN in )
+			(_port OUT out )
+		)
+		(_tchk width 0 42
+			(_port IN (posedge))
+		)
+		(_tchk width 0 43
+			(_port IN (negedge))
+		)
+	)
+)
+V 000039 56 438 1265381445990 NEOCKBUF
+(_unit NEOCKBUF
+	(_specify
+		(_specparam INDLYLH integer (0 0 0))
+		(_specparam INDLYHL integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_specparam PWINHI integer (0 0 0))
+		(_specparam PWINLO integer (0 0 0))
+		(_modpath parallel unknown 0 41
+			(_port IN in )
+			(_port OUT out )
+		)
+		(_tchk width 0 43
+			(_port IN (posedge))
+		)
+		(_tchk width 0 44
+			(_port IN (negedge))
+		)
+	)
+)
+V 000037 56 2440 1265381446003 NEOFF
+(_unit NEOFF
+	(_specify
+		(_specparam INDLYLH integer (0 0 0))
+		(_specparam INDLYHL integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_specparam CLKDLYLH integer (0 0 0))
+		(_specparam CLKDLYHL integer (0 0 0))
+		(_specparam SETDLYLH integer (0 0 0))
+		(_specparam SETDLYHL integer (0 0 0))
+		(_specparam RSTDLYLH integer (0 0 0))
+		(_specparam RSTDLYHL integer (0 0 0))
+		(_specparam CEDLYLH integer (0 0 0))
+		(_specparam CEDLYHL integer (0 0 0))
+		(_specparam SUINCLK integer (0 0 0))
+		(_specparam HOLDINCLK integer (0 0 0))
+		(_specparam HOLDSETCLK integer (0 0 0))
+		(_specparam HOLDRSTCLK integer (0 0 0))
+		(_specparam SUCECLK integer (0 0 0))
+		(_specparam HOLDCECLK integer (0 0 0))
+		(_specparam RECSETCLK integer (0 0 0))
+		(_specparam RECRSTCLK integer (0 0 0))
+		(_specparam PWCLKHI integer (0 0 0))
+		(_specparam PWCLKLO integer (0 0 0))
+		(_specparam PWINHI integer (0 0 0))
+		(_specparam PWINLO integer (0 0 0))
+		(_specparam PWRSTHI integer (0 0 0))
+		(_specparam PWRSTLO integer (0 0 0))
+		(_specparam PWSETHI integer (0 0 0))
+		(_specparam PWSETLO integer (0 0 0))
+		(_modpath parallel unknown 0 89
+			(_port CLK in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 90
+			(_port SET in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 91
+			(_port RST in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 92
+			(_port CE in )
+			(_port OUT out )
+		)
+		(_tchk setup 0 94
+			(_port IN ())
+			(_port CLK (posedge) (_code  1 INSH))
+		)
+		(_tchk setup 0 95
+			(_port CE ())
+			(_port CLK (posedge) (_code  2 CESH))
+		)
+		(_tchk setup 0 96
+			(_port SET ())
+			(_port CLK (posedge))
+		)
+		(_tchk setup 0 97
+			(_port RST ())
+			(_port CLK (posedge))
+		)
+		(_tchk hold 0 98
+			(_port CLK (posedge) (_code  3 INSH))
+			(_port IN ())
+		)
+		(_tchk hold 0 99
+			(_port CLK (posedge))
+			(_port SET ())
+		)
+		(_tchk hold 0 100
+			(_port CLK (posedge))
+			(_port RST ())
+		)
+		(_tchk hold 0 101
+			(_port CLK (posedge) (_code  4 CESH))
+			(_port CE ())
+		)
+		(_tchk width 0 107
+			(_port CLK (posedge))
+		)
+		(_tchk width 0 108
+			(_port CLK (negedge))
+		)
+		(_tchk width 0 109
+			(_port IN (posedge))
+		)
+		(_tchk width 0 110
+			(_port IN (negedge))
+		)
+		(_tchk width 0 111
+			(_port RST (posedge))
+		)
+		(_tchk width 0 112
+			(_port RST (negedge))
+		)
+		(_tchk width 0 113
+			(_port SET (posedge))
+		)
+		(_tchk width 0 114
+			(_port SET (negedge))
+		)
+	)
+)
+V 000037 56 264 1265381446012 NEOINV
+(_unit NEOINV
+	(_specify
+		(_specparam INDLYLH integer (0 0 0))
+		(_specparam INDLYHL integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 40
+			(_port IN in )
+			(_port OUT out )
+		)
+	)
+)
+V 000040 56 2120 1265381446024 NEOLATCH
+(_unit NEOLATCH
+	(_specify
+		(_specparam INDLYLH integer (0 0 0))
+		(_specparam INDLYHL integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_specparam CLKDLYLH integer (0 0 0))
+		(_specparam CLKDLYHL integer (0 0 0))
+		(_specparam SETDLYLH integer (0 0 0))
+		(_specparam SETDLYHL integer (0 0 0))
+		(_specparam RSTDLYLH integer (0 0 0))
+		(_specparam RSTDLYHL integer (0 0 0))
+		(_specparam SUINCLK integer (0 0 0))
+		(_specparam HOLDINCLK integer (0 0 0))
+		(_specparam HOLDSETCLK integer (0 0 0))
+		(_specparam HOLDRSTCLK integer (0 0 0))
+		(_specparam RECSETCLK integer (0 0 0))
+		(_specparam RECRSTCLK integer (0 0 0))
+		(_specparam PWCLKHI integer (0 0 0))
+		(_specparam PWCLKLO integer (0 0 0))
+		(_specparam PWINHI integer (0 0 0))
+		(_specparam PWINLO integer (0 0 0))
+		(_specparam PWRSTHI integer (0 0 0))
+		(_specparam PWRSTLO integer (0 0 0))
+		(_specparam PWSETHI integer (0 0 0))
+		(_specparam PWSETLO integer (0 0 0))
+		(_modpath parallel unknown 0 82
+			(_port IN in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 83
+			(_port CLK in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 84
+			(_port SET in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 85
+			(_port RST in )
+			(_port OUT out )
+		)
+		(_tchk setup 0 87
+			(_port IN ())
+			(_port CLK (negedge) (_code  3 CHK_R_S))
+		)
+		(_tchk setup 0 88
+			(_port SET ())
+			(_port CLK (negedge))
+		)
+		(_tchk setup 0 89
+			(_port RST ())
+			(_port CLK (negedge))
+		)
+		(_tchk hold 0 90
+			(_port CLK (negedge) (_code  4 CHK_R_S))
+			(_port IN ())
+		)
+		(_tchk hold 0 91
+			(_port CLK (negedge))
+			(_port SET ())
+		)
+		(_tchk hold 0 92
+			(_port CLK (negedge))
+			(_port RST ())
+		)
+		(_tchk width 0 94
+			(_port CLK (posedge))
+		)
+		(_tchk width 0 95
+			(_port CLK (negedge))
+		)
+		(_tchk width 0 96
+			(_port IN (posedge))
+		)
+		(_tchk width 0 97
+			(_port IN (negedge))
+		)
+		(_tchk width 0 98
+			(_port RST (posedge))
+		)
+		(_tchk width 0 99
+			(_port RST (negedge))
+		)
+		(_tchk width 0 100
+			(_port SET (posedge))
+		)
+		(_tchk width 0 101
+			(_port SET (negedge))
+		)
+	)
+)
+V 000039 56 2641 1265381446041 NEOOR16
+(_unit NEOOR16
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYLH8 integer (0 0 0))
+		(_specparam INDLYLH9 integer (0 0 0))
+		(_specparam INDLYLH10 integer (0 0 0))
+		(_specparam INDLYLH11 integer (0 0 0))
+		(_specparam INDLYLH12 integer (0 0 0))
+		(_specparam INDLYLH13 integer (0 0 0))
+		(_specparam INDLYLH14 integer (0 0 0))
+		(_specparam INDLYLH15 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam INDLYHL8 integer (0 0 0))
+		(_specparam INDLYHL9 integer (0 0 0))
+		(_specparam INDLYHL10 integer (0 0 0))
+		(_specparam INDLYHL11 integer (0 0 0))
+		(_specparam INDLYHL12 integer (0 0 0))
+		(_specparam INDLYHL13 integer (0 0 0))
+		(_specparam INDLYHL14 integer (0 0 0))
+		(_specparam INDLYHL15 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 59
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 60
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 61
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 62
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 63
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 64
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 65
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 66
+			(_port IN7 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 67
+			(_port IN8 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 68
+			(_port IN9 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 69
+			(_port IN10 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 70
+			(_port IN11 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 71
+			(_port IN12 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 72
+			(_port IN13 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 73
+			(_port IN14 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 74
+			(_port IN15 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000037 56 776 1265381446046 NEOOR2
+(_unit NEOOR2
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_specparam PWIN0HI integer (0 0 0))
+		(_specparam PWIN0LO integer (0 0 0))
+		(_specparam PWIN1HI integer (0 0 0))
+		(_specparam PWIN1LO integer (0 0 0))
+		(_modpath parallel unknown 0 43
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 44
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_tchk width 0 46
+			(_port IN0 (posedge))
+		)
+		(_tchk width 0 47
+			(_port IN0 (negedge))
+		)
+		(_tchk width 0 48
+			(_port IN1 (posedge))
+		)
+		(_tchk width 0 49
+			(_port IN1 (negedge))
+		)
+	)
+)
+V 000037 56 581 1265381446051 NEOOR3
+(_unit NEOOR3
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 43
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 44
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 45
+			(_port IN2 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000039 56 5214 1265381446056 NEOOR32
+(_unit NEOOR32
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYLH8 integer (0 0 0))
+		(_specparam INDLYLH9 integer (0 0 0))
+		(_specparam INDLYLH10 integer (0 0 0))
+		(_specparam INDLYLH11 integer (0 0 0))
+		(_specparam INDLYLH12 integer (0 0 0))
+		(_specparam INDLYLH13 integer (0 0 0))
+		(_specparam INDLYLH14 integer (0 0 0))
+		(_specparam INDLYLH15 integer (0 0 0))
+		(_specparam INDLYLH16 integer (0 0 0))
+		(_specparam INDLYLH17 integer (0 0 0))
+		(_specparam INDLYLH18 integer (0 0 0))
+		(_specparam INDLYLH19 integer (0 0 0))
+		(_specparam INDLYLH20 integer (0 0 0))
+		(_specparam INDLYLH21 integer (0 0 0))
+		(_specparam INDLYLH22 integer (0 0 0))
+		(_specparam INDLYLH23 integer (0 0 0))
+		(_specparam INDLYLH24 integer (0 0 0))
+		(_specparam INDLYLH25 integer (0 0 0))
+		(_specparam INDLYLH26 integer (0 0 0))
+		(_specparam INDLYLH27 integer (0 0 0))
+		(_specparam INDLYLH28 integer (0 0 0))
+		(_specparam INDLYLH29 integer (0 0 0))
+		(_specparam INDLYLH30 integer (0 0 0))
+		(_specparam INDLYLH31 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam INDLYHL8 integer (0 0 0))
+		(_specparam INDLYHL9 integer (0 0 0))
+		(_specparam INDLYHL10 integer (0 0 0))
+		(_specparam INDLYHL11 integer (0 0 0))
+		(_specparam INDLYHL12 integer (0 0 0))
+		(_specparam INDLYHL13 integer (0 0 0))
+		(_specparam INDLYHL14 integer (0 0 0))
+		(_specparam INDLYHL15 integer (0 0 0))
+		(_specparam INDLYHL16 integer (0 0 0))
+		(_specparam INDLYHL17 integer (0 0 0))
+		(_specparam INDLYHL18 integer (0 0 0))
+		(_specparam INDLYHL19 integer (0 0 0))
+		(_specparam INDLYHL20 integer (0 0 0))
+		(_specparam INDLYHL21 integer (0 0 0))
+		(_specparam INDLYHL22 integer (0 0 0))
+		(_specparam INDLYHL23 integer (0 0 0))
+		(_specparam INDLYHL24 integer (0 0 0))
+		(_specparam INDLYHL25 integer (0 0 0))
+		(_specparam INDLYHL26 integer (0 0 0))
+		(_specparam INDLYHL27 integer (0 0 0))
+		(_specparam INDLYHL28 integer (0 0 0))
+		(_specparam INDLYHL29 integer (0 0 0))
+		(_specparam INDLYHL30 integer (0 0 0))
+		(_specparam INDLYHL31 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 81
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 82
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 83
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 84
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 85
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 86
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 87
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 88
+			(_port IN7 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 89
+			(_port IN8 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 90
+			(_port IN9 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 91
+			(_port IN10 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 92
+			(_port IN11 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 93
+			(_port IN12 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 94
+			(_port IN13 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 95
+			(_port IN14 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 96
+			(_port IN15 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 97
+			(_port IN16 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 98
+			(_port IN17 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 99
+			(_port IN18 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 100
+			(_port IN19 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 101
+			(_port IN20 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 102
+			(_port IN21 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 103
+			(_port IN22 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 104
+			(_port IN23 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 105
+			(_port IN24 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 106
+			(_port IN25 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 107
+			(_port IN26 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 108
+			(_port IN27 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 109
+			(_port IN28 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 110
+			(_port IN29 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 111
+			(_port IN30 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 112
+			(_port IN31 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000037 56 738 1265381446061 NEOOR4
+(_unit NEOOR4
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 43
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 44
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 45
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN3 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000037 56 895 1265381446066 NEOOR5
+(_unit NEOOR5
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 45
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 47
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN4 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 1052 1265381446071 NEOOR6
+(_unit NEOOR6
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 45
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 47
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN5 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 1209 1265381446076 NEOOR7
+(_unit NEOOR7
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 47
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 51
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 52
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 53
+			(_port IN6 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 1366 1265381446081 NEOOR8
+(_unit NEOOR8
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 47
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 51
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 52
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 53
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 54
+			(_port IN7 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000040 56 1849 1265381446094 NEORAM16
+(_unit NEORAM16
+	(_specify
+		(_specparam INDLYLH integer (0 0 0))
+		(_specparam INDLYHL integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_specparam WEDLYLH integer (0 0 0))
+		(_specparam WEDLYHL integer (0 0 0))
+		(_specparam ADR0DLYLH integer (0 0 0))
+		(_specparam ADR0DLYHL integer (0 0 0))
+		(_specparam ADR1DLYLH integer (0 0 0))
+		(_specparam ADR1DLYHL integer (0 0 0))
+		(_specparam ADR2DLYLH integer (0 0 0))
+		(_specparam ADR2DLYHL integer (0 0 0))
+		(_specparam ADR3DLYLH integer (0 0 0))
+		(_specparam ADR3DLYHL integer (0 0 0))
+		(_specparam SUADR0WE integer (0 0 0))
+		(_specparam HOLDADR0WE integer (0 0 0))
+		(_specparam SUADR1WE integer (0 0 0))
+		(_specparam HOLDADR1WE integer (0 0 0))
+		(_specparam SUADR2WE integer (0 0 0))
+		(_specparam HOLDADR2WE integer (0 0 0))
+		(_specparam SUADR3WE integer (0 0 0))
+		(_specparam HOLDADR3WE integer (0 0 0))
+		(_specparam SUINWEF integer (0 0 0))
+		(_specparam HOLDINWEF integer (0 0 0))
+		(_specparam PWWEHI integer (0 0 0))
+		(_specparam PWWELO integer (0 0 0))
+		(_tchk setup 0 122
+			(_port ADR0 ())
+			(_port WE (posedge))
+		)
+		(_tchk setup 0 123
+			(_port ADR1 ())
+			(_port WE (posedge))
+		)
+		(_tchk setup 0 124
+			(_port ADR2 ())
+			(_port WE (posedge))
+		)
+		(_tchk setup 0 125
+			(_port ADR3 ())
+			(_port WE (posedge))
+		)
+		(_tchk hold 0 126
+			(_port WE (negedge))
+			(_port ADR0 ())
+		)
+		(_tchk hold 0 127
+			(_port WE (negedge))
+			(_port ADR1 ())
+		)
+		(_tchk hold 0 128
+			(_port WE (negedge))
+			(_port ADR2 ())
+		)
+		(_tchk hold 0 129
+			(_port WE (negedge))
+			(_port ADR3 ())
+		)
+		(_tchk setup 0 130
+			(_port IN ())
+			(_port WE (negedge))
+		)
+		(_tchk hold 0 131
+			(_port WE (negedge))
+			(_port IN ())
+		)
+		(_tchk width 0 133
+			(_port WE (posedge))
+		)
+		(_tchk width 0 134
+			(_port WE (negedge))
+		)
+	)
+)
+V 000040 56 2697 1265381446099 NEORAM32
+(_unit NEORAM32
+	(_specify
+		(_specparam WEDLYLH integer (0 0 0))
+		(_specparam WEDLYHL integer (0 0 0))
+		(_specparam INDLYLH integer (0 0 0))
+		(_specparam INDLYHL integer (0 0 0))
+		(_specparam ADR0DLYLH integer (0 0 0))
+		(_specparam ADR0DLYHL integer (0 0 0))
+		(_specparam ADR1DLYLH integer (0 0 0))
+		(_specparam ADR1DLYHL integer (0 0 0))
+		(_specparam ADR2DLYLH integer (0 0 0))
+		(_specparam ADR2DLYHL integer (0 0 0))
+		(_specparam ADR3DLYLH integer (0 0 0))
+		(_specparam ADR3DLYHL integer (0 0 0))
+		(_specparam ADR4DLYLH integer (0 0 0))
+		(_specparam ADR4DLYHL integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_specparam SUADR0WE integer (0 0 0))
+		(_specparam HOLDADR0WE integer (0 0 0))
+		(_specparam SUADR1WE integer (0 0 0))
+		(_specparam HOLDADR1WE integer (0 0 0))
+		(_specparam SUADR2WE integer (0 0 0))
+		(_specparam HOLDADR2WE integer (0 0 0))
+		(_specparam SUADR3WE integer (0 0 0))
+		(_specparam HOLDADR3WE integer (0 0 0))
+		(_specparam SUADR4WE integer (0 0 0))
+		(_specparam HOLDADR4WE integer (0 0 0))
+		(_specparam SUINWEF integer (0 0 0))
+		(_specparam HOLDINWEF integer (0 0 0))
+		(_specparam PWWEHI integer (0 0 0))
+		(_specparam PWWELO integer (0 0 0))
+		(_modpath parallel unknown 0 122
+			(_port WE in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 123
+			(_port IN in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 124
+			(_port ADR0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 125
+			(_port ADR1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 126
+			(_port ADR2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 127
+			(_port ADR3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 128
+			(_port ADR4 in )
+			(_port OUT out )
+		)
+		(_tchk setup 0 130
+			(_port ADR0 ())
+			(_port WE (posedge))
+		)
+		(_tchk setup 0 131
+			(_port ADR1 ())
+			(_port WE (posedge))
+		)
+		(_tchk setup 0 132
+			(_port ADR2 ())
+			(_port WE (posedge))
+		)
+		(_tchk setup 0 133
+			(_port ADR3 ())
+			(_port WE (posedge))
+		)
+		(_tchk setup 0 134
+			(_port ADR4 ())
+			(_port WE (posedge))
+		)
+		(_tchk hold 0 135
+			(_port WE (negedge))
+			(_port ADR0 ())
+		)
+		(_tchk hold 0 136
+			(_port WE (negedge))
+			(_port ADR1 ())
+		)
+		(_tchk hold 0 137
+			(_port WE (negedge))
+			(_port ADR2 ())
+		)
+		(_tchk hold 0 138
+			(_port WE (negedge))
+			(_port ADR3 ())
+		)
+		(_tchk hold 0 139
+			(_port WE (negedge))
+			(_port ADR4 ())
+		)
+		(_tchk setup 0 140
+			(_port IN ())
+			(_port WE (negedge))
+		)
+		(_tchk hold 0 141
+			(_port WE (negedge))
+			(_port IN ())
+		)
+		(_tchk width 0 143
+			(_port WE (posedge))
+		)
+		(_tchk width 0 144
+			(_port WE (negedge))
+		)
+	)
+)
+V 000039 56 3950 1265381446104 NEOSR16
+(_unit NEOSR16
+	(_specify
+		(_specparam SUDINWCLK integer (0 0 0))
+		(_specparam SURAD0RCLK integer (0 0 0))
+		(_specparam SURAD1RCLK integer (0 0 0))
+		(_specparam SURAD2RCLK integer (0 0 0))
+		(_specparam SURAD3RCLK integer (0 0 0))
+		(_specparam SUWAD0WCLK integer (0 0 0))
+		(_specparam SUWAD1WCLK integer (0 0 0))
+		(_specparam SUWAD2WCLK integer (0 0 0))
+		(_specparam SUWAD3WCLK integer (0 0 0))
+		(_specparam SUWRENWCLK integer (0 0 0))
+		(_specparam SUWPEWCLK integer (0 0 0))
+		(_specparam HOLDDINWCLK integer (0 0 0))
+		(_specparam HOLDWAD0WCLK integer (0 0 0))
+		(_specparam HOLDWAD1WCLK integer (0 0 0))
+		(_specparam HOLDWAD2WCLK integer (0 0 0))
+		(_specparam HOLDWAD3WCLK integer (0 0 0))
+		(_specparam HOLDWRENWCLK integer (0 0 0))
+		(_specparam HOLDWPEWCLK integer (0 0 0))
+		(_specparam HOLDRAD0RCLK integer (0 0 0))
+		(_specparam HOLDRAD1RCLK integer (0 0 0))
+		(_specparam HOLDRAD2RCLK integer (0 0 0))
+		(_specparam HOLDRAD3RCLK integer (0 0 0))
+		(_specparam PWWCLKHI integer (0 0 0))
+		(_specparam PWRCLKHI integer (0 0 0))
+		(_specparam PWWCLKLO integer (0 0 0))
+		(_specparam PWRCLKLO integer (0 0 0))
+		(_specparam PWRSTHI integer (0 0 0))
+		(_specparam PWSETHI integer (0 0 0))
+		(_specparam PWRSTLO integer (0 0 0))
+		(_specparam PWSETLO integer (0 0 0))
+		(_specparam RECSETWCLK integer (0 0 0))
+		(_specparam RECRSTWCLK integer (0 0 0))
+		(_specparam RECSETRCLK integer (0 0 0))
+		(_specparam RECRSTRCLK integer (0 0 0))
+		(_tchk setup 0 191
+			(_port DIN ())
+			(_port WCLK (posedge) (_code  8 wren_and_wpe))
+		)
+		(_tchk setup 0 192
+			(_port RAD0 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 193
+			(_port RAD1 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 194
+			(_port RAD2 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 195
+			(_port RAD3 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 196
+			(_port WAD0 ())
+			(_port WCLK (posedge) (_code  9 wren_and_wpe))
+		)
+		(_tchk setup 0 197
+			(_port WAD1 ())
+			(_port WCLK (posedge) (_code  10 wren_and_wpe))
+		)
+		(_tchk setup 0 198
+			(_port WAD2 ())
+			(_port WCLK (posedge) (_code  11 wren_and_wpe))
+		)
+		(_tchk setup 0 199
+			(_port WAD3 ())
+			(_port WCLK (posedge) (_code  12 wren_and_wpe))
+		)
+		(_tchk setup 0 200
+			(_port WREN ())
+			(_port WCLK (posedge))
+		)
+		(_tchk setup 0 201
+			(_port WPE ())
+			(_port WCLK (posedge))
+		)
+		(_tchk hold 0 203
+			(_port WCLK (posedge) (_code  13 wren_and_wpe))
+			(_port DIN ())
+		)
+		(_tchk hold 0 204
+			(_port WCLK (posedge) (_code  14 wren_and_wpe))
+			(_port WAD0 ())
+		)
+		(_tchk hold 0 205
+			(_port WCLK (posedge) (_code  15 wren_and_wpe))
+			(_port WAD1 ())
+		)
+		(_tchk hold 0 206
+			(_port WCLK (posedge) (_code  16 wren_and_wpe))
+			(_port WAD2 ())
+		)
+		(_tchk hold 0 207
+			(_port WCLK (posedge) (_code  17 wren_and_wpe))
+			(_port WAD3 ())
+		)
+		(_tchk hold 0 208
+			(_port WCLK (posedge))
+			(_port WREN ())
+		)
+		(_tchk hold 0 209
+			(_port WCLK (posedge))
+			(_port WPE ())
+		)
+		(_tchk hold 0 210
+			(_port RCLK (negedge))
+			(_port RAD0 ())
+		)
+		(_tchk hold 0 211
+			(_port RCLK (negedge))
+			(_port RAD1 ())
+		)
+		(_tchk hold 0 212
+			(_port RCLK (negedge))
+			(_port RAD2 ())
+		)
+		(_tchk hold 0 213
+			(_port RCLK (negedge))
+			(_port RAD3 ())
+		)
+		(_tchk width 0 215
+			(_port RST (posedge))
+		)
+		(_tchk width 0 216
+			(_port SET (posedge))
+		)
+		(_tchk width 0 217
+			(_port WCLK (posedge))
+		)
+		(_tchk width 0 218
+			(_port RCLK (posedge))
+		)
+		(_tchk width 0 219
+			(_port RST (negedge))
+		)
+		(_tchk width 0 220
+			(_port SET (negedge))
+		)
+		(_tchk width 0 221
+			(_port WCLK (negedge))
+		)
+		(_tchk width 0 222
+			(_port RCLK (negedge))
+		)
+		(_tchk recovery 0 224
+			(_port SET (negedge))
+			(_port WCLK (posedge))
+		)
+		(_tchk recovery 0 225
+			(_port SET (negedge))
+			(_port RCLK (posedge))
+		)
+		(_tchk recovery 0 226
+			(_port RST (negedge))
+			(_port WCLK (posedge))
+		)
+		(_tchk recovery 0 227
+			(_port RST (negedge))
+			(_port RCLK (posedge))
+		)
+	)
+)
+V 000040 56 4979 1265381446109 NEOSRN32
+(_unit NEOSRN32
+	(_specify
+		(_specparam rdly real 0.00)
+		(_specparam fdly real 0.00)
+		(_specparam SUDINWCLK integer (0 0 0))
+		(_specparam SURAD0RCLK integer (0 0 0))
+		(_specparam SURAD1RCLK integer (0 0 0))
+		(_specparam SURAD2RCLK integer (0 0 0))
+		(_specparam SURAD3RCLK integer (0 0 0))
+		(_specparam SURAD4RCLK integer (0 0 0))
+		(_specparam SUWAD0WCLK integer (0 0 0))
+		(_specparam SUWAD1WCLK integer (0 0 0))
+		(_specparam SUWAD2WCLK integer (0 0 0))
+		(_specparam SUWAD3WCLK integer (0 0 0))
+		(_specparam SUWAD4WCLK integer (0 0 0))
+		(_specparam SUWRENWCLK integer (0 0 0))
+		(_specparam SUWPEWCLK integer (0 0 0))
+		(_specparam HOLDDINWCLK integer (0 0 0))
+		(_specparam HOLDWAD0WCLK integer (0 0 0))
+		(_specparam HOLDWAD1WCLK integer (0 0 0))
+		(_specparam HOLDWAD2WCLK integer (0 0 0))
+		(_specparam HOLDWAD3WCLK integer (0 0 0))
+		(_specparam HOLDWAD4WCLK integer (0 0 0))
+		(_specparam HOLDWRENWCLK integer (0 0 0))
+		(_specparam HOLDWPEWCLK integer (0 0 0))
+		(_specparam HOLDRAD0RCLK integer (0 0 0))
+		(_specparam HOLDRAD1RCLK integer (0 0 0))
+		(_specparam HOLDRAD2RCLK integer (0 0 0))
+		(_specparam HOLDRAD3RCLK integer (0 0 0))
+		(_specparam HOLDRAD4RCLK integer (0 0 0))
+		(_specparam PWWCLKHI integer (0 0 0))
+		(_specparam PWRCLKHI integer (0 0 0))
+		(_specparam PWWCLKLO integer (0 0 0))
+		(_specparam PWRCLKLO integer (0 0 0))
+		(_specparam PWRSTHI integer (0 0 0))
+		(_specparam PWSETHI integer (0 0 0))
+		(_specparam PWRSTLO integer (0 0 0))
+		(_specparam PWSETLO integer (0 0 0))
+		(_specparam RECSETWCLK integer (0 0 0))
+		(_specparam RECRSTWCLK integer (0 0 0))
+		(_specparam RECSETRCLK integer (0 0 0))
+		(_specparam RECRSTRCLK integer (0 0 0))
+		(_modpath parallel unknown 0 145
+			(_port WCLK in )
+			(_port DOUT out )
+		)
+		(_modpath parallel unknown 0 146
+			(_port RCLK in )
+			(_port DOUT out )
+		)
+		(_modpath parallel unknown 0 147
+			(_port RAD0 in )
+			(_port DOUT out )
+		)
+		(_modpath parallel unknown 0 148
+			(_port RAD1 in )
+			(_port DOUT out )
+		)
+		(_modpath parallel unknown 0 149
+			(_port RAD2 in )
+			(_port DOUT out )
+		)
+		(_modpath parallel unknown 0 150
+			(_port RAD3 in )
+			(_port DOUT out )
+		)
+		(_modpath parallel unknown 0 151
+			(_port RAD4 in )
+			(_port DOUT out )
+		)
+		(_modpath parallel unknown 0 152
+			(_port SET in )
+			(_port DOUT out )
+		)
+		(_modpath parallel unknown 0 153
+			(_port RST in )
+			(_port DOUT out )
+		)
+		(_tchk setup 0 204
+			(_port DIN ())
+			(_port WCLK (posedge) (_code  7 wren_and_wpe))
+		)
+		(_tchk setup 0 205
+			(_port RAD0 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 206
+			(_port RAD1 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 207
+			(_port RAD2 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 208
+			(_port RAD3 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 209
+			(_port RAD4 ())
+			(_port RCLK (posedge))
+		)
+		(_tchk setup 0 210
+			(_port WAD0 ())
+			(_port WCLK (posedge))
+		)
+		(_tchk setup 0 211
+			(_port WAD1 ())
+			(_port WCLK (posedge))
+		)
+		(_tchk setup 0 212
+			(_port WAD2 ())
+			(_port WCLK (posedge))
+		)
+		(_tchk setup 0 213
+			(_port WAD3 ())
+			(_port WCLK (posedge))
+		)
+		(_tchk setup 0 214
+			(_port WAD4 ())
+			(_port WCLK (posedge))
+		)
+		(_tchk setup 0 215
+			(_port WREN ())
+			(_port WCLK (posedge))
+		)
+		(_tchk setup 0 216
+			(_port WPE ())
+			(_port WCLK (posedge))
+		)
+		(_tchk hold 0 218
+			(_port WCLK (posedge) (_code  8 wren_and_wpe))
+			(_port DIN ())
+		)
+		(_tchk hold 0 219
+			(_port WCLK (posedge))
+			(_port WAD0 ())
+		)
+		(_tchk hold 0 220
+			(_port WCLK (posedge))
+			(_port WAD1 ())
+		)
+		(_tchk hold 0 221
+			(_port WCLK (posedge))
+			(_port WAD2 ())
+		)
+		(_tchk hold 0 222
+			(_port WCLK (posedge))
+			(_port WAD3 ())
+		)
+		(_tchk hold 0 223
+			(_port WCLK (posedge))
+			(_port WAD4 ())
+		)
+		(_tchk hold 0 224
+			(_port WCLK (posedge))
+			(_port WREN ())
+		)
+		(_tchk hold 0 225
+			(_port WCLK (posedge))
+			(_port WPE ())
+		)
+		(_tchk hold 0 226
+			(_port RCLK (negedge))
+			(_port RAD0 ())
+		)
+		(_tchk hold 0 227
+			(_port RCLK (negedge))
+			(_port RAD1 ())
+		)
+		(_tchk hold 0 228
+			(_port RCLK (negedge))
+			(_port RAD2 ())
+		)
+		(_tchk hold 0 229
+			(_port RCLK (negedge))
+			(_port RAD3 ())
+		)
+		(_tchk hold 0 230
+			(_port RCLK (negedge))
+			(_port RAD4 ())
+		)
+		(_tchk width 0 232
+			(_port RST (posedge))
+		)
+		(_tchk width 0 233
+			(_port SET (posedge))
+		)
+		(_tchk width 0 234
+			(_port WCLK (posedge))
+		)
+		(_tchk width 0 235
+			(_port RCLK (posedge))
+		)
+		(_tchk width 0 236
+			(_port RST (negedge))
+		)
+		(_tchk width 0 237
+			(_port SET (negedge))
+		)
+		(_tchk width 0 238
+			(_port WCLK (negedge))
+		)
+		(_tchk width 0 239
+			(_port RCLK (negedge))
+		)
+		(_tchk recovery 0 241
+			(_port SET (negedge))
+			(_port WCLK (posedge))
+		)
+		(_tchk recovery 0 242
+			(_port SET (negedge))
+			(_port RCLK (posedge))
+		)
+		(_tchk recovery 0 243
+			(_port RST (negedge))
+			(_port WCLK (posedge))
+		)
+		(_tchk recovery 0 244
+			(_port RST (negedge))
+			(_port RCLK (posedge))
+		)
+	)
+)
+V 000037 56 581 1265381446114 NEOTRI
+(_unit NEOTRI
+	(_specify
+		(_specparam INDLYLH integer (0 0 0))
+		(_specparam INDLYHL integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_specparam OUTDLYLZ integer (0 0 0))
+		(_specparam OUTDLYHZ integer (0 0 0))
+		(_specparam OUTDLYZL integer (0 0 0))
+		(_specparam OUTDLYZH integer (0 0 0))
+		(_specparam CTLDLYLH integer (0 0 0))
+		(_specparam CTLDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 43
+			(_port IN in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 47
+			(_port CTL in )
+			(_port OUT out )
+		)
+	)
+)
+V 000040 56 2642 1265381446123 NEOXOR16
+(_unit NEOXOR16
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYLH8 integer (0 0 0))
+		(_specparam INDLYLH9 integer (0 0 0))
+		(_specparam INDLYLH10 integer (0 0 0))
+		(_specparam INDLYLH11 integer (0 0 0))
+		(_specparam INDLYLH12 integer (0 0 0))
+		(_specparam INDLYLH13 integer (0 0 0))
+		(_specparam INDLYLH14 integer (0 0 0))
+		(_specparam INDLYLH15 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam INDLYHL8 integer (0 0 0))
+		(_specparam INDLYHL9 integer (0 0 0))
+		(_specparam INDLYHL10 integer (0 0 0))
+		(_specparam INDLYHL11 integer (0 0 0))
+		(_specparam INDLYHL12 integer (0 0 0))
+		(_specparam INDLYHL13 integer (0 0 0))
+		(_specparam INDLYHL14 integer (0 0 0))
+		(_specparam INDLYHL15 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 59
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 60
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 61
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 62
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 63
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 64
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 65
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 66
+			(_port IN7 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 67
+			(_port IN8 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 68
+			(_port IN9 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 69
+			(_port IN10 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 70
+			(_port IN11 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 71
+			(_port IN12 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 72
+			(_port IN13 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 73
+			(_port IN14 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 74
+			(_port IN15 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 425 1265381446128 NEOXOR2
+(_unit NEOXOR2
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 41
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 42
+			(_port IN1 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 582 1265381446133 NEOXOR3
+(_unit NEOXOR3
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 43
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 44
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 45
+			(_port IN2 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000040 56 5215 1265381446138 NEOXOR32
+(_unit NEOXOR32
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYLH8 integer (0 0 0))
+		(_specparam INDLYLH9 integer (0 0 0))
+		(_specparam INDLYLH10 integer (0 0 0))
+		(_specparam INDLYLH11 integer (0 0 0))
+		(_specparam INDLYLH12 integer (0 0 0))
+		(_specparam INDLYLH13 integer (0 0 0))
+		(_specparam INDLYLH14 integer (0 0 0))
+		(_specparam INDLYLH15 integer (0 0 0))
+		(_specparam INDLYLH16 integer (0 0 0))
+		(_specparam INDLYLH17 integer (0 0 0))
+		(_specparam INDLYLH18 integer (0 0 0))
+		(_specparam INDLYLH19 integer (0 0 0))
+		(_specparam INDLYLH20 integer (0 0 0))
+		(_specparam INDLYLH21 integer (0 0 0))
+		(_specparam INDLYLH22 integer (0 0 0))
+		(_specparam INDLYLH23 integer (0 0 0))
+		(_specparam INDLYLH24 integer (0 0 0))
+		(_specparam INDLYLH25 integer (0 0 0))
+		(_specparam INDLYLH26 integer (0 0 0))
+		(_specparam INDLYLH27 integer (0 0 0))
+		(_specparam INDLYLH28 integer (0 0 0))
+		(_specparam INDLYLH29 integer (0 0 0))
+		(_specparam INDLYLH30 integer (0 0 0))
+		(_specparam INDLYLH31 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam INDLYHL8 integer (0 0 0))
+		(_specparam INDLYHL9 integer (0 0 0))
+		(_specparam INDLYHL10 integer (0 0 0))
+		(_specparam INDLYHL11 integer (0 0 0))
+		(_specparam INDLYHL12 integer (0 0 0))
+		(_specparam INDLYHL13 integer (0 0 0))
+		(_specparam INDLYHL14 integer (0 0 0))
+		(_specparam INDLYHL15 integer (0 0 0))
+		(_specparam INDLYHL16 integer (0 0 0))
+		(_specparam INDLYHL17 integer (0 0 0))
+		(_specparam INDLYHL18 integer (0 0 0))
+		(_specparam INDLYHL19 integer (0 0 0))
+		(_specparam INDLYHL20 integer (0 0 0))
+		(_specparam INDLYHL21 integer (0 0 0))
+		(_specparam INDLYHL22 integer (0 0 0))
+		(_specparam INDLYHL23 integer (0 0 0))
+		(_specparam INDLYHL24 integer (0 0 0))
+		(_specparam INDLYHL25 integer (0 0 0))
+		(_specparam INDLYHL26 integer (0 0 0))
+		(_specparam INDLYHL27 integer (0 0 0))
+		(_specparam INDLYHL28 integer (0 0 0))
+		(_specparam INDLYHL29 integer (0 0 0))
+		(_specparam INDLYHL30 integer (0 0 0))
+		(_specparam INDLYHL31 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 81
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 82
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 83
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 84
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 85
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 86
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 87
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 88
+			(_port IN7 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 89
+			(_port IN8 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 90
+			(_port IN9 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 91
+			(_port IN10 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 92
+			(_port IN11 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 93
+			(_port IN12 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 94
+			(_port IN13 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 95
+			(_port IN14 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 96
+			(_port IN15 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 97
+			(_port IN16 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 98
+			(_port IN17 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 99
+			(_port IN18 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 100
+			(_port IN19 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 101
+			(_port IN20 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 102
+			(_port IN21 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 103
+			(_port IN22 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 104
+			(_port IN23 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 105
+			(_port IN24 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 106
+			(_port IN25 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 107
+			(_port IN26 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 108
+			(_port IN27 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 109
+			(_port IN28 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 110
+			(_port IN29 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 111
+			(_port IN30 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 112
+			(_port IN31 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 739 1265381446143 NEOXOR4
+(_unit NEOXOR4
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 43
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 44
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 45
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN3 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000038 56 896 1265381446148 NEOXOR5
+(_unit NEOXOR5
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 45
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 47
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN4 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000039 56 1053 1265381446153 NEOXOR6
+(_unit NEOXOR6
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 45
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 46
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 47
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN5 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000039 56 1210 1265381446165 NEOXOR7
+(_unit NEOXOR7
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 47
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 51
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 52
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 53
+			(_port IN6 in )
+			(_port OUT out )
+		)
+	)
+)
+V 000039 56 1367 1265381446170 NEOXOR8
+(_unit NEOXOR8
+	(_specify
+		(_specparam INDLYLH0 integer (0 0 0))
+		(_specparam INDLYLH1 integer (0 0 0))
+		(_specparam INDLYLH2 integer (0 0 0))
+		(_specparam INDLYLH3 integer (0 0 0))
+		(_specparam INDLYLH4 integer (0 0 0))
+		(_specparam INDLYLH5 integer (0 0 0))
+		(_specparam INDLYLH6 integer (0 0 0))
+		(_specparam INDLYLH7 integer (0 0 0))
+		(_specparam INDLYHL0 integer (0 0 0))
+		(_specparam INDLYHL1 integer (0 0 0))
+		(_specparam INDLYHL2 integer (0 0 0))
+		(_specparam INDLYHL3 integer (0 0 0))
+		(_specparam INDLYHL4 integer (0 0 0))
+		(_specparam INDLYHL5 integer (0 0 0))
+		(_specparam INDLYHL6 integer (0 0 0))
+		(_specparam INDLYHL7 integer (0 0 0))
+		(_specparam OUTDLYLH integer (0 0 0))
+		(_specparam OUTDLYHL integer (0 0 0))
+		(_modpath parallel unknown 0 47
+			(_port IN0 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 48
+			(_port IN1 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 49
+			(_port IN2 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 50
+			(_port IN3 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 51
+			(_port IN4 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 52
+			(_port IN5 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 53
+			(_port IN6 in )
+			(_port OUT out )
+		)
+		(_modpath parallel unknown 0 54
+			(_port IN7 in )
+			(_port OUT out )
+		)
+	)
+)

@@ -1,0 +1,139 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Copyright (c) 2005 by Lattice Semiconductor Corporation
+// --------------------------------------------------------------------
+//
+//
+//                     Lattice Semiconductor Corporation
+//                     5555 NE Moore Court
+//                     Hillsboro, OR 97214
+//                     U.S.A.
+//
+//                     TEL: 1-800-Lattice  (USA and Canada)
+//                          1-408-826-6000 (other locations)
+//
+//                     web: http://www.latticesemi.com/
+//                     email: techsupport@latticesemi.com
+//
+// --------------------------------------------------------------------
+//
+// Simulation Library File for NEOPRIMS
+//
+// $Header: /home/dmsys/pvcs/RCSMigTest/rcs/verilog/pkg/versclibs/data/neoprims/RCS/NEORAM16.vmd,v 1.4 2005/05/19 18:23:56 pradeep Exp $ 
+//
+`timescale 1 ns / 100 ps
+`celldefine
+
+   module NEORAM16 (OUT, IN, WE, ADR0, ADR1, ADR2, ADR3);
+
+      output OUT; 
+      input  IN, WE, ADR0, ADR1, ADR2, ADR3 ;
+
+      reg mem [0:15];
+      wire vectored [3:0] addr;
+      wire mo, in, we, adr0, adr1, adr2, adr3;
+      parameter [15:0] datain = 16'h0000;
+      reg [15:0] pick_data;
+      integer i;
+
+// buffered inputs and outputs for Cadence SDF annotation layer
+      buf(in, IN);
+      buf(we, WE);
+      buf(adr0, ADR0);
+      buf(adr1, ADR1);
+      buf(adr2, ADR2);
+      buf(adr3, ADR3);
+
+      assign addr = {adr3, adr2, adr1, adr0} ;
+      buf(OUT, mo);
+      assign mo = mem[addr];
+
+
+      initial begin
+       pick_data = datain;
+       for (i=0; i<16; i= i+1) begin
+         mem[i]=pick_data[i];
+       end
+       end
+
+
+
+      always @ (we or in or addr) begin
+         if (we) 
+	    mem[addr] = in;
+      end
+
+   specify
+
+      specparam INDLYLH      = 0:0:0,  INDLYHL      = 0:0:0 ;
+      specparam OUTDLYLH     = 0:0:0,  OUTDLYHL     = 0:0:0 ;
+      specparam WEDLYLH      = 0:0:0,  WEDLYHL      = 0:0:0 ;
+      specparam ADR0DLYLH    = 0:0:0,  ADR0DLYHL    = 0:0:0 ;
+      specparam ADR1DLYLH    = 0:0:0,  ADR1DLYHL    = 0:0:0 ;
+      specparam ADR2DLYLH    = 0:0:0,  ADR2DLYHL    = 0:0:0 ;
+      specparam ADR3DLYLH    = 0:0:0,  ADR3DLYHL    = 0:0:0 ;
+      specparam SUADR0WE     = 0:0:0,  HOLDADR0WE   = 0:0:0 ;
+      specparam SUADR1WE     = 0:0:0,  HOLDADR1WE   = 0:0:0 ;
+      specparam SUADR2WE     = 0:0:0,  HOLDADR2WE   = 0:0:0 ;
+      specparam SUADR3WE     = 0:0:0,  HOLDADR3WE   = 0:0:0 ;
+      specparam SUINWEF      = 0:0:0,  HOLDINWEF    = 0:0:0 ;
+      specparam PWWEHI       = 0:0:0,  PWWELO       = 0:0:0 ;
+
+//    SDF doesn't accept hi/lo values for setup/hold
+//    specparam SUADR0LOWE   = 0:0:0,  SUADR0HIWE   = 0:0:0 ;
+//    specparam SUADR1LOWE   = 0:0:0,  SUADR1HIWE   = 0:0:0 ;
+//    specparam SUADR2LOWE   = 0:0:0,  SUADR2HIWE   = 0:0:0 ;
+//    specparam SUADR3LOWE   = 0:0:0,  SUADR3HIWE   = 0:0:0 ;
+//    specparam HOLDADR0LOWE = 0:0:0,  HOLDADR0HIWE = 0:0:0 ;
+//    specparam HOLDADR1LOWE = 0:0:0,  HOLDADR1HIWE = 0:0:0 ;
+//    specparam HOLDADR2LOWE = 0:0:0,  HOLDADR2HIWE = 0:0:0 ;
+//    specparam HOLDADR3LOWE = 0:0:0,  HOLDADR3HIWE = 0:0:0 ;
+//    specparam SUINLOWEF    = 0:0:0,  SUINHIWEF    = 0:0:0 ;
+//    specparam HOLDINLOWEF  = 0:0:0,  HOLDINHIWEF  = 0:0:0 ;
+//    $setup(negedge ADR0, posedge WE, SUADR0LOWE) ;
+//    $setup(negedge ADR1, posedge WE, SUADR1LOWE) ;
+//    $setup(negedge ADR2, posedge WE, SUADR2LOWE) ;
+//    $setup(negedge ADR3, posedge WE, SUADR3LOWE) ;
+//    $setup(posedge ADR0, posedge WE, SUADR0HIWE) ;
+//    $setup(posedge ADR1, posedge WE, SUADR1HIWE) ;
+//    $setup(posedge ADR2, posedge WE, SUADR2HIWE) ;
+//    $setup(posedge ADR3, posedge WE, SUADR3HIWE) ;
+//    $hold(negedge  ADR0, negedge WE, HOLDADR0LOWE) ;
+//    $hold(negedge  ADR1, negedge WE, HOLDADR1LOWE) ;
+//    $hold(negedge  ADR2, negedge WE, HOLDADR2LOWE) ;
+//    $hold(negedge  ADR3, negedge WE, HOLDADR3LOWE) ;
+//    $hold(posedge  ADR0, negedge WE, HOLDADR0HIWE) ;
+//    $hold(posedge  ADR1, negedge WE, HOLDADR1HIWE) ;
+//    $hold(posedge  ADR2, negedge WE, HOLDADR2HIWE) ;
+//    $hold(posedge  ADR3, negedge WE, HOLDADR3HIWE) ;
+//    $setup(negedge IN,   negedge WE, SUINLOWEF) ;
+//    $setup(posedge IN,   negedge WE, SUINHIWEF) ;
+//    $hold(negedge  IN,   negedge WE, HOLDINLOWEF) ;
+//    $hold(posedge  IN,   negedge WE, HOLDINHIWEF) ;
+
+//      (WE   => OUT) = (WEDLYLH+OUTDLYLH, WEDLYHL+OUTDLYHL);
+//      (IN   => OUT) = (INDLYLH+OUTDLYLH, INDLYHL+OUTDLYHL);
+//      (ADR0 => OUT) = (ADR0DLYLH+OUTDLYLH, ADR0DLYHL+OUTDLYHL);
+//      (ADR1 => OUT) = (ADR1DLYLH+OUTDLYLH, ADR1DLYHL+OUTDLYHL);
+//      (ADR2 => OUT) = (ADR2DLYLH+OUTDLYLH, ADR2DLYHL+OUTDLYHL);
+//      (ADR3 => OUT) = (ADR3DLYLH+OUTDLYLH, ADR3DLYHL+OUTDLYHL);
+
+      $setup( ADR0, posedge WE, SUADR0WE) ;
+      $setup( ADR1, posedge WE, SUADR1WE) ;
+      $setup( ADR2, posedge WE, SUADR2WE) ;
+      $setup( ADR3, posedge WE, SUADR3WE) ;
+      $hold( negedge WE, ADR0, HOLDADR0WE) ;
+      $hold( negedge WE, ADR1, HOLDADR1WE) ;
+      $hold( negedge WE, ADR2, HOLDADR2WE) ;
+      $hold( negedge WE, ADR3, HOLDADR3WE) ;
+      $setup( IN,  negedge WE, SUINWEF) ;
+      $hold( negedge WE,  IN, HOLDINWEF) ;
+
+      $width(posedge WE, PWWEHI);
+      $width(negedge WE, PWWELO);
+
+   endspecify
+   endmodule
+`endcelldefine
+

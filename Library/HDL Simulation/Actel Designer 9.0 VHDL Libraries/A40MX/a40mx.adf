@@ -1,0 +1,30 @@
+[Project]
+Current Flow=generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=a40mx
+
+[$LibMap$]
+Active_lib=
+xilinxun=
+a40mx=.
+
+[Library]
+a40mx=.\a40mx.LIB
+
+[Files]
+/update_a40mx.do=-1
+/40mx.vhd=-1
+
+[Files.Data]
+.\src\update_a40mx.do=Macro
+.\src\40mx.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

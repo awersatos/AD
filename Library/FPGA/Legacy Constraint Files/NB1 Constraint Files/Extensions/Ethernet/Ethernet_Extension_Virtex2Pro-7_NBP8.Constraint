@@ -1,0 +1,68 @@
+;...............................................................................
+;Constraints File
+;   NBP Device    : NBP8 Xilinx Virtex II Pro XC2VP7-5FG456C
+;   NB1 Extension : NanoBoard Ethernet Extension v1.0
+;   Project       : Any
+;
+;   Created 8-Decembre-2004
+;   Altium Limited
+;...............................................................................
+
+;...............................................................................
+Record=FileHeader | Id=DXP Constraints v1.0
+;...............................................................................
+
+;...............................................................................
+Record=Constraint | TargetKind=PCB  | TargetId=NanoBoard Ethernet Extension v1.0
+;...............................................................................
+
+;...............................................................................
+; Clocks
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD              | FPGA_CLOCK=TRUE
+Record=Constraint | TargetKind=Port | TargetId=CLK_BRD              | FPGA_CLOCK_FREQUENCY=40 Mhz
+Record=Constraint | TargetKind=Port | TargetId=CLK_REF              | FPGA_CLOCK=TRUE
+Record=Constraint | TargetKind=Port | TargetId=CLK_REF              | FPGA_CLOCK_FREQUENCY=20 Mhz
+;Record=Constraint | TargetKind=Port | TargetId=TXC                  | FPGA_NOCLOCK=TRUE
+;Record=Constraint | TargetKind=Port | TargetId=TXC                  | FPGA_GLOBAL=TRUE
+;Record=Constraint | TargetKind=Port | TargetId=TXC                  | FPGA_CLOCK_FREQUENCY=25 Mhz
+;Record=Constraint | TargetKind=Port | TargetId=RXC                  | FPGA_NOCLOCK=TRUE
+;Record=Constraint | TargetKind=Port | TargetId=RXC                  | FPGA_GLOBAL=TRUE
+;Record=Constraint | TargetKind=Port | TargetId=RXC                  | FPGA_CLOCK_FREQUENCY=25 Mhz
+;...............................................................................
+
+;...............................................................................
+; Burch Style 20-Pin Headers
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=MDIO                 | FPGA_PINNUM=F20
+Record=Constraint | TargetKind=Port | TargetId=MDC                  | FPGA_PINNUM=E21
+Record=Constraint | TargetKind=Port | TargetId=RXER                 | FPGA_PINNUM=E20
+Record=Constraint | TargetKind=Port | TargetId=CRS                  | FPGA_PINNUM=L21
+Record=Constraint | TargetKind=Port | TargetId=RXDV                 | FPGA_PINNUM=F19
+Record=Constraint | TargetKind=Port | TargetId=RXD[3..0]            | FPGA_PINNUM=D17,K17,L19,E19
+Record=Constraint | TargetKind=Port | TargetId=RXC                  | FPGA_PINNUM=E16
+Record=Constraint | TargetKind=Port | TargetId=TXC                  | FPGA_PINNUM=D16
+Record=Constraint | TargetKind=Port | TargetId=TXD[3..0]            | FPGA_PINNUM=E14,E15,D14,D15
+Record=Constraint | TargetKind=Port | TargetId=TXEN                 | FPGA_PINNUM=F13
+Record=Constraint | TargetKind=Port | TargetId=COL                  | FPGA_PINNUM=E10
+Record=Constraint | TargetKind=Port | TargetId=RESETB               | FPGA_PINNUM=C10
+;...............................................................................
+
+;...............................................................................
+; Burch Style 20-Pin Headers
+;...............................................................................
+Record=Constraint | TargetKind=Port | TargetId=ETH_MDIO             | FPGA_PINNUM=F20
+Record=Constraint | TargetKind=Port | TargetId=ETH_MDC              | FPGA_PINNUM=E21
+Record=Constraint | TargetKind=Port | TargetId=ETH_RXER             | FPGA_PINNUM=E20
+Record=Constraint | TargetKind=Port | TargetId=ETH_CRS              | FPGA_PINNUM=L21
+Record=Constraint | TargetKind=Port | TargetId=ETH_RXDV             | FPGA_PINNUM=F19
+Record=Constraint | TargetKind=Port | TargetId=ETH_RXD[3..0]        | FPGA_PINNUM=D17,K17,L19,E19
+Record=Constraint | TargetKind=Port | TargetId=ETH_RXC              | FPGA_PINNUM=E16
+Record=Constraint | TargetKind=Port | TargetId=ETH_TXC              | FPGA_PINNUM=D16
+Record=Constraint | TargetKind=Port | TargetId=ETH_TXD[3..0]        | FPGA_PINNUM=E14,E15,D14,D15
+Record=Constraint | TargetKind=Port | TargetId=ETH_TXEN             | FPGA_PINNUM=F13
+Record=Constraint | TargetKind=Port | TargetId=ETH_COL              | FPGA_PINNUM=E10
+Record=Constraint | TargetKind=Port | TargetId=ETH_RESETB_E         | FPGA_PINNUM=C10
+;...............................................................................
+
+

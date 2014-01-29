@@ -1,0 +1,451 @@
+timestamp=0
+
+[cycloneiii_and1]
+A/altvital=A/AltVITAL 21|./src/cycloneiii_atoms.vhd|1416|1*7285
+B/altvital=3*41086
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*39541
+I/altvital=I/AltVITAL 0*40584
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*38896*0x4915be76e1ddf3f921be3676fad6282094214ec3|0*39464*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/cycloneiii_atoms.vhd|0*39785*0xaf14c528b0fb724ba223604e81b7c92071134ee9|0*40495*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1399
+
+[cycloneiii_apfcontroller]
+A/architecture_apfcontroller=21|./src/cycloneiii_atoms.vhd|8478|1*69090
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_apfcontroller=8.2.1986.SP1.35.3497  (Windows)
+I=0*258590
+I/architecture_apfcontroller=0*259185
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*258119*0x370ba8259c13ff7b9f182e034e430fbadff12060|0*258504*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_apfcontroller=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*258843*0x6824cdde644b03e0d3162ff8f665e5cfda04af04|0*259069*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8465
+
+[cycloneiii_atom_pack]
+B/cycloneiii_atom_pack=3*0
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*0
+I=0*2863
+I/cycloneiii_atom_pack=0*7413
+M=3|0|v63|0|./src/cycloneiii_atoms.vhd|0*880*0x50a430f4ca933ea03e2f2fb29f60592a40b025d3|0*2781*0xf2538cdc6f7b23a146389216c886e772
+M/cycloneiii_atom_pack=4|0|v63|0|./src/cycloneiii_atoms.vhd|0*3112*0xea74626b1cda31a38924e84ab20cf6564cadcefa|0*7308*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|21
+
+[cycloneiii_clkctrl]
+A/vital_clkctrl=21|./src/cycloneiii_atoms.vhd|8295|1*66231
+B/vital_clkctrl=3*389425
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_clkctrl=8.2.1986.SP1.35.3497  (Windows)
+I=0*252276
+I/vital_clkctrl=0*255703
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*251023*0x8982bffa5bb3be79b9f400cccc9d3598428eb974|0*252196*0xf2538cdc6f7b23a146389216c886e772
+M/vital_clkctrl=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*252571*0x3533d622ab5de9c5550cdcafa7484fb58b24542c|0*255606*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8268
+
+[cycloneiii_components]
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*73261
+I=0*292653
+M=3|0|v63|0|./src/cycloneiii_components.vhd|0*268544*0xf9fc60ba957b5dac182bcd0ff9c627303343c1df|0*292565*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_components.vhd|21
+
+[cycloneiii_crcblock]
+A/architecture_crcblock=21|./src/cycloneiii_atoms.vhd|8600|1*71447
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_crcblock=8.2.1986.SP1.35.3497  (Windows)
+I=0*264458
+I/architecture_crcblock=0*264981
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*263931*0xcf59763442ff849add9246ffabebabffde628d61|0*264377*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_crcblock=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*264674*0x38d902cb30b2d38b5cdc96aeddaba80519a33d77|0*264875*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8586
+
+[cycloneiii_ddio_oe]
+A/arch=21|./src/cycloneiii_atoms.vhd|7385|1*55254
+B/arch=3*362916
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*222348
+I/arch=0*227589
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*221211*0x421f6518b81ae63dfe88311df70af9dcaf241155|0*222268*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*222675*0xbbc74d6105c6815f7aa58f64952f093ad0dec51c|0*227501*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|7356
+
+[cycloneiii_ddio_out]
+A/arch=21|./src/cycloneiii_atoms.vhd|7767|1*59439
+B/arch=3*372963
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*234422
+I/arch=0*241897
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*232905*0x5a75c9f52ccc41f5da0f0e935b76c4e23b23c0ba|0*234341*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*234750*0xbc1d454ec01d4ae9593622b6d8894d4b226b1850|0*241808*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|7730
+
+[cycloneiii_dffe]
+A/behave=21|./src/cycloneiii_atoms.vhd|1067|1*2576
+B/behave=3*30740
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*28079
+I/behave=0*31918
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*26445*0x2bc81a507a9b970e0c68c2d10467787244ef7598|0*28002*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*28371*0xe4ba422385ab061410dc39436c5ed91377fef245|0*31831*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1031
+
+[cycloneiii_ena_reg]
+A/behave=21|./src/cycloneiii_atoms.vhd|8177|1*64700
+B/behave=3*386851
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*248356
+I/behave=0*250250
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*247295*0xcd28f3a427ee6accd40f936fd8fe7a75dbc85629|0*248276*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*248651*0x4d39a9e923708ac33441d370b4531db3e4f5a829|0*250160*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8152
+
+[cycloneiii_ff]
+A/vital_lcell_ff=21|./src/cycloneiii_atoms.vhd|4649|1*27427
+B/vital_lcell_ff=3*178187
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_lcell_ff=8.2.1986.SP1.35.3497  (Windows)
+I=0*130617
+I/vital_lcell_ff=0*137062
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*128263*0xa4ed513f6b34b337ea14a6507c5643a2eb92fd86|0*130542*0xf2538cdc6f7b23a146389216c886e772
+M/vital_lcell_ff=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*130907*0x13dc9261ef7e32de01c6b498a8908b6765ed5aa5|0*136969*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|4598
+
+[cycloneiii_io_ibuf]
+A/arch=21|./src/cycloneiii_atoms.vhd|7130|1*52244
+B/arch=3*352420
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*214289
+I/arch=0*216060
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*213436*0x0f3a67a5a77617ec4db71063494075298c3a3af2|0*214209*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*214584*0x25ef12b51c8f774d5204052bc9958455f2f65d46|0*215972*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|7110
+
+[cycloneiii_io_obuf]
+A/arch=21|./src/cycloneiii_atoms.vhd|7237|1*53549
+B/arch=3*356280
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*217944
+I/arch=0*220488
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*216799*0xc49d78dc206e31b21090cf35faa058210d7e568d|0*217864*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*218271*0xf8bd45049ed8ab5372ed7092eb632c3741794357|0*220400*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|7212
+
+[cycloneiii_io_pad]
+A/arch=21|./src/cycloneiii_atoms.vhd|8131|1*64051
+B/arch=3*386512
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*245996
+I/arch=0*246573
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*245512*0x47ffd3a18ee717c011ce6b0e8195e70b2a62751d|0*245917*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*246322*0xcbdbbd7543480b75db9df1d65c5b8cb8357a17fc|0*246486*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8119
+
+[cycloneiii_jtag]
+A/architecture_jtag=21|./src/cycloneiii_atoms.vhd|8570|1*70801
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_jtag=8.2.1986.SP1.35.3497  (Windows)
+I=0*262915
+I/architecture_jtag=0*263405
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*262212*0xc9f7b53eca1b9785173677f4bbd5b08138ceb7ec|0*262838*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_jtag=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*263127*0xa1fa102a57c178fd2d9752dbce647300e91be85f|0*263307*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8548
+
+[cycloneiii_latch]
+A/vital_latch=21|./src/cycloneiii_atoms.vhd|7618|1*57679
+B/vital_latch=3*368860
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_latch=8.2.1986.SP1.35.3497  (Windows)
+I=0*229859
+I/vital_latch=0*232144
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*228454*0x1df720e319c2ac3111c932dd10803d8938cb6b81|0*229781*0xf2538cdc6f7b23a146389216c886e772
+M/vital_latch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*230152*0x1196acac4ba3403aa2dfe16733cf008e651ccbc7|0*232051*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|7584
+
+[cycloneiii_lcell_comb]
+A/vital_lcell_comb=21|./src/cycloneiii_atoms.vhd|1521|1*8482
+B/vital_lcell_comb=3*41997
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_lcell_comb=8.2.1986.SP1.35.3497  (Windows)
+I=0*43134
+I/vital_lcell_comb=0*45797
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*41327*0x51a60297038f9c2f6f892309188caf282888f702|0*43051*0xf2538cdc6f7b23a146389216c886e772
+M/vital_lcell_comb=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*43432*0x2c3b19abd47a707e61eb2b49b9b22a29c4068966|0*45694*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1480
+
+[cycloneiii_mac_data_reg]
+A/vital_cycloneiii_mac_data_reg=21|./src/cycloneiii_atoms.vhd|6323|1*41426
+B/vital_cycloneiii_mac_data_reg=3*307595
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_cycloneiii_mac_data_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*185937
+I/vital_cycloneiii_mac_data_reg=0*189110
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*184472*0x8b28be0c91dfc10a06f77769624524b71025ec48|0*185852*0xf2538cdc6f7b23a146389216c886e772
+M/vital_cycloneiii_mac_data_reg=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*186237*0xbfa08229a9128ed7eb1499032dde6330b61f18f8|0*188992*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|6292
+
+[cycloneiii_mac_mult]
+A/vital_cycloneiii_mac_mult=21|./src/cycloneiii_atoms.vhd|6749|1*47031
+B/vital_cycloneiii_mac_mult=3*332406
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_cycloneiii_mac_mult=8.2.1986.SP1.35.3497  (Windows)
+I=0*201045
+I/vital_cycloneiii_mac_mult=0*206576
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*199638*0x08559a445eefb6e97471c08765c35a0f20542416|0*200964*0xf2538cdc6f7b23a146389216c886e772
+M/vital_cycloneiii_mac_mult=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*201405*0x50b598bfddc9ff5683e3561f460974b506f1dc3e|0*206466*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|6718
+
+[cycloneiii_mac_mult_internal]
+A/vital_cycloneiii_mac_mult_internal=21|./src/cycloneiii_atoms.vhd|6621|1*45120
+B/vital_cycloneiii_mac_mult_internal=3*320815
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_cycloneiii_mac_mult_internal=8.2.1986.SP1.35.3497  (Windows)
+I=0*196192
+I/vital_cycloneiii_mac_mult_internal=0*198778
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*194683*0xde37007cd58df3904552ad6ac779861034b7ef58|0*196102*0xf2538cdc6f7b23a146389216c886e772
+M/vital_cycloneiii_mac_mult_internal=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*196561*0x34a6e272bfa77c5ec8654e4ee658c8ddbbfea1c4|0*198650*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|6591
+
+[cycloneiii_mac_out]
+A/vital_cycloneiii_mac_out=21|./src/cycloneiii_atoms.vhd|6975|1*49959
+B/vital_cycloneiii_mac_out=3*340123
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_cycloneiii_mac_out=8.2.1986.SP1.35.3497  (Windows)
+I=0*209381
+I/vital_cycloneiii_mac_out=0*212757
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*207641*0x5e310bd316cc4b0166d2c1c56612f384545e843b|0*209301*0xf2538cdc6f7b23a146389216c886e772
+M/vital_cycloneiii_mac_out=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*209676*0xe104dd4248b2556e6e4c82d5426fcdba204c1093|0*212649*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|6940
+
+[cycloneiii_mac_sign_reg]
+A/cycloneiii_mac_sign_reg=21|./src/cycloneiii_atoms.vhd|6483|1*43540
+B/cycloneiii_mac_sign_reg=3*316244
+C=8.2.1986.SP1.35.3497  (Windows)
+C/cycloneiii_mac_sign_reg=8.2.1986.SP1.35.3497  (Windows)
+I=0*191151
+I/cycloneiii_mac_sign_reg=0*193862
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*189852*0xf5f2a5aae794f7a6bb43256256fbefc03c819782|0*191066*0xf2538cdc6f7b23a146389216c886e772
+M/cycloneiii_mac_sign_reg=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*191451*0x00571cdbb49b6b4634abef36f859deaa1239277e|0*193750*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|6452
+
+[cycloneiii_mn_cntr]
+A/behave=21|./src/cycloneiii_atoms.vhd|1720|1*11250
+B/behave=3*47023
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*49762
+I/behave=0*50792
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*49217*0x535503a6b46686dc11b990a0b1b5cfe7a0640de3|0*49682*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*50089*0xcbea7c0a775a5a3216021a50421efe2cc22d9c44|0*50702*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1710
+
+[cycloneiii_mux21]
+A/altvital=A/AltVITAL 21|./src/cycloneiii_atoms.vhd|1230|1*4619
+B/altvital=3*35898
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*33443
+I/altvital=I/AltVITAL 0*34661
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*32558*0xdb48f131079aecd04a22e02de57361efc804d5a7|0*33365*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/cycloneiii_atoms.vhd|0*33688*0xe7792c2354158437749744d37ac875f2bb78ace4|0*34571*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1210
+
+[cycloneiii_mux41]
+A/altvital=A/AltVITAL 21|./src/cycloneiii_atoms.vhd|1323|1*5832
+B/altvital=3*37466
+C=8.2.1986.SP1.35.3497  (Windows)
+C/altvital=8.2.1986.SP1.35.3497  (Windows)
+I=0*36520
+I/altvital=I/AltVITAL 0*38318
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*35320*0xfc4a125d3527d4fd1de29f134438130832e061a6|0*36442*0xf2538cdc6f7b23a146389216c886e772
+M/altvital=M/AltVITAL 21|0|v63|0|./src/cycloneiii_atoms.vhd|0*36765*0x5aa9676a6184ff5991a6edfb74e9d16709e327f7|0*38228*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1295
+
+[cycloneiii_oscillator]
+A/architecture_oscillator=21|./src/cycloneiii_atoms.vhd|8635|1*72081
+B/architecture_oscillator=3*396417
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_oscillator=8.2.1986.SP1.35.3497  (Windows)
+I=0*266301
+I/architecture_oscillator=0*267660
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*265565*0x2f4ed42e939d5de4a7ab5d42d4a894efafbf5e49|0*266218*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_oscillator=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*266631*0x416081f5dbb5495144ca03be9bfbb2c891df60a7|0*267550*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8617
+
+[cycloneiii_pll]
+A/vital_pll=21|./src/cycloneiii_atoms.vhd|2141|1*13331
+B/vital_pll=3*50388
+C=8.2.1986.SP1.35.3497  (Windows)
+C/vital_pll=8.2.1986.SP1.35.3497  (Windows)
+I=0*64021
+I/vital_pll=0*127304
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*56530*0x360ef4955cd4a4ba7ba6d18ec46edec6280fc728|0*63945*0xf2538cdc6f7b23a146389216c886e772
+M/vital_pll=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*64376*0x5a7c73bce8243f03f071b52f177c98f59eb3847c|0*127215*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1899
+
+[cycloneiii_pll_reg]
+A/behave=21|./src/cycloneiii_atoms.vhd|1847|1*12776
+B/behave=3*49711
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*54254
+I/behave=0*54849
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*53854*0x33cb4b78eb02f05f6d320d9a021301e85c140f88|0*54174*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*54421*0xf33f6c79dcd3bce56af1af7cc03f243db930aaca|0*54759*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1837
+
+[cycloneiii_pllpack]
+B/cycloneiii_pllpack=3*11721
+C=8.2.1986.SP1.35.3497  (Windows)
+E=1*1417
+I=0*11473
+I/cycloneiii_pllpack=0*25823
+M=3|0|v63|0|./src/cycloneiii_atoms.vhd|0*8591*0x2a3a24946a4e1b02955c5f0e17ca3885d1f3839c|0*11393*0xf2538cdc6f7b23a146389216c886e772
+M/cycloneiii_pllpack=4|0|v63|0|./src/cycloneiii_atoms.vhd|0*11640*0xce1b488bc83f79a105dc9db05f5be6a364cec5b3|0*25722*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|325
+
+[cycloneiii_pseudo_diff_out]
+A/arch=21|./src/cycloneiii_atoms.vhd|8052|1*62906
+B/arch=3*384556
+C=8.2.1986.SP1.35.3497  (Windows)
+C/arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*243425
+I/arch=0*244926
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*242661*0xc5b02ebf9550235b36d49887b2870c5997ebe92a|0*243337*0xf2538cdc6f7b23a146389216c886e772
+M/arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*243760*0xffd9e3c285a4aae53f47440d369830b2f00270af|0*244830*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8036
+
+[cycloneiii_ram_block]
+A/block_arch=21|./src/cycloneiii_atoms.vhd|5248|1*33041
+B/block_arch=3*201351
+C=8.2.1986.SP1.35.3497  (Windows)
+C/block_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*152236
+I/block_arch=0*183608
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*148078*0x234c72702c914396cdc63eb898cfe26b6c1db9fa|0*152154*0xf2538cdc6f7b23a146389216c886e772
+M/block_arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*152533*0x10f98ae490847b5acfed0f6a43187981f0343459|0*183512*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|5151
+
+[cycloneiii_ram_pulse_generator]
+A/pgen_arch=21|./src/cycloneiii_atoms.vhd|5098|1*31859
+B/pgen_arch=3*198998
+C=8.2.1986.SP1.35.3497  (Windows)
+C/pgen_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*145475
+I/pgen_arch=0*146872
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*144735*0x558f20d3f0f9fc58c93c7597da4fc9234401cc07|0*145383*0xf2538cdc6f7b23a146389216c886e772
+M/pgen_arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*145782*0xef7699c2b82cdbd1e2156167b8f020eb19cb30df|0*146767*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|5084
+
+[cycloneiii_ram_register]
+A/reg_arch=21|./src/cycloneiii_atoms.vhd|4936|1*29734
+B/reg_arch=3*189738
+C=8.2.1986.SP1.35.3497  (Windows)
+C/reg_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*139551
+I/reg_arch=0*144103
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*137875*0xe69831b75fff11d454ad5410304cef9c2f9e07d9|0*139466*0xf2538cdc6f7b23a146389216c886e772
+M/reg_arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*139851*0x75c5c01283d87014f430ba2307520d37b861d69b|0*144006*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|4899
+
+[cycloneiii_routing_wire]
+A/behave=21|./src/cycloneiii_atoms.vhd|1649|1*10151
+B/behave=3*45753
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*47166
+I/behave=0*48647
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*46428*0xf4dce1860f19ad3324408e52652259d4be0f6b4d|0*47081*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*47466*0x42473d30a7205a4212a787ab43ca5d98474458c6|0*48552*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1634
+
+[cycloneiii_rublock]
+A/architecture_rublock=21|./src/cycloneiii_atoms.vhd|8448|1*68393
+C=8.2.1986.SP1.35.3497  (Windows)
+C/architecture_rublock=8.2.1986.SP1.35.3497  (Windows)
+I=0*257051
+I/architecture_rublock=0*257598
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*256371*0xf1b6b209edb9948651b5aa5cb133da5e75dc1006|0*256971*0xf2538cdc6f7b23a146389216c886e772
+M/architecture_rublock=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*257298*0x4c4fedb3c4ab10063edc2f3bccffebb813f70d1b|0*257494*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8427
+
+[cycloneiii_scale_cntr]
+A/behave=21|./src/cycloneiii_atoms.vhd|1776|1*11933
+B/behave=3*48181
+C=8.2.1986.SP1.35.3497  (Windows)
+C/behave=8.2.1986.SP1.35.3497  (Windows)
+I=0*51941
+I/behave=0*53366
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*51408*0xf2437ce1a70fb7690688199a8549bb057359af1e|0*51858*0xf2538cdc6f7b23a146389216c886e772
+M/behave=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*52191*0x1db4bc32847d4a733e531b3c880cfbdbff5835e4|0*53273*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|1764
+
+[cycloneiii_termination]
+A/cycloneiii_termination_arch=21|./src/cycloneiii_atoms.vhd|8525|1*69665
+B/cycloneiii_termination_arch=3*394782
+C=8.2.1986.SP1.35.3497  (Windows)
+C/cycloneiii_termination_arch=8.2.1986.SP1.35.3497  (Windows)
+I=0*260994
+I/cycloneiii_termination_arch=0*261721
+M=11|0|v63|0|./src/cycloneiii_atoms.vhd|0*259908*0x3d830a21032c3fa2f81eb65c4b9da56e1d93b851|0*260910*0xf2538cdc6f7b23a146389216c886e772
+M/cycloneiii_termination_arch=21|0|v63|0|./src/cycloneiii_atoms.vhd|0*261165*0x1533e4899e364c214281b462c516416c097c4554|0*261606*0xf2538cdc6f7b23a146389216c886e772
+R=./src/cycloneiii_atoms.vhd|8498
+
+[~A]
+Comment=ALTERA QUARTUS II 9.1, CYCLONEIII VHDL LIBRARY
+ModifyID=204
+ReadOnly=1
+Standard=1
+Vendor=ALTERA
+Version=73
+
+[~MFT]
+0=258|0cycloneiii.mgf|292653|0
+1=36|1cycloneiii.mgf|73261|0
+3=31|3cycloneiii.mgf|396417|0
+
+[~U]
+cycloneiii_and1=11|0*38572|
+cycloneiii_apfcontroller=11|0*257866|
+cycloneiii_atom_pack=3|0*0|0*216
+cycloneiii_clkctrl=11|0*250552|
+cycloneiii_components=3|0*268014|0*268151
+cycloneiii_crcblock=11|0*263635|
+cycloneiii_ddio_oe=11|0*220820|
+cycloneiii_ddio_out=11|0*232449|
+cycloneiii_dffe=11|0*26009|
+cycloneiii_ena_reg=11|0*246904|
+cycloneiii_ff=11|0*127733|
+cycloneiii_io_ibuf=11|0*213077|
+cycloneiii_io_obuf=11|0*216360|
+cycloneiii_io_pad=11|0*245266|
+cycloneiii_jtag=11|0*261920|
+cycloneiii_latch=11|0*227985|
+cycloneiii_lcell_comb=11|0*40837|
+cycloneiii_mac_data_reg=11|0*183980|
+cycloneiii_mac_mult=11|0*199182|
+cycloneiii_mac_mult_internal=11|0*194186|
+cycloneiii_mac_out=11|0*207074|
+cycloneiii_mac_sign_reg=11|0*189440|
+cycloneiii_mn_cntr=11|0*48954|
+cycloneiii_mux21=11|0*32217|
+cycloneiii_mux41=11|0*34915|
+cycloneiii_oscillator=11|0*265219|
+cycloneiii_pll=11|0*55023|
+cycloneiii_pll_reg=11|0*53623|
+cycloneiii_pllpack=3|0*7683|0*7817
+cycloneiii_pseudo_diff_out=11|0*242326|
+cycloneiii_ram_block=11|0*147189|
+cycloneiii_ram_pulse_generator=11|0*144412|
+cycloneiii_ram_register=11|0*137399|
+cycloneiii_routing_wire=11|0*46112|
+cycloneiii_rublock=11|0*256044|
+cycloneiii_scale_cntr=11|0*51126|
+cycloneiii_termination=11|0*259465|
+

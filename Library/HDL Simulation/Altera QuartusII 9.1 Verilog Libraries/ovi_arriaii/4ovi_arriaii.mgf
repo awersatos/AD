@@ -1,0 +1,1127 @@
+V 000043 56 973 1260919567380 arriaii_dffe
+(_unit arriaii_dffe
+	(_specify
+		(_specparam TREG integer 0)
+		(_specparam TREN integer 0)
+		(_specparam TRSU integer 0)
+		(_specparam TRH integer 0)
+		(_specparam TRPR integer 0)
+		(_specparam TRCL integer 0)
+		(_tchk setup 0 210
+			(_port D ())
+			(_port CLK (posedge) (_code  1 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 211
+			(_port CLK (posedge) (_code  2 legal))
+			(_port D ())
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 212
+			(_port ENA ())
+			(_port CLK (posedge) (_code  3 legal))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 213
+			(_port CLK (posedge) (_code  4 legal))
+			(_port ENA ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 215
+			(_port CLRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 216
+			(_port PRN in negedge)
+			(_port Q out negedge)
+		)
+		(_modpath parallel positive 0 217
+			(_port CLK in posedge)
+			(_port Q out posedge)
+			(_datain D in posedge)
+		)
+	)
+)
+V 000044 56 605 1260919567385 arriaii_latch
+(_unit arriaii_latch
+	(_specify
+		(_tchk setup 0 233
+			(_port D ())
+			(_port ENA (posedge))
+		)
+		(_tchk hold 0 234
+			(_port ENA (negedge))
+			(_port D ())
+		)
+		(_modpath parallel unknown 0 236
+			(_port D in )
+			(_port Q out )
+		)
+		(_modpath parallel positive 0 237
+			(_port ENA in posedge)
+			(_port Q out posedge)
+			(_datain q_out in posedge)
+		)
+		(_modpath parallel positive 0 238
+			(_port PRE in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+		(_modpath parallel positive 0 239
+			(_port CLR in negedge)
+			(_port Q out negedge)
+			(_datain q_out in negedge)
+		)
+	)
+)
+V 000044 56 262 1260919567390 arriaii_mux21
+(_unit arriaii_mux21
+	(_specify
+		(_modpath parallel unknown 0 297
+			(_port A in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 298
+			(_port B in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 299
+			(_port S in )
+			(_port MO out )
+		)
+	)
+)
+V 000044 56 527 1260919567395 arriaii_mux41
+(_unit arriaii_mux41
+	(_specify
+		(_modpath parallel unknown 0 334
+			(_port IN0 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 335
+			(_port IN1 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 336
+			(_port IN2 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 337
+			(_port IN3 in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 338
+			(_port S (_constant \1\) in )
+			(_port MO out )
+		)
+		(_modpath parallel unknown 0 339
+			(_port S (_constant \0\) in )
+			(_port MO out )
+		)
+	)
+)
+V 000043 56 112 1260919567400 arriaii_and1
+(_unit arriaii_and1
+	(_specify
+		(_modpath parallel unknown 0 355
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000044 56 113 1260919567405 arriaii_and16
+(_unit arriaii_and16
+	(_specify
+		(_modpath parallel unknown 0 368
+			(_port IN1 in )
+			(_port Y out )
+		)
+	)
+)
+V 000050 56 2118 1260919567426 arriaii_lcell_comb
+(_unit arriaii_lcell_comb
+	(_specify
+		(_modpath parallel unknown 0 651
+			(_port dataa in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 652
+			(_port datab in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 653
+			(_port datac in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 654
+			(_port datad in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 655
+			(_port datae in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 656
+			(_port dataf in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 657
+			(_port datag in )
+			(_port combout out )
+		)
+		(_modpath parallel unknown 0 659
+			(_port dataa in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 660
+			(_port datab in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 661
+			(_port datac in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 662
+			(_port datad in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 663
+			(_port dataf in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 664
+			(_port cin in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 665
+			(_port sharein in )
+			(_port sumout out )
+		)
+		(_modpath parallel unknown 0 667
+			(_port dataa in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 668
+			(_port datab in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 669
+			(_port datac in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 670
+			(_port datad in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 671
+			(_port dataf in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 672
+			(_port cin in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 673
+			(_port sharein in )
+			(_port cout out )
+		)
+		(_modpath parallel unknown 0 675
+			(_port dataa in )
+			(_port shareout out )
+		)
+		(_modpath parallel unknown 0 676
+			(_port datab in )
+			(_port shareout out )
+		)
+		(_modpath parallel unknown 0 677
+			(_port datac in )
+			(_port shareout out )
+		)
+		(_modpath parallel unknown 0 678
+			(_port datad in )
+			(_port shareout out )
+		)
+	)
+)
+V 000051 56 129 1260919567431 arriaii_routing_wire
+(_unit arriaii_routing_wire
+	(_specify
+		(_modpath parallel unknown 0 814
+			(_port datain in )
+			(_port dataout out )
+		)
+	)
+)
+V 000050 56 477 1260919567436 arriaii_lvds_tx_reg
+(_unit arriaii_lvds_tx_reg
+	(_specify
+		(_tchk setuphold 0 867
+			(_port clk (posedge))
+			(_port d ())
+		)
+		(_modpath parallel positive 0 868
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 869
+			(_port clrn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+		(_modpath parallel positive 0 870
+			(_port prn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+	)
+)
+V 000064 56 265 1260919567441 arriaii_lvds_tx_parallel_register
+(_unit arriaii_lvds_tx_parallel_register
+	(_specify
+		(_modpath parallel positive 0 940
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+		(_tchk setuphold 0 942
+			(_port clk (posedge))
+			(_port datain ())
+		)
+	)
+)
+V 000056 56 523 1260919567446 arriaii_lvds_tx_out_block
+(_unit arriaii_lvds_tx_out_block
+	(_specify
+		(_modpath parallel unknown 0 1028
+			(_code  4 bypass_mode*EQ*1)
+			(_port clk in )
+			(_port dataout out )
+		)
+		(_modpath parallel positive 0 1031
+			(_code  5 bypass_mode*EQ*0*AN*falling_clk_out*EQ*1)
+			(_port clk in negedge)
+			(_port dataout out negedge)
+			(_datain dataout_tmp in negedge)
+		)
+		(_modpath parallel positive 0 1034
+			(_code  6 bypass_mode*EQ*0*AN*falling_clk_out*EQ*0)
+			(_port datain in )
+			(_port dataout out )
+			(_datain dataout_tmp in )
+		)
+	)
+)
+V 000055 56 456 1260919567451 arriaii_lvds_transmitter
+(_unit arriaii_lvds_transmitter
+	(_specify
+		(_modpath parallel unknown 0 1173
+			(_code  7 serial_din_mode*EQ*1)
+			(_port serialdatain in )
+			(_port dataout out )
+		)
+		(_modpath parallel unknown 0 1176
+			(_code  8 postdpa_serial_din_mode*EQ*1)
+			(_port postdpaserialdatain in )
+			(_port dataout out )
+		)
+		(_modpath parallel unknown 0 1179
+			(_code  9 enable_dpaclk_to_lvdsout_signal*EQ*1)
+			(_port dpaclkin in )
+			(_port dataout out )
+		)
+	)
+)
+V 000049 56 142 1260919567460 arriaii_oscillator
+(_unit arriaii_oscillator
+	(_specify
+		(_modpath parallel positive 0 1332
+			(_port oscena in posedge)
+			(_port clkout out posedge)
+		)
+	)
+)
+V 000058 56 245 1260919567465 arriaii_ram_pulse_generator
+(_unit arriaii_ram_pulse_generator
+	(_specify
+		(_specparam t_decode integer 0)
+		(_specparam t_access integer 0)
+		(_modpath parallel positive 0 1375
+			(_port clk in posedge)
+			(_port pulse out posedge)
+			(_datain state in posedge)
+		)
+	)
+)
+V 000052 56 1191 1260919567470 arriaii_ram_register
+(_unit arriaii_ram_register
+	(_specify
+		(_tchk setup 0 1450
+			(_port d ())
+			(_port clk (posedge) (_code  6 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 1451
+			(_port aclr ())
+			(_port clk (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 1452
+			(_port ena ())
+			(_port clk (posedge) (_code  7 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 1453
+			(_port stall ())
+			(_port clk (posedge) (_code  8 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1454
+			(_port clk (posedge) (_code  9 reset))
+			(_port d ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1455
+			(_port clk (posedge))
+			(_port aclr ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1456
+			(_port clk (posedge) (_code  10 reset))
+			(_port ena ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 1457
+			(_port clk (posedge) (_code  11 reset))
+			(_port stall ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 1458
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_reg in posedge)
+		)
+		(_modpath parallel positive 0 1459
+			(_port aclr in posedge)
+			(_port q out posedge)
+			(_datain q_reg in posedge)
+		)
+	)
+)
+V 000042 56 1054 1260919567479 arriaii_ff
+(_unit arriaii_ff
+	(_specify
+		(_tchk setuphold 0 2834
+			(_port clk (posedge) (_code  8 nosloadsclr))
+			(_port d ())
+			(_register (d_viol))
+		)
+		(_tchk setuphold 0 2835
+			(_port clk (posedge) (_code  9 reset))
+			(_port sclr ())
+			(_register (sclr_viol))
+		)
+		(_tchk setuphold 0 2836
+			(_port clk (posedge) (_code  10 reset))
+			(_port sload ())
+			(_register (sload_viol))
+		)
+		(_tchk setuphold 0 2837
+			(_port clk (posedge) (_code  11 sloaddata))
+			(_port asdata ())
+			(_register (asdata_viol))
+		)
+		(_tchk setuphold 0 2838
+			(_port clk (posedge) (_code  12 reset))
+			(_port ena ())
+			(_register (ena_viol))
+		)
+		(_modpath parallel positive 0 2840
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 2841
+			(_port clrn in posedge)
+			(_port q out posedge)
+		)
+		(_modpath parallel positive 0 2842
+			(_port aload in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel unknown 0 2843
+			(_port asdata in )
+			(_port q out )
+		)
+	)
+)
+V 000048 56 649 1260919567484 arriaii_clkselect
+(_unit arriaii_clkselect
+	(_specify
+		(_modpath parallel unknown 0 2942
+			(_port inclk (_constant \3\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2943
+			(_port inclk (_constant \2\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2944
+			(_port inclk (_constant \1\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2945
+			(_port inclk (_constant \0\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2947
+			(_port clkselect (_constant \1\) in )
+			(_port outclk out )
+		)
+		(_modpath parallel unknown 0 2948
+			(_port clkselect (_constant \0\) in )
+			(_port outclk out )
+		)
+	)
+)
+V 000043 56 190 1260919567489 arriaii_and2
+(_unit arriaii_and2
+	(_specify
+		(_modpath parallel unknown 0 2986
+			(_port IN1 in )
+			(_port Y out )
+		)
+		(_modpath parallel unknown 0 2987
+			(_port IN2 in )
+			(_port Y out )
+		)
+	)
+)
+V 000046 56 273 1260919567494 arriaii_ena_reg
+(_unit arriaii_ena_reg
+	(_specify
+		(_tchk setuphold 0 3041
+			(_port clk (posedge) (_code  4 reset))
+			(_port d ())
+			(_register (d_viol))
+		)
+		(_modpath parallel positive 0 3043
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+	)
+)
+V 000064 56 251 1260919567503 arriaii_mlab_cell_pulse_generator
+(_unit arriaii_mlab_cell_pulse_generator
+	(_specify
+		(_specparam t_decode integer 0)
+		(_specparam t_access integer 0)
+		(_modpath parallel positive 0 3177
+			(_port clk in posedge)
+			(_port pulse out posedge)
+			(_datain state in posedge)
+		)
+	)
+)
+V 000048 56 848 1260919567508 arriaii_mlab_cell
+(_unit arriaii_mlab_cell
+	(_specify
+		(_tchk setup 0 3269
+			(_port portaaddr ())
+			(_port clk0 (negedge) (_code  10 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 3270
+			(_port portabyteenamasks ())
+			(_port clk0 (negedge) (_code  11 reset))
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 3271
+			(_port ena0 ())
+			(_port clk0 (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 3272
+			(_port clk0 (negedge) (_code  12 reset))
+			(_port portaaddr ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 3273
+			(_port clk0 (negedge) (_code  13 reset))
+			(_port portabyteenamasks ())
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 3274
+			(_port clk0 (posedge))
+			(_port ena0 ())
+			(_register (viol_notifier))
+		)
+		(_modpath full unknown 0 3275
+			(_port portbaddr in )
+			(_port portbdataout out )
+		)
+	)
+)
+V 000046 56 192 1260919567513 arriaii_io_ibuf
+(_unit arriaii_io_ibuf
+	(_specify
+		(_modpath parallel unknown 0 3413
+			(_port i in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 3414
+			(_port ibar in )
+			(_port o out )
+		)
+	)
+)
+V 000046 56 347 1260919567518 arriaii_io_obuf
+(_unit arriaii_io_obuf
+	(_specify
+		(_modpath parallel unknown 0 3510
+			(_port i in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 3511
+			(_port i in )
+			(_port obar out )
+		)
+		(_modpath parallel unknown 0 3512
+			(_port oe in )
+			(_port o out )
+		)
+		(_modpath parallel unknown 0 3513
+			(_port oe in )
+			(_port obar out )
+		)
+	)
+)
+V 000052 56 1040 1260919567535 arriaii_mac_register
+(_unit arriaii_mac_register
+	(_specify
+		(_specparam TSU integer 0)
+		(_specparam TH integer 0)
+		(_specparam TCO integer 0)
+		(_specparam TCLR integer 0)
+		(_specparam TCLR_MIN_PW integer 0)
+		(_specparam TPRE integer 0)
+		(_specparam TPRE_MIN_PW integer 0)
+		(_specparam TCLK_MIN_PW integer 0)
+		(_specparam TCE_MIN_PW integer 0)
+		(_specparam TCLKL integer 0)
+		(_specparam TCLKH integer 0)
+		(_tchk setup 0 4178
+			(_port datain ())
+			(_port clk (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 4179
+			(_port clk (posedge))
+			(_port datain ())
+			(_register (viol_notifier))
+		)
+		(_tchk setup 0 4180
+			(_port sload ())
+			(_port clk (posedge))
+			(_register (viol_notifier))
+		)
+		(_tchk hold 0 4181
+			(_port clk (posedge))
+			(_port sload ())
+			(_register (viol_notifier))
+		)
+		(_modpath parallel positive 0 4182
+			(_port aclr in posedge)
+			(_port dataout out posedge)
+		)
+		(_modpath parallel positive 0 4183
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+	)
+)
+V 000053 56 370 1260919567540 arriaii_mac_multiplier
+(_unit arriaii_mac_multiplier
+	(_specify
+		(_modpath full unknown 0 4253
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4254
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4255
+			(_port signa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4256
+			(_port signb in )
+			(_port dataout out )
+		)
+	)
+)
+V 000058 56 293 1260919567553 arriaii_first_stage_add_sub
+(_unit arriaii_first_stage_add_sub
+	(_specify
+		(_modpath full unknown 0 4744
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4745
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4746
+			(_port sign in )
+			(_port dataout out )
+		)
+	)
+)
+V 000061 56 824 1260919567558 arriaii_second_stage_add_accum
+(_unit arriaii_second_stage_add_accum
+	(_specify
+		(_modpath full unknown 0 4821
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4822
+			(_port datab in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4823
+			(_port sign in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4824
+			(_port dataa in )
+			(_port overflow out )
+		)
+		(_modpath full unknown 0 4825
+			(_port datab in )
+			(_port overflow out )
+		)
+		(_modpath full unknown 0 4826
+			(_port sign in )
+			(_port overflow out )
+		)
+		(_modpath full unknown 0 4829
+			(_code  4 operation*EQ*4'b011*OR*operation*EQ*4'b0100)
+			(_port accumin in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 4832
+			(_code  5 operation*EQ*4'b011*OR*operation*EQ*4'b0100)
+			(_port accumin in )
+			(_port overflow out )
+		)
+	)
+)
+V 000059 56 925 1260919567571 arriaii_round_saturate_block
+(_unit arriaii_round_saturate_block
+	(_specify
+		(_modpath full unknown 0 5181
+			(_port datain in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5182
+			(_port round in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5183
+			(_port saturate in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5184
+			(_port signa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5185
+			(_port signb in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5186
+			(_port datain in )
+			(_port saturationoverflow out )
+		)
+		(_modpath full unknown 0 5187
+			(_port round in )
+			(_port saturationoverflow out )
+		)
+		(_modpath full unknown 0 5188
+			(_port saturate in )
+			(_port saturationoverflow out )
+		)
+		(_modpath full unknown 0 5189
+			(_port signa in )
+			(_port saturationoverflow out )
+		)
+		(_modpath full unknown 0 5190
+			(_port signb in )
+			(_port saturationoverflow out )
+		)
+	)
+)
+V 000057 56 300 1260919567576 arriaii_rotate_shift_block
+(_unit arriaii_rotate_shift_block
+	(_specify
+		(_modpath full unknown 0 5253
+			(_port datain in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5254
+			(_port rotate in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5255
+			(_port shiftright in )
+			(_port dataout out )
+		)
+	)
+)
+V 000056 56 211 1260919567581 arriaii_carry_chain_adder
+(_unit arriaii_carry_chain_adder
+	(_specify
+		(_modpath full unknown 0 5294
+			(_port dataa in )
+			(_port dataout out )
+		)
+		(_modpath full unknown 0 5295
+			(_port datab in )
+			(_port dataout out )
+		)
+	)
+)
+V 000050 56 1119 1260919567598 arriaii_ddr_io_reg
+(_unit arriaii_ddr_io_reg
+	(_specify
+		(_tchk setuphold 0 7136
+			(_port clk (posedge) (_code  5 nosloadsclr))
+			(_port d ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 7137
+			(_port clk (posedge) (_code  6 reset))
+			(_port sclr ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 7138
+			(_port clk (posedge) (_code  7 reset))
+			(_port sload ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 7139
+			(_port clk (posedge) (_code  8 sloaddata))
+			(_port asdata ())
+			(_register (viol))
+		)
+		(_tchk setuphold 0 7140
+			(_port clk (posedge) (_code  9 reset))
+			(_port ena ())
+			(_register (viol))
+		)
+		(_modpath parallel positive 0 7142
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain d in posedge)
+		)
+		(_modpath parallel positive 0 7143
+			(_port clrn in posedge)
+			(_port q out posedge)
+		)
+		(_modpath parallel positive 0 7144
+			(_port prn in posedge)
+			(_port q out posedge)
+		)
+		(_modpath parallel positive 0 7145
+			(_port aload in posedge)
+			(_port q out posedge)
+			(_datain d in posedge)
+		)
+		(_modpath parallel unknown 0 7146
+			(_port asdata in )
+			(_port q out )
+		)
+	)
+)
+V 000043 56 1366 1260919567603 arriaii_dll
+(_unit arriaii_dll
+	(_specify
+		(_modpath parallel positive 0 7380
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \0\) out posedge)
+			(_datain delayctrl_out (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 7381
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \1\) out posedge)
+			(_datain delayctrl_out (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 7382
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \2\) out posedge)
+			(_datain delayctrl_out (_constant \2\) in posedge)
+		)
+		(_modpath parallel positive 0 7383
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \3\) out posedge)
+			(_datain delayctrl_out (_constant \3\) in posedge)
+		)
+		(_modpath parallel positive 0 7384
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \4\) out posedge)
+			(_datain delayctrl_out (_constant \4\) in posedge)
+		)
+		(_modpath parallel positive 0 7385
+			(_port clk in posedge)
+			(_port delayctrlout (_constant \5\) out posedge)
+			(_datain delayctrl_out (_constant \5\) in posedge)
+		)
+		(_modpath parallel positive 0 7387
+			(_port clk in posedge)
+			(_port upndnout out posedge)
+			(_datain upndn_out in posedge)
+		)
+		(_tchk setuphold 0 7389
+			(_port clk (posedge))
+			(_port upndnin ())
+		)
+		(_tchk setuphold 0 7390
+			(_port clk (posedge))
+			(_port upndninclkena ())
+		)
+	)
+)
+V 000055 56 1818 1260919567608 arriaii_dll_offset_ctrl
+(_unit arriaii_dll_offset_ctrl
+	(_specify
+		(_modpath parallel positive 0 8025
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \0\) out posedge)
+			(_datain offsetctrl_out (_constant \0\) in posedge)
+		)
+		(_modpath parallel positive 0 8026
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \1\) out posedge)
+			(_datain offsetctrl_out (_constant \1\) in posedge)
+		)
+		(_modpath parallel positive 0 8027
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \2\) out posedge)
+			(_datain offsetctrl_out (_constant \2\) in posedge)
+		)
+		(_modpath parallel positive 0 8028
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \3\) out posedge)
+			(_datain offsetctrl_out (_constant \3\) in posedge)
+		)
+		(_modpath parallel positive 0 8029
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \4\) out posedge)
+			(_datain offsetctrl_out (_constant \4\) in posedge)
+		)
+		(_modpath parallel positive 0 8030
+			(_port clk in posedge)
+			(_port offsetctrlout (_constant \5\) out posedge)
+			(_datain offsetctrl_out (_constant \5\) in posedge)
+		)
+		(_modpath parallel unknown 0 8032
+			(_port offset in )
+			(_port offsetctrlout out )
+		)
+		(_tchk setuphold 0 8034
+			(_port clk (posedge))
+			(_port offset (_constant \0\) ())
+		)
+		(_tchk setuphold 0 8035
+			(_port clk (posedge))
+			(_port offset (_constant \1\) ())
+		)
+		(_tchk setuphold 0 8036
+			(_port clk (posedge))
+			(_port offset (_constant \2\) ())
+		)
+		(_tchk setuphold 0 8037
+			(_port clk (posedge))
+			(_port offset (_constant \3\) ())
+		)
+		(_tchk setuphold 0 8038
+			(_port clk (posedge))
+			(_port offset (_constant \4\) ())
+		)
+		(_tchk setuphold 0 8039
+			(_port clk (posedge))
+			(_port offset (_constant \5\) ())
+		)
+		(_tchk setuphold 0 8040
+			(_port clk (posedge))
+			(_port addnsub ())
+		)
+	)
+)
+V 000049 56 220 1260919567613 arriaii_dqs_enable
+(_unit arriaii_dqs_enable
+	(_specify
+		(_modpath parallel unknown 0 8205
+			(_port dqsin in )
+			(_port dqsbusout out )
+		)
+		(_modpath parallel unknown 0 8206
+			(_port dqsenable in )
+			(_port dqsbusout out )
+		)
+	)
+)
+V 000042 56 201 1260919567638 arriaii_pll
+(_unit arriaii_pll
+	(_specify
+		(_tchk setuphold 0 8947
+			(_port scanclk (negedge))
+			(_port scandata ())
+		)
+		(_tchk setuphold 0 8948
+			(_port scanclk (negedge))
+			(_port scanclkena ())
+		)
+	)
+)
+V 000051 56 312 1260919567651 arriaii_lvds_rx_fifo
+(_unit arriaii_lvds_rx_fifo
+	(_specify
+		(_modpath parallel positive 0 12598
+			(_port rclk in posedge)
+			(_port dataout out posedge)
+			(_datain data_out in posedge)
+		)
+		(_modpath parallel positive 0 12599
+			(_port dparst in posedge)
+			(_port dataout out posedge)
+			(_datain data_out in posedge)
+		)
+	)
+)
+V 000054 56 327 1260919567656 arriaii_lvds_rx_bitslip
+(_unit arriaii_lvds_rx_bitslip
+	(_specify
+		(_modpath parallel positive 0 12733
+			(_port clk0 in posedge)
+			(_port bslipmax out posedge)
+			(_datain bslipmax_tmp in posedge)
+		)
+		(_modpath parallel positive 0 12734
+			(_port bsliprst in posedge)
+			(_port bslipmax out posedge)
+			(_datain bslipmax_tmp in posedge)
+		)
+	)
+)
+V 000047 56 410 1260919567661 arriaii_lvds_reg
+(_unit arriaii_lvds_reg
+	(_specify
+		(_modpath parallel positive 0 13012
+			(_port clk in posedge)
+			(_port q out posedge)
+			(_datain q_tmp in posedge)
+		)
+		(_modpath parallel positive 0 13013
+			(_port clrn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+		(_modpath parallel positive 0 13014
+			(_port prn in negedge)
+			(_port q out negedge)
+			(_datain q_tmp in negedge)
+		)
+	)
+)
+V 000052 56 180 1260919567666 arriaii_lvds_rx_deser
+(_unit arriaii_lvds_rx_deser
+	(_specify
+		(_modpath parallel positive 0 12877
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+	)
+)
+V 000059 56 187 1260919567671 arriaii_lvds_rx_parallel_reg
+(_unit arriaii_lvds_rx_parallel_reg
+	(_specify
+		(_modpath parallel positive 0 12943
+			(_port clk in posedge)
+			(_port dataout out posedge)
+			(_datain dataout_tmp in posedge)
+		)
+	)
+)
+V 000052 56 181 1260919567692 arriaii_lvds_receiver
+(_unit arriaii_lvds_receiver
+	(_specify
+		(_modpath parallel positive 0 13709
+			(_port clk0 in posedge)
+			(_port dpalock out posedge)
+			(_datain dpalock_tmp in posedge)
+		)
+	)
+)
+V 000055 56 1413 1260919567701 arriaii_dqs_delay_chain
+(_unit arriaii_dqs_delay_chain
+	(_specify
+		(_modpath parallel unknown 0 14024
+			(_port dqsin in )
+			(_port dqsbusout out )
+		)
+		(_tchk setuphold 0 14026
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \0\) ())
+		)
+		(_tchk setuphold 0 14027
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \1\) ())
+		)
+		(_tchk setuphold 0 14028
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \2\) ())
+		)
+		(_tchk setuphold 0 14029
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \3\) ())
+		)
+		(_tchk setuphold 0 14030
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \4\) ())
+		)
+		(_tchk setuphold 0 14031
+			(_port dqsupdateen (posedge))
+			(_port delayctrlin (_constant \5\) ())
+		)
+		(_tchk setuphold 0 14033
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \0\) ())
+		)
+		(_tchk setuphold 0 14034
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \1\) ())
+		)
+		(_tchk setuphold 0 14035
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \2\) ())
+		)
+		(_tchk setuphold 0 14036
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \3\) ())
+		)
+		(_tchk setuphold 0 14037
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \4\) ())
+		)
+		(_tchk setuphold 0 14038
+			(_port dqsupdateen (posedge))
+			(_port offsetctrlin (_constant \5\) ())
+		)
+	)
+)

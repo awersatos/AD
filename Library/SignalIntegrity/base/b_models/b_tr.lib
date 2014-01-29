@@ -1,0 +1,1010 @@
+###############################################################################
+#                         EDL Macromodel Library File
+#    Filename: b_tr.lib
+#     Creator: INCASES Engineering GmbH
+#     Version: 1.1
+#   Last Save: Tue Jan  6 14:52:21 MET 1998
+#
+###############################################################################
+#
+#   Copyright: Copyright (C) 1998, INCASES Engineering GmbH.
+#              Unauthorized reproduction and/or distribution is strictly
+#              prohibited. All rights reserved.
+#
+#  Disclaimer: Please be aware that in the absence of a written agreement
+#              to the contrary, INCASES Engineering GmbH assumes no
+#              liability for:
+#              (1) the accuracy of the macromodels provided to your company;
+#              (2) the proper functioning of these models in your design
+#                  system or for any resulting applications;
+#              (3) infringement of patents, copyrights or intellectual
+#                  property rights resulting from your use of these models.
+#
+###############################################################################
+@IDBM:AWG28_Z110t600_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : AWG28_Z110t600_xtr.mac;
+# FileRev     : 2.0;
+# Date        : 02/03/1997;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : None;
+# Notes       : flat-cable AWG 28, no shield,
+#		Signal-to-Ground-ratio = 1/1, length = 10 cm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : ;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : ;
+#	VccPackage    : ;
+#	SigPackage    : ;
+#	TermLineImp   : ;
+#	TermLineDelay : ;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	1.100000e+02
+LL	1.000000e-01
+TD	6.000000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:AWG28_Z110t60_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : AWG28_Z110t60_xtr.mac;
+# FileRev     : 2.0;
+# Date        : 02/03/1997;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : None;
+# Notes       : flat-cable AWG 28, no shield,
+#		Signal-to-Ground-ratio = 1/1, length = 1 cm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : ;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : ;
+#	VccPackage    : ;
+#	SigPackage    : ;
+#	TermLineImp   : ;
+#	TermLineDelay : ;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	1.100000e+02
+LL	1.000000e-02
+TD	6.000000e-11
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:AWG28_Z65t540_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : AWG28_Z65t540_xtr.mac;
+# FileRev     : 2.0;
+# Date        : 02/03/1997;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : None;
+# Notes       : flat-cable AWG 28, one-side shield,
+#		Signal-to-Ground-ratio = 1/1, length = 10 cm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : ;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : ;
+#	VccPackage    : ;
+#	SigPackage    : ;
+#	TermLineImp   : ;
+#	TermLineDelay : ;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	6.500000e+01
+LL	1.000000e-01
+TD	5.400000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:AWG28_Z65t54_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : AWG28_Z65t54_xtr.mac;
+# FileRev     : 2.0;
+# Date        : 02/03/1997;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : None;
+# Notes       : flat-cable AWG 28, one-side shield,
+#		Signal-to-Ground-ratio = 1/1, length = 1 cm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : ;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : ;
+#	VccPackage    : ;
+#	SigPackage    : ;
+#	TermLineImp   : ;
+#	TermLineDelay : ;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	6.500000e+01
+LL	1.000000e-02
+TD	5.400000e-11
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:AWG28_Z70t480_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : AWG28_Z70t480_xtr.mac;
+# FileRev     : 2.0;
+# Date        : 02/03/1997;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : None;
+# Notes       : flat-cable AWG 28, two-side shield,
+#		Signal-to-Ground-ratio = 1 / 0, length = 10 cm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : ;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : ;
+#	VccPackage    : ;
+#	SigPackage    : ;
+#	TermLineImp   : ;
+#	TermLineDelay : ;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.000000e+01
+LL	1.000000e-01
+TD	4.800000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:AWG28_Z70t48_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : AWG28_Z70t48_xtr.mac;
+# FileRev     : 2.0;
+# Date        : 02/03/1997;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : None;
+# Notes       : flat-cable AWG 28, two-side shield,
+#		Signal-to-Ground-ratio = 1 / 0, length = 1 cm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : ;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : ;
+#	VccPackage    : ;
+#	SigPackage    : ;
+#	TermLineImp   : ;
+#	TermLineDelay : ;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.000000e+01
+LL	1.000000e-02
+TD	4.800000e-11
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:TwisPair_Z90t450_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : TwisPair_Z90t450_xtr.mac;
+# FileRev     : 2.0;
+# Date        : 02/03/1997;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : None;
+# Notes       : flat-cable, twisted pair,
+#		Signal-to-Ground-ratio = 1/1, length = 10 cm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : ;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : ;
+#	VccPackage    : ;
+#	SigPackage    : ;
+#	TermLineImp   : ;
+#	TermLineDelay : ;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	9.000000e+01
+LL	1.000000e-01
+TD	4.500000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:TwisPair_Z90t45_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : TwisPair_Z90t45_xtr.mac;
+# FileRev     : 2.0;
+# Date        : 02/03/1997;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : None;
+# Notes       : flat-cable, twisted pair,
+#		Signal-to-Ground-ratio = 1/1, length = 1 cm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : None;
+#	Disclaimer   : None;
+#	Notes        : None;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : ;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : ;
+#	VccPackage    : ;
+#	SigPackage    : ;
+#	TermLineImp   : ;
+#	TermLineDelay : ;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	9.000000e+01
+LL	1.000000e-02
+TD	4.500000e-11
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI3_RA_Z73t100_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI3_RA_Z73t100_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 10:50:56 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 3 ROW (RA), row A, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.300000e+01
+LL	1.000000e-02
+TD	1.000000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI3_RB_Z73t125_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI3_RB_Z73t125_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 11:18:26 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 3 ROW (RA), row B, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.300000e+01
+LL	1.000000e-02
+TD	1.250000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI3_RC_Z81t150_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI3_RC_Z81t150_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 11:19:01 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 3 ROW (RA), row C, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	8.100000e+01
+LL	1.000000e-02
+TD	1.500000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI4S_RAD_Z77t100_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4S_RAD_Z77t100_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 08:49:04 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (ST), row A + D, open pin field, parallel (stacking),
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.700000e+01
+LL	1.000000e-02
+TD	1.000000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI4S_RBC_Z68t110_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4S_RBC_Z68t110_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 08:49:39 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (ST), row B + C, open pin field, parallel (stacking),
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	6.800000e+01
+LL	1.000000e-02
+TD	1.100000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI4_RA_Z73t100_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4_RA_Z73t100_xtr.mac;
+# FileRev     : 1;
+# Date        : Mon Oct  7 15:35:17 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (RA), row A, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.300000e+01
+LL	1.000000e-02
+TD	1.000000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI4_RB_Z73t120_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4_RB_Z73t120_xtr.mac;
+# FileRev     : 1;
+# Date        : Mon Oct  7 15:35:57 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (RA), row B, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.300000e+01
+LL	1.000000e-02
+TD	1.200000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI4_RC_Z76t140_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4_RC_Z76t140_xtr.mac;
+# FileRev     : 1;
+# Date        : Mon Oct  7 15:36:44 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (RA), row C, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.600000e+01
+LL	1.000000e-02
+TD	1.400000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_HDI4_RD_Z81t160_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_HDI4_RD_Z81t160_xtr.mac;
+# FileRev     : 1;
+# Date        : Mon Oct  7 15:37:23 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : HDI 4 ROW (RA), row D, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	8.100000e+01
+LL	1.000000e-02
+TD	1.600000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_TBC4_RA_Z71t90_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_TBC4_RA_Z71t90_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 11:20:44 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : TBC 4 ROW (RA), row A, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.100000e+01
+LL	1.000000e-02
+TD	9.000000e-11
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_TBC4_RB_Z69t110_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_TBC4_RB_Z69t110_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 11:21:35 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : TBC 4 ROW (RA), row B, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	6.900000e+01
+LL	1.000000e-02
+TD	1.100000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_TBC4_RC_Z73t130_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_TBC4_RC_Z73t130_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 11:22:13 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : TBC 4 ROW (RA), row C, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	7.300000e+01
+LL	1.000000e-02
+TD	1.300000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
+@IDBM:SLC_TBC4_RD_Z84t150_xtr.mac
+############################################################################
+#
+# Header      : 1.0;
+# Filename    : SLC_TBC4_RD_Z84t150_xtr.mac;
+# FileRev     : 1;
+# Date        : Wed Oct  9 11:23:25 1996;
+# Permission  : ;
+# Simulator   : 3;
+# Modeltype   : 100;
+# Technology  : ;
+# Changes     : ;
+# Notes       : TBC 4 ROW (RA), row D, open pin field, right angle,
+#		Signal-to-Ground-ratio = 1/1 to 3/1, length = 10mm,
+#		max. edge speed 750ps, CA and CB represent via parasitics;
+#
+# RefSource
+#	Component    : ;
+#	Manufacturer : ;
+#	Buffername   : ;
+#	Buffertype   : BI->IN;
+#	Pins         : ;
+#	Method       : ;
+#	Copyright    : ;
+#	Disclaimer   : ;
+#	Notes        : ;
+#
+# RefCondition
+#	Process       : ;
+#	Temperature   : UnKnown;
+#	SupplyVolt    : ;
+#	RefVolt       : ;
+#	GndPackage    : None;
+#	VccPackage    : None;
+#	SigPackage    : None;
+#	TermLineImp   : UnKnown;
+#	TermLineDelay : UnKnown;
+#	Notes         : ;
+#
+############################################################################
+TRANSMISSION_LINE_DESCRIPTION
+ZL	8.400000e+01
+LL	1.000000e-02
+TD	1.500000e-10
+CA	1.000000e-12
+CB	1.000000e-12
+END
